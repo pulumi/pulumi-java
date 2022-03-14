@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2FulfillmentFeatureResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * Optional. The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * Optional. Whether fulfillment is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * Optional. The field defines whether the fulfillment is enabled for certain features.
      * 
      */
-    @InputImport(name="features", required=true)
+    @Import(name="features", required=true)
       private final List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features;
 
     public List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> getFeatures() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * Configuration for a generic web service.
      * 
      */
-    @InputImport(name="genericWebService", required=true)
+    @Import(name="genericWebService", required=true)
       private final GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService;
 
     public GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse getGenericWebService() {
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse extends io.pulumi.
      * The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

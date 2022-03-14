@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.AuthConfigResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.ConnectionStatusResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionResult {
     /**
      * Optional. Configuration for establishing the connection's authentication with an external system.
@@ -97,24 +97,24 @@ public final class GetConnectionResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionResult(
-        @OutputCustomType.Parameter("authConfig") AuthConfigResponse authConfig,
-        @OutputCustomType.Parameter("configVariables") List<ConfigVariableResponse> configVariables,
-        @OutputCustomType.Parameter("connectorVersion") String connectorVersion,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("egressBackends") List<String> egressBackends,
-        @OutputCustomType.Parameter("envoyImageLocation") String envoyImageLocation,
-        @OutputCustomType.Parameter("imageLocation") String imageLocation,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lockConfig") LockConfigResponse lockConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("serviceDirectory") String serviceDirectory,
-        @OutputCustomType.Parameter("status") ConnectionStatusResponse status,
-        @OutputCustomType.Parameter("suspended") Boolean suspended,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("authConfig") AuthConfigResponse authConfig,
+        @CustomType.Parameter("configVariables") List<ConfigVariableResponse> configVariables,
+        @CustomType.Parameter("connectorVersion") String connectorVersion,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("egressBackends") List<String> egressBackends,
+        @CustomType.Parameter("envoyImageLocation") String envoyImageLocation,
+        @CustomType.Parameter("imageLocation") String imageLocation,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lockConfig") LockConfigResponse lockConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("serviceDirectory") String serviceDirectory,
+        @CustomType.Parameter("status") ConnectionStatusResponse status,
+        @CustomType.Parameter("suspended") Boolean suspended,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.authConfig = authConfig;
         this.configVariables = configVariables;
         this.connectorVersion = connectorVersion;

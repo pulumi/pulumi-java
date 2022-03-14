@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse {
     /**
      * Conversation model resource name. Format: `projects//conversationModels/`.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
      */
     private final String model;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse(@OutputCustomType.Parameter("model") String model) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse(@CustomType.Parameter("model") String model) {
         this.model = model;
     }
 

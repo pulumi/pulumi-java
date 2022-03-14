@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
      * 
      */
-    @InputImport(name="interconnectName")
+    @Import(name="interconnectName")
       private final @Nullable Output<String> interconnectName;
 
     public Output<String> getInterconnectName() {
@@ -33,7 +33,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * Plain text name of the Partner providing this attachment. This value may be validated to match approved Partner values.
      * 
      */
-    @InputImport(name="partnerName")
+    @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
     public Output<String> getPartnerName() {
@@ -44,7 +44,7 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends io.pulumi.r
      * URL of the Partner's portal for this Attachment. Partners may customise this to be a deep link to the specific resource on the Partner portal. This value may be validated to match approved Partner values.
      * 
      */
-    @InputImport(name="portalUrl")
+    @Import(name="portalUrl")
       private final @Nullable Output<String> portalUrl;
 
     public Output<String> getPortalUrl() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
 
     public static final PolicyAlternativeNameServerConfigArgs Empty = new PolicyAlternativeNameServerConfigArgs();
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -27,7 +27,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
      * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
      * 
      */
-    @InputImport(name="targetNameServers")
+    @Import(name="targetNameServers")
       private final @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
     public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {

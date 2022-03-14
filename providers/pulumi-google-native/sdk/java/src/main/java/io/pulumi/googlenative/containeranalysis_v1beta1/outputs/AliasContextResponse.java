@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AliasContextResponse {
     /**
      * The alias kind.
@@ -20,10 +20,10 @@ public final class AliasContextResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AliasContextResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name) {
         this.kind = kind;
         this.name = name;
     }

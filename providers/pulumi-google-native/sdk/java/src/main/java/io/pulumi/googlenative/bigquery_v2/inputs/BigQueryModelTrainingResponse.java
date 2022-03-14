@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class BigQueryModelTrainingResponse extends io.pulumi.resources.Inv
      * [Output-only, Beta] Index of current ML training iteration. Updated during create model query job to show job progress.
      * 
      */
-    @InputImport(name="currentIteration", required=true)
+    @Import(name="currentIteration", required=true)
       private final Integer currentIteration;
 
     public Integer getCurrentIteration() {
@@ -28,7 +28,7 @@ public final class BigQueryModelTrainingResponse extends io.pulumi.resources.Inv
      * [Output-only, Beta] Expected number of iterations for the create model query job specified as num_iterations in the input query. The actual total number of iterations may be less than this number due to early stop.
      * 
      */
-    @InputImport(name="expectedTotalIterations", required=true)
+    @Import(name="expectedTotalIterations", required=true)
       private final String expectedTotalIterations;
 
     public String getExpectedTotalIterations() {

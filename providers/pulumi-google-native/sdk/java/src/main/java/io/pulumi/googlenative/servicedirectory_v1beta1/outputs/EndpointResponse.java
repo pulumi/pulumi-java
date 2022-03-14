@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicedirectory_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointResponse {
     /**
      * Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses like: * `8.8.8` * `8.8.8.8:53` * `test:bad:address` * `[::1]` * `[::1]:8080` Limited to 45 characters.
@@ -47,15 +47,15 @@ public final class EndpointResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointResponse(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.address = address;
         this.createTime = createTime;
         this.metadata = metadata;

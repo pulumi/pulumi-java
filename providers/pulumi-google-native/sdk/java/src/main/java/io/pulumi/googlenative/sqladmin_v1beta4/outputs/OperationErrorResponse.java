@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OperationErrorResponse {
     /**
      * Identifies the specific error that occurred.
@@ -25,11 +25,11 @@ public final class OperationErrorResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OperationErrorResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.kind = kind;
         this.message = message;

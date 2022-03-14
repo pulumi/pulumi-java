@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExclusionRuleResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HotwordRuleResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.re
      * Exclusion rule.
      * 
      */
-    @InputImport(name="exclusionRule", required=true)
+    @Import(name="exclusionRule", required=true)
       private final GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule;
 
     public GooglePrivacyDlpV2ExclusionRuleResponse getExclusionRule() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse extends io.pulumi.re
      * Hotword-based detection rule.
      * 
      */
-    @InputImport(name="hotwordRule", required=true)
+    @Import(name="hotwordRule", required=true)
       private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
     public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {

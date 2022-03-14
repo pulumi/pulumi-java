@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ml_v1.StudyArgs;
@@ -23,7 +23,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * Time at which the study was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * A human readable reason why the Study is inactive. This should be empty if a study is ACTIVE or COMPLETED.
      * 
      */
-    @OutputExport(name="inactiveReason", type=String.class, parameters={})
+    @Export(name="inactiveReason", type=String.class, parameters={})
     private Output<String> inactiveReason;
 
     /**
@@ -51,7 +51,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * The name of a study.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * The detailed state of a study.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -79,7 +79,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * Configuration of the study.
      * 
      */
-    @OutputExport(name="studyConfig", type=GoogleCloudMlV1__StudyConfigResponse.class, parameters={})
+    @Export(name="studyConfig", type=GoogleCloudMlV1__StudyConfigResponse.class, parameters={})
     private Output<GoogleCloudMlV1__StudyConfigResponse> studyConfig;
 
     /**

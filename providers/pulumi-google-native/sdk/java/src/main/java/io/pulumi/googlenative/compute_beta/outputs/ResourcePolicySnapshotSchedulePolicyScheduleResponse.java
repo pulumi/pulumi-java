@@ -3,23 +3,23 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyDailyCycleResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyHourlyCycleResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyWeeklyCycleResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
     private final ResourcePolicyDailyCycleResponse dailySchedule;
     private final ResourcePolicyHourlyCycleResponse hourlySchedule;
     private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyScheduleResponse(
-        @OutputCustomType.Parameter("dailySchedule") ResourcePolicyDailyCycleResponse dailySchedule,
-        @OutputCustomType.Parameter("hourlySchedule") ResourcePolicyHourlyCycleResponse hourlySchedule,
-        @OutputCustomType.Parameter("weeklySchedule") ResourcePolicyWeeklyCycleResponse weeklySchedule) {
+        @CustomType.Parameter("dailySchedule") ResourcePolicyDailyCycleResponse dailySchedule,
+        @CustomType.Parameter("hourlySchedule") ResourcePolicyHourlyCycleResponse hourlySchedule,
+        @CustomType.Parameter("weeklySchedule") ResourcePolicyWeeklyCycleResponse weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.hourlySchedule = hourlySchedule;
         this.weeklySchedule = weeklySchedule;

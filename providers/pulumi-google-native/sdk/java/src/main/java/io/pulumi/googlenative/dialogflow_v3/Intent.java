@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3.IntentArgs;
@@ -27,7 +27,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -41,7 +41,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The human-readable name of the intent, unique within the agent.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -55,7 +55,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
      * 
      */
-    @OutputExport(name="isFallback", type=Boolean.class, parameters={})
+    @Export(name="isFallback", type=Boolean.class, parameters={})
     private Output<Boolean> isFallback;
 
     /**
@@ -69,7 +69,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent is a contextual intent.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -83,7 +83,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The collection of parameters associated with the intent.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={GoogleCloudDialogflowCxV3IntentParameterResponse.class})
+    @Export(name="parameters", type=List.class, parameters={GoogleCloudDialogflowCxV3IntentParameterResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3IntentParameterResponse>> parameters;
 
     /**
@@ -111,7 +111,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -125,7 +125,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The collection of training phrases the agent is trained on to identify the intent.
      * 
      */
-    @OutputExport(name="trainingPhrases", type=List.class, parameters={GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse.class})
+    @Export(name="trainingPhrases", type=List.class, parameters={GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse>> trainingPhrases;
 
     /**

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1RenewalSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1CommitmentSettingsResponse {
     /**
      * Commitment end timestamp.
@@ -26,11 +26,11 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1CommitmentSettingsResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("renewalSettings") GoogleCloudChannelV1RenewalSettingsResponse renewalSettings,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("renewalSettings") GoogleCloudChannelV1RenewalSettingsResponse renewalSettings,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.renewalSettings = renewalSettings;
         this.startTime = startTime;

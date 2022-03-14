@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.RuntimeArgs;
@@ -26,7 +26,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * The config settings for accessing runtime.
      * 
      */
-    @OutputExport(name="accessConfig", type=RuntimeAccessConfigResponse.class, parameters={})
+    @Export(name="accessConfig", type=RuntimeAccessConfigResponse.class, parameters={})
     private Output<RuntimeAccessConfigResponse> accessConfig;
 
     /**
@@ -40,7 +40,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Runtime creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -54,7 +54,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Runtime health_state.
      * 
      */
-    @OutputExport(name="healthState", type=String.class, parameters={})
+    @Export(name="healthState", type=String.class, parameters={})
     private Output<String> healthState;
 
     /**
@@ -68,7 +68,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Contains Runtime daemon metrics such as Service status and JupyterLab stats.
      * 
      */
-    @OutputExport(name="metrics", type=RuntimeMetricsResponse.class, parameters={})
+    @Export(name="metrics", type=RuntimeMetricsResponse.class, parameters={})
     private Output<RuntimeMetricsResponse> metrics;
 
     /**
@@ -82,7 +82,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * The resource name of the runtime. Format: `projects/{project}/locations/{location}/runtimes/{runtimeId}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * The config settings for software inside the runtime.
      * 
      */
-    @OutputExport(name="softwareConfig", type=RuntimeSoftwareConfigResponse.class, parameters={})
+    @Export(name="softwareConfig", type=RuntimeSoftwareConfigResponse.class, parameters={})
     private Output<RuntimeSoftwareConfigResponse> softwareConfig;
 
     /**
@@ -110,7 +110,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Runtime state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -124,7 +124,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Runtime update time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -138,7 +138,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Use a Compute Engine VM image to start the managed notebook instance.
      * 
      */
-    @OutputExport(name="virtualMachine", type=VirtualMachineResponse.class, parameters={})
+    @Export(name="virtualMachine", type=VirtualMachineResponse.class, parameters={})
     private Output<VirtualMachineResponse> virtualMachine;
 
     /**

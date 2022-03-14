@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
      * 
      */
-    @InputImport(name="fleetSpec", required=true)
+    @Import(name="fleetSpec", required=true)
       private final String fleetSpec;
 
     public String getFleetSpec() {
@@ -31,7 +31,7 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the FleetConfig.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

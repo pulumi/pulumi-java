@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
      * The version of SQL Server with which the database is to be made compatible
      * 
      */
-    @InputImport(name="compatibilityLevel", required=true)
+    @Import(name="compatibilityLevel", required=true)
       private final Integer compatibilityLevel;
 
     public Integer getCompatibilityLevel() {
@@ -32,7 +32,7 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
      * The recovery model of a SQL Server database
      * 
      */
-    @InputImport(name="recoveryModel", required=true)
+    @Import(name="recoveryModel", required=true)
       private final String recoveryModel;
 
     public String getRecoveryModel() {

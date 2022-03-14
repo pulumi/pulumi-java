@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AliasArgs Empty = new AliasArgs();
 
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -27,7 +27,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP Content-Type header value specifying the content type of the body.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -38,14 +38,14 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP request/response body as raw binary.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
         return this.data == null ? Output.empty() : this.data;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -56,42 +56,42 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
      */
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable Output<List<Map<String,String>>> extensions;
 
     public Output<List<Map<String,String>>> getExtensions() {
         return this.extensions == null ? Output.empty() : this.extensions;
     }
 
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {
         return this.format;
     }
 
-    @InputImport(name="ignoreExpiryValidation")
+    @Import(name="ignoreExpiryValidation")
       private final @Nullable Output<String> ignoreExpiryValidation;
 
     public Output<String> getIgnoreExpiryValidation() {
         return this.ignoreExpiryValidation == null ? Output.empty() : this.ignoreExpiryValidation;
     }
 
-    @InputImport(name="ignoreNewlineValidation")
+    @Import(name="ignoreNewlineValidation")
       private final @Nullable Output<String> ignoreNewlineValidation;
 
     public Output<String> getIgnoreNewlineValidation() {
         return this.ignoreNewlineValidation == null ? Output.empty() : this.ignoreNewlineValidation;
     }
 
-    @InputImport(name="keystoreId", required=true)
+    @Import(name="keystoreId", required=true)
       private final Output<String> keystoreId;
 
     public Output<String> getKeystoreId() {
         return this.keystoreId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {

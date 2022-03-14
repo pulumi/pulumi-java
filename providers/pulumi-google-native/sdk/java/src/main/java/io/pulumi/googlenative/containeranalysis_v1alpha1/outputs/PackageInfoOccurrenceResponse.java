@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.LicenseResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageInfoOccurrenceResponse {
     /**
      * A place for the SPDX file creator to record any general comments about the package being described
@@ -56,17 +56,17 @@ public final class PackageInfoOccurrenceResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageInfoOccurrenceResponse(
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("filename") String filename,
-        @OutputCustomType.Parameter("homePage") String homePage,
-        @OutputCustomType.Parameter("licenseConcluded") LicenseResponse licenseConcluded,
-        @OutputCustomType.Parameter("packageType") String packageType,
-        @OutputCustomType.Parameter("sourceInfo") String sourceInfo,
-        @OutputCustomType.Parameter("summaryDescription") String summaryDescription,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("filename") String filename,
+        @CustomType.Parameter("homePage") String homePage,
+        @CustomType.Parameter("licenseConcluded") LicenseResponse licenseConcluded,
+        @CustomType.Parameter("packageType") String packageType,
+        @CustomType.Parameter("sourceInfo") String sourceInfo,
+        @CustomType.Parameter("summaryDescription") String summaryDescription,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("version") String version) {
         this.comment = comment;
         this.filename = filename;
         this.homePage = homePage;

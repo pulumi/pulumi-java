@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TestTimingResponse extends io.pulumi.resources.InvokeArgs {
      * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
      * 
      */
-    @InputImport(name="testProcessDuration", required=true)
+    @Import(name="testProcessDuration", required=true)
       private final DurationResponse testProcessDuration;
 
     public DurationResponse getTestProcessDuration() {

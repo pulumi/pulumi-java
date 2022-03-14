@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.JwtLocationResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthProviderResponse {
     /**
      * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences will be accepted. When this setting is absent, JWTs with audiences: - "https://[service.name]/[google.protobuf.Api.name]" - "https://[service.name]/" will be accepted. For example, if no audiences are in the setting, LibraryService API will accept JWTs with the following audiences: - https://library-example.googleapis.com/google.example.library.v1.LibraryService - https://library-example.googleapis.com/ Example: audiences: bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com
@@ -37,13 +37,13 @@ public final class AuthProviderResponse {
      */
     private final List<JwtLocationResponse> jwtLocations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthProviderResponse(
-        @OutputCustomType.Parameter("audiences") String audiences,
-        @OutputCustomType.Parameter("authorizationUrl") String authorizationUrl,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("jwksUri") String jwksUri,
-        @OutputCustomType.Parameter("jwtLocations") List<JwtLocationResponse> jwtLocations) {
+        @CustomType.Parameter("audiences") String audiences,
+        @CustomType.Parameter("authorizationUrl") String authorizationUrl,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("jwksUri") String jwksUri,
+        @CustomType.Parameter("jwtLocations") List<JwtLocationResponse> jwtLocations) {
         this.audiences = audiences;
         this.authorizationUrl = authorizationUrl;
         this.issuer = issuer;

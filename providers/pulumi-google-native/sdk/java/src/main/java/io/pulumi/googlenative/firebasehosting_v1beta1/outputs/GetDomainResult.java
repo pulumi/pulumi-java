@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.DomainProvisioningResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.DomainRedirectResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     /**
      * The domain name of the association.
@@ -42,14 +42,14 @@ public final class GetDomainResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("domainRedirect") DomainRedirectResponse domainRedirect,
-        @OutputCustomType.Parameter("provisioning") DomainProvisioningResponse provisioning,
-        @OutputCustomType.Parameter("site") String site,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("domainRedirect") DomainRedirectResponse domainRedirect,
+        @CustomType.Parameter("provisioning") DomainProvisioningResponse provisioning,
+        @CustomType.Parameter("site") String site,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.domainName = domainName;
         this.domainRedirect = domainRedirect;
         this.provisioning = provisioning;

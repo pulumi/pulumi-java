@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.LogConfigCloudAuditOptionsResponse;
 import io.pulumi.googlenative.compute_beta.outputs.LogConfigCounterOptionsResponse;
 import io.pulumi.googlenative.compute_beta.outputs.LogConfigDataAccessOptionsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogConfigResponse {
     /**
      * This is deprecated and has no effect. Do not use.
@@ -27,11 +27,11 @@ public final class LogConfigResponse {
      */
     private final LogConfigDataAccessOptionsResponse dataAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogConfigResponse(
-        @OutputCustomType.Parameter("cloudAudit") LogConfigCloudAuditOptionsResponse cloudAudit,
-        @OutputCustomType.Parameter("counter") LogConfigCounterOptionsResponse counter,
-        @OutputCustomType.Parameter("dataAccess") LogConfigDataAccessOptionsResponse dataAccess) {
+        @CustomType.Parameter("cloudAudit") LogConfigCloudAuditOptionsResponse cloudAudit,
+        @CustomType.Parameter("counter") LogConfigCounterOptionsResponse counter,
+        @CustomType.Parameter("dataAccess") LogConfigDataAccessOptionsResponse dataAccess) {
         this.cloudAudit = cloudAudit;
         this.counter = counter;
         this.dataAccess = dataAccess;

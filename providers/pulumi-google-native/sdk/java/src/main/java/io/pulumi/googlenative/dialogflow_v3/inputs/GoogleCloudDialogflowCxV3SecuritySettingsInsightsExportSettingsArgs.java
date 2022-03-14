@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
      * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
      * 
      */
-    @InputImport(name="enableInsightsExport")
+    @Import(name="enableInsightsExport")
       private final @Nullable Output<Boolean> enableInsightsExport;
 
     public Output<Boolean> getEnableInsightsExport() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.ConversationArgs;
@@ -29,7 +29,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * An opaque, user-specified string representing the human agent who handled the conversation.
      * 
      */
-    @OutputExport(name="agentId", type=String.class, parameters={})
+    @Export(name="agentId", type=String.class, parameters={})
     private Output<String> agentId;
 
     /**
@@ -43,7 +43,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * Call-specific metadata.
      * 
      */
-    @OutputExport(name="callMetadata", type=GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse.class, parameters={})
+    @Export(name="callMetadata", type=GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse> callMetadata;
 
     /**
@@ -57,7 +57,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The time at which the conversation was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -71,7 +71,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The source of the audio and transcription for the conversation.
      * 
      */
-    @OutputExport(name="dataSource", type=GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse.class, parameters={})
+    @Export(name="dataSource", type=GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse> dataSource;
 
     /**
@@ -85,7 +85,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * All the matched Dialogflow intents in the call. The key corresponds to a Dialogflow intent, format: projects/{project}/agent/{agent}/intents/{intent}
      * 
      */
-    @OutputExport(name="dialogflowIntents", type=Map.class, parameters={String.class, String.class})
+    @Export(name="dialogflowIntents", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> dialogflowIntents;
 
     /**
@@ -99,7 +99,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The duration of the conversation.
      * 
      */
-    @OutputExport(name="duration", type=String.class, parameters={})
+    @Export(name="duration", type=String.class, parameters={})
     private Output<String> duration;
 
     /**
@@ -113,7 +113,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -127,7 +127,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -141,7 +141,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * A user-specified language code for the conversation.
      * 
      */
-    @OutputExport(name="languageCode", type=String.class, parameters={})
+    @Export(name="languageCode", type=String.class, parameters={})
     private Output<String> languageCode;
 
     /**
@@ -155,7 +155,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The conversation's latest analysis, if one exists.
      * 
      */
-    @OutputExport(name="latestAnalysis", type=GoogleCloudContactcenterinsightsV1AnalysisResponse.class, parameters={})
+    @Export(name="latestAnalysis", type=GoogleCloudContactcenterinsightsV1AnalysisResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1AnalysisResponse> latestAnalysis;
 
     /**
@@ -169,7 +169,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
      * 
      */
-    @OutputExport(name="medium", type=String.class, parameters={})
+    @Export(name="medium", type=String.class, parameters={})
     private Output<String> medium;
 
     /**
@@ -183,7 +183,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -197,7 +197,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * Obfuscated user ID which the customer sent to us.
      * 
      */
-    @OutputExport(name="obfuscatedUserId", type=String.class, parameters={})
+    @Export(name="obfuscatedUserId", type=String.class, parameters={})
     private Output<String> obfuscatedUserId;
 
     /**
@@ -211,7 +211,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The annotations that were generated during the customer and agent interaction.
      * 
      */
-    @OutputExport(name="runtimeAnnotations", type=List.class, parameters={GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse.class})
+    @Export(name="runtimeAnnotations", type=List.class, parameters={GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse.class})
     private Output<List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse>> runtimeAnnotations;
 
     /**
@@ -225,7 +225,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The time at which the conversation started.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -239,7 +239,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The conversation transcript.
      * 
      */
-    @OutputExport(name="transcript", type=GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse.class, parameters={})
+    @Export(name="transcript", type=GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse> transcript;
 
     /**
@@ -253,7 +253,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
      * 
      */
-    @OutputExport(name="ttl", type=String.class, parameters={})
+    @Export(name="ttl", type=String.class, parameters={})
     private Output<String> ttl;
 
     /**
@@ -267,7 +267,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The number of turns in the conversation.
      * 
      */
-    @OutputExport(name="turnCount", type=Integer.class, parameters={})
+    @Export(name="turnCount", type=Integer.class, parameters={})
     private Output<Integer> turnCount;
 
     /**
@@ -281,7 +281,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The most recent time at which the conversation was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaseml_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.ModelStateArgs;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.TfLiteModelArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the model to create. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores(_) and ASCII digits 0-9. It must start with a letter.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,14 +32,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}` The name is ignored when creating a model.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -50,7 +50,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * State common to all model types. Includes publishing and validation information.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<ModelStateArgs> state;
 
     public Output<ModelStateArgs> getState() {
@@ -61,7 +61,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * User defined tags which can be used to group/filter models during listing
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -72,7 +72,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * A TFLite Model
      * 
      */
-    @InputImport(name="tfliteModel")
+    @Import(name="tfliteModel")
       private final @Nullable Output<TfLiteModelArgs> tfliteModel;
 
     public Output<TfLiteModelArgs> getTfliteModel() {

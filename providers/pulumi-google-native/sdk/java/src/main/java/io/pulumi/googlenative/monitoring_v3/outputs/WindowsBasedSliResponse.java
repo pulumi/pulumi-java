@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricRangeResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.PerformanceThresholdResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WindowsBasedSliResponse {
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
@@ -37,13 +37,13 @@ public final class WindowsBasedSliResponse {
      */
     private final String windowPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsBasedSliResponse(
-        @OutputCustomType.Parameter("goodBadMetricFilter") String goodBadMetricFilter,
-        @OutputCustomType.Parameter("goodTotalRatioThreshold") PerformanceThresholdResponse goodTotalRatioThreshold,
-        @OutputCustomType.Parameter("metricMeanInRange") MetricRangeResponse metricMeanInRange,
-        @OutputCustomType.Parameter("metricSumInRange") MetricRangeResponse metricSumInRange,
-        @OutputCustomType.Parameter("windowPeriod") String windowPeriod) {
+        @CustomType.Parameter("goodBadMetricFilter") String goodBadMetricFilter,
+        @CustomType.Parameter("goodTotalRatioThreshold") PerformanceThresholdResponse goodTotalRatioThreshold,
+        @CustomType.Parameter("metricMeanInRange") MetricRangeResponse metricMeanInRange,
+        @CustomType.Parameter("metricSumInRange") MetricRangeResponse metricSumInRange,
+        @CustomType.Parameter("windowPeriod") String windowPeriod) {
         this.goodBadMetricFilter = goodBadMetricFilter;
         this.goodTotalRatioThreshold = goodTotalRatioThreshold;
         this.metricMeanInRange = metricMeanInRange;

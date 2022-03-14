@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1beta1.enums.RegistrationContactNoticesItem;
 import io.pulumi.googlenative.domains_v1beta1.enums.RegistrationDomainNoticesItem;
 import io.pulumi.googlenative.domains_v1beta1.inputs.ContactSettingsArgs;
@@ -27,7 +27,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * The list of contact notices that the caller acknowledges. The notices needed here depend on the values specified in `registration.contact_settings`.
      * 
      */
-    @InputImport(name="contactNotices")
+    @Import(name="contactNotices")
       private final @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
 
     public Output<List<RegistrationContactNoticesItem>> getContactNotices() {
@@ -38,7 +38,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
      * 
      */
-    @InputImport(name="contactSettings", required=true)
+    @Import(name="contactSettings", required=true)
       private final Output<ContactSettingsArgs> contactSettings;
 
     public Output<ContactSettingsArgs> getContactSettings() {
@@ -49,7 +49,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable Output<DnsSettingsArgs> dnsSettings;
 
     public Output<DnsSettingsArgs> getDnsSettings() {
@@ -60,7 +60,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -71,7 +71,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * The list of domain notices that you acknowledge. Call `RetrieveRegisterParameters` to see the notices that need acknowledgement.
      * 
      */
-    @InputImport(name="domainNotices")
+    @Import(name="domainNotices")
       private final @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
 
     public Output<List<RegistrationDomainNoticesItem>> getDomainNotices() {
@@ -82,14 +82,14 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Set of labels associated with the `Registration`.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -100,14 +100,14 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
      * 
      */
-    @InputImport(name="managementSettings")
+    @Import(name="managementSettings")
       private final @Nullable Output<ManagementSettingsArgs> managementSettings;
 
     public Output<ManagementSettingsArgs> getManagementSettings() {
         return this.managementSettings == null ? Output.empty() : this.managementSettings;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -118,7 +118,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * When true, only validation is performed, without actually registering the domain. Follows: https://cloud.google.com/apis/design/design_patterns#request_validation
      * 
      */
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<Boolean> validateOnly;
 
     public Output<Boolean> getValidateOnly() {
@@ -129,7 +129,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * Yearly price to register or renew the domain. The value that should be put here can be obtained from RetrieveRegisterParameters or SearchDomains calls.
      * 
      */
-    @InputImport(name="yearlyPrice", required=true)
+    @Import(name="yearlyPrice", required=true)
       private final Output<MoneyArgs> yearlyPrice;
 
     public Output<MoneyArgs> getYearlyPrice() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
     /**
      * Provides additional information about the rule that specifies how to apply the rule.
@@ -27,11 +27,11 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
      */
     private final String query;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(
-        @OutputCustomType.Parameter("config") GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config,
-        @OutputCustomType.Parameter("negated") Boolean negated,
-        @OutputCustomType.Parameter("query") String query) {
+        @CustomType.Parameter("config") GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config,
+        @CustomType.Parameter("negated") Boolean negated,
+        @CustomType.Parameter("query") String query) {
         this.config = config;
         this.negated = negated;
         this.query = query;

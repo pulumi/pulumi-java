@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CustomInfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FindingLimitsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2InspectConfigResponse {
     /**
      * CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
@@ -51,15 +51,15 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
      */
     private final List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2InspectConfigResponse(
-        @OutputCustomType.Parameter("customInfoTypes") List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes,
-        @OutputCustomType.Parameter("excludeInfoTypes") Boolean excludeInfoTypes,
-        @OutputCustomType.Parameter("includeQuote") Boolean includeQuote,
-        @OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        @OutputCustomType.Parameter("limits") GooglePrivacyDlpV2FindingLimitsResponse limits,
-        @OutputCustomType.Parameter("minLikelihood") String minLikelihood,
-        @OutputCustomType.Parameter("ruleSet") List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
+        @CustomType.Parameter("customInfoTypes") List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes,
+        @CustomType.Parameter("excludeInfoTypes") Boolean excludeInfoTypes,
+        @CustomType.Parameter("includeQuote") Boolean includeQuote,
+        @CustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
+        @CustomType.Parameter("limits") GooglePrivacyDlpV2FindingLimitsResponse limits,
+        @CustomType.Parameter("minLikelihood") String minLikelihood,
+        @CustomType.Parameter("ruleSet") List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
         this.customInfoTypes = customInfoTypes;
         this.excludeInfoTypes = excludeInfoTypes;
         this.includeQuote = includeQuote;

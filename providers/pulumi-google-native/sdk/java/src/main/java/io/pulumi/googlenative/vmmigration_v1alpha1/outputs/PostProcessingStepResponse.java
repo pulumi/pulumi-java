@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PostProcessingStepResponse {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PostProcessingStepResponse() {
     }
 

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleIamV1AuditLogConfigResponse {
     /**
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
@@ -21,10 +21,10 @@ public final class GoogleIamV1AuditLogConfigResponse {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleIamV1AuditLogConfigResponse(
-        @OutputCustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
-        @OutputCustomType.Parameter("logType") String logType) {
+        @CustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
+        @CustomType.Parameter("logType") String logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }

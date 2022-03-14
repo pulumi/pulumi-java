@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networksecurity_v1.inputs.HttpHeaderMatchArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * List of host names to match. Matched against the ":authority" header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match "*".
      * 
      */
-    @InputImport(name="hosts", required=true)
+    @Import(name="hosts", required=true)
       private final Output<List<String>> hosts;
 
     public Output<List<String>> getHosts() {
@@ -36,7 +36,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP headers, for potentially advanced use cases. At least one header should match. Avoid using header matches to make authorization decisions unless there is a strong guarantee that requests arrive through a trusted client or proxy.
      * 
      */
-    @InputImport(name="httpHeaderMatch")
+    @Import(name="httpHeaderMatch")
       private final @Nullable Output<HttpHeaderMatchArgs> httpHeaderMatch;
 
     public Output<HttpHeaderMatchArgs> getHttpHeaderMatch() {
@@ -47,7 +47,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A list of HTTP methods to match. At least one method should match. Should not be set for gRPC services.
      * 
      */
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
@@ -58,7 +58,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * List of destination ports to match. At least one port should match.
      * 
      */
-    @InputImport(name="ports", required=true)
+    @Import(name="ports", required=true)
       private final Output<List<Integer>> ports;
 
     public Output<List<Integer>> getPorts() {

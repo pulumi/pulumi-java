@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AudioMappingResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AudioStreamResponse {
     /**
      * Audio bitrate in bits per second. Must be between 1 and 10,000,000.
@@ -43,14 +43,14 @@ public final class AudioStreamResponse {
      */
     private final Integer sampleRateHertz;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AudioStreamResponse(
-        @OutputCustomType.Parameter("bitrateBps") Integer bitrateBps,
-        @OutputCustomType.Parameter("channelCount") Integer channelCount,
-        @OutputCustomType.Parameter("channelLayout") List<String> channelLayout,
-        @OutputCustomType.Parameter("codec") String codec,
-        @OutputCustomType.Parameter("mapping") List<AudioMappingResponse> mapping,
-        @OutputCustomType.Parameter("sampleRateHertz") Integer sampleRateHertz) {
+        @CustomType.Parameter("bitrateBps") Integer bitrateBps,
+        @CustomType.Parameter("channelCount") Integer channelCount,
+        @CustomType.Parameter("channelLayout") List<String> channelLayout,
+        @CustomType.Parameter("codec") String codec,
+        @CustomType.Parameter("mapping") List<AudioMappingResponse> mapping,
+        @CustomType.Parameter("sampleRateHertz") Integer sampleRateHertz) {
         this.bitrateBps = bitrateBps;
         this.channelCount = channelCount;
         this.channelLayout = channelLayout;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +16,14 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
      * The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
      * 
      */
-    @InputImport(name="deletionTime", required=true)
+    @Import(name="deletionTime", required=true)
       private final String deletionTime;
 
     public String getDeletionTime() {
         return this.deletionTime;
     }
 
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -34,7 +34,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends io
      * The fully qualified URL of the namespace associated with the zone. Format must be https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
      * 
      */
-    @InputImport(name="namespaceUrl", required=true)
+    @Import(name="namespaceUrl", required=true)
       private final String namespaceUrl;
 
     public String getNamespaceUrl() {

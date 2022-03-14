@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Defaults to FIXED_TYPE.
      * 
      */
-    @InputImport(name="argumentKind", required=true)
+    @Import(name="argumentKind", required=true)
       private final String argumentKind;
 
     public String getArgumentKind() {
@@ -32,7 +32,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
      * Required unless argument_kind = ANY_TYPE.
      * 
      */
-    @InputImport(name="dataType", required=true)
+    @Import(name="dataType", required=true)
       private final StandardSqlDataTypeResponse dataType;
 
     public StandardSqlDataTypeResponse getDataType() {
@@ -43,7 +43,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
@@ -54,7 +54,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The name of this argument. Can be absent for function return argument.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

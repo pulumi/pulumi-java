@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
      * The format should be a shell command that can be fed to bash -c.
      * 
      */
-    @InputImport(name="shell")
+    @Import(name="shell")
       private final @Nullable Output<String> shell;
 
     public Output<String> getShell() {

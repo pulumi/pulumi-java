@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.logging_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.logging_v2.outputs.BigQueryOptionsResponse;
 import io.pulumi.googlenative.logging_v2.outputs.LogExclusionResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBillingAccountSinkResult {
     /**
      * Optional. Options that affect sinks exporting data to BigQuery.
@@ -69,19 +69,19 @@ public final class GetBillingAccountSinkResult {
      */
     private final String writerIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBillingAccountSinkResult(
-        @OutputCustomType.Parameter("bigqueryOptions") BigQueryOptionsResponse bigqueryOptions,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("exclusions") List<LogExclusionResponse> exclusions,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("includeChildren") Boolean includeChildren,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("writerIdentity") String writerIdentity) {
+        @CustomType.Parameter("bigqueryOptions") BigQueryOptionsResponse bigqueryOptions,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("exclusions") List<LogExclusionResponse> exclusions,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("includeChildren") Boolean includeChildren,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("writerIdentity") String writerIdentity) {
         this.bigqueryOptions = bigqueryOptions;
         this.createTime = createTime;
         this.description = description;

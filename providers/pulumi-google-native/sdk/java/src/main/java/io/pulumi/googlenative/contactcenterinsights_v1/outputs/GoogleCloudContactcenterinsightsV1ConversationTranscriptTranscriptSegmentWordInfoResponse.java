@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse {
     /**
      * A confidence estimate between 0.0 and 1.0 of the fidelity of this word. A default value of 0.0 indicates that the value is unset.
@@ -31,12 +31,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      */
     private final String word;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(
-        @OutputCustomType.Parameter("confidence") Double confidence,
-        @OutputCustomType.Parameter("endOffset") String endOffset,
-        @OutputCustomType.Parameter("startOffset") String startOffset,
-        @OutputCustomType.Parameter("word") String word) {
+        @CustomType.Parameter("confidence") Double confidence,
+        @CustomType.Parameter("endOffset") String endOffset,
+        @CustomType.Parameter("startOffset") String startOffset,
+        @CustomType.Parameter("word") String word) {
         this.confidence = confidence;
         this.endOffset = endOffset;
         this.startOffset = startOffset;

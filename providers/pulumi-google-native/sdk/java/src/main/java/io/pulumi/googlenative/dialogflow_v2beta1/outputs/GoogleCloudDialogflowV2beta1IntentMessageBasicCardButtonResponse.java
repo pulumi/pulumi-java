@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse {
     /**
      * Action to take when a user taps on the button.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonRespo
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse(
-        @OutputCustomType.Parameter("openUriAction") GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("openUriAction") GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse openUriAction,
+        @CustomType.Parameter("title") String title) {
         this.openUriAction = openUriAction;
         this.title = title;
     }

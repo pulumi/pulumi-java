@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.documentai_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProcessorResult {
     /**
      * The time the processor was created.
@@ -50,16 +50,16 @@ public final class GetProcessorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProcessorResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("defaultProcessorVersion") String defaultProcessorVersion,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("processEndpoint") String processEndpoint,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("defaultProcessorVersion") String defaultProcessorVersion,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("processEndpoint") String processEndpoint,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.defaultProcessorVersion = defaultProcessorVersion;
         this.displayName = displayName;

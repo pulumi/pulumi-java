@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CategoricalStatsResultResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse;
@@ -15,7 +15,7 @@ import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PrivacyMetricResp
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
     /**
      * Categorical stats result
@@ -63,17 +63,17 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(
-        @OutputCustomType.Parameter("categoricalStatsResult") GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult,
-        @OutputCustomType.Parameter("deltaPresenceEstimationResult") GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult,
-        @OutputCustomType.Parameter("kAnonymityResult") GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult,
-        @OutputCustomType.Parameter("kMapEstimationResult") GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult,
-        @OutputCustomType.Parameter("lDiversityResult") GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult,
-        @OutputCustomType.Parameter("numericalStatsResult") GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult,
-        @OutputCustomType.Parameter("requestedOptions") GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions,
-        @OutputCustomType.Parameter("requestedPrivacyMetric") GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric,
-        @OutputCustomType.Parameter("requestedSourceTable") GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
+        @CustomType.Parameter("categoricalStatsResult") GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult,
+        @CustomType.Parameter("deltaPresenceEstimationResult") GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult,
+        @CustomType.Parameter("kAnonymityResult") GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult,
+        @CustomType.Parameter("kMapEstimationResult") GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult,
+        @CustomType.Parameter("lDiversityResult") GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult,
+        @CustomType.Parameter("numericalStatsResult") GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult,
+        @CustomType.Parameter("requestedOptions") GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions,
+        @CustomType.Parameter("requestedPrivacyMetric") GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric,
+        @CustomType.Parameter("requestedSourceTable") GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
         this.categoricalStatsResult = categoricalStatsResult;
         this.deltaPresenceEstimationResult = deltaPresenceEstimationResult;
         this.kAnonymityResult = kAnonymityResult;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.BuildArtifactResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.DeliveryPipelineResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.TargetResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReleaseResult {
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
@@ -105,26 +105,26 @@ public final class GetReleaseResult {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReleaseResult(
-        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
-        @OutputCustomType.Parameter("buildArtifacts") List<BuildArtifactResponse> buildArtifacts,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deliveryPipelineSnapshot") DeliveryPipelineResponse deliveryPipelineSnapshot,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("renderEndTime") String renderEndTime,
-        @OutputCustomType.Parameter("renderStartTime") String renderStartTime,
-        @OutputCustomType.Parameter("renderState") String renderState,
-        @OutputCustomType.Parameter("skaffoldConfigPath") String skaffoldConfigPath,
-        @OutputCustomType.Parameter("skaffoldConfigUri") String skaffoldConfigUri,
-        @OutputCustomType.Parameter("skaffoldVersion") String skaffoldVersion,
-        @OutputCustomType.Parameter("targetArtifacts") Map<String,String> targetArtifacts,
-        @OutputCustomType.Parameter("targetRenders") Map<String,String> targetRenders,
-        @OutputCustomType.Parameter("targetSnapshots") List<TargetResponse> targetSnapshots,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
+        @CustomType.Parameter("buildArtifacts") List<BuildArtifactResponse> buildArtifacts,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deliveryPipelineSnapshot") DeliveryPipelineResponse deliveryPipelineSnapshot,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("renderEndTime") String renderEndTime,
+        @CustomType.Parameter("renderStartTime") String renderStartTime,
+        @CustomType.Parameter("renderState") String renderState,
+        @CustomType.Parameter("skaffoldConfigPath") String skaffoldConfigPath,
+        @CustomType.Parameter("skaffoldConfigUri") String skaffoldConfigUri,
+        @CustomType.Parameter("skaffoldVersion") String skaffoldVersion,
+        @CustomType.Parameter("targetArtifacts") Map<String,String> targetArtifacts,
+        @CustomType.Parameter("targetRenders") Map<String,String> targetRenders,
+        @CustomType.Parameter("targetSnapshots") List<TargetResponse> targetSnapshots,
+        @CustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.buildArtifacts = buildArtifacts;
         this.createTime = createTime;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.FixedOrPercentResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AutoscalingPolicyScaleInControlResponse extends io.pulumi.res
      * Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
      * 
      */
-    @InputImport(name="maxScaledInReplicas", required=true)
+    @Import(name="maxScaledInReplicas", required=true)
       private final FixedOrPercentResponse maxScaledInReplicas;
 
     public FixedOrPercentResponse getMaxScaledInReplicas() {
@@ -32,7 +32,7 @@ public final class AutoscalingPolicyScaleInControlResponse extends io.pulumi.res
      * How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
      * 
      */
-    @InputImport(name="timeWindowSec", required=true)
+    @Import(name="timeWindowSec", required=true)
       private final Integer timeWindowSec;
 
     public Integer getTimeWindowSec() {

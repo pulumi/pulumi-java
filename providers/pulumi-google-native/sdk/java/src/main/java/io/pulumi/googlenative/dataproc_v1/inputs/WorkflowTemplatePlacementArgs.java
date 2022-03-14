@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.ClusterSelectorArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.ManagedClusterArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
      * Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
      * 
      */
-    @InputImport(name="clusterSelector")
+    @Import(name="clusterSelector")
       private final @Nullable Output<ClusterSelectorArgs> clusterSelector;
 
     public Output<ClusterSelectorArgs> getClusterSelector() {
@@ -34,7 +34,7 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
      * A cluster that is managed by the workflow.
      * 
      */
-    @InputImport(name="managedCluster")
+    @Import(name="managedCluster")
       private final @Nullable Output<ManagedClusterArgs> managedCluster;
 
     public Output<ManagedClusterArgs> getManagedCluster() {

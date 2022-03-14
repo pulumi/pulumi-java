@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3.TestCaseArgs;
@@ -27,7 +27,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * When the test was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -41,7 +41,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -55,7 +55,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * The latest test result.
      * 
      */
-    @OutputExport(name="lastTestResult", type=GoogleCloudDialogflowCxV3TestCaseResultResponse.class, parameters={})
+    @Export(name="lastTestResult", type=GoogleCloudDialogflowCxV3TestCaseResultResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3TestCaseResultResponse> lastTestResult;
 
     /**
@@ -69,7 +69,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -83,7 +83,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * Additional freeform notes about the test case. Limit of 400 characters.
      * 
      */
-    @OutputExport(name="notes", type=String.class, parameters={})
+    @Export(name="notes", type=String.class, parameters={})
     private Output<String> notes;
 
     /**
@@ -97,7 +97,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
@@ -111,7 +111,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
      * 
      */
-    @OutputExport(name="testCaseConversationTurns", type=List.class, parameters={GoogleCloudDialogflowCxV3ConversationTurnResponse.class})
+    @Export(name="testCaseConversationTurns", type=List.class, parameters={GoogleCloudDialogflowCxV3ConversationTurnResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3ConversationTurnResponse>> testCaseConversationTurns;
 
     /**
@@ -125,7 +125,7 @@ public class TestCase extends io.pulumi.resources.CustomResource {
      * Config for the test case.
      * 
      */
-    @OutputExport(name="testConfig", type=GoogleCloudDialogflowCxV3TestConfigResponse.class, parameters={})
+    @Export(name="testConfig", type=GoogleCloudDialogflowCxV3TestConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3TestConfigResponse> testConfig;
 
     /**

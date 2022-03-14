@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TrafficPercentStrategyResponse {
     /**
      * Maps service configuration IDs to their corresponding traffic percentage. Key is the service configuration ID, Value is the traffic percentage which must be greater than 0.0 and the sum must equal to 100.0.
@@ -16,8 +16,8 @@ public final class TrafficPercentStrategyResponse {
      */
     private final Map<String,String> percentages;
 
-    @OutputCustomType.Constructor
-    private TrafficPercentStrategyResponse(@OutputCustomType.Parameter("percentages") Map<String,String> percentages) {
+    @CustomType.Constructor
+    private TrafficPercentStrategyResponse(@CustomType.Parameter("percentages") Map<String,String> percentages) {
         this.percentages = percentages;
     }
 

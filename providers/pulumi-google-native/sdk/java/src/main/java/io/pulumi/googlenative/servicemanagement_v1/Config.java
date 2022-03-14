@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.servicemanagement_v1.ConfigArgs;
@@ -46,7 +46,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * A list of API interfaces exported by this service. Only the `name` field of the google.protobuf.Api needs to be provided by the configuration author, as the remaining fields will be derived from the IDL during the normalization process. It is an error to specify an API interface here which cannot be resolved against the associated IDL files.
      * 
      */
-    @OutputExport(name="apis", type=List.class, parameters={ApiResponse.class})
+    @Export(name="apis", type=List.class, parameters={ApiResponse.class})
     private Output<List<ApiResponse>> apis;
 
     /**
@@ -60,7 +60,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Auth configuration.
      * 
      */
-    @OutputExport(name="authentication", type=AuthenticationResponse.class, parameters={})
+    @Export(name="authentication", type=AuthenticationResponse.class, parameters={})
     private Output<AuthenticationResponse> authentication;
 
     /**
@@ -74,7 +74,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * API backend configuration.
      * 
      */
-    @OutputExport(name="backend", type=BackendResponse.class, parameters={})
+    @Export(name="backend", type=BackendResponse.class, parameters={})
     private Output<BackendResponse> backend;
 
     /**
@@ -88,7 +88,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Billing configuration.
      * 
      */
-    @OutputExport(name="billing", type=BillingResponse.class, parameters={})
+    @Export(name="billing", type=BillingResponse.class, parameters={})
     private Output<BillingResponse> billing;
 
     /**
@@ -102,7 +102,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Obsolete. Do not use. This field has no semantic meaning. The service config compiler always sets this field to `3`.
      * 
      */
-    @OutputExport(name="configVersion", type=Integer.class, parameters={})
+    @Export(name="configVersion", type=Integer.class, parameters={})
     private Output<Integer> configVersion;
 
     /**
@@ -116,7 +116,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Context configuration.
      * 
      */
-    @OutputExport(name="context", type=ContextResponse.class, parameters={})
+    @Export(name="context", type=ContextResponse.class, parameters={})
     private Output<ContextResponse> context;
 
     /**
@@ -130,7 +130,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Configuration for the service control plane.
      * 
      */
-    @OutputExport(name="control", type=ControlResponse.class, parameters={})
+    @Export(name="control", type=ControlResponse.class, parameters={})
     private Output<ControlResponse> control;
 
     /**
@@ -144,7 +144,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Custom error configuration.
      * 
      */
-    @OutputExport(name="customError", type=CustomErrorResponse.class, parameters={})
+    @Export(name="customError", type=CustomErrorResponse.class, parameters={})
     private Output<CustomErrorResponse> customError;
 
     /**
@@ -158,7 +158,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Additional API documentation.
      * 
      */
-    @OutputExport(name="documentation", type=DocumentationResponse.class, parameters={})
+    @Export(name="documentation", type=DocumentationResponse.class, parameters={})
     private Output<DocumentationResponse> documentation;
 
     /**
@@ -172,7 +172,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Configuration for network endpoints. If this is empty, then an endpoint with the same name as the service is automatically generated to service all defined APIs.
      * 
      */
-    @OutputExport(name="endpoints", type=List.class, parameters={EndpointResponse.class})
+    @Export(name="endpoints", type=List.class, parameters={EndpointResponse.class})
     private Output<List<EndpointResponse>> endpoints;
 
     /**
@@ -186,7 +186,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum
      * 
      */
-    @OutputExport(name="enums", type=List.class, parameters={EnumResponse.class})
+    @Export(name="enums", type=List.class, parameters={EnumResponse.class})
     private Output<List<EnumResponse>> enums;
 
     /**
@@ -200,7 +200,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * HTTP configuration.
      * 
      */
-    @OutputExport(name="http", type=HttpResponse.class, parameters={})
+    @Export(name="http", type=HttpResponse.class, parameters={})
     private Output<HttpResponse> http;
 
     /**
@@ -214,7 +214,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Logging configuration.
      * 
      */
-    @OutputExport(name="logging", type=LoggingResponse.class, parameters={})
+    @Export(name="logging", type=LoggingResponse.class, parameters={})
     private Output<LoggingResponse> logging;
 
     /**
@@ -228,7 +228,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Defines the logs used by this service.
      * 
      */
-    @OutputExport(name="logs", type=List.class, parameters={LogDescriptorResponse.class})
+    @Export(name="logs", type=List.class, parameters={LogDescriptorResponse.class})
     private Output<List<LogDescriptorResponse>> logs;
 
     /**
@@ -242,7 +242,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Defines the metrics used by this service.
      * 
      */
-    @OutputExport(name="metrics", type=List.class, parameters={MetricDescriptorResponse.class})
+    @Export(name="metrics", type=List.class, parameters={MetricDescriptorResponse.class})
     private Output<List<MetricDescriptorResponse>> metrics;
 
     /**
@@ -256,7 +256,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Defines the monitored resources used by this service. This is required by the Service.monitoring and Service.logging configurations.
      * 
      */
-    @OutputExport(name="monitoredResources", type=List.class, parameters={MonitoredResourceDescriptorResponse.class})
+    @Export(name="monitoredResources", type=List.class, parameters={MonitoredResourceDescriptorResponse.class})
     private Output<List<MonitoredResourceDescriptorResponse>> monitoredResources;
 
     /**
@@ -270,7 +270,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Monitoring configuration.
      * 
      */
-    @OutputExport(name="monitoring", type=MonitoringResponse.class, parameters={})
+    @Export(name="monitoring", type=MonitoringResponse.class, parameters={})
     private Output<MonitoringResponse> monitoring;
 
     /**
@@ -284,7 +284,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The service name, which is a DNS-like logical identifier for the service, such as `calendar.googleapis.com`. The service name typically goes through DNS verification to make sure the owner of the service also owns the DNS name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -298,7 +298,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The Google project that owns this service.
      * 
      */
-    @OutputExport(name="producerProjectId", type=String.class, parameters={})
+    @Export(name="producerProjectId", type=String.class, parameters={})
     private Output<String> producerProjectId;
 
     /**
@@ -312,7 +312,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Quota configuration.
      * 
      */
-    @OutputExport(name="quota", type=QuotaResponse.class, parameters={})
+    @Export(name="quota", type=QuotaResponse.class, parameters={})
     private Output<QuotaResponse> quota;
 
     /**
@@ -326,7 +326,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The source information for this configuration if available.
      * 
      */
-    @OutputExport(name="sourceInfo", type=SourceInfoResponse.class, parameters={})
+    @Export(name="sourceInfo", type=SourceInfoResponse.class, parameters={})
     private Output<SourceInfoResponse> sourceInfo;
 
     /**
@@ -340,7 +340,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * System parameter configuration.
      * 
      */
-    @OutputExport(name="systemParameters", type=SystemParametersResponse.class, parameters={})
+    @Export(name="systemParameters", type=SystemParametersResponse.class, parameters={})
     private Output<SystemParametersResponse> systemParameters;
 
     /**
@@ -354,7 +354,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * A list of all proto message types included in this API service. It serves similar purpose as [google.api.Service.types], except that these types are not needed by user-defined APIs. Therefore, they will not show up in the generated discovery doc. This field should only be used to define system APIs in ESF.
      * 
      */
-    @OutputExport(name="systemTypes", type=List.class, parameters={TypeResponse.class})
+    @Export(name="systemTypes", type=List.class, parameters={TypeResponse.class})
     private Output<List<TypeResponse>> systemTypes;
 
     /**
@@ -368,7 +368,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The product title for this service, it is the name displayed in Google Cloud Console.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
@@ -382,7 +382,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32
      * 
      */
-    @OutputExport(name="types", type=List.class, parameters={TypeResponse.class})
+    @Export(name="types", type=List.class, parameters={TypeResponse.class})
     private Output<List<TypeResponse>> types;
 
     /**
@@ -396,7 +396,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Configuration controlling usage of this service.
      * 
      */
-    @OutputExport(name="usage", type=UsageResponse.class, parameters={})
+    @Export(name="usage", type=UsageResponse.class, parameters={})
     private Output<UsageResponse> usage;
 
     /**

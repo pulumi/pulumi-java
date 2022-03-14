@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iap_v1.BrandArgs;
@@ -25,7 +25,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * Application name displayed on OAuth consent screen.
      * 
      */
-    @OutputExport(name="applicationTitle", type=String.class, parameters={})
+    @Export(name="applicationTitle", type=String.class, parameters={})
     private Output<String> applicationTitle;
 
     /**
@@ -39,7 +39,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * Identifier of the brand. NOTE: GCP project number achieves the same brand identification purpose as only one brand per project can be created.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -53,7 +53,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * Whether the brand is only intended for usage inside the G Suite organization only.
      * 
      */
-    @OutputExport(name="orgInternalOnly", type=Boolean.class, parameters={})
+    @Export(name="orgInternalOnly", type=Boolean.class, parameters={})
     private Output<Boolean> orgInternalOnly;
 
     /**
@@ -67,7 +67,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * Support email displayed on the OAuth consent screen.
      * 
      */
-    @OutputExport(name="supportEmail", type=String.class, parameters={})
+    @Export(name="supportEmail", type=String.class, parameters={})
     private Output<String> supportEmail;
 
     /**

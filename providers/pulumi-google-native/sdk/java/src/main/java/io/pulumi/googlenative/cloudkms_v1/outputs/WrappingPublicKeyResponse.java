@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WrappingPublicKeyResponse {
     /**
      * The public key, encoded in PEM format. For more information, see the [RFC 7468](https://tools.ietf.org/html/rfc7468) sections for [General Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13).
@@ -15,8 +15,8 @@ public final class WrappingPublicKeyResponse {
      */
     private final String pem;
 
-    @OutputCustomType.Constructor
-    private WrappingPublicKeyResponse(@OutputCustomType.Parameter("pem") String pem) {
+    @CustomType.Constructor
+    private WrappingPublicKeyResponse(@CustomType.Parameter("pem") String pem) {
         this.pem = pem;
     }
 

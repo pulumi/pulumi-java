@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHistoryResult {
     /**
      * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
@@ -30,12 +30,12 @@ public final class GetHistoryResult {
      */
     private final String testPlatform;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHistoryResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("historyId") String historyId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("testPlatform") String testPlatform) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("historyId") String historyId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("testPlatform") String testPlatform) {
         this.displayName = displayName;
         this.historyId = historyId;
         this.name = name;

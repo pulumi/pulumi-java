@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.AccessPolicyArgs;
@@ -22,7 +22,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -36,7 +36,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The parent of this `AccessPolicy` in the Cloud Resource Hierarchy. Currently immutable once created. Format: `organizations/{organization_id}`
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -50,7 +50,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Human readable title. Does not affect behavior.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BinaryAuthorizationResponse {
     /**
      * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
@@ -15,8 +15,8 @@ public final class BinaryAuthorizationResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private BinaryAuthorizationResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private BinaryAuthorizationResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

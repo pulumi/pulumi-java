@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
      * 
      */
-    @InputImport(name="atomKey", required=true)
+    @Import(name="atomKey", required=true)
       private final String atomKey;
 
     public String getAtomKey() {
@@ -32,7 +32,7 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The `Input.key` that identifies the input file.
      * 
      */
-    @InputImport(name="inputKey", required=true)
+    @Import(name="inputKey", required=true)
       private final String inputKey;
 
     public String getInputKey() {
@@ -43,7 +43,7 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The zero-based index of the track in the input file.
      * 
      */
-    @InputImport(name="inputTrack", required=true)
+    @Import(name="inputTrack", required=true)
       private final Integer inputTrack;
 
     public Integer getInputTrack() {

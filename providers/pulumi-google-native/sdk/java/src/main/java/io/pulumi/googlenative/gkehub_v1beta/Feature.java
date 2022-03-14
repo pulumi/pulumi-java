@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gkehub_v1beta.FeatureArgs;
@@ -26,7 +26,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * When the Feature resource was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * When the Feature resource was deleted.
      * 
      */
-    @OutputExport(name="deleteTime", type=String.class, parameters={})
+    @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
@@ -54,7 +54,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * GCP labels for this Feature.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -68,7 +68,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
      * 
      */
-    @OutputExport(name="membershipSpecs", type=Map.class, parameters={String.class, String.class})
+    @Export(name="membershipSpecs", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> membershipSpecs;
 
     /**
@@ -82,7 +82,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.
      * 
      */
-    @OutputExport(name="membershipStates", type=Map.class, parameters={String.class, String.class})
+    @Export(name="membershipStates", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> membershipStates;
 
     /**
@@ -96,7 +96,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * The full, unique name of this Feature resource in the format `projects/*{@literal /}locations/*{@literal /}features/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * State of the Feature resource itself.
      * 
      */
-    @OutputExport(name="resourceState", type=FeatureResourceStateResponse.class, parameters={})
+    @Export(name="resourceState", type=FeatureResourceStateResponse.class, parameters={})
     private Output<FeatureResourceStateResponse> resourceState;
 
     /**
@@ -124,7 +124,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
      * 
      */
-    @OutputExport(name="spec", type=CommonFeatureSpecResponse.class, parameters={})
+    @Export(name="spec", type=CommonFeatureSpecResponse.class, parameters={})
     private Output<CommonFeatureSpecResponse> spec;
 
     /**
@@ -138,7 +138,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * The Hub-wide Feature state.
      * 
      */
-    @OutputExport(name="state", type=CommonFeatureStateResponse.class, parameters={})
+    @Export(name="state", type=CommonFeatureStateResponse.class, parameters={})
     private Output<CommonFeatureStateResponse> state;
 
     /**
@@ -152,7 +152,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * When the Feature resource was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

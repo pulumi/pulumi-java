@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2QuasiIdentifierFieldArgs;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
      * Quasi-identifier columns.
      * 
      */
-    @InputImport(name="quasiIds", required=true)
+    @Import(name="quasiIds", required=true)
       private final Output<List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs>> quasiIds;
 
     public Output<List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs>> getQuasiIds() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
      * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
      * 
      */
-    @InputImport(name="relativeFrequency", required=true)
+    @Import(name="relativeFrequency", required=true)
       private final Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> getRelativeFrequency() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
      * Auxiliary table location.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
     public Output<GooglePrivacyDlpV2BigQueryTableArgs> getTable() {

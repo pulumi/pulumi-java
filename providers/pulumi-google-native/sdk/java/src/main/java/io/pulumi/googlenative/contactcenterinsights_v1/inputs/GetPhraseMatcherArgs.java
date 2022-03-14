@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetPhraseMatcherArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPhraseMatcherArgs Empty = new GetPhraseMatcherArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="phraseMatcherId", required=true)
+    @Import(name="phraseMatcherId", required=true)
       private final String phraseMatcherId;
 
     public String getPhraseMatcherId() {
         return this.phraseMatcherId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

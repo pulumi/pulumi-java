@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVpnTunnelResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -128,31 +128,31 @@ public final class GetVpnTunnelResult {
      */
     private final Integer vpnGatewayInterface;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpnTunnelResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("detailedStatus") String detailedStatus,
-        @OutputCustomType.Parameter("ikeVersion") Integer ikeVersion,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("localTrafficSelector") List<String> localTrafficSelector,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peerExternalGateway") String peerExternalGateway,
-        @OutputCustomType.Parameter("peerExternalGatewayInterface") Integer peerExternalGatewayInterface,
-        @OutputCustomType.Parameter("peerGcpGateway") String peerGcpGateway,
-        @OutputCustomType.Parameter("peerIp") String peerIp,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("remoteTrafficSelector") List<String> remoteTrafficSelector,
-        @OutputCustomType.Parameter("router") String router,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sharedSecret") String sharedSecret,
-        @OutputCustomType.Parameter("sharedSecretHash") String sharedSecretHash,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("targetVpnGateway") String targetVpnGateway,
-        @OutputCustomType.Parameter("vpnGateway") String vpnGateway,
-        @OutputCustomType.Parameter("vpnGatewayInterface") Integer vpnGatewayInterface) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("detailedStatus") String detailedStatus,
+        @CustomType.Parameter("ikeVersion") Integer ikeVersion,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("localTrafficSelector") List<String> localTrafficSelector,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peerExternalGateway") String peerExternalGateway,
+        @CustomType.Parameter("peerExternalGatewayInterface") Integer peerExternalGatewayInterface,
+        @CustomType.Parameter("peerGcpGateway") String peerGcpGateway,
+        @CustomType.Parameter("peerIp") String peerIp,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("remoteTrafficSelector") List<String> remoteTrafficSelector,
+        @CustomType.Parameter("router") String router,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sharedSecret") String sharedSecret,
+        @CustomType.Parameter("sharedSecretHash") String sharedSecretHash,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("targetVpnGateway") String targetVpnGateway,
+        @CustomType.Parameter("vpnGateway") String vpnGateway,
+        @CustomType.Parameter("vpnGatewayInterface") Integer vpnGatewayInterface) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.detailedStatus = detailedStatus;

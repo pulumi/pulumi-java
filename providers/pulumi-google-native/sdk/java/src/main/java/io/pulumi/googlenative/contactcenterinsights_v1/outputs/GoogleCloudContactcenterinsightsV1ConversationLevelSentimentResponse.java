@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1SentimentDataResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse {
     /**
      * The channel of the audio that the data applies to.
@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
      */
     private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(
-        @OutputCustomType.Parameter("channelTag") Integer channelTag,
-        @OutputCustomType.Parameter("sentimentData") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
+        @CustomType.Parameter("channelTag") Integer channelTag,
+        @CustomType.Parameter("sentimentData") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
         this.channelTag = channelTag;
         this.sentimentData = sentimentData;
     }

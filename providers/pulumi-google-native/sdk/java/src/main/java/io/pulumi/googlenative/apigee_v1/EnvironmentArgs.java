@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.enums.EnvironmentApiProxyType;
 import io.pulumi.googlenative.apigee_v1.enums.EnvironmentDeploymentType;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertiesArgs;
@@ -21,7 +21,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
      * 
      */
-    @InputImport(name="apiProxyType")
+    @Import(name="apiProxyType")
       private final @Nullable Output<EnvironmentApiProxyType> apiProxyType;
 
     public Output<EnvironmentApiProxyType> getApiProxyType() {
@@ -32,7 +32,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
      * 
      */
-    @InputImport(name="deploymentType")
+    @Import(name="deploymentType")
       private final @Nullable Output<EnvironmentDeploymentType> deploymentType;
 
     public Output<EnvironmentDeploymentType> getDeploymentType() {
@@ -43,7 +43,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Description of the environment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Display name for this environment.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -65,14 +65,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the environment. Values must match the regular expression `^[.\\p{Alnum}-_]{1,255}$`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -83,7 +83,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Key-value pairs that may be used for customizing the environment.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
 
     public Output<GoogleCloudApigeeV1PropertiesArgs> getProperties() {

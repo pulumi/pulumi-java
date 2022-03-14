@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeAccessConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeMetricsResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeSoftwareConfigResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.notebooks_v1.outputs.VirtualMachineResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRuntimeResult {
     /**
      * The config settings for accessing runtime.
@@ -59,17 +59,17 @@ public final class GetRuntimeResult {
      */
     private final VirtualMachineResponse virtualMachine;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRuntimeResult(
-        @OutputCustomType.Parameter("accessConfig") RuntimeAccessConfigResponse accessConfig,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("healthState") String healthState,
-        @OutputCustomType.Parameter("metrics") RuntimeMetricsResponse metrics,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("softwareConfig") RuntimeSoftwareConfigResponse softwareConfig,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("virtualMachine") VirtualMachineResponse virtualMachine) {
+        @CustomType.Parameter("accessConfig") RuntimeAccessConfigResponse accessConfig,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("healthState") String healthState,
+        @CustomType.Parameter("metrics") RuntimeMetricsResponse metrics,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("softwareConfig") RuntimeSoftwareConfigResponse softwareConfig,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("virtualMachine") VirtualMachineResponse virtualMachine) {
         this.accessConfig = accessConfig;
         this.createTime = createTime;
         this.healthState = healthState;

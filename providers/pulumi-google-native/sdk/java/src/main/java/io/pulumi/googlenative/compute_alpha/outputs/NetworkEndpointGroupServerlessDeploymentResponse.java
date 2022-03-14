@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkEndpointGroupServerlessDeploymentResponse {
     /**
      * The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
@@ -30,12 +30,12 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkEndpointGroupServerlessDeploymentResponse(
-        @OutputCustomType.Parameter("platform") String platform,
-        @OutputCustomType.Parameter("resource") String resource,
-        @OutputCustomType.Parameter("urlMask") String urlMask,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("platform") String platform,
+        @CustomType.Parameter("resource") String resource,
+        @CustomType.Parameter("urlMask") String urlMask,
+        @CustomType.Parameter("version") String version) {
         this.platform = platform;
         this.resource = resource;
         this.urlMask = urlMask;

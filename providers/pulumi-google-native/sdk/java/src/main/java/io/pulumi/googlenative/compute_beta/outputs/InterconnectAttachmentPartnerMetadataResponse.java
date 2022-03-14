@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InterconnectAttachmentPartnerMetadataResponse {
     /**
      * Plain text name of the Interconnect this attachment is connected to, as displayed in the Partner's portal. For instance "Chicago 1". This value may be validated to match approved Partner values.
@@ -25,11 +25,11 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
      */
     private final String portalUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InterconnectAttachmentPartnerMetadataResponse(
-        @OutputCustomType.Parameter("interconnectName") String interconnectName,
-        @OutputCustomType.Parameter("partnerName") String partnerName,
-        @OutputCustomType.Parameter("portalUrl") String portalUrl) {
+        @CustomType.Parameter("interconnectName") String interconnectName,
+        @CustomType.Parameter("partnerName") String partnerName,
+        @CustomType.Parameter("portalUrl") String portalUrl) {
         this.interconnectName = interconnectName;
         this.partnerName = partnerName;
         this.portalUrl = portalUrl;

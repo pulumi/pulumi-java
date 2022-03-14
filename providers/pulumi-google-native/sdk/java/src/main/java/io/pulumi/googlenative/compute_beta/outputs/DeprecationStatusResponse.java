@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.RolloutPolicyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeprecationStatusResponse {
     /**
      * An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DELETED. This is only informational and the status will not change unless the client explicitly changes it.
@@ -41,14 +41,14 @@ public final class DeprecationStatusResponse {
      */
     private final RolloutPolicyResponse stateOverride;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeprecationStatusResponse(
-        @OutputCustomType.Parameter("deleted") String deleted,
-        @OutputCustomType.Parameter("deprecated") String deprecated,
-        @OutputCustomType.Parameter("obsolete") String obsolete,
-        @OutputCustomType.Parameter("replacement") String replacement,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateOverride") RolloutPolicyResponse stateOverride) {
+        @CustomType.Parameter("deleted") String deleted,
+        @CustomType.Parameter("deprecated") String deprecated,
+        @CustomType.Parameter("obsolete") String obsolete,
+        @CustomType.Parameter("replacement") String replacement,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateOverride") RolloutPolicyResponse stateOverride) {
         this.deleted = deleted;
         this.deprecated = deprecated;
         this.obsolete = obsolete;

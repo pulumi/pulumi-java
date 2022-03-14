@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.DomainMappingSpecResponse;
 import io.pulumi.googlenative.run_v1.outputs.DomainMappingStatusResponse;
 import io.pulumi.googlenative.run_v1.outputs.ObjectMetaResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainMappingResult {
     /**
      * The API version for this call such as "domains.cloudrun.com/v1".
@@ -38,13 +38,13 @@ public final class GetDomainMappingResult {
      */
     private final DomainMappingStatusResponse status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainMappingResult(
-        @OutputCustomType.Parameter("apiVersion") String apiVersion,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
-        @OutputCustomType.Parameter("spec") DomainMappingSpecResponse spec,
-        @OutputCustomType.Parameter("status") DomainMappingStatusResponse status) {
+        @CustomType.Parameter("apiVersion") String apiVersion,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @CustomType.Parameter("spec") DomainMappingSpecResponse spec,
+        @CustomType.Parameter("status") DomainMappingStatusResponse status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

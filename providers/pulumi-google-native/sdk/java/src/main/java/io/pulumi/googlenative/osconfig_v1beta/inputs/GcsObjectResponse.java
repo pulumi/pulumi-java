@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
      * Bucket of the Google Cloud Storage object.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
@@ -31,7 +31,7 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
      * Generation number of the Google Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
      * 
      */
-    @InputImport(name="generationNumber", required=true)
+    @Import(name="generationNumber", required=true)
       private final String generationNumber;
 
     public String getGenerationNumber() {
@@ -42,7 +42,7 @@ public final class GcsObjectResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the Google Cloud Storage object.
      * 
      */
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final String object;
 
     public String getObject() {

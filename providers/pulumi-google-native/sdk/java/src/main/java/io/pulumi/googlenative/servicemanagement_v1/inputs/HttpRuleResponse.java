@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomHttpPatternResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
      * 
      */
-    @InputImport(name="additionalBindings", required=true)
+    @Import(name="additionalBindings", required=true)
       private final List<HttpRuleResponse> additionalBindings;
 
     public List<HttpRuleResponse> getAdditionalBindings() {
@@ -33,7 +33,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
      * 
      */
-    @InputImport(name="body", required=true)
+    @Import(name="body", required=true)
       private final String body;
 
     public String getBody() {
@@ -44,7 +44,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or "*" to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
      * 
      */
-    @InputImport(name="custom", required=true)
+    @Import(name="custom", required=true)
       private final CustomHttpPatternResponse custom;
 
     public CustomHttpPatternResponse getCustom() {
@@ -55,7 +55,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Maps to HTTP DELETE. Used for deleting a resource.
      * 
      */
-    @InputImport(name="delete", required=true)
+    @Import(name="delete", required=true)
       private final String delete;
 
     public String getDelete() {
@@ -66,7 +66,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Maps to HTTP GET. Used for listing and getting information about resources.
      * 
      */
-    @InputImport(name="get", required=true)
+    @Import(name="get", required=true)
       private final String get;
 
     public String getGet() {
@@ -77,7 +77,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Maps to HTTP PATCH. Used for updating a resource.
      * 
      */
-    @InputImport(name="patch", required=true)
+    @Import(name="patch", required=true)
       private final String patch;
 
     public String getPatch() {
@@ -88,7 +88,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Maps to HTTP POST. Used for creating a resource or performing an action.
      * 
      */
-    @InputImport(name="post", required=true)
+    @Import(name="post", required=true)
       private final String post;
 
     public String getPost() {
@@ -99,7 +99,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Maps to HTTP PUT. Used for replacing a resource.
      * 
      */
-    @InputImport(name="put", required=true)
+    @Import(name="put", required=true)
       private final String put;
 
     public String getPut() {
@@ -110,7 +110,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
      * 
      */
-    @InputImport(name="responseBody", required=true)
+    @Import(name="responseBody", required=true)
       private final String responseBody;
 
     public String getResponseBody() {
@@ -121,7 +121,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Selects a method to which this rule applies. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final String selector;
 
     public String getSelector() {

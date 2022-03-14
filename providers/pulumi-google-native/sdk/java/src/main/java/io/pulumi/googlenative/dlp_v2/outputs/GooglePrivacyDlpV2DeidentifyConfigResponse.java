@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RecordTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TransformationErrorHandlingResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
     /**
      * Treat the dataset as free-form text and apply the same free text transformation everywhere.
@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
      */
     private final GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2DeidentifyConfigResponse(
-        @OutputCustomType.Parameter("infoTypeTransformations") GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
-        @OutputCustomType.Parameter("recordTransformations") GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations,
-        @OutputCustomType.Parameter("transformationErrorHandling") GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
+        @CustomType.Parameter("infoTypeTransformations") GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
+        @CustomType.Parameter("recordTransformations") GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations,
+        @CustomType.Parameter("transformationErrorHandling") GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
         this.infoTypeTransformations = infoTypeTransformations;
         this.recordTransformations = recordTransformations;
         this.transformationErrorHandling = transformationErrorHandling;

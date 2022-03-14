@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse {
     /**
      * Optional. The text to display.
@@ -25,11 +25,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
      */
     private final String textToSpeech;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse(
-        @OutputCustomType.Parameter("displayText") String displayText,
-        @OutputCustomType.Parameter("ssml") String ssml,
-        @OutputCustomType.Parameter("textToSpeech") String textToSpeech) {
+        @CustomType.Parameter("displayText") String displayText,
+        @CustomType.Parameter("ssml") String ssml,
+        @CustomType.Parameter("textToSpeech") String textToSpeech) {
         this.displayText = displayText;
         this.ssml = ssml;
         this.textToSpeech = textToSpeech;

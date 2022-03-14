@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column family level. However, the setting at this level takes precedence if 'encoding' is set at both levels.
      * 
      */
-    @InputImport(name="encoding", required=true)
+    @Import(name="encoding", required=true)
       private final String encoding;
 
     public String getEncoding() {
@@ -28,7 +28,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * [Optional] If the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as the column field name and is used as field name in queries.
      * 
      */
-    @InputImport(name="fieldName", required=true)
+    @Import(name="fieldName", required=true)
       private final String fieldName;
 
     public String getFieldName() {
@@ -39,7 +39,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * [Optional] If this is set, only the latest version of value in this column are exposed. 'onlyReadLatest' can also be set at the column family level. However, the setting at this level takes precedence if 'onlyReadLatest' is set at both levels.
      * 
      */
-    @InputImport(name="onlyReadLatest", required=true)
+    @Import(name="onlyReadLatest", required=true)
       private final Boolean onlyReadLatest;
 
     public Boolean getOnlyReadLatest() {
@@ -50,14 +50,14 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * [Required] Qualifier of the column. Columns in the parent column family that has this exact qualifier are exposed as . field. If the qualifier is valid UTF-8 string, it can be specified in the qualifier_string field. Otherwise, a base-64 encoded value must be set to qualifier_encoded. The column field name is the same as the column qualifier. However, if the qualifier is not a valid BigQuery field identifier i.e. does not match [a-zA-Z][a-zA-Z0-9_]*, a valid identifier must be provided as field_name.
      * 
      */
-    @InputImport(name="qualifierEncoded", required=true)
+    @Import(name="qualifierEncoded", required=true)
       private final String qualifierEncoded;
 
     public String getQualifierEncoded() {
         return this.qualifierEncoded;
     }
 
-    @InputImport(name="qualifierString", required=true)
+    @Import(name="qualifierString", required=true)
       private final String qualifierString;
 
     public String getQualifierString() {
@@ -68,7 +68,7 @@ public final class BigtableColumnResponse extends io.pulumi.resources.InvokeArgs
      * [Optional] The type to convert the value in cells of this column. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. 'type' can also be set at the column family level. However, the setting at this level takes precedence if 'type' is set at both levels.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

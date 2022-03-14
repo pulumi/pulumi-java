@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CertificateProviderInstanceResponse extends io.pulumi.resourc
      * Plugin instance name, used to locate and load CertificateProvider instance configuration. Set to "google_cloud_private_spiffe" to use Certificate Authority Service certificate provider instance.
      * 
      */
-    @InputImport(name="pluginInstance", required=true)
+    @Import(name="pluginInstance", required=true)
       private final String pluginInstance;
 
     public String getPluginInstance() {

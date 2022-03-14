@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.PipelineReadyConditionResponse;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.TargetsPresentConditionResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
      * Details around the Pipeline's overall status.
      * 
      */
-    @InputImport(name="pipelineReadyCondition", required=true)
+    @Import(name="pipelineReadyCondition", required=true)
       private final PipelineReadyConditionResponse pipelineReadyCondition;
 
     public PipelineReadyConditionResponse getPipelineReadyCondition() {
@@ -32,7 +32,7 @@ public final class PipelineConditionResponse extends io.pulumi.resources.InvokeA
      * Detalis around targets enumerated in the pipeline.
      * 
      */
-    @InputImport(name="targetsPresentCondition", required=true)
+    @Import(name="targetsPresentCondition", required=true)
       private final TargetsPresentConditionResponse targetsPresentCondition;
 
     public TargetsPresentConditionResponse getTargetsPresentCondition() {

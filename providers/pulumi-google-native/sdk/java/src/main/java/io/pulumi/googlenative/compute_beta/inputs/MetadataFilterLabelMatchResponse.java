@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MetadataFilterLabelMatchResponse extends io.pulumi.resources.
      * Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class MetadataFilterLabelMatchResponse extends io.pulumi.resources.
      * The value of the label must match the specified value. value can have a maximum length of 1024 characters.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

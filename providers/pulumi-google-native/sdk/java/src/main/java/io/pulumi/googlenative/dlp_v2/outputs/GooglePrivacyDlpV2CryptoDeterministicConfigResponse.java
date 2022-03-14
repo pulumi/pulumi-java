@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse {
     /**
      * A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well. If the context is not set, plaintext would be used as is for encryption. If the context is set but: 1. there is no record present when transforming a given value or 2. the field is not present when transforming a given value, plaintext would be used as is for encryption. Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s.
@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CryptoDeterministicConfigResponse(
-        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
-        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        @OutputCustomType.Parameter("surrogateInfoType") GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        @CustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @CustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @CustomType.Parameter("surrogateInfoType") GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
         this.context = context;
         this.cryptoKey = cryptoKey;
         this.surrogateInfoType = surrogateInfoType;

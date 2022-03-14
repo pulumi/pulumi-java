@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SchemaConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The depth for all recursive structures in the output analytics schema. For example, `concept` in the CodeSystem resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called `concept.concept` but not `concept.concept.concept`. If not specified or set to 0, the server will use the default value 2. The maximum depth allowed is 5.
      * 
      */
-    @InputImport(name="recursiveStructureDepth", required=true)
+    @Import(name="recursiveStructureDepth", required=true)
       private final String recursiveStructureDepth;
 
     public String getRecursiveStructureDepth() {
@@ -31,7 +31,7 @@ public final class SchemaConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the output schema type. Schema type is required.
      * 
      */
-    @InputImport(name="schemaType", required=true)
+    @Import(name="schemaType", required=true)
       private final String schemaType;
 
     public String getSchemaType() {

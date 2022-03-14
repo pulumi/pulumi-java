@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * One-based end column.
      * 
      */
-    @InputImport(name="endColumn", required=true)
+    @Import(name="endColumn", required=true)
       private final Integer endColumn;
 
     public Integer getEndColumn() {
@@ -28,7 +28,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * One-based end line.
      * 
      */
-    @InputImport(name="endLine", required=true)
+    @Import(name="endLine", required=true)
       private final Integer endLine;
 
     public Integer getEndLine() {
@@ -39,7 +39,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * Name of the active procedure, empty if in a top-level script.
      * 
      */
-    @InputImport(name="procedureId", required=true)
+    @Import(name="procedureId", required=true)
       private final String procedureId;
 
     public String getProcedureId() {
@@ -50,7 +50,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * One-based start column.
      * 
      */
-    @InputImport(name="startColumn", required=true)
+    @Import(name="startColumn", required=true)
       private final Integer startColumn;
 
     public Integer getStartColumn() {
@@ -61,7 +61,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * One-based start line.
      * 
      */
-    @InputImport(name="startLine", required=true)
+    @Import(name="startLine", required=true)
       private final Integer startLine;
 
     public Integer getStartLine() {
@@ -72,7 +72,7 @@ public final class ScriptStackFrameResponse extends io.pulumi.resources.InvokeAr
      * Text of the current statement/expression.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final String text;
 
     public String getText() {

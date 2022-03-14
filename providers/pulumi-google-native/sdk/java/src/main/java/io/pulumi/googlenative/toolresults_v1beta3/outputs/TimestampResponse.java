@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimestampResponse {
     /**
      * Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.
@@ -21,10 +21,10 @@ public final class TimestampResponse {
      */
     private final String seconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimestampResponse(
-        @OutputCustomType.Parameter("nanos") Integer nanos,
-        @OutputCustomType.Parameter("seconds") String seconds) {
+        @CustomType.Parameter("nanos") Integer nanos,
+        @CustomType.Parameter("seconds") String seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

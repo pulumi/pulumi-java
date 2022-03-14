@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.AsyncOptionsResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.InputMappingResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ValidationOptionsResponse;
@@ -24,7 +24,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Options regarding how to thread async requests.
      * 
      */
-    @InputImport(name="asyncOptions", required=true)
+    @Import(name="asyncOptions", required=true)
       private final List<AsyncOptionsResponse> asyncOptions;
 
     public List<AsyncOptionsResponse> getAsyncOptions() {
@@ -35,7 +35,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * The mappings that apply for requests.
      * 
      */
-    @InputImport(name="inputMappings", required=true)
+    @Import(name="inputMappings", required=true)
       private final List<InputMappingResponse> inputMappings;
 
     public List<InputMappingResponse> getInputMappings() {
@@ -46,7 +46,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Options for how to validate and process properties on a resource.
      * 
      */
-    @InputImport(name="validationOptions", required=true)
+    @Import(name="validationOptions", required=true)
       private final ValidationOptionsResponse validationOptions;
 
     public ValidationOptionsResponse getValidationOptions() {
@@ -57,7 +57,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
      * 
      */
-    @InputImport(name="virtualProperties", required=true)
+    @Import(name="virtualProperties", required=true)
       private final String virtualProperties;
 
     public String getVirtualProperties() {

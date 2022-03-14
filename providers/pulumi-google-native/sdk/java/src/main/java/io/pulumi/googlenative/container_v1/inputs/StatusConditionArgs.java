@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.enums.StatusConditionCanonicalCode;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
      * Canonical code of the condition.
      * 
      */
-    @InputImport(name="canonicalCode")
+    @Import(name="canonicalCode")
       private final @Nullable Output<StatusConditionCanonicalCode> canonicalCode;
 
     public Output<StatusConditionCanonicalCode> getCanonicalCode() {
@@ -34,7 +34,7 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
      * Human-friendly representation of the condition
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {

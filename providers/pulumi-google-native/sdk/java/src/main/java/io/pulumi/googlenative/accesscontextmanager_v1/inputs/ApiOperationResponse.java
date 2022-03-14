@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.MethodSelectorResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ApiOperationResponse extends io.pulumi.resources.InvokeArgs {
      * API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.
      * 
      */
-    @InputImport(name="methodSelectors", required=true)
+    @Import(name="methodSelectors", required=true)
       private final List<MethodSelectorResponse> methodSelectors;
 
     public List<MethodSelectorResponse> getMethodSelectors() {
@@ -33,7 +33,7 @@ public final class ApiOperationResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the API whose methods or permissions the IngressPolicy or EgressPolicy want to allow. A single ApiOperation with `service_name` field set to `*` will allow all methods AND permissions for all services.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

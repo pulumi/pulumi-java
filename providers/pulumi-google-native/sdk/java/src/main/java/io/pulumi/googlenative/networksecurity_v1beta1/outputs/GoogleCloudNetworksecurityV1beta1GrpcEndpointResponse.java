@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse {
     /**
      * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
@@ -15,8 +15,8 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse {
      */
     private final String targetUri;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse(@OutputCustomType.Parameter("targetUri") String targetUri) {
+    @CustomType.Constructor
+    private GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse(@CustomType.Parameter("targetUri") String targetUri) {
         this.targetUri = targetUri;
     }
 

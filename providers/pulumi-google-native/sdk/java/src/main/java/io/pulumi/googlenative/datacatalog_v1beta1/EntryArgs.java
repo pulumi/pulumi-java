@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1beta1.enums.EntryType;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs;
@@ -23,7 +23,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
      * 
      */
-    @InputImport(name="bigqueryDateShardedSpec")
+    @Import(name="bigqueryDateShardedSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec;
 
     public Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> getBigqueryDateShardedSpec() {
@@ -34,7 +34,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Specification that applies to a BigQuery table. This is only valid on entries of type `TABLE`.
      * 
      */
-    @InputImport(name="bigqueryTableSpec")
+    @Import(name="bigqueryTableSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec;
 
     public Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> getBigqueryTableSpec() {
@@ -45,7 +45,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Entry description, which can consist of several sentences or paragraphs that describe entry contents. Default value is an empty string.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,21 +56,21 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="entryGroupId", required=true)
+    @Import(name="entryGroupId", required=true)
       private final Output<String> entryGroupId;
 
     public Output<String> getEntryGroupId() {
         return this.entryGroupId;
     }
 
-    @InputImport(name="entryId", required=true)
+    @Import(name="entryId", required=true)
       private final Output<String> entryId;
 
     public Output<String> getEntryId() {
@@ -81,7 +81,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
      * 
      */
-    @InputImport(name="gcsFilesetSpec")
+    @Import(name="gcsFilesetSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec;
 
     public Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> getGcsFilesetSpec() {
@@ -92,21 +92,21 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [full name of the resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty string.
      * 
      */
-    @InputImport(name="linkedResource")
+    @Import(name="linkedResource")
       private final @Nullable Output<String> linkedResource;
 
     public Output<String> getLinkedResource() {
         return this.linkedResource == null ? Output.empty() : this.linkedResource;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -117,7 +117,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Schema of the entry. An entry might not have any schema attached to it.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema;
 
     public Output<GoogleCloudDatacatalogV1beta1SchemaArgs> getSchema() {
@@ -128,7 +128,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the entry. Only used for Entries with types in the EntryType enum.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<EntryType> type;
 
     public Output<EntryType> getType() {
@@ -139,7 +139,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    @InputImport(name="userSpecifiedSystem")
+    @Import(name="userSpecifiedSystem")
       private final @Nullable Output<String> userSpecifiedSystem;
 
     public Output<String> getUserSpecifiedSystem() {
@@ -150,7 +150,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
      * 
      */
-    @InputImport(name="userSpecifiedType")
+    @Import(name="userSpecifiedType")
       private final @Nullable Output<String> userSpecifiedType;
 
     public Output<String> getUserSpecifiedType() {

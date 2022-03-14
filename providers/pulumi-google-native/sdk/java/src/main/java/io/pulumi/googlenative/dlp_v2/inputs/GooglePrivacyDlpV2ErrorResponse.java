@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleRpcStatusResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
      * Detailed error codes and messages.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final GoogleRpcStatusResponse details;
 
     public GoogleRpcStatusResponse getDetails() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
      * The times the error occurred.
      * 
      */
-    @InputImport(name="timestamps", required=true)
+    @Import(name="timestamps", required=true)
       private final List<String> timestamps;
 
     public List<String> getTimestamps() {

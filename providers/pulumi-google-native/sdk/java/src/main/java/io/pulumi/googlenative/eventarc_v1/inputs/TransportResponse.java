@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.eventarc_v1.inputs.PubsubResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TransportResponse extends io.pulumi.resources.InvokeArgs {
      * The Pub/Sub topic and subscription used by Eventarc as a transport intermediary.
      * 
      */
-    @InputImport(name="pubsub", required=true)
+    @Import(name="pubsub", required=true)
       private final PubsubResponse pubsub;
 
     public PubsubResponse getPubsub() {

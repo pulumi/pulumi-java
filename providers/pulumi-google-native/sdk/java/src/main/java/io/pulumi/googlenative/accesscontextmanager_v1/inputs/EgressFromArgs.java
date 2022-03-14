@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.EgressFromIdentityType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
      * A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.
      * 
      */
-    @InputImport(name="identities")
+    @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
     public Output<List<String>> getIdentities() {
@@ -35,7 +35,7 @@ public final class EgressFromArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of identities that are allowed access to outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
      * 
      */
-    @InputImport(name="identityType")
+    @Import(name="identityType")
       private final @Nullable Output<EgressFromIdentityType> identityType;
 
     public Output<EgressFromIdentityType> getIdentityType() {

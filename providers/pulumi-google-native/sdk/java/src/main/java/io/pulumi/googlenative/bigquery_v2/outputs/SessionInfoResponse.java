@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SessionInfoResponse {
     /**
      * // [Preview] Id of the session.
@@ -15,8 +15,8 @@ public final class SessionInfoResponse {
      */
     private final String sessionId;
 
-    @OutputCustomType.Constructor
-    private SessionInfoResponse(@OutputCustomType.Parameter("sessionId") String sessionId) {
+    @CustomType.Constructor
+    private SessionInfoResponse(@CustomType.Parameter("sessionId") String sessionId) {
         this.sessionId = sessionId;
     }
 

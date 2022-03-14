@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PacketMirroringFilterResponse {
     /**
      * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
@@ -26,11 +26,11 @@ public final class PacketMirroringFilterResponse {
      */
     private final List<String> ipProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PacketMirroringFilterResponse(
-        @OutputCustomType.Parameter("cidrRanges") List<String> cidrRanges,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("ipProtocols") List<String> ipProtocols) {
+        @CustomType.Parameter("cidrRanges") List<String> cidrRanges,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("ipProtocols") List<String> ipProtocols) {
         this.cidrRanges = cidrRanges;
         this.direction = direction;
         this.ipProtocols = ipProtocols;

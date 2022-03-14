@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
      * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
      * 
      */
-    @InputImport(name="words")
+    @Import(name="words")
       private final @Nullable Output<List<String>> words;
 
     public Output<List<String>> getWords() {

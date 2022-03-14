@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.InstancePropertiesResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SavedDiskResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMachineImageResult {
     /**
      * The creation timestamp for this machine image in RFC3339 text format.
@@ -97,24 +97,24 @@ public final class GetMachineImageResult {
      */
     private final String totalStorageBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMachineImageResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
-        @OutputCustomType.Parameter("instanceProperties") InstancePropertiesResponse instanceProperties,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("machineImageEncryptionKey") CustomerEncryptionKeyResponse machineImageEncryptionKey,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("savedDisks") List<SavedDiskResponse> savedDisks,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sourceDiskEncryptionKeys") List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys,
-        @OutputCustomType.Parameter("sourceInstance") String sourceInstance,
-        @OutputCustomType.Parameter("sourceInstanceProperties") SourceInstancePropertiesResponse sourceInstanceProperties,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations,
-        @OutputCustomType.Parameter("totalStorageBytes") String totalStorageBytes) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("guestFlush") Boolean guestFlush,
+        @CustomType.Parameter("instanceProperties") InstancePropertiesResponse instanceProperties,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("machineImageEncryptionKey") CustomerEncryptionKeyResponse machineImageEncryptionKey,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("savedDisks") List<SavedDiskResponse> savedDisks,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sourceDiskEncryptionKeys") List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys,
+        @CustomType.Parameter("sourceInstance") String sourceInstance,
+        @CustomType.Parameter("sourceInstanceProperties") SourceInstancePropertiesResponse sourceInstanceProperties,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("storageLocations") List<String> storageLocations,
+        @CustomType.Parameter("totalStorageBytes") String totalStorageBytes) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.guestFlush = guestFlush;

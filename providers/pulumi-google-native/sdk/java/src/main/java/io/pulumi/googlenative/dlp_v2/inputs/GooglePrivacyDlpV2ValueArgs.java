@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ValueDayOfWeekValue;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleTypeDateArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleTypeTimeOfDayArgs;
@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * boolean
      * 
      */
-    @InputImport(name="booleanValue")
+    @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
 
     public Output<Boolean> getBooleanValue() {
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * date
      * 
      */
-    @InputImport(name="dateValue")
+    @Import(name="dateValue")
       private final @Nullable Output<GoogleTypeDateArgs> dateValue;
 
     public Output<GoogleTypeDateArgs> getDateValue() {
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * day of week
      * 
      */
-    @InputImport(name="dayOfWeekValue")
+    @Import(name="dayOfWeekValue")
       private final @Nullable Output<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue;
 
     public Output<GooglePrivacyDlpV2ValueDayOfWeekValue> getDayOfWeekValue() {
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * float
      * 
      */
-    @InputImport(name="floatValue")
+    @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
     public Output<Double> getFloatValue() {
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * integer
      * 
      */
-    @InputImport(name="integerValue")
+    @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
 
     public Output<String> getIntegerValue() {
@@ -82,7 +82,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * string
      * 
      */
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
@@ -93,7 +93,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * time of day
      * 
      */
-    @InputImport(name="timeValue")
+    @Import(name="timeValue")
       private final @Nullable Output<GoogleTypeTimeOfDayArgs> timeValue;
 
     public Output<GoogleTypeTimeOfDayArgs> getTimeValue() {
@@ -104,7 +104,7 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
      * timestamp
      * 
      */
-    @InputImport(name="timestampValue")
+    @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
     public Output<String> getTimestampValue() {

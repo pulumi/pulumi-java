@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupResult {
     /**
      * A user-assigned name for this group, used only for display purposes.
@@ -36,13 +36,13 @@ public final class GetGroupResult {
      */
     private final String parentName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("isCluster") Boolean isCluster,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parentName") String parentName) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("isCluster") Boolean isCluster,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parentName") String parentName) {
         this.displayName = displayName;
         this.filter = filter;
         this.isCluster = isCluster;

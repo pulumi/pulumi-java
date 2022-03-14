@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v3.inputs.LatLngResponse;
 import io.pulumi.googlenative.jobs_v3.inputs.PostalAddressResponse;
 import java.lang.Double;
@@ -23,7 +23,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * An object representing a latitude/longitude pair.
      * 
      */
-    @InputImport(name="latLng", required=true)
+    @Import(name="latLng", required=true)
       private final LatLngResponse latLng;
 
     public LatLngResponse getLatLng() {
@@ -34,7 +34,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The type of a location, which corresponds to the address lines field of PostalAddress. For example, "Downtown, Atlanta, GA, USA" has a type of LocationType#NEIGHBORHOOD, and "Kansas City, KS, USA" has a type of LocationType#LOCALITY.
      * 
      */
-    @InputImport(name="locationType", required=true)
+    @Import(name="locationType", required=true)
       private final String locationType;
 
     public String getLocationType() {
@@ -45,7 +45,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * Postal address of the location that includes human readable information, such as postal delivery and payments addresses. Given a postal address, a postal service can deliver items to a premises, P.O. Box, or other delivery location.
      * 
      */
-    @InputImport(name="postalAddress", required=true)
+    @Import(name="postalAddress", required=true)
       private final PostalAddressResponse postalAddress;
 
     public PostalAddressResponse getPostalAddress() {
@@ -56,7 +56,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * Radius in miles of the job location. This value is derived from the location bounding box in which a circle with the specified radius centered from LatLng covers the area associated with the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.
      * 
      */
-    @InputImport(name="radiusInMiles", required=true)
+    @Import(name="radiusInMiles", required=true)
       private final Double radiusInMiles;
 
     public Double getRadiusInMiles() {

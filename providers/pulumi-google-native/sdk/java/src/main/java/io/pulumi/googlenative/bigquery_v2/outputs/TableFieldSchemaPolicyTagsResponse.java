@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableFieldSchemaPolicyTagsResponse {
     /**
      * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
@@ -16,8 +16,8 @@ public final class TableFieldSchemaPolicyTagsResponse {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor
-    private TableFieldSchemaPolicyTagsResponse(@OutputCustomType.Parameter("names") List<String> names) {
+    @CustomType.Constructor
+    private TableFieldSchemaPolicyTagsResponse(@CustomType.Parameter("names") List<String> names) {
         this.names = names;
     }
 

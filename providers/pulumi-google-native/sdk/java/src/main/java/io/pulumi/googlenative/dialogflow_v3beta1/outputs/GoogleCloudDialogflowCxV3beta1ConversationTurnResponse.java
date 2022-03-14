@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse {
     /**
      * The user input.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ConversationTurnResponse(
-        @OutputCustomType.Parameter("userInput") GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput,
-        @OutputCustomType.Parameter("virtualAgentOutput") GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
+        @CustomType.Parameter("userInput") GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput,
+        @CustomType.Parameter("virtualAgentOutput") GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
         this.userInput = userInput;
         this.virtualAgentOutput = virtualAgentOutput;
     }

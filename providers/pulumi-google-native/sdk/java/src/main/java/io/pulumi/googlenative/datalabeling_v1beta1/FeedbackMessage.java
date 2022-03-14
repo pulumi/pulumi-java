@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.FeedbackMessageArgs;
@@ -23,7 +23,7 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
      * String content of the feedback. Maximum of 10000 characters.
      * 
      */
-    @OutputExport(name="body", type=String.class, parameters={})
+    @Export(name="body", type=String.class, parameters={})
     private Output<String> body;
 
     /**
@@ -37,7 +37,7 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
      * Create time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -51,7 +51,7 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
      * The image storing this feedback if the feedback is an image representing operator's comments.
      * 
      */
-    @OutputExport(name="image", type=String.class, parameters={})
+    @Export(name="image", type=String.class, parameters={})
     private Output<String> image;
 
     /**
@@ -65,7 +65,7 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
      * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -75,13 +75,13 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="operatorFeedbackMetadata", type=GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse.class, parameters={})
+    @Export(name="operatorFeedbackMetadata", type=GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse> operatorFeedbackMetadata;
 
     public Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse> getOperatorFeedbackMetadata() {
         return this.operatorFeedbackMetadata;
     }
-    @OutputExport(name="requesterFeedbackMetadata", type=GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse.class, parameters={})
+    @Export(name="requesterFeedbackMetadata", type=GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse> requesterFeedbackMetadata;
 
     public Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse> getRequesterFeedbackMetadata() {

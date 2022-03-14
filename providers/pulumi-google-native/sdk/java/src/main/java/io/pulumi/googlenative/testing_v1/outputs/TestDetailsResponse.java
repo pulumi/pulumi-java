@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestDetailsResponse {
     /**
      * If the TestState is ERROR, then this string will contain human-readable details about the error.
@@ -21,10 +21,10 @@ public final class TestDetailsResponse {
      */
     private final List<String> progressMessages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestDetailsResponse(
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("progressMessages") List<String> progressMessages) {
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("progressMessages") List<String> progressMessages) {
         this.errorMessage = errorMessage;
         this.progressMessages = progressMessages;
     }

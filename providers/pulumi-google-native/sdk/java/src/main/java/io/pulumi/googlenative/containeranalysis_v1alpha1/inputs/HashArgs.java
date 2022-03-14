@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.HashType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
      * The type of hash that was performed.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<HashType> type;
 
     public Output<HashType> getType() {
@@ -34,7 +34,7 @@ public final class HashArgs extends io.pulumi.resources.ResourceArgs {
      * The hash value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

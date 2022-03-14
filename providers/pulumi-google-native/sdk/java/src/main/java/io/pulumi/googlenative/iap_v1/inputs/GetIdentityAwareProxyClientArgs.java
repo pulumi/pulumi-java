@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iap_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetIdentityAwareProxyClientArgs extends io.pulumi.resources.I
 
     public static final GetIdentityAwareProxyClientArgs Empty = new GetIdentityAwareProxyClientArgs();
 
-    @InputImport(name="brandId", required=true)
+    @Import(name="brandId", required=true)
       private final String brandId;
 
     public String getBrandId() {
         return this.brandId;
     }
 
-    @InputImport(name="identityAwareProxyClientId", required=true)
+    @Import(name="identityAwareProxyClientId", required=true)
       private final String identityAwareProxyClientId;
 
     public String getIdentityAwareProxyClientId() {
         return this.identityAwareProxyClientId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

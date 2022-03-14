@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * Optional. The collection of card buttons.
      * 
      */
-    @InputImport(name="buttons", required=true)
+    @Import(name="buttons", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
 
     public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> getButtons() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * Required, unless image is present. The body text of the card.
      * 
      */
-    @InputImport(name="formattedText", required=true)
+    @Import(name="formattedText", required=true)
       private final String formattedText;
 
     public String getFormattedText() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * Optional. The image for the card.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * Optional. The subtitle of the card.
      * 
      */
-    @InputImport(name="subtitle", required=true)
+    @Import(name="subtitle", required=true)
       private final String subtitle;
 
     public String getSubtitle() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * Optional. The title of the card.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

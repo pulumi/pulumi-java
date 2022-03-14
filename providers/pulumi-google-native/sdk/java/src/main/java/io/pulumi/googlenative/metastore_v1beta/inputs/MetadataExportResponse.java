@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * The type of the database dump.
      * 
      */
-    @InputImport(name="databaseDumpType", required=true)
+    @Import(name="databaseDumpType", required=true)
       private final String databaseDumpType;
 
     public String getDatabaseDumpType() {
@@ -31,7 +31,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * A Cloud Storage URI of a folder that metadata are exported to, in the form of gs:////, where is automatically generated.
      * 
      */
-    @InputImport(name="destinationGcsUri", required=true)
+    @Import(name="destinationGcsUri", required=true)
       private final String destinationGcsUri;
 
     public String getDestinationGcsUri() {
@@ -42,7 +42,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * The time when the export ended.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -53,7 +53,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * The time when the export started.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -64,7 +64,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * The current state of the export.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

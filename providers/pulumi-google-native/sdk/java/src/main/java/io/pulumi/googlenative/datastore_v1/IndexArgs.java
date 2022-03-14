@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastore_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastore_v1.enums.IndexAncestor;
 import io.pulumi.googlenative.datastore_v1.inputs.GoogleDatastoreAdminV1IndexedPropertyArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
      */
-    @InputImport(name="ancestor", required=true)
+    @Import(name="ancestor", required=true)
       private final Output<IndexAncestor> ancestor;
 
     public Output<IndexAncestor> getAncestor() {
@@ -32,14 +32,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The entity kind to which this index applies.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -50,7 +50,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * An ordered sequence of property names and their index attributes.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 
     public Output<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> getProperties() {

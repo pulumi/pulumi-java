@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2BinaryAuthorizationResponse {
     /**
      * If present, indicates to use Breakglass using this justification. If use_default is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
@@ -21,10 +21,10 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse {
      */
     private final Boolean useDefault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2BinaryAuthorizationResponse(
-        @OutputCustomType.Parameter("breakglassJustification") String breakglassJustification,
-        @OutputCustomType.Parameter("useDefault") Boolean useDefault) {
+        @CustomType.Parameter("breakglassJustification") String breakglassJustification,
+        @CustomType.Parameter("useDefault") Boolean useDefault) {
         this.breakglassJustification = breakglassJustification;
         this.useDefault = useDefault;
     }

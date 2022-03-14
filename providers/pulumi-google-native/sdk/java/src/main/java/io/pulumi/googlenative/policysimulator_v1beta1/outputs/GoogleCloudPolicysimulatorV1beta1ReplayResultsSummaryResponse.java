@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleTypeDateResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse {
     /**
      * The number of replayed log entries with a difference between baseline and simulated policies.
@@ -41,14 +41,14 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      */
     private final Integer unchangedCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(
-        @OutputCustomType.Parameter("differenceCount") Integer differenceCount,
-        @OutputCustomType.Parameter("errorCount") Integer errorCount,
-        @OutputCustomType.Parameter("logCount") Integer logCount,
-        @OutputCustomType.Parameter("newestDate") GoogleTypeDateResponse newestDate,
-        @OutputCustomType.Parameter("oldestDate") GoogleTypeDateResponse oldestDate,
-        @OutputCustomType.Parameter("unchangedCount") Integer unchangedCount) {
+        @CustomType.Parameter("differenceCount") Integer differenceCount,
+        @CustomType.Parameter("errorCount") Integer errorCount,
+        @CustomType.Parameter("logCount") Integer logCount,
+        @CustomType.Parameter("newestDate") GoogleTypeDateResponse newestDate,
+        @CustomType.Parameter("oldestDate") GoogleTypeDateResponse oldestDate,
+        @CustomType.Parameter("unchangedCount") Integer unchangedCount) {
         this.differenceCount = differenceCount;
         this.errorCount = errorCount;
         this.logCount = logCount;

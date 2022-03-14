@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.enums.CaPoolTier;
 import io.pulumi.googlenative.privateca_v1.inputs.IssuancePolicyArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.PublishingOptionsArgs;
@@ -18,7 +18,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CaPoolArgs Empty = new CaPoolArgs();
 
-    @InputImport(name="caPoolId", required=true)
+    @Import(name="caPoolId", required=true)
       private final Output<String> caPoolId;
 
     public Output<String> getCaPoolId() {
@@ -29,7 +29,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
      * 
      */
-    @InputImport(name="issuancePolicy")
+    @Import(name="issuancePolicy")
       private final @Nullable Output<IssuancePolicyArgs> issuancePolicy;
 
     public Output<IssuancePolicyArgs> getIssuancePolicy() {
@@ -40,21 +40,21 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Labels with user-defined metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -65,14 +65,14 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
      * 
      */
-    @InputImport(name="publishingOptions")
+    @Import(name="publishingOptions")
       private final @Nullable Output<PublishingOptionsArgs> publishingOptions;
 
     public Output<PublishingOptionsArgs> getPublishingOptions() {
         return this.publishingOptions == null ? Output.empty() : this.publishingOptions;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -83,7 +83,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The Tier of this CaPool.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<CaPoolTier> tier;
 
     public Output<CaPoolTier> getTier() {

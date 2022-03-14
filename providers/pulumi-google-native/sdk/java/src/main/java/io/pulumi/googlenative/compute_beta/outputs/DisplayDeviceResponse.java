@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DisplayDeviceResponse {
     /**
      * Defines whether the instance has Display enabled.
@@ -15,8 +15,8 @@ public final class DisplayDeviceResponse {
      */
     private final Boolean enableDisplay;
 
-    @OutputCustomType.Constructor
-    private DisplayDeviceResponse(@OutputCustomType.Parameter("enableDisplay") Boolean enableDisplay) {
+    @CustomType.Constructor
+    private DisplayDeviceResponse(@CustomType.Parameter("enableDisplay") Boolean enableDisplay) {
         this.enableDisplay = enableDisplay;
     }
 

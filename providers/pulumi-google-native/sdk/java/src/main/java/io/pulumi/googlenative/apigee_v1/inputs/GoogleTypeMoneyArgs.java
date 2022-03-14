@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleTypeMoneyArgs extends io.pulumi.resources.ResourceArgs 
      * The three-letter currency code defined in ISO 4217.
      * 
      */
-    @InputImport(name="currencyCode")
+    @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
 
     public Output<String> getCurrencyCode() {
@@ -34,7 +34,7 @@ public final class GoogleTypeMoneyArgs extends io.pulumi.resources.ResourceArgs 
      * Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.
      * 
      */
-    @InputImport(name="nanos")
+    @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
@@ -45,7 +45,7 @@ public final class GoogleTypeMoneyArgs extends io.pulumi.resources.ResourceArgs 
      * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US dollar.
      * 
      */
-    @InputImport(name="units")
+    @Import(name="units")
       private final @Nullable Output<String> units;
 
     public Output<String> getUnits() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReservationAffinityResponse {
     /**
      * Optional. Type of reservation to consume
@@ -26,11 +26,11 @@ public final class ReservationAffinityResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReservationAffinityResponse(
-        @OutputCustomType.Parameter("consumeReservationType") String consumeReservationType,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("consumeReservationType") String consumeReservationType,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("values") List<String> values) {
         this.consumeReservationType = consumeReservationType;
         this.key = key;
         this.values = values;

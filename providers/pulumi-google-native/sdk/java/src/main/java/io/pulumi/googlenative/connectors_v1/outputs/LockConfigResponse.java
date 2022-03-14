@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LockConfigResponse {
     /**
      * Indicates whether or not the connection is locked.
@@ -21,10 +21,10 @@ public final class LockConfigResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LockConfigResponse(
-        @OutputCustomType.Parameter("locked") Boolean locked,
-        @OutputCustomType.Parameter("reason") String reason) {
+        @CustomType.Parameter("locked") Boolean locked,
+        @CustomType.Parameter("reason") String reason) {
         this.locked = locked;
         this.reason = reason;
     }

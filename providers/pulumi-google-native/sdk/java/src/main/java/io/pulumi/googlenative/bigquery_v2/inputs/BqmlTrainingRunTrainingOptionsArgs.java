@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,63 +20,63 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
 
     public static final BqmlTrainingRunTrainingOptionsArgs Empty = new BqmlTrainingRunTrainingOptionsArgs();
 
-    @InputImport(name="earlyStop")
+    @Import(name="earlyStop")
       private final @Nullable Output<Boolean> earlyStop;
 
     public Output<Boolean> getEarlyStop() {
         return this.earlyStop == null ? Output.empty() : this.earlyStop;
     }
 
-    @InputImport(name="l1Reg")
+    @Import(name="l1Reg")
       private final @Nullable Output<Double> l1Reg;
 
     public Output<Double> getL1Reg() {
         return this.l1Reg == null ? Output.empty() : this.l1Reg;
     }
 
-    @InputImport(name="l2Reg")
+    @Import(name="l2Reg")
       private final @Nullable Output<Double> l2Reg;
 
     public Output<Double> getL2Reg() {
         return this.l2Reg == null ? Output.empty() : this.l2Reg;
     }
 
-    @InputImport(name="learnRate")
+    @Import(name="learnRate")
       private final @Nullable Output<Double> learnRate;
 
     public Output<Double> getLearnRate() {
         return this.learnRate == null ? Output.empty() : this.learnRate;
     }
 
-    @InputImport(name="learnRateStrategy")
+    @Import(name="learnRateStrategy")
       private final @Nullable Output<String> learnRateStrategy;
 
     public Output<String> getLearnRateStrategy() {
         return this.learnRateStrategy == null ? Output.empty() : this.learnRateStrategy;
     }
 
-    @InputImport(name="lineSearchInitLearnRate")
+    @Import(name="lineSearchInitLearnRate")
       private final @Nullable Output<Double> lineSearchInitLearnRate;
 
     public Output<Double> getLineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate == null ? Output.empty() : this.lineSearchInitLearnRate;
     }
 
-    @InputImport(name="maxIteration")
+    @Import(name="maxIteration")
       private final @Nullable Output<String> maxIteration;
 
     public Output<String> getMaxIteration() {
         return this.maxIteration == null ? Output.empty() : this.maxIteration;
     }
 
-    @InputImport(name="minRelProgress")
+    @Import(name="minRelProgress")
       private final @Nullable Output<Double> minRelProgress;
 
     public Output<Double> getMinRelProgress() {
         return this.minRelProgress == null ? Output.empty() : this.minRelProgress;
     }
 
-    @InputImport(name="warmStart")
+    @Import(name="warmStart")
       private final @Nullable Output<Boolean> warmStart;
 
     public Output<Boolean> getWarmStart() {

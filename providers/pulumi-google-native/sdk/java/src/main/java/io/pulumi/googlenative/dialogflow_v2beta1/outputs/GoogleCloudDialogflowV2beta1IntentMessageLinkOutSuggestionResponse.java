@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse {
     /**
      * The name of the app or site this chip is linking to.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse(
-        @OutputCustomType.Parameter("destinationName") String destinationName,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("destinationName") String destinationName,
+        @CustomType.Parameter("uri") String uri) {
         this.destinationName = destinationName;
         this.uri = uri;
     }

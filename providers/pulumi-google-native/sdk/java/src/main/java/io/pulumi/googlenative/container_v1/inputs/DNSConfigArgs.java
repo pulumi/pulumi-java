@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.enums.DNSConfigClusterDns;
 import io.pulumi.googlenative.container_v1.enums.DNSConfigClusterDnsScope;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * cluster_dns indicates which in-cluster DNS provider should be used.
      * 
      */
-    @InputImport(name="clusterDns")
+    @Import(name="clusterDns")
       private final @Nullable Output<DNSConfigClusterDns> clusterDns;
 
     public Output<DNSConfigClusterDns> getClusterDns() {
@@ -35,7 +35,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * cluster_dns_domain is the suffix used for all cluster service records.
      * 
      */
-    @InputImport(name="clusterDnsDomain")
+    @Import(name="clusterDnsDomain")
       private final @Nullable Output<String> clusterDnsDomain;
 
     public Output<String> getClusterDnsDomain() {
@@ -46,7 +46,7 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * cluster_dns_scope indicates the scope of access to cluster DNS records.
      * 
      */
-    @InputImport(name="clusterDnsScope")
+    @Import(name="clusterDnsScope")
       private final @Nullable Output<DNSConfigClusterDnsScope> clusterDnsScope;
 
     public Output<DNSConfigClusterDnsScope> getClusterDnsScope() {

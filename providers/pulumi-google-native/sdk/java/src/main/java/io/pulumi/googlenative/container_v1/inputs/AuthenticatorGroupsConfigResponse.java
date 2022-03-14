@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
      * Whether this cluster should return group membership lookups during authentication using a group of security groups.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -32,7 +32,7 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
      * The name of the security group-of-groups to be used. Only relevant if enabled = true.
      * 
      */
-    @InputImport(name="securityGroup", required=true)
+    @Import(name="securityGroup", required=true)
       private final String securityGroup;
 
     public String getSecurityGroup() {

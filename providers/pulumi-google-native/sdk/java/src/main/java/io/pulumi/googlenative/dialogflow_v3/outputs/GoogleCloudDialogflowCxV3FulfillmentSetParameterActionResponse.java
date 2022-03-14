@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse {
     /**
      * Display name of the parameter.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
      */
     private final Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse(
-        @OutputCustomType.Parameter("parameter") String parameter,
-        @OutputCustomType.Parameter("value") Object value) {
+        @CustomType.Parameter("parameter") String parameter,
+        @CustomType.Parameter("value") Object value) {
         this.parameter = parameter;
         this.value = value;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<String> weight;
 
     public Output<String> getWeight() {
@@ -35,7 +35,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
      * The display widgets arranged vertically in this column.
      * 
      */
-    @InputImport(name="widgets")
+    @Import(name="widgets")
       private final @Nullable Output<List<WidgetArgs>> widgets;
 
     public Output<List<WidgetArgs>> getWidgets() {

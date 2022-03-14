@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
      * Constraint enforced on the max num of pods per node.
      * 
      */
-    @InputImport(name="maxPodsPerNode")
+    @Import(name="maxPodsPerNode")
       private final @Nullable Output<String> maxPodsPerNode;
 
     public Output<String> getMaxPodsPerNode() {

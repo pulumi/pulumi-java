@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
      * Cannot contain duplicates or the query term. Can specify up to 100 terms.
      * 
      */
-    @InputImport(name="doNotAssociateTerms", required=true)
+    @Import(name="doNotAssociateTerms", required=true)
       private final List<String> doNotAssociateTerms;
 
     public List<String> getDoNotAssociateTerms() {
@@ -32,7 +32,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
      * Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
      * 
      */
-    @InputImport(name="queryTerms", required=true)
+    @Import(name="queryTerms", required=true)
       private final List<String> queryTerms;
 
     public List<String> getQueryTerms() {
@@ -43,7 +43,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
      * Will be [deprecated = true] post migration;
      * 
      */
-    @InputImport(name="terms", required=true)
+    @Import(name="terms", required=true)
       private final List<String> terms;
 
     public List<String> getTerms() {

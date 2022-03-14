@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse {
     /**
      * Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account.
@@ -32,12 +32,12 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse {
      */
     private final String schemaVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse(
-        @OutputCustomType.Parameter("disableDefaultIamRecipients") Boolean disableDefaultIamRecipients,
-        @OutputCustomType.Parameter("monitoringNotificationChannels") List<String> monitoringNotificationChannels,
-        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic,
-        @OutputCustomType.Parameter("schemaVersion") String schemaVersion) {
+        @CustomType.Parameter("disableDefaultIamRecipients") Boolean disableDefaultIamRecipients,
+        @CustomType.Parameter("monitoringNotificationChannels") List<String> monitoringNotificationChannels,
+        @CustomType.Parameter("pubsubTopic") String pubsubTopic,
+        @CustomType.Parameter("schemaVersion") String schemaVersion) {
         this.disableDefaultIamRecipients = disableDefaultIamRecipients;
         this.monitoringNotificationChannels = monitoringNotificationChannels;
         this.pubsubTopic = pubsubTopic;

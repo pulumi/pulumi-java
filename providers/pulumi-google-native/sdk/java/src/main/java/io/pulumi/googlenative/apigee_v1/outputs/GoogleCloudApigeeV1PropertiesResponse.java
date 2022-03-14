@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1PropertyResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1PropertiesResponse {
     /**
      * List of all properties in the object
@@ -16,8 +16,8 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
      */
     private final List<GoogleCloudApigeeV1PropertyResponse> property;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudApigeeV1PropertiesResponse(@OutputCustomType.Parameter("property") List<GoogleCloudApigeeV1PropertyResponse> property) {
+    @CustomType.Constructor
+    private GoogleCloudApigeeV1PropertiesResponse(@CustomType.Parameter("property") List<GoogleCloudApigeeV1PropertyResponse> property) {
         this.property = property;
     }
 

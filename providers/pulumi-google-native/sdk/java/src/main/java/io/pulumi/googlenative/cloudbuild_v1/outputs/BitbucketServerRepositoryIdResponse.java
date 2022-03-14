@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BitbucketServerRepositoryIdResponse {
     /**
      * Identifier for the project storing the repository.
@@ -26,11 +26,11 @@ public final class BitbucketServerRepositoryIdResponse {
      */
     private final Integer webhookId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BitbucketServerRepositoryIdResponse(
-        @OutputCustomType.Parameter("projectKey") String projectKey,
-        @OutputCustomType.Parameter("repoSlug") String repoSlug,
-        @OutputCustomType.Parameter("webhookId") Integer webhookId) {
+        @CustomType.Parameter("projectKey") String projectKey,
+        @CustomType.Parameter("repoSlug") String repoSlug,
+        @CustomType.Parameter("webhookId") Integer webhookId) {
         this.projectKey = projectKey;
         this.repoSlug = repoSlug;
         this.webhookId = webhookId;

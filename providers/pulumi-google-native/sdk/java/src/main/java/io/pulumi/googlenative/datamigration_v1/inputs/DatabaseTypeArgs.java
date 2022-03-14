@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1.enums.DatabaseTypeEngine;
 import io.pulumi.googlenative.datamigration_v1.enums.DatabaseTypeProvider;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The database engine.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<DatabaseTypeEngine> engine;
 
     public Output<DatabaseTypeEngine> getEngine() {
@@ -34,7 +34,7 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The database provider.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable Output<DatabaseTypeProvider> provider;
 
     public Output<DatabaseTypeProvider> getProvider() {

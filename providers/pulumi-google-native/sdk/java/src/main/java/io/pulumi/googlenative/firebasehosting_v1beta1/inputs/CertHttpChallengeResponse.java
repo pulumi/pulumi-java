@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CertHttpChallengeResponse extends io.pulumi.resources.InvokeA
      * The URL path on which to serve the specified token to satisfy the certificate challenge.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -31,7 +31,7 @@ public final class CertHttpChallengeResponse extends io.pulumi.resources.InvokeA
      * The token to serve at the specified URL path to satisfy the certificate challenge.
      * 
      */
-    @InputImport(name="token", required=true)
+    @Import(name="token", required=true)
       private final String token;
 
     public String getToken() {

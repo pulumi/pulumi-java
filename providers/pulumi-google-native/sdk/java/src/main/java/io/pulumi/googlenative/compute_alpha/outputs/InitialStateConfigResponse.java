@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FileContentBufferResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InitialStateConfigResponse {
     /**
      * The Key Database (db).
@@ -31,12 +31,12 @@ public final class InitialStateConfigResponse {
      */
     private final FileContentBufferResponse pk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InitialStateConfigResponse(
-        @OutputCustomType.Parameter("dbs") List<FileContentBufferResponse> dbs,
-        @OutputCustomType.Parameter("dbxs") List<FileContentBufferResponse> dbxs,
-        @OutputCustomType.Parameter("keks") List<FileContentBufferResponse> keks,
-        @OutputCustomType.Parameter("pk") FileContentBufferResponse pk) {
+        @CustomType.Parameter("dbs") List<FileContentBufferResponse> dbs,
+        @CustomType.Parameter("dbxs") List<FileContentBufferResponse> dbxs,
+        @CustomType.Parameter("keks") List<FileContentBufferResponse> keks,
+        @CustomType.Parameter("pk") FileContentBufferResponse pk) {
         this.dbs = dbs;
         this.dbxs = dbxs;
         this.keks = keks;

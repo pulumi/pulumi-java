@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IosDeviceListResponse extends io.pulumi.resources.InvokeArgs 
      * A list of iOS devices.
      * 
      */
-    @InputImport(name="iosDevices", required=true)
+    @Import(name="iosDevices", required=true)
       private final List<IosDeviceResponse> iosDevices;
 
     public List<IosDeviceResponse> getIosDevices() {

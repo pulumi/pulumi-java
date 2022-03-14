@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1CallAnnotationResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueModelResultResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse {
     /**
      * A list of call annotations that apply to this call.
@@ -45,14 +45,14 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      */
     private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(
-        @OutputCustomType.Parameter("annotations") List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations,
-        @OutputCustomType.Parameter("entities") Map<String,String> entities,
-        @OutputCustomType.Parameter("intents") Map<String,String> intents,
-        @OutputCustomType.Parameter("issueModelResult") GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult,
-        @OutputCustomType.Parameter("phraseMatchers") Map<String,String> phraseMatchers,
-        @OutputCustomType.Parameter("sentiments") List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
+        @CustomType.Parameter("annotations") List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations,
+        @CustomType.Parameter("entities") Map<String,String> entities,
+        @CustomType.Parameter("intents") Map<String,String> intents,
+        @CustomType.Parameter("issueModelResult") GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult,
+        @CustomType.Parameter("phraseMatchers") Map<String,String> phraseMatchers,
+        @CustomType.Parameter("sentiments") List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
         this.annotations = annotations;
         this.entities = entities;
         this.intents = intents;

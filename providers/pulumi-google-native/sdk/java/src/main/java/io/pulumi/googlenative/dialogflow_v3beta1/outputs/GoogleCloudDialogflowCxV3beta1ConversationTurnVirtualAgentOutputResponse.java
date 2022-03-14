@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1IntentResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1PageResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse {
     /**
      * The Page on which the utterance was spoken. Only name and displayName will be set.
@@ -52,15 +52,15 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
      */
     private final GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse(
-        @OutputCustomType.Parameter("currentPage") GoogleCloudDialogflowCxV3beta1PageResponse currentPage,
-        @OutputCustomType.Parameter("diagnosticInfo") Map<String,String> diagnosticInfo,
-        @OutputCustomType.Parameter("differences") List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences,
-        @OutputCustomType.Parameter("sessionParameters") Map<String,String> sessionParameters,
-        @OutputCustomType.Parameter("status") GoogleRpcStatusResponse status,
-        @OutputCustomType.Parameter("textResponses") List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses,
-        @OutputCustomType.Parameter("triggeredIntent") GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent) {
+        @CustomType.Parameter("currentPage") GoogleCloudDialogflowCxV3beta1PageResponse currentPage,
+        @CustomType.Parameter("diagnosticInfo") Map<String,String> diagnosticInfo,
+        @CustomType.Parameter("differences") List<GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse> differences,
+        @CustomType.Parameter("sessionParameters") Map<String,String> sessionParameters,
+        @CustomType.Parameter("status") GoogleRpcStatusResponse status,
+        @CustomType.Parameter("textResponses") List<GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse> textResponses,
+        @CustomType.Parameter("triggeredIntent") GoogleCloudDialogflowCxV3beta1IntentResponse triggeredIntent) {
         this.currentPage = currentPage;
         this.diagnosticInfo = diagnosticInfo;
         this.differences = differences;

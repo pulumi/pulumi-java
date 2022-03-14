@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
      * 
      */
-    @InputImport(name="cluster", required=true)
+    @Import(name="cluster", required=true)
       private final String cluster;
 
     public String getCluster() {
@@ -31,7 +31,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -42,7 +42,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
      * The namespace the GKE service is running in.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final String namespace;
 
     public String getNamespace() {
@@ -53,7 +53,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -64,7 +64,7 @@ public final class GKEResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the GKE service.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

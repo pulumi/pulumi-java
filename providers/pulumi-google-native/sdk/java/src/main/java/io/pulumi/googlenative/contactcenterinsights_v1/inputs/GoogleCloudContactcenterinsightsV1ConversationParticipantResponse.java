@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
      * 
      */
-    @InputImport(name="dialogflowParticipantName", required=true)
+    @Import(name="dialogflowParticipantName", required=true)
       private final String dialogflowParticipantName;
 
     public String getDialogflowParticipantName() {
@@ -31,7 +31,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * Obfuscated user ID from Dialogflow.
      * 
      */
-    @InputImport(name="obfuscatedExternalUserId", required=true)
+    @Import(name="obfuscatedExternalUserId", required=true)
       private final String obfuscatedExternalUserId;
 
     public String getObfuscatedExternalUserId() {
@@ -42,7 +42,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * The role of the participant.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final String role;
 
     public String getRole() {
@@ -53,7 +53,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * A user-specified ID representing the participant.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {

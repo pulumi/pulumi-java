@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendResponse {
     /**
      * Specifies how to determine whether the backend of a load balancer can handle additional traffic or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use compatible balancing modes. For more information, see Supported balancing modes and target capacity settings and Restrictions and guidance for instance groups. Note: Currently, if you use the API to configure incompatible balancing modes, the configuration might be accepted even though it has no impact and is ignored. Specifically, Backend.maxUtilization is ignored when Backend.balancingMode is RATE. In the future, this incompatible combination will be rejected.
@@ -73,20 +73,20 @@ public final class BackendResponse {
      */
     private final Double maxUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendResponse(
-        @OutputCustomType.Parameter("balancingMode") String balancingMode,
-        @OutputCustomType.Parameter("capacityScaler") Double capacityScaler,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("failover") Boolean failover,
-        @OutputCustomType.Parameter("group") String group,
-        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
-        @OutputCustomType.Parameter("maxConnectionsPerEndpoint") Integer maxConnectionsPerEndpoint,
-        @OutputCustomType.Parameter("maxConnectionsPerInstance") Integer maxConnectionsPerInstance,
-        @OutputCustomType.Parameter("maxRate") Integer maxRate,
-        @OutputCustomType.Parameter("maxRatePerEndpoint") Double maxRatePerEndpoint,
-        @OutputCustomType.Parameter("maxRatePerInstance") Double maxRatePerInstance,
-        @OutputCustomType.Parameter("maxUtilization") Double maxUtilization) {
+        @CustomType.Parameter("balancingMode") String balancingMode,
+        @CustomType.Parameter("capacityScaler") Double capacityScaler,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("failover") Boolean failover,
+        @CustomType.Parameter("group") String group,
+        @CustomType.Parameter("maxConnections") Integer maxConnections,
+        @CustomType.Parameter("maxConnectionsPerEndpoint") Integer maxConnectionsPerEndpoint,
+        @CustomType.Parameter("maxConnectionsPerInstance") Integer maxConnectionsPerInstance,
+        @CustomType.Parameter("maxRate") Integer maxRate,
+        @CustomType.Parameter("maxRatePerEndpoint") Double maxRatePerEndpoint,
+        @CustomType.Parameter("maxRatePerInstance") Double maxRatePerInstance,
+        @CustomType.Parameter("maxUtilization") Double maxUtilization) {
         this.balancingMode = balancingMode;
         this.capacityScaler = capacityScaler;
         this.description = description;

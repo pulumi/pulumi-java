@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse exten
      * The intervals [min_probability, max_probability) do not overlap. If a value doesn't correspond to any such interval, the associated frequency is zero. For example, the following records: {min_probability: 0, max_probability: 0.1, frequency: 17} {min_probability: 0.2, max_probability: 0.3, frequency: 42} {min_probability: 0.3, max_probability: 0.4, frequency: 99} mean that there are no record with an estimated probability in [0.1, 0.2) nor larger or equal to 0.4.
      * 
      */
-    @InputImport(name="deltaPresenceEstimationHistogram", required=true)
+    @Import(name="deltaPresenceEstimationHistogram", required=true)
       private final List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
 
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> getDeltaPresenceEstimationHistogram() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the environment variable.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -33,7 +33,7 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -44,7 +44,7 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the secret in secret manager (not the full resource name).
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
@@ -55,7 +55,7 @@ public final class SecretEnvVarArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the secret (version number or the string 'latest'). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

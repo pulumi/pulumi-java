@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.RepoSourceResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceManifestResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceResponse;
@@ -24,7 +24,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
      * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
      * 
      */
-    @InputImport(name="fileHashes", required=true)
+    @Import(name="fileHashes", required=true)
       private final Map<String,String> fileHashes;
 
     public Map<String,String> getFileHashes() {
@@ -35,7 +35,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
      * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.
      * 
      */
-    @InputImport(name="resolvedRepoSource", required=true)
+    @Import(name="resolvedRepoSource", required=true)
       private final RepoSourceResponse resolvedRepoSource;
 
     public RepoSourceResponse getResolvedRepoSource() {
@@ -46,7 +46,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
      * A copy of the build's `source.storage_source`, if exists, with any generations resolved.
      * 
      */
-    @InputImport(name="resolvedStorageSource", required=true)
+    @Import(name="resolvedStorageSource", required=true)
       private final StorageSourceResponse resolvedStorageSource;
 
     public StorageSourceResponse getResolvedStorageSource() {
@@ -57,7 +57,7 @@ public final class SourceProvenanceResponse extends io.pulumi.resources.InvokeAr
      * A copy of the build's `source.storage_source_manifest`, if exists, with any revisions resolved. This feature is in Preview.
      * 
      */
-    @InputImport(name="resolvedStorageSourceManifest", required=true)
+    @Import(name="resolvedStorageSourceManifest", required=true)
       private final StorageSourceManifestResponse resolvedStorageSourceManifest;
 
     public StorageSourceManifestResponse getResolvedStorageSourceManifest() {

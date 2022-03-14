@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse {
     /**
      * If true, DF Interaction logging is currently enabled.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
      */
     private final Boolean enableStackdriverLogging;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse(
-        @OutputCustomType.Parameter("enableInteractionLogging") Boolean enableInteractionLogging,
-        @OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging) {
+        @CustomType.Parameter("enableInteractionLogging") Boolean enableInteractionLogging,
+        @CustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging) {
         this.enableInteractionLogging = enableInteractionLogging;
         this.enableStackdriverLogging = enableStackdriverLogging;
     }

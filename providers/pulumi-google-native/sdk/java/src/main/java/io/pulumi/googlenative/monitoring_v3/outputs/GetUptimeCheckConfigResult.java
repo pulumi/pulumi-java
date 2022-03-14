@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.ContentMatcherResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.HttpCheckResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.InternalCheckerResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUptimeCheckConfigResult {
     /**
      * The type of checkers to use to execute the Uptime check.
@@ -83,21 +83,21 @@ public final class GetUptimeCheckConfigResult {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUptimeCheckConfigResult(
-        @OutputCustomType.Parameter("checkerType") String checkerType,
-        @OutputCustomType.Parameter("contentMatchers") List<ContentMatcherResponse> contentMatchers,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("httpCheck") HttpCheckResponse httpCheck,
-        @OutputCustomType.Parameter("internalCheckers") List<InternalCheckerResponse> internalCheckers,
-        @OutputCustomType.Parameter("isInternal") Boolean isInternal,
-        @OutputCustomType.Parameter("monitoredResource") MonitoredResourceResponse monitoredResource,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("period") String period,
-        @OutputCustomType.Parameter("resourceGroup") ResourceGroupResponse resourceGroup,
-        @OutputCustomType.Parameter("selectedRegions") List<String> selectedRegions,
-        @OutputCustomType.Parameter("tcpCheck") TcpCheckResponse tcpCheck,
-        @OutputCustomType.Parameter("timeout") String timeout) {
+        @CustomType.Parameter("checkerType") String checkerType,
+        @CustomType.Parameter("contentMatchers") List<ContentMatcherResponse> contentMatchers,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("httpCheck") HttpCheckResponse httpCheck,
+        @CustomType.Parameter("internalCheckers") List<InternalCheckerResponse> internalCheckers,
+        @CustomType.Parameter("isInternal") Boolean isInternal,
+        @CustomType.Parameter("monitoredResource") MonitoredResourceResponse monitoredResource,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("period") String period,
+        @CustomType.Parameter("resourceGroup") ResourceGroupResponse resourceGroup,
+        @CustomType.Parameter("selectedRegions") List<String> selectedRegions,
+        @CustomType.Parameter("tcpCheck") TcpCheckResponse tcpCheck,
+        @CustomType.Parameter("timeout") String timeout) {
         this.checkerType = checkerType;
         this.contentMatchers = contentMatchers;
         this.displayName = displayName;

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.ReleaseResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetChannelResult {
     /**
      * The time at which the channel was created.
@@ -58,17 +58,17 @@ public final class GetChannelResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetChannelResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("release") ReleaseResponse release,
-        @OutputCustomType.Parameter("retainedReleaseCount") Integer retainedReleaseCount,
-        @OutputCustomType.Parameter("ttl") String ttl,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("release") ReleaseResponse release,
+        @CustomType.Parameter("retainedReleaseCount") Integer retainedReleaseCount,
+        @CustomType.Parameter("ttl") String ttl,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("url") String url) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.labels = labels;

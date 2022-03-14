@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse {
     /**
      * Additional cases to be evaluated.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      */
     private final GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse(
-        @OutputCustomType.Parameter("additionalCases") GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases,
-        @OutputCustomType.Parameter("message") GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message) {
+        @CustomType.Parameter("additionalCases") GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases,
+        @CustomType.Parameter("message") GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message) {
         this.additionalCases = additionalCases;
         this.message = message;
     }

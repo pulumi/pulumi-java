@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ServiceResolverResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEkmConnectionResult {
     /**
      * The time at which the EkmConnection was created.
@@ -32,12 +32,12 @@ public final class GetEkmConnectionResult {
      */
     private final List<ServiceResolverResponse> serviceResolvers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEkmConnectionResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serviceResolvers") List<ServiceResolverResponse> serviceResolvers) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serviceResolvers") List<ServiceResolverResponse> serviceResolvers) {
         this.createTime = createTime;
         this.etag = etag;
         this.name = name;

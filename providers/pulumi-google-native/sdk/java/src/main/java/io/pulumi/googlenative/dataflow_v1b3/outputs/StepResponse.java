@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StepResponse {
     /**
      * The kind of step in the Cloud Dataflow job.
@@ -26,11 +26,11 @@ public final class StepResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StepResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Map<String,String> properties) {
         this.kind = kind;
         this.name = name;
         this.properties = properties;

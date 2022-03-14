@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyValueResponse {
     /**
      * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
@@ -20,10 +20,10 @@ public final class KeyValueResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyValueResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * A description of the pool. Cannot exceed 256 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -41,28 +41,28 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * A display name for the pool. Cannot exceed 32 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="workloadIdentityPoolId", required=true)
+    @Import(name="workloadIdentityPoolId", required=true)
       private final Output<String> workloadIdentityPoolId;
 
     public Output<String> getWorkloadIdentityPoolId() {

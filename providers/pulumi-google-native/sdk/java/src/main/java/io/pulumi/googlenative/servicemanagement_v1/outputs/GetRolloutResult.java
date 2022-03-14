@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.DeleteServiceStrategyResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.TrafficPercentStrategyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRolloutResult {
     /**
      * Creation time of the rollout. Readonly.
@@ -42,14 +42,14 @@ public final class GetRolloutResult {
      */
     private final TrafficPercentStrategyResponse trafficPercentStrategy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRolloutResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteServiceStrategy") DeleteServiceStrategyResponse deleteServiceStrategy,
-        @OutputCustomType.Parameter("rolloutId") String rolloutId,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("trafficPercentStrategy") TrafficPercentStrategyResponse trafficPercentStrategy) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteServiceStrategy") DeleteServiceStrategyResponse deleteServiceStrategy,
+        @CustomType.Parameter("rolloutId") String rolloutId,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("trafficPercentStrategy") TrafficPercentStrategyResponse trafficPercentStrategy) {
         this.createTime = createTime;
         this.deleteServiceStrategy = deleteServiceStrategy;
         this.rolloutId = rolloutId;

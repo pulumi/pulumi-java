@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.recommendationengine_v1beta1.CatalogItemArgs;
@@ -26,7 +26,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
      * 
      */
-    @OutputExport(name="categoryHierarchies", type=List.class, parameters={GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse.class})
+    @Export(name="categoryHierarchies", type=List.class, parameters={GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse.class})
     private Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse>> categoryHierarchies;
 
     /**
@@ -40,7 +40,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -54,7 +54,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
      * 
      */
-    @OutputExport(name="itemAttributes", type=GoogleCloudRecommendationengineV1beta1FeatureMapResponse.class, parameters={})
+    @Export(name="itemAttributes", type=GoogleCloudRecommendationengineV1beta1FeatureMapResponse.class, parameters={})
     private Output<GoogleCloudRecommendationengineV1beta1FeatureMapResponse> itemAttributes;
 
     /**
@@ -68,7 +68,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
      * 
      */
-    @OutputExport(name="itemGroupId", type=String.class, parameters={})
+    @Export(name="itemGroupId", type=String.class, parameters={})
     private Output<String> itemGroupId;
 
     /**
@@ -82,7 +82,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * Optional. Metadata specific to retail products.
      * 
      */
-    @OutputExport(name="productMetadata", type=GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse.class, parameters={})
+    @Export(name="productMetadata", type=GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse.class, parameters={})
     private Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse> productMetadata;
 
     /**
@@ -96,7 +96,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
@@ -110,7 +110,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**

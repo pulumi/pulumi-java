@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.container_v1.outputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.container_v1.outputs.GcfsConfigResponse;
@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeConfigResponse {
     /**
      * A list of hardware accelerators to be attached to each node. See https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
@@ -150,33 +150,33 @@ public final class NodeConfigResponse {
      */
     private final WorkloadMetadataConfigResponse workloadMetadataConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeConfigResponse(
-        @OutputCustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
-        @OutputCustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
-        @OutputCustomType.Parameter("bootDiskKmsKey") String bootDiskKmsKey,
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("gcfsConfig") GcfsConfigResponse gcfsConfig,
-        @OutputCustomType.Parameter("gvnic") VirtualNICResponse gvnic,
-        @OutputCustomType.Parameter("imageType") String imageType,
-        @OutputCustomType.Parameter("kubeletConfig") NodeKubeletConfigResponse kubeletConfig,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("linuxNodeConfig") LinuxNodeConfigResponse linuxNodeConfig,
-        @OutputCustomType.Parameter("localSsdCount") Integer localSsdCount,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("nodeGroup") String nodeGroup,
-        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
-        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
-        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
-        @OutputCustomType.Parameter("sandboxConfig") SandboxConfigResponse sandboxConfig,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("taints") List<NodeTaintResponse> taints,
-        @OutputCustomType.Parameter("workloadMetadataConfig") WorkloadMetadataConfigResponse workloadMetadataConfig) {
+        @CustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
+        @CustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
+        @CustomType.Parameter("bootDiskKmsKey") String bootDiskKmsKey,
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("gcfsConfig") GcfsConfigResponse gcfsConfig,
+        @CustomType.Parameter("gvnic") VirtualNICResponse gvnic,
+        @CustomType.Parameter("imageType") String imageType,
+        @CustomType.Parameter("kubeletConfig") NodeKubeletConfigResponse kubeletConfig,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("linuxNodeConfig") LinuxNodeConfigResponse linuxNodeConfig,
+        @CustomType.Parameter("localSsdCount") Integer localSsdCount,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("nodeGroup") String nodeGroup,
+        @CustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @CustomType.Parameter("preemptible") Boolean preemptible,
+        @CustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @CustomType.Parameter("sandboxConfig") SandboxConfigResponse sandboxConfig,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("taints") List<NodeTaintResponse> taints,
+        @CustomType.Parameter("workloadMetadataConfig") WorkloadMetadataConfigResponse workloadMetadataConfig) {
         this.accelerators = accelerators;
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.bootDiskKmsKey = bootDiskKmsKey;

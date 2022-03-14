@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourcePackageResourceGooGetResponse {
     /**
      * Package name.
@@ -15,8 +15,8 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private OSPolicyResourcePackageResourceGooGetResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private OSPolicyResourcePackageResourceGooGetResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

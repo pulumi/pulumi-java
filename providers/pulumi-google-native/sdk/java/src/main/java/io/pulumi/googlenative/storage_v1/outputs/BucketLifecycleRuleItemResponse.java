@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketLifecycleRuleItemActionResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketLifecycleRuleItemConditionResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRuleItemResponse {
     /**
      * The action to take.
@@ -21,10 +21,10 @@ public final class BucketLifecycleRuleItemResponse {
      */
     private final BucketLifecycleRuleItemConditionResponse condition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRuleItemResponse(
-        @OutputCustomType.Parameter("action") BucketLifecycleRuleItemActionResponse action,
-        @OutputCustomType.Parameter("condition") BucketLifecycleRuleItemConditionResponse condition) {
+        @CustomType.Parameter("action") BucketLifecycleRuleItemActionResponse action,
+        @CustomType.Parameter("condition") BucketLifecycleRuleItemConditionResponse condition) {
         this.action = action;
         this.condition = condition;
     }

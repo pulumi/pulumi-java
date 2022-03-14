@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaCompletenessResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp of when the build completed.
      * 
      */
-    @InputImport(name="buildFinishedOn", required=true)
+    @Import(name="buildFinishedOn", required=true)
       private final String buildFinishedOn;
 
     public String getBuildFinishedOn() {
@@ -33,7 +33,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
      * 
      */
-    @InputImport(name="buildInvocationId", required=true)
+    @Import(name="buildInvocationId", required=true)
       private final String buildInvocationId;
 
     public String getBuildInvocationId() {
@@ -44,7 +44,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp of when the build started.
      * 
      */
-    @InputImport(name="buildStartedOn", required=true)
+    @Import(name="buildStartedOn", required=true)
       private final String buildStartedOn;
 
     public String getBuildStartedOn() {
@@ -55,7 +55,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates that the builder claims certain fields in this message to be complete.
      * 
      */
-    @InputImport(name="completeness", required=true)
+    @Import(name="completeness", required=true)
       private final SlsaCompletenessResponse completeness;
 
     public SlsaCompletenessResponse getCompleteness() {
@@ -66,7 +66,7 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
      * 
      */
-    @InputImport(name="reproducible", required=true)
+    @Import(name="reproducible", required=true)
       private final Boolean reproducible;
 
     public Boolean getReproducible() {

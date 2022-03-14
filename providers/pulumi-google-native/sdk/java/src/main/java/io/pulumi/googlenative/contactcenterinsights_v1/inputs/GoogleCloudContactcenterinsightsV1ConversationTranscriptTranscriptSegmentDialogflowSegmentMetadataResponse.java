@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
      * 
      */
-    @InputImport(name="smartReplyAllowlistCovered", required=true)
+    @Import(name="smartReplyAllowlistCovered", required=true)
       private final Boolean smartReplyAllowlistCovered;
 
     public Boolean getSmartReplyAllowlistCovered() {

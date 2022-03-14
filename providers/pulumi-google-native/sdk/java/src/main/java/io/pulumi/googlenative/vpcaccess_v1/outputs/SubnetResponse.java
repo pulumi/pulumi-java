@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.vpcaccess_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubnetResponse {
     /**
      * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}
@@ -20,10 +20,10 @@ public final class SubnetResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project) {
         this.name = name;
         this.project = project;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * The "common name" of the subject.
      * 
      */
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
@@ -33,7 +33,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * The country code of the subject.
      * 
      */
-    @InputImport(name="countryCode")
+    @Import(name="countryCode")
       private final @Nullable Output<String> countryCode;
 
     public Output<String> getCountryCode() {
@@ -44,7 +44,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * The locality or city of the subject.
      * 
      */
-    @InputImport(name="locality")
+    @Import(name="locality")
       private final @Nullable Output<String> locality;
 
     public Output<String> getLocality() {
@@ -55,7 +55,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * The organization of the subject.
      * 
      */
-    @InputImport(name="organization")
+    @Import(name="organization")
       private final @Nullable Output<String> organization;
 
     public Output<String> getOrganization() {
@@ -66,7 +66,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * The organizational_unit of the subject.
      * 
      */
-    @InputImport(name="organizationalUnit")
+    @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
     public Output<String> getOrganizationalUnit() {
@@ -77,7 +77,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * The postal code of the subject.
      * 
      */
-    @InputImport(name="postalCode")
+    @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
     public Output<String> getPostalCode() {
@@ -88,7 +88,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * The province, territory, or regional state of the subject.
      * 
      */
-    @InputImport(name="province")
+    @Import(name="province")
       private final @Nullable Output<String> province;
 
     public Output<String> getProvince() {
@@ -99,7 +99,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * The street address of the subject.
      * 
      */
-    @InputImport(name="streetAddress")
+    @Import(name="streetAddress")
       private final @Nullable Output<String> streetAddress;
 
     public Output<String> getStreetAddress() {

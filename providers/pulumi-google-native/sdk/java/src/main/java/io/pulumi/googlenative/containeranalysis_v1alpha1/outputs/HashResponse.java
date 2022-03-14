@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HashResponse {
     /**
      * The type of hash that was performed.
@@ -20,10 +20,10 @@ public final class HashResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HashResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.composer_v1.enums.EnvironmentConfigEnvironmentSize;
 import io.pulumi.googlenative.composer_v1.inputs.DatabaseConfigArgs;
 import io.pulumi.googlenative.composer_v1.inputs.EncryptionConfigArgs;
@@ -32,7 +32,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="databaseConfig")
+    @Import(name="databaseConfig")
       private final @Nullable Output<DatabaseConfigArgs> databaseConfig;
 
     public Output<DatabaseConfigArgs> getDatabaseConfig() {
@@ -43,7 +43,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The encryption options for the Cloud Composer environment and its dependencies. Cannot be updated.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
     public Output<EncryptionConfigArgs> getEncryptionConfig() {
@@ -54,7 +54,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The size of the Cloud Composer environment. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
-    @InputImport(name="environmentSize")
+    @Import(name="environmentSize")
       private final @Nullable Output<EnvironmentConfigEnvironmentSize> environmentSize;
 
     public Output<EnvironmentConfigEnvironmentSize> getEnvironmentSize() {
@@ -65,7 +65,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, the default value for maintenance window will be applied. The default value is Saturday and Sunday 00-06 GMT.
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
     public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
@@ -76,7 +76,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * The configuration used for the Kubernetes Engine cluster.
      * 
      */
-    @InputImport(name="nodeConfig")
+    @Import(name="nodeConfig")
       private final @Nullable Output<NodeConfigArgs> nodeConfig;
 
     public Output<NodeConfigArgs> getNodeConfig() {
@@ -87,7 +87,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="nodeCount")
+    @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
     public Output<Integer> getNodeCount() {
@@ -98,7 +98,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * The configuration used for the Private IP Cloud Composer environment.
      * 
      */
-    @InputImport(name="privateEnvironmentConfig")
+    @Import(name="privateEnvironmentConfig")
       private final @Nullable Output<PrivateEnvironmentConfigArgs> privateEnvironmentConfig;
 
     public Output<PrivateEnvironmentConfigArgs> getPrivateEnvironmentConfig() {
@@ -109,7 +109,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings for software inside the environment.
      * 
      */
-    @InputImport(name="softwareConfig")
+    @Import(name="softwareConfig")
       private final @Nullable Output<SoftwareConfigArgs> softwareConfig;
 
     public Output<SoftwareConfigArgs> getSoftwareConfig() {
@@ -120,7 +120,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The configuration settings for the Airflow web server App Engine instance.
      * 
      */
-    @InputImport(name="webServerConfig")
+    @Import(name="webServerConfig")
       private final @Nullable Output<WebServerConfigArgs> webServerConfig;
 
     public Output<WebServerConfigArgs> getWebServerConfig() {
@@ -131,7 +131,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
      * 
      */
-    @InputImport(name="webServerNetworkAccessControl")
+    @Import(name="webServerNetworkAccessControl")
       private final @Nullable Output<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl;
 
     public Output<WebServerNetworkAccessControlArgs> getWebServerNetworkAccessControl() {
@@ -142,7 +142,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
-    @InputImport(name="workloadsConfig")
+    @Import(name="workloadsConfig")
       private final @Nullable Output<WorkloadsConfigArgs> workloadsConfig;
 
     public Output<WorkloadsConfigArgs> getWorkloadsConfig() {

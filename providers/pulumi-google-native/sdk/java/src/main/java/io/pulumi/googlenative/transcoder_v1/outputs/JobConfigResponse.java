@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AdBreakResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.EditAtomResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.ElementaryStreamResponse;
@@ -17,7 +17,7 @@ import io.pulumi.googlenative.transcoder_v1.outputs.SpriteSheetResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobConfigResponse {
     /**
      * List of ad breaks. Specifies where to insert ad break tags in the output manifests.
@@ -70,18 +70,18 @@ public final class JobConfigResponse {
      */
     private final List<SpriteSheetResponse> spriteSheets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobConfigResponse(
-        @OutputCustomType.Parameter("adBreaks") List<AdBreakResponse> adBreaks,
-        @OutputCustomType.Parameter("editList") List<EditAtomResponse> editList,
-        @OutputCustomType.Parameter("elementaryStreams") List<ElementaryStreamResponse> elementaryStreams,
-        @OutputCustomType.Parameter("inputs") List<InputResponse> inputs,
-        @OutputCustomType.Parameter("manifests") List<ManifestResponse> manifests,
-        @OutputCustomType.Parameter("muxStreams") List<MuxStreamResponse> muxStreams,
-        @OutputCustomType.Parameter("output") OutputResponse output,
-        @OutputCustomType.Parameter("overlays") List<OverlayResponse> overlays,
-        @OutputCustomType.Parameter("pubsubDestination") PubsubDestinationResponse pubsubDestination,
-        @OutputCustomType.Parameter("spriteSheets") List<SpriteSheetResponse> spriteSheets) {
+        @CustomType.Parameter("adBreaks") List<AdBreakResponse> adBreaks,
+        @CustomType.Parameter("editList") List<EditAtomResponse> editList,
+        @CustomType.Parameter("elementaryStreams") List<ElementaryStreamResponse> elementaryStreams,
+        @CustomType.Parameter("inputs") List<InputResponse> inputs,
+        @CustomType.Parameter("manifests") List<ManifestResponse> manifests,
+        @CustomType.Parameter("muxStreams") List<MuxStreamResponse> muxStreams,
+        @CustomType.Parameter("output") OutputResponse output,
+        @CustomType.Parameter("overlays") List<OverlayResponse> overlays,
+        @CustomType.Parameter("pubsubDestination") PubsubDestinationResponse pubsubDestination,
+        @CustomType.Parameter("spriteSheets") List<SpriteSheetResponse> spriteSheets) {
         this.adBreaks = adBreaks;
         this.editList = editList;
         this.elementaryStreams = elementaryStreams;

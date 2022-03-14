@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionTemplateResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduleResult {
     /**
      * Time the schedule was created.
@@ -59,18 +59,18 @@ public final class GetScheduleResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduleResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("cronSchedule") String cronSchedule,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("executionTemplate") ExecutionTemplateResponse executionTemplate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("recentExecutions") List<ExecutionResponse> recentExecutions,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("timeZone") String timeZone,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("cronSchedule") String cronSchedule,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("executionTemplate") ExecutionTemplateResponse executionTemplate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("recentExecutions") List<ExecutionResponse> recentExecutions,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("timeZone") String timeZone,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.cronSchedule = cronSchedule;
         this.description = description;

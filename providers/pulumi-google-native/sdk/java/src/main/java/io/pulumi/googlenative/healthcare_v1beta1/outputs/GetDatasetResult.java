@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatasetResult {
     /**
      * Resource name of the dataset, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
@@ -20,10 +20,10 @@ public final class GetDatasetResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatasetResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("timeZone") String timeZone) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("timeZone") String timeZone) {
         this.name = name;
         this.timeZone = timeZone;
     }

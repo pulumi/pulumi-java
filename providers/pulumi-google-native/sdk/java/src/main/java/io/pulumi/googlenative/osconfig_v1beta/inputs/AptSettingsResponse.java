@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * List of packages to exclude from update. These packages will be excluded
      * 
      */
-    @InputImport(name="excludes", required=true)
+    @Import(name="excludes", required=true)
       private final List<String> excludes;
 
     public List<String> getExcludes() {
@@ -32,7 +32,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
      * 
      */
-    @InputImport(name="exclusivePackages", required=true)
+    @Import(name="exclusivePackages", required=true)
       private final List<String> exclusivePackages;
 
     public List<String> getExclusivePackages() {
@@ -43,7 +43,7 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

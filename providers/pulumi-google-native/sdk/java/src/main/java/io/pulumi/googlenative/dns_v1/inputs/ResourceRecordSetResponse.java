@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
 
     public static final ResourceRecordSetResponse Empty = new ResourceRecordSetResponse();
 
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -30,7 +30,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * For example, www.example.com.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -41,7 +41,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
      * 
      */
-    @InputImport(name="routingPolicy", required=true)
+    @Import(name="routingPolicy", required=true)
       private final RRSetRoutingPolicyResponse routingPolicy;
 
     public RRSetRoutingPolicyResponse getRoutingPolicy() {
@@ -52,7 +52,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
      * 
      */
-    @InputImport(name="rrdatas", required=true)
+    @Import(name="rrdatas", required=true)
       private final List<String> rrdatas;
 
     public List<String> getRrdatas() {
@@ -63,7 +63,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * As defined in RFC 4034 (section 3.2).
      * 
      */
-    @InputImport(name="signatureRrdatas", required=true)
+    @Import(name="signatureRrdatas", required=true)
       private final List<String> signatureRrdatas;
 
     public List<String> getSignatureRrdatas() {
@@ -74,7 +74,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * Number of seconds that this ResourceRecordSet can be cached by resolvers.
      * 
      */
-    @InputImport(name="ttl", required=true)
+    @Import(name="ttl", required=true)
       private final Integer ttl;
 
     public Integer getTtl() {
@@ -85,7 +85,7 @@ public final class ResourceRecordSetResponse extends io.pulumi.resources.InvokeA
      * The identifier of a supported record type. See the list of Supported DNS record types.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

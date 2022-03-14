@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
     /**
      * If set to true, it means allowed_domains will not be enforced.
@@ -37,13 +37,13 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
      */
     private final String integrationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(
-        @OutputCustomType.Parameter("allowAllDomains") Boolean allowAllDomains,
-        @OutputCustomType.Parameter("allowAmpTraffic") Boolean allowAmpTraffic,
-        @OutputCustomType.Parameter("allowedDomains") List<String> allowedDomains,
-        @OutputCustomType.Parameter("challengeSecurityPreference") String challengeSecurityPreference,
-        @OutputCustomType.Parameter("integrationType") String integrationType) {
+        @CustomType.Parameter("allowAllDomains") Boolean allowAllDomains,
+        @CustomType.Parameter("allowAmpTraffic") Boolean allowAmpTraffic,
+        @CustomType.Parameter("allowedDomains") List<String> allowedDomains,
+        @CustomType.Parameter("challengeSecurityPreference") String challengeSecurityPreference,
+        @CustomType.Parameter("integrationType") String integrationType) {
         this.allowAllDomains = allowAllDomains;
         this.allowAmpTraffic = allowAmpTraffic;
         this.allowedDomains = allowedDomains;

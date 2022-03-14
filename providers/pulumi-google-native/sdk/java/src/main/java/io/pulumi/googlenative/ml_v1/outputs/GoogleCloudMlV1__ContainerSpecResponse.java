@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__ContainerPortResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__EnvVarResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__ContainerSpecResponse {
     /**
      * Immutable. Specifies arguments for the command that runs when the container starts. This overrides the container's [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd). Specify this field as an array of executable and arguments, similar to a Docker `CMD`'s "default parameters" form. If you don't specify this field but do specify the command field, then the command from the `command` field runs without any additional arguments. See the [Kubernetes documentation about how the `command` and `args` fields interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#notes). If you don't specify this field and don't specify the `commmand` field, then the container's [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#cmd) and `CMD` determine what runs based on their default behavior. See the [Docker documentation about how `CMD` and `ENTRYPOINT` interact](https://docs.docker.com/engine/reference/builder/#understand-how-cmd-and-entrypoint-interact). In this field, you can reference [environment variables set by AI Platform Prediction](/ai-platform/prediction/docs/custom-container-requirements#aip-variables) and environment variables set in the env field. You cannot reference environment variables set in the Docker image. In order for environment variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use parentheses. If a variable cannot be resolved, the reference in the input string is used unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field corresponds to the `args` field of the [Kubernetes Containers v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).
@@ -38,13 +38,13 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
      */
     private final List<GoogleCloudMlV1__ContainerPortResponse> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__ContainerSpecResponse(
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("command") List<String> command,
-        @OutputCustomType.Parameter("env") List<GoogleCloudMlV1__EnvVarResponse> env,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("ports") List<GoogleCloudMlV1__ContainerPortResponse> ports) {
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("command") List<String> command,
+        @CustomType.Parameter("env") List<GoogleCloudMlV1__EnvVarResponse> env,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("ports") List<GoogleCloudMlV1__ContainerPortResponse> ports) {
         this.args = args;
         this.command = command;
         this.env = env;

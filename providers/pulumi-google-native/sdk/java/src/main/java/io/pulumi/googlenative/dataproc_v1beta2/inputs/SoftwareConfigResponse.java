@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
      * 
      */
-    @InputImport(name="imageVersion", required=true)
+    @Import(name="imageVersion", required=true)
       private final String imageVersion;
 
     public String getImageVersion() {
@@ -33,7 +33,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * The set of optional components to activate on the cluster.
      * 
      */
-    @InputImport(name="optionalComponents", required=true)
+    @Import(name="optionalComponents", required=true)
       private final List<String> optionalComponents;
 
     public List<String> getOptionalComponents() {
@@ -44,7 +44,7 @@ public final class SoftwareConfigResponse extends io.pulumi.resources.InvokeArgs
      * Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {

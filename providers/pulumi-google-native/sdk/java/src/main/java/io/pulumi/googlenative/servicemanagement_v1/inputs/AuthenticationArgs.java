@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthProviderArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthenticationRuleArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * Defines a set of authentication providers that a service supports.
      * 
      */
-    @InputImport(name="providers")
+    @Import(name="providers")
       private final @Nullable Output<List<AuthProviderArgs>> providers;
 
     public Output<List<AuthProviderArgs>> getProviders() {
@@ -35,7 +35,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<AuthenticationRuleArgs>> rules;
 
     public Output<List<AuthenticationRuleArgs>> getRules() {

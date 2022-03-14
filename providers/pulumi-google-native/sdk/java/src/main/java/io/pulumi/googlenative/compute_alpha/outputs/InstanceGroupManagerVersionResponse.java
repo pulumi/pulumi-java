@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FixedOrPercentResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerVersionResponse {
     /**
      * The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.
@@ -26,11 +26,11 @@ public final class InstanceGroupManagerVersionResponse {
      */
     private final FixedOrPercentResponse targetSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerVersionResponse(
-        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("targetSize") FixedOrPercentResponse targetSize) {
+        @CustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("targetSize") FixedOrPercentResponse targetSize) {
         this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;

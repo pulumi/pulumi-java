@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.DynamicGroupQueryResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.DynamicGroupStatusResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DynamicGroupMetadataResponse {
     /**
      * Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
@@ -22,10 +22,10 @@ public final class DynamicGroupMetadataResponse {
      */
     private final DynamicGroupStatusResponse status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DynamicGroupMetadataResponse(
-        @OutputCustomType.Parameter("queries") List<DynamicGroupQueryResponse> queries,
-        @OutputCustomType.Parameter("status") DynamicGroupStatusResponse status) {
+        @CustomType.Parameter("queries") List<DynamicGroupQueryResponse> queries,
+        @CustomType.Parameter("status") DynamicGroupStatusResponse status) {
         this.queries = queries;
         this.status = status;
     }

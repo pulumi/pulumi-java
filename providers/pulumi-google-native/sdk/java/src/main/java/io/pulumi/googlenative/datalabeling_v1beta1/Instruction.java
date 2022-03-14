@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.InstructionArgs;
@@ -24,7 +24,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * The names of any related resources that are blocking changes to the instruction.
      * 
      */
-    @OutputExport(name="blockingResources", type=List.class, parameters={String.class})
+    @Export(name="blockingResources", type=List.class, parameters={String.class})
     private Output<List<String>> blockingResources;
 
     /**
@@ -38,7 +38,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * Creation time of instruction.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -52,7 +52,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * The data type of this instruction.
      * 
      */
-    @OutputExport(name="dataType", type=String.class, parameters={})
+    @Export(name="dataType", type=String.class, parameters={})
     private Output<String> dataType;
 
     /**
@@ -66,7 +66,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -80,7 +80,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * The display name of the instruction. Maximum of 64 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -94,7 +94,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
      * 
      */
-    @OutputExport(name="pdfInstruction", type=GoogleCloudDatalabelingV1beta1PdfInstructionResponse.class, parameters={})
+    @Export(name="pdfInstruction", type=GoogleCloudDatalabelingV1beta1PdfInstructionResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1PdfInstructionResponse> pdfInstruction;
 
     /**
@@ -122,7 +122,7 @@ public class Instruction extends io.pulumi.resources.CustomResource {
      * Last update time of instruction.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.AxisArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.ChartOptionsArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.DataSetArgs;
@@ -27,7 +27,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * Display options for the chart.
      * 
      */
-    @InputImport(name="chartOptions")
+    @Import(name="chartOptions")
       private final @Nullable Output<ChartOptionsArgs> chartOptions;
 
     public Output<ChartOptionsArgs> getChartOptions() {
@@ -38,7 +38,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * The data displayed in this chart.
      * 
      */
-    @InputImport(name="dataSets", required=true)
+    @Import(name="dataSets", required=true)
       private final Output<List<DataSetArgs>> dataSets;
 
     public Output<List<DataSetArgs>> getDataSets() {
@@ -49,7 +49,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * Threshold lines drawn horizontally across the chart.
      * 
      */
-    @InputImport(name="thresholds")
+    @Import(name="thresholds")
       private final @Nullable Output<List<ThresholdArgs>> thresholds;
 
     public Output<List<ThresholdArgs>> getThresholds() {
@@ -60,7 +60,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
      * 
      */
-    @InputImport(name="timeshiftDuration")
+    @Import(name="timeshiftDuration")
       private final @Nullable Output<String> timeshiftDuration;
 
     public Output<String> getTimeshiftDuration() {
@@ -71,7 +71,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * The properties applied to the X axis.
      * 
      */
-    @InputImport(name="xAxis")
+    @Import(name="xAxis")
       private final @Nullable Output<AxisArgs> xAxis;
 
     public Output<AxisArgs> getXAxis() {
@@ -82,7 +82,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * The properties applied to the Y2 axis.
      * 
      */
-    @InputImport(name="y2Axis")
+    @Import(name="y2Axis")
       private final @Nullable Output<AxisArgs> y2Axis;
 
     public Output<AxisArgs> getY2Axis() {
@@ -93,7 +93,7 @@ public final class XyChartArgs extends io.pulumi.resources.ResourceArgs {
      * The properties applied to the Y axis.
      * 
      */
-    @InputImport(name="yAxis")
+    @Import(name="yAxis")
       private final @Nullable Output<AxisArgs> yAxis;
 
     public Output<AxisArgs> getYAxis() {

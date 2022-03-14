@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetricDescriptorMetadataResponse {
     /**
      * The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.
@@ -20,10 +20,10 @@ public final class MetricDescriptorMetadataResponse {
      */
     private final String samplePeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricDescriptorMetadataResponse(
-        @OutputCustomType.Parameter("ingestDelay") String ingestDelay,
-        @OutputCustomType.Parameter("samplePeriod") String samplePeriod) {
+        @CustomType.Parameter("ingestDelay") String ingestDelay,
+        @CustomType.Parameter("samplePeriod") String samplePeriod) {
         this.ingestDelay = ingestDelay;
         this.samplePeriod = samplePeriod;
     }

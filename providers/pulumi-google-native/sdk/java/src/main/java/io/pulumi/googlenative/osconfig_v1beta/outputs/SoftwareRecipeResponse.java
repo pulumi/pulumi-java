@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeArtifactResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeResponse {
     /**
      * Resources available to be used in the steps in the recipe.
@@ -43,14 +43,14 @@ public final class SoftwareRecipeResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeResponse(
-        @OutputCustomType.Parameter("artifacts") List<SoftwareRecipeArtifactResponse> artifacts,
-        @OutputCustomType.Parameter("desiredState") String desiredState,
-        @OutputCustomType.Parameter("installSteps") List<SoftwareRecipeStepResponse> installSteps,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateSteps") List<SoftwareRecipeStepResponse> updateSteps,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("artifacts") List<SoftwareRecipeArtifactResponse> artifacts,
+        @CustomType.Parameter("desiredState") String desiredState,
+        @CustomType.Parameter("installSteps") List<SoftwareRecipeStepResponse> installSteps,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateSteps") List<SoftwareRecipeStepResponse> updateSteps,
+        @CustomType.Parameter("version") String version) {
         this.artifacts = artifacts;
         this.desiredState = desiredState;
         this.installSteps = installSteps;

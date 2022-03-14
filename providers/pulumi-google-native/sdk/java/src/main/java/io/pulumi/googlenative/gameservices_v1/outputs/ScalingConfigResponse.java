@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gameservices_v1.outputs.LabelSelectorResponse;
 import io.pulumi.googlenative.gameservices_v1.outputs.ScheduleResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScalingConfigResponse {
     /**
      * Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
@@ -33,12 +33,12 @@ public final class ScalingConfigResponse {
      */
     private final List<LabelSelectorResponse> selectors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingConfigResponse(
-        @OutputCustomType.Parameter("fleetAutoscalerSpec") String fleetAutoscalerSpec,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedules") List<ScheduleResponse> schedules,
-        @OutputCustomType.Parameter("selectors") List<LabelSelectorResponse> selectors) {
+        @CustomType.Parameter("fleetAutoscalerSpec") String fleetAutoscalerSpec,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedules") List<ScheduleResponse> schedules,
+        @CustomType.Parameter("selectors") List<LabelSelectorResponse> selectors) {
         this.fleetAutoscalerSpec = fleetAutoscalerSpec;
         this.name = name;
         this.schedules = schedules;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse {
     /**
      * Must be specified if type is `CATEGORICAL`. The list of possible categories.
@@ -16,8 +16,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse(@OutputCustomType.Parameter("values") List<String> values) {
+    @CustomType.Constructor
+    private GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse(@CustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 

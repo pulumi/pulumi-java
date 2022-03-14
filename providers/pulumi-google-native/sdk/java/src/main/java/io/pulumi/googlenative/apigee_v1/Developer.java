@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.DeveloperArgs;
@@ -24,7 +24,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Access type.
      * 
      */
-    @OutputExport(name="accessType", type=String.class, parameters={})
+    @Export(name="accessType", type=String.class, parameters={})
     private Output<String> accessType;
 
     /**
@@ -38,7 +38,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Developer app family.
      * 
      */
-    @OutputExport(name="appFamily", type=String.class, parameters={})
+    @Export(name="appFamily", type=String.class, parameters={})
     private Output<String> appFamily;
 
     /**
@@ -52,7 +52,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * List of apps associated with the developer.
      * 
      */
-    @OutputExport(name="apps", type=List.class, parameters={String.class})
+    @Export(name="apps", type=List.class, parameters={String.class})
     private Output<List<String>> apps;
 
     /**
@@ -66,7 +66,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
      * 
      */
-    @OutputExport(name="attributes", type=List.class, parameters={GoogleCloudApigeeV1AttributeResponse.class})
+    @Export(name="attributes", type=List.class, parameters={GoogleCloudApigeeV1AttributeResponse.class})
     private Output<List<GoogleCloudApigeeV1AttributeResponse>> attributes;
 
     /**
@@ -80,7 +80,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * List of companies associated with the developer.
      * 
      */
-    @OutputExport(name="companies", type=List.class, parameters={String.class})
+    @Export(name="companies", type=List.class, parameters={String.class})
     private Output<List<String>> companies;
 
     /**
@@ -94,7 +94,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Time at which the developer was created in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -108,7 +108,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * ID of the developer. **Note**: IDs are generated internally by Apigee and are not guaranteed to stay the same over time.
      * 
      */
-    @OutputExport(name="developerId", type=String.class, parameters={})
+    @Export(name="developerId", type=String.class, parameters={})
     private Output<String> developerId;
 
     /**
@@ -122,7 +122,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Email address of the developer. This value is used to uniquely identify the developer in Apigee hybrid. Note that the email address has to be in lowercase only.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -136,7 +136,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * First name of the developer.
      * 
      */
-    @OutputExport(name="firstName", type=String.class, parameters={})
+    @Export(name="firstName", type=String.class, parameters={})
     private Output<String> firstName;
 
     /**
@@ -150,7 +150,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Time at which the developer was last modified in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -164,7 +164,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Last name of the developer.
      * 
      */
-    @OutputExport(name="lastName", type=String.class, parameters={})
+    @Export(name="lastName", type=String.class, parameters={})
     private Output<String> lastName;
 
     /**
@@ -178,7 +178,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Name of the Apigee organization in which the developer resides.
      * 
      */
-    @OutputExport(name="organizationName", type=String.class, parameters={})
+    @Export(name="organizationName", type=String.class, parameters={})
     private Output<String> organizationName;
 
     /**
@@ -192,7 +192,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * Status of the developer. Valid values are `active` and `inactive`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -206,7 +206,7 @@ public class Developer extends io.pulumi.resources.CustomResource {
      * User name of the developer. Not used by Apigee hybrid.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

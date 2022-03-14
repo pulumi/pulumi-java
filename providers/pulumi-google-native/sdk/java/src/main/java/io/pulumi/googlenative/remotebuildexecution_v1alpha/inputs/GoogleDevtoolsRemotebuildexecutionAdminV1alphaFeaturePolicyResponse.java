@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.
      * 
      */
-    @InputImport(name="containerImageSources", required=true)
+    @Import(name="containerImageSources", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getContainerImageSources() {
@@ -32,7 +32,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * Whether dockerAddCapabilities can be used or what capabilities are allowed.
      * 
      */
-    @InputImport(name="dockerAddCapabilities", required=true)
+    @Import(name="dockerAddCapabilities", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerAddCapabilities() {
@@ -43,7 +43,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * Whether dockerChrootPath can be used.
      * 
      */
-    @InputImport(name="dockerChrootPath", required=true)
+    @Import(name="dockerChrootPath", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerChrootPath() {
@@ -54,7 +54,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * Whether dockerNetwork can be used or what network modes are allowed. E.g. one may allow `off` value only via `allowed_values`.
      * 
      */
-    @InputImport(name="dockerNetwork", required=true)
+    @Import(name="dockerNetwork", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerNetwork() {
@@ -65,7 +65,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * Whether dockerPrivileged can be used.
      * 
      */
-    @InputImport(name="dockerPrivileged", required=true)
+    @Import(name="dockerPrivileged", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerPrivileged() {
@@ -76,7 +76,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * Whether dockerRunAsRoot can be used.
      * 
      */
-    @InputImport(name="dockerRunAsRoot", required=true)
+    @Import(name="dockerRunAsRoot", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerRunAsRoot() {
@@ -87,7 +87,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * Whether dockerRuntime is allowed to be set or what runtimes are allowed. Note linux_isolation takes precedence, and if set, docker_runtime values may be rejected if they are incompatible with the selected isolation.
      * 
      */
-    @InputImport(name="dockerRuntime", required=true)
+    @Import(name="dockerRuntime", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerRuntime() {
@@ -98,7 +98,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * Whether dockerSiblingContainers can be used.
      * 
      */
-    @InputImport(name="dockerSiblingContainers", required=true)
+    @Import(name="dockerSiblingContainers", required=true)
       private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse getDockerSiblingContainers() {
@@ -109,7 +109,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * linux_isolation allows overriding the docker runtime used for containers started on Linux.
      * 
      */
-    @InputImport(name="linuxIsolation", required=true)
+    @Import(name="linuxIsolation", required=true)
       private final String linuxIsolation;
 
     public String getLinuxIsolation() {

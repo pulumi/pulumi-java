@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
      */
-    @InputImport(name="glob", required=true)
+    @Import(name="glob", required=true)
       private final String glob;
 
     public String getGlob() {
@@ -32,7 +32,7 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
      * The additional headers to add to the response.
      * 
      */
-    @InputImport(name="headers", required=true)
+    @Import(name="headers", required=true)
       private final Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
@@ -43,7 +43,7 @@ public final class HeaderResponse extends io.pulumi.resources.InvokeArgs {
      * The user-supplied RE2 regular expression to match against the request URL path.
      * 
      */
-    @InputImport(name="regex", required=true)
+    @Import(name="regex", required=true)
       private final String regex;
 
     public String getRegex() {

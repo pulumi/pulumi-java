@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NotificationRateLimitResponse {
     /**
      * Not more than one notification per period.
@@ -15,8 +15,8 @@ public final class NotificationRateLimitResponse {
      */
     private final String period;
 
-    @OutputCustomType.Constructor
-    private NotificationRateLimitResponse(@OutputCustomType.Parameter("period") String period) {
+    @CustomType.Constructor
+    private NotificationRateLimitResponse(@CustomType.Parameter("period") String period) {
         this.period = period;
     }
 

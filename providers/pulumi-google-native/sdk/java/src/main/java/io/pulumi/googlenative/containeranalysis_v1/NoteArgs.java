@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.AttestationNoteArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.BuildNoteArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.ComplianceNoteArgs;
@@ -30,7 +30,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing an attestation role.
      * 
      */
-    @InputImport(name="attestation")
+    @Import(name="attestation")
       private final @Nullable Output<AttestationNoteArgs> attestation;
 
     public Output<AttestationNoteArgs> getAttestation() {
@@ -41,7 +41,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing build provenance for a verifiable build.
      * 
      */
-    @InputImport(name="build")
+    @Import(name="build")
       private final @Nullable Output<BuildNoteArgs> build;
 
     public Output<BuildNoteArgs> getBuild() {
@@ -52,7 +52,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a compliance check.
      * 
      */
-    @InputImport(name="compliance")
+    @Import(name="compliance")
       private final @Nullable Output<ComplianceNoteArgs> compliance;
 
     public Output<ComplianceNoteArgs> getCompliance() {
@@ -63,7 +63,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing something that can be deployed.
      * 
      */
-    @InputImport(name="deployment")
+    @Import(name="deployment")
       private final @Nullable Output<DeploymentNoteArgs> deployment;
 
     public Output<DeploymentNoteArgs> getDeployment() {
@@ -74,7 +74,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing the initial analysis of a resource.
      * 
      */
-    @InputImport(name="discovery")
+    @Import(name="discovery")
       private final @Nullable Output<DiscoveryNoteArgs> discovery;
 
     public Output<DiscoveryNoteArgs> getDiscovery() {
@@ -85,7 +85,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a dsse attestation note.
      * 
      */
-    @InputImport(name="dsseAttestation")
+    @Import(name="dsseAttestation")
       private final @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
 
     public Output<DSSEAttestationNoteArgs> getDsseAttestation() {
@@ -96,7 +96,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * Time of expiration for this note. Empty if note does not expire.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -107,7 +107,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a base image.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<ImageNoteArgs> image;
 
     public Output<ImageNoteArgs> getImage() {
@@ -118,14 +118,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A detailed description of this note.
      * 
      */
-    @InputImport(name="longDescription")
+    @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
     public Output<String> getLongDescription() {
         return this.longDescription == null ? Output.empty() : this.longDescription;
     }
 
-    @InputImport(name="noteId", required=true)
+    @Import(name="noteId", required=true)
       private final Output<String> noteId;
 
     public Output<String> getNoteId() {
@@ -136,14 +136,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a package hosted by various package managers.
      * 
      */
-    @InputImport(name="package")
+    @Import(name="package")
       private final @Nullable Output<PackageNoteArgs> $package;
 
     public Output<PackageNoteArgs> get$package() {
         return this.$package == null ? Output.empty() : this.$package;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -154,7 +154,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * Other notes related to this note.
      * 
      */
-    @InputImport(name="relatedNoteNames")
+    @Import(name="relatedNoteNames")
       private final @Nullable Output<List<String>> relatedNoteNames;
 
     public Output<List<String>> getRelatedNoteNames() {
@@ -165,7 +165,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * URLs associated with this note.
      * 
      */
-    @InputImport(name="relatedUrl")
+    @Import(name="relatedUrl")
       private final @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
 
     public Output<List<RelatedUrlArgs>> getRelatedUrl() {
@@ -176,7 +176,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A one sentence description of this note.
      * 
      */
-    @InputImport(name="shortDescription")
+    @Import(name="shortDescription")
       private final @Nullable Output<String> shortDescription;
 
     public Output<String> getShortDescription() {
@@ -187,7 +187,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing available package upgrades.
      * 
      */
-    @InputImport(name="upgrade")
+    @Import(name="upgrade")
       private final @Nullable Output<UpgradeNoteArgs> upgrade;
 
     public Output<UpgradeNoteArgs> getUpgrade() {
@@ -198,7 +198,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a package vulnerability.
      * 
      */
-    @InputImport(name="vulnerability")
+    @Import(name="vulnerability")
       private final @Nullable Output<VulnerabilityNoteArgs> vulnerability;
 
     public Output<VulnerabilityNoteArgs> getVulnerability() {

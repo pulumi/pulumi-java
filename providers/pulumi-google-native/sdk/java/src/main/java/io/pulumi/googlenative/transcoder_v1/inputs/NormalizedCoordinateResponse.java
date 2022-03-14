@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NormalizedCoordinateResponse extends io.pulumi.resources.Invo
      * Normalized x coordinate.
      * 
      */
-    @InputImport(name="x", required=true)
+    @Import(name="x", required=true)
       private final Double x;
 
     public Double getX() {
@@ -31,7 +31,7 @@ public final class NormalizedCoordinateResponse extends io.pulumi.resources.Invo
      * Normalized y coordinate.
      * 
      */
-    @InputImport(name="y", required=true)
+    @Import(name="y", required=true)
       private final Double y;
 
     public Double getY() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TransientCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2UnwrappedCryptoKeyResponse;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
      * Key wrapped using Cloud KMS
      * 
      */
-    @InputImport(name="kmsWrapped", required=true)
+    @Import(name="kmsWrapped", required=true)
       private final GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped;
 
     public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse getKmsWrapped() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
      * Transient crypto key
      * 
      */
-    @InputImport(name="transient", required=true)
+    @Import(name="transient", required=true)
       private final GooglePrivacyDlpV2TransientCryptoKeyResponse $transient;
 
     public GooglePrivacyDlpV2TransientCryptoKeyResponse get$transient() {
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
      * Unwrapped crypto key
      * 
      */
-    @InputImport(name="unwrapped", required=true)
+    @Import(name="unwrapped", required=true)
       private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
     public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse getUnwrapped() {

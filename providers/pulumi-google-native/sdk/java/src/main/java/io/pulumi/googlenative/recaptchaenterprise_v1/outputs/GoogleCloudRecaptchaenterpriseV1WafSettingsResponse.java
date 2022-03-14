@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
     /**
      * The WAF feature for which this key is enabled.
@@ -20,10 +20,10 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
      */
     private final String wafService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(
-        @OutputCustomType.Parameter("wafFeature") String wafFeature,
-        @OutputCustomType.Parameter("wafService") String wafService) {
+        @CustomType.Parameter("wafFeature") String wafFeature,
+        @CustomType.Parameter("wafService") String wafService) {
         this.wafFeature = wafFeature;
         this.wafService = wafService;
     }

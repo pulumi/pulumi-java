@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobConditionResponse {
     /**
      * Optional. Last time the condition transitioned from one status to another.
@@ -40,14 +40,14 @@ public final class JobConditionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobConditionResponse(
-        @OutputCustomType.Parameter("lastTransitionTime") String lastTransitionTime,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("lastTransitionTime") String lastTransitionTime,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;

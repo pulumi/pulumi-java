@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1beta1TableSpecResponse {
     /**
      * If the table is a dated shard, i.e., with name pattern `[prefix]YYYYMMDD`, `grouped_entry` is the Data Catalog resource name of the date sharded grouped entry, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`. Otherwise, `grouped_entry` is empty.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse {
      */
     private final String groupedEntry;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatacatalogV1beta1TableSpecResponse(@OutputCustomType.Parameter("groupedEntry") String groupedEntry) {
+    @CustomType.Constructor
+    private GoogleCloudDatacatalogV1beta1TableSpecResponse(@CustomType.Parameter("groupedEntry") String groupedEntry) {
         this.groupedEntry = groupedEntry;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LDiversityEquivalenceClassResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
     /**
      * Total number of equivalence classes in this bucket.
@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
      */
     private final String sensitiveValueFrequencyUpperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2LDiversityHistogramBucketResponse(
-        @OutputCustomType.Parameter("bucketSize") String bucketSize,
-        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
-        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues,
-        @OutputCustomType.Parameter("sensitiveValueFrequencyLowerBound") String sensitiveValueFrequencyLowerBound,
-        @OutputCustomType.Parameter("sensitiveValueFrequencyUpperBound") String sensitiveValueFrequencyUpperBound) {
+        @CustomType.Parameter("bucketSize") String bucketSize,
+        @CustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @CustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues,
+        @CustomType.Parameter("sensitiveValueFrequencyLowerBound") String sensitiveValueFrequencyLowerBound,
+        @CustomType.Parameter("sensitiveValueFrequencyUpperBound") String sensitiveValueFrequencyUpperBound) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

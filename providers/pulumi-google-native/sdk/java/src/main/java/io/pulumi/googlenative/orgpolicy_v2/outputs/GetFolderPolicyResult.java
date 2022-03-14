@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFolderPolicyResult {
     /**
      * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
@@ -21,10 +21,10 @@ public final class GetFolderPolicyResult {
      */
     private final GoogleCloudOrgpolicyV2PolicySpecResponse spec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFolderPolicyResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("spec") GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("spec") GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
         this.name = name;
         this.spec = spec;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.billingbudgets_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1FilterArgs;
@@ -23,7 +23,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
      * 
      */
-    @InputImport(name="allUpdatesRule")
+    @Import(name="allUpdatesRule")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule;
 
     public Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> getAllUpdatesRule() {
@@ -34,14 +34,14 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Budgeted amount.
      * 
      */
-    @InputImport(name="amount", required=true)
+    @Import(name="amount", required=true)
       private final Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount;
 
     public Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> getAmount() {
         return this.amount;
     }
 
-    @InputImport(name="billingAccountId", required=true)
+    @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
@@ -52,7 +52,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
      * 
      */
-    @InputImport(name="budgetFilter")
+    @Import(name="budgetFilter")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter;
 
     public Output<GoogleCloudBillingBudgetsV1beta1FilterArgs> getBudgetFilter() {
@@ -63,7 +63,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * User data for display name in UI. Validation: <= 60 chars.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -74,7 +74,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -85,7 +85,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
      * 
      */
-    @InputImport(name="thresholdRules")
+    @Import(name="thresholdRules")
       private final @Nullable Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules;
 
     public Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> getThresholdRules() {

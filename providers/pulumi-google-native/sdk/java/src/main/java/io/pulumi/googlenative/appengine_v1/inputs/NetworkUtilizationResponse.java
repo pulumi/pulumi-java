@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
      * Target bytes received per second.
      * 
      */
-    @InputImport(name="targetReceivedBytesPerSecond", required=true)
+    @Import(name="targetReceivedBytesPerSecond", required=true)
       private final Integer targetReceivedBytesPerSecond;
 
     public Integer getTargetReceivedBytesPerSecond() {
@@ -31,7 +31,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
      * Target packets received per second.
      * 
      */
-    @InputImport(name="targetReceivedPacketsPerSecond", required=true)
+    @Import(name="targetReceivedPacketsPerSecond", required=true)
       private final Integer targetReceivedPacketsPerSecond;
 
     public Integer getTargetReceivedPacketsPerSecond() {
@@ -42,7 +42,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
      * Target bytes sent per second.
      * 
      */
-    @InputImport(name="targetSentBytesPerSecond", required=true)
+    @Import(name="targetSentBytesPerSecond", required=true)
       private final Integer targetSentBytesPerSecond;
 
     public Integer getTargetSentBytesPerSecond() {
@@ -53,7 +53,7 @@ public final class NetworkUtilizationResponse extends io.pulumi.resources.Invoke
      * Target packets sent per second.
      * 
      */
-    @InputImport(name="targetSentPacketsPerSecond", required=true)
+    @Import(name="targetSentPacketsPerSecond", required=true)
       private final Integer targetSentPacketsPerSecond;
 
     public Integer getTargetSentPacketsPerSecond() {

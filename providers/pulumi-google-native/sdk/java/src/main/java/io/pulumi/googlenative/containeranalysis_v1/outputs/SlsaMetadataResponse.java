@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SlsaCompletenessResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SlsaMetadataResponse {
     /**
      * The timestamp of when the build completed.
@@ -37,13 +37,13 @@ public final class SlsaMetadataResponse {
      */
     private final Boolean reproducible;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SlsaMetadataResponse(
-        @OutputCustomType.Parameter("buildFinishedOn") String buildFinishedOn,
-        @OutputCustomType.Parameter("buildInvocationId") String buildInvocationId,
-        @OutputCustomType.Parameter("buildStartedOn") String buildStartedOn,
-        @OutputCustomType.Parameter("completeness") SlsaCompletenessResponse completeness,
-        @OutputCustomType.Parameter("reproducible") Boolean reproducible) {
+        @CustomType.Parameter("buildFinishedOn") String buildFinishedOn,
+        @CustomType.Parameter("buildInvocationId") String buildInvocationId,
+        @CustomType.Parameter("buildStartedOn") String buildStartedOn,
+        @CustomType.Parameter("completeness") SlsaCompletenessResponse completeness,
+        @CustomType.Parameter("reproducible") Boolean reproducible) {
         this.buildFinishedOn = buildFinishedOn;
         this.buildInvocationId = buildInvocationId;
         this.buildStartedOn = buildStartedOn;

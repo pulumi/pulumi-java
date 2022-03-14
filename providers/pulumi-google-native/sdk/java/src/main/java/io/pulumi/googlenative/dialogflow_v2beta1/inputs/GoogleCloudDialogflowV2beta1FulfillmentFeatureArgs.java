@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1FulfillmentFeatureType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs extends io
      * The type of the feature that enabled for fulfillment.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1FulfillmentFeatureType> type;
 
     public Output<GoogleCloudDialogflowV2beta1FulfillmentFeatureType> getType() {

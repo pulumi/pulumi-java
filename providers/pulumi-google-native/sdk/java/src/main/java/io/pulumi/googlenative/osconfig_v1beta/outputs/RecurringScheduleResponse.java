@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.MonthlyScheduleResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.TimeOfDayResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.TimeZoneResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.osconfig_v1beta.outputs.WeeklyScheduleResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecurringScheduleResponse {
     /**
      * Optional. The end time at which a recurring patch deployment schedule is no longer active.
@@ -59,17 +59,17 @@ public final class RecurringScheduleResponse {
      */
     private final WeeklyScheduleResponse weekly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecurringScheduleResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("frequency") String frequency,
-        @OutputCustomType.Parameter("lastExecuteTime") String lastExecuteTime,
-        @OutputCustomType.Parameter("monthly") MonthlyScheduleResponse monthly,
-        @OutputCustomType.Parameter("nextExecuteTime") String nextExecuteTime,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("timeOfDay") TimeOfDayResponse timeOfDay,
-        @OutputCustomType.Parameter("timeZone") TimeZoneResponse timeZone,
-        @OutputCustomType.Parameter("weekly") WeeklyScheduleResponse weekly) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("frequency") String frequency,
+        @CustomType.Parameter("lastExecuteTime") String lastExecuteTime,
+        @CustomType.Parameter("monthly") MonthlyScheduleResponse monthly,
+        @CustomType.Parameter("nextExecuteTime") String nextExecuteTime,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("timeOfDay") TimeOfDayResponse timeOfDay,
+        @CustomType.Parameter("timeZone") TimeZoneResponse timeZone,
+        @CustomType.Parameter("weekly") WeeklyScheduleResponse weekly) {
         this.endTime = endTime;
         this.frequency = frequency;
         this.lastExecuteTime = lastExecuteTime;

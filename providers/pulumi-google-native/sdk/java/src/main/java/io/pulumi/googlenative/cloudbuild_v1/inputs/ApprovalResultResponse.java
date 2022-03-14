@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
      * The time when the approval decision was made.
      * 
      */
-    @InputImport(name="approvalTime", required=true)
+    @Import(name="approvalTime", required=true)
       private final String approvalTime;
 
     public String getApprovalTime() {
@@ -31,7 +31,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
      * Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
      * 
      */
-    @InputImport(name="approverAccount", required=true)
+    @Import(name="approverAccount", required=true)
       private final String approverAccount;
 
     public String getApproverAccount() {
@@ -42,7 +42,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
      * Optional. An optional comment for this manual approval result.
      * 
      */
-    @InputImport(name="comment", required=true)
+    @Import(name="comment", required=true)
       private final String comment;
 
     public String getComment() {
@@ -53,7 +53,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
      * The decision of this manual approval.
      * 
      */
-    @InputImport(name="decision", required=true)
+    @Import(name="decision", required=true)
       private final String decision;
 
     public String getDecision() {
@@ -64,7 +64,7 @@ public final class ApprovalResultResponse extends io.pulumi.resources.InvokeArgs
      * Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

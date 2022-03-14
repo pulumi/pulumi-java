@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse {
     /**
      * Must be specified if type is `INTEGER`. Maximum value of the parameter.
@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
      */
     private final String minValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(
-        @OutputCustomType.Parameter("maxValue") String maxValue,
-        @OutputCustomType.Parameter("minValue") String minValue) {
+        @CustomType.Parameter("maxValue") String maxValue,
+        @CustomType.Parameter("minValue") String minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }

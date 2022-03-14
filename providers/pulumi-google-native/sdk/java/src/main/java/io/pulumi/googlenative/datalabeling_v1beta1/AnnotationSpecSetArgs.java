@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1AnnotationSpecArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
      * The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
      * 
      */
-    @InputImport(name="annotationSpecs", required=true)
+    @Import(name="annotationSpecs", required=true)
       private final Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs;
 
     public Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> getAnnotationSpecs() {
@@ -31,7 +31,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
      * Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,14 +42,14 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
      * The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

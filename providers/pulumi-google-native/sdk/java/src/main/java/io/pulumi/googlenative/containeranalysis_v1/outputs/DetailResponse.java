@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.VersionResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DetailResponse {
     /**
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
@@ -82,22 +82,22 @@ public final class DetailResponse {
      */
     private final String vendor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetailResponse(
-        @OutputCustomType.Parameter("affectedCpeUri") String affectedCpeUri,
-        @OutputCustomType.Parameter("affectedPackage") String affectedPackage,
-        @OutputCustomType.Parameter("affectedVersionEnd") VersionResponse affectedVersionEnd,
-        @OutputCustomType.Parameter("affectedVersionStart") VersionResponse affectedVersionStart,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fixedCpeUri") String fixedCpeUri,
-        @OutputCustomType.Parameter("fixedPackage") String fixedPackage,
-        @OutputCustomType.Parameter("fixedVersion") VersionResponse fixedVersion,
-        @OutputCustomType.Parameter("isObsolete") Boolean isObsolete,
-        @OutputCustomType.Parameter("packageType") String packageType,
-        @OutputCustomType.Parameter("severityName") String severityName,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("sourceUpdateTime") String sourceUpdateTime,
-        @OutputCustomType.Parameter("vendor") String vendor) {
+        @CustomType.Parameter("affectedCpeUri") String affectedCpeUri,
+        @CustomType.Parameter("affectedPackage") String affectedPackage,
+        @CustomType.Parameter("affectedVersionEnd") VersionResponse affectedVersionEnd,
+        @CustomType.Parameter("affectedVersionStart") VersionResponse affectedVersionStart,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fixedCpeUri") String fixedCpeUri,
+        @CustomType.Parameter("fixedPackage") String fixedPackage,
+        @CustomType.Parameter("fixedVersion") VersionResponse fixedVersion,
+        @CustomType.Parameter("isObsolete") Boolean isObsolete,
+        @CustomType.Parameter("packageType") String packageType,
+        @CustomType.Parameter("severityName") String severityName,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("sourceUpdateTime") String sourceUpdateTime,
+        @CustomType.Parameter("vendor") String vendor) {
         this.affectedCpeUri = affectedCpeUri;
         this.affectedPackage = affectedPackage;
         this.affectedVersionEnd = affectedVersionEnd;

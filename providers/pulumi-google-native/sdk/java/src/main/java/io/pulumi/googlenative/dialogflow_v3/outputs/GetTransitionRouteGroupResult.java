@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3TransitionRouteResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitionRouteGroupResult {
     /**
      * The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
@@ -27,11 +27,11 @@ public final class GetTransitionRouteGroupResult {
      */
     private final List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitionRouteGroupResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
         this.displayName = displayName;
         this.name = name;
         this.transitionRoutes = transitionRoutes;

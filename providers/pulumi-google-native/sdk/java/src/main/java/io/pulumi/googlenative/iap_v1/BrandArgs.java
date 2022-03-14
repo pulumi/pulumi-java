@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * Application name displayed on OAuth consent screen.
      * 
      */
-    @InputImport(name="applicationTitle")
+    @Import(name="applicationTitle")
       private final @Nullable Output<String> applicationTitle;
 
     public Output<String> getApplicationTitle() {
         return this.applicationTitle == null ? Output.empty() : this.applicationTitle;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -36,7 +36,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * Support email displayed on the OAuth consent screen.
      * 
      */
-    @InputImport(name="supportEmail")
+    @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
     public Output<String> getSupportEmail() {

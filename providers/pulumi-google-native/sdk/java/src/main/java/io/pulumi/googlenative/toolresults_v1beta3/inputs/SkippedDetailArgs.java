@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * If the App doesn't support the specific API level.
      * 
      */
-    @InputImport(name="incompatibleAppVersion")
+    @Import(name="incompatibleAppVersion")
       private final @Nullable Output<Boolean> incompatibleAppVersion;
 
     public Output<Boolean> getIncompatibleAppVersion() {
@@ -33,7 +33,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * If the App doesn't run on the specific architecture, for example, x86.
      * 
      */
-    @InputImport(name="incompatibleArchitecture")
+    @Import(name="incompatibleArchitecture")
       private final @Nullable Output<Boolean> incompatibleArchitecture;
 
     public Output<Boolean> getIncompatibleArchitecture() {
@@ -44,7 +44,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * If the requested OS version doesn't run on the specific device model.
      * 
      */
-    @InputImport(name="incompatibleDevice")
+    @Import(name="incompatibleDevice")
       private final @Nullable Output<Boolean> incompatibleDevice;
 
     public Output<Boolean> getIncompatibleDevice() {

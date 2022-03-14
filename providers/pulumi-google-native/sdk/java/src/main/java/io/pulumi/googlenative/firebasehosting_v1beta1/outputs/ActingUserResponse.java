@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ActingUserResponse {
     /**
      * The email address of the user when the user performed the action.
@@ -20,10 +20,10 @@ public final class ActingUserResponse {
      */
     private final String imageUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActingUserResponse(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("imageUrl") String imageUrl) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("imageUrl") String imageUrl) {
         this.email = email;
         this.imageUrl = imageUrl;
     }

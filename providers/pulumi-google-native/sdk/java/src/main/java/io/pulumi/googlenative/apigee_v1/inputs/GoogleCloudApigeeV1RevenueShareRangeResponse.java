@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
      * Ending value of the range. Set to 0 or `null` for the last range of values.
      * 
      */
-    @InputImport(name="end", required=true)
+    @Import(name="end", required=true)
       private final String end;
 
     public String getEnd() {
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
      * Percentage of the revenue to be shared with the developer. For example, to share 21 percent of the total revenue with the developer, set this value to 21. Specify a decimal number with a maximum of two digits following the decimal point.
      * 
      */
-    @InputImport(name="sharePercentage", required=true)
+    @Import(name="sharePercentage", required=true)
       private final Double sharePercentage;
 
     public Double getSharePercentage() {
@@ -43,7 +43,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
      * Starting value of the range. Set to 0 or `null` for the initial range of values.
      * 
      */
-    @InputImport(name="start", required=true)
+    @Import(name="start", required=true)
       private final String start;
 
     public String getStart() {

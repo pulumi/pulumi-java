@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse {
     /**
      * Terms to ignore in the search query.
@@ -16,8 +16,8 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionResponse {
      */
     private final List<String> ignoreTerms;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudRetailV2betaRuleIgnoreActionResponse(@OutputCustomType.Parameter("ignoreTerms") List<String> ignoreTerms) {
+    @CustomType.Constructor
+    private GoogleCloudRetailV2betaRuleIgnoreActionResponse(@CustomType.Parameter("ignoreTerms") List<String> ignoreTerms) {
         this.ignoreTerms = ignoreTerms;
     }
 

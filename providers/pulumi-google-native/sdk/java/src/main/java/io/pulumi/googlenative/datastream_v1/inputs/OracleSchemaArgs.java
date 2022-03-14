@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleTableArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Tables in the schema.
      * 
      */
-    @InputImport(name="oracleTables")
+    @Import(name="oracleTables")
       private final @Nullable Output<List<OracleTableArgs>> oracleTables;
 
     public Output<List<OracleTableArgs>> getOracleTables() {
@@ -35,7 +35,7 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Schema name.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {

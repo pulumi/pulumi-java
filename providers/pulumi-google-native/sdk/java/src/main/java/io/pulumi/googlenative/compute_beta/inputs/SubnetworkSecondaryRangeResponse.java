@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
      * The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed in the Valid ranges list.
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
     public String getIpCidrRange() {
@@ -31,7 +31,7 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
      * The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.
      * 
      */
-    @InputImport(name="rangeName", required=true)
+    @Import(name="rangeName", required=true)
       private final String rangeName;
 
     public String getRangeName() {

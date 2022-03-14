@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class RouteAsPathResponse extends io.pulumi.resources.InvokeArgs {
      * The AS numbers of the AS Path.
      * 
      */
-    @InputImport(name="asLists", required=true)
+    @Import(name="asLists", required=true)
       private final List<Integer> asLists;
 
     public List<Integer> getAsLists() {
@@ -29,7 +29,7 @@ public final class RouteAsPathResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed
      * 
      */
-    @InputImport(name="pathSegmentType", required=true)
+    @Import(name="pathSegmentType", required=true)
       private final String pathSegmentType;
 
     public String getPathSegmentType() {

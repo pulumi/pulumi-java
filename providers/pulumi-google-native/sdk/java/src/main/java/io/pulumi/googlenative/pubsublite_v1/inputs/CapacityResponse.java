@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
      * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
      * 
      */
-    @InputImport(name="publishMibPerSec", required=true)
+    @Import(name="publishMibPerSec", required=true)
       private final Integer publishMibPerSec;
 
     public Integer getPublishMibPerSec() {
@@ -31,7 +31,7 @@ public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
      * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 32.
      * 
      */
-    @InputImport(name="subscribeMibPerSec", required=true)
+    @Import(name="subscribeMibPerSec", required=true)
       private final Integer subscribeMibPerSec;
 
     public Integer getSubscribeMibPerSec() {

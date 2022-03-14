@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.ActingUserResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.ServingConfigResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VersionResponse {
     /**
      * The configuration for the behavior of the site. This configuration exists in the [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
@@ -73,20 +73,20 @@ public final class VersionResponse {
      */
     private final String versionBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VersionResponse(
-        @OutputCustomType.Parameter("config") ServingConfigResponse config,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("createUser") ActingUserResponse createUser,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("deleteUser") ActingUserResponse deleteUser,
-        @OutputCustomType.Parameter("fileCount") String fileCount,
-        @OutputCustomType.Parameter("finalizeTime") String finalizeTime,
-        @OutputCustomType.Parameter("finalizeUser") ActingUserResponse finalizeUser,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("versionBytes") String versionBytes) {
+        @CustomType.Parameter("config") ServingConfigResponse config,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("createUser") ActingUserResponse createUser,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("deleteUser") ActingUserResponse deleteUser,
+        @CustomType.Parameter("fileCount") String fileCount,
+        @CustomType.Parameter("finalizeTime") String finalizeTime,
+        @CustomType.Parameter("finalizeUser") ActingUserResponse finalizeUser,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("versionBytes") String versionBytes) {
         this.config = config;
         this.createTime = createTime;
         this.createUser = createUser;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TriggerResponse {
     /**
      * The absolute number of time series that must fail the predicate for the condition to be triggered.
@@ -21,10 +21,10 @@ public final class TriggerResponse {
      */
     private final Double percent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("percent") Double percent) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("percent") Double percent) {
         this.count = count;
         this.percent = percent;
     }

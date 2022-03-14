@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
      * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
      * 
      */
-    @InputImport(name="customTag")
+    @Import(name="customTag")
       private final @Nullable Output<String> customTag;
 
     public Output<String> getCustomTag() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
      * Identifies the column.
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {

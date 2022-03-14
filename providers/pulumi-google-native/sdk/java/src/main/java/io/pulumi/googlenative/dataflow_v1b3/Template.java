@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataflow_v1b3.TemplateArgs;
@@ -27,7 +27,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * The template metadata describing the template name, available parameters, etc.
      * 
      */
-    @OutputExport(name="metadata", type=TemplateMetadataResponse.class, parameters={})
+    @Export(name="metadata", type=TemplateMetadataResponse.class, parameters={})
     private Output<TemplateMetadataResponse> metadata;
 
     /**
@@ -41,7 +41,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * Describes the runtime metadata with SDKInfo and available parameters.
      * 
      */
-    @OutputExport(name="runtimeMetadata", type=RuntimeMetadataResponse.class, parameters={})
+    @Export(name="runtimeMetadata", type=RuntimeMetadataResponse.class, parameters={})
     private Output<RuntimeMetadataResponse> runtimeMetadata;
 
     /**
@@ -55,7 +55,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * The status of the get template request. Any problems with the request will be indicated in the error_details.
      * 
      */
-    @OutputExport(name="status", type=StatusResponse.class, parameters={})
+    @Export(name="status", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> status;
 
     /**
@@ -69,7 +69,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * Template Type.
      * 
      */
-    @OutputExport(name="templateType", type=String.class, parameters={})
+    @Export(name="templateType", type=String.class, parameters={})
     private Output<String> templateType;
 
     /**

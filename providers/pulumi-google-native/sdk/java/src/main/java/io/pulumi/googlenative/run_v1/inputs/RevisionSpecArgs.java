@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.ContainerArgs;
 import io.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceArgs;
 import io.pulumi.googlenative.run_v1.inputs.VolumeArgs;
@@ -28,7 +28,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.
      * 
      */
-    @InputImport(name="containerConcurrency")
+    @Import(name="containerConcurrency")
       private final @Nullable Output<Integer> containerConcurrency;
 
     public Output<Integer> getContainerConcurrency() {
@@ -39,7 +39,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md
      * 
      */
-    @InputImport(name="containers")
+    @Import(name="containers")
       private final @Nullable Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
@@ -50,7 +50,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported, defaults to true.
      * 
      */
-    @InputImport(name="enableServiceLinks")
+    @Import(name="enableServiceLinks")
       private final @Nullable Output<Boolean> enableServiceLinks;
 
     public Output<Boolean> getEnableServiceLinks() {
@@ -61,7 +61,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount. ImagePullSecrets are distinct from Secrets because Secrets can be mounted in the pod, but ImagePullSecrets are only accessed by the kubelet. More info: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod Cloud Run fully managed: Not supported. Cloud Run for Anthos: supported.
      * 
      */
-    @InputImport(name="imagePullSecrets")
+    @Import(name="imagePullSecrets")
       private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
     public Output<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
@@ -72,7 +72,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
      * 
      */
-    @InputImport(name="serviceAccountName")
+    @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
     public Output<String> getServiceAccountName() {
@@ -83,14 +83,14 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
      * TimeoutSeconds holds the max duration the instance is allowed for responding to a request. Cloud Run fully managed: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour). Cloud Run for Anthos: defaults to 300 seconds (5 minutes). Maximum allowed value is configurable by the cluster operator.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
     }
 
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
     public Output<List<VolumeArgs>> getVolumes() {

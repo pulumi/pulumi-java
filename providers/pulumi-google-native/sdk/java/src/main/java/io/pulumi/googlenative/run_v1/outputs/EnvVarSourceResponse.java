@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.ConfigMapKeySelectorResponse;
 import io.pulumi.googlenative.run_v1.outputs.SecretKeySelectorResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvVarSourceResponse {
     /**
      * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
@@ -21,10 +21,10 @@ public final class EnvVarSourceResponse {
      */
     private final SecretKeySelectorResponse secretKeyRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvVarSourceResponse(
-        @OutputCustomType.Parameter("configMapKeyRef") ConfigMapKeySelectorResponse configMapKeyRef,
-        @OutputCustomType.Parameter("secretKeyRef") SecretKeySelectorResponse secretKeyRef) {
+        @CustomType.Parameter("configMapKeyRef") ConfigMapKeySelectorResponse configMapKeyRef,
+        @CustomType.Parameter("secretKeyRef") SecretKeySelectorResponse secretKeyRef) {
         this.configMapKeyRef = configMapKeyRef;
         this.secretKeyRef = secretKeyRef;
     }

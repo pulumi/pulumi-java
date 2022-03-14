@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * The customer account's contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer's username for those accounts. Use this email to invite Team customers.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -33,7 +33,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * The customer account contact's first name. Optional for Team customers.
      * 
      */
-    @InputImport(name="firstName")
+    @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
     public Output<String> getFirstName() {
@@ -44,7 +44,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * The customer account contact's last name. Optional for Team customers.
      * 
      */
-    @InputImport(name="lastName")
+    @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
     public Output<String> getLastName() {
@@ -55,7 +55,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * The customer account's contact phone number.
      * 
      */
-    @InputImport(name="phone")
+    @Import(name="phone")
       private final @Nullable Output<String> phone;
 
     public Output<String> getPhone() {
@@ -66,7 +66,7 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
      * Optional. The customer account contact's job title.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

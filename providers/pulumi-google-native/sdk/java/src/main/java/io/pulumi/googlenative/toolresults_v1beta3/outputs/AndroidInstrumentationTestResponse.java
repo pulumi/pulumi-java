@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidInstrumentationTestResponse {
     /**
      * The java package for the test to be executed. Required
@@ -32,12 +32,12 @@ public final class AndroidInstrumentationTestResponse {
      */
     private final Boolean useOrchestrator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AndroidInstrumentationTestResponse(
-        @OutputCustomType.Parameter("testPackageId") String testPackageId,
-        @OutputCustomType.Parameter("testRunnerClass") String testRunnerClass,
-        @OutputCustomType.Parameter("testTargets") List<String> testTargets,
-        @OutputCustomType.Parameter("useOrchestrator") Boolean useOrchestrator) {
+        @CustomType.Parameter("testPackageId") String testPackageId,
+        @CustomType.Parameter("testRunnerClass") String testRunnerClass,
+        @CustomType.Parameter("testTargets") List<String> testTargets,
+        @CustomType.Parameter("useOrchestrator") Boolean useOrchestrator) {
         this.testPackageId = testPackageId;
         this.testRunnerClass = testRunnerClass;
         this.testTargets = testTargets;

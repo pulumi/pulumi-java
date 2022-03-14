@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse {
     /**
      * Optional. Display price of the product.
@@ -20,10 +20,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      */
     private final Double originalPrice;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(
-        @OutputCustomType.Parameter("displayPrice") Double displayPrice,
-        @OutputCustomType.Parameter("originalPrice") Double originalPrice) {
+        @CustomType.Parameter("displayPrice") Double displayPrice,
+        @CustomType.Parameter("originalPrice") Double originalPrice) {
         this.displayPrice = displayPrice;
         this.originalPrice = originalPrice;
     }

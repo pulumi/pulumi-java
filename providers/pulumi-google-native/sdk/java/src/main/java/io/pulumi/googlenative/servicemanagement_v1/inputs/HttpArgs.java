@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.HttpRuleArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
      * When set to true, URL path parameters will be fully URI-decoded except in cases of single segment matches in reserved expansion, where "%2F" will be left encoded. The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
      * 
      */
-    @InputImport(name="fullyDecodeReservedExpansion")
+    @Import(name="fullyDecodeReservedExpansion")
       private final @Nullable Output<Boolean> fullyDecodeReservedExpansion;
 
     public Output<Boolean> getFullyDecodeReservedExpansion() {
@@ -35,7 +35,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
      * A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<HttpRuleArgs>> rules;
 
     public Output<List<HttpRuleArgs>> getRules() {

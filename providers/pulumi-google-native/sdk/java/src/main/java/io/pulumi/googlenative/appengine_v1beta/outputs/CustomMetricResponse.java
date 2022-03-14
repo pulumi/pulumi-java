@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CustomMetricResponse {
     /**
      * Allows filtering on the metric's fields.
@@ -36,13 +36,13 @@ public final class CustomMetricResponse {
      */
     private final Double targetUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomMetricResponse(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("singleInstanceAssignment") Double singleInstanceAssignment,
-        @OutputCustomType.Parameter("targetType") String targetType,
-        @OutputCustomType.Parameter("targetUtilization") Double targetUtilization) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("singleInstanceAssignment") Double singleInstanceAssignment,
+        @CustomType.Parameter("targetType") String targetType,
+        @CustomType.Parameter("targetUtilization") Double targetUtilization) {
         this.filter = filter;
         this.metricName = metricName;
         this.singleInstanceAssignment = singleInstanceAssignment;

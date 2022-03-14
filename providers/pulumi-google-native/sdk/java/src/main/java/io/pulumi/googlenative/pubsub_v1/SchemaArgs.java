@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.pubsub_v1.enums.SchemaType;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
      * 
      */
-    @InputImport(name="definition")
+    @Import(name="definition")
       private final @Nullable Output<String> definition;
 
     public Output<String> getDefinition() {
@@ -30,21 +30,21 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="schemaId")
+    @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
 
     public Output<String> getSchemaId() {
@@ -55,7 +55,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the schema definition.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<SchemaType> type;
 
     public Output<SchemaType> getType() {

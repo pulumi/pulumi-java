@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TableOptionsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2HybridOptionsResponse {
     /**
      * A short description of where the data is coming from. Will be stored once in the job. 256 max length.
@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse {
      */
     private final GooglePrivacyDlpV2TableOptionsResponse tableOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2HybridOptionsResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("requiredFindingLabelKeys") List<String> requiredFindingLabelKeys,
-        @OutputCustomType.Parameter("tableOptions") GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("requiredFindingLabelKeys") List<String> requiredFindingLabelKeys,
+        @CustomType.Parameter("tableOptions") GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
         this.description = description;
         this.labels = labels;
         this.requiredFindingLabelKeys = requiredFindingLabelKeys;

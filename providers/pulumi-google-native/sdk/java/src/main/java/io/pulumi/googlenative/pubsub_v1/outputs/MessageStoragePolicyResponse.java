@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MessageStoragePolicyResponse {
     /**
      * A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration.
@@ -16,8 +16,8 @@ public final class MessageStoragePolicyResponse {
      */
     private final List<String> allowedPersistenceRegions;
 
-    @OutputCustomType.Constructor
-    private MessageStoragePolicyResponse(@OutputCustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
+    @CustomType.Constructor
+    private MessageStoragePolicyResponse(@CustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 

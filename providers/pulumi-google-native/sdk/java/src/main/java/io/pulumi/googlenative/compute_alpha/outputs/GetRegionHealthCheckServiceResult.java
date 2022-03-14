@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionHealthCheckServiceResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -71,20 +71,20 @@ public final class GetRegionHealthCheckServiceResult {
      */
     private final String selfLinkWithId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionHealthCheckServiceResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("healthChecks") List<String> healthChecks,
-        @OutputCustomType.Parameter("healthStatusAggregationPolicy") String healthStatusAggregationPolicy,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkEndpointGroups") List<String> networkEndpointGroups,
-        @OutputCustomType.Parameter("notificationEndpoints") List<String> notificationEndpoints,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("healthChecks") List<String> healthChecks,
+        @CustomType.Parameter("healthStatusAggregationPolicy") String healthStatusAggregationPolicy,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkEndpointGroups") List<String> networkEndpointGroups,
+        @CustomType.Parameter("notificationEndpoints") List<String> notificationEndpoints,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;

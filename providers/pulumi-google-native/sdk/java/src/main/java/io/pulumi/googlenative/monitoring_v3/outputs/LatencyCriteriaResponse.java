@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LatencyCriteriaResponse {
     /**
      * Good service is defined to be the count of requests made to this service that return in no more than threshold.
@@ -15,8 +15,8 @@ public final class LatencyCriteriaResponse {
      */
     private final String threshold;
 
-    @OutputCustomType.Constructor
-    private LatencyCriteriaResponse(@OutputCustomType.Parameter("threshold") String threshold) {
+    @CustomType.Constructor
+    private LatencyCriteriaResponse(@CustomType.Parameter("threshold") String threshold) {
         this.threshold = threshold;
     }
 

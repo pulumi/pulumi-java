@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse {
     /**
      * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
      */
     private final String text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse(
-        @OutputCustomType.Parameter("parameterId") String parameterId,
-        @OutputCustomType.Parameter("text") String text) {
+        @CustomType.Parameter("parameterId") String parameterId,
+        @CustomType.Parameter("text") String text) {
         this.parameterId = parameterId;
         this.text = text;
     }

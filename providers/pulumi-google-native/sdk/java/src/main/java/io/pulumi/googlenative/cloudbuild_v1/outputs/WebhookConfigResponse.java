@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebhookConfigResponse {
     /**
      * Resource name for the secret required as a URL parameter.
@@ -20,10 +20,10 @@ public final class WebhookConfigResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebhookConfigResponse(
-        @OutputCustomType.Parameter("secret") String secret,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("secret") String secret,
+        @CustomType.Parameter("state") String state) {
         this.secret = secret;
         this.state = state;
     }

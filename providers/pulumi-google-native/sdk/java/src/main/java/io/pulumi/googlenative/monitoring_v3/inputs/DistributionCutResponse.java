@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionCutResponse extends io.pulumi.resources.InvokeArg
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="distributionFilter", required=true)
+    @Import(name="distributionFilter", required=true)
       private final String distributionFilter;
 
     public String getDistributionFilter() {
@@ -32,7 +32,7 @@ public final class DistributionCutResponse extends io.pulumi.resources.InvokeArg
      * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
      * 
      */
-    @InputImport(name="range", required=true)
+    @Import(name="range", required=true)
       private final GoogleMonitoringV3RangeResponse range;
 
     public GoogleMonitoringV3RangeResponse getRange() {

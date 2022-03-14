@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LatencyCriteriaArgs extends io.pulumi.resources.ResourceArgs 
      * Good service is defined to be the count of requests made to this service that return in no more than threshold.
      * 
      */
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Output<String> threshold;
 
     public Output<String> getThreshold() {

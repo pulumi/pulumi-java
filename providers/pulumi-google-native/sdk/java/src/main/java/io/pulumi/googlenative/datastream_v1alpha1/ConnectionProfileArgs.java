@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.ForwardSshTunnelConnectivityArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.GcsProfileArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlProfileArgs;
@@ -22,7 +22,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
 
     public static final ConnectionProfileArgs Empty = new ConnectionProfileArgs();
 
-    @InputImport(name="connectionProfileId", required=true)
+    @Import(name="connectionProfileId", required=true)
       private final Output<String> connectionProfileId;
 
     public Output<String> getConnectionProfileId() {
@@ -33,7 +33,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * Display name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * Forward SSH tunnel connectivity.
      * 
      */
-    @InputImport(name="forwardSshConnectivity")
+    @Import(name="forwardSshConnectivity")
       private final @Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
 
     public Output<ForwardSshTunnelConnectivityArgs> getForwardSshConnectivity() {
@@ -55,7 +55,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * Cloud Storage ConnectionProfile configuration.
      * 
      */
-    @InputImport(name="gcsProfile")
+    @Import(name="gcsProfile")
       private final @Nullable Output<GcsProfileArgs> gcsProfile;
 
     public Output<GcsProfileArgs> getGcsProfile() {
@@ -66,14 +66,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * Labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -84,7 +84,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * MySQL ConnectionProfile configuration.
      * 
      */
-    @InputImport(name="mysqlProfile")
+    @Import(name="mysqlProfile")
       private final @Nullable Output<MysqlProfileArgs> mysqlProfile;
 
     public Output<MysqlProfileArgs> getMysqlProfile() {
@@ -95,7 +95,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * No connectivity option chosen.
      * 
      */
-    @InputImport(name="noConnectivity")
+    @Import(name="noConnectivity")
       private final @Nullable Output<NoConnectivitySettingsArgs> noConnectivity;
 
     public Output<NoConnectivitySettingsArgs> getNoConnectivity() {
@@ -106,7 +106,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * Oracle ConnectionProfile configuration.
      * 
      */
-    @InputImport(name="oracleProfile")
+    @Import(name="oracleProfile")
       private final @Nullable Output<OracleProfileArgs> oracleProfile;
 
     public Output<OracleProfileArgs> getOracleProfile() {
@@ -117,21 +117,21 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * Private connectivity.
      * 
      */
-    @InputImport(name="privateConnectivity")
+    @Import(name="privateConnectivity")
       private final @Nullable Output<PrivateConnectivityArgs> privateConnectivity;
 
     public Output<PrivateConnectivityArgs> getPrivateConnectivity() {
         return this.privateConnectivity == null ? Output.empty() : this.privateConnectivity;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -142,7 +142,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * Static Service IP connectivity.
      * 
      */
-    @InputImport(name="staticServiceIpConnectivity")
+    @Import(name="staticServiceIpConnectivity")
       private final @Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;
 
     public Output<StaticServiceIpConnectivityArgs> getStaticServiceIpConnectivity() {

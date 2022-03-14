@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetSslProxyResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -56,17 +56,17 @@ public final class GetTargetSslProxyResult {
      */
     private final String sslPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetSslProxyResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("sslCertificates") List<String> sslCertificates,
-        @OutputCustomType.Parameter("sslPolicy") String sslPolicy) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("proxyHeader") String proxyHeader,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("sslCertificates") List<String> sslCertificates,
+        @CustomType.Parameter("sslPolicy") String sslPolicy) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

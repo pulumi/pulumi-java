@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.TlsCertificateContextCertificateSource;
 import io.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
@@ -24,7 +24,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
      * 
      */
-    @InputImport(name="certificatePaths")
+    @Import(name="certificatePaths")
       private final @Nullable Output<TlsCertificatePathsArgs> certificatePaths;
 
     public Output<TlsCertificatePathsArgs> getCertificatePaths() {
@@ -35,7 +35,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * Defines how TLS certificates are obtained.
      * 
      */
-    @InputImport(name="certificateSource")
+    @Import(name="certificateSource")
       private final @Nullable Output<TlsCertificateContextCertificateSource> certificateSource;
 
     public Output<TlsCertificateContextCertificateSource> getCertificateSource() {
@@ -46,7 +46,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
      * 
      */
-    @InputImport(name="sdsConfig")
+    @Import(name="sdsConfig")
       private final @Nullable Output<SdsConfigArgs> sdsConfig;
 
     public Output<SdsConfigArgs> getSdsConfig() {

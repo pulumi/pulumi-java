@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1PeriodResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1RenewalSettingsResponse {
     /**
      * If false, the plan will be completed at the end date.
@@ -32,12 +32,12 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
      */
     private final Boolean resizeUnitCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1RenewalSettingsResponse(
-        @OutputCustomType.Parameter("enableRenewal") Boolean enableRenewal,
-        @OutputCustomType.Parameter("paymentCycle") GoogleCloudChannelV1PeriodResponse paymentCycle,
-        @OutputCustomType.Parameter("paymentPlan") String paymentPlan,
-        @OutputCustomType.Parameter("resizeUnitCount") Boolean resizeUnitCount) {
+        @CustomType.Parameter("enableRenewal") Boolean enableRenewal,
+        @CustomType.Parameter("paymentCycle") GoogleCloudChannelV1PeriodResponse paymentCycle,
+        @CustomType.Parameter("paymentPlan") String paymentPlan,
+        @CustomType.Parameter("resizeUnitCount") Boolean resizeUnitCount) {
         this.enableRenewal = enableRenewal;
         this.paymentCycle = paymentCycle;
         this.paymentPlan = paymentPlan;

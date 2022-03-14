@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse {
     /**
      * The ID of the project.
@@ -20,10 +20,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
      */
     private final String repoName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse(
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("repoName") String repoName) {
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("repoName") String repoName) {
         this.project = project;
         this.repoName = repoName;
     }

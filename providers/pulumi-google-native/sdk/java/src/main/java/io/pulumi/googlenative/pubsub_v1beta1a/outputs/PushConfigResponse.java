@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PushConfigResponse {
     /**
      * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
@@ -15,8 +15,8 @@ public final class PushConfigResponse {
      */
     private final String pushEndpoint;
 
-    @OutputCustomType.Constructor
-    private PushConfigResponse(@OutputCustomType.Parameter("pushEndpoint") String pushEndpoint) {
+    @CustomType.Constructor
+    private PushConfigResponse(@CustomType.Parameter("pushEndpoint") String pushEndpoint) {
         this.pushEndpoint = pushEndpoint;
     }
 

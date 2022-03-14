@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStoragePathArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
      * 
      */
-    @InputImport(name="cloudStoragePath")
+    @Import(name="cloudStoragePath")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
 
     public Output<GooglePrivacyDlpV2CloudStoragePathArgs> getCloudStoragePath() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
      * List of words or phrases to search for.
      * 
      */
-    @InputImport(name="wordList")
+    @Import(name="wordList")
       private final @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
     public Output<GooglePrivacyDlpV2WordListArgs> getWordList() {

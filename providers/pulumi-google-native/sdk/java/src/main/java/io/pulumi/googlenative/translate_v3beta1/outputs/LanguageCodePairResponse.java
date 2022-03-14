@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.translate_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LanguageCodePairResponse {
     /**
      * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
@@ -20,10 +20,10 @@ public final class LanguageCodePairResponse {
      */
     private final String targetLanguageCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LanguageCodePairResponse(
-        @OutputCustomType.Parameter("sourceLanguageCode") String sourceLanguageCode,
-        @OutputCustomType.Parameter("targetLanguageCode") String targetLanguageCode) {
+        @CustomType.Parameter("sourceLanguageCode") String sourceLanguageCode,
+        @CustomType.Parameter("targetLanguageCode") String targetLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         this.targetLanguageCode = targetLanguageCode;
     }

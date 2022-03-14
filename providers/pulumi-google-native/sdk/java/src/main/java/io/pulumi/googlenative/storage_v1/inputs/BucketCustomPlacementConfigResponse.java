@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketCustomPlacementConfigResponse extends io.pulumi.resourc
      * The list of regional locations in which data is placed.
      * 
      */
-    @InputImport(name="dataLocations", required=true)
+    @Import(name="dataLocations", required=true)
       private final List<String> dataLocations;
 
     public List<String> getDataLocations() {

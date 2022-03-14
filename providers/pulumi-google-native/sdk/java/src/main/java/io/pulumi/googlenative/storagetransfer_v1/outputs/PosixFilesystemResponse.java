@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PosixFilesystemResponse {
     /**
      * Root directory path to the filesystem.
@@ -15,8 +15,8 @@ public final class PosixFilesystemResponse {
      */
     private final String rootDirectory;
 
-    @OutputCustomType.Constructor
-    private PosixFilesystemResponse(@OutputCustomType.Parameter("rootDirectory") String rootDirectory) {
+    @CustomType.Constructor
+    private PosixFilesystemResponse(@CustomType.Parameter("rootDirectory") String rootDirectory) {
         this.rootDirectory = rootDirectory;
     }
 

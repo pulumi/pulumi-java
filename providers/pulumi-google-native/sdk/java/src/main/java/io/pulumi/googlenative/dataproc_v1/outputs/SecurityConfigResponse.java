@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.IdentityConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.KerberosConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityConfigResponse {
     /**
      * Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
@@ -21,10 +21,10 @@ public final class SecurityConfigResponse {
      */
     private final KerberosConfigResponse kerberosConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityConfigResponse(
-        @OutputCustomType.Parameter("identityConfig") IdentityConfigResponse identityConfig,
-        @OutputCustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig) {
+        @CustomType.Parameter("identityConfig") IdentityConfigResponse identityConfig,
+        @CustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig) {
         this.identityConfig = identityConfig;
         this.kerberosConfig = kerberosConfig;
     }

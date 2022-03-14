@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      * A list of phase match rules that are included in this group.
      * 
      */
-    @InputImport(name="phraseMatchRules", required=true)
+    @Import(name="phraseMatchRules", required=true)
       private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
 
     public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> getPhraseMatchRules() {
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      * The type of this phrase match rule group.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

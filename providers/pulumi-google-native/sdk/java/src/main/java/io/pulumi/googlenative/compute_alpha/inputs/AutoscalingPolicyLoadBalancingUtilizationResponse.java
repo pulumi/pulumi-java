@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends io.
      * Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.
      * 
      */
-    @InputImport(name="utilizationTarget", required=true)
+    @Import(name="utilizationTarget", required=true)
       private final Double utilizationTarget;
 
     public Double getUtilizationTarget() {

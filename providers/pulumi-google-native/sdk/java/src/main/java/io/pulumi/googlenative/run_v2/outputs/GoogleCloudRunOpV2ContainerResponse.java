@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ContainerPortResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2EnvVarResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ResourceRequirementsResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2ContainerResponse {
     /**
      * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
@@ -55,16 +55,16 @@ public final class GoogleCloudRunOpV2ContainerResponse {
      */
     private final List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2ContainerResponse(
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("command") List<String> command,
-        @OutputCustomType.Parameter("env") List<GoogleCloudRunOpV2EnvVarResponse> env,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ports") List<GoogleCloudRunOpV2ContainerPortResponse> ports,
-        @OutputCustomType.Parameter("resources") GoogleCloudRunOpV2ResourceRequirementsResponse resources,
-        @OutputCustomType.Parameter("volumeMounts") List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("command") List<String> command,
+        @CustomType.Parameter("env") List<GoogleCloudRunOpV2EnvVarResponse> env,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ports") List<GoogleCloudRunOpV2ContainerPortResponse> ports,
+        @CustomType.Parameter("resources") GoogleCloudRunOpV2ResourceRequirementsResponse resources,
+        @CustomType.Parameter("volumeMounts") List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
         this.args = args;
         this.command = command;
         this.env = env;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
      * The priority for this warning.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final String priority;
 
     public String getPriority() {
@@ -31,7 +31,7 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
      * Explanation of the warning generated.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final String text;
 
     public String getText() {

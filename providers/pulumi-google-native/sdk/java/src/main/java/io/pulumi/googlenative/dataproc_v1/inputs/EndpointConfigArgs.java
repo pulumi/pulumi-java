@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
      * 
      */
-    @InputImport(name="enableHttpPortAccess")
+    @Import(name="enableHttpPortAccess")
       private final @Nullable Output<Boolean> enableHttpPortAccess;
 
     public Output<Boolean> getEnableHttpPortAccess() {

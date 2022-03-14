@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageImageResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse {
     /**
      * Optional. Description of the carousel item. Maximum of four lines of text.
@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("footer") String footer,
-        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        @OutputCustomType.Parameter("openUriAction") GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("footer") String footer,
+        @CustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @CustomType.Parameter("openUriAction") GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction,
+        @CustomType.Parameter("title") String title) {
         this.description = description;
         this.footer = footer;
         this.image = image;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceResponse;
 import java.lang.Object;
@@ -20,7 +20,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
      * [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
      * 
      */
-    @InputImport(name="createDisposition", required=true)
+    @Import(name="createDisposition", required=true)
       private final String createDisposition;
 
     public String getCreateDisposition() {
@@ -31,7 +31,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
      * Custom encryption configuration (e.g., Cloud KMS keys).
      * 
      */
-    @InputImport(name="destinationEncryptionConfiguration", required=true)
+    @Import(name="destinationEncryptionConfiguration", required=true)
       private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
     public EncryptionConfigurationResponse getDestinationEncryptionConfiguration() {
@@ -42,7 +42,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
      * [Optional] The time when the destination table expires. Expired tables will be deleted and their storage reclaimed.
      * 
      */
-    @InputImport(name="destinationExpirationTime", required=true)
+    @Import(name="destinationExpirationTime", required=true)
       private final Object destinationExpirationTime;
 
     public Object getDestinationExpirationTime() {
@@ -53,7 +53,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
      * [Required] The destination table
      * 
      */
-    @InputImport(name="destinationTable", required=true)
+    @Import(name="destinationTable", required=true)
       private final TableReferenceResponse destinationTable;
 
     public TableReferenceResponse getDestinationTable() {
@@ -64,7 +64,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
      * [Optional] Supported operation types in table copy job.
      * 
      */
-    @InputImport(name="operationType", required=true)
+    @Import(name="operationType", required=true)
       private final String operationType;
 
     public String getOperationType() {
@@ -75,7 +75,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
      * [Pick one] Source table to copy.
      * 
      */
-    @InputImport(name="sourceTable", required=true)
+    @Import(name="sourceTable", required=true)
       private final TableReferenceResponse sourceTable;
 
     public TableReferenceResponse getSourceTable() {
@@ -86,7 +86,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
      * [Pick one] Source tables to copy.
      * 
      */
-    @InputImport(name="sourceTables", required=true)
+    @Import(name="sourceTables", required=true)
       private final List<TableReferenceResponse> sourceTables;
 
     public List<TableReferenceResponse> getSourceTables() {
@@ -97,7 +97,7 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
      * [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
      * 
      */
-    @InputImport(name="writeDisposition", required=true)
+    @Import(name="writeDisposition", required=true)
       private final String writeDisposition;
 
     public String getWriteDisposition() {

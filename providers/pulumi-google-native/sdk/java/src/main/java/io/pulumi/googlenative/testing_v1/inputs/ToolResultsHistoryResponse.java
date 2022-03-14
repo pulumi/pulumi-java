@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
      * A tool results history ID.
      * 
      */
-    @InputImport(name="historyId", required=true)
+    @Import(name="historyId", required=true)
       private final String historyId;
 
     public String getHistoryId() {
@@ -31,7 +31,7 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
      * The cloud project that owns the tool results history.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {

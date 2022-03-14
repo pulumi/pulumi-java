@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.AppArgs;
@@ -24,7 +24,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * List of API products associated with the developer app.
      * 
      */
-    @OutputExport(name="apiProducts", type=List.class, parameters={String.class})
+    @Export(name="apiProducts", type=List.class, parameters={String.class})
     private Output<List<String>> apiProducts;
 
     /**
@@ -38,7 +38,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Developer app family.
      * 
      */
-    @OutputExport(name="appFamily", type=String.class, parameters={})
+    @Export(name="appFamily", type=String.class, parameters={})
     private Output<String> appFamily;
 
     /**
@@ -52,7 +52,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * ID of the developer app.
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -66,7 +66,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * List of attributes for the developer app.
      * 
      */
-    @OutputExport(name="attributes", type=List.class, parameters={GoogleCloudApigeeV1AttributeResponse.class})
+    @Export(name="attributes", type=List.class, parameters={GoogleCloudApigeeV1AttributeResponse.class})
     private Output<List<GoogleCloudApigeeV1AttributeResponse>> attributes;
 
     /**
@@ -80,7 +80,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Callback URL used by OAuth 2.0 authorization servers to communicate authorization codes back to developer apps.
      * 
      */
-    @OutputExport(name="callbackUrl", type=String.class, parameters={})
+    @Export(name="callbackUrl", type=String.class, parameters={})
     private Output<String> callbackUrl;
 
     /**
@@ -94,7 +94,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Time the developer app was created in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -108,7 +108,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Set of credentials for the developer app consisting of the consumer key/secret pairs associated with the API products.
      * 
      */
-    @OutputExport(name="credentials", type=List.class, parameters={GoogleCloudApigeeV1CredentialResponse.class})
+    @Export(name="credentials", type=List.class, parameters={GoogleCloudApigeeV1CredentialResponse.class})
     private Output<List<GoogleCloudApigeeV1CredentialResponse>> credentials;
 
     /**
@@ -122,7 +122,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * ID of the developer.
      * 
      */
-    @OutputExport(name="developerId", type=String.class, parameters={})
+    @Export(name="developerId", type=String.class, parameters={})
     private Output<String> developerId;
 
     /**
@@ -136,7 +136,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Expiration time, in milliseconds, for the consumer key that is generated for the developer app. If not set or left to the default value of `-1`, the API key never expires. The expiration time can't be updated after it is set.
      * 
      */
-    @OutputExport(name="keyExpiresIn", type=String.class, parameters={})
+    @Export(name="keyExpiresIn", type=String.class, parameters={})
     private Output<String> keyExpiresIn;
 
     /**
@@ -150,7 +150,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Time the developer app was modified in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -164,7 +164,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Name of the developer app.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -178,7 +178,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Scopes to apply to the developer app. The specified scopes must already exist for the API product that you associate with the developer app.
      * 
      */
-    @OutputExport(name="scopes", type=List.class, parameters={String.class})
+    @Export(name="scopes", type=List.class, parameters={String.class})
     private Output<List<String>> scopes;
 
     /**
@@ -192,7 +192,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Status of the credential. Valid values include `approved` or `revoked`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

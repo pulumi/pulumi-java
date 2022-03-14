@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.ColorResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.CropResponse;
@@ -25,7 +25,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * Audio preprocessing configuration.
      * 
      */
-    @InputImport(name="audio", required=true)
+    @Import(name="audio", required=true)
       private final AudioResponse audio;
 
     public AudioResponse getAudio() {
@@ -36,7 +36,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * Color preprocessing configuration.
      * 
      */
-    @InputImport(name="color", required=true)
+    @Import(name="color", required=true)
       private final ColorResponse color;
 
     public ColorResponse getColor() {
@@ -47,7 +47,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * Specify the video cropping configuration.
      * 
      */
-    @InputImport(name="crop", required=true)
+    @Import(name="crop", required=true)
       private final CropResponse crop;
 
     public CropResponse getCrop() {
@@ -58,7 +58,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * Deblock preprocessing configuration.
      * 
      */
-    @InputImport(name="deblock", required=true)
+    @Import(name="deblock", required=true)
       private final DeblockResponse deblock;
 
     public DeblockResponse getDeblock() {
@@ -69,7 +69,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * Denoise preprocessing configuration.
      * 
      */
-    @InputImport(name="denoise", required=true)
+    @Import(name="denoise", required=true)
       private final DenoiseResponse denoise;
 
     public DenoiseResponse getDenoise() {
@@ -80,7 +80,7 @@ public final class PreprocessingConfigResponse extends io.pulumi.resources.Invok
      * Specify the video pad filter configuration.
      * 
      */
-    @InputImport(name="pad", required=true)
+    @Import(name="pad", required=true)
       private final PadResponse pad;
 
     public PadResponse getPad() {

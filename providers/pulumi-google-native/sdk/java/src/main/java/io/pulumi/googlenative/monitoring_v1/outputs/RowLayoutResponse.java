@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.RowResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RowLayoutResponse {
     /**
      * The rows of content to display.
@@ -16,8 +16,8 @@ public final class RowLayoutResponse {
      */
     private final List<RowResponse> rows;
 
-    @OutputCustomType.Constructor
-    private RowLayoutResponse(@OutputCustomType.Parameter("rows") List<RowResponse> rows) {
+    @CustomType.Constructor
+    private RowLayoutResponse(@CustomType.Parameter("rows") List<RowResponse> rows) {
         this.rows = rows;
     }
 

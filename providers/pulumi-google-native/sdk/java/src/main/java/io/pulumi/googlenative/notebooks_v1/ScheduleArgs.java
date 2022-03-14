@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.enums.ScheduleState;
 import io.pulumi.googlenative.notebooks_v1.inputs.ExecutionTemplateArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
      * 
      */
-    @InputImport(name="cronSchedule")
+    @Import(name="cronSchedule")
       private final @Nullable Output<String> cronSchedule;
 
     public Output<String> getCronSchedule() {
@@ -31,7 +31,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * A brief description of this environment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,35 +42,35 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Notebook Execution Template corresponding to this schedule.
      * 
      */
-    @InputImport(name="executionTemplate")
+    @Import(name="executionTemplate")
       private final @Nullable Output<ExecutionTemplateArgs> executionTemplate;
 
     public Output<ExecutionTemplateArgs> getExecutionTemplate() {
         return this.executionTemplate == null ? Output.empty() : this.executionTemplate;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="scheduleId", required=true)
+    @Import(name="scheduleId", required=true)
       private final Output<String> scheduleId;
 
     public Output<String> getScheduleId() {
         return this.scheduleId;
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<ScheduleState> state;
 
     public Output<ScheduleState> getState() {
@@ -81,7 +81,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

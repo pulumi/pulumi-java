@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.LocationResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstallationResponse {
     /**
      * All of the places within the filesystem versions of this package have been found.
@@ -22,10 +22,10 @@ public final class InstallationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstallationResponse(
-        @OutputCustomType.Parameter("location") List<LocationResponse> location,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("location") List<LocationResponse> location,
+        @CustomType.Parameter("name") String name) {
         this.location = location;
         this.name = name;
     }

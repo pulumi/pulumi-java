@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1beta1.enums.ManagementSettingsTransferLockState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
      * Controls whether the domain can be transferred to another registrar.
      * 
      */
-    @InputImport(name="transferLockState")
+    @Import(name="transferLockState")
       private final @Nullable Output<ManagementSettingsTransferLockState> transferLockState;
 
     public Output<ManagementSettingsTransferLockState> getTransferLockState() {

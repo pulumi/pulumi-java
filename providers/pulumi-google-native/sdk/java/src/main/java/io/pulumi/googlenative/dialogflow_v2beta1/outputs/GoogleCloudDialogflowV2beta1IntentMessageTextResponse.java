@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse {
     /**
      * Optional. The collection of the agent's responses.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse {
      */
     private final List<String> text;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1IntentMessageTextResponse(@OutputCustomType.Parameter("text") List<String> text) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageTextResponse(@CustomType.Parameter("text") List<String> text) {
         this.text = text;
     }
 

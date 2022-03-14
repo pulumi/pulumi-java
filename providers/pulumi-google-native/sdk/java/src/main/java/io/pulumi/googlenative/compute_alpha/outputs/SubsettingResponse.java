@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubsettingResponse {
     private final String policy;
     /**
@@ -17,10 +17,10 @@ public final class SubsettingResponse {
      */
     private final Integer subsetSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubsettingResponse(
-        @OutputCustomType.Parameter("policy") String policy,
-        @OutputCustomType.Parameter("subsetSize") Integer subsetSize) {
+        @CustomType.Parameter("policy") String policy,
+        @CustomType.Parameter("subsetSize") Integer subsetSize) {
         this.policy = policy;
         this.subsetSize = subsetSize;
     }

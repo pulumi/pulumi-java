@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1ColumnSchemaResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
     /**
      * Schema of columns. A maximum of 10,000 columns and sub-columns can be specified.
@@ -16,8 +16,8 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
      */
     private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatacatalogV1beta1SchemaResponse(@OutputCustomType.Parameter("columns") List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
+    @CustomType.Constructor
+    private GoogleCloudDatacatalogV1beta1SchemaResponse(@CustomType.Parameter("columns") List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
         this.columns = columns;
     }
 

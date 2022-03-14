@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.BasicSliResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliResponse;
 import java.lang.Double;
@@ -22,7 +22,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
      * BasicSli to evaluate to judge window quality.
      * 
      */
-    @InputImport(name="basicSliPerformance", required=true)
+    @Import(name="basicSliPerformance", required=true)
       private final BasicSliResponse basicSliPerformance;
 
     public BasicSliResponse getBasicSliPerformance() {
@@ -33,7 +33,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
      * RequestBasedSli to evaluate to judge window quality.
      * 
      */
-    @InputImport(name="performance", required=true)
+    @Import(name="performance", required=true)
       private final RequestBasedSliResponse performance;
 
     public RequestBasedSliResponse getPerformance() {
@@ -44,7 +44,7 @@ public final class PerformanceThresholdResponse extends io.pulumi.resources.Invo
      * If window performance >= threshold, the window is counted as good.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Double threshold;
 
     public Double getThreshold() {

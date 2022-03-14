@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse {
     /**
      * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to true, run once a day.
@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse {
      */
     private final List<String> testCases;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse(
-        @OutputCustomType.Parameter("enableContinuousRun") Boolean enableContinuousRun,
-        @OutputCustomType.Parameter("enablePredeploymentRun") Boolean enablePredeploymentRun,
-        @OutputCustomType.Parameter("testCases") List<String> testCases) {
+        @CustomType.Parameter("enableContinuousRun") Boolean enableContinuousRun,
+        @CustomType.Parameter("enablePredeploymentRun") Boolean enablePredeploymentRun,
+        @CustomType.Parameter("testCases") List<String> testCases) {
         this.enableContinuousRun = enableContinuousRun;
         this.enablePredeploymentRun = enablePredeploymentRun;
         this.testCases = testCases;

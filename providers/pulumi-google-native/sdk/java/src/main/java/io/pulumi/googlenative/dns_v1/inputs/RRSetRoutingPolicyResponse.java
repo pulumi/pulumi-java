@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyGeoPolicyResponse;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyWrrPolicyResponse;
 import java.lang.String;
@@ -18,21 +18,21 @@ public final class RRSetRoutingPolicyResponse extends io.pulumi.resources.Invoke
 
     public static final RRSetRoutingPolicyResponse Empty = new RRSetRoutingPolicyResponse();
 
-    @InputImport(name="geo", required=true)
+    @Import(name="geo", required=true)
       private final RRSetRoutingPolicyGeoPolicyResponse geo;
 
     public RRSetRoutingPolicyGeoPolicyResponse getGeo() {
         return this.geo;
     }
 
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
         return this.kind;
     }
 
-    @InputImport(name="wrr", required=true)
+    @Import(name="wrr", required=true)
       private final RRSetRoutingPolicyWrrPolicyResponse wrr;
 
     public RRSetRoutingPolicyWrrPolicyResponse getWrr() {

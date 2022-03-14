@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.MetricRuleResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.QuotaLimitResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QuotaResponse {
     /**
      * List of `QuotaLimit` definitions for the service.
@@ -22,10 +22,10 @@ public final class QuotaResponse {
      */
     private final List<MetricRuleResponse> metricRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuotaResponse(
-        @OutputCustomType.Parameter("limits") List<QuotaLimitResponse> limits,
-        @OutputCustomType.Parameter("metricRules") List<MetricRuleResponse> metricRules) {
+        @CustomType.Parameter("limits") List<QuotaLimitResponse> limits,
+        @CustomType.Parameter("metricRules") List<MetricRuleResponse> metricRules) {
         this.limits = limits;
         this.metricRules = metricRules;
     }

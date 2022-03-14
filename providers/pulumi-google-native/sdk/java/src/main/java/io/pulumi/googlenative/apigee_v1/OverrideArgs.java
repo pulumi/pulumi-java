@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TraceSamplingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the API proxy that will have its trace configuration overridden.
      * 
      */
-    @InputImport(name="apiProxy")
+    @Import(name="apiProxy")
       private final @Nullable Output<String> apiProxy;
 
     public Output<String> getApiProxy() {
         return this.apiProxy == null ? Output.empty() : this.apiProxy;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -37,14 +37,14 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the trace configuration override specified as a system-generated UUID.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -55,7 +55,7 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
      * Trace configuration to override.
      * 
      */
-    @InputImport(name="samplingConfig")
+    @Import(name="samplingConfig")
       private final @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
 
     public Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> getSamplingConfig() {

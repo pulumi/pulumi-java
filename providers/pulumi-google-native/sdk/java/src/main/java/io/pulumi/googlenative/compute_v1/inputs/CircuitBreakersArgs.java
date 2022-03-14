@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="maxConnections")
+    @Import(name="maxConnections")
       private final @Nullable Output<Integer> maxConnections;
 
     public Output<Integer> getMaxConnections() {
@@ -33,7 +33,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="maxPendingRequests")
+    @Import(name="maxPendingRequests")
       private final @Nullable Output<Integer> maxPendingRequests;
 
     public Output<Integer> getMaxPendingRequests() {
@@ -44,7 +44,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
      * 
      */
-    @InputImport(name="maxRequests")
+    @Import(name="maxRequests")
       private final @Nullable Output<Integer> maxRequests;
 
     public Output<Integer> getMaxRequests() {
@@ -55,7 +55,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="maxRequestsPerConnection")
+    @Import(name="maxRequestsPerConnection")
       private final @Nullable Output<Integer> maxRequestsPerConnection;
 
     public Output<Integer> getMaxRequestsPerConnection() {
@@ -66,7 +66,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="maxRetries")
+    @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {

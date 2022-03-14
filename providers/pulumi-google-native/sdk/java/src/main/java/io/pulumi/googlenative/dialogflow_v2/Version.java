@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.VersionArgs;
@@ -23,7 +23,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * Optional. The developer-provided description of this version.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -51,7 +51,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * The unique identifier of this agent version. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * The status of this version. This field is read-only and cannot be set by create and update methods.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -79,7 +79,7 @@ public class Version extends io.pulumi.resources.CustomResource {
      * The sequential number of this version. This field is read-only which means it cannot be set by create and update methods.
      * 
      */
-    @OutputExport(name="versionNumber", type=Integer.class, parameters={})
+    @Export(name="versionNumber", type=Integer.class, parameters={})
     private Output<Integer> versionNumber;
 
     /**

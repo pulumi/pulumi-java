@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.EnvgroupAttachmentArgs;
@@ -21,7 +21,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * The time at which the environment group attachment was created as milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -35,7 +35,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * ID of the attached environment.
      * 
      */
-    @OutputExport(name="environment", type=String.class, parameters={})
+    @Export(name="environment", type=String.class, parameters={})
     private Output<String> environment;
 
     /**
@@ -49,7 +49,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * ID of the environment group attachment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

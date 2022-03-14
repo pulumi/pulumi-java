@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EventHandlerResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3FormResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3FulfillmentResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPageResult {
     /**
      * The human-readable name of the page, unique within the agent.
@@ -50,15 +50,15 @@ public final class GetPageResult {
      */
     private final List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPageResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("entryFulfillment") GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment,
-        @OutputCustomType.Parameter("eventHandlers") List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers,
-        @OutputCustomType.Parameter("form") GoogleCloudDialogflowCxV3FormResponse form,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("transitionRouteGroups") List<String> transitionRouteGroups,
-        @OutputCustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("entryFulfillment") GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment,
+        @CustomType.Parameter("eventHandlers") List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers,
+        @CustomType.Parameter("form") GoogleCloudDialogflowCxV3FormResponse form,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("transitionRouteGroups") List<String> transitionRouteGroups,
+        @CustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
         this.displayName = displayName;
         this.entryFulfillment = entryFulfillment;
         this.eventHandlers = eventHandlers;

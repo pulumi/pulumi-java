@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.LogMatchResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricAbsenceResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricThresholdResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.monitoring_v3.outputs.MonitoringQueryLanguageCondi
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConditionResponse {
     /**
      * A condition that checks that a time series continues to receive new data points.
@@ -44,14 +44,14 @@ public final class ConditionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConditionResponse(
-        @OutputCustomType.Parameter("conditionAbsent") MetricAbsenceResponse conditionAbsent,
-        @OutputCustomType.Parameter("conditionMatchedLog") LogMatchResponse conditionMatchedLog,
-        @OutputCustomType.Parameter("conditionMonitoringQueryLanguage") MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage,
-        @OutputCustomType.Parameter("conditionThreshold") MetricThresholdResponse conditionThreshold,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("conditionAbsent") MetricAbsenceResponse conditionAbsent,
+        @CustomType.Parameter("conditionMatchedLog") LogMatchResponse conditionMatchedLog,
+        @CustomType.Parameter("conditionMonitoringQueryLanguage") MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage,
+        @CustomType.Parameter("conditionThreshold") MetricThresholdResponse conditionThreshold,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name) {
         this.conditionAbsent = conditionAbsent;
         this.conditionMatchedLog = conditionMatchedLog;
         this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;

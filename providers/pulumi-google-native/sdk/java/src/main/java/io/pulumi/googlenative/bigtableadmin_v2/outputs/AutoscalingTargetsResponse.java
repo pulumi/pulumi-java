@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingTargetsResponse {
     /**
      * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
@@ -15,8 +15,8 @@ public final class AutoscalingTargetsResponse {
      */
     private final Integer cpuUtilizationPercent;
 
-    @OutputCustomType.Constructor
-    private AutoscalingTargetsResponse(@OutputCustomType.Parameter("cpuUtilizationPercent") Integer cpuUtilizationPercent) {
+    @CustomType.Constructor
+    private AutoscalingTargetsResponse(@CustomType.Parameter("cpuUtilizationPercent") Integer cpuUtilizationPercent) {
         this.cpuUtilizationPercent = cpuUtilizationPercent;
     }
 

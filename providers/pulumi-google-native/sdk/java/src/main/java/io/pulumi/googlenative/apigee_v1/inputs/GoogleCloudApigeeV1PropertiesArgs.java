@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertyArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
      * List of all properties in the object
      * 
      */
-    @InputImport(name="property")
+    @Import(name="property")
       private final @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
 
     public Output<List<GoogleCloudApigeeV1PropertyArgs>> getProperty() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
      * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
-    @InputImport(name="failureCondition")
+    @Import(name="failureCondition")
       private final @Nullable Output<String> failureCondition;
 
     public Output<String> getFailureCondition() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
      * The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
-    @InputImport(name="rolloutCondition")
+    @Import(name="rolloutCondition")
       private final @Nullable Output<String> rolloutCondition;
 
     public Output<String> getRolloutCondition() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
      * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
      * 
      */
-    @InputImport(name="rolloutSteps")
+    @Import(name="rolloutSteps")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> rolloutSteps;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> getRolloutSteps() {

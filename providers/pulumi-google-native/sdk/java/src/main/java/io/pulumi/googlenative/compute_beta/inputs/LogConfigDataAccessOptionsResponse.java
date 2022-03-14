@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LogConfigDataAccessOptionsResponse extends io.pulumi.resource
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="logMode", required=true)
+    @Import(name="logMode", required=true)
       private final String logMode;
 
     public String getLogMode() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ParameterValidationResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TemplateParameterResponse {
     /**
      * Optional. Brief description of the parameter. Must not exceed 1024 characters.
@@ -32,12 +32,12 @@ public final class TemplateParameterResponse {
      */
     private final ParameterValidationResponse validation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateParameterResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fields") List<String> fields,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("validation") ParameterValidationResponse validation) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fields") List<String> fields,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("validation") ParameterValidationResponse validation) {
         this.description = description;
         this.fields = fields;
         this.name = name;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIngressRuleResult {
     /**
      * The action to take on matched requests.
@@ -31,12 +31,12 @@ public final class GetIngressRuleResult {
      */
     private final String sourceRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIngressRuleResult(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("sourceRange") String sourceRange) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("sourceRange") String sourceRange) {
         this.action = action;
         this.description = description;
         this.priority = priority;

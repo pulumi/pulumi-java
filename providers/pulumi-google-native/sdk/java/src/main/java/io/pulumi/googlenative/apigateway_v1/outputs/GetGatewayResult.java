@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGatewayResult {
     /**
      * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
@@ -51,16 +51,16 @@ public final class GetGatewayResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGatewayResult(
-        @OutputCustomType.Parameter("apiConfig") String apiConfig,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("defaultHostname") String defaultHostname,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("apiConfig") String apiConfig,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("defaultHostname") String defaultHostname,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.apiConfig = apiConfig;
         this.createTime = createTime;
         this.defaultHostname = defaultHostname;

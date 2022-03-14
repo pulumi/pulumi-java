@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketVersioningResponse {
     /**
      * While set to true, versioning is fully enabled for this bucket.
@@ -15,8 +15,8 @@ public final class BucketVersioningResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private BucketVersioningResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private BucketVersioningResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

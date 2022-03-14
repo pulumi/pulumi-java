@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.IosAppInfoResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.IosRoboTestResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.toolresults_v1beta3.outputs.IosTestLoopResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.IosXcTestResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosTestResponse {
     /**
      * Information about the application under test.
@@ -39,13 +39,13 @@ public final class IosTestResponse {
      */
     private final DurationResponse testTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IosTestResponse(
-        @OutputCustomType.Parameter("iosAppInfo") IosAppInfoResponse iosAppInfo,
-        @OutputCustomType.Parameter("iosRoboTest") IosRoboTestResponse iosRoboTest,
-        @OutputCustomType.Parameter("iosTestLoop") IosTestLoopResponse iosTestLoop,
-        @OutputCustomType.Parameter("iosXcTest") IosXcTestResponse iosXcTest,
-        @OutputCustomType.Parameter("testTimeout") DurationResponse testTimeout) {
+        @CustomType.Parameter("iosAppInfo") IosAppInfoResponse iosAppInfo,
+        @CustomType.Parameter("iosRoboTest") IosRoboTestResponse iosRoboTest,
+        @CustomType.Parameter("iosTestLoop") IosTestLoopResponse iosTestLoop,
+        @CustomType.Parameter("iosXcTest") IosXcTestResponse iosXcTest,
+        @CustomType.Parameter("testTimeout") DurationResponse testTimeout) {
         this.iosAppInfo = iosAppInfo;
         this.iosRoboTest = iosRoboTest;
         this.iosTestLoop = iosTestLoop;

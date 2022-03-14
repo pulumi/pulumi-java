@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.CycleStepResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationCycleResponse {
     /**
      * The time the replication cycle has ended.
@@ -43,14 +43,14 @@ public final class ReplicationCycleResponse {
      */
     private final String totalPauseDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationCycleResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("progress") Integer progress,
-        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("steps") List<CycleStepResponse> steps,
-        @OutputCustomType.Parameter("totalPauseDuration") String totalPauseDuration) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("progress") Integer progress,
+        @CustomType.Parameter("progressPercent") Integer progressPercent,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("steps") List<CycleStepResponse> steps,
+        @CustomType.Parameter("totalPauseDuration") String totalPauseDuration) {
         this.endTime = endTime;
         this.progress = progress;
         this.progressPercent = progressPercent;

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AptRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.GooRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.YumRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.ZypperRepositoryResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageRepositoryResponse {
     /**
      * An Apt Repository.
@@ -33,12 +33,12 @@ public final class PackageRepositoryResponse {
      */
     private final ZypperRepositoryResponse zypper;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageRepositoryResponse(
-        @OutputCustomType.Parameter("apt") AptRepositoryResponse apt,
-        @OutputCustomType.Parameter("goo") GooRepositoryResponse goo,
-        @OutputCustomType.Parameter("yum") YumRepositoryResponse yum,
-        @OutputCustomType.Parameter("zypper") ZypperRepositoryResponse zypper) {
+        @CustomType.Parameter("apt") AptRepositoryResponse apt,
+        @CustomType.Parameter("goo") GooRepositoryResponse goo,
+        @CustomType.Parameter("yum") YumRepositoryResponse yum,
+        @CustomType.Parameter("zypper") ZypperRepositoryResponse zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;

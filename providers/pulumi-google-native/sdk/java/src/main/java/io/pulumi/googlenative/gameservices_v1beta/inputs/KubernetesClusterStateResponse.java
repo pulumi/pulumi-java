@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * The version of Agones currently installed in the registered Kubernetes cluster.
      * 
      */
-    @InputImport(name="agonesVersionInstalled", required=true)
+    @Import(name="agonesVersionInstalled", required=true)
       private final String agonesVersionInstalled;
 
     public String getAgonesVersionInstalled() {
@@ -31,7 +31,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * The version of Agones that is targeted to be installed in the cluster.
      * 
      */
-    @InputImport(name="agonesVersionTargeted", required=true)
+    @Import(name="agonesVersionTargeted", required=true)
       private final String agonesVersionTargeted;
 
     public String getAgonesVersionTargeted() {
@@ -42,7 +42,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * The state for the installed versions of Agones/Kubernetes.
      * 
      */
-    @InputImport(name="installationState", required=true)
+    @Import(name="installationState", required=true)
       private final String installationState;
 
     public String getInstallationState() {
@@ -53,7 +53,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).
      * 
      */
-    @InputImport(name="kubernetesVersionInstalled", required=true)
+    @Import(name="kubernetesVersionInstalled", required=true)
       private final String kubernetesVersionInstalled;
 
     public String getKubernetesVersionInstalled() {
@@ -64,7 +64,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
      * 
      */
-    @InputImport(name="provider", required=true)
+    @Import(name="provider", required=true)
       private final String provider;
 
     public String getProvider() {
@@ -75,7 +75,7 @@ public final class KubernetesClusterStateResponse extends io.pulumi.resources.In
      * The detailed error message for the installed versions of Agones/Kubernetes.
      * 
      */
-    @InputImport(name="versionInstalledErrorMessage", required=true)
+    @Import(name="versionInstalledErrorMessage", required=true)
       private final String versionInstalledErrorMessage;
 
     public String getVersionInstalledErrorMessage() {

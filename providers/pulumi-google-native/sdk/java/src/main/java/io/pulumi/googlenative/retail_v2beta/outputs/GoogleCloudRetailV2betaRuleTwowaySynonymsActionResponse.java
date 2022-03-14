@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse {
     /**
      * Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
@@ -16,8 +16,8 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse {
      */
     private final List<String> synonyms;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(@OutputCustomType.Parameter("synonyms") List<String> synonyms) {
+    @CustomType.Constructor
+    private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(@CustomType.Parameter("synonyms") List<String> synonyms) {
         this.synonyms = synonyms;
     }
 

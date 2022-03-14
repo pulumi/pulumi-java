@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.TargetServerArgs;
@@ -24,7 +24,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * Optional. A human-readable description of this TargetServer.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -38,7 +38,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
      * 
      */
-    @OutputExport(name="host", type=String.class, parameters={})
+    @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
@@ -52,7 +52,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
     /**
@@ -66,7 +66,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * The resource id of this target server. Values must match the regular expression
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -94,7 +94,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * Immutable. The protocol used by this TargetServer.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -108,7 +108,7 @@ public class TargetServer extends io.pulumi.resources.CustomResource {
      * Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
      * 
      */
-    @OutputExport(name="sSLInfo", type=GoogleCloudApigeeV1TlsInfoResponse.class, parameters={})
+    @Export(name="sSLInfo", type=GoogleCloudApigeeV1TlsInfoResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1TlsInfoResponse> sSLInfo;
 
     /**

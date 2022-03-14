@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
     /**
      * Set if the entry is starred; unset otherwise.
@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
      */
     private final Boolean starred;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1PersonalDetailsResponse(
-        @OutputCustomType.Parameter("starTime") String starTime,
-        @OutputCustomType.Parameter("starred") Boolean starred) {
+        @CustomType.Parameter("starTime") String starTime,
+        @CustomType.Parameter("starred") Boolean starred) {
         this.starTime = starTime;
         this.starred = starred;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,21 +16,21 @@ public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.Inv
 
     public static final BasicPerfSampleSeriesResponse Empty = new BasicPerfSampleSeriesResponse();
 
-    @InputImport(name="perfMetricType", required=true)
+    @Import(name="perfMetricType", required=true)
       private final String perfMetricType;
 
     public String getPerfMetricType() {
         return this.perfMetricType;
     }
 
-    @InputImport(name="perfUnit", required=true)
+    @Import(name="perfUnit", required=true)
       private final String perfUnit;
 
     public String getPerfUnit() {
         return this.perfUnit;
     }
 
-    @InputImport(name="sampleSeriesLabel", required=true)
+    @Import(name="sampleSeriesLabel", required=true)
       private final String sampleSeriesLabel;
 
     public String getSampleSeriesLabel() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.RepoSourceResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceManifestResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceResponse;
@@ -22,7 +22,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * If provided, get the source from this location in a Cloud Source Repository.
      * 
      */
-    @InputImport(name="repoSource", required=true)
+    @Import(name="repoSource", required=true)
       private final RepoSourceResponse repoSource;
 
     public RepoSourceResponse getRepoSource() {
@@ -33,7 +33,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * If provided, get the source from this location in Google Cloud Storage.
      * 
      */
-    @InputImport(name="storageSource", required=true)
+    @Import(name="storageSource", required=true)
       private final StorageSourceResponse storageSource;
 
     public StorageSourceResponse getStorageSource() {
@@ -44,7 +44,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
      * 
      */
-    @InputImport(name="storageSourceManifest", required=true)
+    @Import(name="storageSourceManifest", required=true)
       private final StorageSourceManifestResponse storageSourceManifest;
 
     public StorageSourceManifestResponse getStorageSourceManifest() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkservices_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkservices_v1.outputs.EndpointMatcherMetadataLabelMatcherResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointMatcherResponse {
     /**
      * The matcher is based on node metadata presented by xDS clients.
@@ -15,8 +15,8 @@ public final class EndpointMatcherResponse {
      */
     private final EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher;
 
-    @OutputCustomType.Constructor
-    private EndpointMatcherResponse(@OutputCustomType.Parameter("metadataLabelMatcher") EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
+    @CustomType.Constructor
+    private EndpointMatcherResponse(@CustomType.Parameter("metadataLabelMatcher") EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
         this.metadataLabelMatcher = metadataLabelMatcher;
     }
 

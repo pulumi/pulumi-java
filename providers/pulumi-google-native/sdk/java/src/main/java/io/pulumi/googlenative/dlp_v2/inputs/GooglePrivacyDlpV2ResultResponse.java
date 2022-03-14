@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HybridInspectStatisticsResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeStatsResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
      * Statistics related to the processing of hybrid inspect.
      * 
      */
-    @InputImport(name="hybridStats", required=true)
+    @Import(name="hybridStats", required=true)
       private final GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
 
     public GooglePrivacyDlpV2HybridInspectStatisticsResponse getHybridStats() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
      * Statistics of how many instances of each info type were found during inspect job.
      * 
      */
-    @InputImport(name="infoTypeStats", required=true)
+    @Import(name="infoTypeStats", required=true)
       private final List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
 
     public List<GooglePrivacyDlpV2InfoTypeStatsResponse> getInfoTypeStats() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
      * Total size in bytes that were processed.
      * 
      */
-    @InputImport(name="processedBytes", required=true)
+    @Import(name="processedBytes", required=true)
       private final String processedBytes;
 
     public String getProcessedBytes() {
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
      * Estimate of the number of bytes to process.
      * 
      */
-    @InputImport(name="totalEstimatedBytes", required=true)
+    @Import(name="totalEstimatedBytes", required=true)
       private final String totalEstimatedBytes;
 
     public String getTotalEstimatedBytes() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
      * 
      */
-    @InputImport(name="caCertificate", required=true)
+    @Import(name="caCertificate", required=true)
       private final String caCertificate;
 
     public String getCaCertificate() {
@@ -32,7 +32,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * Indicates whether the ca_certificate field is set.
      * 
      */
-    @InputImport(name="caCertificateSet", required=true)
+    @Import(name="caCertificateSet", required=true)
       private final Boolean caCertificateSet;
 
     public Boolean getCaCertificateSet() {
@@ -43,7 +43,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
      * 
      */
-    @InputImport(name="clientCertificate", required=true)
+    @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
     public String getClientCertificate() {
@@ -54,7 +54,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * Indicates whether the client_certificate field is set.
      * 
      */
-    @InputImport(name="clientCertificateSet", required=true)
+    @Import(name="clientCertificateSet", required=true)
       private final Boolean clientCertificateSet;
 
     public Boolean getClientCertificateSet() {
@@ -65,7 +65,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
      * 
      */
-    @InputImport(name="clientKey", required=true)
+    @Import(name="clientKey", required=true)
       private final String clientKey;
 
     public String getClientKey() {
@@ -76,7 +76,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * Indicates whether the client_key field is set.
      * 
      */
-    @InputImport(name="clientKeySet", required=true)
+    @Import(name="clientKeySet", required=true)
       private final Boolean clientKeySet;
 
     public Boolean getClientKeySet() {

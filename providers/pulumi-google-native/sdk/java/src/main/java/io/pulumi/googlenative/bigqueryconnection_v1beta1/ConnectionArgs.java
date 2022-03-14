@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryconnection_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.CloudSqlPropertiesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud SQL properties.
      * 
      */
-    @InputImport(name="cloudSql")
+    @Import(name="cloudSql")
       private final @Nullable Output<CloudSqlPropertiesArgs> cloudSql;
 
     public Output<CloudSqlPropertiesArgs> getCloudSql() {
         return this.cloudSql == null ? Output.empty() : this.cloudSql;
     }
 
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -37,7 +37,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * User provided description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,14 +48,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * User provided display name for the connection.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
         return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,14 +66,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

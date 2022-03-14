@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HostRuleResponse {
     /**
      * An optional description of this resource. Provide this property when you create the resource.
@@ -26,11 +26,11 @@ public final class HostRuleResponse {
      */
     private final String pathMatcher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostRuleResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("hosts") List<String> hosts,
-        @OutputCustomType.Parameter("pathMatcher") String pathMatcher) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("hosts") List<String> hosts,
+        @CustomType.Parameter("pathMatcher") String pathMatcher) {
         this.description = description;
         this.hosts = hosts;
         this.pathMatcher = pathMatcher;

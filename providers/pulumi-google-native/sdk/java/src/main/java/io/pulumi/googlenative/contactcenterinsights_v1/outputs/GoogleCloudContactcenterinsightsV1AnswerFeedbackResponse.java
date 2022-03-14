@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
     /**
      * Indicates whether an answer or item was clicked by the human agent.
@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
      */
     private final Boolean displayed;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(
-        @OutputCustomType.Parameter("clicked") Boolean clicked,
-        @OutputCustomType.Parameter("correctnessLevel") String correctnessLevel,
-        @OutputCustomType.Parameter("displayed") Boolean displayed) {
+        @CustomType.Parameter("clicked") Boolean clicked,
+        @CustomType.Parameter("correctnessLevel") String correctnessLevel,
+        @CustomType.Parameter("displayed") Boolean displayed) {
         this.clicked = clicked;
         this.correctnessLevel = correctnessLevel;
         this.displayed = displayed;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iam_v1.WorkloadIdentityPoolArgs;
@@ -23,7 +23,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * A description of the pool. Cannot exceed 256 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -37,7 +37,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
     /**
@@ -51,7 +51,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * A display name for the pool. Cannot exceed 32 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -65,7 +65,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * The resource name of the pool.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
      * The state of the pool.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

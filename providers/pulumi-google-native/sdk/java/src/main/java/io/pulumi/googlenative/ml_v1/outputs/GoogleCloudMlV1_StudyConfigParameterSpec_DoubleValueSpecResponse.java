@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse {
     /**
      * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
      */
     private final Double minValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(
-        @OutputCustomType.Parameter("maxValue") Double maxValue,
-        @OutputCustomType.Parameter("minValue") Double minValue) {
+        @CustomType.Parameter("maxValue") Double maxValue,
+        @CustomType.Parameter("minValue") Double minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }

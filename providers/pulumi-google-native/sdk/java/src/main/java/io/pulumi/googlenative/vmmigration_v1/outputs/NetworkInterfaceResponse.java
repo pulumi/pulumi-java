@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceResponse {
     /**
      * The external IP to define in the NIC.
@@ -30,12 +30,12 @@ public final class NetworkInterfaceResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceResponse(
-        @OutputCustomType.Parameter("externalIp") String externalIp,
-        @OutputCustomType.Parameter("internalIp") String internalIp,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
+        @CustomType.Parameter("externalIp") String externalIp,
+        @CustomType.Parameter("internalIp") String internalIp,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("subnetwork") String subnetwork) {
         this.externalIp = externalIp;
         this.internalIp = internalIp;
         this.network = network;

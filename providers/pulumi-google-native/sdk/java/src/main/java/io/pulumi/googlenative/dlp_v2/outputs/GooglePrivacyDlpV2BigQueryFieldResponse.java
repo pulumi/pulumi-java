@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2BigQueryFieldResponse {
     /**
      * Designated field in the BigQuery table.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2BigQueryFieldResponse(
-        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
-        @OutputCustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
+        @CustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @CustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
         this.field = field;
         this.table = table;
     }

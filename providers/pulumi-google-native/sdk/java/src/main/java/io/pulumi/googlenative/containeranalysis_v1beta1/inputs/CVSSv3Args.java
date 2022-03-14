@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3AttackComplexity;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3AttackVector;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.CVSSv3AvailabilityImpact;
@@ -26,7 +26,7 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
 
     public static final CVSSv3Args Empty = new CVSSv3Args();
 
-    @InputImport(name="attackComplexity")
+    @Import(name="attackComplexity")
       private final @Nullable Output<CVSSv3AttackComplexity> attackComplexity;
 
     public Output<CVSSv3AttackComplexity> getAttackComplexity() {
@@ -37,14 +37,14 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
      * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
      * 
      */
-    @InputImport(name="attackVector")
+    @Import(name="attackVector")
       private final @Nullable Output<CVSSv3AttackVector> attackVector;
 
     public Output<CVSSv3AttackVector> getAttackVector() {
         return this.attackVector == null ? Output.empty() : this.attackVector;
     }
 
-    @InputImport(name="availabilityImpact")
+    @Import(name="availabilityImpact")
       private final @Nullable Output<CVSSv3AvailabilityImpact> availabilityImpact;
 
     public Output<CVSSv3AvailabilityImpact> getAvailabilityImpact() {
@@ -55,56 +55,56 @@ public final class CVSSv3Args extends io.pulumi.resources.ResourceArgs {
      * The base score is a function of the base metric scores.
      * 
      */
-    @InputImport(name="baseScore")
+    @Import(name="baseScore")
       private final @Nullable Output<Double> baseScore;
 
     public Output<Double> getBaseScore() {
         return this.baseScore == null ? Output.empty() : this.baseScore;
     }
 
-    @InputImport(name="confidentialityImpact")
+    @Import(name="confidentialityImpact")
       private final @Nullable Output<CVSSv3ConfidentialityImpact> confidentialityImpact;
 
     public Output<CVSSv3ConfidentialityImpact> getConfidentialityImpact() {
         return this.confidentialityImpact == null ? Output.empty() : this.confidentialityImpact;
     }
 
-    @InputImport(name="exploitabilityScore")
+    @Import(name="exploitabilityScore")
       private final @Nullable Output<Double> exploitabilityScore;
 
     public Output<Double> getExploitabilityScore() {
         return this.exploitabilityScore == null ? Output.empty() : this.exploitabilityScore;
     }
 
-    @InputImport(name="impactScore")
+    @Import(name="impactScore")
       private final @Nullable Output<Double> impactScore;
 
     public Output<Double> getImpactScore() {
         return this.impactScore == null ? Output.empty() : this.impactScore;
     }
 
-    @InputImport(name="integrityImpact")
+    @Import(name="integrityImpact")
       private final @Nullable Output<CVSSv3IntegrityImpact> integrityImpact;
 
     public Output<CVSSv3IntegrityImpact> getIntegrityImpact() {
         return this.integrityImpact == null ? Output.empty() : this.integrityImpact;
     }
 
-    @InputImport(name="privilegesRequired")
+    @Import(name="privilegesRequired")
       private final @Nullable Output<CVSSv3PrivilegesRequired> privilegesRequired;
 
     public Output<CVSSv3PrivilegesRequired> getPrivilegesRequired() {
         return this.privilegesRequired == null ? Output.empty() : this.privilegesRequired;
     }
 
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<CVSSv3Scope> scope;
 
     public Output<CVSSv3Scope> getScope() {
         return this.scope == null ? Output.empty() : this.scope;
     }
 
-    @InputImport(name="userInteraction")
+    @Import(name="userInteraction")
       private final @Nullable Output<CVSSv3UserInteraction> userInteraction;
 
     public Output<CVSSv3UserInteraction> getUserInteraction() {

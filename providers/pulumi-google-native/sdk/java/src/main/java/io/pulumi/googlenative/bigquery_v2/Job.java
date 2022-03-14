@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigquery_v2.JobArgs;
@@ -26,7 +26,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * [Required] Describes the job configuration.
      * 
      */
-    @OutputExport(name="configuration", type=JobConfigurationResponse.class, parameters={})
+    @Export(name="configuration", type=JobConfigurationResponse.class, parameters={})
     private Output<JobConfigurationResponse> configuration;
 
     /**
@@ -40,7 +40,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * A hash of this resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -54,7 +54,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * [Optional] Reference describing the unique-per-user name of the job.
      * 
      */
-    @OutputExport(name="jobReference", type=JobReferenceResponse.class, parameters={})
+    @Export(name="jobReference", type=JobReferenceResponse.class, parameters={})
     private Output<JobReferenceResponse> jobReference;
 
     /**
@@ -68,7 +68,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -82,7 +82,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * A URL that can be used to access this resource again.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -96,7 +96,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Information about the job, including starting time and ending time of the job.
      * 
      */
-    @OutputExport(name="statistics", type=JobStatisticsResponse.class, parameters={})
+    @Export(name="statistics", type=JobStatisticsResponse.class, parameters={})
     private Output<JobStatisticsResponse> statistics;
 
     /**
@@ -110,7 +110,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
      */
-    @OutputExport(name="status", type=JobStatusResponse.class, parameters={})
+    @Export(name="status", type=JobStatusResponse.class, parameters={})
     private Output<JobStatusResponse> status;
 
     /**
@@ -124,7 +124,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Email address of the user who ran the job.
      * 
      */
-    @OutputExport(name="userEmail", type=String.class, parameters={})
+    @Export(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
     /**

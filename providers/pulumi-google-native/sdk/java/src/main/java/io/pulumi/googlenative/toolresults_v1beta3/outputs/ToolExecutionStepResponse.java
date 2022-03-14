@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.ToolExecutionResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ToolExecutionStepResponse {
     /**
      * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
@@ -15,8 +15,8 @@ public final class ToolExecutionStepResponse {
      */
     private final ToolExecutionResponse toolExecution;
 
-    @OutputCustomType.Constructor
-    private ToolExecutionStepResponse(@OutputCustomType.Parameter("toolExecution") ToolExecutionResponse toolExecution) {
+    @CustomType.Constructor
+    private ToolExecutionStepResponse(@CustomType.Parameter("toolExecution") ToolExecutionResponse toolExecution) {
         this.toolExecution = toolExecution;
     }
 

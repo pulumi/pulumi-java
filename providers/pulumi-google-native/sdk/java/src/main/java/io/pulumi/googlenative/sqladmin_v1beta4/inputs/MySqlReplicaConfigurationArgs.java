@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * PEM representation of the trusted CA's x509 certificate.
      * 
      */
-    @InputImport(name="caCertificate")
+    @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
     public Output<String> getCaCertificate() {
@@ -35,7 +35,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * PEM representation of the replica's x509 certificate.
      * 
      */
-    @InputImport(name="clientCertificate")
+    @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
@@ -46,7 +46,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
      * 
      */
-    @InputImport(name="clientKey")
+    @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {
@@ -57,7 +57,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * Seconds to wait between connect retries. MySQL's default is 60 seconds.
      * 
      */
-    @InputImport(name="connectRetryInterval")
+    @Import(name="connectRetryInterval")
       private final @Nullable Output<Integer> connectRetryInterval;
 
     public Output<Integer> getConnectRetryInterval() {
@@ -68,7 +68,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
      * 
      */
-    @InputImport(name="dumpFilePath")
+    @Import(name="dumpFilePath")
       private final @Nullable Output<String> dumpFilePath;
 
     public Output<String> getDumpFilePath() {
@@ -79,7 +79,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * This is always `sql#mysqlReplicaConfiguration`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -90,7 +90,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * Interval in milliseconds between replication heartbeats.
      * 
      */
-    @InputImport(name="masterHeartbeatPeriod")
+    @Import(name="masterHeartbeatPeriod")
       private final @Nullable Output<String> masterHeartbeatPeriod;
 
     public Output<String> getMasterHeartbeatPeriod() {
@@ -101,7 +101,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * The password for the replication connection.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -112,7 +112,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * A list of permissible ciphers to use for SSL encryption.
      * 
      */
-    @InputImport(name="sslCipher")
+    @Import(name="sslCipher")
       private final @Nullable Output<String> sslCipher;
 
     public Output<String> getSslCipher() {
@@ -123,7 +123,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * The username for the replication connection.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
@@ -134,7 +134,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
      * 
      */
-    @InputImport(name="verifyServerCertificate")
+    @Import(name="verifyServerCertificate")
       private final @Nullable Output<Boolean> verifyServerCertificate;
 
     public Output<Boolean> getVerifyServerCertificate() {

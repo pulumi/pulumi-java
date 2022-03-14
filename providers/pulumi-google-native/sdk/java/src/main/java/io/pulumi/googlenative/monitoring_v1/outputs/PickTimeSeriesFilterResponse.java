@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PickTimeSeriesFilterResponse {
     /**
      * How to use the ranking to select time series that pass through the filter.
@@ -26,11 +26,11 @@ public final class PickTimeSeriesFilterResponse {
      */
     private final String rankingMethod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PickTimeSeriesFilterResponse(
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("numTimeSeries") Integer numTimeSeries,
-        @OutputCustomType.Parameter("rankingMethod") String rankingMethod) {
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("numTimeSeries") Integer numTimeSeries,
+        @CustomType.Parameter("rankingMethod") String rankingMethod) {
         this.direction = direction;
         this.numTimeSeries = numTimeSeries;
         this.rankingMethod = rankingMethod;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used to sign certificates.
      * 
      */
-    @InputImport(name="certSign")
+    @Import(name="certSign")
       private final @Nullable Output<Boolean> certSign;
 
     public Output<Boolean> getCertSign() {
@@ -33,7 +33,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
      * 
      */
-    @InputImport(name="contentCommitment")
+    @Import(name="contentCommitment")
       private final @Nullable Output<Boolean> contentCommitment;
 
     public Output<Boolean> getContentCommitment() {
@@ -44,7 +44,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used sign certificate revocation lists.
      * 
      */
-    @InputImport(name="crlSign")
+    @Import(name="crlSign")
       private final @Nullable Output<Boolean> crlSign;
 
     public Output<Boolean> getCrlSign() {
@@ -55,7 +55,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used to encipher data.
      * 
      */
-    @InputImport(name="dataEncipherment")
+    @Import(name="dataEncipherment")
       private final @Nullable Output<Boolean> dataEncipherment;
 
     public Output<Boolean> getDataEncipherment() {
@@ -66,7 +66,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used to decipher only.
      * 
      */
-    @InputImport(name="decipherOnly")
+    @Import(name="decipherOnly")
       private final @Nullable Output<Boolean> decipherOnly;
 
     public Output<Boolean> getDecipherOnly() {
@@ -77,7 +77,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used for digital signatures.
      * 
      */
-    @InputImport(name="digitalSignature")
+    @Import(name="digitalSignature")
       private final @Nullable Output<Boolean> digitalSignature;
 
     public Output<Boolean> getDigitalSignature() {
@@ -88,7 +88,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used to encipher only.
      * 
      */
-    @InputImport(name="encipherOnly")
+    @Import(name="encipherOnly")
       private final @Nullable Output<Boolean> encipherOnly;
 
     public Output<Boolean> getEncipherOnly() {
@@ -99,7 +99,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used in a key agreement protocol.
      * 
      */
-    @InputImport(name="keyAgreement")
+    @Import(name="keyAgreement")
       private final @Nullable Output<Boolean> keyAgreement;
 
     public Output<Boolean> getKeyAgreement() {
@@ -110,7 +110,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * The key may be used to encipher other keys.
      * 
      */
-    @InputImport(name="keyEncipherment")
+    @Import(name="keyEncipherment")
       private final @Nullable Output<Boolean> keyEncipherment;
 
     public Output<Boolean> getKeyEncipherment() {

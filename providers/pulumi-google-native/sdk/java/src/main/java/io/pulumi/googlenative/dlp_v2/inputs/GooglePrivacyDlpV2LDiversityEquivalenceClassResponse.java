@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueFrequencyResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * Size of the k-anonymity equivalence class.
      * 
      */
-    @InputImport(name="equivalenceClassSize", required=true)
+    @Import(name="equivalenceClassSize", required=true)
       private final String equivalenceClassSize;
 
     public String getEquivalenceClassSize() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * Number of distinct sensitive values in this equivalence class.
      * 
      */
-    @InputImport(name="numDistinctSensitiveValues", required=true)
+    @Import(name="numDistinctSensitiveValues", required=true)
       private final String numDistinctSensitiveValues;
 
     public String getNumDistinctSensitiveValues() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * Quasi-identifier values defining the k-anonymity equivalence class. The order is always the same as the original request.
      * 
      */
-    @InputImport(name="quasiIdsValues", required=true)
+    @Import(name="quasiIdsValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * Estimated frequencies of top sensitive values.
      * 
      */
-    @InputImport(name="topSensitiveValues", required=true)
+    @Import(name="topSensitiveValues", required=true)
       private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
 
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> getTopSensitiveValues() {

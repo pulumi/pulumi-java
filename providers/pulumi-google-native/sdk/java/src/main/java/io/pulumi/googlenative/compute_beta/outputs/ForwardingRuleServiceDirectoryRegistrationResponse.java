@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ForwardingRuleServiceDirectoryRegistrationResponse {
     /**
      * Service Directory namespace to register the forwarding rule under.
@@ -25,11 +25,11 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse {
      */
     private final String serviceDirectoryRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ForwardingRuleServiceDirectoryRegistrationResponse(
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("serviceDirectoryRegion") String serviceDirectoryRegion) {
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("serviceDirectoryRegion") String serviceDirectoryRegion) {
         this.namespace = namespace;
         this.service = service;
         this.serviceDirectoryRegion = serviceDirectoryRegion;

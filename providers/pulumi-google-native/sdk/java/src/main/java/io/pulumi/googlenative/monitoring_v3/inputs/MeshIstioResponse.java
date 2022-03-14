@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
      * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
      * 
      */
-    @InputImport(name="meshUid", required=true)
+    @Import(name="meshUid", required=true)
       private final String meshUid;
 
     public String getMeshUid() {
@@ -31,7 +31,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {
@@ -42,7 +42,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
      * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
      */
-    @InputImport(name="serviceNamespace", required=true)
+    @Import(name="serviceNamespace", required=true)
       private final String serviceNamespace;
 
     public String getServiceNamespace() {

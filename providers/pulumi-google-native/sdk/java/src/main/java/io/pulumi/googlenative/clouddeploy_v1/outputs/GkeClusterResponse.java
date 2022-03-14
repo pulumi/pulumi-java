@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GkeClusterResponse {
     /**
      * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
@@ -15,8 +15,8 @@ public final class GkeClusterResponse {
      */
     private final String cluster;
 
-    @OutputCustomType.Constructor
-    private GkeClusterResponse(@OutputCustomType.Parameter("cluster") String cluster) {
+    @CustomType.Constructor
+    private GkeClusterResponse(@CustomType.Parameter("cluster") String cluster) {
         this.cluster = cluster;
     }
 

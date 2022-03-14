@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryreservation_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetCapacityCommitmentArgs extends io.pulumi.resources.InvokeA
 
     public static final GetCapacityCommitmentArgs Empty = new GetCapacityCommitmentArgs();
 
-    @InputImport(name="capacityCommitmentId", required=true)
+    @Import(name="capacityCommitmentId", required=true)
       private final String capacityCommitmentId;
 
     public String getCapacityCommitmentId() {
         return this.capacityCommitmentId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

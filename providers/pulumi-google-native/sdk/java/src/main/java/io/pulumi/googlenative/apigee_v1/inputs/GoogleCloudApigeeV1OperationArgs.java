@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
      * methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
      * 
      */
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
      * REST resource path associated with the API proxy or remote service.
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final Output<String> resource;
 
     public Output<String> getResource() {

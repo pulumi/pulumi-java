@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.enums.CVSSAttackComplexity;
 import io.pulumi.googlenative.containeranalysis_v1.enums.CVSSAttackVector;
 import io.pulumi.googlenative.containeranalysis_v1.enums.CVSSAuthentication;
@@ -27,7 +27,7 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CVSSArgs Empty = new CVSSArgs();
 
-    @InputImport(name="attackComplexity")
+    @Import(name="attackComplexity")
       private final @Nullable Output<CVSSAttackComplexity> attackComplexity;
 
     public Output<CVSSAttackComplexity> getAttackComplexity() {
@@ -38,21 +38,21 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
      * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
      * 
      */
-    @InputImport(name="attackVector")
+    @Import(name="attackVector")
       private final @Nullable Output<CVSSAttackVector> attackVector;
 
     public Output<CVSSAttackVector> getAttackVector() {
         return this.attackVector == null ? Output.empty() : this.attackVector;
     }
 
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<CVSSAuthentication> authentication;
 
     public Output<CVSSAuthentication> getAuthentication() {
         return this.authentication == null ? Output.empty() : this.authentication;
     }
 
-    @InputImport(name="availabilityImpact")
+    @Import(name="availabilityImpact")
       private final @Nullable Output<CVSSAvailabilityImpact> availabilityImpact;
 
     public Output<CVSSAvailabilityImpact> getAvailabilityImpact() {
@@ -63,56 +63,56 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
      * The base score is a function of the base metric scores.
      * 
      */
-    @InputImport(name="baseScore")
+    @Import(name="baseScore")
       private final @Nullable Output<Double> baseScore;
 
     public Output<Double> getBaseScore() {
         return this.baseScore == null ? Output.empty() : this.baseScore;
     }
 
-    @InputImport(name="confidentialityImpact")
+    @Import(name="confidentialityImpact")
       private final @Nullable Output<CVSSConfidentialityImpact> confidentialityImpact;
 
     public Output<CVSSConfidentialityImpact> getConfidentialityImpact() {
         return this.confidentialityImpact == null ? Output.empty() : this.confidentialityImpact;
     }
 
-    @InputImport(name="exploitabilityScore")
+    @Import(name="exploitabilityScore")
       private final @Nullable Output<Double> exploitabilityScore;
 
     public Output<Double> getExploitabilityScore() {
         return this.exploitabilityScore == null ? Output.empty() : this.exploitabilityScore;
     }
 
-    @InputImport(name="impactScore")
+    @Import(name="impactScore")
       private final @Nullable Output<Double> impactScore;
 
     public Output<Double> getImpactScore() {
         return this.impactScore == null ? Output.empty() : this.impactScore;
     }
 
-    @InputImport(name="integrityImpact")
+    @Import(name="integrityImpact")
       private final @Nullable Output<CVSSIntegrityImpact> integrityImpact;
 
     public Output<CVSSIntegrityImpact> getIntegrityImpact() {
         return this.integrityImpact == null ? Output.empty() : this.integrityImpact;
     }
 
-    @InputImport(name="privilegesRequired")
+    @Import(name="privilegesRequired")
       private final @Nullable Output<CVSSPrivilegesRequired> privilegesRequired;
 
     public Output<CVSSPrivilegesRequired> getPrivilegesRequired() {
         return this.privilegesRequired == null ? Output.empty() : this.privilegesRequired;
     }
 
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<CVSSScope> scope;
 
     public Output<CVSSScope> getScope() {
         return this.scope == null ? Output.empty() : this.scope;
     }
 
-    @InputImport(name="userInteraction")
+    @Import(name="userInteraction")
       private final @Nullable Output<CVSSUserInteraction> userInteraction;
 
     public Output<CVSSUserInteraction> getUserInteraction() {

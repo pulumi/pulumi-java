@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
      * The client identifier.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -34,7 +34,7 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
      * Secret version reference containing the client secret.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<SecretArgs> clientSecret;
 
     public Output<SecretArgs> getClientSecret() {

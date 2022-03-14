@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyAdvancedOptionsConfigJsonParsing;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyAdvancedOptionsConfigLogLevel;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class SecurityPolicyAdvancedOptionsConfigArgs extends io.pulumi.res
 
     public static final SecurityPolicyAdvancedOptionsConfigArgs Empty = new SecurityPolicyAdvancedOptionsConfigArgs();
 
-    @InputImport(name="jsonParsing")
+    @Import(name="jsonParsing")
       private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
 
     public Output<SecurityPolicyAdvancedOptionsConfigJsonParsing> getJsonParsing() {
         return this.jsonParsing == null ? Output.empty() : this.jsonParsing;
     }
 
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
 
     public Output<SecurityPolicyAdvancedOptionsConfigLogLevel> getLogLevel() {

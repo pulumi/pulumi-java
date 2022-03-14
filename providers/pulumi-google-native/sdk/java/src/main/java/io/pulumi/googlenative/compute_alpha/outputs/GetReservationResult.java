@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AllocationSpecificSKUReservationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ShareSettingsResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReservationResult {
     /**
      * Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
@@ -78,21 +78,21 @@ public final class GetReservationResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReservationResult(
-        @OutputCustomType.Parameter("commitment") String commitment,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
-        @OutputCustomType.Parameter("specificReservation") AllocationSpecificSKUReservationResponse specificReservation,
-        @OutputCustomType.Parameter("specificReservationRequired") Boolean specificReservationRequired,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("commitment") String commitment,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
+        @CustomType.Parameter("specificReservation") AllocationSpecificSKUReservationResponse specificReservation,
+        @CustomType.Parameter("specificReservationRequired") Boolean specificReservationRequired,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("zone") String zone) {
         this.commitment = commitment;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

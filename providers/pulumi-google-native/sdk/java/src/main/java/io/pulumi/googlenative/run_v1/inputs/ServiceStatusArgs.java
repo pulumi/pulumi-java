@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.AddressableArgs;
 import io.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionArgs;
 import io.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
@@ -27,7 +27,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * From RouteStatus. Similar to url, information on where the service is available on HTTP.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<AddressableArgs> address;
 
     public Output<AddressableArgs> getAddress() {
@@ -38,7 +38,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Conditions communicates information about ongoing/complete reconciliation processes that bring the "spec" inline with the observed state of the world. Service-specific conditions include: * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true when the underlying Route is ready. * "Ready": true when both the underlying Route and Configuration are ready.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
     public Output<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
@@ -49,7 +49,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
      * 
      */
-    @InputImport(name="latestCreatedRevisionName")
+    @Import(name="latestCreatedRevisionName")
       private final @Nullable Output<String> latestCreatedRevisionName;
 
     public Output<String> getLatestCreatedRevisionName() {
@@ -60,7 +60,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".
      * 
      */
-    @InputImport(name="latestReadyRevisionName")
+    @Import(name="latestReadyRevisionName")
       private final @Nullable Output<String> latestReadyRevisionName;
 
     public Output<String> getLatestReadyRevisionName() {
@@ -71,7 +71,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
      * 
      */
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
@@ -82,7 +82,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.
      * 
      */
-    @InputImport(name="traffic")
+    @Import(name="traffic")
       private final @Nullable Output<List<TrafficTargetArgs>> traffic;
 
     public Output<List<TrafficTargetArgs>> getTraffic() {
@@ -93,7 +93,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

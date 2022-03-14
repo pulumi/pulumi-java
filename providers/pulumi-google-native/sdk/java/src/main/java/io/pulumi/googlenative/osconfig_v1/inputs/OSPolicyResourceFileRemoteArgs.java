@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
      * SHA256 checksum of the remote file.
      * 
      */
-    @InputImport(name="sha256Checksum")
+    @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
 
     public Output<String> getSha256Checksum() {
@@ -33,7 +33,7 @@ public final class OSPolicyResourceFileRemoteArgs extends io.pulumi.resources.Re
      * URI from which to fetch the object. It should contain both the protocol and path following the format `{protocol}://{location}`.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

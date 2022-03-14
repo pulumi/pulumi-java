@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * Optional arguments to pass to the source during execution.
      * 
      */
-    @InputImport(name="args", required=true)
+    @Import(name="args", required=true)
       private final List<String> args;
 
     public List<String> getArgs() {
@@ -33,7 +33,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * A remote or local file.
      * 
      */
-    @InputImport(name="file", required=true)
+    @Import(name="file", required=true)
       private final OSPolicyResourceFileResponse file;
 
     public OSPolicyResourceFileResponse getFile() {
@@ -44,7 +44,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * The script interpreter to use.
      * 
      */
-    @InputImport(name="interpreter", required=true)
+    @Import(name="interpreter", required=true)
       private final String interpreter;
 
     public String getInterpreter() {
@@ -55,7 +55,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
      * 
      */
-    @InputImport(name="outputFilePath", required=true)
+    @Import(name="outputFilePath", required=true)
       private final String outputFilePath;
 
     public String getOutputFilePath() {
@@ -66,7 +66,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
      * An inline script. The size of the script is limited to 1024 characters.
      * 
      */
-    @InputImport(name="script", required=true)
+    @Import(name="script", required=true)
       private final String script;
 
     public String getScript() {

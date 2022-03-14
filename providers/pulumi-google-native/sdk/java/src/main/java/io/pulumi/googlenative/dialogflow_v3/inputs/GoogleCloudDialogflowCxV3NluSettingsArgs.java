@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode;
 import io.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3NluSettingsModelType;
 import java.lang.Double;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
      * To filter out false positive results and still get variety in matched natural language inputs for your agent, you can tune the machine learning classification threshold. If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
      * 
      */
-    @InputImport(name="classificationThreshold")
+    @Import(name="classificationThreshold")
       private final @Nullable Output<Double> classificationThreshold;
 
     public Output<Double> getClassificationThreshold() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
      * Indicates NLU model training mode.
      * 
      */
-    @InputImport(name="modelTrainingMode")
+    @Import(name="modelTrainingMode")
       private final @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> modelTrainingMode;
 
     public Output<GoogleCloudDialogflowCxV3NluSettingsModelTrainingMode> getModelTrainingMode() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3NluSettingsArgs extends io.pulumi.re
      * Indicates the type of NLU model.
      * 
      */
-    @InputImport(name="modelType")
+    @Import(name="modelType")
       private final @Nullable Output<GoogleCloudDialogflowCxV3NluSettingsModelType> modelType;
 
     public Output<GoogleCloudDialogflowCxV3NluSettingsModelType> getModelType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.StepState;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.MultiStepArgs;
@@ -29,7 +29,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the step status was set to complete. This value will be set automatically when state transitions to COMPLETE. - In response: set if the execution state is COMPLETE. - In create/update request: never set
      * 
      */
-    @InputImport(name="completionTime")
+    @Import(name="completionTime")
       private final @Nullable Output<TimestampArgs> completionTime;
 
     public Output<TimestampArgs> getCompletionTime() {
@@ -40,7 +40,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the step was created. - In response: always set - In create/update request: never set
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<TimestampArgs> creationTime;
 
     public Output<TimestampArgs> getCreationTime() {
@@ -51,7 +51,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * A description of this tool For example: mvn clean package -D skipTests=true - In response: present if set by create/update request - In create/update request: optional
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -62,7 +62,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * How much the device resource is used to perform the test. This is the device usage used for billing purpose, which is different from the run_duration, for example, infrastructure failure won't be charged for device usage. PRECONDITION_FAILED will be returned if one attempts to set a device_usage on a step which already has this field set. - In response: present if previously set. - In create request: optional - In update request: optional
      * 
      */
-    @InputImport(name="deviceUsageDuration")
+    @Import(name="deviceUsageDuration")
       private final @Nullable Output<DurationArgs> deviceUsageDuration;
 
     public Output<DurationArgs> getDeviceUsageDuration() {
@@ -73,14 +73,14 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * If the execution containing this step has any dimension_definition set, then this field allows the child to specify the values of the dimensions. The keys must exactly match the dimension_definition of the execution. For example, if the execution has `dimension_definition = ['attempt', 'device']` then a step must define values for those dimensions, eg. `dimension_value = ['attempt': '1', 'device': 'Nexus 6']` If a step does not participate in one dimension of the matrix, the value for that dimension should be empty string. For example, if one of the tests is executed by a runner which does not support retries, the step could have `dimension_value = ['attempt': '', 'device': 'Nexus 6']` If the step does not participate in any dimensions of the matrix, it may leave dimension_value unset. A PRECONDITION_FAILED will be returned if any of the keys do not exist in the dimension_definition of the execution. A PRECONDITION_FAILED will be returned if another step in this execution already has the same name and dimension_value, but differs on other data fields, for example, step field is different. A PRECONDITION_FAILED will be returned if dimension_value is set, and there is a dimension_definition in the execution which is not specified as one of the keys. - In response: present if set by create - In create request: optional - In update request: never set
      * 
      */
-    @InputImport(name="dimensionValue")
+    @Import(name="dimensionValue")
       private final @Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue;
 
     public Output<List<StepDimensionValueEntryArgs>> getDimensionValue() {
         return this.dimensionValue == null ? Output.empty() : this.dimensionValue;
     }
 
-    @InputImport(name="executionId", required=true)
+    @Import(name="executionId", required=true)
       private final Output<String> executionId;
 
     public Output<String> getExecutionId() {
@@ -91,14 +91,14 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * Whether any of the outputs of this step are images whose thumbnails can be fetched with ListThumbnails. - In response: always set - In create/update request: never set
      * 
      */
-    @InputImport(name="hasImages")
+    @Import(name="hasImages")
       private final @Nullable Output<Boolean> hasImages;
 
     public Output<Boolean> getHasImages() {
         return this.hasImages == null ? Output.empty() : this.hasImages;
     }
 
-    @InputImport(name="historyId", required=true)
+    @Import(name="historyId", required=true)
       private final Output<String> historyId;
 
     public Output<String> getHistoryId() {
@@ -109,7 +109,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * Arbitrary user-supplied key/value pairs that are associated with the step. Users are responsible for managing the key namespace such that keys don't accidentally collide. An INVALID_ARGUMENT will be returned if the number of labels exceeds 100 or if the length of any of the keys or values exceeds 100 characters. - In response: always set - In create request: optional - In update request: optional; any new key/value pair will be added to the map, and any new value for an existing key will update that key's value
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<StepLabelsEntryArgs>> labels;
 
     public Output<List<StepLabelsEntryArgs>> getLabels() {
@@ -120,7 +120,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * Details when multiple steps are run with the same configuration as a group. These details can be used identify which group this step is part of. It also identifies the groups 'primary step' which indexes all the group members. - In response: present if previously set. - In create request: optional, set iff this step was performed more than once. - In update request: optional
      * 
      */
-    @InputImport(name="multiStep")
+    @Import(name="multiStep")
       private final @Nullable Output<MultiStepArgs> multiStep;
 
     public Output<MultiStepArgs> getMultiStep() {
@@ -131,7 +131,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * A short human-readable name to display in the UI. Maximum of 100 characters. For example: Clean build A PRECONDITION_FAILED will be returned upon creating a new step if it shares its name and dimension_value with an existing step. If two steps represent a similar action, but have different dimension values, they should share the same name. For instance, if the same set of tests is run on two different platforms, the two steps should have the same name. - In response: always set - In create request: always set - In update request: never set
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -142,21 +142,21 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * Classification of the result, for example into SUCCESS or FAILURE - In response: present if set by create/update request - In create/update request: optional
      * 
      */
-    @InputImport(name="outcome")
+    @Import(name="outcome")
       private final @Nullable Output<OutcomeArgs> outcome;
 
     public Output<OutcomeArgs> getOutcome() {
         return this.outcome == null ? Output.empty() : this.outcome;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -167,7 +167,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * How long it took for this step to run. If unset, this is set to the difference between creation_time and completion_time when the step is set to the COMPLETE state. In some cases, it is appropriate to set this value separately: For instance, if a step is created, but the operation it represents is queued for a few minutes before it executes, it would be appropriate not to include the time spent queued in its run_duration. PRECONDITION_FAILED will be returned if one attempts to set a run_duration on a step which already has this field set. - In response: present if previously set; always present on COMPLETE step - In create request: optional - In update request: optional
      * 
      */
-    @InputImport(name="runDuration")
+    @Import(name="runDuration")
       private final @Nullable Output<DurationArgs> runDuration;
 
     public Output<DurationArgs> getRunDuration() {
@@ -178,7 +178,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * The initial state is IN_PROGRESS. The only legal state transitions are * IN_PROGRESS -> COMPLETE A PRECONDITION_FAILED will be returned if an invalid transition is requested. It is valid to create Step with a state set to COMPLETE. The state can only be set to COMPLETE once. A PRECONDITION_FAILED will be returned if the state is set to COMPLETE multiple times. - In response: always set - In create/update request: optional
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<StepState> state;
 
     public Output<StepState> getState() {
@@ -189,7 +189,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * A unique identifier within a Execution for this Step. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response: always set - In create/update request: never set
      * 
      */
-    @InputImport(name="stepId")
+    @Import(name="stepId")
       private final @Nullable Output<String> stepId;
 
     public Output<String> getStepId() {
@@ -200,7 +200,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * An execution of a test runner.
      * 
      */
-    @InputImport(name="testExecutionStep")
+    @Import(name="testExecutionStep")
       private final @Nullable Output<TestExecutionStepArgs> testExecutionStep;
 
     public Output<TestExecutionStepArgs> getTestExecutionStep() {
@@ -211,7 +211,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * An execution of a tool (used for steps we don't explicitly support).
      * 
      */
-    @InputImport(name="toolExecutionStep")
+    @Import(name="toolExecutionStep")
       private final @Nullable Output<ToolExecutionStepArgs> toolExecutionStep;
 
     public Output<ToolExecutionStepArgs> getToolExecutionStep() {

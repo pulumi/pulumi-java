@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Destination IP address.
      * 
      */
-    @InputImport(name="destinationIp", required=true)
+    @Import(name="destinationIp", required=true)
       private final String destinationIp;
 
     public String getDestinationIp() {
@@ -32,7 +32,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * URI of the network where this packet is sent to.
      * 
      */
-    @InputImport(name="destinationNetworkUri", required=true)
+    @Import(name="destinationNetworkUri", required=true)
       private final String destinationNetworkUri;
 
     public String getDestinationNetworkUri() {
@@ -43,7 +43,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Destination port. Only valid when protocol is TCP or UDP.
      * 
      */
-    @InputImport(name="destinationPort", required=true)
+    @Import(name="destinationPort", required=true)
       private final Integer destinationPort;
 
     public Integer getDestinationPort() {
@@ -54,7 +54,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * IP protocol in string format, for example: "TCP", "UDP", "ICMP".
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {
@@ -65,7 +65,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * URI of the source telemetry agent this packet originates from.
      * 
      */
-    @InputImport(name="sourceAgentUri", required=true)
+    @Import(name="sourceAgentUri", required=true)
       private final String sourceAgentUri;
 
     public String getSourceAgentUri() {
@@ -76,7 +76,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Source IP address.
      * 
      */
-    @InputImport(name="sourceIp", required=true)
+    @Import(name="sourceIp", required=true)
       private final String sourceIp;
 
     public String getSourceIp() {
@@ -87,7 +87,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * URI of the network where this packet originates from.
      * 
      */
-    @InputImport(name="sourceNetworkUri", required=true)
+    @Import(name="sourceNetworkUri", required=true)
       private final String sourceNetworkUri;
 
     public String getSourceNetworkUri() {
@@ -98,7 +98,7 @@ public final class EndpointInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Source port. Only valid when protocol is TCP or UDP.
      * 
      */
-    @InputImport(name="sourcePort", required=true)
+    @Import(name="sourcePort", required=true)
       private final Integer sourcePort;
 
     public Integer getSourcePort() {

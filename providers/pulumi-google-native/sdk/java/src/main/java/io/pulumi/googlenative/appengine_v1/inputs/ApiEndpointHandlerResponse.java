@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApiEndpointHandlerResponse extends io.pulumi.resources.Invoke
      * Path to the script from the application root directory.
      * 
      */
-    @InputImport(name="scriptPath", required=true)
+    @Import(name="scriptPath", required=true)
       private final String scriptPath;
 
     public String getScriptPath() {

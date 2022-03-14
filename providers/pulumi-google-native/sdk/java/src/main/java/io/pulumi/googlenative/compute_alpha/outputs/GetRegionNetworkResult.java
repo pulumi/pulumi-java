@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.NetworkPeeringResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.NetworkRoutingConfigResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionNetworkResult {
     /**
      * Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
@@ -96,25 +96,25 @@ public final class GetRegionNetworkResult {
      */
     private final List<String> subnetworks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionNetworkResult(
-        @OutputCustomType.Parameter("autoCreateSubnetworks") Boolean autoCreateSubnetworks,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enableUlaInternalIpv6") Boolean enableUlaInternalIpv6,
-        @OutputCustomType.Parameter("firewallPolicy") String firewallPolicy,
-        @OutputCustomType.Parameter("gatewayIPv4") String gatewayIPv4,
-        @OutputCustomType.Parameter("internalIpv6Range") String internalIpv6Range,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("mtu") Integer mtu,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkFirewallPolicyEnforcementOrder") String networkFirewallPolicyEnforcementOrder,
-        @OutputCustomType.Parameter("peerings") List<NetworkPeeringResponse> peerings,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("routingConfig") NetworkRoutingConfigResponse routingConfig,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("subnetworks") List<String> subnetworks) {
+        @CustomType.Parameter("autoCreateSubnetworks") Boolean autoCreateSubnetworks,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enableUlaInternalIpv6") Boolean enableUlaInternalIpv6,
+        @CustomType.Parameter("firewallPolicy") String firewallPolicy,
+        @CustomType.Parameter("gatewayIPv4") String gatewayIPv4,
+        @CustomType.Parameter("internalIpv6Range") String internalIpv6Range,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("mtu") Integer mtu,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkFirewallPolicyEnforcementOrder") String networkFirewallPolicyEnforcementOrder,
+        @CustomType.Parameter("peerings") List<NetworkPeeringResponse> peerings,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("routingConfig") NetworkRoutingConfigResponse routingConfig,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("subnetworks") List<String> subnetworks) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigValuesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
      * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
      * 
      */
-    @InputImport(name="reusableConfig", required=true)
+    @Import(name="reusableConfig", required=true)
       private final String reusableConfig;
 
     public String getReusableConfig() {
@@ -32,7 +32,7 @@ public final class ReusableConfigWrapperResponse extends io.pulumi.resources.Inv
      * A user-specified inline ReusableConfigValues.
      * 
      */
-    @InputImport(name="reusableConfigValues", required=true)
+    @Import(name="reusableConfigValues", required=true)
       private final ReusableConfigValuesResponse reusableConfigValues;
 
     public ReusableConfigValuesResponse getReusableConfigValues() {

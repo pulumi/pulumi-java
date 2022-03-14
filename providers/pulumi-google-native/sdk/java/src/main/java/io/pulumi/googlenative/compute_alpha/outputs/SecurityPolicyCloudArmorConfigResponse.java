@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyCloudArmorConfigResponse {
     /**
      * If set to true, enables Cloud Armor Machine Learning.
@@ -15,8 +15,8 @@ public final class SecurityPolicyCloudArmorConfigResponse {
      */
     private final Boolean enableMl;
 
-    @OutputCustomType.Constructor
-    private SecurityPolicyCloudArmorConfigResponse(@OutputCustomType.Parameter("enableMl") Boolean enableMl) {
+    @CustomType.Constructor
+    private SecurityPolicyCloudArmorConfigResponse(@CustomType.Parameter("enableMl") Boolean enableMl) {
         this.enableMl = enableMl;
     }
 

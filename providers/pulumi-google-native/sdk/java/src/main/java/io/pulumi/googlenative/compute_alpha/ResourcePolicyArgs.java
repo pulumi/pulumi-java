@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyGroupPlacementPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicySnapshotSchedulePolicyArgs;
@@ -18,7 +18,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource policy for instances for placement configuration.
      * 
      */
-    @InputImport(name="groupPlacementPolicy")
+    @Import(name="groupPlacementPolicy")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
 
     public Output<ResourcePolicyGroupPlacementPolicyArgs> getGroupPlacementPolicy() {
@@ -40,7 +40,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource policy for scheduling instance operations.
      * 
      */
-    @InputImport(name="instanceSchedulePolicy")
+    @Import(name="instanceSchedulePolicy")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
 
     public Output<ResourcePolicyInstanceSchedulePolicyArgs> getInstanceSchedulePolicy() {
@@ -51,28 +51,28 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -83,7 +83,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource policy for persistent disks for creating snapshots.
      * 
      */
-    @InputImport(name="snapshotSchedulePolicy")
+    @Import(name="snapshotSchedulePolicy")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
     public Output<ResourcePolicySnapshotSchedulePolicyArgs> getSnapshotSchedulePolicy() {
@@ -94,7 +94,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource policy applicable to VMs for infrastructure maintenance.
      * 
      */
-    @InputImport(name="vmMaintenancePolicy")
+    @Import(name="vmMaintenancePolicy")
       private final @Nullable Output<ResourcePolicyVmMaintenancePolicyArgs> vmMaintenancePolicy;
 
     public Output<ResourcePolicyVmMaintenancePolicyArgs> getVmMaintenancePolicy() {

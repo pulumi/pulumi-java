@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourceAPTResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourceDebResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourceGooGetResponse;
@@ -14,7 +14,7 @@ import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourc
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourcePackageResourceResponse {
     /**
      * A package managed by Apt.
@@ -57,16 +57,16 @@ public final class OSPolicyResourcePackageResourceResponse {
      */
     private final OSPolicyResourcePackageResourceZypperResponse zypper;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourcePackageResourceResponse(
-        @OutputCustomType.Parameter("apt") OSPolicyResourcePackageResourceAPTResponse apt,
-        @OutputCustomType.Parameter("deb") OSPolicyResourcePackageResourceDebResponse deb,
-        @OutputCustomType.Parameter("desiredState") String desiredState,
-        @OutputCustomType.Parameter("googet") OSPolicyResourcePackageResourceGooGetResponse googet,
-        @OutputCustomType.Parameter("msi") OSPolicyResourcePackageResourceMSIResponse msi,
-        @OutputCustomType.Parameter("rpm") OSPolicyResourcePackageResourceRPMResponse rpm,
-        @OutputCustomType.Parameter("yum") OSPolicyResourcePackageResourceYUMResponse yum,
-        @OutputCustomType.Parameter("zypper") OSPolicyResourcePackageResourceZypperResponse zypper) {
+        @CustomType.Parameter("apt") OSPolicyResourcePackageResourceAPTResponse apt,
+        @CustomType.Parameter("deb") OSPolicyResourcePackageResourceDebResponse deb,
+        @CustomType.Parameter("desiredState") String desiredState,
+        @CustomType.Parameter("googet") OSPolicyResourcePackageResourceGooGetResponse googet,
+        @CustomType.Parameter("msi") OSPolicyResourcePackageResourceMSIResponse msi,
+        @CustomType.Parameter("rpm") OSPolicyResourcePackageResourceRPMResponse rpm,
+        @CustomType.Parameter("yum") OSPolicyResourcePackageResourceYUMResponse yum,
+        @CustomType.Parameter("zypper") OSPolicyResourcePackageResourceZypperResponse zypper) {
         this.apt = apt;
         this.deb = deb;
         this.desiredState = desiredState;

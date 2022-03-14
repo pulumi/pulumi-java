@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.GoogleCloudHealthcareV1ConsentPolicyResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConsentResult {
     /**
      * The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
@@ -63,18 +63,18 @@ public final class GetConsentResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConsentResult(
-        @OutputCustomType.Parameter("consentArtifact") String consentArtifact,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policies") List<GoogleCloudHealthcareV1ConsentPolicyResponse> policies,
-        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
-        @OutputCustomType.Parameter("revisionId") String revisionId,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("ttl") String ttl,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("consentArtifact") String consentArtifact,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policies") List<GoogleCloudHealthcareV1ConsentPolicyResponse> policies,
+        @CustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @CustomType.Parameter("revisionId") String revisionId,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("ttl") String ttl,
+        @CustomType.Parameter("userId") String userId) {
         this.consentArtifact = consentArtifact;
         this.expireTime = expireTime;
         this.metadata = metadata;

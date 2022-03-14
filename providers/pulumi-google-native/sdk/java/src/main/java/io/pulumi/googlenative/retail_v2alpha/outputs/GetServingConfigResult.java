@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServingConfigResult {
     /**
      * Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 10. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
@@ -97,25 +97,25 @@ public final class GetServingConfigResult {
      */
     private final List<String> twowaySynonymsControlIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServingConfigResult(
-        @OutputCustomType.Parameter("boostControlIds") List<String> boostControlIds,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("diversityLevel") String diversityLevel,
-        @OutputCustomType.Parameter("doNotAssociateControlIds") List<String> doNotAssociateControlIds,
-        @OutputCustomType.Parameter("dynamicFacetSpec") GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse dynamicFacetSpec,
-        @OutputCustomType.Parameter("enableCategoryFilterLevel") String enableCategoryFilterLevel,
-        @OutputCustomType.Parameter("facetControlIds") List<String> facetControlIds,
-        @OutputCustomType.Parameter("filterControlIds") List<String> filterControlIds,
-        @OutputCustomType.Parameter("ignoreControlIds") List<String> ignoreControlIds,
-        @OutputCustomType.Parameter("modelId") String modelId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("onewaySynonymsControlIds") List<String> onewaySynonymsControlIds,
-        @OutputCustomType.Parameter("priceRerankingLevel") String priceRerankingLevel,
-        @OutputCustomType.Parameter("redirectControlIds") List<String> redirectControlIds,
-        @OutputCustomType.Parameter("replacementControlIds") List<String> replacementControlIds,
-        @OutputCustomType.Parameter("solutionTypes") List<String> solutionTypes,
-        @OutputCustomType.Parameter("twowaySynonymsControlIds") List<String> twowaySynonymsControlIds) {
+        @CustomType.Parameter("boostControlIds") List<String> boostControlIds,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("diversityLevel") String diversityLevel,
+        @CustomType.Parameter("doNotAssociateControlIds") List<String> doNotAssociateControlIds,
+        @CustomType.Parameter("dynamicFacetSpec") GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse dynamicFacetSpec,
+        @CustomType.Parameter("enableCategoryFilterLevel") String enableCategoryFilterLevel,
+        @CustomType.Parameter("facetControlIds") List<String> facetControlIds,
+        @CustomType.Parameter("filterControlIds") List<String> filterControlIds,
+        @CustomType.Parameter("ignoreControlIds") List<String> ignoreControlIds,
+        @CustomType.Parameter("modelId") String modelId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("onewaySynonymsControlIds") List<String> onewaySynonymsControlIds,
+        @CustomType.Parameter("priceRerankingLevel") String priceRerankingLevel,
+        @CustomType.Parameter("redirectControlIds") List<String> redirectControlIds,
+        @CustomType.Parameter("replacementControlIds") List<String> replacementControlIds,
+        @CustomType.Parameter("solutionTypes") List<String> solutionTypes,
+        @CustomType.Parameter("twowaySynonymsControlIds") List<String> twowaySynonymsControlIds) {
         this.boostControlIds = boostControlIds;
         this.displayName = displayName;
         this.diversityLevel = diversityLevel;

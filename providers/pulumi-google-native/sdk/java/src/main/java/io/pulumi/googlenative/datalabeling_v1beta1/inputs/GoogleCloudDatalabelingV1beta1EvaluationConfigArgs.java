@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
      * Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
      * 
      */
-    @InputImport(name="boundingBoxEvaluationOptions")
+    @Import(name="boundingBoxEvaluationOptions")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
     public Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> getBoundingBoxEvaluationOptions() {

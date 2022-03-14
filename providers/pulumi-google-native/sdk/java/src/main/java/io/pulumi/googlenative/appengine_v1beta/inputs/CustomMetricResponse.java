@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * Allows filtering on the metric's fields.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final String filter;
 
     public String getFilter() {
@@ -32,7 +32,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the metric.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final String metricName;
 
     public String getMetricName() {
@@ -43,7 +43,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
      * 
      */
-    @InputImport(name="singleInstanceAssignment", required=true)
+    @Import(name="singleInstanceAssignment", required=true)
       private final Double singleInstanceAssignment;
 
     public Double getSingleInstanceAssignment() {
@@ -54,7 +54,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
      * 
      */
-    @InputImport(name="targetType", required=true)
+    @Import(name="targetType", required=true)
       private final String targetType;
 
     public String getTargetType() {
@@ -65,7 +65,7 @@ public final class CustomMetricResponse extends io.pulumi.resources.InvokeArgs {
      * The target value for the metric.
      * 
      */
-    @InputImport(name="targetUtilization", required=true)
+    @Import(name="targetUtilization", required=true)
       private final Double targetUtilization;
 
     public Double getTargetUtilization() {

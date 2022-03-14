@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTagResult {
     /**
      * The name of the tag, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
@@ -20,10 +20,10 @@ public final class GetTagResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTagResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("version") String version) {
         this.name = name;
         this.version = version;
     }

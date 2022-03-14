@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExitCodeResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolOutputReferenceResponse;
@@ -24,7 +24,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set
      * 
      */
-    @InputImport(name="commandLineArguments", required=true)
+    @Import(name="commandLineArguments", required=true)
       private final List<String> commandLineArguments;
 
     public List<String> getCommandLineArguments() {
@@ -35,7 +35,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * Tool execution exit code. This field will be set once the tool has exited. - In response: present if set by create/update request - In create request: optional - In update request: optional, a FAILED_PRECONDITION error will be returned if an exit_code is already set.
      * 
      */
-    @InputImport(name="exitCode", required=true)
+    @Import(name="exitCode", required=true)
       private final ToolExitCodeResponse exitCode;
 
     public ToolExitCodeResponse getExitCode() {
@@ -46,7 +46,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * References to any plain text logs output the tool execution. This field can be set before the tool has exited in order to be able to have access to a live view of the logs while the tool is running. The maximum allowed number of tool logs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
      * 
      */
-    @InputImport(name="toolLogs", required=true)
+    @Import(name="toolLogs", required=true)
       private final List<FileReferenceResponse> toolLogs;
 
     public List<FileReferenceResponse> getToolLogs() {
@@ -57,7 +57,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * References to opaque files of any format output by the tool execution. The maximum allowed number of tool outputs per step is 1000. - In response: present if set by create/update request - In create request: optional - In update request: optional, any value provided will be appended to the existing list
      * 
      */
-    @InputImport(name="toolOutputs", required=true)
+    @Import(name="toolOutputs", required=true)
       private final List<ToolOutputReferenceResponse> toolOutputs;
 
     public List<ToolOutputReferenceResponse> getToolOutputs() {

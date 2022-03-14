@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * Input only. Points to a Cloud Storage URI containing the consent artifact content. The URI must be in the following format: `gs://{bucket_id}/{object_id}`. The Cloud Healthcare API service account must have the `roles/storage.objectViewer` Cloud IAM role for this Cloud Storage location. The consent artifact content at this URI is copied to a Cloud Storage location managed by the Cloud Healthcare API. Responses to fetching requests return the consent artifact content in raw_bytes.
      * 
      */
-    @InputImport(name="gcsUri", required=true)
+    @Import(name="gcsUri", required=true)
       private final String gcsUri;
 
     public String getGcsUri() {
@@ -31,7 +31,7 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
      * Consent artifact content represented as a stream of bytes. This field is populated when returned in GetConsentArtifact response, but not included in CreateConsentArtifact and ListConsentArtifact response.
      * 
      */
-    @InputImport(name="rawBytes", required=true)
+    @Import(name="rawBytes", required=true)
       private final String rawBytes;
 
     public String getRawBytes() {

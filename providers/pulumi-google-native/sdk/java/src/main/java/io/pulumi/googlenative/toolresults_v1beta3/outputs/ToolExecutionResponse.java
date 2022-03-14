@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.ToolExitCodeResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.ToolOutputReferenceResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ToolExecutionResponse {
     /**
      * The full tokenized command line including the program name (equivalent to argv in a C program). - In response: present if set by create request - In create request: optional - In update request: never set
@@ -34,12 +34,12 @@ public final class ToolExecutionResponse {
      */
     private final List<ToolOutputReferenceResponse> toolOutputs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ToolExecutionResponse(
-        @OutputCustomType.Parameter("commandLineArguments") List<String> commandLineArguments,
-        @OutputCustomType.Parameter("exitCode") ToolExitCodeResponse exitCode,
-        @OutputCustomType.Parameter("toolLogs") List<FileReferenceResponse> toolLogs,
-        @OutputCustomType.Parameter("toolOutputs") List<ToolOutputReferenceResponse> toolOutputs) {
+        @CustomType.Parameter("commandLineArguments") List<String> commandLineArguments,
+        @CustomType.Parameter("exitCode") ToolExitCodeResponse exitCode,
+        @CustomType.Parameter("toolLogs") List<FileReferenceResponse> toolLogs,
+        @CustomType.Parameter("toolOutputs") List<ToolOutputReferenceResponse> toolOutputs) {
         this.commandLineArguments = commandLineArguments;
         this.exitCode = exitCode;
         this.toolLogs = toolLogs;

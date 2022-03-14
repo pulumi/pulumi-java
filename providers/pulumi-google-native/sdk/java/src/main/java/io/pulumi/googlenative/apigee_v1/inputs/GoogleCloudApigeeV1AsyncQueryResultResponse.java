@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends io.pulumi
      * Query result will be unaccessable after this time.
      * 
      */
-    @InputImport(name="expires", required=true)
+    @Import(name="expires", required=true)
       private final String expires;
 
     public String getExpires() {
@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse extends io.pulumi
      * Self link of the query results. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
      * 
      */
-    @InputImport(name="self", required=true)
+    @Import(name="self", required=true)
       private final String self;
 
     public String getSelf() {

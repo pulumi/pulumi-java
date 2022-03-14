@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__BuiltInAlgorithmOutputResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__HyperparameterOutputResponse;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__TrainingOutputResponse {
     /**
      * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
@@ -56,16 +56,16 @@ public final class GoogleCloudMlV1__TrainingOutputResponse {
      */
     private final Map<String,String> webAccessUris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__TrainingOutputResponse(
-        @OutputCustomType.Parameter("builtInAlgorithmOutput") GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
-        @OutputCustomType.Parameter("completedTrialCount") String completedTrialCount,
-        @OutputCustomType.Parameter("consumedMLUnits") Double consumedMLUnits,
-        @OutputCustomType.Parameter("hyperparameterMetricTag") String hyperparameterMetricTag,
-        @OutputCustomType.Parameter("isBuiltInAlgorithmJob") Boolean isBuiltInAlgorithmJob,
-        @OutputCustomType.Parameter("isHyperparameterTuningJob") Boolean isHyperparameterTuningJob,
-        @OutputCustomType.Parameter("trials") List<GoogleCloudMlV1__HyperparameterOutputResponse> trials,
-        @OutputCustomType.Parameter("webAccessUris") Map<String,String> webAccessUris) {
+        @CustomType.Parameter("builtInAlgorithmOutput") GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
+        @CustomType.Parameter("completedTrialCount") String completedTrialCount,
+        @CustomType.Parameter("consumedMLUnits") Double consumedMLUnits,
+        @CustomType.Parameter("hyperparameterMetricTag") String hyperparameterMetricTag,
+        @CustomType.Parameter("isBuiltInAlgorithmJob") Boolean isBuiltInAlgorithmJob,
+        @CustomType.Parameter("isHyperparameterTuningJob") Boolean isHyperparameterTuningJob,
+        @CustomType.Parameter("trials") List<GoogleCloudMlV1__HyperparameterOutputResponse> trials,
+        @CustomType.Parameter("webAccessUris") Map<String,String> webAccessUris) {
         this.builtInAlgorithmOutput = builtInAlgorithmOutput;
         this.completedTrialCount = completedTrialCount;
         this.consumedMLUnits = consumedMLUnits;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.inputs.EcKeyTypeArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.RsaKeyTypeArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Represents an allowed Elliptic Curve key type.
      * 
      */
-    @InputImport(name="ellipticCurve")
+    @Import(name="ellipticCurve")
       private final @Nullable Output<EcKeyTypeArgs> ellipticCurve;
 
     public Output<EcKeyTypeArgs> getEllipticCurve() {
@@ -34,7 +34,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Represents an allowed RSA key type.
      * 
      */
-    @InputImport(name="rsa")
+    @Import(name="rsa")
       private final @Nullable Output<RsaKeyTypeArgs> rsa;
 
     public Output<RsaKeyTypeArgs> getRsa() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulum
      * Name of the event.
      * 
      */
-    @InputImport(name="event")
+    @Import(name="event")
       private final @Nullable Output<String> event;
 
     public Output<String> getEvent() {

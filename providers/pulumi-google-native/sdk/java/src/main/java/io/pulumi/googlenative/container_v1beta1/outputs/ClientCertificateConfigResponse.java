@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClientCertificateConfigResponse {
     /**
      * Issue a client certificate.
@@ -15,8 +15,8 @@ public final class ClientCertificateConfigResponse {
      */
     private final Boolean issueClientCertificate;
 
-    @OutputCustomType.Constructor
-    private ClientCertificateConfigResponse(@OutputCustomType.Parameter("issueClientCertificate") Boolean issueClientCertificate) {
+    @CustomType.Constructor
+    private ClientCertificateConfigResponse(@CustomType.Parameter("issueClientCertificate") Boolean issueClientCertificate) {
         this.issueClientCertificate = issueClientCertificate;
     }
 

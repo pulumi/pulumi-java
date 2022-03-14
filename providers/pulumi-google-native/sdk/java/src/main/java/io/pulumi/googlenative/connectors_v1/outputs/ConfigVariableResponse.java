@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.SecretResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigVariableResponse {
     /**
      * Value is a bool.
@@ -37,13 +37,13 @@ public final class ConfigVariableResponse {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigVariableResponse(
-        @OutputCustomType.Parameter("boolValue") Boolean boolValue,
-        @OutputCustomType.Parameter("intValue") String intValue,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("secretValue") SecretResponse secretValue,
-        @OutputCustomType.Parameter("stringValue") String stringValue) {
+        @CustomType.Parameter("boolValue") Boolean boolValue,
+        @CustomType.Parameter("intValue") String intValue,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("secretValue") SecretResponse secretValue,
+        @CustomType.Parameter("stringValue") String stringValue) {
         this.boolValue = boolValue;
         this.intValue = intValue;
         this.key = key;

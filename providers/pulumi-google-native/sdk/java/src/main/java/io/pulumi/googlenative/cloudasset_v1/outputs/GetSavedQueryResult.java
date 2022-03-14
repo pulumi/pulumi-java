@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.QueryContentResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSavedQueryResult {
     /**
      * The query content.
@@ -52,16 +52,16 @@ public final class GetSavedQueryResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSavedQueryResult(
-        @OutputCustomType.Parameter("content") QueryContentResponse content,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("creator") String creator,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
-        @OutputCustomType.Parameter("lastUpdater") String lastUpdater,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("content") QueryContentResponse content,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("creator") String creator,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @CustomType.Parameter("lastUpdater") String lastUpdater,
+        @CustomType.Parameter("name") String name) {
         this.content = content;
         this.createTime = createTime;
         this.creator = creator;

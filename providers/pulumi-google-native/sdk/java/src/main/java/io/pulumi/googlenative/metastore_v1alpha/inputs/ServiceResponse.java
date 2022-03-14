@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.HiveMetastoreConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.MaintenanceWindowResponse;
@@ -28,7 +28,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
      * 
      */
-    @InputImport(name="artifactGcsUri", required=true)
+    @Import(name="artifactGcsUri", required=true)
       private final String artifactGcsUri;
 
     public String getArtifactGcsUri() {
@@ -39,7 +39,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The time when the metastore service was created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -50,7 +50,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. The database type that the Metastore service stores its data.
      * 
      */
-    @InputImport(name="databaseType", required=true)
+    @Import(name="databaseType", required=true)
       private final String databaseType;
 
     public String getDatabaseType() {
@@ -61,7 +61,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
      * 
      */
-    @InputImport(name="encryptionConfig", required=true)
+    @Import(name="encryptionConfig", required=true)
       private final EncryptionConfigResponse encryptionConfig;
 
     public EncryptionConfigResponse getEncryptionConfig() {
@@ -72,7 +72,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The URI of the endpoint used to access the metastore service.
      * 
      */
-    @InputImport(name="endpointUri", required=true)
+    @Import(name="endpointUri", required=true)
       private final String endpointUri;
 
     public String getEndpointUri() {
@@ -83,7 +83,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration information specific to running Hive metastore software as the metastore service.
      * 
      */
-    @InputImport(name="hiveMetastoreConfig", required=true)
+    @Import(name="hiveMetastoreConfig", required=true)
       private final HiveMetastoreConfigResponse hiveMetastoreConfig;
 
     public HiveMetastoreConfigResponse getHiveMetastoreConfig() {
@@ -94,7 +94,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * User-defined labels for the metastore service.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -105,7 +105,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
      * 
      */
-    @InputImport(name="maintenanceWindow", required=true)
+    @Import(name="maintenanceWindow", required=true)
       private final MaintenanceWindowResponse maintenanceWindow;
 
     public MaintenanceWindowResponse getMaintenanceWindow() {
@@ -116,7 +116,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The setting that defines how metastore metadata should be integrated with external services and systems.
      * 
      */
-    @InputImport(name="metadataIntegration", required=true)
+    @Import(name="metadataIntegration", required=true)
       private final MetadataIntegrationResponse metadataIntegration;
 
     public MetadataIntegrationResponse getMetadataIntegration() {
@@ -127,7 +127,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The metadata management activities of the metastore service.
      * 
      */
-    @InputImport(name="metadataManagementActivity", required=true)
+    @Import(name="metadataManagementActivity", required=true)
       private final MetadataManagementActivityResponse metadataManagementActivity;
 
     public MetadataManagementActivityResponse getMetadataManagementActivity() {
@@ -138,7 +138,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -149,7 +149,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -160,7 +160,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
      * 
      */
-    @InputImport(name="networkConfig", required=true)
+    @Import(name="networkConfig", required=true)
       private final NetworkConfigResponse networkConfig;
 
     public NetworkConfigResponse getNetworkConfig() {
@@ -171,7 +171,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The TCP port at which the metastore service is reached. Default: 9083.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -182,7 +182,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
      * 
      */
-    @InputImport(name="releaseChannel", required=true)
+    @Import(name="releaseChannel", required=true)
       private final String releaseChannel;
 
     public String getReleaseChannel() {
@@ -193,7 +193,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The current state of the metastore service.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -204,7 +204,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Additional information about the current state of the metastore service, if available.
      * 
      */
-    @InputImport(name="stateMessage", required=true)
+    @Import(name="stateMessage", required=true)
       private final String stateMessage;
 
     public String getStateMessage() {
@@ -215,7 +215,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The tier of the service.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {
@@ -226,7 +226,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The globally unique resource identifier of the metastore service.
      * 
      */
-    @InputImport(name="uid", required=true)
+    @Import(name="uid", required=true)
       private final String uid;
 
     public String getUid() {
@@ -237,7 +237,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The time when the metastore service was last updated.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

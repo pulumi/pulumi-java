@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexArgs;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * Description of the StoredInfoType (max 256 characters).
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * Store dictionary-based CustomInfoType.
      * 
      */
-    @InputImport(name="dictionary")
+    @Import(name="dictionary")
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
     public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * Display name of the StoredInfoType (max 256 characters).
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * StoredInfoType where findings are defined by a dictionary of phrases.
      * 
      */
-    @InputImport(name="largeCustomDictionary")
+    @Import(name="largeCustomDictionary")
       private final @Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
 
     public Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> getLargeCustomDictionary() {
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * Store regular expression-based StoredInfoType.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
     public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {

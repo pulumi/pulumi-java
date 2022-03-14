@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2StoredTypeResponse {
     /**
      * Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2StoredTypeResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2StoredTypeResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("name") String name) {
         this.createTime = createTime;
         this.name = name;
     }

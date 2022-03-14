@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * The number of the accelerator cards exposed to an instance.
      * 
      */
-    @InputImport(name="acceleratorCount")
+    @Import(name="acceleratorCount")
       private final @Nullable Output<String> acceleratorCount;
 
     public Output<String> getAcceleratorCount() {
@@ -33,7 +33,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
      * 
      */
-    @InputImport(name="acceleratorType")
+    @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
     public Output<String> getAcceleratorType() {
@@ -44,7 +44,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
      * 
      */
-    @InputImport(name="gpuPartitionSize")
+    @Import(name="gpuPartitionSize")
       private final @Nullable Output<String> gpuPartitionSize;
 
     public Output<String> getGpuPartitionSize() {

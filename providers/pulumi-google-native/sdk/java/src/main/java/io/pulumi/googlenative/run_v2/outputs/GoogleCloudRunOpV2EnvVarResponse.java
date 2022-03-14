@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2EnvVarSourceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2EnvVarResponse {
     /**
      * Name of the environment variable. Must be a C_IDENTIFIER, and mnay not exceed 32768 characters.
@@ -26,11 +26,11 @@ public final class GoogleCloudRunOpV2EnvVarResponse {
      */
     private final GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2EnvVarResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value,
-        @OutputCustomType.Parameter("valueSource") GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value,
+        @CustomType.Parameter("valueSource") GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
         this.name = name;
         this.value = value;
         this.valueSource = valueSource;

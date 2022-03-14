@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * A URI pointing to the location of the diagnostics tarball.
      * 
      */
-    @InputImport(name="diagnosticOutputUri", required=true)
+    @Import(name="diagnosticOutputUri", required=true)
       private final String diagnosticOutputUri;
 
     public String getDiagnosticOutputUri() {
@@ -32,7 +32,7 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
      * 
      */
-    @InputImport(name="endpoints", required=true)
+    @Import(name="endpoints", required=true)
       private final Map<String,String> endpoints;
 
     public Map<String,String> getEndpoints() {
@@ -43,7 +43,7 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * A URI pointing to the location of the stdout and stderr of the workload.
      * 
      */
-    @InputImport(name="outputUri", required=true)
+    @Import(name="outputUri", required=true)
       private final String outputUri;
 
     public String getOutputUri() {

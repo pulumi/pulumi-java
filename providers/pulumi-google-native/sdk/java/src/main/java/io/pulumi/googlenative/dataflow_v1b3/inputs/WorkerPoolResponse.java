@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.AutoscalingSettingsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DiskResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.PackageResponse;
@@ -28,7 +28,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Settings for autoscaling of this WorkerPool.
      * 
      */
-    @InputImport(name="autoscalingSettings", required=true)
+    @Import(name="autoscalingSettings", required=true)
       private final AutoscalingSettingsResponse autoscalingSettings;
 
     public AutoscalingSettingsResponse getAutoscalingSettings() {
@@ -39,7 +39,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Data disks that are used by a VM in this workflow.
      * 
      */
-    @InputImport(name="dataDisks", required=true)
+    @Import(name="dataDisks", required=true)
       private final List<DiskResponse> dataDisks;
 
     public List<DiskResponse> getDataDisks() {
@@ -50,7 +50,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * The default package set to install. This allows the service to select a default set of packages which are useful to worker harnesses written in a particular language.
      * 
      */
-    @InputImport(name="defaultPackageSet", required=true)
+    @Import(name="defaultPackageSet", required=true)
       private final String defaultPackageSet;
 
     public String getDefaultPackageSet() {
@@ -61,7 +61,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
-    @InputImport(name="diskSizeGb", required=true)
+    @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
@@ -72,7 +72,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Fully qualified source image for disks.
      * 
      */
-    @InputImport(name="diskSourceImage", required=true)
+    @Import(name="diskSourceImage", required=true)
       private final String diskSourceImage;
 
     public String getDiskSourceImage() {
@@ -83,7 +83,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Type of root disk for VMs. If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
-    @InputImport(name="diskType", required=true)
+    @Import(name="diskType", required=true)
       private final String diskType;
 
     public String getDiskType() {
@@ -94,7 +94,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for VM IPs.
      * 
      */
-    @InputImport(name="ipConfiguration", required=true)
+    @Import(name="ipConfiguration", required=true)
       private final String ipConfiguration;
 
     public String getIpConfiguration() {
@@ -105,7 +105,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * The kind of the worker pool; currently only `harness` and `shuffle` are supported.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -116,7 +116,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Machine type (e.g. "n1-standard-1"). If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -127,7 +127,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata to set on the Google Compute Engine VMs.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -138,7 +138,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -149,7 +149,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * The number of threads per worker harness. If empty or unspecified, the service will choose a number of threads (according to the number of cores on the selected machine type for batch, or 1 by convention for streaming).
      * 
      */
-    @InputImport(name="numThreadsPerWorker", required=true)
+    @Import(name="numThreadsPerWorker", required=true)
       private final Integer numThreadsPerWorker;
 
     public Integer getNumThreadsPerWorker() {
@@ -160,7 +160,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Number of Google Compute Engine workers in this pool needed to execute the job. If zero or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
-    @InputImport(name="numWorkers", required=true)
+    @Import(name="numWorkers", required=true)
       private final Integer numWorkers;
 
     public Integer getNumWorkers() {
@@ -171,7 +171,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * The action to take on host maintenance, as defined by the Google Compute Engine API.
      * 
      */
-    @InputImport(name="onHostMaintenance", required=true)
+    @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
@@ -182,7 +182,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Packages to be installed on workers.
      * 
      */
-    @InputImport(name="packages", required=true)
+    @Import(name="packages", required=true)
       private final List<PackageResponse> packages;
 
     public List<PackageResponse> getPackages() {
@@ -193,7 +193,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Extra arguments for this worker pool.
      * 
      */
-    @InputImport(name="poolArgs", required=true)
+    @Import(name="poolArgs", required=true)
       private final Map<String,String> poolArgs;
 
     public Map<String,String> getPoolArgs() {
@@ -204,7 +204,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Set of SDK harness containers needed to execute this pipeline. This will only be set in the Fn API path. For non-cross-language pipelines this should have only one entry. Cross-language pipelines will have two or more entries.
      * 
      */
-    @InputImport(name="sdkHarnessContainerImages", required=true)
+    @Import(name="sdkHarnessContainerImages", required=true)
       private final List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
 
     public List<SdkHarnessContainerImageResponse> getSdkHarnessContainerImages() {
@@ -215,7 +215,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Subnetwork to which VMs will be assigned, if desired. Expected to be of the form "regions/REGION/subnetworks/SUBNETWORK".
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {
@@ -226,7 +226,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Settings passed through to Google Compute Engine workers when using the standard Dataflow task runner. Users should ignore this field.
      * 
      */
-    @InputImport(name="taskrunnerSettings", required=true)
+    @Import(name="taskrunnerSettings", required=true)
       private final TaskRunnerSettingsResponse taskrunnerSettings;
 
     public TaskRunnerSettingsResponse getTaskrunnerSettings() {
@@ -237,7 +237,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Sets the policy for determining when to turndown worker pool. Allowed values are: `TEARDOWN_ALWAYS`, `TEARDOWN_ON_SUCCESS`, and `TEARDOWN_NEVER`. `TEARDOWN_ALWAYS` means workers are always torn down regardless of whether the job succeeds. `TEARDOWN_ON_SUCCESS` means workers are torn down if the job succeeds. `TEARDOWN_NEVER` means the workers are never torn down. If the workers are not torn down by the service, they will continue to run and use Google Compute Engine VM resources in the user's project until they are explicitly terminated by the user. Because of this, Google recommends using the `TEARDOWN_ALWAYS` policy except for small, manually supervised test jobs. If unknown or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
-    @InputImport(name="teardownPolicy", required=true)
+    @Import(name="teardownPolicy", required=true)
       private final String teardownPolicy;
 
     public String getTeardownPolicy() {
@@ -248,7 +248,7 @@ public final class WorkerPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Zone to run the worker pools in. If empty or unspecified, the service will attempt to choose a reasonable default.
      * 
      */
-    @InputImport(name="zone", required=true)
+    @Import(name="zone", required=true)
       private final String zone;
 
     public String getZone() {

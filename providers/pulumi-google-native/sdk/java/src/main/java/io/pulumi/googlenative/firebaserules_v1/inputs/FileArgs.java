@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaserules_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * Textual Content.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -33,7 +33,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * Fingerprint (e.g. github sha) associated with the `File`.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -44,7 +44,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * File name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
      * Optional. Last time the condition transitioned from one status to another.
      * 
      */
-    @InputImport(name="lastTransitionTime")
+    @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
     public Output<String> getLastTransitionTime() {
@@ -33,7 +33,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
      * Optional. Human readable message indicating details about the current status.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -44,7 +44,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
      * Optional. One-word CamelCase reason for the condition's last transition.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -55,7 +55,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
      * Optional. How to interpret failures of this condition, one of Error, Warning, Info
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<String> severity;
 
     public Output<String> getSeverity() {
@@ -66,7 +66,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
      * Status of the condition, one of True, False, Unknown.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -77,7 +77,7 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
      * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

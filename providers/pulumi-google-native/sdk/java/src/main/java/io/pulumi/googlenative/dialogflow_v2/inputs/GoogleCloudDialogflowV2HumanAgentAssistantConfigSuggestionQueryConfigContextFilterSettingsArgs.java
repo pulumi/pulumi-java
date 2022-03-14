@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
      * 
      */
-    @InputImport(name="dropHandoffMessages")
+    @Import(name="dropHandoffMessages")
       private final @Nullable Output<Boolean> dropHandoffMessages;
 
     public Output<Boolean> getDropHandoffMessages() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * If set to true, all messages from ivr stage are dropped.
      * 
      */
-    @InputImport(name="dropIvrMessages")
+    @Import(name="dropIvrMessages")
       private final @Nullable Output<Boolean> dropIvrMessages;
 
     public Output<Boolean> getDropIvrMessages() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * If set to true, all messages from virtual agent are dropped.
      * 
      */
-    @InputImport(name="dropVirtualAgentMessages")
+    @Import(name="dropVirtualAgentMessages")
       private final @Nullable Output<Boolean> dropVirtualAgentMessages;
 
     public Output<Boolean> getDropVirtualAgentMessages() {

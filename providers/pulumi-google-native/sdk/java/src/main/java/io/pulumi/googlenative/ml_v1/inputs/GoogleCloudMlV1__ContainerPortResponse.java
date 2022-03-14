@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1__ContainerPortResponse extends io.pulumi.reso
      * Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.
      * 
      */
-    @InputImport(name="containerPort", required=true)
+    @Import(name="containerPort", required=true)
       private final Integer containerPort;
 
     public Integer getContainerPort() {

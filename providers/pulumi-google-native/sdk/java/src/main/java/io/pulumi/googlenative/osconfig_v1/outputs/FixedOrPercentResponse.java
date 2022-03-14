@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FixedOrPercentResponse {
     /**
      * Specifies a fixed value.
@@ -20,10 +20,10 @@ public final class FixedOrPercentResponse {
      */
     private final Integer percent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FixedOrPercentResponse(
-        @OutputCustomType.Parameter("fixed") Integer fixed,
-        @OutputCustomType.Parameter("percent") Integer percent) {
+        @CustomType.Parameter("fixed") Integer fixed,
+        @CustomType.Parameter("percent") Integer percent) {
         this.fixed = fixed;
         this.percent = percent;
     }

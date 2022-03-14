@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user or application.
      * 
      */
-    @InputImport(name="allowUnregisteredCalls")
+    @Import(name="allowUnregisteredCalls")
       private final @Nullable Output<Boolean> allowUnregisteredCalls;
 
     public Output<Boolean> getAllowUnregisteredCalls() {
@@ -34,7 +34,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
@@ -45,7 +45,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the selected method should skip service control and the control plane features, such as quota and billing, will not be available. This flag is used by Google Cloud Endpoints to bypass checks for internal methods, such as service health check methods.
      * 
      */
-    @InputImport(name="skipServiceControl")
+    @Import(name="skipServiceControl")
       private final @Nullable Output<Boolean> skipServiceControl;
 
     public Output<Boolean> getSkipServiceControl() {

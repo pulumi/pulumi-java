@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiskInstantiationConfigResponse {
     /**
      * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
@@ -31,12 +31,12 @@ public final class DiskInstantiationConfigResponse {
      */
     private final String instantiateFrom;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskInstantiationConfigResponse(
-        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
-        @OutputCustomType.Parameter("customImage") String customImage,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("instantiateFrom") String instantiateFrom) {
+        @CustomType.Parameter("autoDelete") Boolean autoDelete,
+        @CustomType.Parameter("customImage") String customImage,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("instantiateFrom") String instantiateFrom) {
         this.autoDelete = autoDelete;
         this.customImage = customImage;
         this.deviceName = deviceName;

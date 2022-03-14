@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressFromArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressToArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the conditions on the source of a request causing this IngressPolicy to apply.
      * 
      */
-    @InputImport(name="ingressFrom")
+    @Import(name="ingressFrom")
       private final @Nullable Output<IngressFromArgs> ingressFrom;
 
     public Output<IngressFromArgs> getIngressFrom() {
@@ -34,7 +34,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply.
      * 
      */
-    @InputImport(name="ingressTo")
+    @Import(name="ingressTo")
       private final @Nullable Output<IngressToArgs> ingressTo;
 
     public Output<IngressToArgs> getIngressTo() {

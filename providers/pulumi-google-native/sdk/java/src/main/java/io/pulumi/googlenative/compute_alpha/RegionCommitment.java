@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionCommitmentArgs;
@@ -28,7 +28,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
      * 
      */
-    @OutputExport(name="autoRenew", type=Boolean.class, parameters={})
+    @Export(name="autoRenew", type=Boolean.class, parameters={})
     private Output<Boolean> autoRenew;
 
     /**
@@ -42,7 +42,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.
      * 
      */
-    @OutputExport(name="category", type=String.class, parameters={})
+    @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
@@ -56,7 +56,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -70,7 +70,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -84,7 +84,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Commitment end time in RFC3339 text format.
      * 
      */
-    @OutputExport(name="endTimestamp", type=String.class, parameters={})
+    @Export(name="endTimestamp", type=String.class, parameters={})
     private Output<String> endTimestamp;
 
     /**
@@ -98,7 +98,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#commitment for commitments.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -112,7 +112,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * The license specification required as part of a license commitment.
      * 
      */
-    @OutputExport(name="licenseResource", type=LicenseResourceCommitmentResponse.class, parameters={})
+    @Export(name="licenseResource", type=LicenseResourceCommitmentResponse.class, parameters={})
     private Output<LicenseResourceCommitmentResponse> licenseResource;
 
     /**
@@ -126,7 +126,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * List of source commitments to be merged into a new commitment.
      * 
      */
-    @OutputExport(name="mergeSourceCommitments", type=List.class, parameters={String.class})
+    @Export(name="mergeSourceCommitments", type=List.class, parameters={String.class})
     private Output<List<String>> mergeSourceCommitments;
 
     /**
@@ -140,7 +140,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -154,7 +154,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
      * 
      */
-    @OutputExport(name="plan", type=String.class, parameters={})
+    @Export(name="plan", type=String.class, parameters={})
     private Output<String> plan;
 
     /**
@@ -168,7 +168,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * URL of the region where this commitment may be used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -182,7 +182,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * List of reservations in this commitment.
      * 
      */
-    @OutputExport(name="reservations", type=List.class, parameters={ReservationResponse.class})
+    @Export(name="reservations", type=List.class, parameters={ReservationResponse.class})
     private Output<List<ReservationResponse>> reservations;
 
     /**
@@ -196,7 +196,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.
      * 
      */
-    @OutputExport(name="resources", type=List.class, parameters={ResourceCommitmentResponse.class})
+    @Export(name="resources", type=List.class, parameters={ResourceCommitmentResponse.class})
     private Output<List<ResourceCommitmentResponse>> resources;
 
     /**
@@ -210,7 +210,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -224,7 +224,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -238,7 +238,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Source commitment to be splitted into a new commitment.
      * 
      */
-    @OutputExport(name="splitSourceCommitment", type=String.class, parameters={})
+    @Export(name="splitSourceCommitment", type=String.class, parameters={})
     private Output<String> splitSourceCommitment;
 
     /**
@@ -252,7 +252,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Commitment start time in RFC3339 text format.
      * 
      */
-    @OutputExport(name="startTimestamp", type=String.class, parameters={})
+    @Export(name="startTimestamp", type=String.class, parameters={})
     private Output<String> startTimestamp;
 
     /**
@@ -266,7 +266,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * Status of the commitment with regards to eventual expiration (each commitment has an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -280,7 +280,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * An optional, human-readable explanation of the status.
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -294,7 +294,7 @@ public class RegionCommitment extends io.pulumi.resources.CustomResource {
      * The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

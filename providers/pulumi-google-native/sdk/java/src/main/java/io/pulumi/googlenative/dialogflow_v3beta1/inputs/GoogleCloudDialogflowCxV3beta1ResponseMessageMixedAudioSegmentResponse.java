@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.
      * 
      */
-    @InputImport(name="allowPlaybackInterruption", required=true)
+    @Import(name="allowPlaybackInterruption", required=true)
       private final Boolean allowPlaybackInterruption;
 
     public Boolean getAllowPlaybackInterruption() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.
      * 
      */
-    @InputImport(name="audio", required=true)
+    @Import(name="audio", required=true)
       private final String audio;
 
     public String getAudio() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

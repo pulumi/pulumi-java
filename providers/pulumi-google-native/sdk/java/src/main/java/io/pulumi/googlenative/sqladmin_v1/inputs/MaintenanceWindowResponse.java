@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * day of week (1-7), starting on Monday.
      * 
      */
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final Integer day;
 
     public Integer getDay() {
@@ -32,7 +32,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * hour of day - 0 to 23.
      * 
      */
-    @InputImport(name="hour", required=true)
+    @Import(name="hour", required=true)
       private final Integer hour;
 
     public Integer getHour() {
@@ -43,7 +43,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * This is always `sql#maintenanceWindow`.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -54,7 +54,7 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
      * Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
      * 
      */
-    @InputImport(name="updateTrack", required=true)
+    @Import(name="updateTrack", required=true)
       private final String updateTrack;
 
     public String getUpdateTrack() {

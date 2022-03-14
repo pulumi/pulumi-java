@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.HttpFaultAbortResponse;
 import io.pulumi.googlenative.compute_beta.outputs.HttpFaultDelayResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpFaultInjectionResponse {
     /**
      * The specification for how client requests are aborted as part of fault injection.
@@ -21,10 +21,10 @@ public final class HttpFaultInjectionResponse {
      */
     private final HttpFaultDelayResponse delay;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpFaultInjectionResponse(
-        @OutputCustomType.Parameter("abort") HttpFaultAbortResponse abort,
-        @OutputCustomType.Parameter("delay") HttpFaultDelayResponse delay) {
+        @CustomType.Parameter("abort") HttpFaultAbortResponse abort,
+        @CustomType.Parameter("delay") HttpFaultDelayResponse delay) {
         this.abort = abort;
         this.delay = delay;
     }

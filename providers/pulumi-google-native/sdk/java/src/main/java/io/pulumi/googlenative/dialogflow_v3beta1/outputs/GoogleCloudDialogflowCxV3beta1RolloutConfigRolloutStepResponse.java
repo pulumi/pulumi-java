@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse {
     /**
      * The name of the rollout step;
@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
      */
     private final Integer trafficPercent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("minDuration") String minDuration,
-        @OutputCustomType.Parameter("trafficPercent") Integer trafficPercent) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("minDuration") String minDuration,
+        @CustomType.Parameter("trafficPercent") Integer trafficPercent) {
         this.displayName = displayName;
         this.minDuration = minDuration;
         this.trafficPercent = trafficPercent;

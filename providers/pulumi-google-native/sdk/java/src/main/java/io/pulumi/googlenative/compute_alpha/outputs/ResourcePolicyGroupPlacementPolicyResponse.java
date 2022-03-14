@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyGroupPlacementPolicyResponse {
     /**
      * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
@@ -41,14 +41,14 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
      */
     private final Integer vmCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyGroupPlacementPolicyResponse(
-        @OutputCustomType.Parameter("availabilityDomainCount") Integer availabilityDomainCount,
-        @OutputCustomType.Parameter("collocation") String collocation,
-        @OutputCustomType.Parameter("locality") String locality,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("style") String style,
-        @OutputCustomType.Parameter("vmCount") Integer vmCount) {
+        @CustomType.Parameter("availabilityDomainCount") Integer availabilityDomainCount,
+        @CustomType.Parameter("collocation") String collocation,
+        @CustomType.Parameter("locality") String locality,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("style") String style,
+        @CustomType.Parameter("vmCount") Integer vmCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         this.collocation = collocation;
         this.locality = locality;

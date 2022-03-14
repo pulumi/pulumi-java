@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.file_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigResponse {
     /**
      * The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.
@@ -36,13 +36,13 @@ public final class NetworkConfigResponse {
      */
     private final String reservedIpRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkConfigResponse(
-        @OutputCustomType.Parameter("connectMode") String connectMode,
-        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
-        @OutputCustomType.Parameter("modes") List<String> modes,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("reservedIpRange") String reservedIpRange) {
+        @CustomType.Parameter("connectMode") String connectMode,
+        @CustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @CustomType.Parameter("modes") List<String> modes,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("reservedIpRange") String reservedIpRange) {
         this.connectMode = connectMode;
         this.ipAddresses = ipAddresses;
         this.modes = modes;

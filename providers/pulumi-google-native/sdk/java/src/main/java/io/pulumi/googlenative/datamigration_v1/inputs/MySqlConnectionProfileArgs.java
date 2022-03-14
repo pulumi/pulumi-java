@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1.inputs.SslConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
      * 
      */
-    @InputImport(name="cloudSqlId")
+    @Import(name="cloudSqlId")
       private final @Nullable Output<String> cloudSqlId;
 
     public Output<String> getCloudSqlId() {
@@ -35,7 +35,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * The IP or hostname of the source MySQL database.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<String> host;
 
     public Output<String> getHost() {
@@ -46,7 +46,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -57,7 +57,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * The network port of the source MySQL database.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -68,7 +68,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * SSL configuration for the destination to connect to the source database.
      * 
      */
-    @InputImport(name="ssl")
+    @Import(name="ssl")
       private final @Nullable Output<SslConfigArgs> ssl;
 
     public Output<SslConfigArgs> getSsl() {
@@ -79,7 +79,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
      * The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

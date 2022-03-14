@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse extends io.pulu
      * StoredInfoType where findings are defined by a dictionary of phrases.
      * 
      */
-    @InputImport(name="largeCustomDictionary", required=true)
+    @Import(name="largeCustomDictionary", required=true)
       private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
 
     public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse getLargeCustomDictionary() {

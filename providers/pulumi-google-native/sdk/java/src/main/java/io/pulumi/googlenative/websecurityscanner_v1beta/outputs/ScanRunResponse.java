@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScanRunErrorTraceResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScanRunWarningTraceResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScanRunResponse {
     /**
      * The time at which the ScanRun reached termination state - that the ScanRun is either finished or stopped by user.
@@ -70,19 +70,19 @@ public final class ScanRunResponse {
      */
     private final List<ScanRunWarningTraceResponse> warningTraces;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScanRunResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("errorTrace") ScanRunErrorTraceResponse errorTrace,
-        @OutputCustomType.Parameter("executionState") String executionState,
-        @OutputCustomType.Parameter("hasVulnerabilities") Boolean hasVulnerabilities,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
-        @OutputCustomType.Parameter("resultState") String resultState,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("urlsCrawledCount") String urlsCrawledCount,
-        @OutputCustomType.Parameter("urlsTestedCount") String urlsTestedCount,
-        @OutputCustomType.Parameter("warningTraces") List<ScanRunWarningTraceResponse> warningTraces) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("errorTrace") ScanRunErrorTraceResponse errorTrace,
+        @CustomType.Parameter("executionState") String executionState,
+        @CustomType.Parameter("hasVulnerabilities") Boolean hasVulnerabilities,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("progressPercent") Integer progressPercent,
+        @CustomType.Parameter("resultState") String resultState,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("urlsCrawledCount") String urlsCrawledCount,
+        @CustomType.Parameter("urlsTestedCount") String urlsTestedCount,
+        @CustomType.Parameter("warningTraces") List<ScanRunWarningTraceResponse> warningTraces) {
         this.endTime = endTime;
         this.errorTrace = errorTrace;
         this.executionState = executionState;

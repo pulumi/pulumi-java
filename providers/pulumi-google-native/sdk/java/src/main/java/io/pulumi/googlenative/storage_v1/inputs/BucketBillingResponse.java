@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BucketBillingResponse extends io.pulumi.resources.InvokeArgs 
      * When set to true, Requester Pays is enabled for this bucket.
      * 
      */
-    @InputImport(name="requesterPays", required=true)
+    @Import(name="requesterPays", required=true)
       private final Boolean requesterPays;
 
     public Boolean getRequesterPays() {

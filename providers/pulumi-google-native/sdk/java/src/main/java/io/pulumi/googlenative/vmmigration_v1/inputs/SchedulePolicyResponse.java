@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
      * The idle duration between replication stages.
      * 
      */
-    @InputImport(name="idleDuration", required=true)
+    @Import(name="idleDuration", required=true)
       private final String idleDuration;
 
     public String getIdleDuration() {
@@ -32,7 +32,7 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
      * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM's operating system undergoes changes and adaptations to fully function on Compute Engine.
      * 
      */
-    @InputImport(name="skipOsAdaptation", required=true)
+    @Import(name="skipOsAdaptation", required=true)
       private final Boolean skipOsAdaptation;
 
     public Boolean getSkipOsAdaptation() {

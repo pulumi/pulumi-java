@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.redis_v1.outputs.MaintenancePolicyResponse;
 import io.pulumi.googlenative.redis_v1.outputs.MaintenanceScheduleResponse;
 import io.pulumi.googlenative.redis_v1.outputs.NodeInfoResponse;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * Optional. If specified, at least one node will be provisioned in this zone in addition to the zone specified in location_id. Only applicable to standard tier. If provided, it must be a different zone from the one provided in [location_id]. Additional nodes beyond the first 2 will be placed in zones selected by the service.
@@ -174,39 +174,39 @@ public final class GetInstanceResult {
      */
     private final String transitEncryptionMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("alternativeLocationId") String alternativeLocationId,
-        @OutputCustomType.Parameter("authEnabled") Boolean authEnabled,
-        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
-        @OutputCustomType.Parameter("connectMode") String connectMode,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("currentLocationId") String currentLocationId,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maintenancePolicy") MaintenancePolicyResponse maintenancePolicy,
-        @OutputCustomType.Parameter("maintenanceSchedule") MaintenanceScheduleResponse maintenanceSchedule,
-        @OutputCustomType.Parameter("memorySizeGb") Integer memorySizeGb,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodes") List<NodeInfoResponse> nodes,
-        @OutputCustomType.Parameter("persistenceConfig") PersistenceConfigResponse persistenceConfig,
-        @OutputCustomType.Parameter("persistenceIamIdentity") String persistenceIamIdentity,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("readEndpoint") String readEndpoint,
-        @OutputCustomType.Parameter("readEndpointPort") Integer readEndpointPort,
-        @OutputCustomType.Parameter("readReplicasMode") String readReplicasMode,
-        @OutputCustomType.Parameter("redisConfigs") Map<String,String> redisConfigs,
-        @OutputCustomType.Parameter("redisVersion") String redisVersion,
-        @OutputCustomType.Parameter("replicaCount") Integer replicaCount,
-        @OutputCustomType.Parameter("reservedIpRange") String reservedIpRange,
-        @OutputCustomType.Parameter("secondaryIpRange") String secondaryIpRange,
-        @OutputCustomType.Parameter("serverCaCerts") List<TlsCertificateResponse> serverCaCerts,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("transitEncryptionMode") String transitEncryptionMode) {
+        @CustomType.Parameter("alternativeLocationId") String alternativeLocationId,
+        @CustomType.Parameter("authEnabled") Boolean authEnabled,
+        @CustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @CustomType.Parameter("connectMode") String connectMode,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("currentLocationId") String currentLocationId,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maintenancePolicy") MaintenancePolicyResponse maintenancePolicy,
+        @CustomType.Parameter("maintenanceSchedule") MaintenanceScheduleResponse maintenanceSchedule,
+        @CustomType.Parameter("memorySizeGb") Integer memorySizeGb,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodes") List<NodeInfoResponse> nodes,
+        @CustomType.Parameter("persistenceConfig") PersistenceConfigResponse persistenceConfig,
+        @CustomType.Parameter("persistenceIamIdentity") String persistenceIamIdentity,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("readEndpoint") String readEndpoint,
+        @CustomType.Parameter("readEndpointPort") Integer readEndpointPort,
+        @CustomType.Parameter("readReplicasMode") String readReplicasMode,
+        @CustomType.Parameter("redisConfigs") Map<String,String> redisConfigs,
+        @CustomType.Parameter("redisVersion") String redisVersion,
+        @CustomType.Parameter("replicaCount") Integer replicaCount,
+        @CustomType.Parameter("reservedIpRange") String reservedIpRange,
+        @CustomType.Parameter("secondaryIpRange") String secondaryIpRange,
+        @CustomType.Parameter("serverCaCerts") List<TlsCertificateResponse> serverCaCerts,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("transitEncryptionMode") String transitEncryptionMode) {
         this.alternativeLocationId = alternativeLocationId;
         this.authEnabled = authEnabled;
         this.authorizedNetwork = authorizedNetwork;

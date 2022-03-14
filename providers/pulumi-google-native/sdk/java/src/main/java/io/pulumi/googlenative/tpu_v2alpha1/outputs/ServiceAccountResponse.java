@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAccountResponse {
     /**
      * Email address of the service account. If empty, default Compute service account will be used.
@@ -21,10 +21,10 @@ public final class ServiceAccountResponse {
      */
     private final List<String> scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAccountResponse(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("scope") List<String> scope) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("scope") List<String> scope) {
         this.email = email;
         this.scope = scope;
     }

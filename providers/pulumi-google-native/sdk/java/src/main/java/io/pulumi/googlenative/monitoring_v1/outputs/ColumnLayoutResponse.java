@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.ColumnResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ColumnLayoutResponse {
     /**
      * The columns of content to display.
@@ -16,8 +16,8 @@ public final class ColumnLayoutResponse {
      */
     private final List<ColumnResponse> columns;
 
-    @OutputCustomType.Constructor
-    private ColumnLayoutResponse(@OutputCustomType.Parameter("columns") List<ColumnResponse> columns) {
+    @CustomType.Constructor
+    private ColumnLayoutResponse(@CustomType.Parameter("columns") List<ColumnResponse> columns) {
         this.columns = columns;
     }
 

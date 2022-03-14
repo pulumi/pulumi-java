@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigFileResponse {
     /**
      * The contents of the file.
@@ -15,8 +15,8 @@ public final class ConfigFileResponse {
      */
     private final String content;
 
-    @OutputCustomType.Constructor
-    private ConfigFileResponse(@OutputCustomType.Parameter("content") String content) {
+    @CustomType.Constructor
+    private ConfigFileResponse(@CustomType.Parameter("content") String content) {
         this.content = content;
     }
 

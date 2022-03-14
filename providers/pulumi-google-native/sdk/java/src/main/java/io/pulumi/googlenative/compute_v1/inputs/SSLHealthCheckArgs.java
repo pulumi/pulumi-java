@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.SSLHealthCheckPortSpecification;
 import io.pulumi.googlenative.compute_v1.enums.SSLHealthCheckProxyHeader;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class SSLHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -32,7 +32,7 @@ public final class SSLHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
      * 
      */
-    @InputImport(name="portName")
+    @Import(name="portName")
       private final @Nullable Output<String> portName;
 
     public Output<String> getPortName() {
@@ -43,7 +43,7 @@ public final class SSLHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, SSL health check follows behavior specified in port and portName fields.
      * 
      */
-    @InputImport(name="portSpecification")
+    @Import(name="portSpecification")
       private final @Nullable Output<SSLHealthCheckPortSpecification> portSpecification;
 
     public Output<SSLHealthCheckPortSpecification> getPortSpecification() {
@@ -54,7 +54,7 @@ public final class SSLHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
      * 
      */
-    @InputImport(name="proxyHeader")
+    @Import(name="proxyHeader")
       private final @Nullable Output<SSLHealthCheckProxyHeader> proxyHeader;
 
     public Output<SSLHealthCheckProxyHeader> getProxyHeader() {
@@ -65,7 +65,7 @@ public final class SSLHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The application data to send once the SSL connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.
      * 
      */
-    @InputImport(name="request")
+    @Import(name="request")
       private final @Nullable Output<String> request;
 
     public Output<String> getRequest() {
@@ -76,7 +76,7 @@ public final class SSLHealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The bytes to match against the beginning of the response data. If left empty (the default value), any response will indicate health. The response data can only be ASCII.
      * 
      */
-    @InputImport(name="response")
+    @Import(name="response")
       private final @Nullable Output<String> response;
 
     public Output<String> getResponse() {

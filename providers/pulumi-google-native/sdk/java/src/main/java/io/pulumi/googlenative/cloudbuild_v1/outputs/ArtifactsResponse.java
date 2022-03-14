@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ArtifactObjectsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ArtifactsResponse {
     /**
      * A list of images to be pushed upon the successful completion of all build steps. The images will be pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build is marked FAILURE.
@@ -22,10 +22,10 @@ public final class ArtifactsResponse {
      */
     private final ArtifactObjectsResponse objects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArtifactsResponse(
-        @OutputCustomType.Parameter("images") List<String> images,
-        @OutputCustomType.Parameter("objects") ArtifactObjectsResponse objects) {
+        @CustomType.Parameter("images") List<String> images,
+        @CustomType.Parameter("objects") ArtifactObjectsResponse objects) {
         this.images = images;
         this.objects = objects;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VertexAIParametersResponse {
     /**
      * Environment variables. At most 100 environment variables can be specified and unique. Example: GCP_BUCKET=gs://my-bucket/samples/
@@ -21,10 +21,10 @@ public final class VertexAIParametersResponse {
      */
     private final String network;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VertexAIParametersResponse(
-        @OutputCustomType.Parameter("env") Map<String,String> env,
-        @OutputCustomType.Parameter("network") String network) {
+        @CustomType.Parameter("env") Map<String,String> env,
+        @CustomType.Parameter("network") String network) {
         this.env = env;
         this.network = network;
     }

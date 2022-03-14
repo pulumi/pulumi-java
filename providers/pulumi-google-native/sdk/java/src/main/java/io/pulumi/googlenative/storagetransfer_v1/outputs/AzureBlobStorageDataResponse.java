@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AzureCredentialsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureBlobStorageDataResponse {
     /**
      * Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
@@ -31,12 +31,12 @@ public final class AzureBlobStorageDataResponse {
      */
     private final String storageAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBlobStorageDataResponse(
-        @OutputCustomType.Parameter("azureCredentials") AzureCredentialsResponse azureCredentials,
-        @OutputCustomType.Parameter("container") String container,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("storageAccount") String storageAccount) {
+        @CustomType.Parameter("azureCredentials") AzureCredentialsResponse azureCredentials,
+        @CustomType.Parameter("container") String container,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("storageAccount") String storageAccount) {
         this.azureCredentials = azureCredentials;
         this.container = container;
         this.path = path;

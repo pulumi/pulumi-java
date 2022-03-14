@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.X509CertificateDetailsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PublicKeyCertificateResponse {
     /**
      * The certificate data.
@@ -26,11 +26,11 @@ public final class PublicKeyCertificateResponse {
      */
     private final X509CertificateDetailsResponse x509Details;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicKeyCertificateResponse(
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("x509Details") X509CertificateDetailsResponse x509Details) {
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("x509Details") X509CertificateDetailsResponse x509Details) {
         this.certificate = certificate;
         this.format = format;
         this.x509Details = x509Details;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AttestationAuthorityHintResponse extends io.pulumi.resources.
      * The human readable name of this Attestation Authority, for example "qa".
      * 
      */
-    @InputImport(name="humanReadableName", required=true)
+    @Import(name="humanReadableName", required=true)
       private final String humanReadableName;
 
     public String getHumanReadableName() {

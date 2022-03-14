@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
      * Indicates how many instances are actually usable currently.
      * 
      */
-    @InputImport(name="assuredCount", required=true)
+    @Import(name="assuredCount", required=true)
       private final String assuredCount;
 
     public String getAssuredCount() {
@@ -32,7 +32,7 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
      * Specifies the number of resources that are allocated.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final String count;
 
     public String getCount() {
@@ -43,7 +43,7 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
      * Indicates how many instances are in use.
      * 
      */
-    @InputImport(name="inUseCount", required=true)
+    @Import(name="inUseCount", required=true)
       private final String inUseCount;
 
     public String getInUseCount() {
@@ -54,7 +54,7 @@ public final class AllocationSpecificSKUReservationResponse extends io.pulumi.re
      * The instance properties for the reservation.
      * 
      */
-    @InputImport(name="instanceProperties", required=true)
+    @Import(name="instanceProperties", required=true)
       private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {

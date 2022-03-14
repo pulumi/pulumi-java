@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1.BatchArgs;
@@ -32,7 +32,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * The time when the batch was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -46,7 +46,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * The email address of the user who created the batch.
      * 
      */
-    @OutputExport(name="creator", type=String.class, parameters={})
+    @Export(name="creator", type=String.class, parameters={})
     private Output<String> creator;
 
     /**
@@ -60,7 +60,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Optional. Environment configuration for the batch execution.
      * 
      */
-    @OutputExport(name="environmentConfig", type=EnvironmentConfigResponse.class, parameters={})
+    @Export(name="environmentConfig", type=EnvironmentConfigResponse.class, parameters={})
     private Output<EnvironmentConfigResponse> environmentConfig;
 
     /**
@@ -74,7 +74,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -88,7 +88,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * The resource name of the batch.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -102,7 +102,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * The resource name of the operation associated with this batch.
      * 
      */
-    @OutputExport(name="operation", type=String.class, parameters={})
+    @Export(name="operation", type=String.class, parameters={})
     private Output<String> operation;
 
     /**
@@ -116,7 +116,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Optional. PySpark batch config.
      * 
      */
-    @OutputExport(name="pysparkBatch", type=PySparkBatchResponse.class, parameters={})
+    @Export(name="pysparkBatch", type=PySparkBatchResponse.class, parameters={})
     private Output<PySparkBatchResponse> pysparkBatch;
 
     /**
@@ -130,7 +130,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Optional. Runtime configuration for the batch execution.
      * 
      */
-    @OutputExport(name="runtimeConfig", type=RuntimeConfigResponse.class, parameters={})
+    @Export(name="runtimeConfig", type=RuntimeConfigResponse.class, parameters={})
     private Output<RuntimeConfigResponse> runtimeConfig;
 
     /**
@@ -144,7 +144,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Runtime information about batch execution.
      * 
      */
-    @OutputExport(name="runtimeInfo", type=RuntimeInfoResponse.class, parameters={})
+    @Export(name="runtimeInfo", type=RuntimeInfoResponse.class, parameters={})
     private Output<RuntimeInfoResponse> runtimeInfo;
 
     /**
@@ -158,7 +158,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Optional. Spark batch config.
      * 
      */
-    @OutputExport(name="sparkBatch", type=SparkBatchResponse.class, parameters={})
+    @Export(name="sparkBatch", type=SparkBatchResponse.class, parameters={})
     private Output<SparkBatchResponse> sparkBatch;
 
     /**
@@ -172,7 +172,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Optional. SparkR batch config.
      * 
      */
-    @OutputExport(name="sparkRBatch", type=SparkRBatchResponse.class, parameters={})
+    @Export(name="sparkRBatch", type=SparkRBatchResponse.class, parameters={})
     private Output<SparkRBatchResponse> sparkRBatch;
 
     /**
@@ -186,7 +186,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Optional. SparkSql batch config.
      * 
      */
-    @OutputExport(name="sparkSqlBatch", type=SparkSqlBatchResponse.class, parameters={})
+    @Export(name="sparkSqlBatch", type=SparkSqlBatchResponse.class, parameters={})
     private Output<SparkSqlBatchResponse> sparkSqlBatch;
 
     /**
@@ -200,7 +200,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * The state of the batch.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -214,7 +214,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Historical state information for the batch.
      * 
      */
-    @OutputExport(name="stateHistory", type=List.class, parameters={StateHistoryResponse.class})
+    @Export(name="stateHistory", type=List.class, parameters={StateHistoryResponse.class})
     private Output<List<StateHistoryResponse>> stateHistory;
 
     /**
@@ -228,7 +228,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * Batch state details, such as a failure description if the state is FAILED.
      * 
      */
-    @OutputExport(name="stateMessage", type=String.class, parameters={})
+    @Export(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
     /**
@@ -242,7 +242,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * The time when the batch entered a current state.
      * 
      */
-    @OutputExport(name="stateTime", type=String.class, parameters={})
+    @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**
@@ -256,7 +256,7 @@ public class Batch extends io.pulumi.resources.CustomResource {
      * A batch UUID (Unique Universal Identifier). The service generates this value when it creates the batch.
      * 
      */
-    @OutputExport(name="uuid", type=String.class, parameters={})
+    @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**

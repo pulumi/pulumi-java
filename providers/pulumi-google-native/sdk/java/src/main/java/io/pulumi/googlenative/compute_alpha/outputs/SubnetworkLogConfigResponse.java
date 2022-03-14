@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubnetworkLogConfigResponse {
     /**
      * Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
@@ -43,14 +43,14 @@ public final class SubnetworkLogConfigResponse {
      */
     private final List<String> metadataFields;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetworkLogConfigResponse(
-        @OutputCustomType.Parameter("aggregationInterval") String aggregationInterval,
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("filterExpr") String filterExpr,
-        @OutputCustomType.Parameter("flowSampling") Double flowSampling,
-        @OutputCustomType.Parameter("metadata") String metadata,
-        @OutputCustomType.Parameter("metadataFields") List<String> metadataFields) {
+        @CustomType.Parameter("aggregationInterval") String aggregationInterval,
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("filterExpr") String filterExpr,
+        @CustomType.Parameter("flowSampling") Double flowSampling,
+        @CustomType.Parameter("metadata") String metadata,
+        @CustomType.Parameter("metadataFields") List<String> metadataFields) {
         this.aggregationInterval = aggregationInterval;
         this.enable = enable;
         this.filterExpr = filterExpr;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RelatedUrlResponse {
     /**
      * Label to describe usage of the URL.
@@ -20,10 +20,10 @@ public final class RelatedUrlResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RelatedUrlResponse(
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("url") String url) {
         this.label = label;
         this.url = url;
     }

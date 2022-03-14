@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
      * 
      */
-    @InputImport(name="affectedCpeUri", required=true)
+    @Import(name="affectedCpeUri", required=true)
       private final Output<String> affectedCpeUri;
 
     public Output<String> getAffectedCpeUri() {
@@ -34,7 +34,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The package this vulnerability was found in.
      * 
      */
-    @InputImport(name="affectedPackage", required=true)
+    @Import(name="affectedPackage", required=true)
       private final Output<String> affectedPackage;
 
     public Output<String> getAffectedPackage() {
@@ -45,7 +45,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the package that is installed on the resource affected by this vulnerability.
      * 
      */
-    @InputImport(name="affectedVersion", required=true)
+    @Import(name="affectedVersion", required=true)
       private final Output<VersionArgs> affectedVersion;
 
     public Output<VersionArgs> getAffectedVersion() {
@@ -56,7 +56,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
      * 
      */
-    @InputImport(name="fixedCpeUri")
+    @Import(name="fixedCpeUri")
       private final @Nullable Output<String> fixedCpeUri;
 
     public Output<String> getFixedCpeUri() {
@@ -67,7 +67,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
      * 
      */
-    @InputImport(name="fixedPackage")
+    @Import(name="fixedPackage")
       private final @Nullable Output<String> fixedPackage;
 
     public Output<String> getFixedPackage() {
@@ -78,7 +78,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
      * 
      */
-    @InputImport(name="fixedVersion", required=true)
+    @Import(name="fixedVersion", required=true)
       private final Output<VersionArgs> fixedVersion;
 
     public Output<VersionArgs> getFixedVersion() {
@@ -89,7 +89,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The type of package (e.g. OS, MAVEN, GO).
      * 
      */
-    @InputImport(name="packageType")
+    @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
     public Output<String> getPackageType() {

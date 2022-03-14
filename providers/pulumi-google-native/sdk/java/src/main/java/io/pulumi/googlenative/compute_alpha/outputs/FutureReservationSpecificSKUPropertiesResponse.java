@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AllocationSpecificSKUAllocationReservedInstancePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FutureReservationSpecificSKUPropertiesResponse {
     /**
      * Properties of the SKU instances being reserved.
@@ -21,10 +21,10 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
      */
     private final String totalCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FutureReservationSpecificSKUPropertiesResponse(
-        @OutputCustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties,
-        @OutputCustomType.Parameter("totalCount") String totalCount) {
+        @CustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties,
+        @CustomType.Parameter("totalCount") String totalCount) {
         this.instanceProperties = instanceProperties;
         this.totalCount = totalCount;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDebugSessionResult {
     /**
      * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
@@ -41,14 +41,14 @@ public final class GetDebugSessionResult {
      */
     private final Integer validity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDebugSessionResult(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("timeout") String timeout,
-        @OutputCustomType.Parameter("tracesize") Integer tracesize,
-        @OutputCustomType.Parameter("validity") Integer validity) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("timeout") String timeout,
+        @CustomType.Parameter("tracesize") Integer tracesize,
+        @CustomType.Parameter("validity") Integer validity) {
         this.count = count;
         this.filter = filter;
         this.name = name;

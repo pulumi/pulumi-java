@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1RoutineSpecRoutineType;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1RoutineSpecArgumentArgs;
@@ -26,7 +26,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * Fields specific for BigQuery routines.
      * 
      */
-    @InputImport(name="bigqueryRoutineSpec")
+    @Import(name="bigqueryRoutineSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> bigqueryRoutineSpec;
 
     public Output<GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs> getBigqueryRoutineSpec() {
@@ -37,7 +37,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * The body of the routine.
      * 
      */
-    @InputImport(name="definitionBody")
+    @Import(name="definitionBody")
       private final @Nullable Output<String> definitionBody;
 
     public Output<String> getDefinitionBody() {
@@ -48,7 +48,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * The language the routine is written in. The exact value depends on the source system. For BigQuery routines, possible values are: * `SQL` * `JAVASCRIPT`
      * 
      */
-    @InputImport(name="language")
+    @Import(name="language")
       private final @Nullable Output<String> language;
 
     public Output<String> getLanguage() {
@@ -59,7 +59,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * Return type of the argument. The exact value depends on the source system and the language.
      * 
      */
-    @InputImport(name="returnType")
+    @Import(name="returnType")
       private final @Nullable Output<String> returnType;
 
     public Output<String> getReturnType() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * Arguments of the routine.
      * 
      */
-    @InputImport(name="routineArguments")
+    @Import(name="routineArguments")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> routineArguments;
 
     public Output<List<GoogleCloudDatacatalogV1RoutineSpecArgumentArgs>> getRoutineArguments() {
@@ -81,7 +81,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgs extends io.pulumi.res
      * The type of the routine.
      * 
      */
-    @InputImport(name="routineType")
+    @Import(name="routineType")
       private final @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> routineType;
 
     public Output<GoogleCloudDatacatalogV1RoutineSpecRoutineType> getRoutineType() {

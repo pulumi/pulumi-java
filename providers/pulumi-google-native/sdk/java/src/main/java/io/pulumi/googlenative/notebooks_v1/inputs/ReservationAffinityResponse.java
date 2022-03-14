@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
      * Optional. Type of reservation to consume
      * 
      */
-    @InputImport(name="consumeReservationType", required=true)
+    @Import(name="consumeReservationType", required=true)
       private final String consumeReservationType;
 
     public String getConsumeReservationType() {
@@ -32,7 +32,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
      * Optional. Corresponds to the label key of reservation resource.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -43,7 +43,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
      * Optional. Corresponds to the label values of reservation resource.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

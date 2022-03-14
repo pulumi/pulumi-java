@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.ContainerPortResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.EnvFromSourceResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.EnvVarResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerResponse {
     /**
      * (Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
@@ -99,25 +99,25 @@ public final class ContainerResponse {
      */
     private final String workingDir;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerResponse(
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("command") List<String> command,
-        @OutputCustomType.Parameter("env") List<EnvVarResponse> env,
-        @OutputCustomType.Parameter("envFrom") List<EnvFromSourceResponse> envFrom,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("imagePullPolicy") String imagePullPolicy,
-        @OutputCustomType.Parameter("livenessProbe") ProbeResponse livenessProbe,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ports") List<ContainerPortResponse> ports,
-        @OutputCustomType.Parameter("readinessProbe") ProbeResponse readinessProbe,
-        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
-        @OutputCustomType.Parameter("securityContext") SecurityContextResponse securityContext,
-        @OutputCustomType.Parameter("startupProbe") ProbeResponse startupProbe,
-        @OutputCustomType.Parameter("terminationMessagePath") String terminationMessagePath,
-        @OutputCustomType.Parameter("terminationMessagePolicy") String terminationMessagePolicy,
-        @OutputCustomType.Parameter("volumeMounts") List<VolumeMountResponse> volumeMounts,
-        @OutputCustomType.Parameter("workingDir") String workingDir) {
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("command") List<String> command,
+        @CustomType.Parameter("env") List<EnvVarResponse> env,
+        @CustomType.Parameter("envFrom") List<EnvFromSourceResponse> envFrom,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("imagePullPolicy") String imagePullPolicy,
+        @CustomType.Parameter("livenessProbe") ProbeResponse livenessProbe,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ports") List<ContainerPortResponse> ports,
+        @CustomType.Parameter("readinessProbe") ProbeResponse readinessProbe,
+        @CustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @CustomType.Parameter("securityContext") SecurityContextResponse securityContext,
+        @CustomType.Parameter("startupProbe") ProbeResponse startupProbe,
+        @CustomType.Parameter("terminationMessagePath") String terminationMessagePath,
+        @CustomType.Parameter("terminationMessagePolicy") String terminationMessagePolicy,
+        @CustomType.Parameter("volumeMounts") List<VolumeMountResponse> volumeMounts,
+        @CustomType.Parameter("workingDir") String workingDir) {
         this.args = args;
         this.command = command;
         this.env = env;

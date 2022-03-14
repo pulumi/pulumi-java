@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.outputs.CustomAccountResponse;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.outputs.GoogleAccountResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthenticationResponse {
     /**
      * Authentication using a custom account.
@@ -21,10 +21,10 @@ public final class AuthenticationResponse {
      */
     private final GoogleAccountResponse googleAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthenticationResponse(
-        @OutputCustomType.Parameter("customAccount") CustomAccountResponse customAccount,
-        @OutputCustomType.Parameter("googleAccount") GoogleAccountResponse googleAccount) {
+        @CustomType.Parameter("customAccount") CustomAccountResponse customAccount,
+        @CustomType.Parameter("googleAccount") GoogleAccountResponse googleAccount) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
     }

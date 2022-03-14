@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerRepositoryIdResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerSecretsResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * Immutable. API Key that will be attached to webhook. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
      * 
      */
-    @InputImport(name="apiKey", required=true)
+    @Import(name="apiKey", required=true)
       private final String apiKey;
 
     public String getApiKey() {
@@ -34,7 +34,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * Connected Bitbucket Server repositories for this config.
      * 
      */
-    @InputImport(name="connectedRepositories", required=true)
+    @Import(name="connectedRepositories", required=true)
       private final List<BitbucketServerRepositoryIdResponse> connectedRepositories;
 
     public List<BitbucketServerRepositoryIdResponse> getConnectedRepositories() {
@@ -45,7 +45,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * Time when the config was created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -56,7 +56,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
      * 
      */
-    @InputImport(name="hostUri", required=true)
+    @Import(name="hostUri", required=true)
       private final String hostUri;
 
     public String getHostUri() {
@@ -67,7 +67,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * The resource name for the config.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -78,7 +78,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * Optional. The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
      * 
      */
-    @InputImport(name="peeredNetwork", required=true)
+    @Import(name="peeredNetwork", required=true)
       private final String peeredNetwork;
 
     public String getPeeredNetwork() {
@@ -89,7 +89,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * Secret Manager secrets needed by the config.
      * 
      */
-    @InputImport(name="secrets", required=true)
+    @Import(name="secrets", required=true)
       private final BitbucketServerSecretsResponse secrets;
 
     public BitbucketServerSecretsResponse getSecrets() {
@@ -100,7 +100,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * Optional. SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt.
      * 
      */
-    @InputImport(name="sslCa", required=true)
+    @Import(name="sslCa", required=true)
       private final String sslCa;
 
     public String getSslCa() {
@@ -111,7 +111,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * Username of the account Cloud Build will use on Bitbucket Server.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {
@@ -122,7 +122,7 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
      * UUID included in webhook requests. The UUID is used to look up the corresponding config.
      * 
      */
-    @InputImport(name="webhookKey", required=true)
+    @Import(name="webhookKey", required=true)
       private final String webhookKey;
 
     public String getWebhookKey() {

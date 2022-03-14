@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.SchedulingNodeAffinityResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,7 +20,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
 
     public static final ComputeSchedulingResponse Empty = new ComputeSchedulingResponse();
 
-    @InputImport(name="automaticRestart", required=true)
+    @Import(name="automaticRestart", required=true)
       private final Boolean automaticRestart;
 
     public Boolean getAutomaticRestart() {
@@ -31,7 +31,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
      * 
      */
-    @InputImport(name="minNodeCpus", required=true)
+    @Import(name="minNodeCpus", required=true)
       private final Integer minNodeCpus;
 
     public Integer getMinNodeCpus() {
@@ -42,7 +42,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
      * A set of node affinity and anti-affinity configurations for sole tenant nodes.
      * 
      */
-    @InputImport(name="nodeAffinities", required=true)
+    @Import(name="nodeAffinities", required=true)
       private final List<SchedulingNodeAffinityResponse> nodeAffinities;
 
     public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
@@ -53,7 +53,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
      * How the instance should behave when the host machine undergoes maintenance that may temporarily impact instance performance.
      * 
      */
-    @InputImport(name="onHostMaintenance", required=true)
+    @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
@@ -64,7 +64,7 @@ public final class ComputeSchedulingResponse extends io.pulumi.resources.InvokeA
      * Whether the Instance should be automatically restarted whenever it is terminated by Compute Engine (not terminated by user). This configuration is identical to `automaticRestart` field in Compute Engine create instance under scheduling. It was changed to an enum (instead of a boolean) to match the default value in Compute Engine which is automatic restart.
      * 
      */
-    @InputImport(name="restartType", required=true)
+    @Import(name="restartType", required=true)
       private final String restartType;
 
     public String getRestartType() {

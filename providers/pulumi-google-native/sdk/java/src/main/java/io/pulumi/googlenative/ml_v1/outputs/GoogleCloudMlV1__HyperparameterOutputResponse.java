@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__BuiltInAlgorithmOutputResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__HyperparameterOutputResponse {
     /**
      * All recorded object metrics for this trial. This field is not currently populated.
@@ -65,18 +65,18 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
      */
     private final Map<String,String> webAccessUris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__HyperparameterOutputResponse(
-        @OutputCustomType.Parameter("allMetrics") List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics,
-        @OutputCustomType.Parameter("builtInAlgorithmOutput") GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("finalMetric") GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric,
-        @OutputCustomType.Parameter("hyperparameters") Map<String,String> hyperparameters,
-        @OutputCustomType.Parameter("isTrialStoppedEarly") Boolean isTrialStoppedEarly,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("trialId") String trialId,
-        @OutputCustomType.Parameter("webAccessUris") Map<String,String> webAccessUris) {
+        @CustomType.Parameter("allMetrics") List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics,
+        @CustomType.Parameter("builtInAlgorithmOutput") GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("finalMetric") GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric,
+        @CustomType.Parameter("hyperparameters") Map<String,String> hyperparameters,
+        @CustomType.Parameter("isTrialStoppedEarly") Boolean isTrialStoppedEarly,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("trialId") String trialId,
+        @CustomType.Parameter("webAccessUris") Map<String,String> webAccessUris) {
         this.allMetrics = allMetrics;
         this.builtInAlgorithmOutput = builtInAlgorithmOutput;
         this.endTime = endTime;

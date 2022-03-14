@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.ExpiryDetailResponse;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.RestrictionEvaluationsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MembershipRoleResponse {
     /**
      * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
@@ -27,11 +27,11 @@ public final class MembershipRoleResponse {
      */
     private final RestrictionEvaluationsResponse restrictionEvaluations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MembershipRoleResponse(
-        @OutputCustomType.Parameter("expiryDetail") ExpiryDetailResponse expiryDetail,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restrictionEvaluations") RestrictionEvaluationsResponse restrictionEvaluations) {
+        @CustomType.Parameter("expiryDetail") ExpiryDetailResponse expiryDetail,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restrictionEvaluations") RestrictionEvaluationsResponse restrictionEvaluations) {
         this.expiryDetail = expiryDetail;
         this.name = name;
         this.restrictionEvaluations = restrictionEvaluations;

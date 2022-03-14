@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
      * The cards in the carousel. A carousel must have at least 2 cards and at most 10.
      * 
      */
-    @InputImport(name="cardContents", required=true)
+    @Import(name="cardContents", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> cardContents;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs>> getCardContents() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
      * The width of the cards in the carousel.
      * 
      */
-    @InputImport(name="cardWidth", required=true)
+    @Import(name="cardWidth", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> cardWidth;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth> getCardWidth() {

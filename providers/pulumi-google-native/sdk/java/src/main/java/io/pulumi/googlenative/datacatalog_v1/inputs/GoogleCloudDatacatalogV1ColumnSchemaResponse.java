@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * Name of the column. Must be a UTF-8 string without dots (.). The maximum size is 64 bytes.
      * 
      */
-    @InputImport(name="column", required=true)
+    @Import(name="column", required=true)
       private final String column;
 
     public String getColumn() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * Optional. Description of the column. Default value is an empty string. The description must be a UTF-8 string with the maximum size of 2000 bytes.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * Optional. A column's mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
@@ -54,7 +54,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
      * 
      */
-    @InputImport(name="subcolumns", required=true)
+    @Import(name="subcolumns", required=true)
       private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns;
 
     public List<GoogleCloudDatacatalogV1ColumnSchemaResponse> getSubcolumns() {
@@ -65,7 +65,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * Type of the column. Must be a UTF-8 string with the maximum size of 128 bytes.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

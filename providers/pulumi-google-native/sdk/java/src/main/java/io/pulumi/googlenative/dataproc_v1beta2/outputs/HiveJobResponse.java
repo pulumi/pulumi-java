@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.QueryListResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HiveJobResponse {
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
@@ -44,14 +44,14 @@ public final class HiveJobResponse {
      */
     private final Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HiveJobResponse(
-        @OutputCustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
-        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
-        @OutputCustomType.Parameter("properties") Map<String,String> properties,
-        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
-        @OutputCustomType.Parameter("queryList") QueryListResponse queryList,
-        @OutputCustomType.Parameter("scriptVariables") Map<String,String> scriptVariables) {
+        @CustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
+        @CustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @CustomType.Parameter("properties") Map<String,String> properties,
+        @CustomType.Parameter("queryFileUri") String queryFileUri,
+        @CustomType.Parameter("queryList") QueryListResponse queryList,
+        @CustomType.Parameter("scriptVariables") Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.properties = properties;

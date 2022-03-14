@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.QueryParameterTypeResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.QueryParameterValueResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryParameterResponse {
     /**
      * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
@@ -27,11 +27,11 @@ public final class QueryParameterResponse {
      */
     private final QueryParameterValueResponse parameterValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueryParameterResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameterType") QueryParameterTypeResponse parameterType,
-        @OutputCustomType.Parameter("parameterValue") QueryParameterValueResponse parameterValue) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameterType") QueryParameterTypeResponse parameterType,
+        @CustomType.Parameter("parameterValue") QueryParameterValueResponse parameterValue) {
         this.name = name;
         this.parameterType = parameterType;
         this.parameterValue = parameterValue;

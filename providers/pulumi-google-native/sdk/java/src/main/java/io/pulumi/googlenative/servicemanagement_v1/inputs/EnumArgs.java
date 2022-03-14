@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.enums.EnumSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.EnumValueArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -27,7 +27,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * Enum value definitions.
      * 
      */
-    @InputImport(name="enumvalue")
+    @Import(name="enumvalue")
       private final @Nullable Output<List<EnumValueArgs>> enumvalue;
 
     public Output<List<EnumValueArgs>> getEnumvalue() {
@@ -38,7 +38,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * Enum type name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -49,7 +49,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * Protocol buffer options.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {
@@ -60,7 +60,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * The source context.
      * 
      */
-    @InputImport(name="sourceContext")
+    @Import(name="sourceContext")
       private final @Nullable Output<SourceContextArgs> sourceContext;
 
     public Output<SourceContextArgs> getSourceContext() {
@@ -71,7 +71,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
      * The source syntax.
      * 
      */
-    @InputImport(name="syntax")
+    @Import(name="syntax")
       private final @Nullable Output<EnumSyntax> syntax;
 
     public Output<EnumSyntax> getSyntax() {

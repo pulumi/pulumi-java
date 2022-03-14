@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsupport_v2beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsupport_v2beta.enums.CasePriority;
 import io.pulumi.googlenative.cloudsupport_v2beta.inputs.ActorArgs;
 import io.pulumi.googlenative.cloudsupport_v2beta.inputs.CaseClassificationArgs;
@@ -23,7 +23,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * The issue classification applicable to this case.
      * 
      */
-    @InputImport(name="classification")
+    @Import(name="classification")
       private final @Nullable Output<CaseClassificationArgs> classification;
 
     public Output<CaseClassificationArgs> getClassification() {
@@ -34,7 +34,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
      * 
      */
-    @InputImport(name="creator")
+    @Import(name="creator")
       private final @Nullable Output<ActorArgs> creator;
 
     public Output<ActorArgs> getCreator() {
@@ -45,7 +45,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * A broad description of the issue.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * The short summary of the issue reported in this case.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -67,7 +67,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the case is currently escalated.
      * 
      */
-    @InputImport(name="escalated")
+    @Import(name="escalated")
       private final @Nullable Output<Boolean> escalated;
 
     public Output<Boolean> getEscalated() {
@@ -78,7 +78,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name for the case.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * The priority of this case. If this is set, do not set severity.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<CasePriority> priority;
 
     public Output<CasePriority> getPriority() {
@@ -100,7 +100,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * The email addresses to receive updates on this case.
      * 
      */
-    @InputImport(name="subscriberEmailAddresses")
+    @Import(name="subscriberEmailAddresses")
       private final @Nullable Output<List<String>> subscriberEmailAddresses;
 
     public Output<List<String>> getSubscriberEmailAddresses() {
@@ -111,7 +111,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * Whether this case was created for internal API testing and should not be acted on by the support team.
      * 
      */
-    @InputImport(name="testCase")
+    @Import(name="testCase")
       private final @Nullable Output<Boolean> testCase;
 
     public Output<Boolean> getTestCase() {
@@ -122,21 +122,21 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
      * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
         return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
-    @InputImport(name="v2betaId1", required=true)
+    @Import(name="v2betaId1", required=true)
       private final Output<String> v2betaId1;
 
     public Output<String> getV2betaId1() {
         return this.v2betaId1;
     }
 
-    @InputImport(name="v2betumId", required=true)
+    @Import(name="v2betumId", required=true)
       private final Output<String> v2betumId;
 
     public Output<String> getV2betumId() {

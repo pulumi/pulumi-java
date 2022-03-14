@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EdgeClusterResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
      * 
      */
-    @InputImport(name="resourceLink", required=true)
+    @Import(name="resourceLink", required=true)
       private final String resourceLink;
 
     public String getResourceLink() {

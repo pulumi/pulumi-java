@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.enums.PublicKeyFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The format of the public key.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<PublicKeyFormat> format;
 
     public Output<PublicKeyFormat> getFormat() {
@@ -33,7 +33,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
      * Number of HTTP(S) requests for calculating the threshold.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -29,7 +29,7 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends io.pu
      * Interval over which the threshold is computed.
      * 
      */
-    @InputImport(name="intervalSec")
+    @Import(name="intervalSec")
       private final @Nullable Output<Integer> intervalSec;
 
     public Output<Integer> getIntervalSec() {

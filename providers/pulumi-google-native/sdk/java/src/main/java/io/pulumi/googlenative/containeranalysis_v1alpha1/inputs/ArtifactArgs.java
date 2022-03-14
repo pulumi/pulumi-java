@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.
      * 
      */
-    @InputImport(name="checksum")
+    @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
     public Output<String> getChecksum() {
@@ -34,7 +34,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * Artifact ID, if any; for container images, this will be a URL by digest like gcr.io/projectID/imagename@sha256:123456
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -45,7 +45,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * Related artifact names. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. Note that a single Artifact ID can have multiple names, for example if two tags are applied to one image.
      * 
      */
-    @InputImport(name="names")
+    @Import(name="names")
       private final @Nullable Output<List<String>> names;
 
     public Output<List<String>> getNames() {

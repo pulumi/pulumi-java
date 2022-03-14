@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1.TagTemplateArgs;
@@ -23,7 +23,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * Display name for this template. Defaults to an empty string. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end with spaces. The maximum length is 200 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -37,7 +37,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * Map of tag template field IDs to the settings for the field. This map is an exhaustive list of the allowed fields. The map must contain at least one field and at most 500 fields. The keys to this map are tag template field IDs. The IDs have the following limitations: * Can contain uppercase and lowercase letters, numbers (0-9) and underscores (_). * Must be at least 1 character and at most 64 characters long. * Must start with a letter or underscore.
      * 
      */
-    @OutputExport(name="fields", type=Map.class, parameters={String.class, String.class})
+    @Export(name="fields", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> fields;
 
     /**
@@ -51,7 +51,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * Indicates whether this is a public tag template. Every user has view access to a *public* tag template by default. This means that: * Every user can use this tag template to tag an entry. * If an entry is tagged using the tag template, the tag is always shown in the response to ``ListTags`` called on the entry. * To get the template using the GetTagTemplate method, you need view access either on the project or the organization the tag template resides in but no other permission is needed. * Operations on the tag template other than viewing (for example, editing IAM policies) follow standard IAM structures. Tags created with a public tag template are referred to as public tags. You can search for a public tag by value with a simple search query instead of using a ``tag:`` predicate. Public tag templates may not appear in search results depending on scope, see: include_public_tag_templates Note: If an [IAM domain restriction](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-domains) is configured in the tag template's location, the public access will not be enabled but the simple search for tag values will still work.
      * 
      */
-    @OutputExport(name="isPubliclyReadable", type=Boolean.class, parameters={})
+    @Export(name="isPubliclyReadable", type=Boolean.class, parameters={})
     private Output<Boolean> isPubliclyReadable;
 
     /**
@@ -65,7 +65,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * The resource name of the tag template in URL format. Note: The tag template itself and its child resources might not be stored in the location specified in its name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

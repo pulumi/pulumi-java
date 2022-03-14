@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1beta.MetadataImportArgs;
@@ -24,7 +24,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * The time when the metadata import was started.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -38,7 +38,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * Immutable. A database dump from a pre-existing metastore's database.
      * 
      */
-    @OutputExport(name="databaseDump", type=DatabaseDumpResponse.class, parameters={})
+    @Export(name="databaseDump", type=DatabaseDumpResponse.class, parameters={})
     private Output<DatabaseDumpResponse> databaseDump;
 
     /**
@@ -52,7 +52,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * The description of the metadata import.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -66,7 +66,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * The time when the metadata import finished.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -80,7 +80,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * The current state of the metadata import.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -108,7 +108,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * The time when the metadata import was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

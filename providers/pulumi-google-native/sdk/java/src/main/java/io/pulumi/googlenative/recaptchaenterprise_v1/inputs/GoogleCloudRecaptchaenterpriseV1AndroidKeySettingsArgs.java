@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
      * If set to true, allowed_package_names are not enforced.
      * 
      */
-    @InputImport(name="allowAllPackageNames")
+    @Import(name="allowAllPackageNames")
       private final @Nullable Output<Boolean> allowAllPackageNames;
 
     public Output<Boolean> getAllowAllPackageNames() {
@@ -35,7 +35,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
      * Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
      * 
      */
-    @InputImport(name="allowedPackageNames")
+    @Import(name="allowedPackageNames")
       private final @Nullable Output<List<String>> allowedPackageNames;
 
     public Output<List<String>> getAllowedPackageNames() {

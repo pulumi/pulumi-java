@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CustomerEncryptionKeyResponse {
     /**
      * The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName": "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
@@ -35,13 +35,13 @@ public final class CustomerEncryptionKeyResponse {
      */
     private final String sha256;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomerEncryptionKeyResponse(
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("kmsKeyServiceAccount") String kmsKeyServiceAccount,
-        @OutputCustomType.Parameter("rawKey") String rawKey,
-        @OutputCustomType.Parameter("rsaEncryptedKey") String rsaEncryptedKey,
-        @OutputCustomType.Parameter("sha256") String sha256) {
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("kmsKeyServiceAccount") String kmsKeyServiceAccount,
+        @CustomType.Parameter("rawKey") String rawKey,
+        @CustomType.Parameter("rsaEncryptedKey") String rsaEncryptedKey,
+        @CustomType.Parameter("sha256") String sha256) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.redis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.redis_v1beta1.outputs.WeeklyMaintenanceWindowResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenancePolicyResponse {
     /**
      * The time when the policy was created.
@@ -32,12 +32,12 @@ public final class MaintenancePolicyResponse {
      */
     private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenancePolicyResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("weeklyMaintenanceWindow") List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("weeklyMaintenanceWindow") List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
         this.createTime = createTime;
         this.description = description;
         this.updateTime = updateTime;

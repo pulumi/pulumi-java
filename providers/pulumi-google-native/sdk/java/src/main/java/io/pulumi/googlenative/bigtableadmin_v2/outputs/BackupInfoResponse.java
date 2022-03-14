@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupInfoResponse {
     /**
      * Name of the backup.
@@ -30,12 +30,12 @@ public final class BackupInfoResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupInfoResponse(
-        @OutputCustomType.Parameter("backup") String backup,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("sourceTable") String sourceTable,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("backup") String backup,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("sourceTable") String sourceTable,
+        @CustomType.Parameter("startTime") String startTime) {
         this.backup = backup;
         this.endTime = endTime;
         this.sourceTable = sourceTable;

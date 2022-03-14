@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.inputs.RoboDirectiveResponse;
@@ -25,7 +25,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The APK for the application under test.
      * 
      */
-    @InputImport(name="appApk", required=true)
+    @Import(name="appApk", required=true)
       private final FileReferenceResponse appApk;
 
     public FileReferenceResponse getAppApk() {
@@ -36,7 +36,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * A multi-apk app bundle for the application under test.
      * 
      */
-    @InputImport(name="appBundle", required=true)
+    @Import(name="appBundle", required=true)
       private final AppBundleResponse appBundle;
 
     public AppBundleResponse getAppBundle() {
@@ -47,7 +47,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The initial activity that should be used to start the app.
      * 
      */
-    @InputImport(name="appInitialActivity", required=true)
+    @Import(name="appInitialActivity", required=true)
       private final String appInitialActivity;
 
     public String getAppInitialActivity() {
@@ -58,7 +58,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The java package for the application under test. The default value is determined by examining the application's manifest.
      * 
      */
-    @InputImport(name="appPackageId", required=true)
+    @Import(name="appPackageId", required=true)
       private final String appPackageId;
 
     public String getAppPackageId() {
@@ -69,7 +69,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
      * 
      */
-    @InputImport(name="roboDirectives", required=true)
+    @Import(name="roboDirectives", required=true)
       private final List<RoboDirectiveResponse> roboDirectives;
 
     public List<RoboDirectiveResponse> getRoboDirectives() {
@@ -80,7 +80,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The mode in which Robo should run. Most clients should allow the server to populate this field automatically.
      * 
      */
-    @InputImport(name="roboMode", required=true)
+    @Import(name="roboMode", required=true)
       private final String roboMode;
 
     public String getRoboMode() {
@@ -91,7 +91,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
      * 
      */
-    @InputImport(name="roboScript", required=true)
+    @Import(name="roboScript", required=true)
       private final FileReferenceResponse roboScript;
 
     public FileReferenceResponse getRoboScript() {
@@ -102,7 +102,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The intents used to launch the app for the crawl. If none are provided, then the main launcher activity is launched. If some are provided, then only those provided are launched (the main launcher activity must be provided explicitly).
      * 
      */
-    @InputImport(name="startingIntents", required=true)
+    @Import(name="startingIntents", required=true)
       private final List<RoboStartingIntentResponse> startingIntents;
 
     public List<RoboStartingIntentResponse> getStartingIntents() {

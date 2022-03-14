@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ActorResponse {
     /**
      * The name to display for the actor. If not provided, it is inferred from credentials supplied during case creation. When an email is provided, a display name must also be provided. This will be obfuscated if the user is a Google Support agent.
@@ -31,12 +31,12 @@ public final class ActorResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActorResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("googleSupport") Boolean googleSupport,
-        @OutputCustomType.Parameter("principalId") String principalId) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("googleSupport") Boolean googleSupport,
+        @CustomType.Parameter("principalId") String principalId) {
         this.displayName = displayName;
         this.email = email;
         this.googleSupport = googleSupport;

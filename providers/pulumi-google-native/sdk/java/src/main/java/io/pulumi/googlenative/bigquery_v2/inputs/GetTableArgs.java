@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTableArgs Empty = new GetTableArgs();
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="selectedFields")
+    @Import(name="selectedFields")
       private final @Nullable String selectedFields;
 
     public Optional<String> getSelectedFields() {
         return this.selectedFields == null ? Optional.empty() : Optional.ofNullable(this.selectedFields);
     }
 
-    @InputImport(name="tableId", required=true)
+    @Import(name="tableId", required=true)
       private final String tableId;
 
     public String getTableId() {

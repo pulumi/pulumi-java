@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.DailyMaintenanceWindowResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.RecurringTimeWindowResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowResponse {
     /**
      * DailyMaintenanceWindow specifies a daily maintenance operation window.
@@ -28,11 +28,11 @@ public final class MaintenanceWindowResponse {
      */
     private final RecurringTimeWindowResponse recurringWindow;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowResponse(
-        @OutputCustomType.Parameter("dailyMaintenanceWindow") DailyMaintenanceWindowResponse dailyMaintenanceWindow,
-        @OutputCustomType.Parameter("maintenanceExclusions") Map<String,String> maintenanceExclusions,
-        @OutputCustomType.Parameter("recurringWindow") RecurringTimeWindowResponse recurringWindow) {
+        @CustomType.Parameter("dailyMaintenanceWindow") DailyMaintenanceWindowResponse dailyMaintenanceWindow,
+        @CustomType.Parameter("maintenanceExclusions") Map<String,String> maintenanceExclusions,
+        @CustomType.Parameter("recurringWindow") RecurringTimeWindowResponse recurringWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
         this.maintenanceExclusions = maintenanceExclusions;
         this.recurringWindow = recurringWindow;

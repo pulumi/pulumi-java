@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Time when the Hub was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -30,14 +30,14 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Short description of the hub resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="hubId")
+    @Import(name="hubId")
       private final @Nullable Output<String> hubId;
 
     public Output<String> getHubId() {
@@ -48,7 +48,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * User-defined labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -59,21 +59,21 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The name of a Hub resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -84,7 +84,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Time when the Hub was updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

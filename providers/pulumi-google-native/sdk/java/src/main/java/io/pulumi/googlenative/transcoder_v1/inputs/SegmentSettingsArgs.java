@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * Create an individual segment file. The default is `false`.
      * 
      */
-    @InputImport(name="individualSegments", required=true)
+    @Import(name="individualSegments", required=true)
       private final Output<Boolean> individualSegments;
 
     public Output<Boolean> getIndividualSegments() {
@@ -34,7 +34,7 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
      * 
      */
-    @InputImport(name="segmentDuration")
+    @Import(name="segmentDuration")
       private final @Nullable Output<String> segmentDuration;
 
     public Output<String> getSegmentDuration() {

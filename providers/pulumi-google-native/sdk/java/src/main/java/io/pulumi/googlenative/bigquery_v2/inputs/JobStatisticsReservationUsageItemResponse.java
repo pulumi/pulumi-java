@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class JobStatisticsReservationUsageItemResponse extends io.pulumi.r
      * Reservation name or "unreserved" for on-demand resources usage.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class JobStatisticsReservationUsageItemResponse extends io.pulumi.r
      * Slot-milliseconds the job spent in the given reservation.
      * 
      */
-    @InputImport(name="slotMs", required=true)
+    @Import(name="slotMs", required=true)
       private final String slotMs;
 
     public String getSlotMs() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class KeyRingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyRingArgs Empty = new KeyRingArgs();
 
-    @InputImport(name="keyRingId", required=true)
+    @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
     public Output<String> getKeyRingId() {
         return this.keyRingId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.HttpHeaderMatchArgs;
 import io.pulumi.googlenative.compute_v1.inputs.HttpQueryParameterMatchArgs;
 import io.pulumi.googlenative.compute_v1.inputs.MetadataFilterArgs;
@@ -27,7 +27,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
      * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. fullPathMatch must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
      * 
      */
-    @InputImport(name="fullPathMatch")
+    @Import(name="fullPathMatch")
       private final @Nullable Output<String> fullPathMatch;
 
     public Output<String> getFullPathMatch() {
@@ -38,7 +38,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
      * Specifies a list of header match criteria, all of which must match corresponding headers in the request.
      * 
      */
-    @InputImport(name="headerMatches")
+    @Import(name="headerMatches")
       private final @Nullable Output<List<HttpHeaderMatchArgs>> headerMatches;
 
     public Output<List<HttpHeaderMatchArgs>> getHeaderMatches() {
@@ -49,7 +49,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
      * Specifies that prefixMatch and fullPathMatch matches are case sensitive. The default value is false. ignoreCase must not be used with regexMatch. Not supported when the URL map is bound to a target gRPC proxy.
      * 
      */
-    @InputImport(name="ignoreCase")
+    @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
     public Output<Boolean> getIgnoreCase() {
@@ -60,7 +60,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
      * Opaque filter criteria used by the load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to the load balancer, xDS clients present node metadata. When there is a match, the relevant routing configuration is made available to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadata filters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here is applied after those specified in ForwardingRule that refers to the UrlMap this HttpRouteRuleMatch belongs to. metadataFilters only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="metadataFilters")
+    @Import(name="metadataFilters")
       private final @Nullable Output<List<MetadataFilterArgs>> metadataFilters;
 
     public Output<List<MetadataFilterArgs>> getMetadataFilters() {
@@ -71,7 +71,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
      * For satisfying the matchRule condition, the request's path must begin with the specified prefixMatch. prefixMatch must begin with a /. The value must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
      * 
      */
-    @InputImport(name="prefixMatch")
+    @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
     public Output<String> getPrefixMatch() {
@@ -82,7 +82,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
      * Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request. Not supported when the URL map is bound to a target gRPC proxy.
      * 
      */
-    @InputImport(name="queryParameterMatches")
+    @Import(name="queryParameterMatches")
       private final @Nullable Output<List<HttpQueryParameterMatchArgs>> queryParameterMatches;
 
     public Output<List<HttpQueryParameterMatchArgs>> getQueryParameterMatches() {
@@ -93,7 +93,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
      * For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For more information about regular expression syntax, see Syntax. Only one of prefixMatch, fullPathMatch or regexMatch must be specified. regexMatch only applies to load balancers that have loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * 
      */
-    @InputImport(name="regexMatch")
+    @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
     public Output<String> getRegexMatch() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.CertDnsChallengeResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.CertHttpChallengeResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
      * The TXT records (for the certificate challenge) that were found at the last DNS fetch.
      * 
      */
-    @InputImport(name="certChallengeDiscoveredTxt", required=true)
+    @Import(name="certChallengeDiscoveredTxt", required=true)
       private final List<String> certChallengeDiscoveredTxt;
 
     public List<String> getCertChallengeDiscoveredTxt() {
@@ -34,7 +34,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
      * The DNS challenge for generating a certificate.
      * 
      */
-    @InputImport(name="certChallengeDns", required=true)
+    @Import(name="certChallengeDns", required=true)
       private final CertDnsChallengeResponse certChallengeDns;
 
     public CertDnsChallengeResponse getCertChallengeDns() {
@@ -45,7 +45,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
      * The HTTP challenge for generating a certificate.
      * 
      */
-    @InputImport(name="certChallengeHttp", required=true)
+    @Import(name="certChallengeHttp", required=true)
       private final CertHttpChallengeResponse certChallengeHttp;
 
     public CertHttpChallengeResponse getCertChallengeHttp() {
@@ -56,7 +56,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
      * The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.
      * 
      */
-    @InputImport(name="certStatus", required=true)
+    @Import(name="certStatus", required=true)
       private final String certStatus;
 
     public String getCertStatus() {
@@ -67,7 +67,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
      * The IPs found at the last DNS fetch.
      * 
      */
-    @InputImport(name="discoveredIps", required=true)
+    @Import(name="discoveredIps", required=true)
       private final List<String> discoveredIps;
 
     public List<String> getDiscoveredIps() {
@@ -78,7 +78,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
      * The time at which the last DNS fetch occurred.
      * 
      */
-    @InputImport(name="dnsFetchTime", required=true)
+    @Import(name="dnsFetchTime", required=true)
       private final String dnsFetchTime;
 
     public String getDnsFetchTime() {
@@ -89,7 +89,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
      * The DNS record match status as of the last DNS fetch.
      * 
      */
-    @InputImport(name="dnsStatus", required=true)
+    @Import(name="dnsStatus", required=true)
       private final String dnsStatus;
 
     public String getDnsStatus() {
@@ -100,7 +100,7 @@ public final class DomainProvisioningResponse extends io.pulumi.resources.Invoke
      * The list of IPs to which the domain is expected to resolve.
      * 
      */
-    @InputImport(name="expectedIps", required=true)
+    @Import(name="expectedIps", required=true)
       private final List<String> expectedIps;
 
     public List<String> getExpectedIps() {

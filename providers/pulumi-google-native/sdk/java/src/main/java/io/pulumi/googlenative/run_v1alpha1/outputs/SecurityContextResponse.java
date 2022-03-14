@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityContextResponse {
     /**
      * (Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
@@ -15,8 +15,8 @@ public final class SecurityContextResponse {
      */
     private final Integer runAsUser;
 
-    @OutputCustomType.Constructor
-    private SecurityContextResponse(@OutputCustomType.Parameter("runAsUser") Integer runAsUser) {
+    @CustomType.Constructor
+    private SecurityContextResponse(@CustomType.Parameter("runAsUser") Integer runAsUser) {
         this.runAsUser = runAsUser;
     }
 

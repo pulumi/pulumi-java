@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureCredentialsResponse {
     /**
      * Azure shared access signature (SAS). For more information about SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
@@ -15,8 +15,8 @@ public final class AzureCredentialsResponse {
      */
     private final String sasToken;
 
-    @OutputCustomType.Constructor
-    private AzureCredentialsResponse(@OutputCustomType.Parameter("sasToken") String sasToken) {
+    @CustomType.Constructor
+    private AzureCredentialsResponse(@CustomType.Parameter("sasToken") String sasToken) {
         this.sasToken = sasToken;
     }
 

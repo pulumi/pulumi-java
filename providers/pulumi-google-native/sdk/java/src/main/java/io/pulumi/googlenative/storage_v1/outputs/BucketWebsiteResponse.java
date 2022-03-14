@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketWebsiteResponse {
     /**
      * If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
@@ -20,10 +20,10 @@ public final class BucketWebsiteResponse {
      */
     private final String notFoundPage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketWebsiteResponse(
-        @OutputCustomType.Parameter("mainPageSuffix") String mainPageSuffix,
-        @OutputCustomType.Parameter("notFoundPage") String notFoundPage) {
+        @CustomType.Parameter("mainPageSuffix") String mainPageSuffix,
+        @CustomType.Parameter("notFoundPage") String notFoundPage) {
         this.mainPageSuffix = mainPageSuffix;
         this.notFoundPage = notFoundPage;
     }

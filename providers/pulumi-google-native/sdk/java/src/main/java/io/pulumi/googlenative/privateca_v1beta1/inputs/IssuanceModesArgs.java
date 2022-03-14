@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * When true, allows callers to create Certificates by specifying a CertificateConfig.
      * 
      */
-    @InputImport(name="allowConfigBasedIssuance", required=true)
+    @Import(name="allowConfigBasedIssuance", required=true)
       private final Output<Boolean> allowConfigBasedIssuance;
 
     public Output<Boolean> getAllowConfigBasedIssuance() {
@@ -32,7 +32,7 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * When true, allows callers to create Certificates by specifying a CSR.
      * 
      */
-    @InputImport(name="allowCsrBasedIssuance", required=true)
+    @Import(name="allowCsrBasedIssuance", required=true)
       private final Output<Boolean> allowCsrBasedIssuance;
 
     public Output<Boolean> getAllowCsrBasedIssuance() {

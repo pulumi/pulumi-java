@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.CertDnsChallengeResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.CertHttpChallengeResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainProvisioningResponse {
     /**
      * The TXT records (for the certificate challenge) that were found at the last DNS fetch.
@@ -53,16 +53,16 @@ public final class DomainProvisioningResponse {
      */
     private final List<String> expectedIps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainProvisioningResponse(
-        @OutputCustomType.Parameter("certChallengeDiscoveredTxt") List<String> certChallengeDiscoveredTxt,
-        @OutputCustomType.Parameter("certChallengeDns") CertDnsChallengeResponse certChallengeDns,
-        @OutputCustomType.Parameter("certChallengeHttp") CertHttpChallengeResponse certChallengeHttp,
-        @OutputCustomType.Parameter("certStatus") String certStatus,
-        @OutputCustomType.Parameter("discoveredIps") List<String> discoveredIps,
-        @OutputCustomType.Parameter("dnsFetchTime") String dnsFetchTime,
-        @OutputCustomType.Parameter("dnsStatus") String dnsStatus,
-        @OutputCustomType.Parameter("expectedIps") List<String> expectedIps) {
+        @CustomType.Parameter("certChallengeDiscoveredTxt") List<String> certChallengeDiscoveredTxt,
+        @CustomType.Parameter("certChallengeDns") CertDnsChallengeResponse certChallengeDns,
+        @CustomType.Parameter("certChallengeHttp") CertHttpChallengeResponse certChallengeHttp,
+        @CustomType.Parameter("certStatus") String certStatus,
+        @CustomType.Parameter("discoveredIps") List<String> discoveredIps,
+        @CustomType.Parameter("dnsFetchTime") String dnsFetchTime,
+        @CustomType.Parameter("dnsStatus") String dnsStatus,
+        @CustomType.Parameter("expectedIps") List<String> expectedIps) {
         this.certChallengeDiscoveredTxt = certChallengeDiscoveredTxt;
         this.certChallengeDns = certChallengeDns;
         this.certChallengeHttp = certChallengeHttp;

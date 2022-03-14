@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AppBundleResponse extends io.pulumi.resources.InvokeArgs {
      * .aab file representing the app bundle under test.
      * 
      */
-    @InputImport(name="bundleLocation", required=true)
+    @Import(name="bundleLocation", required=true)
       private final FileReferenceResponse bundleLocation;
 
     public FileReferenceResponse getBundleLocation() {

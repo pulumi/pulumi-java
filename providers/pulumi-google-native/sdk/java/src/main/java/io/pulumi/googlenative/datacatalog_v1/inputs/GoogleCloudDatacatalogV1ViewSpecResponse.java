@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse extends io.pulumi.re
      * The query that defines the table view.
      * 
      */
-    @InputImport(name="viewQuery", required=true)
+    @Import(name="viewQuery", required=true)
       private final String viewQuery;
 
     public String getViewQuery() {

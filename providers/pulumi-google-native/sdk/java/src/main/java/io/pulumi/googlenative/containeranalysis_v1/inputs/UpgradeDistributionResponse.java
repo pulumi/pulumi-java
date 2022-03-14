@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
      * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed. For Windows the classification is one of the category_ids listed at https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
      * 
      */
-    @InputImport(name="classification", required=true)
+    @Import(name="classification", required=true)
       private final String classification;
 
     public String getClassification() {
@@ -32,7 +32,7 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
      * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
      * 
      */
-    @InputImport(name="cpeUri", required=true)
+    @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
     public String getCpeUri() {
@@ -43,7 +43,7 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
      * The cve tied to this Upgrade.
      * 
      */
-    @InputImport(name="cve", required=true)
+    @Import(name="cve", required=true)
       private final List<String> cve;
 
     public List<String> getCve() {
@@ -54,7 +54,7 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
      * The severity as specified by the upstream operating system.
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final String severity;
 
     public String getSeverity() {

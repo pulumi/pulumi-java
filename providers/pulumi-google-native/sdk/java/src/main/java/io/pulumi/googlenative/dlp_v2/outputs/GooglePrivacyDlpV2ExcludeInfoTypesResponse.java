@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse {
     /**
      * InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a finding of an infoType from this list. For example, for `InspectionRuleSet.info_types` containing "PHONE_NUMBER"`and`exclusion_rule`containing`exclude_info_types.info_types` with "EMAIL_ADDRESS" the phone number findings are dropped if they overlap with EMAIL_ADDRESS finding. That leads to "555-222-2222@example.org" to generate only a single finding, namely email address.
@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse {
      */
     private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2ExcludeInfoTypesResponse(@OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2ExcludeInfoTypesResponse(@CustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
         this.infoTypes = infoTypes;
     }
 

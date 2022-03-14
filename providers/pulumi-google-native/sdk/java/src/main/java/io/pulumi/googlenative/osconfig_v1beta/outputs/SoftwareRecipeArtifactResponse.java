@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeArtifactGcsResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeArtifactRemoteResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeArtifactResponse {
     /**
      * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
@@ -27,11 +27,11 @@ public final class SoftwareRecipeArtifactResponse {
      */
     private final SoftwareRecipeArtifactRemoteResponse remote;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeArtifactResponse(
-        @OutputCustomType.Parameter("allowInsecure") Boolean allowInsecure,
-        @OutputCustomType.Parameter("gcs") SoftwareRecipeArtifactGcsResponse gcs,
-        @OutputCustomType.Parameter("remote") SoftwareRecipeArtifactRemoteResponse remote) {
+        @CustomType.Parameter("allowInsecure") Boolean allowInsecure,
+        @CustomType.Parameter("gcs") SoftwareRecipeArtifactGcsResponse gcs,
+        @CustomType.Parameter("remote") SoftwareRecipeArtifactRemoteResponse remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.remote = remote;

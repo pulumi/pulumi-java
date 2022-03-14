@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.
      * 
      */
-    @InputImport(name="annotatedDatasetDescription")
+    @Import(name="annotatedDatasetDescription")
       private final @Nullable Output<String> annotatedDatasetDescription;
 
     public Output<String> getAnnotatedDatasetDescription() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * A human-readable name for AnnotatedDataset defined by users. Maximum of 64 characters .
      * 
      */
-    @InputImport(name="annotatedDatasetDisplayName", required=true)
+    @Import(name="annotatedDatasetDisplayName", required=true)
       private final Output<String> annotatedDatasetDisplayName;
 
     public Output<String> getAnnotatedDatasetDisplayName() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * Optional. If you want your own labeling contributors to manage and work on this labeling request, you can set these contributors here. We will give them access to the question types in crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https://crowd-compute.appspot.com/
      * 
      */
-    @InputImport(name="contributorEmails")
+    @Import(name="contributorEmails")
       private final @Nullable Output<List<String>> contributorEmails;
 
     public Output<List<String>> getContributorEmails() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * Instruction resource name.
      * 
      */
-    @InputImport(name="instruction", required=true)
+    @Import(name="instruction", required=true)
       private final Output<String> instruction;
 
     public Output<String> getInstruction() {
@@ -68,7 +68,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * Optional. A human-readable label used to logically group labeling tasks. This string must match the regular expression `[a-zA-Z\\d_-]{0,128}`.
      * 
      */
-    @InputImport(name="labelGroup")
+    @Import(name="labelGroup")
       private final @Nullable Output<String> labelGroup;
 
     public Output<String> getLabelGroup() {
@@ -79,7 +79,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * Optional. The Language of this question, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US. Only need to set this when task is language related. For example, French text classification.
      * 
      */
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
@@ -90,7 +90,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * Optional. Maximum duration for contributors to answer a question. Maximum is 3600 seconds. Default is 3600 seconds.
      * 
      */
-    @InputImport(name="questionDuration")
+    @Import(name="questionDuration")
       private final @Nullable Output<String> questionDuration;
 
     public Output<String> getQuestionDuration() {
@@ -101,7 +101,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * Optional. Replication of questions. Each question will be sent to up to this number of contributors to label. Aggregated answers will be returned. Default is set to 1. For image related labeling, valid values are 1, 3, 5.
      * 
      */
-    @InputImport(name="replicaCount")
+    @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
     public Output<Integer> getReplicaCount() {
@@ -112,7 +112,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
      * Email of the user who started the labeling task and should be notified by email. If empty no notification will be sent.
      * 
      */
-    @InputImport(name="userEmailAddress")
+    @Import(name="userEmailAddress")
       private final @Nullable Output<String> userEmailAddress;
 
     public Output<String> getUserEmailAddress() {

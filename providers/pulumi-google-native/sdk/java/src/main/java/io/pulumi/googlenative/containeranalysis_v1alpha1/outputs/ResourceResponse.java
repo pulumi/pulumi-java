@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.HashResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceResponse {
     /**
      * The hash of the resource content. E.g., the Docker digest.
@@ -26,11 +26,11 @@ public final class ResourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceResponse(
-        @OutputCustomType.Parameter("contentHash") HashResponse contentHash,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("contentHash") HashResponse contentHash,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("uri") String uri) {
         this.contentHash = contentHash;
         this.name = name;
         this.uri = uri;

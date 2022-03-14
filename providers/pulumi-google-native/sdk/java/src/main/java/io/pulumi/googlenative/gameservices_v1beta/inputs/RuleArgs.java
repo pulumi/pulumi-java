@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1beta.enums.RuleAction;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.ConditionArgs;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.LogConfigArgs;
@@ -26,7 +26,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Required
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<RuleAction> action;
 
     public Output<RuleAction> getAction() {
@@ -37,7 +37,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Additional restrictions that must be met. All conditions must pass for the rule to match.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
 
     public Output<List<ConditionArgs>> getConditions() {
@@ -48,7 +48,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in at least one of these entries.
      * 
      */
-    @InputImport(name="in")
+    @Import(name="in")
       private final @Nullable Output<List<String>> in;
 
     public Output<List<String>> getIn() {
@@ -70,7 +70,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The config returned to callers of CheckPolicy for any entries that match the LOG action.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<List<LogConfigArgs>> logConfig;
 
     public Output<List<LogConfigArgs>> getLogConfig() {
@@ -81,7 +81,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is in none of the entries. The format for in and not_in entries can be found at in the Local IAM documentation (see go/local-iam#features).
      * 
      */
-    @InputImport(name="notIn")
+    @Import(name="notIn")
       private final @Nullable Output<List<String>> notIn;
 
     public Output<List<String>> getNotIn() {
@@ -92,7 +92,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {

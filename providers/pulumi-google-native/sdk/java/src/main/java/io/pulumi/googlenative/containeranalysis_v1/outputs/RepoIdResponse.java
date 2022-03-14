@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.ProjectRepoIdResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RepoIdResponse {
     /**
      * A combination of a project ID and a repo name.
@@ -21,10 +21,10 @@ public final class RepoIdResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepoIdResponse(
-        @OutputCustomType.Parameter("projectRepoId") ProjectRepoIdResponse projectRepoId,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("projectRepoId") ProjectRepoIdResponse projectRepoId,
+        @CustomType.Parameter("uid") String uid) {
         this.projectRepoId = projectRepoId;
         this.uid = uid;
     }

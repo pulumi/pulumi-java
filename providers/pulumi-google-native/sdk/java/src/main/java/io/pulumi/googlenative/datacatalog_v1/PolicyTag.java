@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1.PolicyTagArgs;
@@ -23,7 +23,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * Resource names of child policy tags of this policy tag.
      * 
      */
-    @OutputExport(name="childPolicyTags", type=List.class, parameters={String.class})
+    @Export(name="childPolicyTags", type=List.class, parameters={String.class})
     private Output<List<String>> childPolicyTags;
 
     /**
@@ -37,7 +37,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * Description of this policy tag. If not set, defaults to empty. The description must contain only Unicode characters, tabs, newlines, carriage returns and page breaks, and be at most 2000 bytes long when encoded in UTF-8.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -51,7 +51,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * User-defined name of this policy tag. The name can't start or end with spaces and must be unique within the parent taxonomy, contain only Unicode letters, numbers, underscores, dashes and spaces, and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -65,7 +65,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * Resource name of this policy tag in the URL format. The policy tag manager generates unique taxonomy IDs and policy tag IDs.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * Resource name of this policy tag's parent policy tag. If empty, this is a top level tag. If not set, defaults to an empty string. For example, for the "LatLong" policy tag in the example above, this field contains the resource name of the "Geolocation" policy tag, and, for "Geolocation", this field is empty.
      * 
      */
-    @OutputExport(name="parentPolicyTag", type=String.class, parameters={})
+    @Export(name="parentPolicyTag", type=String.class, parameters={})
     private Output<String> parentPolicyTag;
 
     /**

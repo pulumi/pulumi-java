@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaCategoriesArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaPolicyTagsArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] The categories attached to this field, used for field-level access control.
      * 
      */
-    @InputImport(name="categories")
+    @Import(name="categories")
       private final @Nullable Output<TableFieldSchemaCategoriesArgs> categories;
 
     public Output<TableFieldSchemaCategoriesArgs> getCategories() {
@@ -32,7 +32,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * Optional. Collation specification of the field. It only can be set on string type field.
      * 
      */
-    @InputImport(name="collationSpec")
+    @Import(name="collationSpec")
       private final @Nullable Output<String> collationSpec;
 
     public Output<String> getCollationSpec() {
@@ -43,7 +43,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] The field description. The maximum length is 1,024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] Describes the nested schema fields if the type property is set to RECORD.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
     public Output<List<TableFieldSchemaArgs>> getFields() {
@@ -65,7 +65,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] Maximum length of values of this field for STRINGS or BYTES. If max_length is not specified, no maximum length constraint is imposed on this field. If type = "STRING", then max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES", then max_length represents the maximum number of bytes in this field. It is invalid to set this field if type ≠ "STRING" and ≠ "BYTES".
      * 
      */
-    @InputImport(name="maxLength")
+    @Import(name="maxLength")
       private final @Nullable Output<String> maxLength;
 
     public Output<String> getMaxLength() {
@@ -76,7 +76,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] The field mode. Possible values include NULLABLE, REQUIRED and REPEATED. The default value is NULLABLE.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -87,14 +87,14 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Required] The field name. The name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start with a letter or underscore. The maximum length is 300 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="policyTags")
+    @Import(name="policyTags")
       private final @Nullable Output<TableFieldSchemaPolicyTagsArgs> policyTags;
 
     public Output<TableFieldSchemaPolicyTagsArgs> getPolicyTags() {
@@ -105,7 +105,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] Precision (maximum number of total digits in base 10) and scale (maximum number of digits in the fractional part in base 10) constraints for values of this field for NUMERIC or BIGNUMERIC. It is invalid to set precision or scale if type ≠ "NUMERIC" and ≠ "BIGNUMERIC". If precision and scale are not specified, no value range constraint is imposed on this field insofar as values are permitted by the type. Values of this NUMERIC or BIGNUMERIC field must be in this range when: - Precision (P) and scale (S) are specified: [-10P-S + 10-S, 10P-S - 10-S] - Precision (P) is specified but not scale (and thus scale is interpreted to be equal to zero): [-10P + 1, 10P - 1]. Acceptable values for precision and scale if both are specified: - If type = "NUMERIC": 1 ≤ precision - scale ≤ 29 and 0 ≤ scale ≤ 9. - If type = "BIGNUMERIC": 1 ≤ precision - scale ≤ 38 and 0 ≤ scale ≤ 38. Acceptable values for precision if only precision is specified but not scale (and thus scale is interpreted to be equal to zero): - If type = "NUMERIC": 1 ≤ precision ≤ 29. - If type = "BIGNUMERIC": 1 ≤ precision ≤ 38. If scale is specified but not precision, then it is invalid.
      * 
      */
-    @InputImport(name="precision")
+    @Import(name="precision")
       private final @Nullable Output<String> precision;
 
     public Output<String> getPrecision() {
@@ -116,7 +116,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] See documentation for precision.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable Output<String> scale;
 
     public Output<String> getScale() {
@@ -127,7 +127,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME, INTERVAL, RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as RECORD).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

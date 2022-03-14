@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleResponse {
     /**
      * A crontab-like specification that the schedule uses to take snapshots.
@@ -26,11 +26,11 @@ public final class ScheduleResponse {
      */
     private final Integer retentionCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleResponse(
-        @OutputCustomType.Parameter("crontabSpec") String crontabSpec,
-        @OutputCustomType.Parameter("prefix") String prefix,
-        @OutputCustomType.Parameter("retentionCount") Integer retentionCount) {
+        @CustomType.Parameter("crontabSpec") String crontabSpec,
+        @CustomType.Parameter("prefix") String prefix,
+        @CustomType.Parameter("retentionCount") Integer retentionCount) {
         this.crontabSpec = crontabSpec;
         this.prefix = prefix;
         this.retentionCount = retentionCount;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ModelDefinitionModelOptionsResponse extends io.pulumi.resourc
 
     public static final ModelDefinitionModelOptionsResponse Empty = new ModelDefinitionModelOptionsResponse();
 
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final List<String> labels;
 
     public List<String> getLabels() {
         return this.labels;
     }
 
-    @InputImport(name="lossType", required=true)
+    @Import(name="lossType", required=true)
       private final String lossType;
 
     public String getLossType() {
         return this.lossType;
     }
 
-    @InputImport(name="modelType", required=true)
+    @Import(name="modelType", required=true)
       private final String modelType;
 
     public String getModelType() {

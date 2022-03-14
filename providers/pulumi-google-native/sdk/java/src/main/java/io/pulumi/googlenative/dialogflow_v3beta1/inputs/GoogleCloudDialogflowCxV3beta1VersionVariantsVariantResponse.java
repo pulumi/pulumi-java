@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      * Whether the variant is for the control group.
      * 
      */
-    @InputImport(name="isControlGroup", required=true)
+    @Import(name="isControlGroup", required=true)
       private final Boolean isControlGroup;
 
     public Boolean getIsControlGroup() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      * Percentage of the traffic which should be routed to this version of flow. Traffic allocation for a single flow must sum up to 1.0.
      * 
      */
-    @InputImport(name="trafficAllocation", required=true)
+    @Import(name="trafficAllocation", required=true)
       private final Double trafficAllocation;
 
     public Double getTrafficAllocation() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.eventarc_v1.TriggerArgs;
@@ -26,7 +26,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Destination specifies where the events should be sent to.
      * 
      */
-    @OutputExport(name="destination", type=DestinationResponse.class, parameters={})
+    @Export(name="destination", type=DestinationResponse.class, parameters={})
     private Output<DestinationResponse> destination;
 
     /**
@@ -54,7 +54,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * This checksum is computed by the server based on the value of other fields, and might be sent only on create requests to ensure that the client has an up-to-date value before proceeding.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -68,7 +68,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * null The list of filters that applies to event attributes. Only events that match all the provided filters are sent to the destination.
      * 
      */
-    @OutputExport(name="eventFilters", type=List.class, parameters={EventFilterResponse.class})
+    @Export(name="eventFilters", type=List.class, parameters={EventFilterResponse.class})
     private Output<List<EventFilterResponse>> eventFilters;
 
     /**
@@ -82,7 +82,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Optional. User labels attached to the triggers that can be used to group resources.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -96,7 +96,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The resource name of the trigger. Must be unique within the location of the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have the `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. To create Audit Log triggers, the service account should also have the `roles/eventarc.eventReceiver` IAM role.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -124,7 +124,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Optional. To deliver messages, Eventarc might use other GCP products as a transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
      * 
      */
-    @OutputExport(name="transport", type=TransportResponse.class, parameters={})
+    @Export(name="transport", type=TransportResponse.class, parameters={})
     private Output<TransportResponse> transport;
 
     /**
@@ -138,7 +138,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Server-assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
@@ -152,7 +152,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The last-modified time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

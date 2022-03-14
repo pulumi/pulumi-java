@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GkeBackupAgentConfigResponse {
     /**
      * Whether the Backup for GKE agent is enabled for this cluster.
@@ -15,8 +15,8 @@ public final class GkeBackupAgentConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GkeBackupAgentConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GkeBackupAgentConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dlp_v2.DlpJobArgs;
@@ -26,7 +26,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * Time when the job was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * Time when the job finished.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -54,7 +54,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * A stream of errors encountered running the job.
      * 
      */
-    @OutputExport(name="errors", type=List.class, parameters={GooglePrivacyDlpV2ErrorResponse.class})
+    @Export(name="errors", type=List.class, parameters={GooglePrivacyDlpV2ErrorResponse.class})
     private Output<List<GooglePrivacyDlpV2ErrorResponse>> errors;
 
     /**
@@ -68,7 +68,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * Results from inspecting a data source.
      * 
      */
-    @OutputExport(name="inspectDetails", type=GooglePrivacyDlpV2InspectDataSourceDetailsResponse.class, parameters={})
+    @Export(name="inspectDetails", type=GooglePrivacyDlpV2InspectDataSourceDetailsResponse.class, parameters={})
     private Output<GooglePrivacyDlpV2InspectDataSourceDetailsResponse> inspectDetails;
 
     /**
@@ -82,7 +82,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * If created by a job trigger, the resource name of the trigger that instantiated the job.
      * 
      */
-    @OutputExport(name="jobTriggerName", type=String.class, parameters={})
+    @Export(name="jobTriggerName", type=String.class, parameters={})
     private Output<String> jobTriggerName;
 
     /**
@@ -96,7 +96,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * The server-assigned name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * Results from analyzing risk of a data source.
      * 
      */
-    @OutputExport(name="riskDetails", type=GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse.class, parameters={})
+    @Export(name="riskDetails", type=GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse.class, parameters={})
     private Output<GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse> riskDetails;
 
     /**
@@ -124,7 +124,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * Time when the job started.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -138,7 +138,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * State of a job.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -152,7 +152,7 @@ public class DlpJob extends io.pulumi.resources.CustomResource {
      * The type of job.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

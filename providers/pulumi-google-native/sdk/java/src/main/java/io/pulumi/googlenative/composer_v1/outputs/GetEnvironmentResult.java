@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.composer_v1.outputs.EnvironmentConfigResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     /**
      * Configuration parameters for this environment.
@@ -47,15 +47,15 @@ public final class GetEnvironmentResult {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("config") EnvironmentConfigResponse config,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("uuid") String uuid) {
+        @CustomType.Parameter("config") EnvironmentConfigResponse config,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("uuid") String uuid) {
         this.config = config;
         this.createTime = createTime;
         this.labels = labels;

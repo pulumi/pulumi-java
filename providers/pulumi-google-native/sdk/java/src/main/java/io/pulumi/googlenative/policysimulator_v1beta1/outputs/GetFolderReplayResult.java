@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFolderReplayResult {
     /**
      * The configuration used for the `Replay`.
@@ -32,12 +32,12 @@ public final class GetFolderReplayResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFolderReplayResult(
-        @OutputCustomType.Parameter("config") GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse config,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resultsSummary") GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse resultsSummary,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("config") GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse config,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resultsSummary") GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse resultsSummary,
+        @CustomType.Parameter("state") String state) {
         this.config = config;
         this.name = name;
         this.resultsSummary = resultsSummary;

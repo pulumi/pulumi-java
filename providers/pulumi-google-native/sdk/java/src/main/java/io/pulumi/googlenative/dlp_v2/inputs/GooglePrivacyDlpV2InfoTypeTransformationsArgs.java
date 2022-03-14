@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsArgs extends io.pulu
      * Transformation for each infoType. Cannot specify more than one for a given infoType.
      * 
      */
-    @InputImport(name="transformations", required=true)
+    @Import(name="transformations", required=true)
       private final Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> transformations;
 
     public Output<List<GooglePrivacyDlpV2InfoTypeTransformationArgs>> getTransformations() {

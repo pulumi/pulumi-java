@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * A user-assigned name for this group, used only for display purposes.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -30,7 +30,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The filter used to determine which monitored resources belong to this group.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -41,7 +41,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
      * 
      */
-    @InputImport(name="isCluster")
+    @Import(name="isCluster")
       private final @Nullable Output<Boolean> isCluster;
 
     public Output<Boolean> getIsCluster() {
@@ -52,21 +52,21 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
      * 
      */
-    @InputImport(name="parentName")
+    @Import(name="parentName")
       private final @Nullable Output<String> parentName;
 
     public Output<String> getParentName() {
         return this.parentName == null ? Output.empty() : this.parentName;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

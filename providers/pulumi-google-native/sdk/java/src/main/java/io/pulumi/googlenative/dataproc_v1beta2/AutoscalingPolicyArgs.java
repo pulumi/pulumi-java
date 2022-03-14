@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.BasicAutoscalingAlgorithmArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.InstanceGroupAutoscalingPolicyConfigArgs;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
 
     public static final AutoscalingPolicyArgs Empty = new AutoscalingPolicyArgs();
 
-    @InputImport(name="basicAlgorithm")
+    @Import(name="basicAlgorithm")
       private final @Nullable Output<BasicAutoscalingAlgorithmArgs> basicAlgorithm;
 
     public Output<BasicAutoscalingAlgorithmArgs> getBasicAlgorithm() {
@@ -27,21 +27,21 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
         return this.id;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -52,7 +52,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * Optional. Describes how the autoscaler will operate for secondary workers.
      * 
      */
-    @InputImport(name="secondaryWorkerConfig")
+    @Import(name="secondaryWorkerConfig")
       private final @Nullable Output<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig;
 
     public Output<InstanceGroupAutoscalingPolicyConfigArgs> getSecondaryWorkerConfig() {
@@ -63,7 +63,7 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * Describes how the autoscaler will operate for primary workers.
      * 
      */
-    @InputImport(name="workerConfig", required=true)
+    @Import(name="workerConfig", required=true)
       private final Output<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig;
 
     public Output<InstanceGroupAutoscalingPolicyConfigArgs> getWorkerConfig() {

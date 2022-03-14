@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
      * [Optional] Human-oriented description of the field.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -28,7 +28,7 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
      * [Optional] The name of this field.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -39,7 +39,7 @@ public final class QueryParameterTypeStructTypesItemResponse extends io.pulumi.r
      * [Required] The type of this field.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final QueryParameterTypeResponse type;
 
     public QueryParameterTypeResponse getType() {

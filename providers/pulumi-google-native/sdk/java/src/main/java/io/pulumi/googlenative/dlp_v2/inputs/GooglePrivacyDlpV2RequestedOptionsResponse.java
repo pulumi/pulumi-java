@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectJobConfigResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectTemplateResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.
      * Inspect config.
      * 
      */
-    @InputImport(name="jobConfig", required=true)
+    @Import(name="jobConfig", required=true)
       private final GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
 
     public GooglePrivacyDlpV2InspectJobConfigResponse getJobConfig() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.
      * If run with an InspectTemplate, a snapshot of its state at the time of this run.
      * 
      */
-    @InputImport(name="snapshotInspectTemplate", required=true)
+    @Import(name="snapshotInspectTemplate", required=true)
       private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
     public GooglePrivacyDlpV2InspectTemplateResponse getSnapshotInspectTemplate() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * The time the certificate becomes invalid.
      * 
      */
-    @InputImport(name="expiryTime", required=true)
+    @Import(name="expiryTime", required=true)
       private final String expiryTime;
 
     public String getExpiryTime() {
@@ -31,7 +31,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * The entity that signed the certificate.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
@@ -42,7 +42,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * The type of public key in the certificate.
      * 
      */
-    @InputImport(name="publicKeyType", required=true)
+    @Import(name="publicKeyType", required=true)
       private final String publicKeyType;
 
     public String getPublicKeyType() {
@@ -53,7 +53,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * The algorithm used to sign the certificate.
      * 
      */
-    @InputImport(name="signatureAlgorithm", required=true)
+    @Import(name="signatureAlgorithm", required=true)
       private final String signatureAlgorithm;
 
     public String getSignatureAlgorithm() {
@@ -64,7 +64,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * The time the certificate becomes valid.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -75,7 +75,7 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
      * The entity the certificate and public key belong to.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final String subject;
 
     public String getSubject() {

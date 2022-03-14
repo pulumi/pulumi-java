@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2EntityIdResponse {
     /**
      * Composite key indicating which field contains the entity identifier.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2EntityIdResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2EntityIdResponse(@OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2EntityIdResponse(@CustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
         this.field = field;
     }
 

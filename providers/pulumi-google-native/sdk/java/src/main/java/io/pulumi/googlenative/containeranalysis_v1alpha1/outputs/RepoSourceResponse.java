@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RepoSourceResponse {
     /**
      * Name of the branch to build.
@@ -35,13 +35,13 @@ public final class RepoSourceResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepoSourceResponse(
-        @OutputCustomType.Parameter("branchName") String branchName,
-        @OutputCustomType.Parameter("commitSha") String commitSha,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("repoName") String repoName,
-        @OutputCustomType.Parameter("tagName") String tagName) {
+        @CustomType.Parameter("branchName") String branchName,
+        @CustomType.Parameter("commitSha") String commitSha,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("repoName") String repoName,
+        @CustomType.Parameter("tagName") String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.project = project;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PrivatePoolV1ConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -31,14 +31,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -49,28 +49,28 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Legacy Private Pool configuration.
      * 
      */
-    @InputImport(name="privatePoolV1Config")
+    @Import(name="privatePoolV1Config")
       private final @Nullable Output<PrivatePoolV1ConfigArgs> privatePoolV1Config;
 
     public Output<PrivatePoolV1ConfigArgs> getPrivatePoolV1Config() {
         return this.privatePoolV1Config == null ? Output.empty() : this.privatePoolV1Config;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
         return this.validateOnly == null ? Output.empty() : this.validateOnly;
     }
 
-    @InputImport(name="workerPoolId", required=true)
+    @Import(name="workerPoolId", required=true)
       private final Output<String> workerPoolId;
 
     public Output<String> getWorkerPoolId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="iam", required=true)
+    @Import(name="iam", required=true)
       private final String iam;
 
     public String getIam() {
@@ -32,7 +32,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="op", required=true)
+    @Import(name="op", required=true)
       private final String op;
 
     public String getOp() {
@@ -43,7 +43,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="svc", required=true)
+    @Import(name="svc", required=true)
       private final String svc;
 
     public String getSvc() {
@@ -54,7 +54,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="sys", required=true)
+    @Import(name="sys", required=true)
       private final String sys;
 
     public String getSys() {
@@ -65,7 +65,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

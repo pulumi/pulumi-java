@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.OwnerReferenceResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ObjectMetaResponse {
     /**
      * (Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
@@ -89,23 +89,23 @@ public final class ObjectMetaResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectMetaResponse(
-        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("deletionGracePeriodSeconds") Integer deletionGracePeriodSeconds,
-        @OutputCustomType.Parameter("deletionTimestamp") String deletionTimestamp,
-        @OutputCustomType.Parameter("finalizers") List<String> finalizers,
-        @OutputCustomType.Parameter("generateName") String generateName,
-        @OutputCustomType.Parameter("generation") Integer generation,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("ownerReferences") List<OwnerReferenceResponse> ownerReferences,
-        @OutputCustomType.Parameter("resourceVersion") String resourceVersion,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("deletionGracePeriodSeconds") Integer deletionGracePeriodSeconds,
+        @CustomType.Parameter("deletionTimestamp") String deletionTimestamp,
+        @CustomType.Parameter("finalizers") List<String> finalizers,
+        @CustomType.Parameter("generateName") String generateName,
+        @CustomType.Parameter("generation") Integer generation,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("ownerReferences") List<OwnerReferenceResponse> ownerReferences,
+        @CustomType.Parameter("resourceVersion") String resourceVersion,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.clusterName = clusterName;
         this.creationTimestamp = creationTimestamp;

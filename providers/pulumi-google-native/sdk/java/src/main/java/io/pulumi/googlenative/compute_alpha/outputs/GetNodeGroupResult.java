@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.NodeGroupAutoscalingPolicyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.NodeGroupMaintenanceWindowResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ShareSettingsResponse;
@@ -11,7 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeGroupResult {
     /**
      * Specifies how autoscaling should behave.
@@ -82,24 +82,24 @@ public final class GetNodeGroupResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeGroupResult(
-        @OutputCustomType.Parameter("autoscalingPolicy") NodeGroupAutoscalingPolicyResponse autoscalingPolicy,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("locationHint") String locationHint,
-        @OutputCustomType.Parameter("maintenancePolicy") String maintenancePolicy,
-        @OutputCustomType.Parameter("maintenanceWindow") NodeGroupMaintenanceWindowResponse maintenanceWindow,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeTemplate") String nodeTemplate,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("autoscalingPolicy") NodeGroupAutoscalingPolicyResponse autoscalingPolicy,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("locationHint") String locationHint,
+        @CustomType.Parameter("maintenancePolicy") String maintenancePolicy,
+        @CustomType.Parameter("maintenanceWindow") NodeGroupMaintenanceWindowResponse maintenanceWindow,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeTemplate") String nodeTemplate,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("zone") String zone) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.MetadataFilterLabelMatchResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetadataFilterResponse {
     /**
      * The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
@@ -22,10 +22,10 @@ public final class MetadataFilterResponse {
      */
     private final String filterMatchCriteria;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataFilterResponse(
-        @OutputCustomType.Parameter("filterLabels") List<MetadataFilterLabelMatchResponse> filterLabels,
-        @OutputCustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
+        @CustomType.Parameter("filterLabels") List<MetadataFilterLabelMatchResponse> filterLabels,
+        @CustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }

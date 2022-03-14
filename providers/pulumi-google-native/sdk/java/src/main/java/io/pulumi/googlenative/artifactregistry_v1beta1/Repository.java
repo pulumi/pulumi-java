@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.artifactregistry_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.artifactregistry_v1beta1.RepositoryArgs;
@@ -22,7 +22,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The time when the repository was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -36,7 +36,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The user-provided description of the repository.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The format of packages that are stored in the repository.
      * 
      */
-    @OutputExport(name="format", type=String.class, parameters={})
+    @Export(name="format", type=String.class, parameters={})
     private Output<String> format;
 
     /**
@@ -64,7 +64,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
      * 
      */
-    @OutputExport(name="kmsKeyName", type=String.class, parameters={})
+    @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
@@ -78,7 +78,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -92,7 +92,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The time when the repository was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

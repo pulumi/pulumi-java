@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
      * 
      */
-    @InputImport(name="containerSpecGcsPath", required=true)
+    @Import(name="containerSpecGcsPath", required=true)
       private final String containerSpecGcsPath;
 
     public String getContainerSpecGcsPath() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * The runtime environment for the Flex Template job.
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment;
 
     public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse getEnvironment() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * The job name to use for the created job. For an update job request, the job name should be the same as the existing running job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final String jobName;
 
     public String getJobName() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * Launch options for this Flex Template job. This is a common set of options across languages and templates. This should not be used to pass job parameters.
      * 
      */
-    @InputImport(name="launchOptions", required=true)
+    @Import(name="launchOptions", required=true)
       private final Map<String,String> launchOptions;
 
     public Map<String,String> getLaunchOptions() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * The parameters for the Flex Template. Example: `{"num_workers":"5"}`
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
@@ -78,7 +78,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * Use this to pass transform name mappings for streaming update jobs. Example: `{"oldTransformName":"newTransformName",...}`
      * 
      */
-    @InputImport(name="transformNameMappings", required=true)
+    @Import(name="transformNameMappings", required=true)
       private final Map<String,String> transformNameMappings;
 
     public Map<String,String> getTransformNameMappings() {
@@ -89,7 +89,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * Set this to true if you are sending a request to update a running streaming job. When set, the job name should be the same as the running job.
      * 
      */
-    @InputImport(name="update", required=true)
+    @Import(name="update", required=true)
       private final Boolean update;
 
     public Boolean getUpdate() {

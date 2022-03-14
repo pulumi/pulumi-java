@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.appengine_v1.AppArgs;
@@ -28,7 +28,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.
      * 
      */
-    @OutputExport(name="authDomain", type=String.class, parameters={})
+    @Export(name="authDomain", type=String.class, parameters={})
     private Output<String> authDomain;
 
     /**
@@ -42,7 +42,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Google Cloud Storage bucket that can be used for storing files associated with this application. This bucket is associated with the application and can be used by the gcloud deployment commands.
      * 
      */
-    @OutputExport(name="codeBucket", type=String.class, parameters={})
+    @Export(name="codeBucket", type=String.class, parameters={})
     private Output<String> codeBucket;
 
     /**
@@ -56,7 +56,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
      * 
      */
-    @OutputExport(name="databaseType", type=String.class, parameters={})
+    @Export(name="databaseType", type=String.class, parameters={})
     private Output<String> databaseType;
 
     /**
@@ -70,7 +70,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Google Cloud Storage bucket that can be used by this application to store content.
      * 
      */
-    @OutputExport(name="defaultBucket", type=String.class, parameters={})
+    @Export(name="defaultBucket", type=String.class, parameters={})
     private Output<String> defaultBucket;
 
     /**
@@ -84,7 +84,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Cookie expiration policy for this application.
      * 
      */
-    @OutputExport(name="defaultCookieExpiration", type=String.class, parameters={})
+    @Export(name="defaultCookieExpiration", type=String.class, parameters={})
     private Output<String> defaultCookieExpiration;
 
     /**
@@ -98,7 +98,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Hostname used to reach this application, as resolved by App Engine.
      * 
      */
-    @OutputExport(name="defaultHostname", type=String.class, parameters={})
+    @Export(name="defaultHostname", type=String.class, parameters={})
     private Output<String> defaultHostname;
 
     /**
@@ -112,7 +112,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * HTTP path dispatch rules for requests to the application that do not explicitly target a service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
      * 
      */
-    @OutputExport(name="dispatchRules", type=List.class, parameters={UrlDispatchRuleResponse.class})
+    @Export(name="dispatchRules", type=List.class, parameters={UrlDispatchRuleResponse.class})
     private Output<List<UrlDispatchRuleResponse>> dispatchRules;
 
     /**
@@ -126,7 +126,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The feature specific settings to be used in the application.
      * 
      */
-    @OutputExport(name="featureSettings", type=FeatureSettingsResponse.class, parameters={})
+    @Export(name="featureSettings", type=FeatureSettingsResponse.class, parameters={})
     private Output<FeatureSettingsResponse> featureSettings;
 
     /**
@@ -140,7 +140,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The Google Container Registry domain used for storing managed build docker images for this application.
      * 
      */
-    @OutputExport(name="gcrDomain", type=String.class, parameters={})
+    @Export(name="gcrDomain", type=String.class, parameters={})
     private Output<String> gcrDomain;
 
     /**
@@ -150,7 +150,7 @@ public class App extends io.pulumi.resources.CustomResource {
     public Output<String> getGcrDomain() {
         return this.gcrDomain;
     }
-    @OutputExport(name="iap", type=IdentityAwareProxyResponse.class, parameters={})
+    @Export(name="iap", type=IdentityAwareProxyResponse.class, parameters={})
     private Output<IdentityAwareProxyResponse> iap;
 
     public Output<IdentityAwareProxyResponse> getIap() {
@@ -160,7 +160,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -174,7 +174,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Full path to the Application resource in the API. Example: apps/myapp.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -188,7 +188,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -202,7 +202,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Serving status of this application.
      * 
      */
-    @OutputExport(name="servingStatus", type=String.class, parameters={})
+    @Export(name="servingStatus", type=String.class, parameters={})
     private Output<String> servingStatus;
 
     /**

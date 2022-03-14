@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1DatastoreConfigResponse {
     /**
      * Name of the Cloud Storage bucket. Required for `gcs` target_type.
@@ -35,13 +35,13 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
      */
     private final String tablePrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1DatastoreConfigResponse(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("datasetName") String datasetName,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("tablePrefix") String tablePrefix) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("datasetName") String datasetName,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("tablePrefix") String tablePrefix) {
         this.bucketName = bucketName;
         this.datasetName = datasetName;
         this.path = path;

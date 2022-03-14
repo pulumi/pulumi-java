@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RetryConfigResponse {
     /**
      * The maximum amount of time to wait before retrying a job after it fails. The default value of this field is 1 hour.
@@ -36,13 +36,13 @@ public final class RetryConfigResponse {
      */
     private final Integer retryCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetryConfigResponse(
-        @OutputCustomType.Parameter("maxBackoffDuration") String maxBackoffDuration,
-        @OutputCustomType.Parameter("maxDoublings") Integer maxDoublings,
-        @OutputCustomType.Parameter("maxRetryDuration") String maxRetryDuration,
-        @OutputCustomType.Parameter("minBackoffDuration") String minBackoffDuration,
-        @OutputCustomType.Parameter("retryCount") Integer retryCount) {
+        @CustomType.Parameter("maxBackoffDuration") String maxBackoffDuration,
+        @CustomType.Parameter("maxDoublings") Integer maxDoublings,
+        @CustomType.Parameter("maxRetryDuration") String maxRetryDuration,
+        @CustomType.Parameter("minBackoffDuration") String minBackoffDuration,
+        @CustomType.Parameter("retryCount") Integer retryCount) {
         this.maxBackoffDuration = maxBackoffDuration;
         this.maxDoublings = maxDoublings;
         this.maxRetryDuration = maxRetryDuration;

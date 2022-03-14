@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -29,7 +29,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -40,7 +40,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] The ID of the project containing this job.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

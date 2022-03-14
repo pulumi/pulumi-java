@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.enums.ParticipantRole;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParticipantArgs Empty = new ParticipantArgs();
 
-    @InputImport(name="conversationId", required=true)
+    @Import(name="conversationId", required=true)
       private final Output<String> conversationId;
 
     public Output<String> getConversationId() {
@@ -27,14 +27,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ```documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" }```
      * 
      */
-    @InputImport(name="documentsMetadataFilters")
+    @Import(name="documentsMetadataFilters")
       private final @Nullable Output<Map<String,String>> documentsMetadataFilters;
 
     public Output<Map<String,String>> getDocumentsMetadataFilters() {
         return this.documentsMetadataFilters == null ? Output.empty() : this.documentsMetadataFilters;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,14 +45,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -63,7 +63,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<ParticipantRole> role;
 
     public Output<ParticipantRole> getRole() {
@@ -74,7 +74,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
      * 
      */
-    @InputImport(name="sipRecordingMediaLabel")
+    @Import(name="sipRecordingMediaLabel")
       private final @Nullable Output<String> sipRecordingMediaLabel;
 
     public Output<String> getSipRecordingMediaLabel() {

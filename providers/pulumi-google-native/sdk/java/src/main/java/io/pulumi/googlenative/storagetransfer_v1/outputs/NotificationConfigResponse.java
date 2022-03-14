@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NotificationConfigResponse {
     /**
      * Event types for which a notification is desired. If empty, send notifications for all event types.
@@ -26,11 +26,11 @@ public final class NotificationConfigResponse {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationConfigResponse(
-        @OutputCustomType.Parameter("eventTypes") List<String> eventTypes,
-        @OutputCustomType.Parameter("payloadFormat") String payloadFormat,
-        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
+        @CustomType.Parameter("eventTypes") List<String> eventTypes,
+        @CustomType.Parameter("payloadFormat") String payloadFormat,
+        @CustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.eventTypes = eventTypes;
         this.payloadFormat = payloadFormat;
         this.pubsubTopic = pubsubTopic;

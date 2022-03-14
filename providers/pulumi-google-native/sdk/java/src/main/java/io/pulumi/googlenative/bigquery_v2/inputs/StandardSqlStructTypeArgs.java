@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldArgs;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
 
     public static final StandardSqlStructTypeArgs Empty = new StandardSqlStructTypeArgs();
 
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<StandardSqlFieldArgs>> fields;
 
     public Output<List<StandardSqlFieldArgs>> getFields() {

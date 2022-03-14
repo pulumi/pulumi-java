@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringFilterResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringForwardingRuleInfoResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringMirroredResourceInfoResponse;
@@ -12,7 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPacketMirroringResult {
     /**
      * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
@@ -80,21 +80,21 @@ public final class GetPacketMirroringResult {
      */
     private final String selfLinkWithId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPacketMirroringResult(
-        @OutputCustomType.Parameter("collectorIlb") PacketMirroringForwardingRuleInfoResponse collectorIlb,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enable") String enable,
-        @OutputCustomType.Parameter("filter") PacketMirroringFilterResponse filter,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("mirroredResources") PacketMirroringMirroredResourceInfoResponse mirroredResources,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") PacketMirroringNetworkInfoResponse network,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
+        @CustomType.Parameter("collectorIlb") PacketMirroringForwardingRuleInfoResponse collectorIlb,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enable") String enable,
+        @CustomType.Parameter("filter") PacketMirroringFilterResponse filter,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("mirroredResources") PacketMirroringMirroredResourceInfoResponse mirroredResources,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") PacketMirroringNetworkInfoResponse network,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
         this.collectorIlb = collectorIlb;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

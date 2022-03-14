@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.ClusteringArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.ExternalDataConfigurationArgs;
@@ -30,14 +30,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
      * 
      */
-    @InputImport(name="clustering")
+    @Import(name="clustering")
       private final @Nullable Output<ClusteringArgs> clustering;
 
     public Output<ClusteringArgs> getClustering() {
         return this.clustering == null ? Output.empty() : this.clustering;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -48,7 +48,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] A user-friendly description of this table.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Custom encryption configuration (e.g., Cloud KMS keys).
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<EncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<EncryptionConfigurationArgs> getEncryptionConfiguration() {
@@ -70,7 +70,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. The defaultTableExpirationMs property of the encapsulating dataset can be used to set a default expirationTime on newly created tables.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -81,7 +81,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
      * 
      */
-    @InputImport(name="externalDataConfiguration")
+    @Import(name="externalDataConfiguration")
       private final @Nullable Output<ExternalDataConfigurationArgs> externalDataConfiguration;
 
     public Output<ExternalDataConfigurationArgs> getExternalDataConfiguration() {
@@ -92,7 +92,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] A descriptive name for this table.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -103,7 +103,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The labels associated with this table. You can use these to organize and group your tables. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -114,7 +114,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] Materialized view definition.
      * 
      */
-    @InputImport(name="materializedView")
+    @Import(name="materializedView")
       private final @Nullable Output<MaterializedViewDefinitionArgs> materializedView;
 
     public Output<MaterializedViewDefinitionArgs> getMaterializedView() {
@@ -125,14 +125,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Output-only, Beta] Present iff this table represents a ML model. Describes the training information for the model, and it is required to run 'PREDICT' queries.
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Output<ModelDefinitionArgs> model;
 
     public Output<ModelDefinitionArgs> getModel() {
         return this.model == null ? Output.empty() : this.model;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -143,7 +143,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
      * 
      */
-    @InputImport(name="rangePartitioning")
+    @Import(name="rangePartitioning")
       private final @Nullable Output<RangePartitioningArgs> rangePartitioning;
 
     public Output<RangePartitioningArgs> getRangePartitioning() {
@@ -154,7 +154,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.
      * 
      */
-    @InputImport(name="requirePartitionFilter")
+    @Import(name="requirePartitionFilter")
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
     public Output<Boolean> getRequirePartitionFilter() {
@@ -165,7 +165,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] Describes the schema of this table.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<TableSchemaArgs> schema;
 
     public Output<TableSchemaArgs> getSchema() {
@@ -176,7 +176,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] Reference describing the ID of this table.
      * 
      */
-    @InputImport(name="tableReference")
+    @Import(name="tableReference")
       private final @Nullable Output<TableReferenceArgs> tableReference;
 
     public Output<TableReferenceArgs> getTableReference() {
@@ -187,7 +187,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Time-based partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
      * 
      */
-    @InputImport(name="timePartitioning")
+    @Import(name="timePartitioning")
       private final @Nullable Output<TimePartitioningArgs> timePartitioning;
 
     public Output<TimePartitioningArgs> getTimePartitioning() {
@@ -198,7 +198,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] The view definition.
      * 
      */
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable Output<ViewDefinitionArgs> view;
 
     public Output<ViewDefinitionArgs> getView() {

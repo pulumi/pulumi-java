@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.enums.DataCollectorType;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataCollectorArgs Empty = new DataCollectorArgs();
 
-    @InputImport(name="dataCollectorId")
+    @Import(name="dataCollectorId")
       private final @Nullable Output<String> dataCollectorId;
 
     public Output<String> getDataCollectorId() {
@@ -26,7 +26,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the data collector.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,14 +37,14 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the data collector. Must begin with `dc_`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -55,7 +55,7 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The type of data this data collector will collect.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<DataCollectorType> type;
 
     public Output<DataCollectorType> getType() {

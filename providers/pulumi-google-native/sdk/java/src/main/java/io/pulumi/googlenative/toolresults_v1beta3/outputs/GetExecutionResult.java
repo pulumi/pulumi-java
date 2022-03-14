@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.MatrixDimensionDefinitionResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.OutcomeResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.SpecificationResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetExecutionResult {
     /**
      * The time when the Execution status transitioned to COMPLETE. This value will be set automatically when state transitions to COMPLETE. - In response: set if the execution state is COMPLETE. - In create/update request: never set
@@ -55,16 +55,16 @@ public final class GetExecutionResult {
      */
     private final String testExecutionMatrixId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExecutionResult(
-        @OutputCustomType.Parameter("completionTime") TimestampResponse completionTime,
-        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
-        @OutputCustomType.Parameter("dimensionDefinitions") List<MatrixDimensionDefinitionResponse> dimensionDefinitions,
-        @OutputCustomType.Parameter("executionId") String executionId,
-        @OutputCustomType.Parameter("outcome") OutcomeResponse outcome,
-        @OutputCustomType.Parameter("specification") SpecificationResponse specification,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("testExecutionMatrixId") String testExecutionMatrixId) {
+        @CustomType.Parameter("completionTime") TimestampResponse completionTime,
+        @CustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @CustomType.Parameter("dimensionDefinitions") List<MatrixDimensionDefinitionResponse> dimensionDefinitions,
+        @CustomType.Parameter("executionId") String executionId,
+        @CustomType.Parameter("outcome") OutcomeResponse outcome,
+        @CustomType.Parameter("specification") SpecificationResponse specification,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("testExecutionMatrixId") String testExecutionMatrixId) {
         this.completionTime = completionTime;
         this.creationTime = creationTime;
         this.dimensionDefinitions = dimensionDefinitions;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
      * DatabaseId accessed in the connection.
      * 
      */
-    @InputImport(name="databaseId", required=true)
+    @Import(name="databaseId", required=true)
       private final String databaseId;
 
     public String getDatabaseId() {
@@ -31,7 +31,7 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
      * InstanceId accessed in the connection.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -42,7 +42,7 @@ public final class SpannerIODetailsResponse extends io.pulumi.resources.InvokeAr
      * ProjectId accessed in the connection.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {

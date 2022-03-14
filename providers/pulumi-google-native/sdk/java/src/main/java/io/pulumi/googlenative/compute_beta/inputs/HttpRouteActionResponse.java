@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.CorsPolicyResponse;
 import io.pulumi.googlenative.compute_beta.inputs.DurationResponse;
 import io.pulumi.googlenative.compute_beta.inputs.HttpFaultInjectionResponse;
@@ -23,7 +23,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * The specification for allowing client-side cross-origin requests. For more information about the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard. Not supported when the URL map is bound to a target gRPC proxy.
      * 
      */
-    @InputImport(name="corsPolicy", required=true)
+    @Import(name="corsPolicy", required=true)
       private final CorsPolicyResponse corsPolicy;
 
     public CorsPolicyResponse getCorsPolicy() {
@@ -34,7 +34,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by a load balancer on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted by the load balancer for a percentage of requests. For the requests impacted by fault injection, timeout and retry_policy is ignored by clients that are configured with a fault_injection_policy.
      * 
      */
-    @InputImport(name="faultInjectionPolicy", required=true)
+    @Import(name="faultInjectionPolicy", required=true)
       private final HttpFaultInjectionResponse faultInjectionPolicy;
 
     public HttpFaultInjectionResponse getFaultInjectionPolicy() {
@@ -45,7 +45,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout field where the timeout duration starts from the time the request has been fully processed (known as *end-of-stream*), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. If not specified, this field uses the maximum maxStreamDuration value among all backend services associated with the route. This field is only allowed if the Url map is used with backend services with loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * 
      */
-    @InputImport(name="maxStreamDuration", required=true)
+    @Import(name="maxStreamDuration", required=true)
       private final DurationResponse maxStreamDuration;
 
     public DurationResponse getMaxStreamDuration() {
@@ -56,7 +56,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="requestMirrorPolicy", required=true)
+    @Import(name="requestMirrorPolicy", required=true)
       private final RequestMirrorPolicyResponse requestMirrorPolicy;
 
     public RequestMirrorPolicyResponse getRequestMirrorPolicy() {
@@ -67,7 +67,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * Specifies the retry policy associated with this route.
      * 
      */
-    @InputImport(name="retryPolicy", required=true)
+    @Import(name="retryPolicy", required=true)
       private final HttpRetryPolicyResponse retryPolicy;
 
     public HttpRetryPolicyResponse getRetryPolicy() {
@@ -78,7 +78,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (known as *end-of-stream*) up until the response has been processed. Timeout includes all retries. If not specified, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="timeout", required=true)
+    @Import(name="timeout", required=true)
       private final DurationResponse timeout;
 
     public DurationResponse getTimeout() {
@@ -89,7 +89,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * The spec to modify the URL of the request, before forwarding the request to the matched service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="urlRewrite", required=true)
+    @Import(name="urlRewrite", required=true)
       private final UrlRewriteResponse urlRewrite;
 
     public UrlRewriteResponse getUrlRewrite() {
@@ -100,7 +100,7 @@ public final class HttpRouteActionResponse extends io.pulumi.resources.InvokeArg
      * A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one weightedBackendService with weight set to a non-zero number. After a backend service is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.
      * 
      */
-    @InputImport(name="weightedBackendServices", required=true)
+    @Import(name="weightedBackendServices", required=true)
       private final List<WeightedBackendServiceResponse> weightedBackendServices;
 
     public List<WeightedBackendServiceResponse> getWeightedBackendServices() {

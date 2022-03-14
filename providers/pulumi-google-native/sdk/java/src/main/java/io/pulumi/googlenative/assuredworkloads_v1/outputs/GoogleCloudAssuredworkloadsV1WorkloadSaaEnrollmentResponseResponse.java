@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse {
     /**
      * Indicates SAA enrollment setup error if any.
@@ -21,10 +21,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
      */
     private final String setupStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(
-        @OutputCustomType.Parameter("setupErrors") List<String> setupErrors,
-        @OutputCustomType.Parameter("setupStatus") String setupStatus) {
+        @CustomType.Parameter("setupErrors") List<String> setupErrors,
+        @CustomType.Parameter("setupStatus") String setupStatus) {
         this.setupErrors = setupErrors;
         this.setupStatus = setupStatus;
     }

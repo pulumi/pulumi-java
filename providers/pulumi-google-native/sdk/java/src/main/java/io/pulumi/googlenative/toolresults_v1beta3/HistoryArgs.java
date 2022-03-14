@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.HistoryTestPlatform;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -30,7 +30,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
      * 
      */
-    @InputImport(name="historyId")
+    @Import(name="historyId")
       private final @Nullable Output<String> historyId;
 
     public Output<String> getHistoryId() {
@@ -41,21 +41,21 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -66,7 +66,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
      * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
      * 
      */
-    @InputImport(name="testPlatform")
+    @Import(name="testPlatform")
       private final @Nullable Output<HistoryTestPlatform> testPlatform;
 
     public Output<HistoryTestPlatform> getTestPlatform() {

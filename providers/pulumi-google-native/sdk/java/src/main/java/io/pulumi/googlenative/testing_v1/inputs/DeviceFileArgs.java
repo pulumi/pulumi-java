@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.ObbFileArgs;
 import io.pulumi.googlenative.testing_v1.inputs.RegularFileArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to an opaque binary blob file.
      * 
      */
-    @InputImport(name="obbFile")
+    @Import(name="obbFile")
       private final @Nullable Output<ObbFileArgs> obbFile;
 
     public Output<ObbFileArgs> getObbFile() {
@@ -34,7 +34,7 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to a regular file.
      * 
      */
-    @InputImport(name="regularFile")
+    @Import(name="regularFile")
       private final @Nullable Output<RegularFileArgs> regularFile;
 
     public Output<RegularFileArgs> getRegularFile() {

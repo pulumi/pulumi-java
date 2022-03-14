@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerStatusStatefulResponse;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerStatusVersionTargetResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerStatusResponse {
     /**
      * The URL of the Autoscaler that targets this instance group manager.
@@ -33,12 +33,12 @@ public final class InstanceGroupManagerStatusResponse {
      */
     private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerStatusResponse(
-        @OutputCustomType.Parameter("autoscaler") String autoscaler,
-        @OutputCustomType.Parameter("isStable") Boolean isStable,
-        @OutputCustomType.Parameter("stateful") InstanceGroupManagerStatusStatefulResponse stateful,
-        @OutputCustomType.Parameter("versionTarget") InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
+        @CustomType.Parameter("autoscaler") String autoscaler,
+        @CustomType.Parameter("isStable") Boolean isStable,
+        @CustomType.Parameter("stateful") InstanceGroupManagerStatusStatefulResponse stateful,
+        @CustomType.Parameter("versionTarget") InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
         this.autoscaler = autoscaler;
         this.isStable = isStable;
         this.stateful = stateful;

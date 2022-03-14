@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.ApiResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthenticationResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.BackendResponse;
@@ -30,7 +30,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigResult {
     /**
      * A list of API interfaces exported by this service. Only the `name` field of the google.protobuf.Api needs to be provided by the configuration author, as the remaining fields will be derived from the IDL during the normalization process. It is an error to specify an API interface here which cannot be resolved against the associated IDL files.
@@ -163,34 +163,34 @@ public final class GetConfigResult {
      */
     private final UsageResponse usage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigResult(
-        @OutputCustomType.Parameter("apis") List<ApiResponse> apis,
-        @OutputCustomType.Parameter("authentication") AuthenticationResponse authentication,
-        @OutputCustomType.Parameter("backend") BackendResponse backend,
-        @OutputCustomType.Parameter("billing") BillingResponse billing,
-        @OutputCustomType.Parameter("configVersion") Integer configVersion,
-        @OutputCustomType.Parameter("context") ContextResponse context,
-        @OutputCustomType.Parameter("control") ControlResponse control,
-        @OutputCustomType.Parameter("customError") CustomErrorResponse customError,
-        @OutputCustomType.Parameter("documentation") DocumentationResponse documentation,
-        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
-        @OutputCustomType.Parameter("enums") List<EnumResponse> enums,
-        @OutputCustomType.Parameter("http") HttpResponse http,
-        @OutputCustomType.Parameter("logging") LoggingResponse logging,
-        @OutputCustomType.Parameter("logs") List<LogDescriptorResponse> logs,
-        @OutputCustomType.Parameter("metrics") List<MetricDescriptorResponse> metrics,
-        @OutputCustomType.Parameter("monitoredResources") List<MonitoredResourceDescriptorResponse> monitoredResources,
-        @OutputCustomType.Parameter("monitoring") MonitoringResponse monitoring,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("producerProjectId") String producerProjectId,
-        @OutputCustomType.Parameter("quota") QuotaResponse quota,
-        @OutputCustomType.Parameter("sourceInfo") SourceInfoResponse sourceInfo,
-        @OutputCustomType.Parameter("systemParameters") SystemParametersResponse systemParameters,
-        @OutputCustomType.Parameter("systemTypes") List<TypeResponse> systemTypes,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("types") List<TypeResponse> types,
-        @OutputCustomType.Parameter("usage") UsageResponse usage) {
+        @CustomType.Parameter("apis") List<ApiResponse> apis,
+        @CustomType.Parameter("authentication") AuthenticationResponse authentication,
+        @CustomType.Parameter("backend") BackendResponse backend,
+        @CustomType.Parameter("billing") BillingResponse billing,
+        @CustomType.Parameter("configVersion") Integer configVersion,
+        @CustomType.Parameter("context") ContextResponse context,
+        @CustomType.Parameter("control") ControlResponse control,
+        @CustomType.Parameter("customError") CustomErrorResponse customError,
+        @CustomType.Parameter("documentation") DocumentationResponse documentation,
+        @CustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @CustomType.Parameter("enums") List<EnumResponse> enums,
+        @CustomType.Parameter("http") HttpResponse http,
+        @CustomType.Parameter("logging") LoggingResponse logging,
+        @CustomType.Parameter("logs") List<LogDescriptorResponse> logs,
+        @CustomType.Parameter("metrics") List<MetricDescriptorResponse> metrics,
+        @CustomType.Parameter("monitoredResources") List<MonitoredResourceDescriptorResponse> monitoredResources,
+        @CustomType.Parameter("monitoring") MonitoringResponse monitoring,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("producerProjectId") String producerProjectId,
+        @CustomType.Parameter("quota") QuotaResponse quota,
+        @CustomType.Parameter("sourceInfo") SourceInfoResponse sourceInfo,
+        @CustomType.Parameter("systemParameters") SystemParametersResponse systemParameters,
+        @CustomType.Parameter("systemTypes") List<TypeResponse> systemTypes,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("types") List<TypeResponse> types,
+        @CustomType.Parameter("usage") UsageResponse usage) {
         this.apis = apis;
         this.authentication = authentication;
         this.backend = backend;

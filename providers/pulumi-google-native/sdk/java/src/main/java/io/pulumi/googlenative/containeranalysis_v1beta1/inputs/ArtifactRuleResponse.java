@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class ArtifactRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArtifactRuleResponse Empty = new ArtifactRuleResponse();
 
-    @InputImport(name="artifactRule", required=true)
+    @Import(name="artifactRule", required=true)
       private final List<String> artifactRule;
 
     public List<String> getArtifactRule() {

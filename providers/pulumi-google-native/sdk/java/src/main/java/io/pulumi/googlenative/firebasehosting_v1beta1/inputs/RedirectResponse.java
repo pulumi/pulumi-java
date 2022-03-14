@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
      */
-    @InputImport(name="glob", required=true)
+    @Import(name="glob", required=true)
       private final String glob;
 
     public String getGlob() {
@@ -32,7 +32,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
      * The value to put in the HTTP location header of the response. The location can contain capture group values from the pattern using a `:` prefix to identify the segment and an optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode": 301, "location": "https://example.com/foo/:capture"
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -43,7 +43,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
      * The user-supplied RE2 regular expression to match against the request URL path.
      * 
      */
-    @InputImport(name="regex", required=true)
+    @Import(name="regex", required=true)
       private final String regex;
 
     public String getRegex() {
@@ -54,7 +54,7 @@ public final class RedirectResponse extends io.pulumi.resources.InvokeArgs {
      * The status HTTP code to return in the response. It must be a valid 3xx status code.
      * 
      */
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final Integer statusCode;
 
     public Integer getStatusCode() {

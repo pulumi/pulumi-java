@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretResponse {
     /**
      * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
@@ -15,8 +15,8 @@ public final class SecretResponse {
      */
     private final String secretVersion;
 
-    @OutputCustomType.Constructor
-    private SecretResponse(@OutputCustomType.Parameter("secretVersion") String secretVersion) {
+    @CustomType.Constructor
+    private SecretResponse(@CustomType.Parameter("secretVersion") String secretVersion) {
         this.secretVersion = secretVersion;
     }
 

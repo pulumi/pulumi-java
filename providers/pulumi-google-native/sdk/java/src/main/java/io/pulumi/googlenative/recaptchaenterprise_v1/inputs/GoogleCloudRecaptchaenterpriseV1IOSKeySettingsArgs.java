@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
      * If set to true, allowed_bundle_ids are not enforced.
      * 
      */
-    @InputImport(name="allowAllBundleIds")
+    @Import(name="allowAllBundleIds")
       private final @Nullable Output<Boolean> allowAllBundleIds;
 
     public Output<Boolean> getAllowAllBundleIds() {
@@ -35,7 +35,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
      * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
      * 
      */
-    @InputImport(name="allowedBundleIds")
+    @Import(name="allowedBundleIds")
       private final @Nullable Output<List<String>> allowedBundleIds;
 
     public Output<List<String>> getAllowedBundleIds() {

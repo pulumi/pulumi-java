@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.StatusResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.TraceResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReachabilityDetailsResponse {
     /**
      * The details of a failure or a cancellation of reachability analysis.
@@ -33,12 +33,12 @@ public final class ReachabilityDetailsResponse {
      */
     private final String verifyTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReachabilityDetailsResponse(
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("result") String result,
-        @OutputCustomType.Parameter("traces") List<TraceResponse> traces,
-        @OutputCustomType.Parameter("verifyTime") String verifyTime) {
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("result") String result,
+        @CustomType.Parameter("traces") List<TraceResponse> traces,
+        @CustomType.Parameter("verifyTime") String verifyTime) {
         this.error = error;
         this.result = result;
         this.traces = traces;

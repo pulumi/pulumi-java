@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.DateResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.TimeOfDayResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleResponse {
     /**
      * The time in UTC that no further transfer operations are scheduled. Combined with schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer operations. This field must be greater than or equal to the timestamp corresponding to the combintation of schedule_start_date and start_time_of_day, and is subject to the following: * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not set, then INVALID_ARGUMENT is returned.
@@ -37,13 +37,13 @@ public final class ScheduleResponse {
      */
     private final TimeOfDayResponse startTimeOfDay;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleResponse(
-        @OutputCustomType.Parameter("endTimeOfDay") TimeOfDayResponse endTimeOfDay,
-        @OutputCustomType.Parameter("repeatInterval") String repeatInterval,
-        @OutputCustomType.Parameter("scheduleEndDate") DateResponse scheduleEndDate,
-        @OutputCustomType.Parameter("scheduleStartDate") DateResponse scheduleStartDate,
-        @OutputCustomType.Parameter("startTimeOfDay") TimeOfDayResponse startTimeOfDay) {
+        @CustomType.Parameter("endTimeOfDay") TimeOfDayResponse endTimeOfDay,
+        @CustomType.Parameter("repeatInterval") String repeatInterval,
+        @CustomType.Parameter("scheduleEndDate") DateResponse scheduleEndDate,
+        @CustomType.Parameter("scheduleStartDate") DateResponse scheduleStartDate,
+        @CustomType.Parameter("startTimeOfDay") TimeOfDayResponse startTimeOfDay) {
         this.endTimeOfDay = endTimeOfDay;
         this.repeatInterval = repeatInterval;
         this.scheduleEndDate = scheduleEndDate;

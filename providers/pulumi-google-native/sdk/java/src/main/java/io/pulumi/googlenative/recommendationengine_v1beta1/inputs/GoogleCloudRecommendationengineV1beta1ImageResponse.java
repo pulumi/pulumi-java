@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
      * Optional. Height of the image in number of pixels.
      * 
      */
-    @InputImport(name="height", required=true)
+    @Import(name="height", required=true)
       private final Integer height;
 
     public Integer getHeight() {
@@ -32,7 +32,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
      * URL of the image with a length limit of 5 KiB.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {
@@ -43,7 +43,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
      * Optional. Width of the image in number of pixels.
      * 
      */
-    @InputImport(name="width", required=true)
+    @Import(name="width", required=true)
       private final Integer width;
 
     public Integer getWidth() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
      */
-    @InputImport(name="allowedExitCodes", required=true)
+    @Import(name="allowedExitCodes", required=true)
       private final List<Integer> allowedExitCodes;
 
     public List<Integer> getAllowedExitCodes() {
@@ -33,7 +33,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
      * The id of the relevant artifact in the recipe.
      * 
      */
-    @InputImport(name="artifactId", required=true)
+    @Import(name="artifactId", required=true)
       private final String artifactId;
 
     public String getArtifactId() {
@@ -44,7 +44,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
      * The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).
      * 
      */
-    @InputImport(name="flags", required=true)
+    @Import(name="flags", required=true)
       private final List<String> flags;
 
     public List<String> getFlags() {

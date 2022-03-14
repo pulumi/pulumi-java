@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleHttpHeaderActionResponse {
     /**
      * The list of request headers to add or overwrite if they're already present.
@@ -16,8 +16,8 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
      */
     private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
 
-    @OutputCustomType.Constructor
-    private SecurityPolicyRuleHttpHeaderActionResponse(@OutputCustomType.Parameter("requestHeadersToAdds") List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
+    @CustomType.Constructor
+    private SecurityPolicyRuleHttpHeaderActionResponse(@CustomType.Parameter("requestHeadersToAdds") List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
         this.requestHeadersToAdds = requestHeadersToAdds;
     }
 

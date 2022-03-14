@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * The probability that the treatment is better than all other treatments in the experiment
      * 
      */
-    @InputImport(name="confidenceInterval", required=true)
+    @Import(name="confidenceInterval", required=true)
       private final GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
 
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse getConfidenceInterval() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * Count value of a metric.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Double count;
 
     public Double getCount() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * Count-based metric type. Only one of type or count_type is specified in each Metric.
      * 
      */
-    @InputImport(name="countType", required=true)
+    @Import(name="countType", required=true)
       private final String countType;
 
     public String getCountType() {
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * Ratio value of a metric.
      * 
      */
-    @InputImport(name="ratio", required=true)
+    @Import(name="ratio", required=true)
       private final Double ratio;
 
     public Double getRatio() {
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

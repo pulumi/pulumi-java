@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
      * Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
      * 
      */
-    @InputImport(name="synonyms")
+    @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
     public Output<List<String>> getSynonyms() {

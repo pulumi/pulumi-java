@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleIamV1AuditConfigResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleIamV1BindingResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceIamPolicyResult {
     /**
      * Specifies cloud audit logging configuration for this policy.
@@ -34,12 +34,12 @@ public final class GetServiceIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceIamPolicyResult(
-        @OutputCustomType.Parameter("auditConfigs") List<GoogleIamV1AuditConfigResponse> auditConfigs,
-        @OutputCustomType.Parameter("bindings") List<GoogleIamV1BindingResponse> bindings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("auditConfigs") List<GoogleIamV1AuditConfigResponse> auditConfigs,
+        @CustomType.Parameter("bindings") List<GoogleIamV1BindingResponse> bindings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;

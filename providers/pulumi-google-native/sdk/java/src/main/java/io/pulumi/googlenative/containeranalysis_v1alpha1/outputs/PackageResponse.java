@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.DistributionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageResponse {
     /**
      * The various channels by which a package is distributed.
@@ -22,10 +22,10 @@ public final class PackageResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageResponse(
-        @OutputCustomType.Parameter("distribution") List<DistributionResponse> distribution,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("distribution") List<DistributionResponse> distribution,
+        @CustomType.Parameter("name") String name) {
         this.distribution = distribution;
         this.name = name;
     }

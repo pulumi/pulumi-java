@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccessPolicyArgs Empty = new GetAccessPolicyArgs();
 
-    @InputImport(name="accessPolicyId", required=true)
+    @Import(name="accessPolicyId", required=true)
       private final String accessPolicyId;
 
     public String getAccessPolicyId() {

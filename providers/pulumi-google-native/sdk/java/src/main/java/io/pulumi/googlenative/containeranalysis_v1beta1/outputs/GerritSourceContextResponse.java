@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.AliasContextResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GerritSourceContextResponse {
     /**
      * An alias, which may be a branch or tag.
@@ -31,12 +31,12 @@ public final class GerritSourceContextResponse {
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GerritSourceContextResponse(
-        @OutputCustomType.Parameter("aliasContext") AliasContextResponse aliasContext,
-        @OutputCustomType.Parameter("gerritProject") String gerritProject,
-        @OutputCustomType.Parameter("hostUri") String hostUri,
-        @OutputCustomType.Parameter("revisionId") String revisionId) {
+        @CustomType.Parameter("aliasContext") AliasContextResponse aliasContext,
+        @CustomType.Parameter("gerritProject") String gerritProject,
+        @CustomType.Parameter("hostUri") String hostUri,
+        @CustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.gerritProject = gerritProject;
         this.hostUri = hostUri;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EventHandlerResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3NluSettingsResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3TransitionRouteResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFlowResult {
     /**
      * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
@@ -49,15 +49,15 @@ public final class GetFlowResult {
      */
     private final List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFlowResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("eventHandlers") List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nluSettings") GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings,
-        @OutputCustomType.Parameter("transitionRouteGroups") List<String> transitionRouteGroups,
-        @OutputCustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("eventHandlers") List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nluSettings") GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings,
+        @CustomType.Parameter("transitionRouteGroups") List<String> transitionRouteGroups,
+        @CustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
         this.description = description;
         this.displayName = displayName;
         this.eventHandlers = eventHandlers;

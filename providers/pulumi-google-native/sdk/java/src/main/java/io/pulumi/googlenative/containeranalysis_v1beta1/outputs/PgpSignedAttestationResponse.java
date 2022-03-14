@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PgpSignedAttestationResponse {
     /**
      * Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).
@@ -25,11 +25,11 @@ public final class PgpSignedAttestationResponse {
      */
     private final String signature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PgpSignedAttestationResponse(
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("pgpKeyId") String pgpKeyId,
-        @OutputCustomType.Parameter("signature") String signature) {
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("pgpKeyId") String pgpKeyId,
+        @CustomType.Parameter("signature") String signature) {
         this.contentType = contentType;
         this.pgpKeyId = pgpKeyId;
         this.signature = signature;

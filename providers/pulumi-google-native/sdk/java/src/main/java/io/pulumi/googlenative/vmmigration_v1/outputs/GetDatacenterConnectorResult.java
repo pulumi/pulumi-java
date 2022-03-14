@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatacenterConnectorResult {
     /**
      * The communication channel between the datacenter connector and GCP.
@@ -61,18 +61,18 @@ public final class GetDatacenterConnectorResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatacenterConnectorResult(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("registrationId") String registrationId,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateTime") String stateTime,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("registrationId") String registrationId,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateTime") String stateTime,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("version") String version) {
         this.bucket = bucket;
         this.createTime = createTime;
         this.error = error;

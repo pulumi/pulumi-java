@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.InTotoProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SlsaProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SubjectResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InTotoStatementResponse {
     /**
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
@@ -27,13 +27,13 @@ public final class InTotoStatementResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InTotoStatementResponse(
-        @OutputCustomType.Parameter("predicateType") String predicateType,
-        @OutputCustomType.Parameter("provenance") InTotoProvenanceResponse provenance,
-        @OutputCustomType.Parameter("slsaProvenance") SlsaProvenanceResponse slsaProvenance,
-        @OutputCustomType.Parameter("subject") List<SubjectResponse> subject,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("predicateType") String predicateType,
+        @CustomType.Parameter("provenance") InTotoProvenanceResponse provenance,
+        @CustomType.Parameter("slsaProvenance") SlsaProvenanceResponse slsaProvenance,
+        @CustomType.Parameter("subject") List<SubjectResponse> subject,
+        @CustomType.Parameter("type") String type) {
         this.predicateType = predicateType;
         this.provenance = provenance;
         this.slsaProvenance = slsaProvenance;

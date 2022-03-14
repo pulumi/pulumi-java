@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.PublicKeyResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.SubjectConfigResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.X509ParametersResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateConfigResponse {
     /**
      * Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
@@ -27,11 +27,11 @@ public final class CertificateConfigResponse {
      */
     private final X509ParametersResponse x509Config;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateConfigResponse(
-        @OutputCustomType.Parameter("publicKey") PublicKeyResponse publicKey,
-        @OutputCustomType.Parameter("subjectConfig") SubjectConfigResponse subjectConfig,
-        @OutputCustomType.Parameter("x509Config") X509ParametersResponse x509Config) {
+        @CustomType.Parameter("publicKey") PublicKeyResponse publicKey,
+        @CustomType.Parameter("subjectConfig") SubjectConfigResponse subjectConfig,
+        @CustomType.Parameter("x509Config") X509ParametersResponse x509Config) {
         this.publicKey = publicKey;
         this.subjectConfig = subjectConfig;
         this.x509Config = x509Config;

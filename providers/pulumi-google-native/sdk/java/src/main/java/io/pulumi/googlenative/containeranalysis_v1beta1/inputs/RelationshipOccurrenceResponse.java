@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
      * A place for the SPDX file creator to record any general comments about the relationship
      * 
      */
-    @InputImport(name="comment", required=true)
+    @Import(name="comment", required=true)
       private final String comment;
 
     public String getComment() {
@@ -31,7 +31,7 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
      * Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
@@ -42,7 +42,7 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
      * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final String target;
 
     public String getTarget() {
@@ -53,7 +53,7 @@ public final class RelationshipOccurrenceResponse extends io.pulumi.resources.In
      * The type of relationship between the source and target SPDX elements
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

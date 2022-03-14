@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CryptoKeyConfigResponse {
     /**
      * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
@@ -15,8 +15,8 @@ public final class CryptoKeyConfigResponse {
      */
     private final String keyReference;
 
-    @OutputCustomType.Constructor
-    private CryptoKeyConfigResponse(@OutputCustomType.Parameter("keyReference") String keyReference) {
+    @CustomType.Constructor
+    private CryptoKeyConfigResponse(@CustomType.Parameter("keyReference") String keyReference) {
         this.keyReference = keyReference;
     }
 

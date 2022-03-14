@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ExternalProtectionLevelOptionsResponse;
 import io.pulumi.googlenative.cloudkms_v1.outputs.KeyOperationAttestationResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCryptoKeyVersionResult {
     /**
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
@@ -83,22 +83,22 @@ public final class GetCryptoKeyVersionResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCryptoKeyVersionResult(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("attestation") KeyOperationAttestationResponse attestation,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("destroyEventTime") String destroyEventTime,
-        @OutputCustomType.Parameter("destroyTime") String destroyTime,
-        @OutputCustomType.Parameter("externalProtectionLevelOptions") ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions,
-        @OutputCustomType.Parameter("generateTime") String generateTime,
-        @OutputCustomType.Parameter("importFailureReason") String importFailureReason,
-        @OutputCustomType.Parameter("importJob") String importJob,
-        @OutputCustomType.Parameter("importTime") String importTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protectionLevel") String protectionLevel,
-        @OutputCustomType.Parameter("reimportEligible") Boolean reimportEligible,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("attestation") KeyOperationAttestationResponse attestation,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("destroyEventTime") String destroyEventTime,
+        @CustomType.Parameter("destroyTime") String destroyTime,
+        @CustomType.Parameter("externalProtectionLevelOptions") ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions,
+        @CustomType.Parameter("generateTime") String generateTime,
+        @CustomType.Parameter("importFailureReason") String importFailureReason,
+        @CustomType.Parameter("importJob") String importJob,
+        @CustomType.Parameter("importTime") String importTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protectionLevel") String protectionLevel,
+        @CustomType.Parameter("reimportEligible") Boolean reimportEligible,
+        @CustomType.Parameter("state") String state) {
         this.algorithm = algorithm;
         this.attestation = attestation;
         this.createTime = createTime;

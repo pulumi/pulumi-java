@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BiEngineStatisticsResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.BigQueryModelTrainingResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetReferenceResponse;
@@ -23,7 +23,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatistics2Response {
     /**
      * BI Engine specific Statistics. [Output-only] BI Engine specific Statistics.
@@ -166,36 +166,36 @@ public final class JobStatistics2Response {
      */
     private final List<QueryParameterResponse> undeclaredQueryParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatistics2Response(
-        @OutputCustomType.Parameter("biEngineStatistics") BiEngineStatisticsResponse biEngineStatistics,
-        @OutputCustomType.Parameter("billingTier") Integer billingTier,
-        @OutputCustomType.Parameter("cacheHit") Boolean cacheHit,
-        @OutputCustomType.Parameter("ddlAffectedRowAccessPolicyCount") String ddlAffectedRowAccessPolicyCount,
-        @OutputCustomType.Parameter("ddlDestinationTable") TableReferenceResponse ddlDestinationTable,
-        @OutputCustomType.Parameter("ddlOperationPerformed") String ddlOperationPerformed,
-        @OutputCustomType.Parameter("ddlTargetDataset") DatasetReferenceResponse ddlTargetDataset,
-        @OutputCustomType.Parameter("ddlTargetRoutine") RoutineReferenceResponse ddlTargetRoutine,
-        @OutputCustomType.Parameter("ddlTargetRowAccessPolicy") RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy,
-        @OutputCustomType.Parameter("ddlTargetTable") TableReferenceResponse ddlTargetTable,
-        @OutputCustomType.Parameter("dmlStats") DmlStatisticsResponse dmlStats,
-        @OutputCustomType.Parameter("estimatedBytesProcessed") String estimatedBytesProcessed,
-        @OutputCustomType.Parameter("mlStatistics") MlStatisticsResponse mlStatistics,
-        @OutputCustomType.Parameter("modelTraining") BigQueryModelTrainingResponse modelTraining,
-        @OutputCustomType.Parameter("numDmlAffectedRows") String numDmlAffectedRows,
-        @OutputCustomType.Parameter("queryPlan") List<ExplainQueryStageResponse> queryPlan,
-        @OutputCustomType.Parameter("referencedRoutines") List<RoutineReferenceResponse> referencedRoutines,
-        @OutputCustomType.Parameter("referencedTables") List<TableReferenceResponse> referencedTables,
-        @OutputCustomType.Parameter("reservationUsage") List<JobStatistics2ReservationUsageItemResponse> reservationUsage,
-        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
-        @OutputCustomType.Parameter("statementType") String statementType,
-        @OutputCustomType.Parameter("timeline") List<QueryTimelineSampleResponse> timeline,
-        @OutputCustomType.Parameter("totalBytesBilled") String totalBytesBilled,
-        @OutputCustomType.Parameter("totalBytesProcessed") String totalBytesProcessed,
-        @OutputCustomType.Parameter("totalBytesProcessedAccuracy") String totalBytesProcessedAccuracy,
-        @OutputCustomType.Parameter("totalPartitionsProcessed") String totalPartitionsProcessed,
-        @OutputCustomType.Parameter("totalSlotMs") String totalSlotMs,
-        @OutputCustomType.Parameter("undeclaredQueryParameters") List<QueryParameterResponse> undeclaredQueryParameters) {
+        @CustomType.Parameter("biEngineStatistics") BiEngineStatisticsResponse biEngineStatistics,
+        @CustomType.Parameter("billingTier") Integer billingTier,
+        @CustomType.Parameter("cacheHit") Boolean cacheHit,
+        @CustomType.Parameter("ddlAffectedRowAccessPolicyCount") String ddlAffectedRowAccessPolicyCount,
+        @CustomType.Parameter("ddlDestinationTable") TableReferenceResponse ddlDestinationTable,
+        @CustomType.Parameter("ddlOperationPerformed") String ddlOperationPerformed,
+        @CustomType.Parameter("ddlTargetDataset") DatasetReferenceResponse ddlTargetDataset,
+        @CustomType.Parameter("ddlTargetRoutine") RoutineReferenceResponse ddlTargetRoutine,
+        @CustomType.Parameter("ddlTargetRowAccessPolicy") RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy,
+        @CustomType.Parameter("ddlTargetTable") TableReferenceResponse ddlTargetTable,
+        @CustomType.Parameter("dmlStats") DmlStatisticsResponse dmlStats,
+        @CustomType.Parameter("estimatedBytesProcessed") String estimatedBytesProcessed,
+        @CustomType.Parameter("mlStatistics") MlStatisticsResponse mlStatistics,
+        @CustomType.Parameter("modelTraining") BigQueryModelTrainingResponse modelTraining,
+        @CustomType.Parameter("numDmlAffectedRows") String numDmlAffectedRows,
+        @CustomType.Parameter("queryPlan") List<ExplainQueryStageResponse> queryPlan,
+        @CustomType.Parameter("referencedRoutines") List<RoutineReferenceResponse> referencedRoutines,
+        @CustomType.Parameter("referencedTables") List<TableReferenceResponse> referencedTables,
+        @CustomType.Parameter("reservationUsage") List<JobStatistics2ReservationUsageItemResponse> reservationUsage,
+        @CustomType.Parameter("schema") TableSchemaResponse schema,
+        @CustomType.Parameter("statementType") String statementType,
+        @CustomType.Parameter("timeline") List<QueryTimelineSampleResponse> timeline,
+        @CustomType.Parameter("totalBytesBilled") String totalBytesBilled,
+        @CustomType.Parameter("totalBytesProcessed") String totalBytesProcessed,
+        @CustomType.Parameter("totalBytesProcessedAccuracy") String totalBytesProcessedAccuracy,
+        @CustomType.Parameter("totalPartitionsProcessed") String totalPartitionsProcessed,
+        @CustomType.Parameter("totalSlotMs") String totalSlotMs,
+        @CustomType.Parameter("undeclaredQueryParameters") List<QueryParameterResponse> undeclaredQueryParameters) {
         this.biEngineStatistics = biEngineStatistics;
         this.billingTier = billingTier;
         this.cacheHit = cacheHit;

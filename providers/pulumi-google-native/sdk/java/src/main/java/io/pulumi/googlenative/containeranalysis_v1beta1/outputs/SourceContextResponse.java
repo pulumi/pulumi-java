@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.CloudRepoSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.GerritSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.GitSourceContextResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceContextResponse {
     /**
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
@@ -34,12 +34,12 @@ public final class SourceContextResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceContextResponse(
-        @OutputCustomType.Parameter("cloudRepo") CloudRepoSourceContextResponse cloudRepo,
-        @OutputCustomType.Parameter("gerrit") GerritSourceContextResponse gerrit,
-        @OutputCustomType.Parameter("git") GitSourceContextResponse git,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
+        @CustomType.Parameter("cloudRepo") CloudRepoSourceContextResponse cloudRepo,
+        @CustomType.Parameter("gerrit") GerritSourceContextResponse gerrit,
+        @CustomType.Parameter("git") GitSourceContextResponse git,
+        @CustomType.Parameter("labels") Map<String,String> labels) {
         this.cloudRepo = cloudRepo;
         this.gerrit = gerrit;
         this.git = git;

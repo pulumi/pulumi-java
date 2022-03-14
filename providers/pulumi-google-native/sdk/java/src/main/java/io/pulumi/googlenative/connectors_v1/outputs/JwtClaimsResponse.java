@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JwtClaimsResponse {
     /**
      * Value for the "aud" claim.
@@ -25,11 +25,11 @@ public final class JwtClaimsResponse {
      */
     private final String subject;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JwtClaimsResponse(
-        @OutputCustomType.Parameter("audience") String audience,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("subject") String subject) {
+        @CustomType.Parameter("audience") String audience,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("subject") String subject) {
         this.audience = audience;
         this.issuer = issuer;
         this.subject = subject;

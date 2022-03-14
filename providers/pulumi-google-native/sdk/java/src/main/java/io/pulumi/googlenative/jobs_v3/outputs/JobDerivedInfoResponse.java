@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.jobs_v3.outputs.LocationResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobDerivedInfoResponse {
     /**
      * Job categories derived from Job.title and Job.description.
@@ -22,10 +22,10 @@ public final class JobDerivedInfoResponse {
      */
     private final List<LocationResponse> locations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobDerivedInfoResponse(
-        @OutputCustomType.Parameter("jobCategories") List<String> jobCategories,
-        @OutputCustomType.Parameter("locations") List<LocationResponse> locations) {
+        @CustomType.Parameter("jobCategories") List<String> jobCategories,
+        @CustomType.Parameter("locations") List<LocationResponse> locations) {
         this.jobCategories = jobCategories;
         this.locations = locations;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vision_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
      * X coordinate.
      * 
      */
-    @InputImport(name="x")
+    @Import(name="x")
       private final @Nullable Output<Integer> x;
 
     public Output<Integer> getX() {
@@ -33,7 +33,7 @@ public final class VertexArgs extends io.pulumi.resources.ResourceArgs {
      * Y coordinate.
      * 
      */
-    @InputImport(name="y")
+    @Import(name="y")
       private final @Nullable Output<Integer> y;
 
     public Output<Integer> getY() {

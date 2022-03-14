@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse;
@@ -14,7 +14,7 @@ import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContac
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
     /**
      * The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
@@ -67,18 +67,18 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
      */
     private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(
-        @OutputCustomType.Parameter("annotationId") String annotationId,
-        @OutputCustomType.Parameter("answerFeedback") GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback,
-        @OutputCustomType.Parameter("articleSuggestion") GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dialogflowInteraction") GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction,
-        @OutputCustomType.Parameter("endBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary,
-        @OutputCustomType.Parameter("faqAnswer") GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer,
-        @OutputCustomType.Parameter("smartComposeSuggestion") GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion,
-        @OutputCustomType.Parameter("smartReply") GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply,
-        @OutputCustomType.Parameter("startBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
+        @CustomType.Parameter("annotationId") String annotationId,
+        @CustomType.Parameter("answerFeedback") GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback,
+        @CustomType.Parameter("articleSuggestion") GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dialogflowInteraction") GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction,
+        @CustomType.Parameter("endBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary,
+        @CustomType.Parameter("faqAnswer") GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer,
+        @CustomType.Parameter("smartComposeSuggestion") GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion,
+        @CustomType.Parameter("smartReply") GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply,
+        @CustomType.Parameter("startBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
         this.annotationId = annotationId;
         this.answerFeedback = answerFeedback;
         this.articleSuggestion = articleSuggestion;

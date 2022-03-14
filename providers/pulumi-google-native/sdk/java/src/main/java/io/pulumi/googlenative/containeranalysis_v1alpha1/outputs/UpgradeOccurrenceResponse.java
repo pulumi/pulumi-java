@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.UpgradeDistributionResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.VersionResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpgradeOccurrenceResponse {
     /**
      * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
@@ -27,11 +27,11 @@ public final class UpgradeOccurrenceResponse {
      */
     private final VersionResponse parsedVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpgradeOccurrenceResponse(
-        @OutputCustomType.Parameter("distribution") UpgradeDistributionResponse distribution,
-        @OutputCustomType.Parameter("package") String $package,
-        @OutputCustomType.Parameter("parsedVersion") VersionResponse parsedVersion) {
+        @CustomType.Parameter("distribution") UpgradeDistributionResponse distribution,
+        @CustomType.Parameter("package") String $package,
+        @CustomType.Parameter("parsedVersion") VersionResponse parsedVersion) {
         this.distribution = distribution;
         this.$package = $package;
         this.parsedVersion = parsedVersion;

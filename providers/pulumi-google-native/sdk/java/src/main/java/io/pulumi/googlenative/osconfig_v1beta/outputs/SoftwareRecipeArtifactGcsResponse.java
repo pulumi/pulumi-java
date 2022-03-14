@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeArtifactGcsResponse {
     /**
      * Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.
@@ -25,11 +25,11 @@ public final class SoftwareRecipeArtifactGcsResponse {
      */
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeArtifactGcsResponse(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("generation") String generation,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("generation") String generation,
+        @CustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.PgpSignedAttestationResponse;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class AttestationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AttestationResponse Empty = new AttestationResponse();
 
-    @InputImport(name="pgpSignedAttestation", required=true)
+    @Import(name="pgpSignedAttestation", required=true)
       private final PgpSignedAttestationResponse pgpSignedAttestation;
 
     public PgpSignedAttestationResponse getPgpSignedAttestation() {

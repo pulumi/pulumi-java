@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MixinResponse {
     /**
      * The fully qualified name of the interface which is included.
@@ -20,10 +20,10 @@ public final class MixinResponse {
      */
     private final String root;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MixinResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("root") String root) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("root") String root) {
         this.name = name;
         this.root = root;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * Comments
      * 
      */
-    @InputImport(name="comments")
+    @Import(name="comments")
       private final @Nullable Output<String> comments;
 
     public Output<String> getComments() {
@@ -33,7 +33,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
      * 
      */
-    @InputImport(name="expression")
+    @Import(name="expression")
       private final @Nullable Output<String> expression;
 
     public Output<String> getExpression() {

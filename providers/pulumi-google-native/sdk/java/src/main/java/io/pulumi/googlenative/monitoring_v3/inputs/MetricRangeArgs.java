@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
      * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
      * 
      */
-    @InputImport(name="range")
+    @Import(name="range")
       private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
     public Output<GoogleMonitoringV3RangeArgs> getRange() {
@@ -34,7 +34,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying the TimeSeries to use for evaluating window quality.
      * 
      */
-    @InputImport(name="timeSeries")
+    @Import(name="timeSeries")
       private final @Nullable Output<String> timeSeries;
 
     public Output<String> getTimeSeries() {

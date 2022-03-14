@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The time the instance was created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -33,7 +33,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The last heartbeat time when the trust was known to be connected.
      * 
      */
-    @InputImport(name="lastTrustHeartbeatTime", required=true)
+    @Import(name="lastTrustHeartbeatTime", required=true)
       private final String lastTrustHeartbeatTime;
 
     public String getLastTrustHeartbeatTime() {
@@ -44,7 +44,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The trust authentication type, which decides whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
      * 
      */
-    @InputImport(name="selectiveAuthentication", required=true)
+    @Import(name="selectiveAuthentication", required=true)
       private final Boolean selectiveAuthentication;
 
     public Boolean getSelectiveAuthentication() {
@@ -55,7 +55,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The current state of the trust.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -66,7 +66,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * Additional information about the current state of the trust, if available.
      * 
      */
-    @InputImport(name="stateDescription", required=true)
+    @Import(name="stateDescription", required=true)
       private final String stateDescription;
 
     public String getStateDescription() {
@@ -77,7 +77,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
      * 
      */
-    @InputImport(name="targetDnsIpAddresses", required=true)
+    @Import(name="targetDnsIpAddresses", required=true)
       private final List<String> targetDnsIpAddresses;
 
     public List<String> getTargetDnsIpAddresses() {
@@ -88,7 +88,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The fully qualified target domain name which will be in trust with the current domain.
      * 
      */
-    @InputImport(name="targetDomainName", required=true)
+    @Import(name="targetDomainName", required=true)
       private final String targetDomainName;
 
     public String getTargetDomainName() {
@@ -99,7 +99,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The trust direction, which decides if the current domain is trusted, trusting, or both.
      * 
      */
-    @InputImport(name="trustDirection", required=true)
+    @Import(name="trustDirection", required=true)
       private final String trustDirection;
 
     public String getTrustDirection() {
@@ -110,7 +110,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * Input only. The trust secret used for the handshake with the target domain. It will not be stored.
      * 
      */
-    @InputImport(name="trustHandshakeSecret", required=true)
+    @Import(name="trustHandshakeSecret", required=true)
       private final String trustHandshakeSecret;
 
     public String getTrustHandshakeSecret() {
@@ -121,7 +121,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The type of trust represented by the trust resource.
      * 
      */
-    @InputImport(name="trustType", required=true)
+    @Import(name="trustType", required=true)
       private final String trustType;
 
     public String getTrustType() {
@@ -132,7 +132,7 @@ public final class TrustResponse extends io.pulumi.resources.InvokeArgs {
      * The last update time.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

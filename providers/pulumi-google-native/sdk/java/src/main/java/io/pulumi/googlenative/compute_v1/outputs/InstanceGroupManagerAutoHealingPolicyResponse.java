@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerAutoHealingPolicyResponse {
     /**
      * The URL for the health check that signals autohealing.
@@ -21,10 +21,10 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
      */
     private final Integer initialDelaySec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerAutoHealingPolicyResponse(
-        @OutputCustomType.Parameter("healthCheck") String healthCheck,
-        @OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
+        @CustomType.Parameter("healthCheck") String healthCheck,
+        @CustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;
     }

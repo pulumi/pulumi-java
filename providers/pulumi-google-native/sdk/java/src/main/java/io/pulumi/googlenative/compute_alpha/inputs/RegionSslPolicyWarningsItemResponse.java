@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.RegionSslPolicyWarningsItemDataItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
      * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -29,7 +29,7 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
      * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
      * 
      */
-    @InputImport(name="data", required=true)
+    @Import(name="data", required=true)
       private final List<RegionSslPolicyWarningsItemDataItemResponse> data;
 
     public List<RegionSslPolicyWarningsItemDataItemResponse> getData() {
@@ -40,7 +40,7 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
      * A human-readable description of the warning code.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

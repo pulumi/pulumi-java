@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
     /**
      * Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
      */
     private final Double score;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("issue") String issue,
-        @OutputCustomType.Parameter("score") Double score) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("issue") String issue,
+        @CustomType.Parameter("score") Double score) {
         this.displayName = displayName;
         this.issue = issue;
         this.score = score;

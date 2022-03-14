@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebaserules_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileResponse {
     /**
      * Textual Content.
@@ -25,11 +25,11 @@ public final class FileResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileResponse(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("name") String name) {
         this.content = content;
         this.fingerprint = fingerprint;
         this.name = name;

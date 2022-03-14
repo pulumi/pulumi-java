@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v3.inputs.MoneyResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CompensationRangeResponse extends io.pulumi.resources.InvokeA
      * Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
      * 
      */
-    @InputImport(name="maxCompensation", required=true)
+    @Import(name="maxCompensation", required=true)
       private final MoneyResponse maxCompensation;
 
     public MoneyResponse getMaxCompensation() {
@@ -31,7 +31,7 @@ public final class CompensationRangeResponse extends io.pulumi.resources.InvokeA
      * Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
      * 
      */
-    @InputImport(name="minCompensation", required=true)
+    @Import(name="minCompensation", required=true)
       private final MoneyResponse minCompensation;
 
     public MoneyResponse getMinCompensation() {

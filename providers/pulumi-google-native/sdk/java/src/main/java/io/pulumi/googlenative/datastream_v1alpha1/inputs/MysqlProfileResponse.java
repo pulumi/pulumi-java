@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlSslConfigResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Hostname for the MySQL connection.
      * 
      */
-    @InputImport(name="hostname", required=true)
+    @Import(name="hostname", required=true)
       private final String hostname;
 
     public String getHostname() {
@@ -33,7 +33,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Input only. Password for the MySQL connection.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -44,7 +44,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Port for the MySQL connection, default value is 3306.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -55,7 +55,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * SSL configuration for the MySQL connection.
      * 
      */
-    @InputImport(name="sslConfig", required=true)
+    @Import(name="sslConfig", required=true)
       private final MysqlSslConfigResponse sslConfig;
 
     public MysqlSslConfigResponse getSslConfig() {
@@ -66,7 +66,7 @@ public final class MysqlProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Username for the MySQL connection.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KindExpressionResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PartitionIdResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
     /**
      * The kind to process.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
      */
     private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2DatastoreOptionsResponse(
-        @OutputCustomType.Parameter("kind") GooglePrivacyDlpV2KindExpressionResponse kind,
-        @OutputCustomType.Parameter("partitionId") GooglePrivacyDlpV2PartitionIdResponse partitionId) {
+        @CustomType.Parameter("kind") GooglePrivacyDlpV2KindExpressionResponse kind,
+        @CustomType.Parameter("partitionId") GooglePrivacyDlpV2PartitionIdResponse partitionId) {
         this.kind = kind;
         this.partitionId = partitionId;
     }

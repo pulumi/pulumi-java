@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
      * Conversation model resource name. Format: `projects//conversationModels/`.
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Output<String> model;
 
     public Output<String> getModel() {

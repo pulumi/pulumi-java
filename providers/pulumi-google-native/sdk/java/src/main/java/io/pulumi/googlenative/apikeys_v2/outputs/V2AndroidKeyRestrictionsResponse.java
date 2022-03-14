@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2AndroidApplicationResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class V2AndroidKeyRestrictionsResponse {
     /**
      * A list of Android applications that are allowed to make API calls with this key.
@@ -16,8 +16,8 @@ public final class V2AndroidKeyRestrictionsResponse {
      */
     private final List<V2AndroidApplicationResponse> allowedApplications;
 
-    @OutputCustomType.Constructor
-    private V2AndroidKeyRestrictionsResponse(@OutputCustomType.Parameter("allowedApplications") List<V2AndroidApplicationResponse> allowedApplications) {
+    @CustomType.Constructor
+    private V2AndroidKeyRestrictionsResponse(@CustomType.Parameter("allowedApplications") List<V2AndroidApplicationResponse> allowedApplications) {
         this.allowedApplications = allowedApplications;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
      * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
      * 
      */
-    @InputImport(name="cpuUtilizationPercent")
+    @Import(name="cpuUtilizationPercent")
       private final @Nullable Output<Integer> cpuUtilizationPercent;
 
     public Output<Integer> getCpuUtilizationPercent() {

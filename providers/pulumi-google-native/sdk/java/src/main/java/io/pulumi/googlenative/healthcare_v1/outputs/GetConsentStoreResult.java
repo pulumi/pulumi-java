@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConsentStoreResult {
     /**
      * Optional. Default time to live for Consents created in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
@@ -32,12 +32,12 @@ public final class GetConsentStoreResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConsentStoreResult(
-        @OutputCustomType.Parameter("defaultConsentTtl") String defaultConsentTtl,
-        @OutputCustomType.Parameter("enableConsentCreateOnUpdate") Boolean enableConsentCreateOnUpdate,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("defaultConsentTtl") String defaultConsentTtl,
+        @CustomType.Parameter("enableConsentCreateOnUpdate") Boolean enableConsentCreateOnUpdate,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name) {
         this.defaultConsentTtl = defaultConsentTtl;
         this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
         this.labels = labels;

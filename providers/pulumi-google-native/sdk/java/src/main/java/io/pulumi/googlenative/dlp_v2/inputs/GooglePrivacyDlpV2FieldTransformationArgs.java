@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationsArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrimitiveTransformationArgs;
@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
      * Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
     public Output<GooglePrivacyDlpV2RecordConditionArgs> getCondition() {
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
      * Input field(s) to apply the transformation to. When you have columns that reference their position within a list, omit the index from the FieldId. FieldId name matching ignores the index. For example, instead of "contact.nums[0].type", use "contact.nums.type".
      * 
      */
-    @InputImport(name="fields", required=true)
+    @Import(name="fields", required=true)
       private final Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields;
 
     public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getFields() {
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
      * Treat the contents of the field as free text, and selectively transform content that matches an `InfoType`.
      * 
      */
-    @InputImport(name="infoTypeTransformations")
+    @Import(name="infoTypeTransformations")
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
 
     public Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> getInfoTypeTransformations() {
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
      * Apply the transformation to the entire field.
      * 
      */
-    @InputImport(name="primitiveTransformation")
+    @Import(name="primitiveTransformation")
       private final @Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
     public Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> getPrimitiveTransformation() {

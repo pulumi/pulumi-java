@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatisticsResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.bigquery_v2.outputs.JobStatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * [Required] Describes the job configuration.
@@ -54,16 +54,16 @@ public final class GetJobResult {
      */
     private final String userEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("configuration") JobConfigurationResponse configuration,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("jobReference") JobReferenceResponse jobReference,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("statistics") JobStatisticsResponse statistics,
-        @OutputCustomType.Parameter("status") JobStatusResponse status,
-        @OutputCustomType.Parameter("userEmail") String userEmail) {
+        @CustomType.Parameter("configuration") JobConfigurationResponse configuration,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("jobReference") JobReferenceResponse jobReference,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("statistics") JobStatisticsResponse statistics,
+        @CustomType.Parameter("status") JobStatusResponse status,
+        @CustomType.Parameter("userEmail") String userEmail) {
         this.configuration = configuration;
         this.etag = etag;
         this.jobReference = jobReference;

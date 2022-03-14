@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SparkHistoryServerConfigResponse {
     /**
      * Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
@@ -15,8 +15,8 @@ public final class SparkHistoryServerConfigResponse {
      */
     private final String dataprocCluster;
 
-    @OutputCustomType.Constructor
-    private SparkHistoryServerConfigResponse(@OutputCustomType.Parameter("dataprocCluster") String dataprocCluster) {
+    @CustomType.Constructor
+    private SparkHistoryServerConfigResponse(@CustomType.Parameter("dataprocCluster") String dataprocCluster) {
         this.dataprocCluster = dataprocCluster;
     }
 

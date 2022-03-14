@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkmanagement_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkmanagement_v1.ConnectivityTestArgs;
@@ -26,7 +26,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * The time the test was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * The user-supplied description of the Connectivity Test. Maximum of 512 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -54,7 +54,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Destination specification of the Connectivity Test. You can use a combination of destination IP address, Compute Engine VM instance, or VPC network to uniquely identify the destination location. Even if the destination IP address is not unique, the source IP location is unique. Usually, the analysis can infer the destination endpoint from route information. If the destination you specify is a VM instance and the instance has multiple network interfaces, then you must also specify either a destination IP address or VPC network to identify the destination interface. A reachability analysis proceeds even if the destination location is ambiguous. However, the result can include endpoints that you don't intend to test.
      * 
      */
-    @OutputExport(name="destination", type=EndpointResponse.class, parameters={})
+    @Export(name="destination", type=EndpointResponse.class, parameters={})
     private Output<EndpointResponse> destination;
 
     /**
@@ -68,7 +68,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * The display name of a Connectivity Test.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -82,7 +82,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -96,7 +96,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Unique name of the resource using the form: `projects/{project_id}/locations/global/connectivityTests/{test_id}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * IP Protocol of the test. When not provided, "TCP" is assumed.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -124,7 +124,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * The reachability details of this test from the latest run. The details are updated when creating a new test, updating an existing test, or triggering a one-time rerun of an existing test.
      * 
      */
-    @OutputExport(name="reachabilityDetails", type=ReachabilityDetailsResponse.class, parameters={})
+    @Export(name="reachabilityDetails", type=ReachabilityDetailsResponse.class, parameters={})
     private Output<ReachabilityDetailsResponse> reachabilityDetails;
 
     /**
@@ -138,7 +138,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Other projects that may be relevant for reachability analysis. This is applicable to scenarios where a test can cross project boundaries.
      * 
      */
-    @OutputExport(name="relatedProjects", type=List.class, parameters={String.class})
+    @Export(name="relatedProjects", type=List.class, parameters={String.class})
     private Output<List<String>> relatedProjects;
 
     /**
@@ -152,7 +152,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Source specification of the Connectivity Test. You can use a combination of source IP address, virtual machine (VM) instance, or Compute Engine network to uniquely identify the source location. Examples: If the source IP address is an internal IP address within a Google Cloud Virtual Private Cloud (VPC) network, then you must also specify the VPC network. Otherwise, specify the VM instance, which already contains its internal IP address and VPC network information. If the source of the test is within an on-premises network, then you must provide the destination VPC network. If the source endpoint is a Compute Engine VM instance with multiple network interfaces, the instance itself is not sufficient to identify the endpoint. So, you must also specify the source IP address or VPC network. A reachability analysis proceeds even if the source location is ambiguous. However, the test result may include endpoints that you don't intend to test.
      * 
      */
-    @OutputExport(name="source", type=EndpointResponse.class, parameters={})
+    @Export(name="source", type=EndpointResponse.class, parameters={})
     private Output<EndpointResponse> source;
 
     /**
@@ -166,7 +166,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * The time the test's configuration was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentParameterArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs;
 import java.lang.Boolean;
@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * The human-readable name of the intent, unique within the agent.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation. Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
      * 
      */
-    @InputImport(name="isFallback")
+    @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
     public Output<Boolean> getIsFallback() {
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols '-' and '_'. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not require value. "sys-head" means the intent is a head intent. "sys-contextual" means the intent is a contextual intent.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * The unique identifier of the intent. Required for the Intents.UpdateIntent method. Intents.CreateIntent populates the name automatically. Format: `projects//locations//agents//intents/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * The collection of parameters associated with the intent.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs>> parameters;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs>> getParameters() {
@@ -94,7 +94,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -105,7 +105,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentArgs extends io.pulumi.re
      * The collection of training phrases the agent is trained on to identify the intent.
      * 
      */
-    @InputImport(name="trainingPhrases")
+    @Import(name="trainingPhrases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs>> trainingPhrases;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs>> getTrainingPhrases() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerUpdatePolicyInstanceRedistributionType;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerUpdatePolicyMinimalAction;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction;
@@ -24,7 +24,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * The instance redistribution policy for regional managed instance groups. Valid values are: - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. - NONE: For non-autoscaled groups, proactive redistribution is disabled.
      * 
      */
-    @InputImport(name="instanceRedistributionType")
+    @Import(name="instanceRedistributionType")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> instanceRedistributionType;
 
     public Output<InstanceGroupManagerUpdatePolicyInstanceRedistributionType> getInstanceRedistributionType() {
@@ -35,7 +35,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * The maximum number of instances that can be created above the specified targetSize during the update process. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for maxSurge is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxSurge.
      * 
      */
-    @InputImport(name="maxSurge")
+    @Import(name="maxSurge")
       private final @Nullable Output<FixedOrPercentArgs> maxSurge;
 
     public Output<FixedOrPercentArgs> getMaxSurge() {
@@ -46,7 +46,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * The maximum number of instances that can be unavailable during the update process. An instance is considered available if all of the following conditions are satisfied: - The instance's status is RUNNING. - If there is a health check on the instance group, the instance's health check status must be HEALTHY at least once. If there is no health check on the group, then the instance only needs to have a status of RUNNING to be considered available. This value can be either a fixed number or, if the group has 10 or more instances, a percentage. If you set a percentage, the number of instances is rounded if necessary. The default value for maxUnavailable is a fixed value equal to the number of zones in which the managed instance group operates. At least one of either maxSurge or maxUnavailable must be greater than 0. Learn more about maxUnavailable.
      * 
      */
-    @InputImport(name="maxUnavailable")
+    @Import(name="maxUnavailable")
       private final @Nullable Output<FixedOrPercentArgs> maxUnavailable;
 
     public Output<FixedOrPercentArgs> getMaxUnavailable() {
@@ -57,7 +57,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600].
      * 
      */
-    @InputImport(name="minReadySec")
+    @Import(name="minReadySec")
       private final @Nullable Output<Integer> minReadySec;
 
     public Output<Integer> getMinReadySec() {
@@ -68,7 +68,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * Minimal action to be taken on an instance. You can specify either RESTART to restart existing instances or REPLACE to delete and create new instances from the target template. If you specify a RESTART, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
      * 
      */
-    @InputImport(name="minimalAction")
+    @Import(name="minimalAction")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyMinimalAction> minimalAction;
 
     public Output<InstanceGroupManagerUpdatePolicyMinimalAction> getMinimalAction() {
@@ -79,7 +79,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * Most disruptive action that is allowed to be taken on an instance. You can specify either NONE to forbid any actions, REFRESH to allow actions that do not need instance restart, RESTART to allow actions that can be applied without instance replacing or REPLACE to allow all possible actions. If the Updater determines that the minimal update action needed is more disruptive than most disruptive allowed action you specify it will not perform the update at all.
      * 
      */
-    @InputImport(name="mostDisruptiveAllowedAction")
+    @Import(name="mostDisruptiveAllowedAction")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> mostDisruptiveAllowedAction;
 
     public Output<InstanceGroupManagerUpdatePolicyMostDisruptiveAllowedAction> getMostDisruptiveAllowedAction() {
@@ -90,7 +90,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * What action should be used to replace instances. See minimal_action.REPLACE
      * 
      */
-    @InputImport(name="replacementMethod")
+    @Import(name="replacementMethod")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyReplacementMethod> replacementMethod;
 
     public Output<InstanceGroupManagerUpdatePolicyReplacementMethod> getReplacementMethod() {
@@ -101,7 +101,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
      * The type of update process. You can specify either PROACTIVE so that the instance group manager proactively executes actions in order to bring instances to their target versions or OPPORTUNISTIC so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyType> type;
 
     public Output<InstanceGroupManagerUpdatePolicyType> getType() {

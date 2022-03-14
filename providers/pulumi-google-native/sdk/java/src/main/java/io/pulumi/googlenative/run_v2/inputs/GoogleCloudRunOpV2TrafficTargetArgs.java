@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2TrafficTargetType;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
      * 
      */
-    @InputImport(name="percent")
+    @Import(name="percent")
       private final @Nullable Output<Integer> percent;
 
     public Output<Integer> getPercent() {
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * Revision to which to send this portion of traffic, if traffic allocation is by revision.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * Indicates a string to be part of the URI to exclusively reference this target.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
@@ -57,7 +57,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * The allocation type for this traffic target.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<GoogleCloudRunOpV2TrafficTargetType> type;
 
     public Output<GoogleCloudRunOpV2TrafficTargetType> getType() {

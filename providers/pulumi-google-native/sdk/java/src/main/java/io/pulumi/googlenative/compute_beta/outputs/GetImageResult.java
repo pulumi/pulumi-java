@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.DeprecationStatusResponse;
 import io.pulumi.googlenative.compute_beta.outputs.GuestOsFeatureResponse;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImageResult {
     /**
      * Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
@@ -184,41 +184,41 @@ public final class GetImageResult {
      */
     private final List<String> userLicenses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageResult(
-        @OutputCustomType.Parameter("archiveSizeBytes") String archiveSizeBytes,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("deprecated") DeprecationStatusResponse deprecated,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("family") String family,
-        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
-        @OutputCustomType.Parameter("imageEncryptionKey") CustomerEncryptionKeyResponse imageEncryptionKey,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
-        @OutputCustomType.Parameter("licenses") List<String> licenses,
-        @OutputCustomType.Parameter("locked") Boolean locked,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rawDisk") ImageRawDiskResponse rawDisk,
-        @OutputCustomType.Parameter("rolloutOverride") RolloutPolicyResponse rolloutOverride,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("shieldedInstanceInitialState") InitialStateConfigResponse shieldedInstanceInitialState,
-        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
-        @OutputCustomType.Parameter("sourceDiskEncryptionKey") CustomerEncryptionKeyResponse sourceDiskEncryptionKey,
-        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
-        @OutputCustomType.Parameter("sourceImage") String sourceImage,
-        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        @OutputCustomType.Parameter("sourceImageId") String sourceImageId,
-        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
-        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey,
-        @OutputCustomType.Parameter("sourceSnapshotId") String sourceSnapshotId,
-        @OutputCustomType.Parameter("sourceType") String sourceType,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations,
-        @OutputCustomType.Parameter("userLicenses") List<String> userLicenses) {
+        @CustomType.Parameter("archiveSizeBytes") String archiveSizeBytes,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("deprecated") DeprecationStatusResponse deprecated,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("family") String family,
+        @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("imageEncryptionKey") CustomerEncryptionKeyResponse imageEncryptionKey,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @CustomType.Parameter("licenses") List<String> licenses,
+        @CustomType.Parameter("locked") Boolean locked,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rawDisk") ImageRawDiskResponse rawDisk,
+        @CustomType.Parameter("rolloutOverride") RolloutPolicyResponse rolloutOverride,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("shieldedInstanceInitialState") InitialStateConfigResponse shieldedInstanceInitialState,
+        @CustomType.Parameter("sourceDisk") String sourceDisk,
+        @CustomType.Parameter("sourceDiskEncryptionKey") CustomerEncryptionKeyResponse sourceDiskEncryptionKey,
+        @CustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @CustomType.Parameter("sourceImage") String sourceImage,
+        @CustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @CustomType.Parameter("sourceImageId") String sourceImageId,
+        @CustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @CustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey,
+        @CustomType.Parameter("sourceSnapshotId") String sourceSnapshotId,
+        @CustomType.Parameter("sourceType") String sourceType,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("storageLocations") List<String> storageLocations,
+        @CustomType.Parameter("userLicenses") List<String> userLicenses) {
         this.archiveSizeBytes = archiveSizeBytes;
         this.creationTimestamp = creationTimestamp;
         this.deprecated = deprecated;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
      * The configuration for the exact match rule.
      * 
      */
-    @InputImport(name="exactMatchConfig")
+    @Import(name="exactMatchConfig")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
     public Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> getExactMatchConfig() {

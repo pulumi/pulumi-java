@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlStructTypeResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StandardSqlDataTypeResponse {
     /**
      * The type of the array's elements, if type_kind = "ARRAY".
@@ -26,11 +26,11 @@ public final class StandardSqlDataTypeResponse {
      */
     private final String typeKind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardSqlDataTypeResponse(
-        @OutputCustomType.Parameter("arrayElementType") StandardSqlDataTypeResponse arrayElementType,
-        @OutputCustomType.Parameter("structType") StandardSqlStructTypeResponse structType,
-        @OutputCustomType.Parameter("typeKind") String typeKind) {
+        @CustomType.Parameter("arrayElementType") StandardSqlDataTypeResponse arrayElementType,
+        @CustomType.Parameter("structType") StandardSqlStructTypeResponse structType,
+        @CustomType.Parameter("typeKind") String typeKind) {
         this.arrayElementType = arrayElementType;
         this.structType = structType;
         this.typeKind = typeKind;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RouterBgpPeerResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.RouterBgpResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.RouterInterfaceResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRouterResult {
     /**
      * BGP information specific to this router.
@@ -87,22 +87,22 @@ public final class GetRouterResult {
      */
     private final String selfLinkWithId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouterResult(
-        @OutputCustomType.Parameter("bgp") RouterBgpResponse bgp,
-        @OutputCustomType.Parameter("bgpPeers") List<RouterBgpPeerResponse> bgpPeers,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("encryptedInterconnectRouter") Boolean encryptedInterconnectRouter,
-        @OutputCustomType.Parameter("interfaces") List<RouterInterfaceResponse> interfaces,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("md5AuthenticationKeys") List<RouterMd5AuthenticationKeyResponse> md5AuthenticationKeys,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nats") List<RouterNatResponse> nats,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
+        @CustomType.Parameter("bgp") RouterBgpResponse bgp,
+        @CustomType.Parameter("bgpPeers") List<RouterBgpPeerResponse> bgpPeers,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("encryptedInterconnectRouter") Boolean encryptedInterconnectRouter,
+        @CustomType.Parameter("interfaces") List<RouterInterfaceResponse> interfaces,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("md5AuthenticationKeys") List<RouterMd5AuthenticationKeyResponse> md5AuthenticationKeys,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nats") List<RouterNatResponse> nats,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
         this.bgp = bgp;
         this.bgpPeers = bgpPeers;
         this.creationTimestamp = creationTimestamp;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastore_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastore_v1.IndexArgs;
@@ -24,7 +24,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
      * 
      */
-    @OutputExport(name="ancestor", type=String.class, parameters={})
+    @Export(name="ancestor", type=String.class, parameters={})
     private Output<String> ancestor;
 
     /**
@@ -38,7 +38,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The resource ID of the index.
      * 
      */
-    @OutputExport(name="indexId", type=String.class, parameters={})
+    @Export(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
 
     /**
@@ -52,7 +52,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The entity kind to which this index applies.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -66,7 +66,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Project ID.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -80,7 +80,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * An ordered sequence of property names and their index attributes.
      * 
      */
-    @OutputExport(name="properties", type=List.class, parameters={GoogleDatastoreAdminV1IndexedPropertyResponse.class})
+    @Export(name="properties", type=List.class, parameters={GoogleDatastoreAdminV1IndexedPropertyResponse.class})
     private Output<List<GoogleDatastoreAdminV1IndexedPropertyResponse>> properties;
 
     /**
@@ -94,7 +94,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The state of the index.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

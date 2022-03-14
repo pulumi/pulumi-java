@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.ConfigMapKeySelectorArgs;
 import io.pulumi.googlenative.run_v1.inputs.SecretKeySelectorArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
      * 
      */
-    @InputImport(name="configMapKeyRef")
+    @Import(name="configMapKeyRef")
       private final @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
 
     public Output<ConfigMapKeySelectorArgs> getConfigMapKeyRef() {
@@ -34,7 +34,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Selects a key (version) of a secret in Secret Manager.
      * 
      */
-    @InputImport(name="secretKeyRef")
+    @Import(name="secretKeyRef")
       private final @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
 
     public Output<SecretKeySelectorArgs> getSecretKeyRef() {

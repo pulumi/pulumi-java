@@ -3,20 +3,20 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourceStatusSchedulingResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourceStatusUpcomingMaintenanceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceStatusResponse {
     private final ResourceStatusSchedulingResponse scheduling;
     private final ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceStatusResponse(
-        @OutputCustomType.Parameter("scheduling") ResourceStatusSchedulingResponse scheduling,
-        @OutputCustomType.Parameter("upcomingMaintenance") ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
+        @CustomType.Parameter("scheduling") ResourceStatusSchedulingResponse scheduling,
+        @CustomType.Parameter("upcomingMaintenance") ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
         this.scheduling = scheduling;
         this.upcomingMaintenance = upcomingMaintenance;
     }

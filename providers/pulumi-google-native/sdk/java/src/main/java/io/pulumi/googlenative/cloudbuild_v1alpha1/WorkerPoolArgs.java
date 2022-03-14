@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.enums.WorkerPoolRegionsItem;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.inputs.WorkerConfigArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * User-defined name of the `WorkerPool`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -32,7 +32,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The project ID of the GCP project for which the `WorkerPool` is created.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -43,7 +43,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable Output<List<WorkerPoolRegionsItem>> regions;
 
     public Output<List<WorkerPoolRegionsItem>> getRegions() {
@@ -54,7 +54,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration to be used for a creating workers in the `WorkerPool`.
      * 
      */
-    @InputImport(name="workerConfig")
+    @Import(name="workerConfig")
       private final @Nullable Output<WorkerConfigArgs> workerConfig;
 
     public Output<WorkerConfigArgs> getWorkerConfig() {
@@ -65,7 +65,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Total number of workers to be created across all requested regions.
      * 
      */
-    @InputImport(name="workerCount")
+    @Import(name="workerCount")
       private final @Nullable Output<String> workerCount;
 
     public Output<String> getWorkerCount() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainRedirectResponse {
     /**
      * The domain name to redirect to.
@@ -20,10 +20,10 @@ public final class DomainRedirectResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainRedirectResponse(
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("type") String type) {
         this.domainName = domainName;
         this.type = type;
     }

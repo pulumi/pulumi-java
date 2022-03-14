@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1beta.inputs.BuildInfoResponse;
 import io.pulumi.googlenative.appengine_v1beta.inputs.CloudBuildOptionsResponse;
 import io.pulumi.googlenative.appengine_v1beta.inputs.ContainerInfoResponse;
@@ -25,7 +25,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * Google Cloud Build build information. Only applicable for instances running in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="build", required=true)
+    @Import(name="build", required=true)
       private final BuildInfoResponse build;
 
     public BuildInfoResponse getBuild() {
@@ -36,7 +36,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
      * 
      */
-    @InputImport(name="cloudBuildOptions", required=true)
+    @Import(name="cloudBuildOptions", required=true)
       private final CloudBuildOptionsResponse cloudBuildOptions;
 
     public CloudBuildOptionsResponse getCloudBuildOptions() {
@@ -47,7 +47,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="container", required=true)
+    @Import(name="container", required=true)
       private final ContainerInfoResponse container;
 
     public ContainerInfoResponse getContainer() {
@@ -58,7 +58,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
      * 
      */
-    @InputImport(name="files", required=true)
+    @Import(name="files", required=true)
       private final Map<String,String> files;
 
     public Map<String,String> getFiles() {
@@ -69,7 +69,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * The zip file for this deployment, if this is a zip deployment.
      * 
      */
-    @InputImport(name="zip", required=true)
+    @Import(name="zip", required=true)
       private final ZipInfoResponse zip;
 
     public ZipInfoResponse getZip() {

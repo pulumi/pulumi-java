@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.AutoscalingLimitsResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.AutoscalingTargetsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterAutoscalingConfigResponse {
     /**
      * Autoscaling limits for this cluster.
@@ -21,10 +21,10 @@ public final class ClusterAutoscalingConfigResponse {
      */
     private final AutoscalingTargetsResponse autoscalingTargets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterAutoscalingConfigResponse(
-        @OutputCustomType.Parameter("autoscalingLimits") AutoscalingLimitsResponse autoscalingLimits,
-        @OutputCustomType.Parameter("autoscalingTargets") AutoscalingTargetsResponse autoscalingTargets) {
+        @CustomType.Parameter("autoscalingLimits") AutoscalingLimitsResponse autoscalingLimits,
+        @CustomType.Parameter("autoscalingTargets") AutoscalingTargetsResponse autoscalingTargets) {
         this.autoscalingLimits = autoscalingLimits;
         this.autoscalingTargets = autoscalingTargets;
     }

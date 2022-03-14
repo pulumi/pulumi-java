@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.LocalDiskResponse;
 import io.pulumi.googlenative.compute_v1.outputs.NodeTemplateNodeTypeFlexibilityResponse;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeTemplateResult {
     private final List<AcceleratorConfigResponse> accelerators;
     /**
@@ -83,23 +83,23 @@ public final class GetNodeTemplateResult {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeTemplateResult(
-        @OutputCustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
-        @OutputCustomType.Parameter("cpuOvercommitType") String cpuOvercommitType,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disks") List<LocalDiskResponse> disks,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeAffinityLabels") Map<String,String> nodeAffinityLabels,
-        @OutputCustomType.Parameter("nodeType") String nodeType,
-        @OutputCustomType.Parameter("nodeTypeFlexibility") NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serverBinding") ServerBindingResponse serverBinding,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
+        @CustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
+        @CustomType.Parameter("cpuOvercommitType") String cpuOvercommitType,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disks") List<LocalDiskResponse> disks,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeAffinityLabels") Map<String,String> nodeAffinityLabels,
+        @CustomType.Parameter("nodeType") String nodeType,
+        @CustomType.Parameter("nodeTypeFlexibility") NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serverBinding") ServerBindingResponse serverBinding,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessage") String statusMessage) {
         this.accelerators = accelerators;
         this.cpuOvercommitType = cpuOvercommitType;
         this.creationTimestamp = creationTimestamp;

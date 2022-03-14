@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
      * Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<List<String>> metrics;
 
     public Output<List<String>> getMetrics() {
@@ -34,7 +34,7 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
      * The monitored resource type. The type must be defined in Service.monitored_resources section.
      * 
      */
-    @InputImport(name="monitoredResource")
+    @Import(name="monitoredResource")
       private final @Nullable Output<String> monitoredResource;
 
     public Output<String> getMonitoredResource() {

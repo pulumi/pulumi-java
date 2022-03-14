@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
     /**
      * End of time range. Range is inclusive.
@@ -20,10 +20,10 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaConditionTimeRangeResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.startTime = startTime;
     }

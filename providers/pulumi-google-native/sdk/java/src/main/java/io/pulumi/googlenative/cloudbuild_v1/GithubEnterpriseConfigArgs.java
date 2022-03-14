@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.GitHubEnterpriseSecretsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
      * 
      */
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
@@ -30,14 +30,14 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * Name to display for this config.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="gheConfigId")
+    @Import(name="gheConfigId")
       private final @Nullable Output<String> gheConfigId;
 
     public Output<String> getGheConfigId() {
@@ -48,14 +48,14 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * The URL of the github enterprise host the configuration is for.
      * 
      */
-    @InputImport(name="hostUrl")
+    @Import(name="hostUrl")
       private final @Nullable Output<String> hostUrl;
 
     public Output<String> getHostUrl() {
         return this.hostUrl == null ? Output.empty() : this.hostUrl;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,21 +77,21 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * Optional. The network to be used when reaching out to the GitHub Enterprise server. The VPC network must be enabled for private service connection. This should be set if the GitHub Enterprise server is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the GitHub Enterprise server will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
      * 
      */
-    @InputImport(name="peeredNetwork")
+    @Import(name="peeredNetwork")
       private final @Nullable Output<String> peeredNetwork;
 
     public Output<String> getPeeredNetwork() {
         return this.peeredNetwork == null ? Output.empty() : this.peeredNetwork;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -102,7 +102,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * Names of secrets in Secret Manager.
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Output<GitHubEnterpriseSecretsArgs> secrets;
 
     public Output<GitHubEnterpriseSecretsArgs> getSecrets() {
@@ -113,7 +113,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * Optional. SSL certificate to use for requests to GitHub Enterprise.
      * 
      */
-    @InputImport(name="sslCa")
+    @Import(name="sslCa")
       private final @Nullable Output<String> sslCa;
 
     public Output<String> getSslCa() {
@@ -124,7 +124,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
      * The key that should be attached to webhook calls to the ReceiveWebhook endpoint.
      * 
      */
-    @InputImport(name="webhookKey")
+    @Import(name="webhookKey")
       private final @Nullable Output<String> webhookKey;
 
     public Output<String> getWebhookKey() {

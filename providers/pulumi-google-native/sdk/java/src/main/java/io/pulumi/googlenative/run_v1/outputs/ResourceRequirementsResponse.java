@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceRequirementsResponse {
     /**
      * (Optional) Only memory and CPU are supported. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
@@ -21,10 +21,10 @@ public final class ResourceRequirementsResponse {
      */
     private final Map<String,String> requests;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceRequirementsResponse(
-        @OutputCustomType.Parameter("limits") Map<String,String> limits,
-        @OutputCustomType.Parameter("requests") Map<String,String> requests) {
+        @CustomType.Parameter("limits") Map<String,String> limits,
+        @CustomType.Parameter("requests") Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }

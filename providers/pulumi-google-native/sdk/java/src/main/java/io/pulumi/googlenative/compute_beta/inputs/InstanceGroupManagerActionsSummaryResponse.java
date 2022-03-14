@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.
      * 
      */
-    @InputImport(name="abandoning", required=true)
+    @Import(name="abandoning", required=true)
       private final Integer abandoning;
 
     public Integer getAbandoning() {
@@ -27,7 +27,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are scheduled to be created or are currently being created. If the group fails to create any of these instances, it tries again until it creates the instance successfully. If you have disabled creation retries, this field will not be populated; instead, the creatingWithoutRetries field will be populated.
      * 
      */
-    @InputImport(name="creating", required=true)
+    @Import(name="creating", required=true)
       private final Integer creating;
 
     public Integer getCreating() {
@@ -38,7 +38,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances that the managed instance group will attempt to create. The group attempts to create each instance only once. If the group fails to create any of these instances, it decreases the group's targetSize value accordingly.
      * 
      */
-    @InputImport(name="creatingWithoutRetries", required=true)
+    @Import(name="creatingWithoutRetries", required=true)
       private final Integer creatingWithoutRetries;
 
     public Integer getCreatingWithoutRetries() {
@@ -49,7 +49,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are scheduled to be deleted or are currently being deleted.
      * 
      */
-    @InputImport(name="deleting", required=true)
+    @Import(name="deleting", required=true)
       private final Integer deleting;
 
     public Integer getDeleting() {
@@ -60,7 +60,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are running and have no scheduled actions.
      * 
      */
-    @InputImport(name="none", required=true)
+    @Import(name="none", required=true)
       private final Integer none;
 
     public Integer getNone() {
@@ -71,7 +71,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are scheduled to be recreated or are currently being being recreated. Recreating an instance deletes the existing root persistent disk and creates a new disk from the image that is defined in the instance template.
      * 
      */
-    @InputImport(name="recreating", required=true)
+    @Import(name="recreating", required=true)
       private final Integer recreating;
 
     public Integer getRecreating() {
@@ -82,7 +82,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are being reconfigured with properties that do not require a restart or a recreate action. For example, setting or removing target pools for the instance.
      * 
      */
-    @InputImport(name="refreshing", required=true)
+    @Import(name="refreshing", required=true)
       private final Integer refreshing;
 
     public Integer getRefreshing() {
@@ -93,7 +93,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are scheduled to be restarted or are currently being restarted.
      * 
      */
-    @InputImport(name="restarting", required=true)
+    @Import(name="restarting", required=true)
       private final Integer restarting;
 
     public Integer getRestarting() {
@@ -104,7 +104,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are scheduled to be resumed or are currently being resumed.
      * 
      */
-    @InputImport(name="resuming", required=true)
+    @Import(name="resuming", required=true)
       private final Integer resuming;
 
     public Integer getResuming() {
@@ -115,7 +115,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are scheduled to be started or are currently being started.
      * 
      */
-    @InputImport(name="starting", required=true)
+    @Import(name="starting", required=true)
       private final Integer starting;
 
     public Integer getStarting() {
@@ -126,7 +126,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are scheduled to be stopped or are currently being stopped.
      * 
      */
-    @InputImport(name="stopping", required=true)
+    @Import(name="stopping", required=true)
       private final Integer stopping;
 
     public Integer getStopping() {
@@ -137,7 +137,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are scheduled to be suspended or are currently being suspended.
      * 
      */
-    @InputImport(name="suspending", required=true)
+    @Import(name="suspending", required=true)
       private final Integer suspending;
 
     public Integer getSuspending() {
@@ -148,7 +148,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * The number of instances in the managed instance group that are being verified. See the managedInstances[].currentAction property in the listManagedInstances method documentation.
      * 
      */
-    @InputImport(name="verifying", required=true)
+    @Import(name="verifying", required=true)
       private final Integer verifying;
 
     public Integer getVerifying() {

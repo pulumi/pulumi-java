@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this table.
@@ -25,11 +25,11 @@ public final class TableReferenceResponse {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableReferenceResponse(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("tableId") String tableId) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.project = project;
         this.tableId = tableId;

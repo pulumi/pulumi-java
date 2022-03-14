@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.enums.TransformSummaryKind;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * Transform-specific display data.
      * 
      */
-    @InputImport(name="displayData")
+    @Import(name="displayData")
       private final @Nullable Output<List<DisplayDataArgs>> displayData;
 
     public Output<List<DisplayDataArgs>> getDisplayData() {
@@ -36,7 +36,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * SDK generated id of this transform instance.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -47,7 +47,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * User names for all collection inputs to this transform.
      * 
      */
-    @InputImport(name="inputCollectionName")
+    @Import(name="inputCollectionName")
       private final @Nullable Output<List<String>> inputCollectionName;
 
     public Output<List<String>> getInputCollectionName() {
@@ -58,7 +58,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * Type of transform.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<TransformSummaryKind> kind;
 
     public Output<TransformSummaryKind> getKind() {
@@ -69,7 +69,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * User provided name for this transform instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -80,7 +80,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
      * User names for all collection outputs to this transform.
      * 
      */
-    @InputImport(name="outputCollectionName")
+    @Import(name="outputCollectionName")
       private final @Nullable Output<List<String>> outputCollectionName;
 
     public Output<List<String>> getOutputCollectionName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs 
      * The field to extract from the MSH segment. For example, "3.1" or "18[1].1".
      * 
      */
-    @InputImport(name="mshField", required=true)
+    @Import(name="mshField", required=true)
       private final String mshField;
 
     public String getMshField() {
@@ -31,7 +31,7 @@ public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs 
      * The value to match with the field. For example, "My Application Name" or "2.3".
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

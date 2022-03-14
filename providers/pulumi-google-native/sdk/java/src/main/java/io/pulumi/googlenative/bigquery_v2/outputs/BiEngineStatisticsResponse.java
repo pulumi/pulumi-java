@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BiEngineReasonResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BiEngineStatisticsResponse {
     /**
      * Specifies which mode of BI Engine acceleration was performed (if any).
@@ -22,10 +22,10 @@ public final class BiEngineStatisticsResponse {
      */
     private final List<BiEngineReasonResponse> biEngineReasons;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BiEngineStatisticsResponse(
-        @OutputCustomType.Parameter("biEngineMode") String biEngineMode,
-        @OutputCustomType.Parameter("biEngineReasons") List<BiEngineReasonResponse> biEngineReasons) {
+        @CustomType.Parameter("biEngineMode") String biEngineMode,
+        @CustomType.Parameter("biEngineReasons") List<BiEngineReasonResponse> biEngineReasons) {
         this.biEngineMode = biEngineMode;
         this.biEngineReasons = biEngineReasons;
     }

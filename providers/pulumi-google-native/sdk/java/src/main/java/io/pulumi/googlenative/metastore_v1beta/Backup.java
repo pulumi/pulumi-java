@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1beta.BackupArgs;
@@ -23,7 +23,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The time when the backup was started.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The description of the backup.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -51,7 +51,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The time when the backup finished creating.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -65,7 +65,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Services that are restoring from the backup.
      * 
      */
-    @OutputExport(name="restoringServices", type=List.class, parameters={String.class})
+    @Export(name="restoringServices", type=List.class, parameters={String.class})
     private Output<List<String>> restoringServices;
 
     /**
@@ -93,7 +93,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The revision of the service at the time of backup.
      * 
      */
-    @OutputExport(name="serviceRevision", type=ServiceResponse.class, parameters={})
+    @Export(name="serviceRevision", type=ServiceResponse.class, parameters={})
     private Output<ServiceResponse> serviceRevision;
 
     /**
@@ -107,7 +107,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The current state of the backup.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

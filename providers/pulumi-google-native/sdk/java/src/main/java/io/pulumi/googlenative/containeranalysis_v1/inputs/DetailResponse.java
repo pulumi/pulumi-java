@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
      * 
      */
-    @InputImport(name="affectedCpeUri", required=true)
+    @Import(name="affectedCpeUri", required=true)
       private final String affectedCpeUri;
 
     public String getAffectedCpeUri() {
@@ -33,7 +33,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The package this vulnerability affects.
      * 
      */
-    @InputImport(name="affectedPackage", required=true)
+    @Import(name="affectedPackage", required=true)
       private final String affectedPackage;
 
     public String getAffectedPackage() {
@@ -44,7 +44,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
      * 
      */
-    @InputImport(name="affectedVersionEnd", required=true)
+    @Import(name="affectedVersionEnd", required=true)
       private final VersionResponse affectedVersionEnd;
 
     public VersionResponse getAffectedVersionEnd() {
@@ -55,7 +55,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
      * 
      */
-    @InputImport(name="affectedVersionStart", required=true)
+    @Import(name="affectedVersionStart", required=true)
       private final VersionResponse affectedVersionStart;
 
     public VersionResponse getAffectedVersionStart() {
@@ -66,7 +66,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * A vendor-specific description of this vulnerability.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -77,7 +77,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The distro recommended [CPE URI](https://cpe.mitre.org/specification/) to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_cpe_uri.
      * 
      */
-    @InputImport(name="fixedCpeUri", required=true)
+    @Import(name="fixedCpeUri", required=true)
       private final String fixedCpeUri;
 
     public String getFixedCpeUri() {
@@ -88,7 +88,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The distro recommended package to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_package.
      * 
      */
-    @InputImport(name="fixedPackage", required=true)
+    @Import(name="fixedPackage", required=true)
       private final String fixedPackage;
 
     public String getFixedPackage() {
@@ -99,7 +99,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.
      * 
      */
-    @InputImport(name="fixedVersion", required=true)
+    @Import(name="fixedVersion", required=true)
       private final VersionResponse fixedVersion;
 
     public VersionResponse getFixedVersion() {
@@ -110,7 +110,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
      * 
      */
-    @InputImport(name="isObsolete", required=true)
+    @Import(name="isObsolete", required=true)
       private final Boolean isObsolete;
 
     public Boolean getIsObsolete() {
@@ -121,7 +121,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The type of package; whether native or non native (e.g., ruby gems, node.js packages, etc.).
      * 
      */
-    @InputImport(name="packageType", required=true)
+    @Import(name="packageType", required=true)
       private final String packageType;
 
     public String getPackageType() {
@@ -132,7 +132,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The distro assigned severity of this vulnerability.
      * 
      */
-    @InputImport(name="severityName", required=true)
+    @Import(name="severityName", required=true)
       private final String severityName;
 
     public String getSeverityName() {
@@ -143,7 +143,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The source from which the information in this Detail was obtained.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
@@ -154,7 +154,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
      * 
      */
-    @InputImport(name="sourceUpdateTime", required=true)
+    @Import(name="sourceUpdateTime", required=true)
       private final String sourceUpdateTime;
 
     public String getSourceUpdateTime() {
@@ -165,7 +165,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the vendor of the product.
      * 
      */
-    @InputImport(name="vendor", required=true)
+    @Import(name="vendor", required=true)
       private final String vendor;
 
     public String getVendor() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      * The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
-    @InputImport(name="confidence", required=true)
+    @Import(name="confidence", required=true)
       private final Double confidence;
 
     public Double getConfidence() {
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      * The Dialogflow intent resource path. Format: projects/{project}/agent/{agent}/intents/{intent}
      * 
      */
-    @InputImport(name="dialogflowIntentId", required=true)
+    @Import(name="dialogflowIntentId", required=true)
       private final String dialogflowIntentId;
 
     public String getDialogflowIntentId() {

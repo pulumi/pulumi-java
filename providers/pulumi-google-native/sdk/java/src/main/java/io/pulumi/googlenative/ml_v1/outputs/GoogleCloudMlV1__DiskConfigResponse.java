@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__DiskConfigResponse {
     /**
      * Size in GB of the boot disk (default is 100GB).
@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1__DiskConfigResponse {
      */
     private final String bootDiskType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__DiskConfigResponse(
-        @OutputCustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
-        @OutputCustomType.Parameter("bootDiskType") String bootDiskType) {
+        @CustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
+        @CustomType.Parameter("bootDiskType") String bootDiskType) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
     }

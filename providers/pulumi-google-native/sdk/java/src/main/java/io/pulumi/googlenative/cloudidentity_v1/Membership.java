@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudidentity_v1.MembershipArgs;
@@ -25,7 +25,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * The time when the `Membership` was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -39,7 +39,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership`. Shall be of the form `groups/{group}/memberships/{membership}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -53,7 +53,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * Immutable. The `EntityKey` of the member.
      * 
      */
-    @OutputExport(name="preferredMemberKey", type=EntityKeyResponse.class, parameters={})
+    @Export(name="preferredMemberKey", type=EntityKeyResponse.class, parameters={})
     private Output<EntityKeyResponse> preferredMemberKey;
 
     /**
@@ -67,7 +67,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
      * 
      */
-    @OutputExport(name="roles", type=List.class, parameters={MembershipRoleResponse.class})
+    @Export(name="roles", type=List.class, parameters={MembershipRoleResponse.class})
     private Output<List<MembershipRoleResponse>> roles;
 
     /**
@@ -81,7 +81,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * The type of the membership.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -95,7 +95,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * The time when the `Membership` was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

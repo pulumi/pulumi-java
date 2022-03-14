@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.MysqlTableResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MysqlDatabaseResponse {
     /**
      * Database name.
@@ -22,10 +22,10 @@ public final class MysqlDatabaseResponse {
      */
     private final List<MysqlTableResponse> mysqlTables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlDatabaseResponse(
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("mysqlTables") List<MysqlTableResponse> mysqlTables) {
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("mysqlTables") List<MysqlTableResponse> mysqlTables) {
         this.databaseName = databaseName;
         this.mysqlTables = mysqlTables;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
      * Can this node pool be deleted automatically.
      * 
      */
-    @InputImport(name="autoprovisioned", required=true)
+    @Import(name="autoprovisioned", required=true)
       private final Boolean autoprovisioned;
 
     public Boolean getAutoprovisioned() {
@@ -32,7 +32,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
      * Is autoscaling enabled for this node pool.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -43,7 +43,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
      * Maximum number of nodes for one location in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.
      * 
      */
-    @InputImport(name="maxNodeCount", required=true)
+    @Import(name="maxNodeCount", required=true)
       private final Integer maxNodeCount;
 
     public Integer getMaxNodeCount() {
@@ -54,7 +54,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
      * Minimum number of nodes for one location in the NodePool. Must be >= 1 and <= max_node_count.
      * 
      */
-    @InputImport(name="minNodeCount", required=true)
+    @Import(name="minNodeCount", required=true)
       private final Integer minNodeCount;
 
     public Integer getMinNodeCount() {

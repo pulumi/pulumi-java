@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vision_v1.ProductSetArgs;
@@ -22,7 +22,7 @@ public class ProductSet extends io.pulumi.resources.CustomResource {
      * The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -36,7 +36,7 @@ public class ProductSet extends io.pulumi.resources.CustomResource {
      * If there was an error with indexing the product set, the field is populated. This field is ignored when creating a ProductSet.
      * 
      */
-    @OutputExport(name="indexError", type=StatusResponse.class, parameters={})
+    @Export(name="indexError", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> indexError;
 
     /**
@@ -50,7 +50,7 @@ public class ProductSet extends io.pulumi.resources.CustomResource {
      * The time at which this ProductSet was last indexed. Query results will reflect all updates before this time. If this ProductSet has never been indexed, this timestamp is the default value "1970-01-01T00:00:00Z". This field is ignored when creating a ProductSet.
      * 
      */
-    @OutputExport(name="indexTime", type=String.class, parameters={})
+    @Export(name="indexTime", type=String.class, parameters={})
     private Output<String> indexTime;
 
     /**
@@ -64,7 +64,7 @@ public class ProductSet extends io.pulumi.resources.CustomResource {
      * The resource name of the ProductSet. Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when creating a ProductSet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

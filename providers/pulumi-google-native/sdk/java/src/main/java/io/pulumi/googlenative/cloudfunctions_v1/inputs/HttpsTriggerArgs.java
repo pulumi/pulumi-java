@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudfunctions_v1.enums.HttpsTriggerSecurityLevel;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The security level for the function.
      * 
      */
-    @InputImport(name="securityLevel")
+    @Import(name="securityLevel")
       private final @Nullable Output<HttpsTriggerSecurityLevel> securityLevel;
 
     public Output<HttpsTriggerSecurityLevel> getSecurityLevel() {

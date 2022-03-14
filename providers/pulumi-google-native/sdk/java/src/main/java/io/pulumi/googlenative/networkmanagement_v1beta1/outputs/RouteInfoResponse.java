@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouteInfoResponse {
     /**
      * Destination IP range of the route.
@@ -57,17 +57,17 @@ public final class RouteInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteInfoResponse(
-        @OutputCustomType.Parameter("destIpRange") String destIpRange,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("instanceTags") List<String> instanceTags,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("nextHop") String nextHop,
-        @OutputCustomType.Parameter("nextHopType") String nextHopType,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("routeType") String routeType,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("destIpRange") String destIpRange,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("instanceTags") List<String> instanceTags,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("nextHop") String nextHop,
+        @CustomType.Parameter("nextHopType") String nextHopType,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("routeType") String routeType,
+        @CustomType.Parameter("uri") String uri) {
         this.destIpRange = destIpRange;
         this.displayName = displayName;
         this.instanceTags = instanceTags;

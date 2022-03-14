@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The VM Boot Option.
      * 
      */
-    @InputImport(name="bootOption", required=true)
+    @Import(name="bootOption", required=true)
       private final String bootOption;
 
     public String getBootOption() {
@@ -32,7 +32,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The total size of the storage allocated to the VM in MB.
      * 
      */
-    @InputImport(name="committedStorageMb", required=true)
+    @Import(name="committedStorageMb", required=true)
       private final String committedStorageMb;
 
     public String getCommittedStorageMb() {
@@ -43,7 +43,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The number of cpus in the VM.
      * 
      */
-    @InputImport(name="cpuCount", required=true)
+    @Import(name="cpuCount", required=true)
       private final Integer cpuCount;
 
     public Integer getCpuCount() {
@@ -54,7 +54,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The descriptive name of the vCenter's datacenter this VM is contained in.
      * 
      */
-    @InputImport(name="datacenterDescription", required=true)
+    @Import(name="datacenterDescription", required=true)
       private final String datacenterDescription;
 
     public String getDatacenterDescription() {
@@ -65,7 +65,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The id of the vCenter's datacenter this VM is contained in.
      * 
      */
-    @InputImport(name="datacenterId", required=true)
+    @Import(name="datacenterId", required=true)
       private final String datacenterId;
 
     public String getDatacenterId() {
@@ -76,7 +76,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The number of disks the VM has.
      * 
      */
-    @InputImport(name="diskCount", required=true)
+    @Import(name="diskCount", required=true)
       private final Integer diskCount;
 
     public Integer getDiskCount() {
@@ -87,7 +87,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The display name of the VM. Note that this is not necessarily unique.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -98,7 +98,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The VM's OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
      * 
      */
-    @InputImport(name="guestDescription", required=true)
+    @Import(name="guestDescription", required=true)
       private final String guestDescription;
 
     public String getGuestDescription() {
@@ -109,7 +109,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The size of the memory of the VM in MB.
      * 
      */
-    @InputImport(name="memoryMb", required=true)
+    @Import(name="memoryMb", required=true)
       private final Integer memoryMb;
 
     public Integer getMemoryMb() {
@@ -120,7 +120,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The power state of the VM at the moment list was taken.
      * 
      */
-    @InputImport(name="powerState", required=true)
+    @Import(name="powerState", required=true)
       private final String powerState;
 
     public String getPowerState() {
@@ -131,7 +131,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The unique identifier of the VM in vCenter.
      * 
      */
-    @InputImport(name="uuid", required=true)
+    @Import(name="uuid", required=true)
       private final String uuid;
 
     public String getUuid() {
@@ -142,7 +142,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * The VM's id in the source (note that this is not the MigratingVm's id). This is the moref id of the VM.
      * 
      */
-    @InputImport(name="vmId", required=true)
+    @Import(name="vmId", required=true)
       private final String vmId;
 
     public String getVmId() {

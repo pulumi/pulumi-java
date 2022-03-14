@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.GcfsConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
      * GCFS (Google Container File System, a.k.a Riptide) options.
      * 
      */
-    @InputImport(name="gcfsConfig")
+    @Import(name="gcfsConfig")
       private final @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
     public Output<GcfsConfigArgs> getGcfsConfig() {

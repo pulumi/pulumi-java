@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2DateShiftConfigResponse {
     /**
      * Points to the field that contains the context, for example, an entity id. If set, must also set cryptoKey. If set, shift will be consistent for the given context.
@@ -32,12 +32,12 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
      */
     private final Integer upperBoundDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2DateShiftConfigResponse(
-        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
-        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        @OutputCustomType.Parameter("lowerBoundDays") Integer lowerBoundDays,
-        @OutputCustomType.Parameter("upperBoundDays") Integer upperBoundDays) {
+        @CustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @CustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @CustomType.Parameter("lowerBoundDays") Integer lowerBoundDays,
+        @CustomType.Parameter("upperBoundDays") Integer upperBoundDays) {
         this.context = context;
         this.cryptoKey = cryptoKey;
         this.lowerBoundDays = lowerBoundDays;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FixedOrPercentResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerUpdatePolicyResponse {
     /**
      * The instance redistribution policy for regional managed instance groups. Valid values are: - PROACTIVE (default): The group attempts to maintain an even distribution of VM instances across zones in the region. - NONE: For non-autoscaled groups, proactive redistribution is disabled.
@@ -52,16 +52,16 @@ public final class InstanceGroupManagerUpdatePolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerUpdatePolicyResponse(
-        @OutputCustomType.Parameter("instanceRedistributionType") String instanceRedistributionType,
-        @OutputCustomType.Parameter("maxSurge") FixedOrPercentResponse maxSurge,
-        @OutputCustomType.Parameter("maxUnavailable") FixedOrPercentResponse maxUnavailable,
-        @OutputCustomType.Parameter("minReadySec") Integer minReadySec,
-        @OutputCustomType.Parameter("minimalAction") String minimalAction,
-        @OutputCustomType.Parameter("mostDisruptiveAllowedAction") String mostDisruptiveAllowedAction,
-        @OutputCustomType.Parameter("replacementMethod") String replacementMethod,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("instanceRedistributionType") String instanceRedistributionType,
+        @CustomType.Parameter("maxSurge") FixedOrPercentResponse maxSurge,
+        @CustomType.Parameter("maxUnavailable") FixedOrPercentResponse maxUnavailable,
+        @CustomType.Parameter("minReadySec") Integer minReadySec,
+        @CustomType.Parameter("minimalAction") String minimalAction,
+        @CustomType.Parameter("mostDisruptiveAllowedAction") String mostDisruptiveAllowedAction,
+        @CustomType.Parameter("replacementMethod") String replacementMethod,
+        @CustomType.Parameter("type") String type) {
         this.instanceRedistributionType = instanceRedistributionType;
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.PacketMirroringEnable;
 import io.pulumi.googlenative.compute_beta.inputs.PacketMirroringFilterArgs;
 import io.pulumi.googlenative.compute_beta.inputs.PacketMirroringForwardingRuleInfoArgs;
@@ -24,7 +24,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
      * 
      */
-    @InputImport(name="collectorIlb")
+    @Import(name="collectorIlb")
       private final @Nullable Output<PacketMirroringForwardingRuleInfoArgs> collectorIlb;
 
     public Output<PacketMirroringForwardingRuleInfoArgs> getCollectorIlb() {
@@ -35,7 +35,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<PacketMirroringEnable> enable;
 
     public Output<PacketMirroringEnable> getEnable() {
@@ -57,7 +57,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * Filter for mirrored traffic. If unspecified, all traffic is mirrored.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<PacketMirroringFilterArgs> filter;
 
     public Output<PacketMirroringFilterArgs> getFilter() {
@@ -68,7 +68,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
      * 
      */
-    @InputImport(name="mirroredResources")
+    @Import(name="mirroredResources")
       private final @Nullable Output<PacketMirroringMirroredResourceInfoArgs> mirroredResources;
 
     public Output<PacketMirroringMirroredResourceInfoArgs> getMirroredResources() {
@@ -79,7 +79,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<PacketMirroringNetworkInfoArgs> network;
 
     public Output<PacketMirroringNetworkInfoArgs> getNetwork() {
@@ -101,28 +101,28 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
      * The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
         return this.priority == null ? Output.empty() : this.priority;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

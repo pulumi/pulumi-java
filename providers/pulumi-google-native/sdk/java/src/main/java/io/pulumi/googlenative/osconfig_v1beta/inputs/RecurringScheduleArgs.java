@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.enums.RecurringScheduleFrequency;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.MonthlyScheduleArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.TimeOfDayArgs;
@@ -27,7 +27,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * Optional. The end time at which a recurring patch deployment schedule is no longer active.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -38,7 +38,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * The frequency unit of this recurring schedule.
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final Output<RecurringScheduleFrequency> frequency;
 
     public Output<RecurringScheduleFrequency> getFrequency() {
@@ -49,7 +49,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * Schedule with monthly executions.
      * 
      */
-    @InputImport(name="monthly", required=true)
+    @Import(name="monthly", required=true)
       private final Output<MonthlyScheduleArgs> monthly;
 
     public Output<MonthlyScheduleArgs> getMonthly() {
@@ -60,7 +60,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -71,7 +71,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * Time of the day to run a recurring deployment.
      * 
      */
-    @InputImport(name="timeOfDay", required=true)
+    @Import(name="timeOfDay", required=true)
       private final Output<TimeOfDayArgs> timeOfDay;
 
     public Output<TimeOfDayArgs> getTimeOfDay() {
@@ -82,7 +82,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<TimeZoneArgs> timeZone;
 
     public Output<TimeZoneArgs> getTimeZone() {
@@ -93,7 +93,7 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
      * Schedule with weekly executions.
      * 
      */
-    @InputImport(name="weekly", required=true)
+    @Import(name="weekly", required=true)
       private final Output<WeeklyScheduleArgs> weekly;
 
     public Output<WeeklyScheduleArgs> getWeekly() {

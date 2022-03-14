@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Trusted attributes supplied by the IAM system.
      * 
      */
-    @InputImport(name="iam", required=true)
+    @Import(name="iam", required=true)
       private final String iam;
 
     public String getIam() {
@@ -32,7 +32,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * An operator to apply the subject with.
      * 
      */
-    @InputImport(name="op", required=true)
+    @Import(name="op", required=true)
       private final String op;
 
     public String getOp() {
@@ -43,7 +43,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Trusted attributes discharged by the service.
      * 
      */
-    @InputImport(name="svc", required=true)
+    @Import(name="svc", required=true)
       private final String svc;
 
     public String getSvc() {
@@ -54,7 +54,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
      * 
      */
-    @InputImport(name="sys", required=true)
+    @Import(name="sys", required=true)
       private final String sys;
 
     public String getSys() {
@@ -65,7 +65,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * The objects of the condition.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

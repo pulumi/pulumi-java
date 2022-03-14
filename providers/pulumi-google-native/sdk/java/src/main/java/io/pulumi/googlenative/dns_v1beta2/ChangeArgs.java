@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.enums.ChangeStatus;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
 import java.lang.Boolean;
@@ -22,14 +22,14 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * Which ResourceRecordSets to add?
      * 
      */
-    @InputImport(name="additions")
+    @Import(name="additions")
       private final @Nullable Output<List<ResourceRecordSetArgs>> additions;
 
     public Output<List<ResourceRecordSetArgs>> getAdditions() {
         return this.additions == null ? Output.empty() : this.additions;
     }
 
-    @InputImport(name="clientOperationId")
+    @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
     public Output<String> getClientOperationId() {
@@ -40,7 +40,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * Which ResourceRecordSets to remove? Must match existing data exactly.
      * 
      */
-    @InputImport(name="deletions")
+    @Import(name="deletions")
       private final @Nullable Output<List<ResourceRecordSetArgs>> deletions;
 
     public Output<List<ResourceRecordSetArgs>> getDeletions() {
@@ -51,7 +51,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier for the resource; defined by the server (output only).
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -62,28 +62,28 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * If the DNS queries for the zone will be served.
      * 
      */
-    @InputImport(name="isServing")
+    @Import(name="isServing")
       private final @Nullable Output<Boolean> isServing;
 
     public Output<Boolean> getIsServing() {
         return this.isServing == null ? Output.empty() : this.isServing;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="managedZone", required=true)
+    @Import(name="managedZone", required=true)
       private final Output<String> managedZone;
 
     public Output<String> getManagedZone() {
         return this.managedZone;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -94,7 +94,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * The time that this operation was started by the server (output only). This is in RFC3339 text format.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -105,7 +105,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
      * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<ChangeStatus> status;
 
     public Output<ChangeStatus> getStatus() {

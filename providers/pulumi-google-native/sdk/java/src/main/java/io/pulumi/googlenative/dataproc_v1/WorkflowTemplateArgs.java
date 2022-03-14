@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.OrderedJobArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.TemplateParameterArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.WorkflowTemplatePlacementArgs;
@@ -24,14 +24,14 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Optional. Timeout duration for the DAG of jobs, expressed in seconds (see JSON representation of duration (https://developers.google.com/protocol-buffers/docs/proto3#json)). The timeout duration must be from 10 minutes ("600s") to 24 hours ("86400s"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a managed cluster, the cluster is deleted.
      * 
      */
-    @InputImport(name="dagTimeout")
+    @Import(name="dagTimeout")
       private final @Nullable Output<String> dagTimeout;
 
     public Output<String> getDagTimeout() {
         return this.dagTimeout == null ? Output.empty() : this.dagTimeout;
     }
 
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -42,7 +42,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * The Directed Acyclic Graph of Jobs to submit.
      * 
      */
-    @InputImport(name="jobs", required=true)
+    @Import(name="jobs", required=true)
       private final Output<List<OrderedJobArgs>> jobs;
 
     public Output<List<OrderedJobArgs>> getJobs() {
@@ -53,14 +53,14 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Optional. The labels to associate with this template. These labels will be propagated to all jobs and clusters created by the workflow instance.Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt).Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt).No more than 32 labels can be associated with a template.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -71,7 +71,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<TemplateParameterArgs>> parameters;
 
     public Output<List<TemplateParameterArgs>> getParameters() {
@@ -82,14 +82,14 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * WorkflowTemplate scheduling information.
      * 
      */
-    @InputImport(name="placement", required=true)
+    @Import(name="placement", required=true)
       private final Output<WorkflowTemplatePlacementArgs> placement;
 
     public Output<WorkflowTemplatePlacementArgs> getPlacement() {
         return this.placement;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -100,7 +100,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Optional. Used to perform a consistent read-modify-write.This field should be left blank for a CreateWorkflowTemplate request. It is required for an UpdateWorkflowTemplate request, and must match the current server version. A typical update template flow would fetch the current template with a GetWorkflowTemplate request, which will return the current template with the version field filled in with the current server version. The user updates other fields in the template, then returns it as part of the UpdateWorkflowTemplate request.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

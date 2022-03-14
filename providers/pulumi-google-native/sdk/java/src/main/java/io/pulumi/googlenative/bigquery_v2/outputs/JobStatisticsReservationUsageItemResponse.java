@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatisticsReservationUsageItemResponse {
     /**
      * Reservation name or "unreserved" for on-demand resources usage.
@@ -20,10 +20,10 @@ public final class JobStatisticsReservationUsageItemResponse {
      */
     private final String slotMs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatisticsReservationUsageItemResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("slotMs") String slotMs) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("slotMs") String slotMs) {
         this.name = name;
         this.slotMs = slotMs;
     }

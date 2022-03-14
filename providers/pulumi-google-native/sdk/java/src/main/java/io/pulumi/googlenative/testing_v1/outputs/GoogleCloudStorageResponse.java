@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudStorageResponse {
     /**
      * The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
@@ -15,8 +15,8 @@ public final class GoogleCloudStorageResponse {
      */
     private final String gcsPath;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudStorageResponse(@OutputCustomType.Parameter("gcsPath") String gcsPath) {
+    @CustomType.Constructor
+    private GoogleCloudStorageResponse(@CustomType.Parameter("gcsPath") String gcsPath) {
         this.gcsPath = gcsPath;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.ErrorResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.VpcPeeringConfigResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateConnectionResult {
     /**
      * The create time of the resource.
@@ -53,16 +53,16 @@ public final class GetPrivateConnectionResult {
      */
     private final VpcPeeringConfigResponse vpcPeeringConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateConnectionResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("error") ErrorResponse error,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("vpcPeeringConfig") VpcPeeringConfigResponse vpcPeeringConfig) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("error") ErrorResponse error,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("vpcPeeringConfig") VpcPeeringConfigResponse vpcPeeringConfig) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.error = error;

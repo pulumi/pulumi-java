@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.FileContentBufferFileType;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
      * The raw content in the secure keys file.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -30,7 +30,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
      * The file type of source file.
      * 
      */
-    @InputImport(name="fileType")
+    @Import(name="fileType")
       private final @Nullable Output<FileContentBufferFileType> fileType;
 
     public Output<FileContentBufferFileType> getFileType() {

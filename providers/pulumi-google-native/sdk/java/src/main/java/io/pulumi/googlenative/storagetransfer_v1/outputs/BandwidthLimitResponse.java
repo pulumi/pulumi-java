@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BandwidthLimitResponse {
     /**
      * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
@@ -15,8 +15,8 @@ public final class BandwidthLimitResponse {
      */
     private final String limitMbps;
 
-    @OutputCustomType.Constructor
-    private BandwidthLimitResponse(@OutputCustomType.Parameter("limitMbps") String limitMbps) {
+    @CustomType.Constructor
+    private BandwidthLimitResponse(@CustomType.Parameter("limitMbps") String limitMbps) {
         this.limitMbps = limitMbps;
     }
 

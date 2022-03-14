@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationParticipantResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse;
@@ -27,7 +27,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from '1' to 'N'. A channel tag of 0 indicates that the audio is mono.
      * 
      */
-    @InputImport(name="channelTag", required=true)
+    @Import(name="channelTag", required=true)
       private final Integer channelTag;
 
     public Integer getChannelTag() {
@@ -38,7 +38,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * A confidence estimate between 0.0 and 1.0 of the fidelity of this segment. A default value of 0.0 indicates that the value is unset.
      * 
      */
-    @InputImport(name="confidence", required=true)
+    @Import(name="confidence", required=true)
       private final Double confidence;
 
     public Double getConfidence() {
@@ -49,7 +49,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * CCAI metadata relating to the current transcript segment.
      * 
      */
-    @InputImport(name="dialogflowSegmentMetadata", required=true)
+    @Import(name="dialogflowSegmentMetadata", required=true)
       private final GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata;
 
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse getDialogflowSegmentMetadata() {
@@ -60,7 +60,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * The language code of this segment as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
      * 
      */
-    @InputImport(name="languageCode", required=true)
+    @Import(name="languageCode", required=true)
       private final String languageCode;
 
     public String getLanguageCode() {
@@ -71,7 +71,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * The time that the message occurred, if provided.
      * 
      */
-    @InputImport(name="messageTime", required=true)
+    @Import(name="messageTime", required=true)
       private final String messageTime;
 
     public String getMessageTime() {
@@ -82,7 +82,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * The participant of this segment.
      * 
      */
-    @InputImport(name="segmentParticipant", required=true)
+    @Import(name="segmentParticipant", required=true)
       private final GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant;
 
     public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse getSegmentParticipant() {
@@ -93,7 +93,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * The sentiment for this transcript segment.
      * 
      */
-    @InputImport(name="sentiment", required=true)
+    @Import(name="sentiment", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentiment() {
@@ -104,7 +104,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * The text of this segment.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final String text;
 
     public String getText() {
@@ -115,7 +115,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * A list of the word-specific information for each word in the segment.
      * 
      */
-    @InputImport(name="words", required=true)
+    @Import(name="words", required=true)
       private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
 
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> getWords() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudkms_v1.enums.ImportJobImportMethod;
 import io.pulumi.googlenative.cloudkms_v1.enums.ImportJobProtectionLevel;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImportJobArgs Empty = new ImportJobArgs();
 
-    @InputImport(name="importJobId", required=true)
+    @Import(name="importJobId", required=true)
       private final Output<String> importJobId;
 
     public Output<String> getImportJobId() {
@@ -27,28 +27,28 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The wrapping method to be used for incoming key material.
      * 
      */
-    @InputImport(name="importMethod", required=true)
+    @Import(name="importMethod", required=true)
       private final Output<ImportJobImportMethod> importMethod;
 
     public Output<ImportJobImportMethod> getImportMethod() {
         return this.importMethod;
     }
 
-    @InputImport(name="keyRingId", required=true)
+    @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
     public Output<String> getKeyRingId() {
         return this.keyRingId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -59,7 +59,7 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
      * 
      */
-    @InputImport(name="protectionLevel", required=true)
+    @Import(name="protectionLevel", required=true)
       private final Output<ImportJobProtectionLevel> protectionLevel;
 
     public Output<ImportJobProtectionLevel> getProtectionLevel() {

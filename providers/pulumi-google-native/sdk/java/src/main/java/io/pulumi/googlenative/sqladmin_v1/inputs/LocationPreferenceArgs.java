@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
      * 
      */
-    @InputImport(name="followGaeApplication")
+    @Import(name="followGaeApplication")
       private final @Nullable Output<String> followGaeApplication;
 
     public Output<String> getFollowGaeApplication() {
@@ -33,7 +33,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * This is always `sql#locationPreference`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -44,7 +44,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
      * 
      */
-    @InputImport(name="secondaryZone")
+    @Import(name="secondaryZone")
       private final @Nullable Output<String> secondaryZone;
 
     public Output<String> getSecondaryZone() {
@@ -55,7 +55,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.). WARNING: Changing this might restart the instance.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

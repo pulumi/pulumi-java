@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.memcache_v1.outputs.InstanceMessageResponse;
 import io.pulumi.googlenative.memcache_v1.outputs.MemcacheParametersResponse;
 import io.pulumi.googlenative.memcache_v1.outputs.NodeConfigResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The full name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. If left unspecified, the `default` network will be used.
@@ -97,24 +97,24 @@ public final class GetInstanceResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("discoveryEndpoint") String discoveryEndpoint,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("instanceMessages") List<InstanceMessageResponse> instanceMessages,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("memcacheFullVersion") String memcacheFullVersion,
-        @OutputCustomType.Parameter("memcacheNodes") List<NodeResponse> memcacheNodes,
-        @OutputCustomType.Parameter("memcacheVersion") String memcacheVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeConfig") NodeConfigResponse nodeConfig,
-        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
-        @OutputCustomType.Parameter("parameters") MemcacheParametersResponse parameters,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("zones") List<String> zones) {
+        @CustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("discoveryEndpoint") String discoveryEndpoint,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("instanceMessages") List<InstanceMessageResponse> instanceMessages,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("memcacheFullVersion") String memcacheFullVersion,
+        @CustomType.Parameter("memcacheNodes") List<NodeResponse> memcacheNodes,
+        @CustomType.Parameter("memcacheVersion") String memcacheVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeConfig") NodeConfigResponse nodeConfig,
+        @CustomType.Parameter("nodeCount") Integer nodeCount,
+        @CustomType.Parameter("parameters") MemcacheParametersResponse parameters,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("zones") List<String> zones) {
         this.authorizedNetwork = authorizedNetwork;
         this.createTime = createTime;
         this.discoveryEndpoint = discoveryEndpoint;

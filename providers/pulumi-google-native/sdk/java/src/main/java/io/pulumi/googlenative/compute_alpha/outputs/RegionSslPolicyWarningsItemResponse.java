@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RegionSslPolicyWarningsItemDataItemResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegionSslPolicyWarningsItemResponse {
     /**
      * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
@@ -27,11 +27,11 @@ public final class RegionSslPolicyWarningsItemResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionSslPolicyWarningsItemResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("data") List<RegionSslPolicyWarningsItemDataItemResponse> data,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("data") List<RegionSslPolicyWarningsItemDataItemResponse> data,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.data = data;
         this.message = message;

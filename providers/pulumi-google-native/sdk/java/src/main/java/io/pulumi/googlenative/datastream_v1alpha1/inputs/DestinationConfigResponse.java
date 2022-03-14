@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.GcsDestinationConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
      * Destination connection profile identifier.
      * 
      */
-    @InputImport(name="destinationConnectionProfileName", required=true)
+    @Import(name="destinationConnectionProfileName", required=true)
       private final String destinationConnectionProfileName;
 
     public String getDestinationConnectionProfileName() {
@@ -32,7 +32,7 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
      * GCS destination configuration.
      * 
      */
-    @InputImport(name="gcsDestinationConfig", required=true)
+    @Import(name="gcsDestinationConfig", required=true)
       private final GcsDestinationConfigResponse gcsDestinationConfig;
 
     public GcsDestinationConfigResponse getGcsDestinationConfig() {

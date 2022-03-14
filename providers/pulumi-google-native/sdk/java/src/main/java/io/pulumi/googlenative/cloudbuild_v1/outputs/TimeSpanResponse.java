@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeSpanResponse {
     /**
      * End of time span.
@@ -20,10 +20,10 @@ public final class TimeSpanResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeSpanResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.startTime = startTime;
     }

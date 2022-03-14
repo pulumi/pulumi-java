@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.EdgeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.GkeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.KubernetesMetadataResponse;
@@ -25,7 +25,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * Optional. Specific information for a Google Edge cluster.
      * 
      */
-    @InputImport(name="edgeCluster", required=true)
+    @Import(name="edgeCluster", required=true)
       private final EdgeClusterResponse edgeCluster;
 
     public EdgeClusterResponse getEdgeCluster() {
@@ -36,7 +36,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * Optional. Specific information for a GKE-on-GCP cluster.
      * 
      */
-    @InputImport(name="gkeCluster", required=true)
+    @Import(name="gkeCluster", required=true)
       private final GkeClusterResponse gkeCluster;
 
     public GkeClusterResponse getGkeCluster() {
@@ -47,7 +47,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * Useful Kubernetes-specific metadata.
      * 
      */
-    @InputImport(name="kubernetesMetadata", required=true)
+    @Import(name="kubernetesMetadata", required=true)
       private final KubernetesMetadataResponse kubernetesMetadata;
 
     public KubernetesMetadataResponse getKubernetesMetadata() {
@@ -58,7 +58,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
      * 
      */
-    @InputImport(name="kubernetesResource", required=true)
+    @Import(name="kubernetesResource", required=true)
       private final KubernetesResourceResponse kubernetesResource;
 
     public KubernetesResourceResponse getKubernetesResource() {
@@ -69,7 +69,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * Optional. Specific information for a GKE Multi-Cloud cluster.
      * 
      */
-    @InputImport(name="multiCloudCluster", required=true)
+    @Import(name="multiCloudCluster", required=true)
       private final MultiCloudClusterResponse multiCloudCluster;
 
     public MultiCloudClusterResponse getMultiCloudCluster() {
@@ -80,7 +80,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil "type" instead.
      * 
      */
-    @InputImport(name="onPremCluster", required=true)
+    @Import(name="onPremCluster", required=true)
       private final OnPremClusterResponse onPremCluster;
 
     public OnPremClusterResponse getOnPremCluster() {

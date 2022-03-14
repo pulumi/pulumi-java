@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse {
     /**
      * A unique key that will be sent back to the agent if this response is given.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoRespon
      */
     private final List<String> synonyms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("synonyms") List<String> synonyms) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("synonyms") List<String> synonyms) {
         this.key = key;
         this.synonyms = synonyms;
     }

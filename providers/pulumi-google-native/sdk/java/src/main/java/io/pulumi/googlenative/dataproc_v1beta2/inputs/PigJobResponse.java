@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.LoggingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.QueryListResponse;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
      * 
      */
-    @InputImport(name="continueOnFailure", required=true)
+    @Import(name="continueOnFailure", required=true)
       private final Boolean continueOnFailure;
 
     public Boolean getContinueOnFailure() {
@@ -36,7 +36,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
      * 
      */
-    @InputImport(name="jarFileUris", required=true)
+    @Import(name="jarFileUris", required=true)
       private final List<String> jarFileUris;
 
     public List<String> getJarFileUris() {
@@ -47,7 +47,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The runtime log config for job execution.
      * 
      */
-    @InputImport(name="loggingConfig", required=true)
+    @Import(name="loggingConfig", required=true)
       private final LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse getLoggingConfig() {
@@ -58,7 +58,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -69,7 +69,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
      * The HCFS URI of the script that contains the Pig queries.
      * 
      */
-    @InputImport(name="queryFileUri", required=true)
+    @Import(name="queryFileUri", required=true)
       private final String queryFileUri;
 
     public String getQueryFileUri() {
@@ -80,7 +80,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
      * A list of queries.
      * 
      */
-    @InputImport(name="queryList", required=true)
+    @Import(name="queryList", required=true)
       private final QueryListResponse queryList;
 
     public QueryListResponse getQueryList() {
@@ -91,7 +91,7 @@ public final class PigJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).
      * 
      */
-    @InputImport(name="scriptVariables", required=true)
+    @Import(name="scriptVariables", required=true)
       private final Map<String,String> scriptVariables;
 
     public Map<String,String> getScriptVariables() {

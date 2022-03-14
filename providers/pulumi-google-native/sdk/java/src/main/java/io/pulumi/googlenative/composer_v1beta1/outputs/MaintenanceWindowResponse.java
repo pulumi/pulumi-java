@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowResponse {
     /**
      * Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end_time must be in the future, relative to `start_time`.
@@ -25,11 +25,11 @@ public final class MaintenanceWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("recurrence") String recurrence,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("recurrence") String recurrence,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.recurrence = recurrence;
         this.startTime = startTime;

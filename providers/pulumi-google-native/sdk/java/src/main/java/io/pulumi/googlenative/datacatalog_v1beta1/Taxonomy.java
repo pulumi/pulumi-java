@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1beta1.TaxonomyArgs;
@@ -25,7 +25,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
      * 
      */
-    @OutputExport(name="activatedPolicyTypes", type=List.class, parameters={String.class})
+    @Export(name="activatedPolicyTypes", type=List.class, parameters={String.class})
     private Output<List<String>> activatedPolicyTypes;
 
     /**
@@ -39,7 +39,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Optional. Description of this taxonomy. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -53,7 +53,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * User defined name of this taxonomy. It must: contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -67,7 +67,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Resource name of this taxonomy, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Number of policy tags contained in this taxonomy.
      * 
      */
-    @OutputExport(name="policyTagCount", type=Integer.class, parameters={})
+    @Export(name="policyTagCount", type=Integer.class, parameters={})
     private Output<Integer> policyTagCount;
 
     /**
@@ -95,7 +95,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Timestamps about this taxonomy. Only create_time and update_time are used.
      * 
      */
-    @OutputExport(name="taxonomyTimestamps", type=GoogleCloudDatacatalogV1beta1SystemTimestampsResponse.class, parameters={})
+    @Export(name="taxonomyTimestamps", type=GoogleCloudDatacatalogV1beta1SystemTimestampsResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> taxonomyTimestamps;
 
     /**

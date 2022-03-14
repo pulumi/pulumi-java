@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Measurement_MetricResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
      * Time that the trial has been running at the point of this measurement.
      * 
      */
-    @InputImport(name="elapsedTime", required=true)
+    @Import(name="elapsedTime", required=true)
       private final String elapsedTime;
 
     public String getElapsedTime() {
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
      * Provides a list of metrics that act as inputs into the objective function.
      * 
      */
-    @InputImport(name="metrics", required=true)
+    @Import(name="metrics", required=true)
       private final List<GoogleCloudMlV1_Measurement_MetricResponse> metrics;
 
     public List<GoogleCloudMlV1_Measurement_MetricResponse> getMetrics() {
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1__MeasurementResponse extends io.pulumi.resour
      * The number of steps a machine learning model has been trained for. Must be non-negative.
      * 
      */
-    @InputImport(name="stepCount", required=true)
+    @Import(name="stepCount", required=true)
       private final String stepCount;
 
     public String getStepCount() {

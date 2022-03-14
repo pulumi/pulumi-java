@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.QueryArgs;
@@ -25,7 +25,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Creation time of the query.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -39,7 +39,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Hostname is available only when query is executed at host level.
      * 
      */
-    @OutputExport(name="envgroupHostname", type=String.class, parameters={})
+    @Export(name="envgroupHostname", type=String.class, parameters={})
     private Output<String> envgroupHostname;
 
     /**
@@ -53,7 +53,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Error is set when query fails.
      * 
      */
-    @OutputExport(name="error", type=String.class, parameters={})
+    @Export(name="error", type=String.class, parameters={})
     private Output<String> error;
 
     /**
@@ -67,7 +67,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * ExecutionTime is available only after the query is completed.
      * 
      */
-    @OutputExport(name="executionTime", type=String.class, parameters={})
+    @Export(name="executionTime", type=String.class, parameters={})
     private Output<String> executionTime;
 
     /**
@@ -81,7 +81,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Asynchronous Query Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Contains information like metrics, dimenstions etc of the AsyncQuery.
      * 
      */
-    @OutputExport(name="queryParams", type=GoogleCloudApigeeV1QueryMetadataResponse.class, parameters={})
+    @Export(name="queryParams", type=GoogleCloudApigeeV1QueryMetadataResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1QueryMetadataResponse> queryParams;
 
     /**
@@ -109,7 +109,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Asynchronous Report ID.
      * 
      */
-    @OutputExport(name="reportDefinitionId", type=String.class, parameters={})
+    @Export(name="reportDefinitionId", type=String.class, parameters={})
     private Output<String> reportDefinitionId;
 
     /**
@@ -123,7 +123,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Result is available only after the query is completed.
      * 
      */
-    @OutputExport(name="result", type=GoogleCloudApigeeV1AsyncQueryResultResponse.class, parameters={})
+    @Export(name="result", type=GoogleCloudApigeeV1AsyncQueryResultResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1AsyncQueryResultResponse> result;
 
     /**
@@ -137,7 +137,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * ResultFileSize is available only after the query is completed.
      * 
      */
-    @OutputExport(name="resultFileSize", type=String.class, parameters={})
+    @Export(name="resultFileSize", type=String.class, parameters={})
     private Output<String> resultFileSize;
 
     /**
@@ -151,7 +151,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * ResultRows is available only after the query is completed.
      * 
      */
-    @OutputExport(name="resultRows", type=String.class, parameters={})
+    @Export(name="resultRows", type=String.class, parameters={})
     private Output<String> resultRows;
 
     /**
@@ -165,7 +165,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Self link of the query. Example: `/organizations/myorg/environments/myenv/queries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if query is running at host level: `/organizations/myorg/hostQueries/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
      * 
      */
-    @OutputExport(name="self", type=String.class, parameters={})
+    @Export(name="self", type=String.class, parameters={})
     private Output<String> self;
 
     /**
@@ -179,7 +179,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Query state could be "enqueued", "running", "completed", "failed".
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -193,7 +193,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Last updated timestamp for the query.
      * 
      */
-    @OutputExport(name="updated", type=String.class, parameters={})
+    @Export(name="updated", type=String.class, parameters={})
     private Output<String> updated;
 
     /**

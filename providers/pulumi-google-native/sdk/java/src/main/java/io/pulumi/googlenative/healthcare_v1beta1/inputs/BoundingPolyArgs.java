@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VertexArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
      * A description of this polygon.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -35,7 +35,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
      * List of the vertices of this polygon.
      * 
      */
-    @InputImport(name="vertices")
+    @Import(name="vertices")
       private final @Nullable Output<List<VertexArgs>> vertices;
 
     public Output<List<VertexArgs>> getVertices() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkservices_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A free-text description of the resource. Max length 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
      * 
      */
-    @InputImport(name="endpointFilter")
+    @Import(name="endpointFilter")
       private final @Nullable Output<String> endpointFilter;
 
     public Output<String> getEndpointFilter() {
@@ -41,14 +41,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Set of label tags associated with the ServiceBinding resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -59,14 +59,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -77,14 +77,14 @@ public final class ServiceBindingArgs extends io.pulumi.resources.ResourceArgs {
      * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {
         return this.service;
     }
 
-    @InputImport(name="serviceBindingId", required=true)
+    @Import(name="serviceBindingId", required=true)
       private final Output<String> serviceBindingId;
 
     public Output<String> getServiceBindingId() {

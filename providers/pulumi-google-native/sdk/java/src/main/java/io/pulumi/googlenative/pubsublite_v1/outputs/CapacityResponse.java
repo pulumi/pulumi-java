@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CapacityResponse {
     /**
      * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
@@ -20,10 +20,10 @@ public final class CapacityResponse {
      */
     private final Integer subscribeMibPerSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityResponse(
-        @OutputCustomType.Parameter("publishMibPerSec") Integer publishMibPerSec,
-        @OutputCustomType.Parameter("subscribeMibPerSec") Integer subscribeMibPerSec) {
+        @CustomType.Parameter("publishMibPerSec") Integer publishMibPerSec,
+        @CustomType.Parameter("subscribeMibPerSec") Integer subscribeMibPerSec) {
         this.publishMibPerSec = publishMibPerSec;
         this.subscribeMibPerSec = subscribeMibPerSec;
     }

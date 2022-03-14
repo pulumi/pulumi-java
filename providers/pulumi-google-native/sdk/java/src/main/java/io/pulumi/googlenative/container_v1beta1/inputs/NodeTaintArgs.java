@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.enums.NodeTaintEffect;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * Effect for taint.
      * 
      */
-    @InputImport(name="effect")
+    @Import(name="effect")
       private final @Nullable Output<NodeTaintEffect> effect;
 
     public Output<NodeTaintEffect> getEffect() {
@@ -34,7 +34,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * Key for taint.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -45,7 +45,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * Value for taint.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

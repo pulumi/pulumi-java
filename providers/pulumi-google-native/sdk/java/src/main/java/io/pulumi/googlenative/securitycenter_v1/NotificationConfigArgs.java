@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.securitycenter_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.securitycenter_v1.inputs.StreamingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
 
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 
-    @InputImport(name="configId", required=true)
+    @Import(name="configId", required=true)
       private final Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -26,7 +26,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * The description of the notification config (max of 1024 characters).
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,14 +37,14 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -55,7 +55,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
      * 
      */
-    @InputImport(name="pubsubTopic")
+    @Import(name="pubsubTopic")
       private final @Nullable Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {
@@ -66,7 +66,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * The config for triggering streaming-based notifications.
      * 
      */
-    @InputImport(name="streamingConfig")
+    @Import(name="streamingConfig")
       private final @Nullable Output<StreamingConfigArgs> streamingConfig;
 
     public Output<StreamingConfigArgs> getStreamingConfig() {

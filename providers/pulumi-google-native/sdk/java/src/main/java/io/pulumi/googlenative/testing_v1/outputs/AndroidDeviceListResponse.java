@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidDeviceResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidDeviceListResponse {
     /**
      * A list of Android devices.
@@ -16,8 +16,8 @@ public final class AndroidDeviceListResponse {
      */
     private final List<AndroidDeviceResponse> androidDevices;
 
-    @OutputCustomType.Constructor
-    private AndroidDeviceListResponse(@OutputCustomType.Parameter("androidDevices") List<AndroidDeviceResponse> androidDevices) {
+    @CustomType.Constructor
+    private AndroidDeviceListResponse(@CustomType.Parameter("androidDevices") List<AndroidDeviceResponse> androidDevices) {
         this.androidDevices = androidDevices;
     }
 

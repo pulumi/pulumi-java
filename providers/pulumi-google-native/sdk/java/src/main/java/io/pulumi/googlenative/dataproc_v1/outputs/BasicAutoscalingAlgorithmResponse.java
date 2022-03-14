@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.BasicYarnAutoscalingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.SparkStandaloneAutoscalingConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BasicAutoscalingAlgorithmResponse {
     /**
      * Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
@@ -27,11 +27,11 @@ public final class BasicAutoscalingAlgorithmResponse {
      */
     private final BasicYarnAutoscalingConfigResponse yarnConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BasicAutoscalingAlgorithmResponse(
-        @OutputCustomType.Parameter("cooldownPeriod") String cooldownPeriod,
-        @OutputCustomType.Parameter("sparkStandaloneConfig") SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig,
-        @OutputCustomType.Parameter("yarnConfig") BasicYarnAutoscalingConfigResponse yarnConfig) {
+        @CustomType.Parameter("cooldownPeriod") String cooldownPeriod,
+        @CustomType.Parameter("sparkStandaloneConfig") SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig,
+        @CustomType.Parameter("yarnConfig") BasicYarnAutoscalingConfigResponse yarnConfig) {
         this.cooldownPeriod = cooldownPeriod;
         this.sparkStandaloneConfig = sparkStandaloneConfig;
         this.yarnConfig = yarnConfig;

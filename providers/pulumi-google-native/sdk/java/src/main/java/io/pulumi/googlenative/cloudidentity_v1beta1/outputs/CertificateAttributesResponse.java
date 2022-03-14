@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.CertificateTemplateResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAttributesResponse {
     /**
      * The X.509 extension for CertificateTemplate.
@@ -56,17 +56,17 @@ public final class CertificateAttributesResponse {
      */
     private final String validityStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAttributesResponse(
-        @OutputCustomType.Parameter("certificateTemplate") CertificateTemplateResponse certificateTemplate,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("subject") String subject,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("validationState") String validationState,
-        @OutputCustomType.Parameter("validityExpirationTime") String validityExpirationTime,
-        @OutputCustomType.Parameter("validityStartTime") String validityStartTime) {
+        @CustomType.Parameter("certificateTemplate") CertificateTemplateResponse certificateTemplate,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("subject") String subject,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("validationState") String validationState,
+        @CustomType.Parameter("validityExpirationTime") String validityExpirationTime,
+        @CustomType.Parameter("validityStartTime") String validityStartTime) {
         this.certificateTemplate = certificateTemplate;
         this.fingerprint = fingerprint;
         this.issuer = issuer;

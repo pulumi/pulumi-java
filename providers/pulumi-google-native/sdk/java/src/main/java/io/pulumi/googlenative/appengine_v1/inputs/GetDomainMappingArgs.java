@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDomainMappingArgs Empty = new GetDomainMappingArgs();
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final String appId;
 
     public String getAppId() {
         return this.appId;
     }
 
-    @InputImport(name="domainMappingId", required=true)
+    @Import(name="domainMappingId", required=true)
       private final String domainMappingId;
 
     public String getDomainMappingId() {

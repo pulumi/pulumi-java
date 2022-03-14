@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.
      * 
      */
-    @InputImport(name="connectMode", required=true)
+    @Import(name="connectMode", required=true)
       private final String connectMode;
 
     public String getConnectMode() {
@@ -32,7 +32,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or IPv6 addresses in the format `{block1}:{block2}:{block3}:{block4}:{block5}:{block6}:{block7}:{block8}`.
      * 
      */
-    @InputImport(name="ipAddresses", required=true)
+    @Import(name="ipAddresses", required=true)
       private final List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
@@ -43,7 +43,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Internet protocol versions for which the instance has IP addresses assigned. For this version, only MODE_IPV4 is supported.
      * 
      */
-    @InputImport(name="modes", required=true)
+    @Import(name="modes", required=true)
       private final List<String> modes;
 
     public List<String> getModes() {
@@ -54,7 +54,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the Google Compute Engine [VPC network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -65,7 +65,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional, reserved_ip_range can have one of the following two types of values. * CIDR range value when using DIRECT_PEERING connect mode. * [Allocated IP address range](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address) when using PRIVATE_SERVICE_ACCESS connect mode. When the name of an allocated IP address range is specified, it must be one of the ranges associated with the private service access connection. When specified as a direct CIDR value, it must be a /29 CIDR block for Basic tier or a /24 CIDR block for High Scale or Enterprise tier in one of the [internal IP address ranges](https://www.arin.net/reference/research/statistics/address_filters/) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/24. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network.
      * 
      */
-    @InputImport(name="reservedIpRange", required=true)
+    @Import(name="reservedIpRange", required=true)
       private final String reservedIpRange;
 
     public String getReservedIpRange() {

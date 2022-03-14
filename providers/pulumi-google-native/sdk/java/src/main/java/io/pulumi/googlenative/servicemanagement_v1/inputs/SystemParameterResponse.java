@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
      * Define the HTTP header name to use for the parameter. It is case insensitive.
      * 
      */
-    @InputImport(name="httpHeader", required=true)
+    @Import(name="httpHeader", required=true)
       private final String httpHeader;
 
     public String getHttpHeader() {
@@ -31,7 +31,7 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
      * Define the name of the parameter, such as "api_key" . It is case sensitive.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class SystemParameterResponse extends io.pulumi.resources.InvokeArg
      * Define the URL query parameter name to use for the parameter. It is case sensitive.
      * 
      */
-    @InputImport(name="urlQueryParameter", required=true)
+    @Import(name="urlQueryParameter", required=true)
       private final String urlQueryParameter;
 
     public String getUrlQueryParameter() {

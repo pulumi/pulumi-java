@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1AnalysisResultResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
      * The result of the analysis, which is populated when the analysis finishes.
      * 
      */
-    @InputImport(name="analysisResult", required=true)
+    @Import(name="analysisResult", required=true)
       private final GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
 
     public GoogleCloudContactcenterinsightsV1AnalysisResultResponse getAnalysisResult() {
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
      * The time at which the analysis was created, which occurs when the long-running operation completes.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
      * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -54,7 +54,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends io
      * The time at which the analysis was requested.
      * 
      */
-    @InputImport(name="requestTime", required=true)
+    @Import(name="requestTime", required=true)
       private final String requestTime;
 
     public String getRequestTime() {

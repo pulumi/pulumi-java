@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudresourcemanager_v1.outputs.ResourceIdResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     /**
      * Creation time. Read-only.
@@ -47,15 +47,15 @@ public final class GetProjectResult {
      */
     private final String projectNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") ResourceIdResponse parent,
-        @OutputCustomType.Parameter("projectId") String projectId,
-        @OutputCustomType.Parameter("projectNumber") String projectNumber) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lifecycleState") String lifecycleState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") ResourceIdResponse parent,
+        @CustomType.Parameter("projectId") String projectId,
+        @CustomType.Parameter("projectNumber") String projectNumber) {
         this.createTime = createTime;
         this.labels = labels;
         this.lifecycleState = lifecycleState;

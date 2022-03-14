@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldResponse;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class StandardSqlStructTypeResponse extends io.pulumi.resources.Inv
 
     public static final StandardSqlStructTypeResponse Empty = new StandardSqlStructTypeResponse();
 
-    @InputImport(name="fields", required=true)
+    @Import(name="fields", required=true)
       private final List<StandardSqlFieldResponse> fields;
 
     public List<StandardSqlFieldResponse> getFields() {

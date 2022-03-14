@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.securitycenter_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetMuteConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMuteConfigArgs Empty = new GetMuteConfigArgs();
 
-    @InputImport(name="muteConfigId", required=true)
+    @Import(name="muteConfigId", required=true)
       private final String muteConfigId;
 
     public String getMuteConfigId() {
         return this.muteConfigId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

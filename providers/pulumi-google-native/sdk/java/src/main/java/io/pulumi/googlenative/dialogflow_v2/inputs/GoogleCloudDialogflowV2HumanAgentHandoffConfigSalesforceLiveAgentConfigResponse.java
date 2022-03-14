@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      * Live Agent chat button ID.
      * 
      */
-    @InputImport(name="buttonId", required=true)
+    @Import(name="buttonId", required=true)
       private final String buttonId;
 
     public String getButtonId() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      * Live Agent deployment ID.
      * 
      */
-    @InputImport(name="deploymentId", required=true)
+    @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
     public String getDeploymentId() {
@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      * Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in the `Live Agent settings` page. For example if URL has the form https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in d.la4-c2-phx.salesforceliveagent.com.
      * 
      */
-    @InputImport(name="endpointDomain", required=true)
+    @Import(name="endpointDomain", required=true)
       private final String endpointDomain;
 
     public String getEndpointDomain() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      * The organization ID of the Salesforce account.
      * 
      */
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {

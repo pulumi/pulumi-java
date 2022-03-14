@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CaOptionsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.KeyUsageResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.ObjectIdResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X509ParametersResponse {
     /**
      * Optional. Describes custom X.509 extensions.
@@ -40,13 +40,13 @@ public final class X509ParametersResponse {
      */
     private final List<ObjectIdResponse> policyIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X509ParametersResponse(
-        @OutputCustomType.Parameter("additionalExtensions") List<X509ExtensionResponse> additionalExtensions,
-        @OutputCustomType.Parameter("aiaOcspServers") List<String> aiaOcspServers,
-        @OutputCustomType.Parameter("caOptions") CaOptionsResponse caOptions,
-        @OutputCustomType.Parameter("keyUsage") KeyUsageResponse keyUsage,
-        @OutputCustomType.Parameter("policyIds") List<ObjectIdResponse> policyIds) {
+        @CustomType.Parameter("additionalExtensions") List<X509ExtensionResponse> additionalExtensions,
+        @CustomType.Parameter("aiaOcspServers") List<String> aiaOcspServers,
+        @CustomType.Parameter("caOptions") CaOptionsResponse caOptions,
+        @CustomType.Parameter("keyUsage") KeyUsageResponse keyUsage,
+        @CustomType.Parameter("policyIds") List<ObjectIdResponse> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

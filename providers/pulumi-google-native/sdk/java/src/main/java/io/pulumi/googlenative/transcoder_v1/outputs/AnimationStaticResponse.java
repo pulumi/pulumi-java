@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.NormalizedCoordinateResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnimationStaticResponse {
     /**
      * The time to start displaying the overlay object, in seconds. Default: 0
@@ -21,10 +21,10 @@ public final class AnimationStaticResponse {
      */
     private final NormalizedCoordinateResponse xy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnimationStaticResponse(
-        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset,
-        @OutputCustomType.Parameter("xy") NormalizedCoordinateResponse xy) {
+        @CustomType.Parameter("startTimeOffset") String startTimeOffset,
+        @CustomType.Parameter("xy") NormalizedCoordinateResponse xy) {
         this.startTimeOffset = startTimeOffset;
         this.xy = xy;
     }

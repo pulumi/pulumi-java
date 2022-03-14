@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.GitHubEnterpriseSecretsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGithubEnterpriseConfigResult {
     /**
      * The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
@@ -56,17 +56,17 @@ public final class GetGithubEnterpriseConfigResult {
      */
     private final String webhookKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGithubEnterpriseConfigResult(
-        @OutputCustomType.Parameter("appId") String appId,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("hostUrl") String hostUrl,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeredNetwork") String peeredNetwork,
-        @OutputCustomType.Parameter("secrets") GitHubEnterpriseSecretsResponse secrets,
-        @OutputCustomType.Parameter("sslCa") String sslCa,
-        @OutputCustomType.Parameter("webhookKey") String webhookKey) {
+        @CustomType.Parameter("appId") String appId,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("hostUrl") String hostUrl,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeredNetwork") String peeredNetwork,
+        @CustomType.Parameter("secrets") GitHubEnterpriseSecretsResponse secrets,
+        @CustomType.Parameter("sslCa") String sslCa,
+        @CustomType.Parameter("webhookKey") String webhookKey) {
         this.appId = appId;
         this.createTime = createTime;
         this.displayName = displayName;

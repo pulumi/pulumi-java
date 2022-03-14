@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.speech_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.speech_v1.CustomClassArgs;
@@ -23,7 +23,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
      * 
      */
-    @OutputExport(name="customClassId", type=String.class, parameters={})
+    @Export(name="customClassId", type=String.class, parameters={})
     private Output<String> customClassId;
 
     /**
@@ -37,7 +37,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * A collection of class items.
      * 
      */
-    @OutputExport(name="items", type=List.class, parameters={ClassItemResponse.class})
+    @Export(name="items", type=List.class, parameters={ClassItemResponse.class})
     private Output<List<ClassItemResponse>> items;
 
     /**
@@ -51,7 +51,7 @@ public class CustomClass extends io.pulumi.resources.CustomResource {
      * The resource name of the custom class.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudRunConfigResponse {
     /**
      * Whether Cloud Run addon is enabled for this cluster.
@@ -21,10 +21,10 @@ public final class CloudRunConfigResponse {
      */
     private final String loadBalancerType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudRunConfigResponse(
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType) {
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("loadBalancerType") String loadBalancerType) {
         this.disabled = disabled;
         this.loadBalancerType = loadBalancerType;
     }

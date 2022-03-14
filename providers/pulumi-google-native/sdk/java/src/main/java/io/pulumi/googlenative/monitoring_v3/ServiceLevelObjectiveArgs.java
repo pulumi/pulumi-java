@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.enums.ServiceLevelObjectiveCalendarPeriod;
 import io.pulumi.googlenative.monitoring_v3.inputs.ServiceLevelIndicatorArgs;
 import java.lang.Double;
@@ -22,7 +22,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
      * 
      */
-    @InputImport(name="calendarPeriod")
+    @Import(name="calendarPeriod")
       private final @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
 
     public Output<ServiceLevelObjectiveCalendarPeriod> getCalendarPeriod() {
@@ -33,7 +33,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * Name used for UI elements listing this SLO.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * The fraction of service that must be good in order for this objective to be met. 0 < goal <= 0.999.
      * 
      */
-    @InputImport(name="goal")
+    @Import(name="goal")
       private final @Nullable Output<Double> goal;
 
     public Output<Double> getGoal() {
@@ -55,7 +55,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * Resource name for this ServiceLevelObjective. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,14 +66,14 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * A rolling time period, semantically "in the past ". Must be an integer multiple of 1 day no larger than 30 days.
      * 
      */
-    @InputImport(name="rollingPeriod")
+    @Import(name="rollingPeriod")
       private final @Nullable Output<String> rollingPeriod;
 
     public Output<String> getRollingPeriod() {
         return this.rollingPeriod == null ? Output.empty() : this.rollingPeriod;
     }
 
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
     public Output<String> getServiceId() {
@@ -84,14 +84,14 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * The definition of good service, used to measure and calculate the quality of the Service's performance with respect to a single aspect of service quality.
      * 
      */
-    @InputImport(name="serviceLevelIndicator")
+    @Import(name="serviceLevelIndicator")
       private final @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator;
 
     public Output<ServiceLevelIndicatorArgs> getServiceLevelIndicator() {
         return this.serviceLevelIndicator == null ? Output.empty() : this.serviceLevelIndicator;
     }
 
-    @InputImport(name="serviceLevelObjectiveId")
+    @Import(name="serviceLevelObjectiveId")
       private final @Nullable Output<String> serviceLevelObjectiveId;
 
     public Output<String> getServiceLevelObjectiveId() {
@@ -102,21 +102,21 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
      * Labels which have been used to annotate the service-level objective. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Output.empty() : this.userLabels;
     }
 
-    @InputImport(name="v3Id", required=true)
+    @Import(name="v3Id", required=true)
       private final Output<String> v3Id;
 
     public Output<String> getV3Id() {
         return this.v3Id;
     }
 
-    @InputImport(name="v3Id1", required=true)
+    @Import(name="v3Id1", required=true)
       private final Output<String> v3Id1;
 
     public Output<String> getV3Id1() {

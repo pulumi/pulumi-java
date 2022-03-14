@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
      * Day of month. Must be from 1 to 31 and valid for the year and month.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable Output<Integer> day;
 
     public Output<Integer> getDay() {
@@ -33,7 +33,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
      * Month of date. Must be from 1 to 12.
      * 
      */
-    @InputImport(name="month")
+    @Import(name="month")
       private final @Nullable Output<Integer> month;
 
     public Output<Integer> getMonth() {
@@ -44,7 +44,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
      * Year of date. Must be from 1 to 9999.
      * 
      */
-    @InputImport(name="year")
+    @Import(name="year")
       private final @Nullable Output<Integer> year;
 
     public Output<Integer> getYear() {

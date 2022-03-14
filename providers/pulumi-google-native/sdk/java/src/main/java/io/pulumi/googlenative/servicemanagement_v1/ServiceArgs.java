@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the project that produces and owns this service.
      * 
      */
-    @InputImport(name="producerProjectId")
+    @Import(name="producerProjectId")
       private final @Nullable Output<String> producerProjectId;
 
     public Output<String> getProducerProjectId() {
@@ -29,7 +29,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service. See the [overview](/service-management/overview) for naming requirements.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {

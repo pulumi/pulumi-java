@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResponse {
     /**
      * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
@@ -30,12 +30,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(
-        @OutputCustomType.Parameter("dialogflowParticipantName") String dialogflowParticipantName,
-        @OutputCustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("dialogflowParticipantName") String dialogflowParticipantName,
+        @CustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("userId") String userId) {
         this.dialogflowParticipantName = dialogflowParticipantName;
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;
         this.role = role;

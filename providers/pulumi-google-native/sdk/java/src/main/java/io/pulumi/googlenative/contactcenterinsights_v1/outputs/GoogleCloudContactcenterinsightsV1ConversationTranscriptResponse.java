@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse {
     /**
      * A list of sequential transcript segments that comprise the conversation.
@@ -16,8 +16,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
      */
     private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(@OutputCustomType.Parameter("transcriptSegments") List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
+    @CustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(@CustomType.Parameter("transcriptSegments") List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
         this.transcriptSegments = transcriptSegments;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.InstancePropertiesPatchResponse;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class InstanceGroupManagerAllInstancesConfigResponse extends io.pul
      * Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final InstancePropertiesPatchResponse properties;
 
     public InstancePropertiesPatchResponse getProperties() {

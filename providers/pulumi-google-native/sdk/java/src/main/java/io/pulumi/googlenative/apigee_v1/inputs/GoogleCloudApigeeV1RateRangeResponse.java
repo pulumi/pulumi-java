@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleTypeMoneyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
      * Ending value of the range. Set to 0 or `null` for the last range of values.
      * 
      */
-    @InputImport(name="end", required=true)
+    @Import(name="end", required=true)
       private final String end;
 
     public String getEnd() {
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
      * Fee to charge when total number of API calls falls within this range.
      * 
      */
-    @InputImport(name="fee", required=true)
+    @Import(name="fee", required=true)
       private final GoogleTypeMoneyResponse fee;
 
     public GoogleTypeMoneyResponse getFee() {
@@ -43,7 +43,7 @@ public final class GoogleCloudApigeeV1RateRangeResponse extends io.pulumi.resour
      * Starting value of the range. Set to 0 or `null` for the initial range of values.
      * 
      */
-    @InputImport(name="start", required=true)
+    @Import(name="start", required=true)
       private final String start;
 
     public String getStart() {

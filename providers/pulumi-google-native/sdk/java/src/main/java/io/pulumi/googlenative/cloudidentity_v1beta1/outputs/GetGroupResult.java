@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.DynamicGroupMetadataResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.EntityKeyResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.PosixGroupResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupResult {
     /**
      * Additional entity key aliases for a Group.
@@ -70,19 +70,19 @@ public final class GetGroupResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupResult(
-        @OutputCustomType.Parameter("additionalGroupKeys") List<EntityKeyResponse> additionalGroupKeys,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("dynamicGroupMetadata") DynamicGroupMetadataResponse dynamicGroupMetadata,
-        @OutputCustomType.Parameter("groupKey") EntityKeyResponse groupKey,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("posixGroups") List<PosixGroupResponse> posixGroups,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("additionalGroupKeys") List<EntityKeyResponse> additionalGroupKeys,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("dynamicGroupMetadata") DynamicGroupMetadataResponse dynamicGroupMetadata,
+        @CustomType.Parameter("groupKey") EntityKeyResponse groupKey,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("posixGroups") List<PosixGroupResponse> posixGroups,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.additionalGroupKeys = additionalGroupKeys;
         this.createTime = createTime;
         this.description = description;

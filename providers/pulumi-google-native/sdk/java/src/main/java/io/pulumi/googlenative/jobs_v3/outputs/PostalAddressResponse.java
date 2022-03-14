@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PostalAddressResponse {
     /**
      * Unstructured address lines describing the lower levels of an address. Because values in address_lines do not have type information and may sometimes contain multiple values in a single field (e.g. "Austin, TX"), it is important that the line order is clear. The order of address lines should be "envelope order" for the country/region of the address. In places where this can vary (e.g. Japan), address_language is used to make it explicit (e.g. "ja" for large-to-small ordering and "ja-Latn" or "en" for small-to-large). This way, the most specific line of an address can be selected based on the language. The minimum permitted structural representation of an address consists of a region_code with all remaining information placed in the address_lines. It would be possible to format such an address very approximately without geocoding, but no semantic reasoning could be made about any of the address components until it was at least partially resolved. Creating an address only containing a region_code and address_lines, and then geocoding is the recommended way to handle completely unstructured addresses (as opposed to guessing which parts of the address should be localities or administrative areas).
@@ -67,19 +67,19 @@ public final class PostalAddressResponse {
      */
     private final String sublocality;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PostalAddressResponse(
-        @OutputCustomType.Parameter("addressLines") List<String> addressLines,
-        @OutputCustomType.Parameter("administrativeArea") String administrativeArea,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("locality") String locality,
-        @OutputCustomType.Parameter("organization") String organization,
-        @OutputCustomType.Parameter("postalCode") String postalCode,
-        @OutputCustomType.Parameter("recipients") List<String> recipients,
-        @OutputCustomType.Parameter("regionCode") String regionCode,
-        @OutputCustomType.Parameter("revision") Integer revision,
-        @OutputCustomType.Parameter("sortingCode") String sortingCode,
-        @OutputCustomType.Parameter("sublocality") String sublocality) {
+        @CustomType.Parameter("addressLines") List<String> addressLines,
+        @CustomType.Parameter("administrativeArea") String administrativeArea,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("locality") String locality,
+        @CustomType.Parameter("organization") String organization,
+        @CustomType.Parameter("postalCode") String postalCode,
+        @CustomType.Parameter("recipients") List<String> recipients,
+        @CustomType.Parameter("regionCode") String regionCode,
+        @CustomType.Parameter("revision") Integer revision,
+        @CustomType.Parameter("sortingCode") String sortingCode,
+        @CustomType.Parameter("sublocality") String sublocality) {
         this.addressLines = addressLines;
         this.administrativeArea = administrativeArea;
         this.languageCode = languageCode;

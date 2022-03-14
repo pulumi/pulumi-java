@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
      */
-    @InputImport(name="cpeUri", required=true)
+    @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
     public String getCpeUri() {
@@ -32,7 +32,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The path from which we gathered that this package/version is installed.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -43,7 +43,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The version installed at this location.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final VersionResponse version;
 
     public VersionResponse getVersion() {

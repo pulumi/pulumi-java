@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AdvancedMachineFeaturesResponse {
     /**
      * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
@@ -15,8 +15,8 @@ public final class AdvancedMachineFeaturesResponse {
      */
     private final String threadsPerCore;
 
-    @OutputCustomType.Constructor
-    private AdvancedMachineFeaturesResponse(@OutputCustomType.Parameter("threadsPerCore") String threadsPerCore) {
+    @CustomType.Constructor
+    private AdvancedMachineFeaturesResponse(@CustomType.Parameter("threadsPerCore") String threadsPerCore) {
         this.threadsPerCore = threadsPerCore;
     }
 

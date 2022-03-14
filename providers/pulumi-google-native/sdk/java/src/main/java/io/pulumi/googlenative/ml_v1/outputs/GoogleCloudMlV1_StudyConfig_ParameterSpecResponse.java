@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
     /**
      * The value spec for a 'CATEGORICAL' parameter.
@@ -61,19 +61,19 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1_StudyConfig_ParameterSpecResponse(
-        @OutputCustomType.Parameter("categoricalValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec,
-        @OutputCustomType.Parameter("childParameterSpecs") List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs,
-        @OutputCustomType.Parameter("discreteValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec,
-        @OutputCustomType.Parameter("doubleValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec,
-        @OutputCustomType.Parameter("integerValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec,
-        @OutputCustomType.Parameter("parameter") String parameter,
-        @OutputCustomType.Parameter("parentCategoricalValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse parentCategoricalValues,
-        @OutputCustomType.Parameter("parentDiscreteValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse parentDiscreteValues,
-        @OutputCustomType.Parameter("parentIntValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse parentIntValues,
-        @OutputCustomType.Parameter("scaleType") String scaleType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("categoricalValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec,
+        @CustomType.Parameter("childParameterSpecs") List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs,
+        @CustomType.Parameter("discreteValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec,
+        @CustomType.Parameter("doubleValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec,
+        @CustomType.Parameter("integerValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec,
+        @CustomType.Parameter("parameter") String parameter,
+        @CustomType.Parameter("parentCategoricalValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse parentCategoricalValues,
+        @CustomType.Parameter("parentDiscreteValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse parentDiscreteValues,
+        @CustomType.Parameter("parentIntValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse parentIntValues,
+        @CustomType.Parameter("scaleType") String scaleType,
+        @CustomType.Parameter("type") String type) {
         this.categoricalValueSpec = categoricalValueSpec;
         this.childParameterSpecs = childParameterSpecs;
         this.discreteValueSpec = discreteValueSpec;

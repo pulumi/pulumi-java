@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RelationshipOccurrenceResponse {
     /**
      * A place for the SPDX file creator to record any general comments about the relationship
@@ -30,12 +30,12 @@ public final class RelationshipOccurrenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RelationshipOccurrenceResponse(
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("target") String target,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("target") String target,
+        @CustomType.Parameter("type") String type) {
         this.comment = comment;
         this.source = source;
         this.target = target;

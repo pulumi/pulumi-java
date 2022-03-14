@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.StatusResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates if this model has been published.
      * 
      */
-    @InputImport(name="published", required=true)
+    @Import(name="published", required=true)
       private final Boolean published;
 
     public Boolean getPublished() {
@@ -32,7 +32,7 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates the latest validation error on the model if any. A model may have validation errors if there were problems during the model creation/update. e.g. in the case of a TfLiteModel, if a tflite model file was missing or in the wrong format. This field will be empty for valid models.
      * 
      */
-    @InputImport(name="validationError", required=true)
+    @Import(name="validationError", required=true)
       private final StatusResponse validationError;
 
     public StatusResponse getValidationError() {

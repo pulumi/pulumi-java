@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
      * The display name of the classification.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -33,7 +33,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
      * The unique ID for a classification. Must be specified for case creation.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {

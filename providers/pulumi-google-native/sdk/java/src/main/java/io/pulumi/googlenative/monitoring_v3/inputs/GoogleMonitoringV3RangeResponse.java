@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.I
      * Range maximum.
      * 
      */
-    @InputImport(name="max", required=true)
+    @Import(name="max", required=true)
       private final Double max;
 
     public Double getMax() {
@@ -31,7 +31,7 @@ public final class GoogleMonitoringV3RangeResponse extends io.pulumi.resources.I
      * Range minimum.
      * 
      */
-    @InputImport(name="min", required=true)
+    @Import(name="min", required=true)
       private final Double min;
 
     public Double getMin() {

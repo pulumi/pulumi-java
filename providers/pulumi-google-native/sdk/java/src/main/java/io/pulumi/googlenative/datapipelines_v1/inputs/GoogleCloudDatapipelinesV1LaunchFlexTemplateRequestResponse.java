@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * Parameter to launch a job from a Flex Template.
      * 
      */
-    @InputImport(name="launchParameter", required=true)
+    @Import(name="launchParameter", required=true)
       private final GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter;
 
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse getLaunchParameter() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * The ID of the Cloud Platform project that the job belongs to.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -55,7 +55,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * If true, the request is validated but not actually executed. Defaults to false.
      * 
      */
-    @InputImport(name="validateOnly", required=true)
+    @Import(name="validateOnly", required=true)
       private final Boolean validateOnly;
 
     public Boolean getValidateOnly() {

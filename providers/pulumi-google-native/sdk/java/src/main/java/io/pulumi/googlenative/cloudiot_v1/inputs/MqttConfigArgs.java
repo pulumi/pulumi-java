@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudiot_v1.enums.MqttConfigMqttEnabledState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
      * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
      * 
      */
-    @InputImport(name="mqttEnabledState")
+    @Import(name="mqttEnabledState")
       private final @Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState;
 
     public Output<MqttConfigMqttEnabledState> getMqttEnabledState() {

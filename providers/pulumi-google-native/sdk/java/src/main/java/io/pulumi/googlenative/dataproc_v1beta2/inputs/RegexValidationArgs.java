@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RegexValidationArgs extends io.pulumi.resources.ResourceArgs 
      * RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
      * 
      */
-    @InputImport(name="regexes", required=true)
+    @Import(name="regexes", required=true)
       private final Output<List<String>> regexes;
 
     public Output<List<String>> getRegexes() {

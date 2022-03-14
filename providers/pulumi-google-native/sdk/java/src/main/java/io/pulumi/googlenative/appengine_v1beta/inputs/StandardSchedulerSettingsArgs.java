@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
      * Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {
@@ -34,7 +34,7 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
      * Minimum number of instances to run for this version. Set to zero to disable min_instances configuration.
      * 
      */
-    @InputImport(name="minInstances")
+    @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
     public Output<Integer> getMinInstances() {
@@ -45,7 +45,7 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
      * Target CPU utilization ratio to maintain when scaling.
      * 
      */
-    @InputImport(name="targetCpuUtilization")
+    @Import(name="targetCpuUtilization")
       private final @Nullable Output<Double> targetCpuUtilization;
 
     public Output<Double> getTargetCpuUtilization() {
@@ -56,7 +56,7 @@ public final class StandardSchedulerSettingsArgs extends io.pulumi.resources.Res
      * Target throughput utilization ratio to maintain when scaling
      * 
      */
-    @InputImport(name="targetThroughputUtilization")
+    @Import(name="targetThroughputUtilization")
       private final @Nullable Output<Double> targetThroughputUtilization;
 
     public Output<Double> getTargetThroughputUtilization() {

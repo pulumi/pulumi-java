@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
      * The bytes that constitute the file.
      * 
      */
-    @InputImport(name="contents", required=true)
+    @Import(name="contents", required=true)
       private final String contents;
 
     public String getContents() {
@@ -31,7 +31,7 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
      * The file path (full or relative path). This is typically the path of the file when it is uploaded.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {

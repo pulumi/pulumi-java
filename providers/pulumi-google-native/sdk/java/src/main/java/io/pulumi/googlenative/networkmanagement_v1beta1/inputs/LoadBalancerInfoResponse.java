@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.LoadBalancerBackendResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * Type of load balancer's backend configuration.
      * 
      */
-    @InputImport(name="backendType", required=true)
+    @Import(name="backendType", required=true)
       private final String backendType;
 
     public String getBackendType() {
@@ -33,7 +33,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * Backend configuration URI.
      * 
      */
-    @InputImport(name="backendUri", required=true)
+    @Import(name="backendUri", required=true)
       private final String backendUri;
 
     public String getBackendUri() {
@@ -44,7 +44,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * Information for the loadbalancer backends.
      * 
      */
-    @InputImport(name="backends", required=true)
+    @Import(name="backends", required=true)
       private final List<LoadBalancerBackendResponse> backends;
 
     public List<LoadBalancerBackendResponse> getBackends() {
@@ -55,7 +55,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * URI of the health check for the load balancer.
      * 
      */
-    @InputImport(name="healthCheckUri", required=true)
+    @Import(name="healthCheckUri", required=true)
       private final String healthCheckUri;
 
     public String getHealthCheckUri() {
@@ -66,7 +66,7 @@ public final class LoadBalancerInfoResponse extends io.pulumi.resources.InvokeAr
      * Type of the load balancer.
      * 
      */
-    @InputImport(name="loadBalancerType", required=true)
+    @Import(name="loadBalancerType", required=true)
       private final String loadBalancerType;
 
     public String getLoadBalancerType() {

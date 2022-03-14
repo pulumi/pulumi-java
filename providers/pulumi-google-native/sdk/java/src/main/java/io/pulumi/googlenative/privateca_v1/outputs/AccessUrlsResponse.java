@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessUrlsResponse {
     /**
      * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
@@ -21,10 +21,10 @@ public final class AccessUrlsResponse {
      */
     private final List<String> crlAccessUrls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessUrlsResponse(
-        @OutputCustomType.Parameter("caCertificateAccessUrl") String caCertificateAccessUrl,
-        @OutputCustomType.Parameter("crlAccessUrls") List<String> crlAccessUrls) {
+        @CustomType.Parameter("caCertificateAccessUrl") String caCertificateAccessUrl,
+        @CustomType.Parameter("crlAccessUrls") List<String> crlAccessUrls) {
         this.caCertificateAccessUrl = caCertificateAccessUrl;
         this.crlAccessUrls = crlAccessUrls;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
      * PDF file for the instruction. Only gcs path is allowed.
      * 
      */
-    @InputImport(name="gcsFileUri", required=true)
+    @Import(name="gcsFileUri", required=true)
       private final String gcsFileUri;
 
     public String getGcsFileUri() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.EnvironmentConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.PySparkBatchArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.RuntimeConfigArgs;
@@ -21,7 +21,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BatchArgs Empty = new BatchArgs();
 
-    @InputImport(name="batchId")
+    @Import(name="batchId")
       private final @Nullable Output<String> batchId;
 
     public Output<String> getBatchId() {
@@ -32,7 +32,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Environment configuration for the batch execution.
      * 
      */
-    @InputImport(name="environmentConfig")
+    @Import(name="environmentConfig")
       private final @Nullable Output<EnvironmentConfigArgs> environmentConfig;
 
     public Output<EnvironmentConfigArgs> getEnvironmentConfig() {
@@ -43,21 +43,21 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The labels to associate with this batch. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a batch.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -68,14 +68,14 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. PySpark batch config.
      * 
      */
-    @InputImport(name="pysparkBatch")
+    @Import(name="pysparkBatch")
       private final @Nullable Output<PySparkBatchArgs> pysparkBatch;
 
     public Output<PySparkBatchArgs> getPysparkBatch() {
         return this.pysparkBatch == null ? Output.empty() : this.pysparkBatch;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -86,7 +86,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Runtime configuration for the batch execution.
      * 
      */
-    @InputImport(name="runtimeConfig")
+    @Import(name="runtimeConfig")
       private final @Nullable Output<RuntimeConfigArgs> runtimeConfig;
 
     public Output<RuntimeConfigArgs> getRuntimeConfig() {
@@ -97,7 +97,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Spark batch config.
      * 
      */
-    @InputImport(name="sparkBatch")
+    @Import(name="sparkBatch")
       private final @Nullable Output<SparkBatchArgs> sparkBatch;
 
     public Output<SparkBatchArgs> getSparkBatch() {
@@ -108,7 +108,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. SparkR batch config.
      * 
      */
-    @InputImport(name="sparkRBatch")
+    @Import(name="sparkRBatch")
       private final @Nullable Output<SparkRBatchArgs> sparkRBatch;
 
     public Output<SparkRBatchArgs> getSparkRBatch() {
@@ -119,7 +119,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. SparkSql batch config.
      * 
      */
-    @InputImport(name="sparkSqlBatch")
+    @Import(name="sparkSqlBatch")
       private final @Nullable Output<SparkSqlBatchArgs> sparkSqlBatch;
 
     public Output<SparkSqlBatchArgs> getSparkSqlBatch() {

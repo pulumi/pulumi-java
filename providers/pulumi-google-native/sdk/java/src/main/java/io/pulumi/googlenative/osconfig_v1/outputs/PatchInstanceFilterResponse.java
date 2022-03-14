@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.PatchInstanceFilterGroupLabelResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchInstanceFilterResponse {
     /**
      * Target all VM instances in the project. If true, no other criteria is permitted.
@@ -38,13 +38,13 @@ public final class PatchInstanceFilterResponse {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchInstanceFilterResponse(
-        @OutputCustomType.Parameter("all") Boolean all,
-        @OutputCustomType.Parameter("groupLabels") List<PatchInstanceFilterGroupLabelResponse> groupLabels,
-        @OutputCustomType.Parameter("instanceNamePrefixes") List<String> instanceNamePrefixes,
-        @OutputCustomType.Parameter("instances") List<String> instances,
-        @OutputCustomType.Parameter("zones") List<String> zones) {
+        @CustomType.Parameter("all") Boolean all,
+        @CustomType.Parameter("groupLabels") List<PatchInstanceFilterGroupLabelResponse> groupLabels,
+        @CustomType.Parameter("instanceNamePrefixes") List<String> instanceNamePrefixes,
+        @CustomType.Parameter("instances") List<String> instances,
+        @CustomType.Parameter("zones") List<String> zones) {
         this.all = all;
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;

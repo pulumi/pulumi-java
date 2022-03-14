@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosTestLoopResponse {
     /**
      * Bundle ID of the app.
@@ -15,8 +15,8 @@ public final class IosTestLoopResponse {
      */
     private final String bundleId;
 
-    @OutputCustomType.Constructor
-    private IosTestLoopResponse(@OutputCustomType.Parameter("bundleId") String bundleId) {
+    @CustomType.Constructor
+    private IosTestLoopResponse(@CustomType.Parameter("bundleId") String bundleId) {
         this.bundleId = bundleId;
     }
 

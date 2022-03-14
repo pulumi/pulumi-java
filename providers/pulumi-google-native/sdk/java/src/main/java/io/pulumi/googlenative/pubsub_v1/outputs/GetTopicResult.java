@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.pubsub_v1.outputs.MessageStoragePolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.SchemaSettingsResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicResult {
     /**
      * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
@@ -49,15 +49,15 @@ public final class GetTopicResult {
      */
     private final SchemaSettingsResponse schemaSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTopicResult(
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
-        @OutputCustomType.Parameter("messageStoragePolicy") MessageStoragePolicyResponse messageStoragePolicy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("schemaSettings") SchemaSettingsResponse schemaSettings) {
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
+        @CustomType.Parameter("messageStoragePolicy") MessageStoragePolicyResponse messageStoragePolicy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("schemaSettings") SchemaSettingsResponse schemaSettings) {
         this.kmsKeyName = kmsKeyName;
         this.labels = labels;
         this.messageRetentionDuration = messageRetentionDuration;

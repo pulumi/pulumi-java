@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AlertChartResponse {
     /**
      * The resource name of the alert policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
@@ -15,8 +15,8 @@ public final class AlertChartResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private AlertChartResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private AlertChartResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

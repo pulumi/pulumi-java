@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeA
      * percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
      * 
      */
-    @InputImport(name="latencyMicros", required=true)
+    @Import(name="latencyMicros", required=true)
       private final String latencyMicros;
 
     public String getLatencyMicros() {
@@ -32,7 +32,7 @@ public final class LatencyPercentileResponse extends io.pulumi.resources.InvokeA
      * Percentage of samples this data point applies to.
      * 
      */
-    @InputImport(name="percent", required=true)
+    @Import(name="percent", required=true)
       private final Integer percent;
 
     public Integer getPercent() {

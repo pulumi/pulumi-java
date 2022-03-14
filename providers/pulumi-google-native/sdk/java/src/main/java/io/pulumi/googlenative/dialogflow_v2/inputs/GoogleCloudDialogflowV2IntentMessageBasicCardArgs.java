@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * Optional. The collection of card buttons.
      * 
      */
-    @InputImport(name="buttons")
+    @Import(name="buttons")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
 
     public Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> getButtons() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * Required, unless image is present. The body text of the card.
      * 
      */
-    @InputImport(name="formattedText")
+    @Import(name="formattedText")
       private final @Nullable Output<String> formattedText;
 
     public Output<String> getFormattedText() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * Optional. The image for the card.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
     public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * Optional. The subtitle of the card.
      * 
      */
-    @InputImport(name="subtitle")
+    @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
     public Output<String> getSubtitle() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * Optional. The title of the card.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

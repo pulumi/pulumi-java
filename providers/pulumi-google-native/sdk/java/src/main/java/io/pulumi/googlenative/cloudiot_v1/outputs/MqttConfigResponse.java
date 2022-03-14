@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MqttConfigResponse {
     /**
      * If enabled, allows connections using the MQTT protocol. Otherwise, MQTT connections to this registry will fail.
@@ -15,8 +15,8 @@ public final class MqttConfigResponse {
      */
     private final String mqttEnabledState;
 
-    @OutputCustomType.Constructor
-    private MqttConfigResponse(@OutputCustomType.Parameter("mqttEnabledState") String mqttEnabledState) {
+    @CustomType.Constructor
+    private MqttConfigResponse(@CustomType.Parameter("mqttEnabledState") String mqttEnabledState) {
         this.mqttEnabledState = mqttEnabledState;
     }
 

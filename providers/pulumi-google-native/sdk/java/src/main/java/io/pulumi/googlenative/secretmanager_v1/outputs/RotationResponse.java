@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RotationResponse {
     /**
      * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be set if rotation_period is set.
@@ -20,10 +20,10 @@ public final class RotationResponse {
      */
     private final String rotationPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RotationResponse(
-        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
-        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod) {
+        @CustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @CustomType.Parameter("rotationPeriod") String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }

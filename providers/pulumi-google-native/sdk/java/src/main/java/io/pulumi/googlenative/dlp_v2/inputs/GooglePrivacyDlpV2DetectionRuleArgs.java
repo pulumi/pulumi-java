@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HotwordRuleArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2DetectionRuleArgs extends io.pulumi.resourc
      * Hotword-based detection rule.
      * 
      */
-    @InputImport(name="hotwordRule")
+    @Import(name="hotwordRule")
       private final @Nullable Output<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule;
 
     public Output<GooglePrivacyDlpV2HotwordRuleArgs> getHotwordRule() {

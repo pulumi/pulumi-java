@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StatusConditionResponse {
     /**
      * Canonical code of the condition.
@@ -20,10 +20,10 @@ public final class StatusConditionResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusConditionResponse(
-        @OutputCustomType.Parameter("canonicalCode") String canonicalCode,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("canonicalCode") String canonicalCode,
+        @CustomType.Parameter("message") String message) {
         this.canonicalCode = canonicalCode;
         this.message = message;
     }

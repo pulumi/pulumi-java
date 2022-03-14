@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1beta1.enums.GoogleDomainsDnsDsState;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
      * The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
      * 
      */
-    @InputImport(name="dsState", required=true)
+    @Import(name="dsState", required=true)
       private final Output<GoogleDomainsDnsDsState> dsState;
 
     public Output<GoogleDomainsDnsDsState> getDsState() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the backup.
      * 
      */
-    @InputImport(name="backup", required=true)
+    @Import(name="backup", required=true)
       private final String backup;
 
     public String getBackup() {
@@ -31,7 +31,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The time the CreateBackup request was received.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -42,7 +42,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the database the backup was created from.
      * 
      */
-    @InputImport(name="sourceDatabase", required=true)
+    @Import(name="sourceDatabase", required=true)
       private final String sourceDatabase;
 
     public String getSourceDatabase() {
@@ -53,7 +53,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The backup contains an externally consistent copy of `source_database` at the timestamp specified by `version_time`. If the CreateBackup request did not specify `version_time`, the `version_time` of the backup is equivalent to the `create_time`.
      * 
      */
-    @InputImport(name="versionTime", required=true)
+    @Import(name="versionTime", required=true)
       private final String versionTime;
 
     public String getVersionTime() {

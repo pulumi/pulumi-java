@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
      * Specifies a fixed value.
      * 
      */
-    @InputImport(name="fixed", required=true)
+    @Import(name="fixed", required=true)
       private final Integer fixed;
 
     public Integer getFixed() {
@@ -31,7 +31,7 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
      * 
      */
-    @InputImport(name="percent", required=true)
+    @Import(name="percent", required=true)
       private final Integer percent;
 
     public Integer getPercent() {

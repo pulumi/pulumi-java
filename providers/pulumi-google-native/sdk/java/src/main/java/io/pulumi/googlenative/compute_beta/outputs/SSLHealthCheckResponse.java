@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SSLHealthCheckResponse {
     /**
      * The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
@@ -41,14 +41,14 @@ public final class SSLHealthCheckResponse {
      */
     private final String response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SSLHealthCheckResponse(
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("portName") String portName,
-        @OutputCustomType.Parameter("portSpecification") String portSpecification,
-        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
-        @OutputCustomType.Parameter("request") String request,
-        @OutputCustomType.Parameter("response") String response) {
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("portName") String portName,
+        @CustomType.Parameter("portSpecification") String portSpecification,
+        @CustomType.Parameter("proxyHeader") String proxyHeader,
+        @CustomType.Parameter("request") String request,
+        @CustomType.Parameter("response") String response) {
         this.port = port;
         this.portName = portName;
         this.portSpecification = portSpecification;

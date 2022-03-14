@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.RevisionTemplateResponse;
 import io.pulumi.googlenative.run_v1.outputs.TrafficTargetResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSpecResponse {
     /**
      * Template holds the latest specification for the Revision to be stamped out.
@@ -22,10 +22,10 @@ public final class ServiceSpecResponse {
      */
     private final List<TrafficTargetResponse> traffic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSpecResponse(
-        @OutputCustomType.Parameter("template") RevisionTemplateResponse template,
-        @OutputCustomType.Parameter("traffic") List<TrafficTargetResponse> traffic) {
+        @CustomType.Parameter("template") RevisionTemplateResponse template,
+        @CustomType.Parameter("traffic") List<TrafficTargetResponse> traffic) {
         this.template = template;
         this.traffic = traffic;
     }

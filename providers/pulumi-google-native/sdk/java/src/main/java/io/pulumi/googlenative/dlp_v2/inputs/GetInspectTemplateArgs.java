@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetInspectTemplateArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetInspectTemplateArgs Empty = new GetInspectTemplateArgs();
 
-    @InputImport(name="inspectTemplateId", required=true)
+    @Import(name="inspectTemplateId", required=true)
       private final String inspectTemplateId;
 
     public String getInspectTemplateId() {
         return this.inspectTemplateId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

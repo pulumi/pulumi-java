@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.AutoscalingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.EndpointConfigResponse;
@@ -19,7 +19,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterConfigResponse {
     /**
      * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
@@ -97,23 +97,23 @@ public final class ClusterConfigResponse {
      */
     private final InstanceGroupConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterConfigResponse(
-        @OutputCustomType.Parameter("autoscalingConfig") AutoscalingConfigResponse autoscalingConfig,
-        @OutputCustomType.Parameter("configBucket") String configBucket,
-        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
-        @OutputCustomType.Parameter("endpointConfig") EndpointConfigResponse endpointConfig,
-        @OutputCustomType.Parameter("gceClusterConfig") GceClusterConfigResponse gceClusterConfig,
-        @OutputCustomType.Parameter("gkeClusterConfig") GkeClusterConfigResponse gkeClusterConfig,
-        @OutputCustomType.Parameter("initializationActions") List<NodeInitializationActionResponse> initializationActions,
-        @OutputCustomType.Parameter("lifecycleConfig") LifecycleConfigResponse lifecycleConfig,
-        @OutputCustomType.Parameter("masterConfig") InstanceGroupConfigResponse masterConfig,
-        @OutputCustomType.Parameter("metastoreConfig") MetastoreConfigResponse metastoreConfig,
-        @OutputCustomType.Parameter("secondaryWorkerConfig") InstanceGroupConfigResponse secondaryWorkerConfig,
-        @OutputCustomType.Parameter("securityConfig") SecurityConfigResponse securityConfig,
-        @OutputCustomType.Parameter("softwareConfig") SoftwareConfigResponse softwareConfig,
-        @OutputCustomType.Parameter("tempBucket") String tempBucket,
-        @OutputCustomType.Parameter("workerConfig") InstanceGroupConfigResponse workerConfig) {
+        @CustomType.Parameter("autoscalingConfig") AutoscalingConfigResponse autoscalingConfig,
+        @CustomType.Parameter("configBucket") String configBucket,
+        @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @CustomType.Parameter("endpointConfig") EndpointConfigResponse endpointConfig,
+        @CustomType.Parameter("gceClusterConfig") GceClusterConfigResponse gceClusterConfig,
+        @CustomType.Parameter("gkeClusterConfig") GkeClusterConfigResponse gkeClusterConfig,
+        @CustomType.Parameter("initializationActions") List<NodeInitializationActionResponse> initializationActions,
+        @CustomType.Parameter("lifecycleConfig") LifecycleConfigResponse lifecycleConfig,
+        @CustomType.Parameter("masterConfig") InstanceGroupConfigResponse masterConfig,
+        @CustomType.Parameter("metastoreConfig") MetastoreConfigResponse metastoreConfig,
+        @CustomType.Parameter("secondaryWorkerConfig") InstanceGroupConfigResponse secondaryWorkerConfig,
+        @CustomType.Parameter("securityConfig") SecurityConfigResponse securityConfig,
+        @CustomType.Parameter("softwareConfig") SoftwareConfigResponse softwareConfig,
+        @CustomType.Parameter("tempBucket") String tempBucket,
+        @CustomType.Parameter("workerConfig") InstanceGroupConfigResponse workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.configBucket = configBucket;
         this.encryptionConfig = encryptionConfig;

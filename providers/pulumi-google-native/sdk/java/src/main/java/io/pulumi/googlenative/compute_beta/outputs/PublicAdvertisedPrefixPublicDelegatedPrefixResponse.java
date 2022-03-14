@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
     /**
      * The IP address range of the public delegated prefix
@@ -35,13 +35,13 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicAdvertisedPrefixPublicDelegatedPrefixResponse(
-        @OutputCustomType.Parameter("ipRange") String ipRange,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("ipRange") String ipRange,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("status") String status) {
         this.ipRange = ipRange;
         this.name = name;
         this.project = project;

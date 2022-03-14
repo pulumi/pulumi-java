@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.CallCredentialsCallCredentialType;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataCredentialsFromPluginArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
      * The type of call credentials to use for GRPC requests to the SDS server. This field can be set to one of the following: - GCE_VM: The local GCE VM service account credentials are used to access the SDS server. - FROM_PLUGIN: Custom authenticator credentials are used to access the SDS server.
      * 
      */
-    @InputImport(name="callCredentialType")
+    @Import(name="callCredentialType")
       private final @Nullable Output<CallCredentialsCallCredentialType> callCredentialType;
 
     public Output<CallCredentialsCallCredentialType> getCallCredentialType() {
@@ -34,7 +34,7 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
      * Custom authenticator credentials. Valid if callCredentialType is FROM_PLUGIN.
      * 
      */
-    @InputImport(name="fromPlugin")
+    @Import(name="fromPlugin")
       private final @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin;
 
     public Output<MetadataCredentialsFromPluginArgs> getFromPlugin() {

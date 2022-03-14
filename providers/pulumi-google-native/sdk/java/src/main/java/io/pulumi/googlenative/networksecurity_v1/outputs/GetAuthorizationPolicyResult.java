@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.RuleResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAuthorizationPolicyResult {
     /**
      * The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
@@ -48,15 +48,15 @@ public final class GetAuthorizationPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAuthorizationPolicyResult(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rules") List<RuleResponse> rules,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rules") List<RuleResponse> rules,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.action = action;
         this.createTime = createTime;
         this.description = description;

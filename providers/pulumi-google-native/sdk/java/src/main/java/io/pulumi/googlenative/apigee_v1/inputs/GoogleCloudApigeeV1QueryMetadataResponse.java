@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
      * Dimensions of the AsyncQuery.
      * 
      */
-    @InputImport(name="dimensions", required=true)
+    @Import(name="dimensions", required=true)
       private final List<String> dimensions;
 
     public List<String> getDimensions() {
@@ -28,7 +28,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
      * End timestamp of the query range.
      * 
      */
-    @InputImport(name="endTimestamp", required=true)
+    @Import(name="endTimestamp", required=true)
       private final String endTimestamp;
 
     public String getEndTimestamp() {
@@ -39,7 +39,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
      * Metrics of the AsyncQuery. Example: ["name:message_count,func:sum,alias:sum_message_count"]
      * 
      */
-    @InputImport(name="metrics", required=true)
+    @Import(name="metrics", required=true)
       private final List<String> metrics;
 
     public List<String> getMetrics() {
@@ -50,7 +50,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
      * Output format.
      * 
      */
-    @InputImport(name="outputFormat", required=true)
+    @Import(name="outputFormat", required=true)
       private final String outputFormat;
 
     public String getOutputFormat() {
@@ -61,7 +61,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
      * Start timestamp of the query range.
      * 
      */
-    @InputImport(name="startTimestamp", required=true)
+    @Import(name="startTimestamp", required=true)
       private final String startTimestamp;
 
     public String getStartTimestamp() {
@@ -72,7 +72,7 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse extends io.pulumi.re
      * Query GroupBy time unit.
      * 
      */
-    @InputImport(name="timeUnit", required=true)
+    @Import(name="timeUnit", required=true)
       private final String timeUnit;
 
     public String getTimeUnit() {

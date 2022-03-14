@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.CategoryResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.IdentityResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WindowsUpdateResponse {
     /**
      * The list of categories to which the update belongs.
@@ -48,15 +48,15 @@ public final class WindowsUpdateResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsUpdateResponse(
-        @OutputCustomType.Parameter("categories") List<CategoryResponse> categories,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("identity") IdentityResponse identity,
-        @OutputCustomType.Parameter("kbArticleIds") List<String> kbArticleIds,
-        @OutputCustomType.Parameter("lastPublishedTimestamp") String lastPublishedTimestamp,
-        @OutputCustomType.Parameter("supportUrl") String supportUrl,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("categories") List<CategoryResponse> categories,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("identity") IdentityResponse identity,
+        @CustomType.Parameter("kbArticleIds") List<String> kbArticleIds,
+        @CustomType.Parameter("lastPublishedTimestamp") String lastPublishedTimestamp,
+        @CustomType.Parameter("supportUrl") String supportUrl,
+        @CustomType.Parameter("title") String title) {
         this.categories = categories;
         this.description = description;
         this.identity = identity;

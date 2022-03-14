@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.Hl7V2NotificationConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.ParserConfigResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHl7V2StoreResult {
     /**
      * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
@@ -40,13 +40,13 @@ public final class GetHl7V2StoreResult {
      */
     private final Boolean rejectDuplicateMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHl7V2StoreResult(
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationConfigs") List<Hl7V2NotificationConfigResponse> notificationConfigs,
-        @OutputCustomType.Parameter("parserConfig") ParserConfigResponse parserConfig,
-        @OutputCustomType.Parameter("rejectDuplicateMessage") Boolean rejectDuplicateMessage) {
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationConfigs") List<Hl7V2NotificationConfigResponse> notificationConfigs,
+        @CustomType.Parameter("parserConfig") ParserConfigResponse parserConfig,
+        @CustomType.Parameter("rejectDuplicateMessage") Boolean rejectDuplicateMessage) {
         this.labels = labels;
         this.name = name;
         this.notificationConfigs = notificationConfigs;

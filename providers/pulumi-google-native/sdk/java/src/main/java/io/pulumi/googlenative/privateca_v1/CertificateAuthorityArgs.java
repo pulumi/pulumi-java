@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.enums.CertificateAuthorityType;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateConfigArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.KeyVersionSpecArgs;
@@ -19,14 +19,14 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
 
     public static final CertificateAuthorityArgs Empty = new CertificateAuthorityArgs();
 
-    @InputImport(name="caPoolId", required=true)
+    @Import(name="caPoolId", required=true)
       private final Output<String> caPoolId;
 
     public Output<String> getCaPoolId() {
         return this.caPoolId;
     }
 
-    @InputImport(name="certificateAuthorityId", required=true)
+    @Import(name="certificateAuthorityId", required=true)
       private final Output<String> certificateAuthorityId;
 
     public Output<String> getCertificateAuthorityId() {
@@ -37,7 +37,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Immutable. The config used to create a self-signed X.509 certificate or CSR.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final Output<CertificateConfigArgs> config;
 
     public Output<CertificateConfigArgs> getConfig() {
@@ -48,7 +48,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
      * 
      */
-    @InputImport(name="gcsBucket")
+    @Import(name="gcsBucket")
       private final @Nullable Output<String> gcsBucket;
 
     public Output<String> getGcsBucket() {
@@ -59,7 +59,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
      * 
      */
-    @InputImport(name="keySpec", required=true)
+    @Import(name="keySpec", required=true)
       private final Output<KeyVersionSpecArgs> keySpec;
 
     public Output<KeyVersionSpecArgs> getKeySpec() {
@@ -70,7 +70,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Optional. Labels with user-defined metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -81,28 +81,28 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Immutable. The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
      * 
      */
-    @InputImport(name="lifetime", required=true)
+    @Import(name="lifetime", required=true)
       private final Output<String> lifetime;
 
     public Output<String> getLifetime() {
         return this.lifetime;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -113,7 +113,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
      * 
      */
-    @InputImport(name="subordinateConfig")
+    @Import(name="subordinateConfig")
       private final @Nullable Output<SubordinateConfigArgs> subordinateConfig;
 
     public Output<SubordinateConfigArgs> getSubordinateConfig() {
@@ -124,7 +124,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Immutable. The Type of this CertificateAuthority.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<CertificateAuthorityType> type;
 
     public Output<CertificateAuthorityType> getType() {

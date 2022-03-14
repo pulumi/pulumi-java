@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.HttpRuleResponse;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpResponse {
     /**
      * When set to true, URL path parameters will be fully URI-decoded except in cases of single segment matches in reserved expansion, where "%2F" will be left encoded. The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
@@ -22,10 +22,10 @@ public final class HttpResponse {
      */
     private final List<HttpRuleResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpResponse(
-        @OutputCustomType.Parameter("fullyDecodeReservedExpansion") Boolean fullyDecodeReservedExpansion,
-        @OutputCustomType.Parameter("rules") List<HttpRuleResponse> rules) {
+        @CustomType.Parameter("fullyDecodeReservedExpansion") Boolean fullyDecodeReservedExpansion,
+        @CustomType.Parameter("rules") List<HttpRuleResponse> rules) {
         this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
         this.rules = rules;
     }

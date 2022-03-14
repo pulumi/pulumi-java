@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.HttpHeaderOptionResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
      * Headers to add to a matching request before forwarding the request to the backendService.
      * 
      */
-    @InputImport(name="requestHeadersToAdd", required=true)
+    @Import(name="requestHeadersToAdd", required=true)
       private final List<HttpHeaderOptionResponse> requestHeadersToAdd;
 
     public List<HttpHeaderOptionResponse> getRequestHeadersToAdd() {
@@ -33,7 +33,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
      * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
      * 
      */
-    @InputImport(name="requestHeadersToRemove", required=true)
+    @Import(name="requestHeadersToRemove", required=true)
       private final List<String> requestHeadersToRemove;
 
     public List<String> getRequestHeadersToRemove() {
@@ -44,7 +44,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
      * Headers to add the response before sending the response back to the client.
      * 
      */
-    @InputImport(name="responseHeadersToAdd", required=true)
+    @Import(name="responseHeadersToAdd", required=true)
       private final List<HttpHeaderOptionResponse> responseHeadersToAdd;
 
     public List<HttpHeaderOptionResponse> getResponseHeadersToAdd() {
@@ -55,7 +55,7 @@ public final class HttpHeaderActionResponse extends io.pulumi.resources.InvokeAr
      * A list of header names for headers that need to be removed from the response before sending the response back to the client.
      * 
      */
-    @InputImport(name="responseHeadersToRemove", required=true)
+    @Import(name="responseHeadersToRemove", required=true)
       private final List<String> responseHeadersToRemove;
 
     public List<String> getResponseHeadersToRemove() {

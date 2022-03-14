@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryreservation_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigqueryreservation_v1.ReservationArgs;
@@ -22,7 +22,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Creation time of the reservation.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -36,7 +36,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
      * 
      */
-    @OutputExport(name="ignoreIdleSlots", type=Boolean.class, parameters={})
+    @Export(name="ignoreIdleSlots", type=Boolean.class, parameters={})
     private Output<Boolean> ignoreIdleSlots;
 
     /**
@@ -50,7 +50,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot capacity exceed the project's slot capacity or if total slot capacity of the new reservation and its siblings exceeds the project's slot capacity, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
      * 
      */
-    @OutputExport(name="slotCapacity", type=String.class, parameters={})
+    @Export(name="slotCapacity", type=String.class, parameters={})
     private Output<String> slotCapacity;
 
     /**
@@ -78,7 +78,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Last update time of the reservation.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.DevicePolicyResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.
      * 
      */
-    @InputImport(name="devicePolicy", required=true)
+    @Import(name="devicePolicy", required=true)
       private final DevicePolicyResponse devicePolicy;
 
     public DevicePolicyResponse getDevicePolicy() {
@@ -34,7 +34,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.
      * 
      */
-    @InputImport(name="ipSubnetworks", required=true)
+    @Import(name="ipSubnetworks", required=true)
       private final List<String> ipSubnetworks;
 
     public List<String> getIpSubnetworks() {
@@ -45,7 +45,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * The request must be made by one of the provided user or service accounts. Groups are not supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may come from any user.
      * 
      */
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final List<String> members;
 
     public List<String> getMembers() {
@@ -56,7 +56,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty fields, each field must be false for the Condition overall to be satisfied. Defaults to false.
      * 
      */
-    @InputImport(name="negate", required=true)
+    @Import(name="negate", required=true)
       private final Boolean negate;
 
     public Boolean getNegate() {
@@ -67,7 +67,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1 alpha-2 codes.
      * 
      */
-    @InputImport(name="regions", required=true)
+    @Import(name="regions", required=true)
       private final List<String> regions;
 
     public List<String> getRegions() {
@@ -78,7 +78,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * A list of other access levels defined in the same `Policy`, referenced by resource name. Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be granted for the Condition to be true. Example: "`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`
      * 
      */
-    @InputImport(name="requiredAccessLevels", required=true)
+    @Import(name="requiredAccessLevels", required=true)
       private final List<String> requiredAccessLevels;
 
     public List<String> getRequiredAccessLevels() {

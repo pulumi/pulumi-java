@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.NotificationRateLimitResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
      * If an alert policy that was active has no data for this long, any open incidents will close
      * 
      */
-    @InputImport(name="autoClose", required=true)
+    @Import(name="autoClose", required=true)
       private final String autoClose;
 
     public String getAutoClose() {
@@ -32,7 +32,7 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
      * Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
      * 
      */
-    @InputImport(name="notificationRateLimit", required=true)
+    @Import(name="notificationRateLimit", required=true)
       private final NotificationRateLimitResponse notificationRateLimit;
 
     public NotificationRateLimitResponse getNotificationRateLimit() {

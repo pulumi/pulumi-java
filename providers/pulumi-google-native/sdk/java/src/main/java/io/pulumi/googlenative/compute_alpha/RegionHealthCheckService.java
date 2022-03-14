@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionHealthCheckServiceArgs;
@@ -22,7 +22,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -36,7 +36,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a HealthCheckService. An up-to-date fingerprint must be provided in order to patch/update the HealthCheckService; Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve the HealthCheckService.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -64,7 +64,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix of regional and global HealthChecks is not supported. Multiple regional HealthChecks must belong to the same region. Regional HealthChecks must belong to the same region as zones of NEGs.
      * 
      */
-    @OutputExport(name="healthChecks", type=List.class, parameters={String.class})
+    @Export(name="healthChecks", type=List.class, parameters={String.class})
     private Output<List<String>> healthChecks;
 
     /**
@@ -78,7 +78,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * Optional. Policy for how the results from multiple health checks for the same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth message is returned for each pair in the health check service. - AND. If any health check of an endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health checks report HEALTHY, the HealthState of the endpoint is HEALTHY. .
      * 
      */
-    @OutputExport(name="healthStatusAggregationPolicy", type=String.class, parameters={})
+    @Export(name="healthStatusAggregationPolicy", type=String.class, parameters={})
     private Output<String> healthStatusAggregationPolicy;
 
     /**
@@ -92,7 +92,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * [Output only] Type of the resource. Always compute#healthCheckServicefor health check services.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -106,7 +106,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional HealthCheckService, NEGs must be in zones in the region of the HealthCheckService.
      * 
      */
-    @OutputExport(name="networkEndpointGroups", type=List.class, parameters={String.class})
+    @Export(name="networkEndpointGroups", type=List.class, parameters={String.class})
     private Output<List<String>> networkEndpointGroups;
 
     /**
@@ -134,7 +134,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of endpoints for receiving notifications of change in health status. For regional HealthCheckService, NotificationEndpoint must be regional and in the same region. For global HealthCheckService, NotificationEndpoint must be global.
      * 
      */
-    @OutputExport(name="notificationEndpoints", type=List.class, parameters={String.class})
+    @Export(name="notificationEndpoints", type=List.class, parameters={String.class})
     private Output<List<String>> notificationEndpoints;
 
     /**
@@ -148,7 +148,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * URL of the region where the health check service resides. This field is not applicable to global health check services. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -162,7 +162,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -176,7 +176,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * Server-defined URL with id for the resource.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**

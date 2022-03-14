@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionResponse;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleBoostActionResponse;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse;
@@ -28,7 +28,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * A boost action.
      * 
      */
-    @InputImport(name="boostAction", required=true)
+    @Import(name="boostAction", required=true)
       private final GoogleCloudRetailV2betaRuleBoostActionResponse boostAction;
 
     public GoogleCloudRetailV2betaRuleBoostActionResponse getBoostAction() {
@@ -39,7 +39,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * The condition that triggers the rule. If the condition is empty, the rule will always apply.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final GoogleCloudRetailV2betaConditionResponse condition;
 
     public GoogleCloudRetailV2betaConditionResponse getCondition() {
@@ -50,7 +50,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * Prevents term from being associated with other terms.
      * 
      */
-    @InputImport(name="doNotAssociateAction", required=true)
+    @Import(name="doNotAssociateAction", required=true)
       private final GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction;
 
     public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse getDoNotAssociateAction() {
@@ -61,7 +61,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * Filters results.
      * 
      */
-    @InputImport(name="filterAction", required=true)
+    @Import(name="filterAction", required=true)
       private final GoogleCloudRetailV2betaRuleFilterActionResponse filterAction;
 
     public GoogleCloudRetailV2betaRuleFilterActionResponse getFilterAction() {
@@ -72,7 +72,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * Ignores specific terms from query during search.
      * 
      */
-    @InputImport(name="ignoreAction", required=true)
+    @Import(name="ignoreAction", required=true)
       private final GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction;
 
     public GoogleCloudRetailV2betaRuleIgnoreActionResponse getIgnoreAction() {
@@ -83,7 +83,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
      * 
      */
-    @InputImport(name="onewaySynonymsAction", required=true)
+    @Import(name="onewaySynonymsAction", required=true)
       private final GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction;
 
     public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse getOnewaySynonymsAction() {
@@ -94,7 +94,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * Redirects a shopper to a specific page.
      * 
      */
-    @InputImport(name="redirectAction", required=true)
+    @Import(name="redirectAction", required=true)
       private final GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction;
 
     public GoogleCloudRetailV2betaRuleRedirectActionResponse getRedirectAction() {
@@ -105,7 +105,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * Replaces specific terms in the query.
      * 
      */
-    @InputImport(name="replacementAction", required=true)
+    @Import(name="replacementAction", required=true)
       private final GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction;
 
     public GoogleCloudRetailV2betaRuleReplacementActionResponse getReplacementAction() {
@@ -116,7 +116,7 @@ public final class GoogleCloudRetailV2betaRuleResponse extends io.pulumi.resourc
      * Treats a set of terms as synonyms of one another.
      * 
      */
-    @InputImport(name="twowaySynonymsAction", required=true)
+    @Import(name="twowaySynonymsAction", required=true)
       private final GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
     public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse getTwowaySynonymsAction() {

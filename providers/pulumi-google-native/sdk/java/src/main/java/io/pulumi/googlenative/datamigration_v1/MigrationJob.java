@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datamigration_v1.MigrationJobArgs;
@@ -27,7 +27,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -41,7 +41,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The resource name (URI) of the destination connection profile.
      * 
      */
-    @OutputExport(name="destination", type=String.class, parameters={})
+    @Export(name="destination", type=String.class, parameters={})
     private Output<String> destination;
 
     /**
@@ -55,7 +55,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The database engine type and provider of the destination.
      * 
      */
-    @OutputExport(name="destinationDatabase", type=DatabaseTypeResponse.class, parameters={})
+    @Export(name="destinationDatabase", type=DatabaseTypeResponse.class, parameters={})
     private Output<DatabaseTypeResponse> destinationDatabase;
 
     /**
@@ -69,7 +69,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The migration job display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -83,7 +83,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
      * 
      */
-    @OutputExport(name="dumpPath", type=String.class, parameters={})
+    @Export(name="dumpPath", type=String.class, parameters={})
     private Output<String> dumpPath;
 
     /**
@@ -97,7 +97,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The duration of the migration job (in seconds). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @OutputExport(name="duration", type=String.class, parameters={})
+    @Export(name="duration", type=String.class, parameters={})
     private Output<String> duration;
 
     /**
@@ -111,7 +111,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * If the migration job is completed, the time when it was completed.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -125,7 +125,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The error details in case of state FAILED.
      * 
      */
-    @OutputExport(name="error", type=StatusResponse.class, parameters={})
+    @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
@@ -139,7 +139,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -153,7 +153,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -167,7 +167,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The current migration job phase.
      * 
      */
-    @OutputExport(name="phase", type=String.class, parameters={})
+    @Export(name="phase", type=String.class, parameters={})
     private Output<String> phase;
 
     /**
@@ -181,7 +181,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
      * 
      */
-    @OutputExport(name="reverseSshConnectivity", type=ReverseSshConnectivityResponse.class, parameters={})
+    @Export(name="reverseSshConnectivity", type=ReverseSshConnectivityResponse.class, parameters={})
     private Output<ReverseSshConnectivityResponse> reverseSshConnectivity;
 
     /**
@@ -195,7 +195,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The resource name (URI) of the source connection profile.
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output<String> source;
 
     /**
@@ -209,7 +209,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The database engine type and provider of the source.
      * 
      */
-    @OutputExport(name="sourceDatabase", type=DatabaseTypeResponse.class, parameters={})
+    @Export(name="sourceDatabase", type=DatabaseTypeResponse.class, parameters={})
     private Output<DatabaseTypeResponse> sourceDatabase;
 
     /**
@@ -223,7 +223,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The current migration job state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -237,7 +237,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * static ip connectivity data (default, no additional details needed).
      * 
      */
-    @OutputExport(name="staticIpConnectivity", type=StaticIpConnectivityResponse.class, parameters={})
+    @Export(name="staticIpConnectivity", type=StaticIpConnectivityResponse.class, parameters={})
     private Output<StaticIpConnectivityResponse> staticIpConnectivity;
 
     /**
@@ -251,7 +251,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The migration job type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -265,7 +265,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The timestamp when the migration job resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -279,7 +279,7 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
      * The details of the VPC network that the source database is located in.
      * 
      */
-    @OutputExport(name="vpcPeeringConnectivity", type=VpcPeeringConnectivityResponse.class, parameters={})
+    @Export(name="vpcPeeringConnectivity", type=VpcPeeringConnectivityResponse.class, parameters={})
     private Output<VpcPeeringConnectivityResponse> vpcPeeringConnectivity;
 
     /**

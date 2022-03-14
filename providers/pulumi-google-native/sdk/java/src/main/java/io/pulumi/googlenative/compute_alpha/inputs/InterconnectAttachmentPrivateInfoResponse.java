@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class InterconnectAttachmentPrivateInfoResponse extends io.pulumi.r
      * 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
      * 
      */
-    @InputImport(name="tag8021q", required=true)
+    @Import(name="tag8021q", required=true)
       private final Integer tag8021q;
 
     public Integer getTag8021q() {

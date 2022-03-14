@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.BasicPerfSampleSeriesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,35 +19,35 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
      * Basic series represented by a line chart
      * 
      */
-    @InputImport(name="basicPerfSampleSeries")
+    @Import(name="basicPerfSampleSeries")
       private final @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
 
     public Output<BasicPerfSampleSeriesArgs> getBasicPerfSampleSeries() {
         return this.basicPerfSampleSeries == null ? Output.empty() : this.basicPerfSampleSeries;
     }
 
-    @InputImport(name="executionId", required=true)
+    @Import(name="executionId", required=true)
       private final Output<String> executionId;
 
     public Output<String> getExecutionId() {
         return this.executionId;
     }
 
-    @InputImport(name="historyId", required=true)
+    @Import(name="historyId", required=true)
       private final Output<String> historyId;
 
     public Output<String> getHistoryId() {
         return this.historyId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="stepId", required=true)
+    @Import(name="stepId", required=true)
       private final Output<String> stepId;
 
     public Output<String> getStepId() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AudioResponse {
     /**
      * Enable boosting high frequency components. The default is `false`.
@@ -26,11 +26,11 @@ public final class AudioResponse {
      */
     private final Double lufs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AudioResponse(
-        @OutputCustomType.Parameter("highBoost") Boolean highBoost,
-        @OutputCustomType.Parameter("lowBoost") Boolean lowBoost,
-        @OutputCustomType.Parameter("lufs") Double lufs) {
+        @CustomType.Parameter("highBoost") Boolean highBoost,
+        @CustomType.Parameter("lowBoost") Boolean lowBoost,
+        @CustomType.Parameter("lufs") Double lufs) {
         this.highBoost = highBoost;
         this.lowBoost = lowBoost;
         this.lufs = lufs;

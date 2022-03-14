@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AlertChartResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.EmptyResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.LogsPanelResponse;
@@ -14,7 +14,7 @@ import io.pulumi.googlenative.monitoring_v1.outputs.XyChartResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WidgetResponse {
     /**
      * A chart of alert policy data.
@@ -57,16 +57,16 @@ public final class WidgetResponse {
      */
     private final XyChartResponse xyChart;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WidgetResponse(
-        @OutputCustomType.Parameter("alertChart") AlertChartResponse alertChart,
-        @OutputCustomType.Parameter("blank") EmptyResponse blank,
-        @OutputCustomType.Parameter("logsPanel") LogsPanelResponse logsPanel,
-        @OutputCustomType.Parameter("scorecard") ScorecardResponse scorecard,
-        @OutputCustomType.Parameter("text") TextResponse text,
-        @OutputCustomType.Parameter("timeSeriesTable") TimeSeriesTableResponse timeSeriesTable,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("xyChart") XyChartResponse xyChart) {
+        @CustomType.Parameter("alertChart") AlertChartResponse alertChart,
+        @CustomType.Parameter("blank") EmptyResponse blank,
+        @CustomType.Parameter("logsPanel") LogsPanelResponse logsPanel,
+        @CustomType.Parameter("scorecard") ScorecardResponse scorecard,
+        @CustomType.Parameter("text") TextResponse text,
+        @CustomType.Parameter("timeSeriesTable") TimeSeriesTableResponse timeSeriesTable,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("xyChart") XyChartResponse xyChart) {
         this.alertChart = alertChart;
         this.blank = blank;
         this.logsPanel = logsPanel;

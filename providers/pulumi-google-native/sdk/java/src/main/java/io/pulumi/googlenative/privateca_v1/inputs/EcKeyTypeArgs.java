@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.enums.EcKeyTypeSignatureAlgorithm;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
      * 
      */
-    @InputImport(name="signatureAlgorithm")
+    @Import(name="signatureAlgorithm")
       private final @Nullable Output<EcKeyTypeSignatureAlgorithm> signatureAlgorithm;
 
     public Output<EcKeyTypeSignatureAlgorithm> getSignatureAlgorithm() {

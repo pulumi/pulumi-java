@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.AttributeResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.ExprResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudHealthcareV1ConsentPolicyResponse {
     /**
      * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).
@@ -22,10 +22,10 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse {
      */
     private final List<AttributeResponse> resourceAttributes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudHealthcareV1ConsentPolicyResponse(
-        @OutputCustomType.Parameter("authorizationRule") ExprResponse authorizationRule,
-        @OutputCustomType.Parameter("resourceAttributes") List<AttributeResponse> resourceAttributes) {
+        @CustomType.Parameter("authorizationRule") ExprResponse authorizationRule,
+        @CustomType.Parameter("resourceAttributes") List<AttributeResponse> resourceAttributes) {
         this.authorizationRule = authorizationRule;
         this.resourceAttributes = resourceAttributes;
     }

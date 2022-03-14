@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestCaseReferenceResponse {
     /**
      * The name of the class.
@@ -25,11 +25,11 @@ public final class TestCaseReferenceResponse {
      */
     private final String testSuiteName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestCaseReferenceResponse(
-        @OutputCustomType.Parameter("className") String className,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("testSuiteName") String testSuiteName) {
+        @CustomType.Parameter("className") String className,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("testSuiteName") String testSuiteName) {
         this.className = className;
         this.name = name;
         this.testSuiteName = testSuiteName;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1.inputs.SqlAclEntryArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
      * 
      */
-    @InputImport(name="authorizedNetworks")
+    @Import(name="authorizedNetworks")
       private final @Nullable Output<List<SqlAclEntryArgs>> authorizedNetworks;
 
     public Output<List<SqlAclEntryArgs>> getAuthorizedNetworks() {
@@ -36,7 +36,7 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the instance should be assigned an IPv4 address or not.
      * 
      */
-    @InputImport(name="enableIpv4")
+    @Import(name="enableIpv4")
       private final @Nullable Output<Boolean> enableIpv4;
 
     public Output<Boolean> getEnableIpv4() {
@@ -47,7 +47,7 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
      * 
      */
-    @InputImport(name="privateNetwork")
+    @Import(name="privateNetwork")
       private final @Nullable Output<String> privateNetwork;
 
     public Output<String> getPrivateNetwork() {
@@ -58,7 +58,7 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Whether SSL connections over IP should be enforced or not.
      * 
      */
-    @InputImport(name="requireSsl")
+    @Import(name="requireSsl")
       private final @Nullable Output<Boolean> requireSsl;
 
     public Output<Boolean> getRequireSsl() {

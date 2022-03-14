@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SecretKeySelectorResponse extends io.pulumi.resources.InvokeA
      * A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -33,7 +33,7 @@ public final class SecretKeySelectorResponse extends io.pulumi.resources.InvokeA
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
      * 
      */
-    @InputImport(name="localObjectReference", required=true)
+    @Import(name="localObjectReference", required=true)
       private final LocalObjectReferenceResponse localObjectReference;
 
     public LocalObjectReferenceResponse getLocalObjectReference() {
@@ -44,7 +44,7 @@ public final class SecretKeySelectorResponse extends io.pulumi.resources.InvokeA
      * The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -55,7 +55,7 @@ public final class SecretKeySelectorResponse extends io.pulumi.resources.InvokeA
      * (Optional) Specify whether the Secret or its key must be defined
      * 
      */
-    @InputImport(name="optional", required=true)
+    @Import(name="optional", required=true)
       private final Boolean optional;
 
     public Boolean getOptional() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.HadoopJobArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.HiveJobArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.JobPlacementArgs;
@@ -30,7 +30,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job is a Hadoop job.
      * 
      */
-    @InputImport(name="hadoopJob")
+    @Import(name="hadoopJob")
       private final @Nullable Output<HadoopJobArgs> hadoopJob;
 
     public Output<HadoopJobArgs> getHadoopJob() {
@@ -41,7 +41,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job is a Hive job.
      * 
      */
-    @InputImport(name="hiveJob")
+    @Import(name="hiveJob")
       private final @Nullable Output<HiveJobArgs> hiveJob;
 
     public Output<HiveJobArgs> getHiveJob() {
@@ -52,7 +52,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -63,7 +63,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job is a Pig job.
      * 
      */
-    @InputImport(name="pigJob")
+    @Import(name="pigJob")
       private final @Nullable Output<PigJobArgs> pigJob;
 
     public Output<PigJobArgs> getPigJob() {
@@ -74,7 +74,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Job information, including how, when, and where to run the job.
      * 
      */
-    @InputImport(name="placement", required=true)
+    @Import(name="placement", required=true)
       private final Output<JobPlacementArgs> placement;
 
     public Output<JobPlacementArgs> getPlacement() {
@@ -85,14 +85,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job is a Presto job.
      * 
      */
-    @InputImport(name="prestoJob")
+    @Import(name="prestoJob")
       private final @Nullable Output<PrestoJobArgs> prestoJob;
 
     public Output<PrestoJobArgs> getPrestoJob() {
         return this.prestoJob == null ? Output.empty() : this.prestoJob;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -103,7 +103,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job is a PySpark job.
      * 
      */
-    @InputImport(name="pysparkJob")
+    @Import(name="pysparkJob")
       private final @Nullable Output<PySparkJobArgs> pysparkJob;
 
     public Output<PySparkJobArgs> getPysparkJob() {
@@ -114,14 +114,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
      * 
      */
-    @InputImport(name="reference")
+    @Import(name="reference")
       private final @Nullable Output<JobReferenceArgs> reference;
 
     public Output<JobReferenceArgs> getReference() {
         return this.reference == null ? Output.empty() : this.reference;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
@@ -132,7 +132,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A unique id used to identify the request. If the server receives two SubmitJobRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#google.cloud.dataproc.v1.SubmitJobRequest)s with the same id, then the second request will be ignored and the first Job created and stored in the backend is returned.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
      * 
      */
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -143,7 +143,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job scheduling configuration.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<JobSchedulingArgs> scheduling;
 
     public Output<JobSchedulingArgs> getScheduling() {
@@ -154,7 +154,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job is a Spark job.
      * 
      */
-    @InputImport(name="sparkJob")
+    @Import(name="sparkJob")
       private final @Nullable Output<SparkJobArgs> sparkJob;
 
     public Output<SparkJobArgs> getSparkJob() {
@@ -165,7 +165,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job is a SparkR job.
      * 
      */
-    @InputImport(name="sparkRJob")
+    @Import(name="sparkRJob")
       private final @Nullable Output<SparkRJobArgs> sparkRJob;
 
     public Output<SparkRJobArgs> getSparkRJob() {
@@ -176,7 +176,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Job is a SparkSql job.
      * 
      */
-    @InputImport(name="sparkSqlJob")
+    @Import(name="sparkSqlJob")
       private final @Nullable Output<SparkSqlJobArgs> sparkSqlJob;
 
     public Output<SparkSqlJobArgs> getSparkSqlJob() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.jobs_v3.outputs.LatLngResponse;
 import io.pulumi.googlenative.jobs_v3.outputs.PostalAddressResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocationResponse {
     /**
      * An object representing a latitude/longitude pair.
@@ -33,12 +33,12 @@ public final class LocationResponse {
      */
     private final Double radiusInMiles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocationResponse(
-        @OutputCustomType.Parameter("latLng") LatLngResponse latLng,
-        @OutputCustomType.Parameter("locationType") String locationType,
-        @OutputCustomType.Parameter("postalAddress") PostalAddressResponse postalAddress,
-        @OutputCustomType.Parameter("radiusInMiles") Double radiusInMiles) {
+        @CustomType.Parameter("latLng") LatLngResponse latLng,
+        @CustomType.Parameter("locationType") String locationType,
+        @CustomType.Parameter("postalAddress") PostalAddressResponse postalAddress,
+        @CustomType.Parameter("radiusInMiles") Double radiusInMiles) {
         this.latLng = latLng;
         this.locationType = locationType;
         this.postalAddress = postalAddress;

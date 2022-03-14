@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetProjectIamPolicyArgs Empty = new GetProjectIamPolicyArgs();
 
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final String resource;
 
     public String getResource() {

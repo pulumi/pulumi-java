@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.GkeClusterReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
      * Reference to the GKE cluster where the game servers are installed.
      * 
      */
-    @InputImport(name="gkeClusterReference", required=true)
+    @Import(name="gkeClusterReference", required=true)
       private final GkeClusterReferenceResponse gkeClusterReference;
 
     public GkeClusterReferenceResponse getGkeClusterReference() {
@@ -32,7 +32,7 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
      * Namespace designated on the game server cluster where the Agones game server instances will be created. Existence of the namespace will be validated during creation.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final String namespace;
 
     public String getNamespace() {

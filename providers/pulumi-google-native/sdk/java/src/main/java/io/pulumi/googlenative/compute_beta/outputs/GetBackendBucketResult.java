@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.BackendBucketCdnPolicyResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendBucketResult {
     /**
      * Cloud Storage bucket name.
@@ -68,19 +68,19 @@ public final class GetBackendBucketResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendBucketResult(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("cdnPolicy") BackendBucketCdnPolicyResponse cdnPolicy,
-        @OutputCustomType.Parameter("compressionMode") String compressionMode,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("edgeSecurityPolicy") String edgeSecurityPolicy,
-        @OutputCustomType.Parameter("enableCdn") Boolean enableCdn,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("cdnPolicy") BackendBucketCdnPolicyResponse cdnPolicy,
+        @CustomType.Parameter("compressionMode") String compressionMode,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("edgeSecurityPolicy") String edgeSecurityPolicy,
+        @CustomType.Parameter("enableCdn") Boolean enableCdn,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.bucketName = bucketName;
         this.cdnPolicy = cdnPolicy;
         this.compressionMode = compressionMode;

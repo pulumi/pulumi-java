@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vision_v1.outputs.KeyValueResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProductResult {
     /**
      * User-provided metadata to be stored with this product. Must be at most 4096 characters long.
@@ -37,13 +37,13 @@ public final class GetProductResult {
      */
     private final List<KeyValueResponse> productLabels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("productCategory") String productCategory,
-        @OutputCustomType.Parameter("productLabels") List<KeyValueResponse> productLabels) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("productCategory") String productCategory,
+        @CustomType.Parameter("productLabels") List<KeyValueResponse> productLabels) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;

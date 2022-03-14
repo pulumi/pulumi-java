@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ParquetOptionsResponse {
     /**
      * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
@@ -20,10 +20,10 @@ public final class ParquetOptionsResponse {
      */
     private final Boolean enumAsString;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParquetOptionsResponse(
-        @OutputCustomType.Parameter("enableListInference") Boolean enableListInference,
-        @OutputCustomType.Parameter("enumAsString") Boolean enumAsString) {
+        @CustomType.Parameter("enableListInference") Boolean enableListInference,
+        @CustomType.Parameter("enumAsString") Boolean enumAsString) {
         this.enableListInference = enableListInference;
         this.enumAsString = enumAsString;
     }

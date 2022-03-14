@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vpcaccess_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vpcaccess_v1.ConnectorArgs;
@@ -24,7 +24,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * List of projects using the connector.
      * 
      */
-    @OutputExport(name="connectedProjects", type=List.class, parameters={String.class})
+    @Export(name="connectedProjects", type=List.class, parameters={String.class})
     private Output<List<String>> connectedProjects;
 
     /**
@@ -38,7 +38,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
      * 
      */
-    @OutputExport(name="ipCidrRange", type=String.class, parameters={})
+    @Export(name="ipCidrRange", type=String.class, parameters={})
     private Output<String> ipCidrRange;
 
     /**
@@ -52,7 +52,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Machine type of VM Instance underlying connector. Default is e2-micro
      * 
      */
-    @OutputExport(name="machineType", type=String.class, parameters={})
+    @Export(name="machineType", type=String.class, parameters={})
     private Output<String> machineType;
 
     /**
@@ -66,7 +66,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Maximum value of instances in autoscaling group underlying the connector.
      * 
      */
-    @OutputExport(name="maxInstances", type=Integer.class, parameters={})
+    @Export(name="maxInstances", type=Integer.class, parameters={})
     private Output<Integer> maxInstances;
 
     /**
@@ -80,7 +80,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
      * 
      */
-    @OutputExport(name="maxThroughput", type=Integer.class, parameters={})
+    @Export(name="maxThroughput", type=Integer.class, parameters={})
     private Output<Integer> maxThroughput;
 
     /**
@@ -94,7 +94,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Minimum value of instances in autoscaling group underlying the connector.
      * 
      */
-    @OutputExport(name="minInstances", type=Integer.class, parameters={})
+    @Export(name="minInstances", type=Integer.class, parameters={})
     private Output<Integer> minInstances;
 
     /**
@@ -108,7 +108,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Minimum throughput of the connector in Mbps. Default and min is 200.
      * 
      */
-    @OutputExport(name="minThroughput", type=Integer.class, parameters={})
+    @Export(name="minThroughput", type=Integer.class, parameters={})
     private Output<Integer> minThroughput;
 
     /**
@@ -122,7 +122,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The resource name in the format `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Name of a VPC network.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -150,7 +150,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * State of the VPC access connector.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -164,7 +164,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The subnet in which to house the VPC Access Connector.
      * 
      */
-    @OutputExport(name="subnet", type=SubnetResponse.class, parameters={})
+    @Export(name="subnet", type=SubnetResponse.class, parameters={})
     private Output<SubnetResponse> subnet;
 
     /**

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse {
     /**
      * An email address to send alerts to.
@@ -21,10 +21,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
      */
     private final Double minAcceptableMeanAveragePrecision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("minAcceptableMeanAveragePrecision") Double minAcceptableMeanAveragePrecision) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("minAcceptableMeanAveragePrecision") Double minAcceptableMeanAveragePrecision) {
         this.email = email;
         this.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
     }

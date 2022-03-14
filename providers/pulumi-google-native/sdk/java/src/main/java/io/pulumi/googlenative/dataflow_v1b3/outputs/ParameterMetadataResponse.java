@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ParameterMetadataResponse {
     /**
      * Optional. Additional metadata for describing this parameter.
@@ -48,15 +48,15 @@ public final class ParameterMetadataResponse {
      */
     private final List<String> regexes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParameterMetadataResponse(
-        @OutputCustomType.Parameter("customMetadata") Map<String,String> customMetadata,
-        @OutputCustomType.Parameter("helpText") String helpText,
-        @OutputCustomType.Parameter("isOptional") Boolean isOptional,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("paramType") String paramType,
-        @OutputCustomType.Parameter("regexes") List<String> regexes) {
+        @CustomType.Parameter("customMetadata") Map<String,String> customMetadata,
+        @CustomType.Parameter("helpText") String helpText,
+        @CustomType.Parameter("isOptional") Boolean isOptional,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("paramType") String paramType,
+        @CustomType.Parameter("regexes") List<String> regexes) {
         this.customMetadata = customMetadata;
         this.helpText = helpText;
         this.isOptional = isOptional;

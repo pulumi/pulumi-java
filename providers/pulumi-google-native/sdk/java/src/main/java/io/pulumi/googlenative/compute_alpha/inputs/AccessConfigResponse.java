@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6 address from a subnetwork associated with the instance will be allocated dynamically.
      * 
      */
-    @InputImport(name="externalIpv6", required=true)
+    @Import(name="externalIpv6", required=true)
       private final String externalIpv6;
 
     public String getExternalIpv6() {
@@ -33,7 +33,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The prefix length of the external IPv6 range.
      * 
      */
-    @InputImport(name="externalIpv6PrefixLength", required=true)
+    @Import(name="externalIpv6PrefixLength", required=true)
       private final Integer externalIpv6PrefixLength;
 
     public Integer getExternalIpv6PrefixLength() {
@@ -44,7 +44,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the resource. Always compute#accessConfig for access configs.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -55,7 +55,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -66,7 +66,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.
      * 
      */
-    @InputImport(name="natIP", required=true)
+    @Import(name="natIP", required=true)
       private final String natIP;
 
     public String getNatIP() {
@@ -77,7 +77,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig with a valid external IP address is specified, it must match that of the networkTier associated with the Address resource owning that IP.
      * 
      */
-    @InputImport(name="networkTier", required=true)
+    @Import(name="networkTier", required=true)
       private final String networkTier;
 
     public String getNetworkTier() {
@@ -88,7 +88,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The public DNS domain name for the instance.
      * 
      */
-    @InputImport(name="publicDnsName", required=true)
+    @Import(name="publicDnsName", required=true)
       private final String publicDnsName;
 
     public String getPublicDnsName() {
@@ -99,7 +99,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The DNS domain name for the public PTR record. You can set this field only if the `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6 range.
      * 
      */
-    @InputImport(name="publicPtrDomainName", required=true)
+    @Import(name="publicPtrDomainName", required=true)
       private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {
@@ -110,7 +110,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether a public DNS 'A' record should be created for the external IP address of this access configuration.
      * 
      */
-    @InputImport(name="setPublicDns", required=true)
+    @Import(name="setPublicDns", required=true)
       private final Boolean setPublicDns;
 
     public Boolean getSetPublicDns() {
@@ -121,7 +121,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
      * 
      */
-    @InputImport(name="setPublicPtr", required=true)
+    @Import(name="setPublicPtr", required=true)
       private final Boolean setPublicPtr;
 
     public Boolean getSetPublicPtr() {
@@ -132,7 +132,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The type of configuration. The default and only option is ONE_TO_ONE_NAT.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

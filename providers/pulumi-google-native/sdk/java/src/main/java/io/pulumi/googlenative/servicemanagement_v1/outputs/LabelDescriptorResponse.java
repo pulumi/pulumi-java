@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LabelDescriptorResponse {
     /**
      * A human-readable description for the label.
@@ -25,11 +25,11 @@ public final class LabelDescriptorResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabelDescriptorResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("valueType") String valueType) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("valueType") String valueType) {
         this.description = description;
         this.key = key;
         this.valueType = valueType;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AnthosClusterResponse extends io.pulumi.resources.InvokeArgs 
      * Membership of the GKE Hub registered cluster that the Skaffold configuration should be applied to. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
      * 
      */
-    @InputImport(name="membership", required=true)
+    @Import(name="membership", required=true)
       private final String membership;
 
     public String getMembership() {

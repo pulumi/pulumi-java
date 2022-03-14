@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storagetransfer_v1.AgentPoolArgs;
@@ -22,7 +22,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
      * 
      */
-    @OutputExport(name="bandwidthLimit", type=BandwidthLimitResponse.class, parameters={})
+    @Export(name="bandwidthLimit", type=BandwidthLimitResponse.class, parameters={})
     private Output<BandwidthLimitResponse> bandwidthLimit;
 
     /**
@@ -36,7 +36,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Specifies the client-specified AgentPool description.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -50,7 +50,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Specifies the state of the AgentPool.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

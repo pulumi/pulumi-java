@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * The simple name of this method.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -34,7 +34,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * Any metadata attached to the method.
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
     public List<OptionResponse> getOptions() {
@@ -45,7 +45,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * If true, the request is streamed.
      * 
      */
-    @InputImport(name="requestStreaming", required=true)
+    @Import(name="requestStreaming", required=true)
       private final Boolean requestStreaming;
 
     public Boolean getRequestStreaming() {
@@ -56,7 +56,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * A URL of the input message type.
      * 
      */
-    @InputImport(name="requestTypeUrl", required=true)
+    @Import(name="requestTypeUrl", required=true)
       private final String requestTypeUrl;
 
     public String getRequestTypeUrl() {
@@ -67,7 +67,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * If true, the response is streamed.
      * 
      */
-    @InputImport(name="responseStreaming", required=true)
+    @Import(name="responseStreaming", required=true)
       private final Boolean responseStreaming;
 
     public Boolean getResponseStreaming() {
@@ -78,7 +78,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * The URL of the output message type.
      * 
      */
-    @InputImport(name="responseTypeUrl", required=true)
+    @Import(name="responseTypeUrl", required=true)
       private final String responseTypeUrl;
 
     public String getResponseTypeUrl() {
@@ -89,7 +89,7 @@ public final class MethodResponse extends io.pulumi.resources.InvokeArgs {
      * The source syntax of this method.
      * 
      */
-    @InputImport(name="syntax", required=true)
+    @Import(name="syntax", required=true)
       private final String syntax;
 
     public String getSyntax() {

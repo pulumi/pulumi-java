@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
     /**
      * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with 'gs://'.
@@ -37,13 +37,13 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
      */
     private final Boolean validateOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(
-        @OutputCustomType.Parameter("gcsPath") String gcsPath,
-        @OutputCustomType.Parameter("launchParameters") GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("validateOnly") Boolean validateOnly) {
+        @CustomType.Parameter("gcsPath") String gcsPath,
+        @CustomType.Parameter("launchParameters") GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("validateOnly") Boolean validateOnly) {
         this.gcsPath = gcsPath;
         this.launchParameters = launchParameters;
         this.location = location;

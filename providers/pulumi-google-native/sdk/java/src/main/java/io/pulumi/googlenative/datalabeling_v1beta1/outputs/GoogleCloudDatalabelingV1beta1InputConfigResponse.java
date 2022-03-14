@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1BigQuerySourceResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1GcsSourceResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabeli
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
     /**
      * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
@@ -44,14 +44,14 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
      */
     private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1InputConfigResponse(
-        @OutputCustomType.Parameter("annotationType") String annotationType,
-        @OutputCustomType.Parameter("bigquerySource") GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource,
-        @OutputCustomType.Parameter("classificationMetadata") GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata,
-        @OutputCustomType.Parameter("dataType") String dataType,
-        @OutputCustomType.Parameter("gcsSource") GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource,
-        @OutputCustomType.Parameter("textMetadata") GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
+        @CustomType.Parameter("annotationType") String annotationType,
+        @CustomType.Parameter("bigquerySource") GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource,
+        @CustomType.Parameter("classificationMetadata") GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata,
+        @CustomType.Parameter("dataType") String dataType,
+        @CustomType.Parameter("gcsSource") GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource,
+        @CustomType.Parameter("textMetadata") GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
         this.annotationType = annotationType;
         this.bigquerySource = bigquerySource;
         this.classificationMetadata = classificationMetadata;

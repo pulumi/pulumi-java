@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ArtifactsResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BuildApprovalResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BuildOptionsResponse;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildResponse {
     /**
      * Describes this build's approval configuration, status, and result.
@@ -163,36 +163,36 @@ public final class BuildResponse {
      */
     private final List<WarningResponse> warnings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildResponse(
-        @OutputCustomType.Parameter("approval") BuildApprovalResponse approval,
-        @OutputCustomType.Parameter("artifacts") ArtifactsResponse artifacts,
-        @OutputCustomType.Parameter("availableSecrets") SecretsResponse availableSecrets,
-        @OutputCustomType.Parameter("buildTriggerId") String buildTriggerId,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("failureInfo") FailureInfoResponse failureInfo,
-        @OutputCustomType.Parameter("finishTime") String finishTime,
-        @OutputCustomType.Parameter("images") List<String> images,
-        @OutputCustomType.Parameter("logUrl") String logUrl,
-        @OutputCustomType.Parameter("logsBucket") String logsBucket,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") BuildOptionsResponse options,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("queueTtl") String queueTtl,
-        @OutputCustomType.Parameter("results") ResultsResponse results,
-        @OutputCustomType.Parameter("secrets") List<SecretResponse> secrets,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("source") SourceResponse source,
-        @OutputCustomType.Parameter("sourceProvenance") SourceProvenanceResponse sourceProvenance,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetail") String statusDetail,
-        @OutputCustomType.Parameter("steps") List<BuildStepResponse> steps,
-        @OutputCustomType.Parameter("substitutions") Map<String,String> substitutions,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("timeout") String timeout,
-        @OutputCustomType.Parameter("timing") Map<String,String> timing,
-        @OutputCustomType.Parameter("warnings") List<WarningResponse> warnings) {
+        @CustomType.Parameter("approval") BuildApprovalResponse approval,
+        @CustomType.Parameter("artifacts") ArtifactsResponse artifacts,
+        @CustomType.Parameter("availableSecrets") SecretsResponse availableSecrets,
+        @CustomType.Parameter("buildTriggerId") String buildTriggerId,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("failureInfo") FailureInfoResponse failureInfo,
+        @CustomType.Parameter("finishTime") String finishTime,
+        @CustomType.Parameter("images") List<String> images,
+        @CustomType.Parameter("logUrl") String logUrl,
+        @CustomType.Parameter("logsBucket") String logsBucket,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") BuildOptionsResponse options,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("queueTtl") String queueTtl,
+        @CustomType.Parameter("results") ResultsResponse results,
+        @CustomType.Parameter("secrets") List<SecretResponse> secrets,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("source") SourceResponse source,
+        @CustomType.Parameter("sourceProvenance") SourceProvenanceResponse sourceProvenance,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetail") String statusDetail,
+        @CustomType.Parameter("steps") List<BuildStepResponse> steps,
+        @CustomType.Parameter("substitutions") Map<String,String> substitutions,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("timeout") String timeout,
+        @CustomType.Parameter("timing") Map<String,String> timing,
+        @CustomType.Parameter("warnings") List<WarningResponse> warnings) {
         this.approval = approval;
         this.artifacts = artifacts;
         this.availableSecrets = availableSecrets;

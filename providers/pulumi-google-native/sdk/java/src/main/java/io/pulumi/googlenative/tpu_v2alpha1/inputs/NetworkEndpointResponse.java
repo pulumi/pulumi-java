@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.tpu_v2alpha1.inputs.AccessConfigResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
      * The access config for the TPU worker.
      * 
      */
-    @InputImport(name="accessConfig", required=true)
+    @Import(name="accessConfig", required=true)
       private final AccessConfigResponse accessConfig;
 
     public AccessConfigResponse getAccessConfig() {
@@ -33,7 +33,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
      * The internal IP address of this network endpoint.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
@@ -44,7 +44,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
      * The port of this network endpoint.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {

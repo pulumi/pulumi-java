@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataplexConfigResponse {
     /**
      * A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
@@ -16,8 +16,8 @@ public final class DataplexConfigResponse {
      */
     private final Map<String,String> lakeResources;
 
-    @OutputCustomType.Constructor
-    private DataplexConfigResponse(@OutputCustomType.Parameter("lakeResources") Map<String,String> lakeResources) {
+    @CustomType.Constructor
+    private DataplexConfigResponse(@CustomType.Parameter("lakeResources") Map<String,String> lakeResources) {
         this.lakeResources = lakeResources;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
      * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
      * 
      */
-    @InputImport(name="exactMatch", required=true)
+    @Import(name="exactMatch", required=true)
       private final String exactMatch;
 
     public String getExactMatch() {
@@ -32,7 +32,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
      * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -43,7 +43,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
      * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set.
      * 
      */
-    @InputImport(name="presentMatch", required=true)
+    @Import(name="presentMatch", required=true)
       private final Boolean presentMatch;
 
     public Boolean getPresentMatch() {
@@ -54,7 +54,7 @@ public final class HttpQueryParameterMatchResponse extends io.pulumi.resources.I
      * The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
      * 
      */
-    @InputImport(name="regexMatch", required=true)
+    @Import(name="regexMatch", required=true)
       private final String regexMatch;
 
     public String getRegexMatch() {

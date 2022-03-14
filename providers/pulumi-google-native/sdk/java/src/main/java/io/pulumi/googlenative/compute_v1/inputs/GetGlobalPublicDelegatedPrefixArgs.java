@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetGlobalPublicDelegatedPrefixArgs extends io.pulumi.resource
 
     public static final GetGlobalPublicDelegatedPrefixArgs Empty = new GetGlobalPublicDelegatedPrefixArgs();
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="publicDelegatedPrefix", required=true)
+    @Import(name="publicDelegatedPrefix", required=true)
       private final String publicDelegatedPrefix;
 
     public String getPublicDelegatedPrefix() {

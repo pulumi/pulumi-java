@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetAnnotationSpecSetArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetAnnotationSpecSetArgs Empty = new GetAnnotationSpecSetArgs();
 
-    @InputImport(name="annotationSpecSetId", required=true)
+    @Import(name="annotationSpecSetId", required=true)
       private final String annotationSpecSetId;
 
     public String getAnnotationSpecSetId() {
         return this.annotationSpecSetId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

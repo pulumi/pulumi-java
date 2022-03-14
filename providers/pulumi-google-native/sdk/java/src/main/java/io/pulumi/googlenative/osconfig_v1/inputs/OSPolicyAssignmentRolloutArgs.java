@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.FixedOrPercentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
      * The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
      * 
      */
-    @InputImport(name="disruptionBudget", required=true)
+    @Import(name="disruptionBudget", required=true)
       private final Output<FixedOrPercentArgs> disruptionBudget;
 
     public Output<FixedOrPercentArgs> getDisruptionBudget() {
@@ -33,7 +33,7 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
      * This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
      * 
      */
-    @InputImport(name="minWaitDuration", required=true)
+    @Import(name="minWaitDuration", required=true)
       private final Output<String> minWaitDuration;
 
     public Output<String> getMinWaitDuration() {

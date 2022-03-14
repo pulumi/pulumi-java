@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterArgs extends io.p
      * The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like: projects/*{@literal /}locations/*{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
      * 
      */
-    @InputImport(name="gkeClusterName")
+    @Import(name="gkeClusterName")
       private final @Nullable Output<String> gkeClusterName;
 
     public Output<String> getGkeClusterName() {
         return this.gkeClusterName == null ? Output.empty() : this.gkeClusterName;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {

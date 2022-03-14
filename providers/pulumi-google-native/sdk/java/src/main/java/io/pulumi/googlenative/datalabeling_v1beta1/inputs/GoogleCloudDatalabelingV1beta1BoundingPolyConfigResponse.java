@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
      * Annotation spec set resource name.
      * 
      */
-    @InputImport(name="annotationSpecSet", required=true)
+    @Import(name="annotationSpecSet", required=true)
       private final String annotationSpecSet;
 
     public String getAnnotationSpecSet() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
      * Optional. Instruction message showed on contributors UI.
      * 
      */
-    @InputImport(name="instructionMessage", required=true)
+    @Import(name="instructionMessage", required=true)
       private final String instructionMessage;
 
     public String getInstructionMessage() {

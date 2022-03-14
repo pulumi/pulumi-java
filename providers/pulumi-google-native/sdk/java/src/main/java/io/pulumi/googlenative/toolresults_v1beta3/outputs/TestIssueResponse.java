@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.AnyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestIssueResponse {
     /**
      * Category of issue. Required.
@@ -36,13 +36,13 @@ public final class TestIssueResponse {
      */
     private final AnyResponse warning;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestIssueResponse(
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("warning") AnyResponse warning) {
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("warning") AnyResponse warning) {
         this.category = category;
         this.errorMessage = errorMessage;
         this.severity = severity;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmImageResponse {
     /**
      * Use this VM image family to find the image; the newest image in this family will be used.
@@ -25,11 +25,11 @@ public final class VmImageResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmImageResponse(
-        @OutputCustomType.Parameter("imageFamily") String imageFamily,
-        @OutputCustomType.Parameter("imageName") String imageName,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("imageFamily") String imageFamily,
+        @CustomType.Parameter("imageName") String imageName,
+        @CustomType.Parameter("project") String project) {
         this.imageFamily = imageFamily;
         this.imageName = imageName;
         this.project = project;

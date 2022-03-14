@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkservices_v1beta1.outputs.EndpointMatcherResponse;
 import io.pulumi.googlenative.networkservices_v1beta1.outputs.TrafficPortSelectorResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointPolicyResult {
     /**
      * Optional. This field specifies the URL of AuthorizationPolicy resource that applies authorization policies to the inbound traffic at the matched endpoints. Refer to Authorization. If this field is not specified, authorization is disabled(no authz checks) for this endpoint.
@@ -68,19 +68,19 @@ public final class GetEndpointPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointPolicyResult(
-        @OutputCustomType.Parameter("authorizationPolicy") String authorizationPolicy,
-        @OutputCustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endpointMatcher") EndpointMatcherResponse endpointMatcher,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serverTlsPolicy") String serverTlsPolicy,
-        @OutputCustomType.Parameter("trafficPortSelector") TrafficPortSelectorResponse trafficPortSelector,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("authorizationPolicy") String authorizationPolicy,
+        @CustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endpointMatcher") EndpointMatcherResponse endpointMatcher,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serverTlsPolicy") String serverTlsPolicy,
+        @CustomType.Parameter("trafficPortSelector") TrafficPortSelectorResponse trafficPortSelector,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.authorizationPolicy = authorizationPolicy;
         this.clientTlsPolicy = clientTlsPolicy;
         this.createTime = createTime;

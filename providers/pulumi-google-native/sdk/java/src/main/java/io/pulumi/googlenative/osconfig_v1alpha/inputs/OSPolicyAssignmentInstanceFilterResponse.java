@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentInstanceFilterInventoryResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentLabelSetResponse;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
      * Target all VMs in the project. If true, no other criteria is permitted.
      * 
      */
-    @InputImport(name="all", required=true)
+    @Import(name="all", required=true)
       private final Boolean all;
 
     public Boolean getAll() {
@@ -34,7 +34,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
      * List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
      * 
      */
-    @InputImport(name="exclusionLabels", required=true)
+    @Import(name="exclusionLabels", required=true)
       private final List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
 
     public List<OSPolicyAssignmentLabelSetResponse> getExclusionLabels() {
@@ -45,7 +45,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
      * List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
      * 
      */
-    @InputImport(name="inclusionLabels", required=true)
+    @Import(name="inclusionLabels", required=true)
       private final List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
 
     public List<OSPolicyAssignmentLabelSetResponse> getInclusionLabels() {
@@ -56,7 +56,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
      * List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
      * 
      */
-    @InputImport(name="inventories", required=true)
+    @Import(name="inventories", required=true)
       private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
 
     public List<OSPolicyAssignmentInstanceFilterInventoryResponse> getInventories() {

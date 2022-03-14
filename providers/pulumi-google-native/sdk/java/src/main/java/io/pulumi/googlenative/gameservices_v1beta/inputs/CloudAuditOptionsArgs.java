@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1beta.enums.CloudAuditOptionsLogName;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.AuthorizationLoggingOptionsArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
      * Information used by the Cloud Audit Logging pipeline.
      * 
      */
-    @InputImport(name="authorizationLoggingOptions")
+    @Import(name="authorizationLoggingOptions")
       private final @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
     public Output<AuthorizationLoggingOptionsArgs> getAuthorizationLoggingOptions() {
@@ -34,7 +34,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
      * The log_name to populate in the Cloud Audit Record.
      * 
      */
-    @InputImport(name="logName")
+    @Import(name="logName")
       private final @Nullable Output<CloudAuditOptionsLogName> logName;
 
     public Output<CloudAuditOptionsLogName> getLogName() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.domains_v1beta1.RegistrationArgs;
@@ -27,7 +27,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
      * 
      */
-    @OutputExport(name="contactSettings", type=ContactSettingsResponse.class, parameters={})
+    @Export(name="contactSettings", type=ContactSettingsResponse.class, parameters={})
     private Output<ContactSettingsResponse> contactSettings;
 
     /**
@@ -41,7 +41,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * The creation timestamp of the `Registration` resource.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -55,7 +55,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Settings controlling the DNS configuration of the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureDnsSettings` method.
      * 
      */
-    @OutputExport(name="dnsSettings", type=DnsSettingsResponse.class, parameters={})
+    @Export(name="dnsSettings", type=DnsSettingsResponse.class, parameters={})
     private Output<DnsSettingsResponse> dnsSettings;
 
     /**
@@ -69,7 +69,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Immutable. The domain name. Unicode domain names must be expressed in Punycode format.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -83,7 +83,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * The expiration timestamp of the `Registration`.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -97,7 +97,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * The set of issues with the `Registration` that require attention.
      * 
      */
-    @OutputExport(name="issues", type=List.class, parameters={String.class})
+    @Export(name="issues", type=List.class, parameters={String.class})
     private Output<List<String>> issues;
 
     /**
@@ -111,7 +111,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Set of labels associated with the `Registration`.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -125,7 +125,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Settings for management of the `Registration`, including renewal, billing, and transfer. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureManagementSettings` method.
      * 
      */
-    @OutputExport(name="managementSettings", type=ManagementSettingsResponse.class, parameters={})
+    @Export(name="managementSettings", type=ManagementSettingsResponse.class, parameters={})
     private Output<ManagementSettingsResponse> managementSettings;
 
     /**
@@ -139,7 +139,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Name of the `Registration` resource, in the format `projects/*{@literal /}locations/*{@literal /}registrations/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -153,7 +153,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Pending contact settings for the `Registration`. Updates to the `contact_settings` field that change its `registrant_contact` or `privacy` fields require email confirmation by the `registrant_contact` before taking effect. This field is set only if there are pending updates to the `contact_settings` that have not been confirmed. To confirm the changes, the `registrant_contact` must follow the instructions in the email they receive.
      * 
      */
-    @OutputExport(name="pendingContactSettings", type=ContactSettingsResponse.class, parameters={})
+    @Export(name="pendingContactSettings", type=ContactSettingsResponse.class, parameters={})
     private Output<ContactSettingsResponse> pendingContactSettings;
 
     /**
@@ -167,7 +167,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * The state of the `Registration`
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -181,7 +181,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Set of options for the `contact_settings.privacy` field that this `Registration` supports.
      * 
      */
-    @OutputExport(name="supportedPrivacy", type=List.class, parameters={String.class})
+    @Export(name="supportedPrivacy", type=List.class, parameters={String.class})
     private Output<List<String>> supportedPrivacy;
 
     /**

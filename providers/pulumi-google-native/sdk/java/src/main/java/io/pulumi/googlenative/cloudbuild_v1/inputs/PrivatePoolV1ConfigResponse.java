@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.NetworkConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.WorkerConfigResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.Invok
      * Network configuration for the pool.
      * 
      */
-    @InputImport(name="networkConfig", required=true)
+    @Import(name="networkConfig", required=true)
       private final NetworkConfigResponse networkConfig;
 
     public NetworkConfigResponse getNetworkConfig() {
@@ -32,7 +32,7 @@ public final class PrivatePoolV1ConfigResponse extends io.pulumi.resources.Invok
      * Machine configuration for the workers in the pool.
      * 
      */
-    @InputImport(name="workerConfig", required=true)
+    @Import(name="workerConfig", required=true)
       private final WorkerConfigResponse workerConfig;
 
     public WorkerConfigResponse getWorkerConfig() {

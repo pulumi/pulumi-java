@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ResourcefileArgs;
@@ -23,7 +23,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * The HTTP Content-Type header value specifying the content type of the body.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
@@ -37,7 +37,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * The HTTP request/response body as raw binary.
      * 
      */
-    @OutputExport(name="data", type=String.class, parameters={})
+    @Export(name="data", type=String.class, parameters={})
     private Output<String> data;
 
     /**
@@ -51,7 +51,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
      */
-    @OutputExport(name="extensions", type=List.class, parameters={Map.class})
+    @Export(name="extensions", type=List.class, parameters={Map.class})
     private Output<List<Map<String,String>>> extensions;
 
     /**

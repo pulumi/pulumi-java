@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MethodMapResponse {
     /**
      * The action identifier for the create method to be used for this collection
@@ -35,13 +35,13 @@ public final class MethodMapResponse {
      */
     private final String update;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MethodMapResponse(
-        @OutputCustomType.Parameter("create") String create,
-        @OutputCustomType.Parameter("delete") String delete,
-        @OutputCustomType.Parameter("get") String get,
-        @OutputCustomType.Parameter("setIamPolicy") String setIamPolicy,
-        @OutputCustomType.Parameter("update") String update) {
+        @CustomType.Parameter("create") String create,
+        @CustomType.Parameter("delete") String delete,
+        @CustomType.Parameter("get") String get,
+        @CustomType.Parameter("setIamPolicy") String setIamPolicy,
+        @CustomType.Parameter("update") String update) {
         this.create = create;
         this.delete = delete;
         this.get = get;

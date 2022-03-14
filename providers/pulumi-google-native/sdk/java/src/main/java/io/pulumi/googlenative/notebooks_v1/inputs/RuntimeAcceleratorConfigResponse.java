@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RuntimeAcceleratorConfigResponse extends io.pulumi.resources.
      * Count of cores of this accelerator.
      * 
      */
-    @InputImport(name="coreCount", required=true)
+    @Import(name="coreCount", required=true)
       private final String coreCount;
 
     public String getCoreCount() {
@@ -31,7 +31,7 @@ public final class RuntimeAcceleratorConfigResponse extends io.pulumi.resources.
      * Accelerator model.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

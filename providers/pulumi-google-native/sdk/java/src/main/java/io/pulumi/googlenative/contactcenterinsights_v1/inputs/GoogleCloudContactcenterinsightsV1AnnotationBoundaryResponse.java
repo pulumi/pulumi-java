@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      * The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
      * 
      */
-    @InputImport(name="transcriptIndex", required=true)
+    @Import(name="transcriptIndex", required=true)
       private final Integer transcriptIndex;
 
     public Integer getTranscriptIndex() {
@@ -31,7 +31,7 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      * The word index of this boundary with respect to the first word in the transcript piece. This index starts at zero.
      * 
      */
-    @InputImport(name="wordIndex", required=true)
+    @Import(name="wordIndex", required=true)
       private final Integer wordIndex;
 
     public Integer getWordIndex() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.RouterNatLogConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouterNatRuleResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouterNatSubnetworkToNatResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterNatResponse {
     /**
      * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
@@ -97,25 +97,25 @@ public final class RouterNatResponse {
      */
     private final Integer udpIdleTimeoutSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterNatResponse(
-        @OutputCustomType.Parameter("drainNatIps") List<String> drainNatIps,
-        @OutputCustomType.Parameter("enableDynamicPortAllocation") Boolean enableDynamicPortAllocation,
-        @OutputCustomType.Parameter("enableEndpointIndependentMapping") Boolean enableEndpointIndependentMapping,
-        @OutputCustomType.Parameter("icmpIdleTimeoutSec") Integer icmpIdleTimeoutSec,
-        @OutputCustomType.Parameter("logConfig") RouterNatLogConfigResponse logConfig,
-        @OutputCustomType.Parameter("maxPortsPerVm") Integer maxPortsPerVm,
-        @OutputCustomType.Parameter("minPortsPerVm") Integer minPortsPerVm,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("natIpAllocateOption") String natIpAllocateOption,
-        @OutputCustomType.Parameter("natIps") List<String> natIps,
-        @OutputCustomType.Parameter("rules") List<RouterNatRuleResponse> rules,
-        @OutputCustomType.Parameter("sourceSubnetworkIpRangesToNat") String sourceSubnetworkIpRangesToNat,
-        @OutputCustomType.Parameter("subnetworks") List<RouterNatSubnetworkToNatResponse> subnetworks,
-        @OutputCustomType.Parameter("tcpEstablishedIdleTimeoutSec") Integer tcpEstablishedIdleTimeoutSec,
-        @OutputCustomType.Parameter("tcpTimeWaitTimeoutSec") Integer tcpTimeWaitTimeoutSec,
-        @OutputCustomType.Parameter("tcpTransitoryIdleTimeoutSec") Integer tcpTransitoryIdleTimeoutSec,
-        @OutputCustomType.Parameter("udpIdleTimeoutSec") Integer udpIdleTimeoutSec) {
+        @CustomType.Parameter("drainNatIps") List<String> drainNatIps,
+        @CustomType.Parameter("enableDynamicPortAllocation") Boolean enableDynamicPortAllocation,
+        @CustomType.Parameter("enableEndpointIndependentMapping") Boolean enableEndpointIndependentMapping,
+        @CustomType.Parameter("icmpIdleTimeoutSec") Integer icmpIdleTimeoutSec,
+        @CustomType.Parameter("logConfig") RouterNatLogConfigResponse logConfig,
+        @CustomType.Parameter("maxPortsPerVm") Integer maxPortsPerVm,
+        @CustomType.Parameter("minPortsPerVm") Integer minPortsPerVm,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("natIpAllocateOption") String natIpAllocateOption,
+        @CustomType.Parameter("natIps") List<String> natIps,
+        @CustomType.Parameter("rules") List<RouterNatRuleResponse> rules,
+        @CustomType.Parameter("sourceSubnetworkIpRangesToNat") String sourceSubnetworkIpRangesToNat,
+        @CustomType.Parameter("subnetworks") List<RouterNatSubnetworkToNatResponse> subnetworks,
+        @CustomType.Parameter("tcpEstablishedIdleTimeoutSec") Integer tcpEstablishedIdleTimeoutSec,
+        @CustomType.Parameter("tcpTimeWaitTimeoutSec") Integer tcpTimeWaitTimeoutSec,
+        @CustomType.Parameter("tcpTransitoryIdleTimeoutSec") Integer tcpTransitoryIdleTimeoutSec,
+        @CustomType.Parameter("udpIdleTimeoutSec") Integer udpIdleTimeoutSec) {
         this.drainNatIps = drainNatIps;
         this.enableDynamicPortAllocation = enableDynamicPortAllocation;
         this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyTagResult {
     /**
      * Resource names of child policy tags of this policy tag.
@@ -36,13 +36,13 @@ public final class GetPolicyTagResult {
      */
     private final String parentPolicyTag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyTagResult(
-        @OutputCustomType.Parameter("childPolicyTags") List<String> childPolicyTags,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parentPolicyTag") String parentPolicyTag) {
+        @CustomType.Parameter("childPolicyTags") List<String> childPolicyTags,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parentPolicyTag") String parentPolicyTag) {
         this.childPolicyTags = childPolicyTags;
         this.description = description;
         this.displayName = displayName;

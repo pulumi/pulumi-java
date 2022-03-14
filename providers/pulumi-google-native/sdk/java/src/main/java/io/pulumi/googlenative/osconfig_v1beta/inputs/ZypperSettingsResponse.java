@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * Install only patches with these categories. Common categories include security, recommended, and feature.
      * 
      */
-    @InputImport(name="categories", required=true)
+    @Import(name="categories", required=true)
       private final List<String> categories;
 
     public List<String> getCategories() {
@@ -33,7 +33,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * List of patches to exclude from update.
      * 
      */
-    @InputImport(name="excludes", required=true)
+    @Import(name="excludes", required=true)
       private final List<String> excludes;
 
     public List<String> getExcludes() {
@@ -44,7 +44,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * An exclusive list of patches to be updated. These are the only patches that will be installed using 'zypper patch patch:' command. This field must not be used with any other patch configuration fields.
      * 
      */
-    @InputImport(name="exclusivePatches", required=true)
+    @Import(name="exclusivePatches", required=true)
       private final List<String> exclusivePatches;
 
     public List<String> getExclusivePatches() {
@@ -55,7 +55,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * Install only patches with these severities. Common severities include critical, important, moderate, and low.
      * 
      */
-    @InputImport(name="severities", required=true)
+    @Import(name="severities", required=true)
       private final List<String> severities;
 
     public List<String> getSeverities() {
@@ -66,7 +66,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * Adds the `--with-optional` flag to `zypper patch`.
      * 
      */
-    @InputImport(name="withOptional", required=true)
+    @Import(name="withOptional", required=true)
       private final Boolean withOptional;
 
     public Boolean getWithOptional() {
@@ -77,7 +77,7 @@ public final class ZypperSettingsResponse extends io.pulumi.resources.InvokeArgs
      * Adds the `--with-update` flag, to `zypper patch`.
      * 
      */
-    @InputImport(name="withUpdate", required=true)
+    @Import(name="withUpdate", required=true)
       private final Boolean withUpdate;
 
     public Boolean getWithUpdate() {

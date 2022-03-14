@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleOptionsResponse {
     /**
      * If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using StartManualTransferRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.
@@ -26,11 +26,11 @@ public final class ScheduleOptionsResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleOptionsResponse(
-        @OutputCustomType.Parameter("disableAutoScheduling") Boolean disableAutoScheduling,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("disableAutoScheduling") Boolean disableAutoScheduling,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.disableAutoScheduling = disableAutoScheduling;
         this.endTime = endTime;
         this.startTime = startTime;

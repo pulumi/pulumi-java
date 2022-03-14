@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DebugOptionsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.WorkerPoolResponse;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentResponse {
     /**
      * The type of cluster manager API to use. If unknown or unspecified, the service will attempt to choose a reasonable default. This should be in the form of the API service name, e.g. "compute.googleapis.com".
@@ -99,25 +99,25 @@ public final class EnvironmentResponse {
      */
     private final String workerZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentResponse(
-        @OutputCustomType.Parameter("clusterManagerApiService") String clusterManagerApiService,
-        @OutputCustomType.Parameter("dataset") String dataset,
-        @OutputCustomType.Parameter("debugOptions") DebugOptionsResponse debugOptions,
-        @OutputCustomType.Parameter("experiments") List<String> experiments,
-        @OutputCustomType.Parameter("flexResourceSchedulingGoal") String flexResourceSchedulingGoal,
-        @OutputCustomType.Parameter("internalExperiments") Map<String,String> internalExperiments,
-        @OutputCustomType.Parameter("sdkPipelineOptions") Map<String,String> sdkPipelineOptions,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
-        @OutputCustomType.Parameter("serviceKmsKeyName") String serviceKmsKeyName,
-        @OutputCustomType.Parameter("serviceOptions") List<String> serviceOptions,
-        @OutputCustomType.Parameter("shuffleMode") String shuffleMode,
-        @OutputCustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
-        @OutputCustomType.Parameter("userAgent") Map<String,String> userAgent,
-        @OutputCustomType.Parameter("version") Map<String,String> version,
-        @OutputCustomType.Parameter("workerPools") List<WorkerPoolResponse> workerPools,
-        @OutputCustomType.Parameter("workerRegion") String workerRegion,
-        @OutputCustomType.Parameter("workerZone") String workerZone) {
+        @CustomType.Parameter("clusterManagerApiService") String clusterManagerApiService,
+        @CustomType.Parameter("dataset") String dataset,
+        @CustomType.Parameter("debugOptions") DebugOptionsResponse debugOptions,
+        @CustomType.Parameter("experiments") List<String> experiments,
+        @CustomType.Parameter("flexResourceSchedulingGoal") String flexResourceSchedulingGoal,
+        @CustomType.Parameter("internalExperiments") Map<String,String> internalExperiments,
+        @CustomType.Parameter("sdkPipelineOptions") Map<String,String> sdkPipelineOptions,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @CustomType.Parameter("serviceKmsKeyName") String serviceKmsKeyName,
+        @CustomType.Parameter("serviceOptions") List<String> serviceOptions,
+        @CustomType.Parameter("shuffleMode") String shuffleMode,
+        @CustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
+        @CustomType.Parameter("userAgent") Map<String,String> userAgent,
+        @CustomType.Parameter("version") Map<String,String> version,
+        @CustomType.Parameter("workerPools") List<WorkerPoolResponse> workerPools,
+        @CustomType.Parameter("workerRegion") String workerRegion,
+        @CustomType.Parameter("workerZone") String workerZone) {
         this.clusterManagerApiService = clusterManagerApiService;
         this.dataset = dataset;
         this.debugOptions = debugOptions;

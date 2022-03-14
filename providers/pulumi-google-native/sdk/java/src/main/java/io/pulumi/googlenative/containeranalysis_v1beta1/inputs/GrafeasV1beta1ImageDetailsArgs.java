@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DerivedArgs;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GrafeasV1beta1ImageDetailsArgs extends io.pulumi.resources.Re
      * Immutable. The child image derived from the base image.
      * 
      */
-    @InputImport(name="derivedImage", required=true)
+    @Import(name="derivedImage", required=true)
       private final Output<DerivedArgs> derivedImage;
 
     public Output<DerivedArgs> getDerivedImage() {

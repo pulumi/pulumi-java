@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.SourceArgs;
@@ -24,7 +24,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * The create time timestamp.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -38,7 +38,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * User-provided description of the source.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * The labels of the source.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -66,7 +66,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * The Source name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * The update time timestamp.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -94,7 +94,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * Vmware type source details.
      * 
      */
-    @OutputExport(name="vmware", type=VmwareSourceDetailsResponse.class, parameters={})
+    @Export(name="vmware", type=VmwareSourceDetailsResponse.class, parameters={})
     private Output<VmwareSourceDetailsResponse> vmware;
 
     /**

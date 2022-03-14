@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationConfigArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).
      * 
      */
-    @InputImport(name="bigqueryImportKeys", required=true)
+    @Import(name="bigqueryImportKeys", required=true)
       private final Output<Map<String,String>> bigqueryImportKeys;
 
     public Output<Map<String,String>> getBigqueryImportKeys() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Specify this field if your model version performs image object detection (bounding box detection). `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet.
      * 
      */
-    @InputImport(name="boundingPolyConfig")
+    @Import(name="boundingPolyConfig")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> getBoundingPolyConfig() {
@@ -54,7 +54,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Details for calculating evaluation metrics and creating Evaulations. If your model version performs image object detection, you must specify the `boundingBoxEvaluationOptions` field within this configuration. Otherwise, provide an empty object for this configuration.
      * 
      */
-    @InputImport(name="evaluationConfig", required=true)
+    @Import(name="evaluationConfig", required=true)
       private final Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> getEvaluationConfig() {
@@ -65,7 +65,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Optional. Configuration details for evaluation job alerts. Specify this field if you want to receive email alerts if the evaluation job finds that your predictions have low mean average precision during a run.
      * 
      */
-    @InputImport(name="evaluationJobAlertConfig")
+    @Import(name="evaluationJobAlertConfig")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> getEvaluationJobAlertConfig() {
@@ -76,7 +76,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * The maximum number of predictions to sample and save to BigQuery during each evaluation interval. This limit overrides `example_sample_percentage`: even if the service has not sampled enough predictions to fulfill `example_sample_perecentage` during an interval, it stops sampling predictions when it meets this limit.
      * 
      */
-    @InputImport(name="exampleCount", required=true)
+    @Import(name="exampleCount", required=true)
       private final Output<Integer> exampleCount;
 
     public Output<Integer> getExampleCount() {
@@ -87,7 +87,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Fraction of predictions to sample and save to BigQuery during each evaluation interval. For example, 0.1 means 10% of predictions served by your model version get saved to BigQuery.
      * 
      */
-    @InputImport(name="exampleSamplePercentage", required=true)
+    @Import(name="exampleSamplePercentage", required=true)
       private final Output<Double> exampleSamplePercentage;
 
     public Output<Double> getExampleSamplePercentage() {
@@ -98,7 +98,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Optional. Details for human annotation of your data. If you set labelMissingGroundTruth to `true` for this evaluation job, then you must specify this field. If you plan to provide your own ground truth labels, then omit this field. Note that you must create an Instruction resource before you can specify this field. Provide the name of the instruction resource in the `instruction` field within this configuration.
      * 
      */
-    @InputImport(name="humanAnnotationConfig")
+    @Import(name="humanAnnotationConfig")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> getHumanAnnotationConfig() {
@@ -109,7 +109,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Specify this field if your model version performs image classification or general classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.
      * 
      */
-    @InputImport(name="imageClassificationConfig")
+    @Import(name="imageClassificationConfig")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> getImageClassificationConfig() {
@@ -120,7 +120,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Rquired. Details for the sampled prediction input. Within this configuration, there are requirements for several fields: * `dataType` must be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`, `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION` (image object detection). * If your machine learning model performs classification, you must specify `classificationMetadata.isMultiLabel`. * You must specify `bigquerySource` (not `gcsSource`).
      * 
      */
-    @InputImport(name="inputConfig")
+    @Import(name="inputConfig")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1InputConfigArgs> getInputConfig() {
@@ -131,7 +131,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
      * Specify this field if your model version performs text classification. `annotationSpecSet` in this configuration must match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration must match `classificationMetadata.isMultiLabel` in input_config.
      * 
      */
-    @InputImport(name="textClassificationConfig")
+    @Import(name="textClassificationConfig")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig;
 
     public Output<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> getTextClassificationConfig() {

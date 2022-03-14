@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
     /**
      * The estimated anonymity for these quasi-identifier values.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(
-        @OutputCustomType.Parameter("estimatedAnonymity") String estimatedAnonymity,
-        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        @CustomType.Parameter("estimatedAnonymity") String estimatedAnonymity,
+        @CustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
         this.estimatedAnonymity = estimatedAnonymity;
         this.quasiIdsValues = quasiIdsValues;
     }

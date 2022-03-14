@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InterconnectAttachmentPrivateInfoResponse {
     /**
      * 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
@@ -15,8 +15,8 @@ public final class InterconnectAttachmentPrivateInfoResponse {
      */
     private final Integer tag8021q;
 
-    @OutputCustomType.Constructor
-    private InterconnectAttachmentPrivateInfoResponse(@OutputCustomType.Parameter("tag8021q") Integer tag8021q) {
+    @CustomType.Constructor
+    private InterconnectAttachmentPrivateInfoResponse(@CustomType.Parameter("tag8021q") Integer tag8021q) {
         this.tag8021q = tag8021q;
     }
 

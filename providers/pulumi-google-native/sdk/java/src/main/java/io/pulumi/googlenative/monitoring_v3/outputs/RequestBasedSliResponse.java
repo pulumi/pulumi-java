@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.DistributionCutResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.TimeSeriesRatioResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RequestBasedSliResponse {
     /**
      * distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
@@ -21,10 +21,10 @@ public final class RequestBasedSliResponse {
      */
     private final TimeSeriesRatioResponse goodTotalRatio;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RequestBasedSliResponse(
-        @OutputCustomType.Parameter("distributionCut") DistributionCutResponse distributionCut,
-        @OutputCustomType.Parameter("goodTotalRatio") TimeSeriesRatioResponse goodTotalRatio) {
+        @CustomType.Parameter("distributionCut") DistributionCutResponse distributionCut,
+        @CustomType.Parameter("goodTotalRatio") TimeSeriesRatioResponse goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }

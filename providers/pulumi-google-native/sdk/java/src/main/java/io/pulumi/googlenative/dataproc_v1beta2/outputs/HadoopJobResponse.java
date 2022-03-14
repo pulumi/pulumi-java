@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.LoggingConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HadoopJobResponse {
     /**
      * Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
@@ -53,16 +53,16 @@ public final class HadoopJobResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HadoopJobResponse(
-        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
-        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
-        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
-        @OutputCustomType.Parameter("mainClass") String mainClass,
-        @OutputCustomType.Parameter("mainJarFileUri") String mainJarFileUri,
-        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
+        @CustomType.Parameter("archiveUris") List<String> archiveUris,
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("fileUris") List<String> fileUris,
+        @CustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @CustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @CustomType.Parameter("mainClass") String mainClass,
+        @CustomType.Parameter("mainJarFileUri") String mainJarFileUri,
+        @CustomType.Parameter("properties") Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VpnGatewayInfoResponse {
     /**
      * Name of a VPN gateway.
@@ -40,14 +40,14 @@ public final class VpnGatewayInfoResponse {
      */
     private final String vpnTunnelUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnGatewayInfoResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("vpnTunnelUri") String vpnTunnelUri) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("vpnTunnelUri") String vpnTunnelUri) {
         this.displayName = displayName;
         this.ipAddress = ipAddress;
         this.networkUri = networkUri;

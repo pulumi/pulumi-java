@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
      * The resource that the security policy is attached to.
      * 
      */
-    @InputImport(name="attachmentId", required=true)
+    @Import(name="attachmentId", required=true)
       private final String attachmentId;
 
     public String getAttachmentId() {
@@ -27,7 +27,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
      * The display name of the security policy of the association.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -38,7 +38,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
      * The name for an association.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -49,7 +49,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
      * The security policy ID of the association.
      * 
      */
-    @InputImport(name="securityPolicyId", required=true)
+    @Import(name="securityPolicyId", required=true)
       private final String securityPolicyId;
 
     public String getSecurityPolicyId() {

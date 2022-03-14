@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Network on which the workers are created. "default" network is used if empty.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -33,7 +33,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Project id containing the defined network and subnetwork. For a peered VPC, this will be the same as the project_id in which the workers are created. For a shared VPC, this will be the project sharing the network with the project_id project in which workers will be created. For custom workers with no VPC, this will be the same as project_id.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -44,7 +44,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {

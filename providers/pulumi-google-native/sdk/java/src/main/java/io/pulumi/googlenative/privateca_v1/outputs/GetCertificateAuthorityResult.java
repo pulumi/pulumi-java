@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.AccessUrlsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateConfigResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateDescriptionResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateAuthorityResult {
     /**
      * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
@@ -102,25 +102,25 @@ public final class GetCertificateAuthorityResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateAuthorityResult(
-        @OutputCustomType.Parameter("accessUrls") AccessUrlsResponse accessUrls,
-        @OutputCustomType.Parameter("caCertificateDescriptions") List<CertificateDescriptionResponse> caCertificateDescriptions,
-        @OutputCustomType.Parameter("config") CertificateConfigResponse config,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("gcsBucket") String gcsBucket,
-        @OutputCustomType.Parameter("keySpec") KeyVersionSpecResponse keySpec,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lifetime") String lifetime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pemCaCertificates") List<String> pemCaCertificates,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("subordinateConfig") SubordinateConfigResponse subordinateConfig,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("accessUrls") AccessUrlsResponse accessUrls,
+        @CustomType.Parameter("caCertificateDescriptions") List<CertificateDescriptionResponse> caCertificateDescriptions,
+        @CustomType.Parameter("config") CertificateConfigResponse config,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("gcsBucket") String gcsBucket,
+        @CustomType.Parameter("keySpec") KeyVersionSpecResponse keySpec,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lifetime") String lifetime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pemCaCertificates") List<String> pemCaCertificates,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subordinateConfig") SubordinateConfigResponse subordinateConfig,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.accessUrls = accessUrls;
         this.caCertificateDescriptions = caCertificateDescriptions;
         this.config = config;

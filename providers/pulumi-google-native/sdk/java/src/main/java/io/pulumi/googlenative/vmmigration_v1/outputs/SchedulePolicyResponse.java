@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchedulePolicyResponse {
     /**
      * The idle duration between replication stages.
@@ -21,10 +21,10 @@ public final class SchedulePolicyResponse {
      */
     private final Boolean skipOsAdaptation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchedulePolicyResponse(
-        @OutputCustomType.Parameter("idleDuration") String idleDuration,
-        @OutputCustomType.Parameter("skipOsAdaptation") Boolean skipOsAdaptation) {
+        @CustomType.Parameter("idleDuration") String idleDuration,
+        @CustomType.Parameter("skipOsAdaptation") Boolean skipOsAdaptation) {
         this.idleDuration = idleDuration;
         this.skipOsAdaptation = skipOsAdaptation;
     }

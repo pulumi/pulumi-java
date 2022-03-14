@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EditAtomResponse {
     /**
      * End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.
@@ -31,12 +31,12 @@ public final class EditAtomResponse {
      */
     private final String startTimeOffset;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EditAtomResponse(
-        @OutputCustomType.Parameter("endTimeOffset") String endTimeOffset,
-        @OutputCustomType.Parameter("inputs") List<String> inputs,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset) {
+        @CustomType.Parameter("endTimeOffset") String endTimeOffset,
+        @CustomType.Parameter("inputs") List<String> inputs,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("startTimeOffset") String startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         this.inputs = inputs;
         this.key = key;

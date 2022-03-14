@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebase_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetIosAppArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIosAppArgs Empty = new GetIosAppArgs();
 
-    @InputImport(name="iosAppId", required=true)
+    @Import(name="iosAppId", required=true)
       private final String iosAppId;
 
     public String getIosAppId() {
         return this.iosAppId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PullRequestFilterResponse {
     /**
      * Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
@@ -26,11 +26,11 @@ public final class PullRequestFilterResponse {
      */
     private final Boolean invertRegex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PullRequestFilterResponse(
-        @OutputCustomType.Parameter("branch") String branch,
-        @OutputCustomType.Parameter("commentControl") String commentControl,
-        @OutputCustomType.Parameter("invertRegex") Boolean invertRegex) {
+        @CustomType.Parameter("branch") String branch,
+        @CustomType.Parameter("commentControl") String commentControl,
+        @CustomType.Parameter("invertRegex") Boolean invertRegex) {
         this.branch = branch;
         this.commentControl = commentControl;
         this.invertRegex = invertRegex;

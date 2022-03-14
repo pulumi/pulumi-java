@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * Hostname for the SSH tunnel.
      * 
      */
-    @InputImport(name="hostname", required=true)
+    @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -34,7 +34,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * Input only. SSH password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -45,7 +45,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * Port for the SSH tunnel, default value is 22.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -56,7 +56,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * Input only. SSH private key.
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -67,7 +67,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
      * Username for the SSH tunnel.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

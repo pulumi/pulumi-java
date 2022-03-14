@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
      * The login form URL of the website.
      * 
      */
-    @InputImport(name="loginUrl", required=true)
+    @Import(name="loginUrl", required=true)
       private final String loginUrl;
 
     public String getLoginUrl() {
@@ -31,7 +31,7 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
      * Input only. The password of the custom account. The credential is stored encrypted and not returned in any response nor included in audit logs.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -42,7 +42,7 @@ public final class CustomAccountResponse extends io.pulumi.resources.InvokeArgs 
      * The user name of the custom account.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

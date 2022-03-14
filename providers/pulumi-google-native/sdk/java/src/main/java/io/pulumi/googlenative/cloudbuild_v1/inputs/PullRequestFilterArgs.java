@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.enums.PullRequestFilterCommentControl;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
@@ -35,7 +35,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * Configure builds to run whether a repository owner or collaborator need to comment `/gcbrun`.
      * 
      */
-    @InputImport(name="commentControl")
+    @Import(name="commentControl")
       private final @Nullable Output<PullRequestFilterCommentControl> commentControl;
 
     public Output<PullRequestFilterCommentControl> getCommentControl() {
@@ -46,7 +46,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
      * If true, branches that do NOT match the git_ref will trigger a build.
      * 
      */
-    @InputImport(name="invertRegex")
+    @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
     public Output<Boolean> getInvertRegex() {

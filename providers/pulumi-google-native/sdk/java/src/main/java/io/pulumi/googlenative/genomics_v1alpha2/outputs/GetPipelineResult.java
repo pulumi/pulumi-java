@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.DockerExecutorResponse;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.PipelineParameterResponse;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.PipelineResourcesResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineResult {
     /**
      * User-specified description.
@@ -54,16 +54,16 @@ public final class GetPipelineResult {
      */
     private final PipelineResourcesResponse resources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("docker") DockerExecutorResponse docker,
-        @OutputCustomType.Parameter("inputParameters") List<PipelineParameterResponse> inputParameters,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputParameters") List<PipelineParameterResponse> outputParameters,
-        @OutputCustomType.Parameter("pipelineId") String pipelineId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("resources") PipelineResourcesResponse resources) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("docker") DockerExecutorResponse docker,
+        @CustomType.Parameter("inputParameters") List<PipelineParameterResponse> inputParameters,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputParameters") List<PipelineParameterResponse> outputParameters,
+        @CustomType.Parameter("pipelineId") String pipelineId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("resources") PipelineResourcesResponse resources) {
         this.description = description;
         this.docker = docker;
         this.inputParameters = inputParameters;

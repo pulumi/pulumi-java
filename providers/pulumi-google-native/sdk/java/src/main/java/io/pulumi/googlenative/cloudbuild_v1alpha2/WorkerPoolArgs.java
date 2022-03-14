@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1alpha2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.inputs.NetworkConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.inputs.WorkerConfigArgs;
 import java.lang.String;
@@ -20,14 +20,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Network configuration for the `WorkerPool`.
      * 
      */
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
     public Output<NetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -38,7 +38,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
@@ -49,14 +49,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Worker configuration for the `WorkerPool`.
      * 
      */
-    @InputImport(name="workerConfig")
+    @Import(name="workerConfig")
       private final @Nullable Output<WorkerConfigArgs> workerConfig;
 
     public Output<WorkerConfigArgs> getWorkerConfig() {
         return this.workerConfig == null ? Output.empty() : this.workerConfig;
     }
 
-    @InputImport(name="workerPoolId", required=true)
+    @Import(name="workerPoolId", required=true)
       private final Output<String> workerPoolId;
 
     public Output<String> getWorkerPoolId() {

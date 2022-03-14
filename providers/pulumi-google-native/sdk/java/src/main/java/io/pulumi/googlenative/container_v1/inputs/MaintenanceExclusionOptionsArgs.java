@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.enums.MaintenanceExclusionOptionsScope;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MaintenanceExclusionOptionsArgs extends io.pulumi.resources.R
      * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<MaintenanceExclusionOptionsScope> scope;
 
     public Output<MaintenanceExclusionOptionsScope> getScope() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExplainQueryStepResponse {
     /**
      * Machine-readable operation type.
@@ -21,10 +21,10 @@ public final class ExplainQueryStepResponse {
      */
     private final List<String> substeps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExplainQueryStepResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("substeps") List<String> substeps) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("substeps") List<String> substeps) {
         this.kind = kind;
         this.substeps = substeps;
     }

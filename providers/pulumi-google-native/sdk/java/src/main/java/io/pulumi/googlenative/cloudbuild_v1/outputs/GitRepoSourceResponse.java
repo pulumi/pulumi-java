@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GitRepoSourceResponse {
     /**
      * The branch or tag to use. Must start with "refs/" (required).
@@ -25,11 +25,11 @@ public final class GitRepoSourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitRepoSourceResponse(
-        @OutputCustomType.Parameter("ref") String ref,
-        @OutputCustomType.Parameter("repoType") String repoType,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("ref") String ref,
+        @CustomType.Parameter("repoType") String repoType,
+        @CustomType.Parameter("uri") String uri) {
         this.ref = ref;
         this.repoType = repoType;
         this.uri = uri;

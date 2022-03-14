@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1beta1.inputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
      * The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.
      * 
      */
-    @InputImport(name="dsRecords", required=true)
+    @Import(name="dsRecords", required=true)
       private final List<DsRecordResponse> dsRecords;
 
     public List<DsRecordResponse> getDsRecords() {
@@ -33,7 +33,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
      * The state of DS records for this domain. Used to enable or disable automatic DNSSEC.
      * 
      */
-    @InputImport(name="dsState", required=true)
+    @Import(name="dsState", required=true)
       private final String dsState;
 
     public String getDsState() {
@@ -44,7 +44,7 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
      * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format. This field is automatically populated with the name servers assigned to the Google Domains DNS zone.
      * 
      */
-    @InputImport(name="nameServers", required=true)
+    @Import(name="nameServers", required=true)
       private final List<String> nameServers;
 
     public List<String> getNameServers() {

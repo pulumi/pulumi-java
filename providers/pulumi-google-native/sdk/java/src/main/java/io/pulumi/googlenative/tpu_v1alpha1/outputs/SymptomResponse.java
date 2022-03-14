@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SymptomResponse {
     /**
      * Timestamp when the Symptom is created.
@@ -30,12 +30,12 @@ public final class SymptomResponse {
      */
     private final String workerId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SymptomResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("details") String details,
-        @OutputCustomType.Parameter("symptomType") String symptomType,
-        @OutputCustomType.Parameter("workerId") String workerId) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("details") String details,
+        @CustomType.Parameter("symptomType") String symptomType,
+        @CustomType.Parameter("workerId") String workerId) {
         this.createTime = createTime;
         this.details = details;
         this.symptomType = symptomType;

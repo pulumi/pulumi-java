@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.appengine_v1beta.outputs.CpuUtilizationResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.CustomMetricResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.DiskUtilizationResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutomaticScalingResponse {
     /**
      * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
@@ -88,22 +88,22 @@ public final class AutomaticScalingResponse {
      */
     private final StandardSchedulerSettingsResponse standardSchedulerSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomaticScalingResponse(
-        @OutputCustomType.Parameter("coolDownPeriod") String coolDownPeriod,
-        @OutputCustomType.Parameter("cpuUtilization") CpuUtilizationResponse cpuUtilization,
-        @OutputCustomType.Parameter("customMetrics") List<CustomMetricResponse> customMetrics,
-        @OutputCustomType.Parameter("diskUtilization") DiskUtilizationResponse diskUtilization,
-        @OutputCustomType.Parameter("maxConcurrentRequests") Integer maxConcurrentRequests,
-        @OutputCustomType.Parameter("maxIdleInstances") Integer maxIdleInstances,
-        @OutputCustomType.Parameter("maxPendingLatency") String maxPendingLatency,
-        @OutputCustomType.Parameter("maxTotalInstances") Integer maxTotalInstances,
-        @OutputCustomType.Parameter("minIdleInstances") Integer minIdleInstances,
-        @OutputCustomType.Parameter("minPendingLatency") String minPendingLatency,
-        @OutputCustomType.Parameter("minTotalInstances") Integer minTotalInstances,
-        @OutputCustomType.Parameter("networkUtilization") NetworkUtilizationResponse networkUtilization,
-        @OutputCustomType.Parameter("requestUtilization") RequestUtilizationResponse requestUtilization,
-        @OutputCustomType.Parameter("standardSchedulerSettings") StandardSchedulerSettingsResponse standardSchedulerSettings) {
+        @CustomType.Parameter("coolDownPeriod") String coolDownPeriod,
+        @CustomType.Parameter("cpuUtilization") CpuUtilizationResponse cpuUtilization,
+        @CustomType.Parameter("customMetrics") List<CustomMetricResponse> customMetrics,
+        @CustomType.Parameter("diskUtilization") DiskUtilizationResponse diskUtilization,
+        @CustomType.Parameter("maxConcurrentRequests") Integer maxConcurrentRequests,
+        @CustomType.Parameter("maxIdleInstances") Integer maxIdleInstances,
+        @CustomType.Parameter("maxPendingLatency") String maxPendingLatency,
+        @CustomType.Parameter("maxTotalInstances") Integer maxTotalInstances,
+        @CustomType.Parameter("minIdleInstances") Integer minIdleInstances,
+        @CustomType.Parameter("minPendingLatency") String minPendingLatency,
+        @CustomType.Parameter("minTotalInstances") Integer minTotalInstances,
+        @CustomType.Parameter("networkUtilization") NetworkUtilizationResponse networkUtilization,
+        @CustomType.Parameter("requestUtilization") RequestUtilizationResponse requestUtilization,
+        @CustomType.Parameter("standardSchedulerSettings") StandardSchedulerSettingsResponse standardSchedulerSettings) {
         this.coolDownPeriod = coolDownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.customMetrics = customMetrics;

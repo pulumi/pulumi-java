@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2SecretKeySelectorResponse {
     /**
      * The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a different project.
@@ -20,10 +20,10 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2SecretKeySelectorResponse(
-        @OutputCustomType.Parameter("secret") String secret,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("secret") String secret,
+        @CustomType.Parameter("version") String version) {
         this.secret = secret;
         this.version = version;
     }

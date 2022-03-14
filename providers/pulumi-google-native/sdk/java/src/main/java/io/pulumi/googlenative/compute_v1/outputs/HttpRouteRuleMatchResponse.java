@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.HttpHeaderMatchResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpQueryParameterMatchResponse;
 import io.pulumi.googlenative.compute_v1.outputs.MetadataFilterResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpRouteRuleMatchResponse {
     /**
      * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. fullPathMatch must be from 1 to 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.
@@ -50,15 +50,15 @@ public final class HttpRouteRuleMatchResponse {
      */
     private final String regexMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRouteRuleMatchResponse(
-        @OutputCustomType.Parameter("fullPathMatch") String fullPathMatch,
-        @OutputCustomType.Parameter("headerMatches") List<HttpHeaderMatchResponse> headerMatches,
-        @OutputCustomType.Parameter("ignoreCase") Boolean ignoreCase,
-        @OutputCustomType.Parameter("metadataFilters") List<MetadataFilterResponse> metadataFilters,
-        @OutputCustomType.Parameter("prefixMatch") String prefixMatch,
-        @OutputCustomType.Parameter("queryParameterMatches") List<HttpQueryParameterMatchResponse> queryParameterMatches,
-        @OutputCustomType.Parameter("regexMatch") String regexMatch) {
+        @CustomType.Parameter("fullPathMatch") String fullPathMatch,
+        @CustomType.Parameter("headerMatches") List<HttpHeaderMatchResponse> headerMatches,
+        @CustomType.Parameter("ignoreCase") Boolean ignoreCase,
+        @CustomType.Parameter("metadataFilters") List<MetadataFilterResponse> metadataFilters,
+        @CustomType.Parameter("prefixMatch") String prefixMatch,
+        @CustomType.Parameter("queryParameterMatches") List<HttpQueryParameterMatchResponse> queryParameterMatches,
+        @CustomType.Parameter("regexMatch") String regexMatch) {
         this.fullPathMatch = fullPathMatch;
         this.headerMatches = headerMatches;
         this.ignoreCase = ignoreCase;

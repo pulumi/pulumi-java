@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RequestUtilizationResponse {
     /**
      * Target number of concurrent requests.
@@ -20,10 +20,10 @@ public final class RequestUtilizationResponse {
      */
     private final Integer targetRequestCountPerSecond;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RequestUtilizationResponse(
-        @OutputCustomType.Parameter("targetConcurrentRequests") Integer targetConcurrentRequests,
-        @OutputCustomType.Parameter("targetRequestCountPerSecond") Integer targetRequestCountPerSecond) {
+        @CustomType.Parameter("targetConcurrentRequests") Integer targetConcurrentRequests,
+        @CustomType.Parameter("targetRequestCountPerSecond") Integer targetRequestCountPerSecond) {
         this.targetConcurrentRequests = targetConcurrentRequests;
         this.targetRequestCountPerSecond = targetRequestCountPerSecond;
     }

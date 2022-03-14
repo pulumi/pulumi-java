@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse {
     /**
      * A list of cascading if-else conditions.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse 
      */
     private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse(@OutputCustomType.Parameter("cases") List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse(@CustomType.Parameter("cases") List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases) {
         this.cases = cases;
     }
 

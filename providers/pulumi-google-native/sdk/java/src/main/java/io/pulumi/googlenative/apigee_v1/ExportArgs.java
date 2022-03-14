@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1DateRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
      * 
      */
-    @InputImport(name="csvDelimiter")
+    @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
 
     public Output<String> getCsvDelimiter() {
@@ -30,7 +30,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the preconfigured datastore.
      * 
      */
-    @InputImport(name="datastoreName", required=true)
+    @Import(name="datastoreName", required=true)
       private final Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
@@ -41,7 +41,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Date range of the data to export.
      * 
      */
-    @InputImport(name="dateRange", required=true)
+    @Import(name="dateRange", required=true)
       private final Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
 
     public Output<GoogleCloudApigeeV1DateRangeArgs> getDateRange() {
@@ -52,14 +52,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Description of the export job.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -70,14 +70,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Display name of the export job.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -88,7 +88,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Output format of the export. Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the `csvDelimiter` property.
      * 
      */
-    @InputImport(name="outputFormat")
+    @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
     public Output<String> getOutputFormat() {

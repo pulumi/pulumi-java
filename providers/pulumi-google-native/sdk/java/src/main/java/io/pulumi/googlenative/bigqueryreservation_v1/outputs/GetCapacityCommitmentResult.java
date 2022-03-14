@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigqueryreservation_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigqueryreservation_v1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCapacityCommitmentResult {
     /**
      * The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
@@ -51,16 +51,16 @@ public final class GetCapacityCommitmentResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCapacityCommitmentResult(
-        @OutputCustomType.Parameter("commitmentEndTime") String commitmentEndTime,
-        @OutputCustomType.Parameter("commitmentStartTime") String commitmentStartTime,
-        @OutputCustomType.Parameter("failureStatus") StatusResponse failureStatus,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("plan") String plan,
-        @OutputCustomType.Parameter("renewalPlan") String renewalPlan,
-        @OutputCustomType.Parameter("slotCount") String slotCount,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("commitmentEndTime") String commitmentEndTime,
+        @CustomType.Parameter("commitmentStartTime") String commitmentStartTime,
+        @CustomType.Parameter("failureStatus") StatusResponse failureStatus,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("plan") String plan,
+        @CustomType.Parameter("renewalPlan") String renewalPlan,
+        @CustomType.Parameter("slotCount") String slotCount,
+        @CustomType.Parameter("state") String state) {
         this.commitmentEndTime = commitmentEndTime;
         this.commitmentStartTime = commitmentStartTime;
         this.failureStatus = failureStatus;

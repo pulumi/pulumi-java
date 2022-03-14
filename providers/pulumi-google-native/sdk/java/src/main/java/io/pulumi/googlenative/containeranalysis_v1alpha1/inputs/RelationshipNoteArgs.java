@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.RelationshipNoteType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
      * The type of relationship between the source and target SPDX elements
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<RelationshipNoteType> type;
 
     public Output<RelationshipNoteType> getType() {

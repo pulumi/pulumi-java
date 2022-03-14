@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3EventInputResponse {
     /**
      * Name of the event.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse {
      */
     private final String event;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3EventInputResponse(@OutputCustomType.Parameter("event") String event) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3EventInputResponse(@CustomType.Parameter("event") String event) {
         this.event = event;
     }
 

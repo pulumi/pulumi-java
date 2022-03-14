@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionStatesItem;
 import io.pulumi.googlenative.storagetransfer_v1.enums.LoggingConfigLogActionsItem;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
      * 
      */
-    @InputImport(name="enableOnpremGcsTransferLogs")
+    @Import(name="enableOnpremGcsTransferLogs")
       private final @Nullable Output<Boolean> enableOnpremGcsTransferLogs;
 
     public Output<Boolean> getEnableOnpremGcsTransferLogs() {
@@ -36,7 +36,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
      */
-    @InputImport(name="logActionStates")
+    @Import(name="logActionStates")
       private final @Nullable Output<List<LoggingConfigLogActionStatesItem>> logActionStates;
 
     public Output<List<LoggingConfigLogActionStatesItem>> getLogActionStates() {
@@ -47,7 +47,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
      */
-    @InputImport(name="logActions")
+    @Import(name="logActions")
       private final @Nullable Output<List<LoggingConfigLogActionsItem>> logActions;
 
     public Output<List<LoggingConfigLogActionsItem>> getLogActions() {

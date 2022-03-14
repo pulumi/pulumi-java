@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse {
     /**
      * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
@@ -26,11 +26,11 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
      */
     private final String answerAggregationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse(
-        @OutputCustomType.Parameter("allowMultiLabel") Boolean allowMultiLabel,
-        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
-        @OutputCustomType.Parameter("answerAggregationType") String answerAggregationType) {
+        @CustomType.Parameter("allowMultiLabel") Boolean allowMultiLabel,
+        @CustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @CustomType.Parameter("answerAggregationType") String answerAggregationType) {
         this.allowMultiLabel = allowMultiLabel;
         this.annotationSpecSet = annotationSpecSet;
         this.answerAggregationType = answerAggregationType;

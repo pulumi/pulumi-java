@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
      * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-speech/docs/ssml).
      * 
      */
-    @InputImport(name="ssml")
+    @Import(name="ssml")
       private final @Nullable Output<String> ssml;
 
     public Output<String> getSsml() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextA
      * The raw text to be synthesized.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<String> text;
 
     public Output<String> getText() {

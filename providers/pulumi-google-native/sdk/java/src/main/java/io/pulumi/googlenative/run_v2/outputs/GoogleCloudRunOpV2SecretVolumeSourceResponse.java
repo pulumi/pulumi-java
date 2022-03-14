@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2VersionToPathResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
     /**
      * Integer representation of mode bits to use on created files by default. Must be a value between 0000 and 0777 (octal), defaulting to 0644. Directories within the path are not affected by this setting. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. This might be in conflict with other options that affect the file mode, like fsGroup, and as a result, other mode bits could be set.
@@ -28,11 +28,11 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2SecretVolumeSourceResponse(
-        @OutputCustomType.Parameter("defaultMode") Integer defaultMode,
-        @OutputCustomType.Parameter("items") List<GoogleCloudRunOpV2VersionToPathResponse> items,
-        @OutputCustomType.Parameter("secret") String secret) {
+        @CustomType.Parameter("defaultMode") Integer defaultMode,
+        @CustomType.Parameter("items") List<GoogleCloudRunOpV2VersionToPathResponse> items,
+        @CustomType.Parameter("secret") String secret) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.secret = secret;

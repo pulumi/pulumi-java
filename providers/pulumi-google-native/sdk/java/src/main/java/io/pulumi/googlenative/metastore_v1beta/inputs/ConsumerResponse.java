@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConsumerResponse extends io.pulumi.resources.InvokeArgs {
      * The URI of the endpoint used to access the metastore service.
      * 
      */
-    @InputImport(name="endpointUri", required=true)
+    @Import(name="endpointUri", required=true)
       private final String endpointUri;
 
     public String getEndpointUri() {
@@ -31,7 +31,7 @@ public final class ConsumerResponse extends io.pulumi.resources.InvokeArgs {
      * The subnetwork of the customer project from which an IP address is reserved and used as the Dataproc Metastore service's endpoint. It is accessible to hosts in the subnet and to all hosts in a subnet in the same region and same network. There must be at least one IP address available in the subnet's primary range. The subnet is specified in the following form:`projects/{project_number}/regions/{region_id}/subnetworks/{subnetwork_id}
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {

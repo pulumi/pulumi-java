@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkservices_v1beta1.inputs.MetadataLabelMatcherArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
      * The matcher is based on node metadata presented by xDS clients.
      * 
      */
-    @InputImport(name="metadataLabelMatcher")
+    @Import(name="metadataLabelMatcher")
       private final @Nullable Output<MetadataLabelMatcherArgs> metadataLabelMatcher;
 
     public Output<MetadataLabelMatcherArgs> getMetadataLabelMatcher() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ThresholdResponse {
     /**
      * The state color for this threshold. Color is not allowed in a XyChart.
@@ -36,13 +36,13 @@ public final class ThresholdResponse {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThresholdResponse(
-        @OutputCustomType.Parameter("color") String color,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("targetAxis") String targetAxis,
-        @OutputCustomType.Parameter("value") Double value) {
+        @CustomType.Parameter("color") String color,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("targetAxis") String targetAxis,
+        @CustomType.Parameter("value") Double value) {
         this.color = color;
         this.direction = direction;
         this.label = label;

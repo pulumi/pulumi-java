@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.retail_v2alpha.enums.GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs ext
      * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode;
 
     public Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> getMode() {

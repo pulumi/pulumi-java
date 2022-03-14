@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.LatencyDistributionResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.StatusResponse;
@@ -24,7 +24,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The reason probing was aborted.
      * 
      */
-    @InputImport(name="abortCause", required=true)
+    @Import(name="abortCause", required=true)
       private final String abortCause;
 
     public String getAbortCause() {
@@ -35,7 +35,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The source and destination endpoints derived from the test input and used for active probing.
      * 
      */
-    @InputImport(name="endpointInfo", required=true)
+    @Import(name="endpointInfo", required=true)
       private final EndpointInfoResponse endpointInfo;
 
     public EndpointInfoResponse getEndpointInfo() {
@@ -46,7 +46,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Details about an internal failure or the cancellation of active probing.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final StatusResponse error;
 
     public StatusResponse getError() {
@@ -57,7 +57,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Latency as measured by active probing in one direction: from the source to the destination endpoint.
      * 
      */
-    @InputImport(name="probingLatency", required=true)
+    @Import(name="probingLatency", required=true)
       private final LatencyDistributionResponse probingLatency;
 
     public LatencyDistributionResponse getProbingLatency() {
@@ -68,7 +68,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The overall result of active probing.
      * 
      */
-    @InputImport(name="result", required=true)
+    @Import(name="result", required=true)
       private final String result;
 
     public String getResult() {
@@ -79,7 +79,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Number of probes sent.
      * 
      */
-    @InputImport(name="sentProbeCount", required=true)
+    @Import(name="sentProbeCount", required=true)
       private final Integer sentProbeCount;
 
     public Integer getSentProbeCount() {
@@ -90,7 +90,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Number of probes that reached the destination.
      * 
      */
-    @InputImport(name="successfulProbeCount", required=true)
+    @Import(name="successfulProbeCount", required=true)
       private final Integer successfulProbeCount;
 
     public Integer getSuccessfulProbeCount() {
@@ -101,7 +101,7 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The time that reachability was assessed through active probing.
      * 
      */
-    @InputImport(name="verifyTime", required=true)
+    @Import(name="verifyTime", required=true)
       private final String verifyTime;
 
     public String getVerifyTime() {

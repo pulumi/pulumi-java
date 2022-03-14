@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IndividualOutcomeResponse {
     /**
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
@@ -24,12 +24,12 @@ public final class IndividualOutcomeResponse {
     private final DurationResponse runDuration;
     private final String stepId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndividualOutcomeResponse(
-        @OutputCustomType.Parameter("multistepNumber") Integer multistepNumber,
-        @OutputCustomType.Parameter("outcomeSummary") String outcomeSummary,
-        @OutputCustomType.Parameter("runDuration") DurationResponse runDuration,
-        @OutputCustomType.Parameter("stepId") String stepId) {
+        @CustomType.Parameter("multistepNumber") Integer multistepNumber,
+        @CustomType.Parameter("outcomeSummary") String outcomeSummary,
+        @CustomType.Parameter("runDuration") DurationResponse runDuration,
+        @CustomType.Parameter("stepId") String stepId) {
         this.multistepNumber = multistepNumber;
         this.outcomeSummary = outcomeSummary;
         this.runDuration = runDuration;

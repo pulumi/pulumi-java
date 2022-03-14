@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChannelArgs Empty = new ChannelArgs();
 
-    @InputImport(name="channelId", required=true)
+    @Import(name="channelId", required=true)
       private final Output<String> channelId;
 
     public Output<String> getChannelId() {
@@ -27,7 +27,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
      * 
      */
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
@@ -38,7 +38,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Text labels used for extra metadata and/or filtering.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -49,14 +49,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -67,14 +67,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
      * 
      */
-    @InputImport(name="retainedReleaseCount")
+    @Import(name="retainedReleaseCount")
       private final @Nullable Output<Integer> retainedReleaseCount;
 
     public Output<Integer> getRetainedReleaseCount() {
         return this.retainedReleaseCount == null ? Output.empty() : this.retainedReleaseCount;
     }
 
-    @InputImport(name="siteId", required=true)
+    @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
     public Output<String> getSiteId() {
@@ -85,7 +85,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
     public Output<String> getTtl() {

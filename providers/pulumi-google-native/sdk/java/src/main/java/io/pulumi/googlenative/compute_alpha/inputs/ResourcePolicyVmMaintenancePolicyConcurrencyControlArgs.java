@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
 
     public static final ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs Empty = new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs();
 
-    @InputImport(name="concurrencyLimit")
+    @Import(name="concurrencyLimit")
       private final @Nullable Output<Integer> concurrencyLimit;
 
     public Output<Integer> getConcurrencyLimit() {

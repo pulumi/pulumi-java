@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1RevenueShareRangeResponse {
     /**
      * Ending value of the range. Set to 0 or `null` for the last range of values.
@@ -26,11 +26,11 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse {
      */
     private final String start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1RevenueShareRangeResponse(
-        @OutputCustomType.Parameter("end") String end,
-        @OutputCustomType.Parameter("sharePercentage") Double sharePercentage,
-        @OutputCustomType.Parameter("start") String start) {
+        @CustomType.Parameter("end") String end,
+        @CustomType.Parameter("sharePercentage") Double sharePercentage,
+        @CustomType.Parameter("start") String start) {
         this.end = end;
         this.sharePercentage = sharePercentage;
         this.start = start;

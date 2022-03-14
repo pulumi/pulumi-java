@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
      * Enable boosting high frequency components. The default is `false`.
      * 
      */
-    @InputImport(name="highBoost", required=true)
+    @Import(name="highBoost", required=true)
       private final Boolean highBoost;
 
     public Boolean getHighBoost() {
@@ -32,7 +32,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
      * Enable boosting low frequency components. The default is `false`.
      * 
      */
-    @InputImport(name="lowBoost", required=true)
+    @Import(name="lowBoost", required=true)
       private final Boolean lowBoost;
 
     public Boolean getLowBoost() {
@@ -43,7 +43,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
      * Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon Echo * 0 disables normalization
      * 
      */
-    @InputImport(name="lufs", required=true)
+    @Import(name="lufs", required=true)
       private final Double lufs;
 
     public Double getLufs() {

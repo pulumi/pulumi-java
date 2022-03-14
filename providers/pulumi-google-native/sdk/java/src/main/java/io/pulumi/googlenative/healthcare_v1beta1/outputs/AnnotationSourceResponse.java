@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.CloudHealthcareSourceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnnotationSourceResponse {
     /**
      * Cloud Healthcare API resource.
@@ -15,8 +15,8 @@ public final class AnnotationSourceResponse {
      */
     private final CloudHealthcareSourceResponse cloudHealthcareSource;
 
-    @OutputCustomType.Constructor
-    private AnnotationSourceResponse(@OutputCustomType.Parameter("cloudHealthcareSource") CloudHealthcareSourceResponse cloudHealthcareSource) {
+    @CustomType.Constructor
+    private AnnotationSourceResponse(@CustomType.Parameter("cloudHealthcareSource") CloudHealthcareSourceResponse cloudHealthcareSource) {
         this.cloudHealthcareSource = cloudHealthcareSource;
     }
 

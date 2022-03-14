@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepCopyFileResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepExecFileResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepExtractArchiveResponse;
@@ -26,7 +26,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * Extracts an archive into the specified directory.
      * 
      */
-    @InputImport(name="archiveExtraction", required=true)
+    @Import(name="archiveExtraction", required=true)
       private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
 
     public SoftwareRecipeStepExtractArchiveResponse getArchiveExtraction() {
@@ -37,7 +37,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * Installs a deb file via dpkg.
      * 
      */
-    @InputImport(name="dpkgInstallation", required=true)
+    @Import(name="dpkgInstallation", required=true)
       private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
 
     public SoftwareRecipeStepInstallDpkgResponse getDpkgInstallation() {
@@ -48,7 +48,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * Copies a file onto the instance.
      * 
      */
-    @InputImport(name="fileCopy", required=true)
+    @Import(name="fileCopy", required=true)
       private final SoftwareRecipeStepCopyFileResponse fileCopy;
 
     public SoftwareRecipeStepCopyFileResponse getFileCopy() {
@@ -59,7 +59,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * Executes an artifact or local file.
      * 
      */
-    @InputImport(name="fileExec", required=true)
+    @Import(name="fileExec", required=true)
       private final SoftwareRecipeStepExecFileResponse fileExec;
 
     public SoftwareRecipeStepExecFileResponse getFileExec() {
@@ -70,7 +70,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * Installs an MSI file.
      * 
      */
-    @InputImport(name="msiInstallation", required=true)
+    @Import(name="msiInstallation", required=true)
       private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
 
     public SoftwareRecipeStepInstallMsiResponse getMsiInstallation() {
@@ -81,7 +81,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * Installs an rpm file via the rpm utility.
      * 
      */
-    @InputImport(name="rpmInstallation", required=true)
+    @Import(name="rpmInstallation", required=true)
       private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
 
     public SoftwareRecipeStepInstallRpmResponse getRpmInstallation() {
@@ -92,7 +92,7 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
      * Runs commands in a shell.
      * 
      */
-    @InputImport(name="scriptRun", required=true)
+    @Import(name="scriptRun", required=true)
       private final SoftwareRecipeStepRunScriptResponse scriptRun;
 
     public SoftwareRecipeStepRunScriptResponse getScriptRun() {

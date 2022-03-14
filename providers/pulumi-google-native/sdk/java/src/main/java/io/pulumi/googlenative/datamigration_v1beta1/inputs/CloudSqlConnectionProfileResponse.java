@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1beta1.inputs.CloudSqlSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
      * The Cloud SQL instance ID that this connection profile is associated with.
      * 
      */
-    @InputImport(name="cloudSqlId", required=true)
+    @Import(name="cloudSqlId", required=true)
       private final String cloudSqlId;
 
     public String getCloudSqlId() {
@@ -32,7 +32,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
      * The Cloud SQL database instance's private IP.
      * 
      */
-    @InputImport(name="privateIp", required=true)
+    @Import(name="privateIp", required=true)
       private final String privateIp;
 
     public String getPrivateIp() {
@@ -43,7 +43,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
      * The Cloud SQL database instance's public IP.
      * 
      */
-    @InputImport(name="publicIp", required=true)
+    @Import(name="publicIp", required=true)
       private final String publicIp;
 
     public String getPublicIp() {
@@ -54,7 +54,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
      * Immutable. Metadata used to create the destination Cloud SQL database.
      * 
      */
-    @InputImport(name="settings", required=true)
+    @Import(name="settings", required=true)
       private final CloudSqlSettingsResponse settings;
 
     public CloudSqlSettingsResponse getSettings() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.LocationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CompanyDerivedInfoResponse {
     /**
      * A structured headquarters location of the company, resolved from Company.headquarters_address if provided.
@@ -15,8 +15,8 @@ public final class CompanyDerivedInfoResponse {
      */
     private final LocationResponse headquartersLocation;
 
-    @OutputCustomType.Constructor
-    private CompanyDerivedInfoResponse(@OutputCustomType.Parameter("headquartersLocation") LocationResponse headquartersLocation) {
+    @CustomType.Constructor
+    private CompanyDerivedInfoResponse(@CustomType.Parameter("headquartersLocation") LocationResponse headquartersLocation) {
         this.headquartersLocation = headquartersLocation;
     }
 

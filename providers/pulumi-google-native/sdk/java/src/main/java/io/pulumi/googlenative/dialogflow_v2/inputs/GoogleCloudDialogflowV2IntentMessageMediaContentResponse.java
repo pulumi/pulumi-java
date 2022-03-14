@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
      * List of media objects.
      * 
      */
-    @InputImport(name="mediaObjects", required=true)
+    @Import(name="mediaObjects", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
 
     public List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> getMediaObjects() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse exte
      * Optional. What type of media is the content (ie "audio").
      * 
      */
-    @InputImport(name="mediaType", required=true)
+    @Import(name="mediaType", required=true)
       private final String mediaType;
 
     public String getMediaType() {

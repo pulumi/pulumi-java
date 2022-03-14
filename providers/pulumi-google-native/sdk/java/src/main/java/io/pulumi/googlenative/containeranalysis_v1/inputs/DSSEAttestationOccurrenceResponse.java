@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementResponse;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources
      * If doing something security critical, make sure to verify the signatures in this metadata.
      * 
      */
-    @InputImport(name="envelope", required=true)
+    @Import(name="envelope", required=true)
       private final EnvelopeResponse envelope;
 
     public EnvelopeResponse getEnvelope() {
         return this.envelope;
     }
 
-    @InputImport(name="statement", required=true)
+    @Import(name="statement", required=true)
       private final InTotoStatementResponse statement;
 
     public InTotoStatementResponse getStatement() {

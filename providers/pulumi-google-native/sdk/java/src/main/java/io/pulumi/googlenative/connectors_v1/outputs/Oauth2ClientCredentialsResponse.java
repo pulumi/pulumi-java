@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.SecretResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Oauth2ClientCredentialsResponse {
     /**
      * The client identifier.
@@ -21,10 +21,10 @@ public final class Oauth2ClientCredentialsResponse {
      */
     private final SecretResponse clientSecret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Oauth2ClientCredentialsResponse(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") SecretResponse clientSecret) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") SecretResponse clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }

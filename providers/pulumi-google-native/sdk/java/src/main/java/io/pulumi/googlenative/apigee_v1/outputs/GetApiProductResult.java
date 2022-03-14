@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1GraphQLOperationGroupResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1OperationGroupResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApiProductResult {
     private final List<String> apiResources;
     /**
@@ -90,24 +90,24 @@ public final class GetApiProductResult {
      */
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiProductResult(
-        @OutputCustomType.Parameter("apiResources") List<String> apiResources,
-        @OutputCustomType.Parameter("approvalType") String approvalType,
-        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("environments") List<String> environments,
-        @OutputCustomType.Parameter("graphqlOperationGroup") GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationGroup") GoogleCloudApigeeV1OperationGroupResponse operationGroup,
-        @OutputCustomType.Parameter("proxies") List<String> proxies,
-        @OutputCustomType.Parameter("quota") String quota,
-        @OutputCustomType.Parameter("quotaInterval") String quotaInterval,
-        @OutputCustomType.Parameter("quotaTimeUnit") String quotaTimeUnit,
-        @OutputCustomType.Parameter("scopes") List<String> scopes) {
+        @CustomType.Parameter("apiResources") List<String> apiResources,
+        @CustomType.Parameter("approvalType") String approvalType,
+        @CustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("environments") List<String> environments,
+        @CustomType.Parameter("graphqlOperationGroup") GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationGroup") GoogleCloudApigeeV1OperationGroupResponse operationGroup,
+        @CustomType.Parameter("proxies") List<String> proxies,
+        @CustomType.Parameter("quota") String quota,
+        @CustomType.Parameter("quotaInterval") String quotaInterval,
+        @CustomType.Parameter("quotaTimeUnit") String quotaTimeUnit,
+        @CustomType.Parameter("scopes") List<String> scopes) {
         this.apiResources = apiResources;
         this.approvalType = approvalType;
         this.attributes = attributes;

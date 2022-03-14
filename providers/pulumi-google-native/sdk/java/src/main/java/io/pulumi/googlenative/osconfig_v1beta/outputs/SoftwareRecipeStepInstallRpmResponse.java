@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeStepInstallRpmResponse {
     /**
      * The id of the relevant artifact in the recipe.
@@ -15,8 +15,8 @@ public final class SoftwareRecipeStepInstallRpmResponse {
      */
     private final String artifactId;
 
-    @OutputCustomType.Constructor
-    private SoftwareRecipeStepInstallRpmResponse(@OutputCustomType.Parameter("artifactId") String artifactId) {
+    @CustomType.Constructor
+    private SoftwareRecipeStepInstallRpmResponse(@CustomType.Parameter("artifactId") String artifactId) {
         this.artifactId = artifactId;
     }
 

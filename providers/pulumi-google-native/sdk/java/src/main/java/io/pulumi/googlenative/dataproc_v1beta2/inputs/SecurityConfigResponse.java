@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.KerberosConfigResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
      * Optional. Kerberos related configuration.
      * 
      */
-    @InputImport(name="kerberosConfig", required=true)
+    @Import(name="kerberosConfig", required=true)
       private final KerberosConfigResponse kerberosConfig;
 
     public KerberosConfigResponse getKerberosConfig() {

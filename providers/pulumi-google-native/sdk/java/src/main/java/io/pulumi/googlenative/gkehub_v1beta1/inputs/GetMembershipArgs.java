@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMembershipArgs Empty = new GetMembershipArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="membershipId", required=true)
+    @Import(name="membershipId", required=true)
       private final String membershipId;
 
     public String getMembershipId() {
         return this.membershipId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

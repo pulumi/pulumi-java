@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ContactInfoResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleTypePostalAddressResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomerResult {
     /**
      * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
@@ -73,20 +73,20 @@ public final class GetCustomerResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomerResult(
-        @OutputCustomType.Parameter("alternateEmail") String alternateEmail,
-        @OutputCustomType.Parameter("channelPartnerId") String channelPartnerId,
-        @OutputCustomType.Parameter("cloudIdentityId") String cloudIdentityId,
-        @OutputCustomType.Parameter("cloudIdentityInfo") GoogleCloudChannelV1CloudIdentityInfoResponse cloudIdentityInfo,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("orgDisplayName") String orgDisplayName,
-        @OutputCustomType.Parameter("orgPostalAddress") GoogleTypePostalAddressResponse orgPostalAddress,
-        @OutputCustomType.Parameter("primaryContactInfo") GoogleCloudChannelV1ContactInfoResponse primaryContactInfo,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("alternateEmail") String alternateEmail,
+        @CustomType.Parameter("channelPartnerId") String channelPartnerId,
+        @CustomType.Parameter("cloudIdentityId") String cloudIdentityId,
+        @CustomType.Parameter("cloudIdentityInfo") GoogleCloudChannelV1CloudIdentityInfoResponse cloudIdentityInfo,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("orgDisplayName") String orgDisplayName,
+        @CustomType.Parameter("orgPostalAddress") GoogleTypePostalAddressResponse orgPostalAddress,
+        @CustomType.Parameter("primaryContactInfo") GoogleCloudChannelV1ContactInfoResponse primaryContactInfo,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.alternateEmail = alternateEmail;
         this.channelPartnerId = channelPartnerId;
         this.cloudIdentityId = cloudIdentityId;

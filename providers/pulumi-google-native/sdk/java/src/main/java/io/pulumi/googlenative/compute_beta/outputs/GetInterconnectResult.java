@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.InterconnectCircuitInfoResponse;
 import io.pulumi.googlenative.compute_beta.outputs.InterconnectOutageNotificationResponse;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInterconnectResult {
     /**
      * Administrative status of the interconnect. When this is set to true, the Interconnect is functional and can carry traffic. When set to false, no packets can be carried over the interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
@@ -136,32 +136,32 @@ public final class GetInterconnectResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInterconnectResult(
-        @OutputCustomType.Parameter("adminEnabled") Boolean adminEnabled,
-        @OutputCustomType.Parameter("circuitInfos") List<InterconnectCircuitInfoResponse> circuitInfos,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customerName") String customerName,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("expectedOutages") List<InterconnectOutageNotificationResponse> expectedOutages,
-        @OutputCustomType.Parameter("googleIpAddress") String googleIpAddress,
-        @OutputCustomType.Parameter("googleReferenceId") String googleReferenceId,
-        @OutputCustomType.Parameter("interconnectAttachments") List<String> interconnectAttachments,
-        @OutputCustomType.Parameter("interconnectType") String interconnectType,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("linkType") String linkType,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nocContactEmail") String nocContactEmail,
-        @OutputCustomType.Parameter("operationalStatus") String operationalStatus,
-        @OutputCustomType.Parameter("peerIpAddress") String peerIpAddress,
-        @OutputCustomType.Parameter("provisionedLinkCount") Integer provisionedLinkCount,
-        @OutputCustomType.Parameter("requestedLinkCount") Integer requestedLinkCount,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("adminEnabled") Boolean adminEnabled,
+        @CustomType.Parameter("circuitInfos") List<InterconnectCircuitInfoResponse> circuitInfos,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customerName") String customerName,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("expectedOutages") List<InterconnectOutageNotificationResponse> expectedOutages,
+        @CustomType.Parameter("googleIpAddress") String googleIpAddress,
+        @CustomType.Parameter("googleReferenceId") String googleReferenceId,
+        @CustomType.Parameter("interconnectAttachments") List<String> interconnectAttachments,
+        @CustomType.Parameter("interconnectType") String interconnectType,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("linkType") String linkType,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nocContactEmail") String nocContactEmail,
+        @CustomType.Parameter("operationalStatus") String operationalStatus,
+        @CustomType.Parameter("peerIpAddress") String peerIpAddress,
+        @CustomType.Parameter("provisionedLinkCount") Integer provisionedLinkCount,
+        @CustomType.Parameter("requestedLinkCount") Integer requestedLinkCount,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("state") String state) {
         this.adminEnabled = adminEnabled;
         this.circuitInfos = circuitInfos;
         this.creationTimestamp = creationTimestamp;

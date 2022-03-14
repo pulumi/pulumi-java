@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1CallAnnotationResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1IssueModelResultResponse;
@@ -25,7 +25,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * A list of call annotations that apply to this call.
      * 
      */
-    @InputImport(name="annotations", required=true)
+    @Import(name="annotations", required=true)
       private final List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations;
 
     public List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> getAnnotations() {
@@ -36,7 +36,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * All the entities in the call.
      * 
      */
-    @InputImport(name="entities", required=true)
+    @Import(name="entities", required=true)
       private final Map<String,String> entities;
 
     public Map<String,String> getEntities() {
@@ -47,7 +47,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * All the matched intents in the call.
      * 
      */
-    @InputImport(name="intents", required=true)
+    @Import(name="intents", required=true)
       private final Map<String,String> intents;
 
     public Map<String,String> getIntents() {
@@ -58,7 +58,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * Overall conversation-level issue modeling result.
      * 
      */
-    @InputImport(name="issueModelResult", required=true)
+    @Import(name="issueModelResult", required=true)
       private final GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult;
 
     public GoogleCloudContactcenterinsightsV1IssueModelResultResponse getIssueModelResult() {
@@ -69,7 +69,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * All the matched phrase matchers in the call.
      * 
      */
-    @InputImport(name="phraseMatchers", required=true)
+    @Import(name="phraseMatchers", required=true)
       private final Map<String,String> phraseMatchers;
 
     public Map<String,String> getPhraseMatchers() {
@@ -80,7 +80,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      * Overall conversation-level sentiment for each channel of the call.
      * 
      */
-    @InputImport(name="sentiments", required=true)
+    @Import(name="sentiments", required=true)
       private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
 
     public List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> getSentiments() {

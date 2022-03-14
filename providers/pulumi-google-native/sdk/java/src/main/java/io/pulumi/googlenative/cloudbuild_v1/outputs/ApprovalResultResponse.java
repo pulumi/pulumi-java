@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApprovalResultResponse {
     /**
      * The time when the approval decision was made.
@@ -35,13 +35,13 @@ public final class ApprovalResultResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApprovalResultResponse(
-        @OutputCustomType.Parameter("approvalTime") String approvalTime,
-        @OutputCustomType.Parameter("approverAccount") String approverAccount,
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("decision") String decision,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("approvalTime") String approvalTime,
+        @CustomType.Parameter("approverAccount") String approverAccount,
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("decision") String decision,
+        @CustomType.Parameter("url") String url) {
         this.approvalTime = approvalTime;
         this.approverAccount = approverAccount;
         this.comment = comment;

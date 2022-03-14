@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.deploymentmanager_alpha.CompositeTypeArgs;
@@ -25,7 +25,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -39,7 +39,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="insertTime", type=String.class, parameters={})
+    @Export(name="insertTime", type=String.class, parameters={})
     private Output<String> insertTime;
 
     /**
@@ -53,7 +53,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={CompositeTypeLabelEntryResponse.class})
+    @Export(name="labels", type=List.class, parameters={CompositeTypeLabelEntryResponse.class})
     private Output<List<CompositeTypeLabelEntryResponse>> labels;
 
     /**
@@ -67,7 +67,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * The Operation that most recently ran, or is currently running, on this composite type.
      * 
      */
-    @OutputExport(name="operation", type=OperationResponse.class, parameters={})
+    @Export(name="operation", type=OperationResponse.class, parameters={})
     private Output<OperationResponse> operation;
 
     /**
@@ -95,7 +95,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * Server defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -105,7 +105,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     public Output<String> getStatus() {
@@ -115,7 +115,7 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
      * Files for the template type.
      * 
      */
-    @OutputExport(name="templateContents", type=TemplateContentsResponse.class, parameters={})
+    @Export(name="templateContents", type=TemplateContentsResponse.class, parameters={})
     private Output<TemplateContentsResponse> templateContents;
 
     /**

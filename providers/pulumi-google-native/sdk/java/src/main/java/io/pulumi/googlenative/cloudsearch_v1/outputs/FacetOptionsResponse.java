@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FacetOptionsResponse {
     /**
      * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
@@ -31,12 +31,12 @@ public final class FacetOptionsResponse {
      */
     private final String sourceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FacetOptionsResponse(
-        @OutputCustomType.Parameter("numFacetBuckets") Integer numFacetBuckets,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("operatorName") String operatorName,
-        @OutputCustomType.Parameter("sourceName") String sourceName) {
+        @CustomType.Parameter("numFacetBuckets") Integer numFacetBuckets,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("operatorName") String operatorName,
+        @CustomType.Parameter("sourceName") String sourceName) {
         this.numFacetBuckets = numFacetBuckets;
         this.objectType = objectType;
         this.operatorName = operatorName;

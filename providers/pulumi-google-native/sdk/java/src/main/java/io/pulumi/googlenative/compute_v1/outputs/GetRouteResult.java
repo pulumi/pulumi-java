@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.RouteAsPathResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouteWarningsItemResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteResult {
     /**
      * AS path.
@@ -109,27 +109,27 @@ public final class GetRouteResult {
      */
     private final List<RouteWarningsItemResponse> warnings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteResult(
-        @OutputCustomType.Parameter("asPaths") List<RouteAsPathResponse> asPaths,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("destRange") String destRange,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("nextHopGateway") String nextHopGateway,
-        @OutputCustomType.Parameter("nextHopIlb") String nextHopIlb,
-        @OutputCustomType.Parameter("nextHopInstance") String nextHopInstance,
-        @OutputCustomType.Parameter("nextHopIp") String nextHopIp,
-        @OutputCustomType.Parameter("nextHopNetwork") String nextHopNetwork,
-        @OutputCustomType.Parameter("nextHopPeering") String nextHopPeering,
-        @OutputCustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("routeType") String routeType,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("warnings") List<RouteWarningsItemResponse> warnings) {
+        @CustomType.Parameter("asPaths") List<RouteAsPathResponse> asPaths,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("destRange") String destRange,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("nextHopGateway") String nextHopGateway,
+        @CustomType.Parameter("nextHopIlb") String nextHopIlb,
+        @CustomType.Parameter("nextHopInstance") String nextHopInstance,
+        @CustomType.Parameter("nextHopIp") String nextHopIp,
+        @CustomType.Parameter("nextHopNetwork") String nextHopNetwork,
+        @CustomType.Parameter("nextHopPeering") String nextHopPeering,
+        @CustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("routeType") String routeType,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("warnings") List<RouteWarningsItemResponse> warnings) {
         this.asPaths = asPaths;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

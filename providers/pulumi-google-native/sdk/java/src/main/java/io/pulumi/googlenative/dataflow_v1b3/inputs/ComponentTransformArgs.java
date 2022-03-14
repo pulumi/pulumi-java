@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
      * Dataflow service generated name for this source.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
      * User name for the original user transform with which this transform is most closely associated.
      * 
      */
-    @InputImport(name="originalTransform")
+    @Import(name="originalTransform")
       private final @Nullable Output<String> originalTransform;
 
     public Output<String> getOriginalTransform() {
@@ -44,7 +44,7 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
      * Human-readable name for this transform; may be user or system generated.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScanConfigErrorResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScanRunErrorTraceResponse {
     /**
      * Indicates the error reason code.
@@ -27,11 +27,11 @@ public final class ScanRunErrorTraceResponse {
      */
     private final ScanConfigErrorResponse scanConfigError;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScanRunErrorTraceResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("mostCommonHttpErrorCode") Integer mostCommonHttpErrorCode,
-        @OutputCustomType.Parameter("scanConfigError") ScanConfigErrorResponse scanConfigError) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("mostCommonHttpErrorCode") Integer mostCommonHttpErrorCode,
+        @CustomType.Parameter("scanConfigError") ScanConfigErrorResponse scanConfigError) {
         this.code = code;
         this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
         this.scanConfigError = scanConfigError;

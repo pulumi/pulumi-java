@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1beta1.AuthorizationPolicyArgs;
@@ -24,7 +24,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
@@ -38,7 +38,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -52,7 +52,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * Optional. Free-text description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -66,7 +66,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * Optional. Set of label tags associated with the AuthorizationPolicy resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -80,7 +80,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * Name of the AuthorizationPolicy resource. It matches pattern `projects/{project}/locations/{location}/authorizationPolicies/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={RuleResponse.class})
+    @Export(name="rules", type=List.class, parameters={RuleResponse.class})
     private Output<List<RuleResponse>> rules;
 
     /**
@@ -108,7 +108,7 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

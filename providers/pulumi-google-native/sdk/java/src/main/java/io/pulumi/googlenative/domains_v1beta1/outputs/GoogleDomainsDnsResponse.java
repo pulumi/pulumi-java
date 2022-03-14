@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.domains_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.domains_v1beta1.outputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDomainsDnsResponse {
     /**
      * The list of DS records published for this domain. The list is automatically populated when `ds_state` is `DS_RECORDS_PUBLISHED`, otherwise it remains empty.
@@ -27,11 +27,11 @@ public final class GoogleDomainsDnsResponse {
      */
     private final List<String> nameServers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDomainsDnsResponse(
-        @OutputCustomType.Parameter("dsRecords") List<DsRecordResponse> dsRecords,
-        @OutputCustomType.Parameter("dsState") String dsState,
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers) {
+        @CustomType.Parameter("dsRecords") List<DsRecordResponse> dsRecords,
+        @CustomType.Parameter("dsState") String dsState,
+        @CustomType.Parameter("nameServers") List<String> nameServers) {
         this.dsRecords = dsRecords;
         this.dsState = dsState;
         this.nameServers = nameServers;

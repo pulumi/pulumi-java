@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.AggregationResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.PickTimeSeriesFilterResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.RatioPartResponse;
@@ -22,7 +22,7 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
      * The denominator of the ratio.
      * 
      */
-    @InputImport(name="denominator", required=true)
+    @Import(name="denominator", required=true)
       private final RatioPartResponse denominator;
 
     public RatioPartResponse getDenominator() {
@@ -33,7 +33,7 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
      * The numerator of the ratio.
      * 
      */
-    @InputImport(name="numerator", required=true)
+    @Import(name="numerator", required=true)
       private final RatioPartResponse numerator;
 
     public RatioPartResponse getNumerator() {
@@ -44,7 +44,7 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
      * Ranking based time series filter.
      * 
      */
-    @InputImport(name="pickTimeSeriesFilter", required=true)
+    @Import(name="pickTimeSeriesFilter", required=true)
       private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
     public PickTimeSeriesFilterResponse getPickTimeSeriesFilter() {
@@ -55,7 +55,7 @@ public final class TimeSeriesFilterRatioResponse extends io.pulumi.resources.Inv
      * Apply a second aggregation after the ratio is computed.
      * 
      */
-    @InputImport(name="secondaryAggregation", required=true)
+    @Import(name="secondaryAggregation", required=true)
       private final AggregationResponse secondaryAggregation;
 
     public AggregationResponse getSecondaryAggregation() {

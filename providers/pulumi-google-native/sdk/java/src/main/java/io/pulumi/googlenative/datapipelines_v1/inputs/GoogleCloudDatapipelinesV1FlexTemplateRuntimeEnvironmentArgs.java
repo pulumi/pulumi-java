@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal;
 import io.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration;
 import java.lang.Boolean;
@@ -28,7 +28,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * Additional experiment flags for the job.
      * 
      */
-    @InputImport(name="additionalExperiments")
+    @Import(name="additionalExperiments")
       private final @Nullable Output<List<String>> additionalExperiments;
 
     public Output<List<String>> getAdditionalExperiments() {
@@ -39,7 +39,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * Additional user labels to be specified for the job. Keys and values must follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions). An object containing a list of key/value pairs. Example: `{ "name": "wrench", "mass": "1kg", "count": "3" }`.
      * 
      */
-    @InputImport(name="additionalUserLabels")
+    @Import(name="additionalUserLabels")
       private final @Nullable Output<Map<String,String>> additionalUserLabels;
 
     public Output<Map<String,String>> getAdditionalUserLabels() {
@@ -50,7 +50,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * Whether to enable Streaming Engine for the job.
      * 
      */
-    @InputImport(name="enableStreamingEngine")
+    @Import(name="enableStreamingEngine")
       private final @Nullable Output<Boolean> enableStreamingEngine;
 
     public Output<Boolean> getEnableStreamingEngine() {
@@ -61,7 +61,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs
      * 
      */
-    @InputImport(name="flexrsGoal")
+    @Import(name="flexrsGoal")
       private final @Nullable Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> flexrsGoal;
 
     public Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoal> getFlexrsGoal() {
@@ -72,7 +72,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * Configuration for VM IPs.
      * 
      */
-    @InputImport(name="ipConfiguration")
+    @Import(name="ipConfiguration")
       private final @Nullable Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> ipConfiguration;
 
     public Output<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfiguration> getIpConfiguration() {
@@ -83,7 +83,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * Name for the Cloud KMS key for the job. Key format is: projects//locations//keyRings//cryptoKeys/
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -94,7 +94,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * The machine type to use for the job. Defaults to the value from the template if not specified.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -105,7 +105,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
      * 
      */
-    @InputImport(name="maxWorkers")
+    @Import(name="maxWorkers")
       private final @Nullable Output<Integer> maxWorkers;
 
     public Output<Integer> getMaxWorkers() {
@@ -116,7 +116,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -127,7 +127,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * The initial number of Compute Engine instances for the job.
      * 
      */
-    @InputImport(name="numWorkers")
+    @Import(name="numWorkers")
       private final @Nullable Output<Integer> numWorkers;
 
     public Output<Integer> getNumWorkers() {
@@ -138,7 +138,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * The email address of the service account to run the job as.
      * 
      */
-    @InputImport(name="serviceAccountEmail")
+    @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
@@ -149,7 +149,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
@@ -160,7 +160,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.
      * 
      */
-    @InputImport(name="tempLocation")
+    @Import(name="tempLocation")
       private final @Nullable Output<String> tempLocation;
 
     public Output<String> getTempLocation() {
@@ -171,7 +171,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, defaults to the control plane region.
      * 
      */
-    @InputImport(name="workerRegion")
+    @Import(name="workerRegion")
       private final @Nullable Output<String> workerRegion;
 
     public Output<String> getWorkerRegion() {
@@ -182,7 +182,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
      * 
      */
-    @InputImport(name="workerZone")
+    @Import(name="workerZone")
       private final @Nullable Output<String> workerZone;
 
     public Output<String> getWorkerZone() {
@@ -193,7 +193,7 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs 
      * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

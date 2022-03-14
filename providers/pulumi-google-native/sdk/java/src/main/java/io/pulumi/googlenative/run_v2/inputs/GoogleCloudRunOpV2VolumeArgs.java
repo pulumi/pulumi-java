@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2CloudSqlInstanceArgs;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretVolumeSourceArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
      * For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
      * 
      */
-    @InputImport(name="cloudSqlInstance")
+    @Import(name="cloudSqlInstance")
       private final @Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
 
     public Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> getCloudSqlInstance() {
@@ -35,7 +35,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
      * Volume's name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
      * Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;
 
     public Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> getSecret() {

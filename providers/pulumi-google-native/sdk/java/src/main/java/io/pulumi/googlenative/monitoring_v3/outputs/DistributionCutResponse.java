@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.GoogleMonitoringV3RangeResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionCutResponse {
     /**
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries aggregating values. Must have ValueType = DISTRIBUTION and MetricKind = DELTA or MetricKind = CUMULATIVE.
@@ -21,10 +21,10 @@ public final class DistributionCutResponse {
      */
     private final GoogleMonitoringV3RangeResponse range;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionCutResponse(
-        @OutputCustomType.Parameter("distributionFilter") String distributionFilter,
-        @OutputCustomType.Parameter("range") GoogleMonitoringV3RangeResponse range) {
+        @CustomType.Parameter("distributionFilter") String distributionFilter,
+        @CustomType.Parameter("range") GoogleMonitoringV3RangeResponse range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }

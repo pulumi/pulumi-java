@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetConnectivityTestArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetConnectivityTestArgs Empty = new GetConnectivityTestArgs();
 
-    @InputImport(name="connectivityTestId", required=true)
+    @Import(name="connectivityTestId", required=true)
       private final String connectivityTestId;
 
     public String getConnectivityTestId() {
         return this.connectivityTestId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

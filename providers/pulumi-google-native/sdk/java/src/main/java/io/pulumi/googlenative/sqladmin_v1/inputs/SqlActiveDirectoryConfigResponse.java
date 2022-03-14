@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SqlActiveDirectoryConfigResponse extends io.pulumi.resources.
      * The name of the domain (e.g., mydomain.com).
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final String domain;
 
     public String getDomain() {
@@ -31,7 +31,7 @@ public final class SqlActiveDirectoryConfigResponse extends io.pulumi.resources.
      * This is always sql#activeDirectoryConfig.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {

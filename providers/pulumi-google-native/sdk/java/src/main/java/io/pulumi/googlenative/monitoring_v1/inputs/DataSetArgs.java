@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.enums.DataSetPlotType;
 import io.pulumi.googlenative.monitoring_v1.enums.DataSetTargetAxis;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
@@ -25,7 +25,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.
      * 
      */
-    @InputImport(name="legendTemplate")
+    @Import(name="legendTemplate")
       private final @Nullable Output<String> legendTemplate;
 
     public Output<String> getLegendTemplate() {
@@ -36,7 +36,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
      * 
      */
-    @InputImport(name="minAlignmentPeriod")
+    @Import(name="minAlignmentPeriod")
       private final @Nullable Output<String> minAlignmentPeriod;
 
     public Output<String> getMinAlignmentPeriod() {
@@ -47,7 +47,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * How this data should be plotted on the chart.
      * 
      */
-    @InputImport(name="plotType")
+    @Import(name="plotType")
       private final @Nullable Output<DataSetPlotType> plotType;
 
     public Output<DataSetPlotType> getPlotType() {
@@ -58,7 +58,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The target axis to use for plotting the metric.
      * 
      */
-    @InputImport(name="targetAxis")
+    @Import(name="targetAxis")
       private final @Nullable Output<DataSetTargetAxis> targetAxis;
 
     public Output<DataSetTargetAxis> getTargetAxis() {
@@ -69,7 +69,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * Fields for querying time series data from the Stackdriver metrics API.
      * 
      */
-    @InputImport(name="timeSeriesQuery", required=true)
+    @Import(name="timeSeriesQuery", required=true)
       private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
     public Output<TimeSeriesQueryArgs> getTimeSeriesQuery() {

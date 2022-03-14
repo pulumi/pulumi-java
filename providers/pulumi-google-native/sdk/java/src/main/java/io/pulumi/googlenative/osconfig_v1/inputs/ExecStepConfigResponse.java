@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.GcsObjectResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
      * 
      */
-    @InputImport(name="allowedSuccessCodes", required=true)
+    @Import(name="allowedSuccessCodes", required=true)
       private final List<Integer> allowedSuccessCodes;
 
     public List<Integer> getAllowedSuccessCodes() {
@@ -34,7 +34,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
      * A Cloud Storage object containing the executable.
      * 
      */
-    @InputImport(name="gcsObject", required=true)
+    @Import(name="gcsObject", required=true)
       private final GcsObjectResponse gcsObject;
 
     public GcsObjectResponse getGcsObject() {
@@ -45,7 +45,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
      * The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
      * 
      */
-    @InputImport(name="interpreter", required=true)
+    @Import(name="interpreter", required=true)
       private final String interpreter;
 
     public String getInterpreter() {
@@ -56,7 +56,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
      * An absolute path to the executable on the VM.
      * 
      */
-    @InputImport(name="localPath", required=true)
+    @Import(name="localPath", required=true)
       private final String localPath;
 
     public String getLocalPath() {

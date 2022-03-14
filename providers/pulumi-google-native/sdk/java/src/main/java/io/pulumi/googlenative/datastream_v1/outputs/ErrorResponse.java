@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ErrorResponse {
     /**
      * Additional information about the error.
@@ -36,13 +36,13 @@ public final class ErrorResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorResponse(
-        @OutputCustomType.Parameter("details") Map<String,String> details,
-        @OutputCustomType.Parameter("errorTime") String errorTime,
-        @OutputCustomType.Parameter("errorUuid") String errorUuid,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("reason") String reason) {
+        @CustomType.Parameter("details") Map<String,String> details,
+        @CustomType.Parameter("errorTime") String errorTime,
+        @CustomType.Parameter("errorUuid") String errorUuid,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("reason") String reason) {
         this.details = details;
         this.errorTime = errorTime;
         this.errorUuid = errorUuid;

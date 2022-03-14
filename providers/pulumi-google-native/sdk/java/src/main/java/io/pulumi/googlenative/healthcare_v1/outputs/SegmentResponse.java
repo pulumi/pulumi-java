@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SegmentResponse {
     /**
      * A mapping from the positional location to the value. The key string uses zero-based indexes separated by dots to identify Fields, components and sub-components. A bracket notation is also used to identify different instances of a repeated field. Regex for key: (\d+)(\[\d+\])?(.\d+)?(.\d+)? Examples of (key, value) pairs: * (0.1, "hemoglobin") denotes that the first component of Field 0 has the value "hemoglobin". * (1.1.2, "CBC") denotes that the second sub-component of the first component of Field 1 has the value "CBC". * (1[0].1, "HbA1c") denotes that the first component of the first Instance of Field 1, which is repeated, has the value "HbA1c".
@@ -26,11 +26,11 @@ public final class SegmentResponse {
      */
     private final String setId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SegmentResponse(
-        @OutputCustomType.Parameter("fields") Map<String,String> fields,
-        @OutputCustomType.Parameter("segmentId") String segmentId,
-        @OutputCustomType.Parameter("setId") String setId) {
+        @CustomType.Parameter("fields") Map<String,String> fields,
+        @CustomType.Parameter("segmentId") String segmentId,
+        @CustomType.Parameter("setId") String setId) {
         this.fields = fields;
         this.segmentId = segmentId;
         this.setId = setId;

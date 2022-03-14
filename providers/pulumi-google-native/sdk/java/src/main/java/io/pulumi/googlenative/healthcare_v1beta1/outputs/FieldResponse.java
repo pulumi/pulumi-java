@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FieldResponse {
     /**
      * The maximum number of times this field can be repeated. 0 or -1 means unbounded.
@@ -36,13 +36,13 @@ public final class FieldResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FieldResponse(
-        @OutputCustomType.Parameter("maxOccurs") Integer maxOccurs,
-        @OutputCustomType.Parameter("minOccurs") Integer minOccurs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("table") String table,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("maxOccurs") Integer maxOccurs,
+        @CustomType.Parameter("minOccurs") Integer minOccurs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("table") String table,
+        @CustomType.Parameter("type") String type) {
         this.maxOccurs = maxOccurs;
         this.minOccurs = minOccurs;
         this.name = name;

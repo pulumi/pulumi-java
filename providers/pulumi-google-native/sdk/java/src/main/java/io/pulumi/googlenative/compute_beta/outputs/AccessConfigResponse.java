@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessConfigResponse {
     /**
      * The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. The field is output only, an IPv6 address from a subnetwork associated with the instance will be allocated dynamically.
@@ -57,17 +57,17 @@ public final class AccessConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessConfigResponse(
-        @OutputCustomType.Parameter("externalIpv6") String externalIpv6,
-        @OutputCustomType.Parameter("externalIpv6PrefixLength") Integer externalIpv6PrefixLength,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("natIP") String natIP,
-        @OutputCustomType.Parameter("networkTier") String networkTier,
-        @OutputCustomType.Parameter("publicPtrDomainName") String publicPtrDomainName,
-        @OutputCustomType.Parameter("setPublicPtr") Boolean setPublicPtr,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("externalIpv6") String externalIpv6,
+        @CustomType.Parameter("externalIpv6PrefixLength") Integer externalIpv6PrefixLength,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("natIP") String natIP,
+        @CustomType.Parameter("networkTier") String networkTier,
+        @CustomType.Parameter("publicPtrDomainName") String publicPtrDomainName,
+        @CustomType.Parameter("setPublicPtr") Boolean setPublicPtr,
+        @CustomType.Parameter("type") String type) {
         this.externalIpv6 = externalIpv6;
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
         this.kind = kind;

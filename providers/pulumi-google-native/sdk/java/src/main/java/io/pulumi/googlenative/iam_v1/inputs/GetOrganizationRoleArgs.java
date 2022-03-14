@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetOrganizationRoleArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetOrganizationRoleArgs Empty = new GetOrganizationRoleArgs();
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="roleId", required=true)
+    @Import(name="roleId", required=true)
       private final String roleId;
 
     public String getRoleId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthorizationLoggingOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
@@ -15,8 +15,8 @@ public final class AuthorizationLoggingOptionsResponse {
      */
     private final String permissionType;
 
-    @OutputCustomType.Constructor
-    private AuthorizationLoggingOptionsResponse(@OutputCustomType.Parameter("permissionType") String permissionType) {
+    @CustomType.Constructor
+    private AuthorizationLoggingOptionsResponse(@CustomType.Parameter("permissionType") String permissionType) {
         this.permissionType = permissionType;
     }
 

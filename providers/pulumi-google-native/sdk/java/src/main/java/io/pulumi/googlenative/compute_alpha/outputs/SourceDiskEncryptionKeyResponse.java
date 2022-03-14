@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceDiskEncryptionKeyResponse {
     /**
      * The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
@@ -21,10 +21,10 @@ public final class SourceDiskEncryptionKeyResponse {
      */
     private final String sourceDisk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceDiskEncryptionKeyResponse(
-        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
-        @OutputCustomType.Parameter("sourceDisk") String sourceDisk) {
+        @CustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @CustomType.Parameter("sourceDisk") String sourceDisk) {
         this.diskEncryptionKey = diskEncryptionKey;
         this.sourceDisk = sourceDisk;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.HttpHeaderActionResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WeightedBackendServiceResponse {
     /**
      * The full or partial URL to the default BackendService resource. Before forwarding the request to backendService, the load balancer applies any relevant headerActions specified as part of this backendServiceWeight.
@@ -27,11 +27,11 @@ public final class WeightedBackendServiceResponse {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WeightedBackendServiceResponse(
-        @OutputCustomType.Parameter("backendService") String backendService,
-        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
-        @OutputCustomType.Parameter("weight") Integer weight) {
+        @CustomType.Parameter("backendService") String backendService,
+        @CustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @CustomType.Parameter("weight") Integer weight) {
         this.backendService = backendService;
         this.headerAction = headerAction;
         this.weight = weight;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BucketOwnerResponse extends io.pulumi.resources.InvokeArgs {
      * The entity, in the form project-owner-projectId.
      * 
      */
-    @InputImport(name="entity", required=true)
+    @Import(name="entity", required=true)
       private final String entity;
 
     public String getEntity() {
@@ -31,7 +31,7 @@ public final class BucketOwnerResponse extends io.pulumi.resources.InvokeArgs {
      * The ID for the entity.
      * 
      */
-    @InputImport(name="entityId", required=true)
+    @Import(name="entityId", required=true)
       private final String entityId;
 
     public String getEntityId() {

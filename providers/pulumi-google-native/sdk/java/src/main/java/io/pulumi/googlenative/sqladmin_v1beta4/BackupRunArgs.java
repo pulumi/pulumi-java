@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunBackupKind;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunStatus;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunType;
@@ -24,7 +24,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
      * 
      */
-    @InputImport(name="backupKind")
+    @Import(name="backupKind")
       private final @Nullable Output<BackupRunBackupKind> backupKind;
 
     public Output<BackupRunBackupKind> getBackupKind() {
@@ -35,7 +35,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The description of this run, only applicable to on-demand backups.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption configuration specific to a backup.
      * 
      */
-    @InputImport(name="diskEncryptionConfiguration")
+    @Import(name="diskEncryptionConfiguration")
       private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
     public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
@@ -57,7 +57,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption status specific to a backup.
      * 
      */
-    @InputImport(name="diskEncryptionStatus")
+    @Import(name="diskEncryptionStatus")
       private final @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
     public Output<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
@@ -68,7 +68,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -79,7 +79,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @InputImport(name="enqueuedTime")
+    @Import(name="enqueuedTime")
       private final @Nullable Output<String> enqueuedTime;
 
     public Output<String> getEnqueuedTime() {
@@ -90,7 +90,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * Information about why the backup operation failed. This is only present if the run has the FAILED status.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable Output<OperationErrorArgs> error;
 
     public Output<OperationErrorArgs> getError() {
@@ -101,7 +101,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier for this backup run. Unique only for a specific Cloud SQL instance.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -112,7 +112,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the database instance.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
@@ -123,7 +123,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * This is always `sql#backupRun`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -134,14 +134,14 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * Location of the backups.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -152,7 +152,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of this resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -163,7 +163,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -174,7 +174,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The status of this run.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<BackupRunStatus> status;
 
     public Output<BackupRunStatus> getStatus() {
@@ -185,7 +185,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<BackupRunType> type;
 
     public Output<BackupRunType> getType() {
@@ -196,7 +196,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @InputImport(name="windowStartTime")
+    @Import(name="windowStartTime")
       private final @Nullable Output<String> windowStartTime;
 
     public Output<String> getWindowStartTime() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.KnowledgeBaseResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WindowsDetailResponse {
     /**
      * The CPE URI in [cpe format](https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar.
@@ -32,12 +32,12 @@ public final class WindowsDetailResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsDetailResponse(
-        @OutputCustomType.Parameter("cpeUri") String cpeUri,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fixingKbs") List<KnowledgeBaseResponse> fixingKbs,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("cpeUri") String cpeUri,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fixingKbs") List<KnowledgeBaseResponse> fixingKbs,
+        @CustomType.Parameter("name") String name) {
         this.cpeUri = cpeUri;
         this.description = description;
         this.fixingKbs = fixingKbs;

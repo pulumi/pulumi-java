@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentOsTypeResponse {
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
@@ -25,11 +25,11 @@ public final class AssignmentOsTypeResponse {
      */
     private final String osVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentOsTypeResponse(
-        @OutputCustomType.Parameter("osArchitecture") String osArchitecture,
-        @OutputCustomType.Parameter("osShortName") String osShortName,
-        @OutputCustomType.Parameter("osVersion") String osVersion) {
+        @CustomType.Parameter("osArchitecture") String osArchitecture,
+        @CustomType.Parameter("osShortName") String osShortName,
+        @CustomType.Parameter("osVersion") String osVersion) {
         this.osArchitecture = osArchitecture;
         this.osShortName = osShortName;
         this.osVersion = osVersion;

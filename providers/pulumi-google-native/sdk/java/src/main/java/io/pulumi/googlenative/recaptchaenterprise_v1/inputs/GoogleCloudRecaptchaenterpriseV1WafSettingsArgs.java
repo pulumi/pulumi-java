@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WafSettingsWafService;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
      * The WAF feature for which this key is enabled.
      * 
      */
-    @InputImport(name="wafFeature", required=true)
+    @Import(name="wafFeature", required=true)
       private final Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> wafFeature;
 
     public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature> getWafFeature() {
@@ -33,7 +33,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
      * The WAF service that uses this key.
      * 
      */
-    @InputImport(name="wafService", required=true)
+    @Import(name="wafService", required=true)
       private final Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> wafService;
 
     public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsWafService> getWafService() {

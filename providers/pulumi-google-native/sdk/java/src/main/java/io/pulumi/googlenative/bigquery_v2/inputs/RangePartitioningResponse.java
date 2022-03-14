@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.RangePartitioningRangeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
      * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final String field;
 
     public String getField() {
@@ -28,7 +28,7 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
      * [TrustedTester] [Required] Defines the ranges for range partitioning.
      * 
      */
-    @InputImport(name="range", required=true)
+    @Import(name="range", required=true)
       private final RangePartitioningRangeResponse range;
 
     public RangePartitioningRangeResponse getRange() {

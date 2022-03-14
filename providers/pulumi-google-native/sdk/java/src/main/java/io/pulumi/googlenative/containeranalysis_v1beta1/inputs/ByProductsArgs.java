@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ByProductsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ByProductsArgs Empty = new ByProductsArgs();
 
-    @InputImport(name="customValues")
+    @Import(name="customValues")
       private final @Nullable Output<Map<String,String>> customValues;
 
     public Output<Map<String,String>> getCustomValues() {

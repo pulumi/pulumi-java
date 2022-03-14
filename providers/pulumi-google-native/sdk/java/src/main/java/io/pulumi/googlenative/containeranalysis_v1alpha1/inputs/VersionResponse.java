@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Used to correct mistakes in the version numbering scheme.
      * 
      */
-    @InputImport(name="epoch", required=true)
+    @Import(name="epoch", required=true)
       private final Integer epoch;
 
     public Integer getEpoch() {
@@ -33,7 +33,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
      * 
      */
-    @InputImport(name="inclusive", required=true)
+    @Import(name="inclusive", required=true)
       private final Boolean inclusive;
 
     public Boolean getInclusive() {
@@ -44,7 +44,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -55,7 +55,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The main part of the version name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -66,7 +66,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The iteration of the package build from the above version.
      * 
      */
-    @InputImport(name="revision", required=true)
+    @Import(name="revision", required=true)
       private final String revision;
 
     public String getRevision() {

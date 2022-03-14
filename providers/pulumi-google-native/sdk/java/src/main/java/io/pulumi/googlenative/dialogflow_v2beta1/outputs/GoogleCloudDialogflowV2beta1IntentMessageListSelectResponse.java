@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse {
     /**
      * List items.
@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse(
-        @OutputCustomType.Parameter("items") List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items,
-        @OutputCustomType.Parameter("subtitle") String subtitle,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("items") List<GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse> items,
+        @CustomType.Parameter("subtitle") String subtitle,
+        @CustomType.Parameter("title") String title) {
         this.items = items;
         this.subtitle = subtitle;
         this.title = title;

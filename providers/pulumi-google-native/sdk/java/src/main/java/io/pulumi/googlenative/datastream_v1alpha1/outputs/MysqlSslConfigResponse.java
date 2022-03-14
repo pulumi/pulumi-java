@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MysqlSslConfigResponse {
     /**
      * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
@@ -41,14 +41,14 @@ public final class MysqlSslConfigResponse {
      */
     private final Boolean clientKeySet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlSslConfigResponse(
-        @OutputCustomType.Parameter("caCertificate") String caCertificate,
-        @OutputCustomType.Parameter("caCertificateSet") Boolean caCertificateSet,
-        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
-        @OutputCustomType.Parameter("clientCertificateSet") Boolean clientCertificateSet,
-        @OutputCustomType.Parameter("clientKey") String clientKey,
-        @OutputCustomType.Parameter("clientKeySet") Boolean clientKeySet) {
+        @CustomType.Parameter("caCertificate") String caCertificate,
+        @CustomType.Parameter("caCertificateSet") Boolean caCertificateSet,
+        @CustomType.Parameter("clientCertificate") String clientCertificate,
+        @CustomType.Parameter("clientCertificateSet") Boolean clientCertificateSet,
+        @CustomType.Parameter("clientKey") String clientKey,
+        @CustomType.Parameter("clientKeySet") Boolean clientKeySet) {
         this.caCertificate = caCertificate;
         this.caCertificateSet = caCertificateSet;
         this.clientCertificate = clientCertificate;

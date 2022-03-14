@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GkeClusterResponse {
     /**
      * If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.
@@ -21,10 +21,10 @@ public final class GkeClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GkeClusterResponse(
-        @OutputCustomType.Parameter("clusterMissing") Boolean clusterMissing,
-        @OutputCustomType.Parameter("resourceLink") String resourceLink) {
+        @CustomType.Parameter("clusterMissing") Boolean clusterMissing,
+        @CustomType.Parameter("resourceLink") String resourceLink) {
         this.clusterMissing = clusterMissing;
         this.resourceLink = resourceLink;
     }

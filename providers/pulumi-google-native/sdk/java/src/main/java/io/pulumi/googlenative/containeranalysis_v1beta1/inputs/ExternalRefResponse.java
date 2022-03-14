@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
      * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final String category;
 
     public String getCategory() {
@@ -31,7 +31,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
      * Human-readable information about the purpose and target of the reference
      * 
      */
-    @InputImport(name="comment", required=true)
+    @Import(name="comment", required=true)
       private final String comment;
 
     public String getComment() {
@@ -42,7 +42,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
      * The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
      * 
      */
-    @InputImport(name="locator", required=true)
+    @Import(name="locator", required=true)
       private final String locator;
 
     public String getLocator() {
@@ -53,7 +53,7 @@ public final class ExternalRefResponse extends io.pulumi.resources.InvokeArgs {
      * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

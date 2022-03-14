@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
      * End date (exclusive) of the data to export in the format `yyyy-mm-dd`. The date range ends at 00:00:00 UTC on the end date- which will not be in the output.
      * 
      */
-    @InputImport(name="end", required=true)
+    @Import(name="end", required=true)
       private final Output<String> end;
 
     public Output<String> getEnd() {
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
      * Start date of the data to export in the format `yyyy-mm-dd`. The date range begins at 00:00:00 UTC on the start date.
      * 
      */
-    @InputImport(name="start", required=true)
+    @Import(name="start", required=true)
       private final Output<String> start;
 
     public Output<String> getStart() {

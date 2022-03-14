@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.LocationResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeA
      * All of the places within the filesystem versions of this package have been found.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final List<LocationResponse> location;
 
     public List<LocationResponse> getLocation() {
@@ -33,7 +33,7 @@ public final class PackageOccurrenceResponse extends io.pulumi.resources.InvokeA
      * The name of the installed package.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

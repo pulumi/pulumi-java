@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__RequestLoggingConfigResponse {
     /**
      * Fully qualified BigQuery table name in the following format: " project_id.dataset_name.table_name" The specified table must already exist, and the "Cloud ML Service Agent" for your project must have permission to write to it. The table must have the following [schema](/bigquery/docs/schemas): Field nameType Mode model STRING REQUIRED model_version STRING REQUIRED time TIMESTAMP REQUIRED raw_data STRING REQUIRED raw_prediction STRING NULLABLE groundtruth STRING NULLABLE
@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse {
      */
     private final Double samplingPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__RequestLoggingConfigResponse(
-        @OutputCustomType.Parameter("bigqueryTableName") String bigqueryTableName,
-        @OutputCustomType.Parameter("samplingPercentage") Double samplingPercentage) {
+        @CustomType.Parameter("bigqueryTableName") String bigqueryTableName,
+        @CustomType.Parameter("samplingPercentage") Double samplingPercentage) {
         this.bigqueryTableName = bigqueryTableName;
         this.samplingPercentage = samplingPercentage;
     }

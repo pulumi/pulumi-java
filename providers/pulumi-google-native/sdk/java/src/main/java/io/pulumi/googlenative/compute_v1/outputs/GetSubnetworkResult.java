@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.SubnetworkLogConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.SubnetworkSecondaryRangeResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetworkResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -124,30 +124,30 @@ public final class GetSubnetworkResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubnetworkResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enableFlowLogs") Boolean enableFlowLogs,
-        @OutputCustomType.Parameter("externalIpv6Prefix") String externalIpv6Prefix,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("gatewayAddress") String gatewayAddress,
-        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
-        @OutputCustomType.Parameter("ipv6AccessType") String ipv6AccessType,
-        @OutputCustomType.Parameter("ipv6CidrRange") String ipv6CidrRange,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("logConfig") SubnetworkLogConfigResponse logConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("purpose") String purpose,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("secondaryIpRanges") List<SubnetworkSecondaryRangeResponse> secondaryIpRanges,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("stackType") String stackType,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enableFlowLogs") Boolean enableFlowLogs,
+        @CustomType.Parameter("externalIpv6Prefix") String externalIpv6Prefix,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("gatewayAddress") String gatewayAddress,
+        @CustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @CustomType.Parameter("ipv6AccessType") String ipv6AccessType,
+        @CustomType.Parameter("ipv6CidrRange") String ipv6CidrRange,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("logConfig") SubnetworkLogConfigResponse logConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("purpose") String purpose,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("secondaryIpRanges") List<SubnetworkSecondaryRangeResponse> secondaryIpRanges,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("stackType") String stackType,
+        @CustomType.Parameter("state") String state) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.enableFlowLogs = enableFlowLogs;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.OrderedJobResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.TemplateParameterResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.WorkflowTemplatePlacementResponse;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkflowTemplateResult {
     /**
      * The time template was created.
@@ -61,17 +61,17 @@ public final class GetWorkflowTemplateResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkflowTemplateResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dagTimeout") String dagTimeout,
-        @OutputCustomType.Parameter("jobs") List<OrderedJobResponse> jobs,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") List<TemplateParameterResponse> parameters,
-        @OutputCustomType.Parameter("placement") WorkflowTemplatePlacementResponse placement,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dagTimeout") String dagTimeout,
+        @CustomType.Parameter("jobs") List<OrderedJobResponse> jobs,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") List<TemplateParameterResponse> parameters,
+        @CustomType.Parameter("placement") WorkflowTemplatePlacementResponse placement,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("version") Integer version) {
         this.createTime = createTime;
         this.dagTimeout = dagTimeout;
         this.jobs = jobs;

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerRepositoryIdResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerSecretsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BitbucketServerConfigResponse {
     /**
      * Immutable. API Key that will be attached to webhook. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
@@ -63,18 +63,18 @@ public final class BitbucketServerConfigResponse {
      */
     private final String webhookKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BitbucketServerConfigResponse(
-        @OutputCustomType.Parameter("apiKey") String apiKey,
-        @OutputCustomType.Parameter("connectedRepositories") List<BitbucketServerRepositoryIdResponse> connectedRepositories,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("hostUri") String hostUri,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeredNetwork") String peeredNetwork,
-        @OutputCustomType.Parameter("secrets") BitbucketServerSecretsResponse secrets,
-        @OutputCustomType.Parameter("sslCa") String sslCa,
-        @OutputCustomType.Parameter("username") String username,
-        @OutputCustomType.Parameter("webhookKey") String webhookKey) {
+        @CustomType.Parameter("apiKey") String apiKey,
+        @CustomType.Parameter("connectedRepositories") List<BitbucketServerRepositoryIdResponse> connectedRepositories,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("hostUri") String hostUri,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeredNetwork") String peeredNetwork,
+        @CustomType.Parameter("secrets") BitbucketServerSecretsResponse secrets,
+        @CustomType.Parameter("sslCa") String sslCa,
+        @CustomType.Parameter("username") String username,
+        @CustomType.Parameter("webhookKey") String webhookKey) {
         this.apiKey = apiKey;
         this.connectedRepositories = connectedRepositories;
         this.createTime = createTime;

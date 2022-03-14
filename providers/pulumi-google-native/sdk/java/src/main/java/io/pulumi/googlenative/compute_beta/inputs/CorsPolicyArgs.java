@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
      * 
      */
-    @InputImport(name="allowCredentials")
+    @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
     public Output<Boolean> getAllowCredentials() {
@@ -36,7 +36,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the content for the Access-Control-Allow-Headers header.
      * 
      */
-    @InputImport(name="allowHeaders")
+    @Import(name="allowHeaders")
       private final @Nullable Output<List<String>> allowHeaders;
 
     public Output<List<String>> getAllowHeaders() {
@@ -47,7 +47,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the content for the Access-Control-Allow-Methods header.
      * 
      */
-    @InputImport(name="allowMethods")
+    @Import(name="allowMethods")
       private final @Nullable Output<List<String>> allowMethods;
 
     public Output<List<String>> getAllowMethods() {
@@ -58,7 +58,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a regular expression that matches allowed origins. For more information about the regular expression syntax, see Syntax. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
      * 
      */
-    @InputImport(name="allowOriginRegexes")
+    @Import(name="allowOriginRegexes")
       private final @Nullable Output<List<String>> allowOriginRegexes;
 
     public Output<List<String>> getAllowOriginRegexes() {
@@ -69,7 +69,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
      * 
      */
-    @InputImport(name="allowOrigins")
+    @Import(name="allowOrigins")
       private final @Nullable Output<List<String>> allowOrigins;
 
     public Output<List<String>> getAllowOrigins() {
@@ -80,7 +80,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the setting specifies the CORS policy is disabled. The default value of false, which indicates that the CORS policy is in effect.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -91,7 +91,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the content for the Access-Control-Expose-Headers header.
      * 
      */
-    @InputImport(name="exposeHeaders")
+    @Import(name="exposeHeaders")
       private final @Nullable Output<List<String>> exposeHeaders;
 
     public Output<List<String>> getExposeHeaders() {
@@ -102,7 +102,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
      * 
      */
-    @InputImport(name="maxAge")
+    @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;
 
     public Output<Integer> getMaxAge() {

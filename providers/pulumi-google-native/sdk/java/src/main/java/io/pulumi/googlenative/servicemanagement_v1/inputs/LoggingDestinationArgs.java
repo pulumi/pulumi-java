@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
      * Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by "/".
      * 
      */
-    @InputImport(name="logs")
+    @Import(name="logs")
       private final @Nullable Output<List<String>> logs;
 
     public Output<List<String>> getLogs() {
@@ -34,7 +34,7 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
      * The monitored resource type. The type must be defined in the Service.monitored_resources section.
      * 
      */
-    @InputImport(name="monitoredResource")
+    @Import(name="monitoredResource")
       private final @Nullable Output<String> monitoredResource;
 
     public Output<String> getMonitoredResource() {

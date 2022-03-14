@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessConfigResponse {
     /**
      * An external IP address associated with the TPU worker.
@@ -15,8 +15,8 @@ public final class AccessConfigResponse {
      */
     private final String externalIp;
 
-    @OutputCustomType.Constructor
-    private AccessConfigResponse(@OutputCustomType.Parameter("externalIp") String externalIp) {
+    @CustomType.Constructor
+    private AccessConfigResponse(@CustomType.Parameter("externalIp") String externalIp) {
         this.externalIp = externalIp;
     }
 

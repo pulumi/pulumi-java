@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.OAuthTokenResponse;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.OidcTokenResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpTargetResponse {
     /**
      * HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a job with an incompatible HttpMethod.
@@ -43,14 +43,14 @@ public final class HttpTargetResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpTargetResponse(
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("headers") Map<String,String> headers,
-        @OutputCustomType.Parameter("httpMethod") String httpMethod,
-        @OutputCustomType.Parameter("oauthToken") OAuthTokenResponse oauthToken,
-        @OutputCustomType.Parameter("oidcToken") OidcTokenResponse oidcToken,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("headers") Map<String,String> headers,
+        @CustomType.Parameter("httpMethod") String httpMethod,
+        @CustomType.Parameter("oauthToken") OAuthTokenResponse oauthToken,
+        @CustomType.Parameter("oidcToken") OidcTokenResponse oidcToken,
+        @CustomType.Parameter("uri") String uri) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;

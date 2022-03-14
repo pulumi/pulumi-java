@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.MembershipRoleRestrictionEvaluationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RestrictionEvaluationsResponse {
     /**
      * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
@@ -15,8 +15,8 @@ public final class RestrictionEvaluationsResponse {
      */
     private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
-    @OutputCustomType.Constructor
-    private RestrictionEvaluationsResponse(@OutputCustomType.Parameter("memberRestrictionEvaluation") MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
+    @CustomType.Constructor
+    private RestrictionEvaluationsResponse(@CustomType.Parameter("memberRestrictionEvaluation") MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
         this.memberRestrictionEvaluation = memberRestrictionEvaluation;
     }
 

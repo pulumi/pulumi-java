@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OutputResponse {
     /**
      * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
@@ -15,8 +15,8 @@ public final class OutputResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
-    private OutputResponse(@OutputCustomType.Parameter("uri") String uri) {
+    @CustomType.Constructor
+    private OutputResponse(@CustomType.Parameter("uri") String uri) {
         this.uri = uri;
     }
 

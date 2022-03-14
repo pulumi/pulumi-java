@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterNatLogConfigResponse {
     /**
      * Indicates whether or not to export logs. This is false by default.
@@ -21,10 +21,10 @@ public final class RouterNatLogConfigResponse {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterNatLogConfigResponse(
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("filter") String filter) {
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("filter") String filter) {
         this.enable = enable;
         this.filter = filter;
     }

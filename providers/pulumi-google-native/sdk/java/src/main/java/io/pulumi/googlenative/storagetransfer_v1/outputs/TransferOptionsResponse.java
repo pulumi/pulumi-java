@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.MetadataOptionsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransferOptionsResponse {
     /**
      * Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
@@ -31,12 +31,12 @@ public final class TransferOptionsResponse {
      */
     private final Boolean overwriteObjectsAlreadyExistingInSink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferOptionsResponse(
-        @OutputCustomType.Parameter("deleteObjectsFromSourceAfterTransfer") Boolean deleteObjectsFromSourceAfterTransfer,
-        @OutputCustomType.Parameter("deleteObjectsUniqueInSink") Boolean deleteObjectsUniqueInSink,
-        @OutputCustomType.Parameter("metadataOptions") MetadataOptionsResponse metadataOptions,
-        @OutputCustomType.Parameter("overwriteObjectsAlreadyExistingInSink") Boolean overwriteObjectsAlreadyExistingInSink) {
+        @CustomType.Parameter("deleteObjectsFromSourceAfterTransfer") Boolean deleteObjectsFromSourceAfterTransfer,
+        @CustomType.Parameter("deleteObjectsUniqueInSink") Boolean deleteObjectsUniqueInSink,
+        @CustomType.Parameter("metadataOptions") MetadataOptionsResponse metadataOptions,
+        @CustomType.Parameter("overwriteObjectsAlreadyExistingInSink") Boolean overwriteObjectsAlreadyExistingInSink) {
         this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
         this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
         this.metadataOptions = metadataOptions;

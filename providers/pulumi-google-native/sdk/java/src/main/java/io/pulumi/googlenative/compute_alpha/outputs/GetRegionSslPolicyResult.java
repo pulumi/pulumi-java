@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RegionSslPolicyWarningsItemResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ServerTlsSettingsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionSslPolicyResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -83,22 +83,22 @@ public final class GetRegionSslPolicyResult {
      */
     private final List<RegionSslPolicyWarningsItemResponse> warnings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionSslPolicyResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customFeatures") List<String> customFeatures,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("minTlsVersion") String minTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("profile") String profile,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("tlsSettings") ServerTlsSettingsResponse tlsSettings,
-        @OutputCustomType.Parameter("warnings") List<RegionSslPolicyWarningsItemResponse> warnings) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customFeatures") List<String> customFeatures,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("minTlsVersion") String minTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("profile") String profile,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("tlsSettings") ServerTlsSettingsResponse tlsSettings,
+        @CustomType.Parameter("warnings") List<RegionSslPolicyWarningsItemResponse> warnings) {
         this.creationTimestamp = creationTimestamp;
         this.customFeatures = customFeatures;
         this.description = description;

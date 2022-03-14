@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.InstanceArgs;
@@ -21,7 +21,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Time the instance was created in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -35,7 +35,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. Description of the instance.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -49,7 +49,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only. Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
      * 
      */
-    @OutputExport(name="diskEncryptionKeyName", type=String.class, parameters={})
+    @Export(name="diskEncryptionKeyName", type=String.class, parameters={})
     private Output<String> diskEncryptionKeyName;
 
     /**
@@ -63,7 +63,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. Display name for the instance.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Internal hostname or IP address of the Apigee endpoint used by clients to connect to the service.
      * 
      */
-    @OutputExport(name="host", type=String.class, parameters={})
+    @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
@@ -91,7 +91,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. IP range represents the customer-provided CIDR block of length 22 that will be used for the Apigee instance creation. This optional range, if provided, should be freely available as part of larger named range the customer has allocated to the Service Networking peering. If this is not provided, Apigee will automatically request for any available /22 CIDR block from Service Networking. The customer should use this CIDR block for configuring their firewall needs to allow traffic from Apigee. Input format: "a.b.c.d/22", Output format: a.b.c.d/22, e.f.g.h/28"
      * 
      */
-    @OutputExport(name="ipRange", type=String.class, parameters={})
+    @Export(name="ipRange", type=String.class, parameters={})
     private Output<String> ipRange;
 
     /**
@@ -105,7 +105,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Time the instance was last modified in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -119,7 +119,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Compute Engine location where the instance resides.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -133,7 +133,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource ID of the instance. Values must match the regular expression `^a-z{0,30}[a-z\d]$`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -147,7 +147,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. Size of the CIDR block range that will be reserved by the instance. PAID organizations support `SLASH_16` to `SLASH_20` and defaults to `SLASH_16`. Evaluation organizations support only `SLASH_23`.
      * 
      */
-    @OutputExport(name="peeringCidrRange", type=String.class, parameters={})
+    @Export(name="peeringCidrRange", type=String.class, parameters={})
     private Output<String> peeringCidrRange;
 
     /**
@@ -161,7 +161,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Port number of the exposed Apigee endpoint.
      * 
      */
-    @OutputExport(name="port", type=String.class, parameters={})
+    @Export(name="port", type=String.class, parameters={})
     private Output<String> port;
 
     /**
@@ -175,7 +175,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Version of the runtime system running in the instance. The runtime system is the set of components that serve the API Proxy traffic in your Environments.
      * 
      */
-    @OutputExport(name="runtimeVersion", type=String.class, parameters={})
+    @Export(name="runtimeVersion", type=String.class, parameters={})
     private Output<String> runtimeVersion;
 
     /**
@@ -189,7 +189,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * State of the instance. Values other than `ACTIVE` means the resource is not ready to use.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

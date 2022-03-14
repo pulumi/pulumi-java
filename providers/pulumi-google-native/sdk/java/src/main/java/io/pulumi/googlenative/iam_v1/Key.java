@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iam_v1.KeyArgs;
@@ -23,7 +23,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The key status.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
     /**
@@ -37,7 +37,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Specifies the algorithm (and possibly key size) for the key.
      * 
      */
-    @OutputExport(name="keyAlgorithm", type=String.class, parameters={})
+    @Export(name="keyAlgorithm", type=String.class, parameters={})
     private Output<String> keyAlgorithm;
 
     /**
@@ -51,7 +51,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The key origin.
      * 
      */
-    @OutputExport(name="keyOrigin", type=String.class, parameters={})
+    @Export(name="keyOrigin", type=String.class, parameters={})
     private Output<String> keyOrigin;
 
     /**
@@ -65,7 +65,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The key type.
      * 
      */
-    @OutputExport(name="keyType", type=String.class, parameters={})
+    @Export(name="keyType", type=String.class, parameters={})
     private Output<String> keyType;
 
     /**
@@ -79,7 +79,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The resource name of the service account key in the following format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The private key data. Only provided in `CreateServiceAccountKey` responses. Make sure to keep the private key data secure because it allows for the assertion of the service account identity. When base64 decoded, the private key data can be used to authenticate with Google API client libraries and with gcloud auth activate-service-account.
      * 
      */
-    @OutputExport(name="privateKeyData", type=String.class, parameters={})
+    @Export(name="privateKeyData", type=String.class, parameters={})
     private Output<String> privateKeyData;
 
     /**
@@ -107,7 +107,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The output format for the private key. Only provided in `CreateServiceAccountKey` responses, not in `GetServiceAccountKey` or `ListServiceAccountKey` responses. Google never exposes system-managed private keys, and never retains user-managed private keys.
      * 
      */
-    @OutputExport(name="privateKeyType", type=String.class, parameters={})
+    @Export(name="privateKeyType", type=String.class, parameters={})
     private Output<String> privateKeyType;
 
     /**
@@ -121,7 +121,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The public key data. Only provided in `GetServiceAccountKey` responses.
      * 
      */
-    @OutputExport(name="publicKeyData", type=String.class, parameters={})
+    @Export(name="publicKeyData", type=String.class, parameters={})
     private Output<String> publicKeyData;
 
     /**
@@ -135,7 +135,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The key can be used after this timestamp.
      * 
      */
-    @OutputExport(name="validAfterTime", type=String.class, parameters={})
+    @Export(name="validAfterTime", type=String.class, parameters={})
     private Output<String> validAfterTime;
 
     /**
@@ -149,7 +149,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The key can be used before this timestamp. For system-managed key pairs, this timestamp is the end time for the private key signing operation. The public key could still be used for verification for a few hours after this time.
      * 
      */
-    @OutputExport(name="validBeforeTime", type=String.class, parameters={})
+    @Export(name="validBeforeTime", type=String.class, parameters={})
     private Output<String> validBeforeTime;
 
     /**

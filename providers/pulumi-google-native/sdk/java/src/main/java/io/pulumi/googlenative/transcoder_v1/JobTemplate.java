@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.transcoder_v1.JobTemplateArgs;
@@ -22,7 +22,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * The configuration for this template.
      * 
      */
-    @OutputExport(name="config", type=JobConfigResponse.class, parameters={})
+    @Export(name="config", type=JobConfigResponse.class, parameters={})
     private Output<JobConfigResponse> config;
 
     /**
@@ -36,7 +36,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

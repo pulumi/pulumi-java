@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MultiCloudClusterResponse extends io.pulumi.resources.InvokeA
      * If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
      * 
      */
-    @InputImport(name="clusterMissing", required=true)
+    @Import(name="clusterMissing", required=true)
       private final Boolean clusterMissing;
 
     public Boolean getClusterMissing() {
@@ -32,7 +32,7 @@ public final class MultiCloudClusterResponse extends io.pulumi.resources.InvokeA
      * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
      * 
      */
-    @InputImport(name="resourceLink", required=true)
+    @Import(name="resourceLink", required=true)
       private final String resourceLink;
 
     public String getResourceLink() {

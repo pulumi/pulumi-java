@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
     /**
      * Optional. Height of the image in number of pixels.
@@ -26,11 +26,11 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
      */
     private final Integer width;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ImageResponse(
-        @OutputCustomType.Parameter("height") Integer height,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("width") Integer width) {
+        @CustomType.Parameter("height") Integer height,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("width") Integer width) {
         this.height = height;
         this.uri = uri;
         this.width = width;

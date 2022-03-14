@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Represents a list of available feature names for a given version.
      * 
      */
-    @InputImport(name="availableFeatures", required=true)
+    @Import(name="availableFeatures", required=true)
       private final List<String> availableFeatures;
 
     public List<String> getAvailableFeatures() {
@@ -33,7 +33,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Whether this is currently the default version for Cloud Data Fusion
      * 
      */
-    @InputImport(name="defaultVersion", required=true)
+    @Import(name="defaultVersion", required=true)
       private final Boolean defaultVersion;
 
     public Boolean getDefaultVersion() {
@@ -44,7 +44,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Type represents the release availability of the version
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -55,7 +55,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The version number of the Data Fusion instance, such as '6.0.1.0'.
      * 
      */
-    @InputImport(name="versionNumber", required=true)
+    @Import(name="versionNumber", required=true)
       private final String versionNumber;
 
     public String getVersionNumber() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.DomainMappingSpecArgs;
 import io.pulumi.googlenative.run_v1.inputs.DomainMappingStatusArgs;
 import io.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
@@ -21,14 +21,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The API version for this call such as "domains.cloudrun.com/v1".
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
         return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
-    @InputImport(name="dryRun")
+    @Import(name="dryRun")
       private final @Nullable Output<String> dryRun;
 
     public Output<String> getDryRun() {
@@ -39,14 +39,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of resource, in this case "DomainMapping".
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,14 +57,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata associated with this BuildTemplate.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Output.empty() : this.metadata;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -75,7 +75,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The spec for this DomainMapping.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<DomainMappingSpecArgs> spec;
 
     public Output<DomainMappingSpecArgs> getSpec() {
@@ -86,7 +86,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The current status of the DomainMapping.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<DomainMappingStatusArgs> status;
 
     public Output<DomainMappingStatusArgs> getStatus() {

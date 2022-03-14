@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.ServicePerimeterPerimeterType;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ServicePerimeterConfigArgs;
 import java.lang.Boolean;
@@ -17,7 +17,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ServicePerimeterArgs Empty = new ServicePerimeterArgs();
 
-    @InputImport(name="accessPolicyId", required=true)
+    @Import(name="accessPolicyId", required=true)
       private final Output<String> accessPolicyId;
 
     public Output<String> getAccessPolicyId() {
@@ -28,7 +28,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Description of the `ServicePerimeter` and its use. Does not affect behavior.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -39,7 +39,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -50,7 +50,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.
      * 
      */
-    @InputImport(name="perimeterType")
+    @Import(name="perimeterType")
       private final @Nullable Output<ServicePerimeterPerimeterType> perimeterType;
 
     public Output<ServicePerimeterPerimeterType> getPerimeterType() {
@@ -61,7 +61,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the "use_explicit_dry_run_spec" flag is set.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<ServicePerimeterConfigArgs> spec;
 
     public Output<ServicePerimeterConfigArgs> getSpec() {
@@ -72,7 +72,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<ServicePerimeterConfigArgs> status;
 
     public Output<ServicePerimeterConfigArgs> getStatus() {
@@ -83,7 +83,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Human readable title. Must be unique within the Policy.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -94,7 +94,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True if any of the fields in the spec are set to non-default values.
      * 
      */
-    @InputImport(name="useExplicitDryRunSpec")
+    @Import(name="useExplicitDryRunSpec")
       private final @Nullable Output<Boolean> useExplicitDryRunSpec;
 
     public Output<Boolean> getUseExplicitDryRunSpec() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.DataCollectorArgs;
@@ -21,7 +21,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * The time at which the data collector was created in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -35,7 +35,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * A description of the data collector.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -49,7 +49,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * The time at which the Data Collector was last updated in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -63,7 +63,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * ID of the data collector. Must begin with `dc_`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class DataCollector extends io.pulumi.resources.CustomResource {
      * Immutable. The type of data this data collector will collect.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

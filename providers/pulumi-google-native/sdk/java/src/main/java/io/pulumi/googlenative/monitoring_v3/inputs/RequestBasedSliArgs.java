@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.DistributionCutArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.TimeSeriesRatioArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
      * 
      */
-    @InputImport(name="distributionCut")
+    @Import(name="distributionCut")
       private final @Nullable Output<DistributionCutArgs> distributionCut;
 
     public Output<DistributionCutArgs> getDistributionCut() {
@@ -34,7 +34,7 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.
      * 
      */
-    @InputImport(name="goodTotalRatio")
+    @Import(name="goodTotalRatio")
       private final @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio;
 
     public Output<TimeSeriesRatioArgs> getGoodTotalRatio() {

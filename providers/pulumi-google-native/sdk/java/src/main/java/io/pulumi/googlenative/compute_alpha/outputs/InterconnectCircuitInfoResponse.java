@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InterconnectCircuitInfoResponse {
     /**
      * Customer-side demarc ID for this circuit.
@@ -25,11 +25,11 @@ public final class InterconnectCircuitInfoResponse {
      */
     private final String googleDemarcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InterconnectCircuitInfoResponse(
-        @OutputCustomType.Parameter("customerDemarcId") String customerDemarcId,
-        @OutputCustomType.Parameter("googleCircuitId") String googleCircuitId,
-        @OutputCustomType.Parameter("googleDemarcId") String googleDemarcId) {
+        @CustomType.Parameter("customerDemarcId") String customerDemarcId,
+        @CustomType.Parameter("googleCircuitId") String googleCircuitId,
+        @CustomType.Parameter("googleDemarcId") String googleDemarcId) {
         this.customerDemarcId = customerDemarcId;
         this.googleCircuitId = googleCircuitId;
         this.googleDemarcId = googleDemarcId;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1alpha1.inputs.InstanceStatusResponse;
 import io.pulumi.googlenative.run_v1alpha1.inputs.JobConditionResponse;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The number of actively running instances. +optional
      * 
      */
-    @InputImport(name="active", required=true)
+    @Import(name="active", required=true)
       private final Integer active;
 
     public Integer getActive() {
@@ -35,7 +35,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Represents time when the job was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
      */
-    @InputImport(name="completionTime", required=true)
+    @Import(name="completionTime", required=true)
       private final String completionTime;
 
     public String getCompletionTime() {
@@ -46,7 +46,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The latest available observations of a job's current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ +optional
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final List<JobConditionResponse> conditions;
 
     public List<JobConditionResponse> getConditions() {
@@ -57,7 +57,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The number of instances which reached phase Failed. +optional
      * 
      */
-    @InputImport(name="failed", required=true)
+    @Import(name="failed", required=true)
       private final Integer failed;
 
     public Integer getFailed() {
@@ -68,7 +68,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. ImageDigest holds the resolved digest for the image specified within .Spec.Template.Spec.Container.Image. The digest is resolved during the creation of the Job. This field holds the digest value regardless of whether a tag or digest was originally specified in the Container object.
      * 
      */
-    @InputImport(name="imageDigest", required=true)
+    @Import(name="imageDigest", required=true)
       private final String imageDigest;
 
     public String getImageDigest() {
@@ -79,7 +79,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Status of completed, failed, and running instances. +optional
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<InstanceStatusResponse> instances;
 
     public List<InstanceStatusResponse> getInstances() {
@@ -90,7 +90,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The 'generation' of the job that was last processed by the controller.
      * 
      */
-    @InputImport(name="observedGeneration", required=true)
+    @Import(name="observedGeneration", required=true)
       private final Integer observedGeneration;
 
     public Integer getObservedGeneration() {
@@ -101,7 +101,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Represents time when the job was acknowledged by the job controller. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -112,7 +112,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The number of instances which reached phase Succeeded. +optional
      * 
      */
-    @InputImport(name="succeeded", required=true)
+    @Import(name="succeeded", required=true)
       private final Integer succeeded;
 
     public Integer getSucceeded() {

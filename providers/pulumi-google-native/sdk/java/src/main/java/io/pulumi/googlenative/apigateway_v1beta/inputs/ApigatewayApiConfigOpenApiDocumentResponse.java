@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigFileResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends io.pulumi.
      * The OpenAPI Specification document file.
      * 
      */
-    @InputImport(name="document", required=true)
+    @Import(name="document", required=true)
       private final ApigatewayApiConfigFileResponse document;
 
     public ApigatewayApiConfigFileResponse getDocument() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The Cloud Storage bucket name.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -33,7 +33,7 @@ public final class GcsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The root path inside the Cloud Storage bucket.
      * 
      */
-    @InputImport(name="rootPath")
+    @Import(name="rootPath")
       private final @Nullable Output<String> rootPath;
 
     public Output<String> getRootPath() {

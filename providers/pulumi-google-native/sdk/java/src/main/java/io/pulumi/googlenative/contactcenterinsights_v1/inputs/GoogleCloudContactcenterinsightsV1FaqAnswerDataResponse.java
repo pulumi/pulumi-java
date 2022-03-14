@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * The piece of text from the `source` knowledge base document.
      * 
      */
-    @InputImport(name="answer", required=true)
+    @Import(name="answer", required=true)
       private final String answer;
 
     public String getAnswer() {
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * The system's confidence score that this answer is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
-    @InputImport(name="confidenceScore", required=true)
+    @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
 
     public Double getConfidenceScore() {
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * Map that contains metadata about the FAQ answer and the document that it originates from.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -55,7 +55,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}.
      * 
      */
-    @InputImport(name="queryRecord", required=true)
+    @Import(name="queryRecord", required=true)
       private final String queryRecord;
 
     public String getQueryRecord() {
@@ -66,7 +66,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * The corresponding FAQ question.
      * 
      */
-    @InputImport(name="question", required=true)
+    @Import(name="question", required=true)
       private final String question;
 
     public String getQuestion() {
@@ -77,7 +77,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {

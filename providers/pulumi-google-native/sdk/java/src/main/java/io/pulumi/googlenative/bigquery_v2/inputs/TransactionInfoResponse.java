@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class TransactionInfoResponse extends io.pulumi.resources.InvokeArg
      * // [Alpha] Id of the transaction.
      * 
      */
-    @InputImport(name="transactionId", required=true)
+    @Import(name="transactionId", required=true)
       private final String transactionId;
 
     public String getTransactionId() {

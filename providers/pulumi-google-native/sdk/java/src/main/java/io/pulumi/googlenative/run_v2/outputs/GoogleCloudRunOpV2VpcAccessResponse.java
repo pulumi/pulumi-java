@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2VpcAccessResponse {
     /**
      * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
@@ -20,10 +20,10 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
      */
     private final String egress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2VpcAccessResponse(
-        @OutputCustomType.Parameter("connector") String connector,
-        @OutputCustomType.Parameter("egress") String egress) {
+        @CustomType.Parameter("connector") String connector,
+        @CustomType.Parameter("egress") String egress) {
         this.connector = connector;
         this.egress = egress;
     }

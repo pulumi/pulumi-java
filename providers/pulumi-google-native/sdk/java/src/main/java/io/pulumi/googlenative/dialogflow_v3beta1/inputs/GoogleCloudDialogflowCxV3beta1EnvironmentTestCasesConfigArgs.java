@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs 
      * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to true, run once a day.
      * 
      */
-    @InputImport(name="enableContinuousRun")
+    @Import(name="enableContinuousRun")
       private final @Nullable Output<Boolean> enableContinuousRun;
 
     public Output<Boolean> getEnableContinuousRun() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs 
      * Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.
      * 
      */
-    @InputImport(name="enablePredeploymentRun")
+    @Import(name="enablePredeploymentRun")
       private final @Nullable Output<Boolean> enablePredeploymentRun;
 
     public Output<Boolean> getEnablePredeploymentRun() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs 
      * A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`
      * 
      */
-    @InputImport(name="testCases")
+    @Import(name="testCases")
       private final @Nullable Output<List<String>> testCases;
 
     public Output<List<String>> getTestCases() {

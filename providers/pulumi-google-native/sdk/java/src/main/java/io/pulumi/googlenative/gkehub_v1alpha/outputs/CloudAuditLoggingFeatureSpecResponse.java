@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudAuditLoggingFeatureSpecResponse {
     /**
      * Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer's entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
@@ -16,8 +16,8 @@ public final class CloudAuditLoggingFeatureSpecResponse {
      */
     private final List<String> allowlistedServiceAccounts;
 
-    @OutputCustomType.Constructor
-    private CloudAuditLoggingFeatureSpecResponse(@OutputCustomType.Parameter("allowlistedServiceAccounts") List<String> allowlistedServiceAccounts) {
+    @CustomType.Constructor
+    private CloudAuditLoggingFeatureSpecResponse(@CustomType.Parameter("allowlistedServiceAccounts") List<String> allowlistedServiceAccounts) {
         this.allowlistedServiceAccounts = allowlistedServiceAccounts;
     }
 

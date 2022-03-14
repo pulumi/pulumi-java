@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gameservices_v1.outputs.CloudAuditOptionsResponse;
 import io.pulumi.googlenative.gameservices_v1.outputs.CounterOptionsResponse;
 import io.pulumi.googlenative.gameservices_v1.outputs.DataAccessOptionsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogConfigResponse {
     /**
      * Cloud audit options.
@@ -27,11 +27,11 @@ public final class LogConfigResponse {
      */
     private final DataAccessOptionsResponse dataAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogConfigResponse(
-        @OutputCustomType.Parameter("cloudAudit") CloudAuditOptionsResponse cloudAudit,
-        @OutputCustomType.Parameter("counter") CounterOptionsResponse counter,
-        @OutputCustomType.Parameter("dataAccess") DataAccessOptionsResponse dataAccess) {
+        @CustomType.Parameter("cloudAudit") CloudAuditOptionsResponse cloudAudit,
+        @CustomType.Parameter("counter") CounterOptionsResponse counter,
+        @CustomType.Parameter("dataAccess") DataAccessOptionsResponse dataAccess) {
         this.cloudAudit = cloudAudit;
         this.counter = counter;
         this.dataAccess = dataAccess;

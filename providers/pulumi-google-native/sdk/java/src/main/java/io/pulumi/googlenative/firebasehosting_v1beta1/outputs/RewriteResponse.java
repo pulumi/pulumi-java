@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.CloudRunRewriteResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RewriteResponse {
     /**
      * The request will be forwarded to Firebase Dynamic Links.
@@ -42,14 +42,14 @@ public final class RewriteResponse {
      */
     private final CloudRunRewriteResponse run;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RewriteResponse(
-        @OutputCustomType.Parameter("dynamicLinks") Boolean dynamicLinks,
-        @OutputCustomType.Parameter("function") String function,
-        @OutputCustomType.Parameter("glob") String glob,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("regex") String regex,
-        @OutputCustomType.Parameter("run") CloudRunRewriteResponse run) {
+        @CustomType.Parameter("dynamicLinks") Boolean dynamicLinks,
+        @CustomType.Parameter("function") String function,
+        @CustomType.Parameter("glob") String glob,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("regex") String regex,
+        @CustomType.Parameter("run") CloudRunRewriteResponse run) {
         this.dynamicLinks = dynamicLinks;
         this.function = function;
         this.glob = glob;

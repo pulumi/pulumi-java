@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sqladmin_v1.outputs.MySqlReplicaConfigurationResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicaConfigurationResponse {
     /**
      * Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
@@ -27,11 +27,11 @@ public final class ReplicaConfigurationResponse {
      */
     private final MySqlReplicaConfigurationResponse mysqlReplicaConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicaConfigurationResponse(
-        @OutputCustomType.Parameter("failoverTarget") Boolean failoverTarget,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("mysqlReplicaConfiguration") MySqlReplicaConfigurationResponse mysqlReplicaConfiguration) {
+        @CustomType.Parameter("failoverTarget") Boolean failoverTarget,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("mysqlReplicaConfiguration") MySqlReplicaConfigurationResponse mysqlReplicaConfiguration) {
         this.failoverTarget = failoverTarget;
         this.kind = kind;
         this.mysqlReplicaConfiguration = mysqlReplicaConfiguration;

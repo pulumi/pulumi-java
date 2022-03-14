@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.VpcPeeringConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * Display name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -31,35 +31,35 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * Labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="privateConnectionId", required=true)
+    @Import(name="privateConnectionId", required=true)
       private final Output<String> privateConnectionId;
 
     public Output<String> getPrivateConnectionId() {
         return this.privateConnectionId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -70,7 +70,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * VPC Peering Config.
      * 
      */
-    @InputImport(name="vpcPeeringConfig")
+    @Import(name="vpcPeeringConfig")
       private final @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;
 
     public Output<VpcPeeringConfigArgs> getVpcPeeringConfig() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.secretmanager_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.secretmanager_v1.SecretArgs;
@@ -27,7 +27,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * The time at which the Secret was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -41,7 +41,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Optional. Etag of the currently stored Secret.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -55,7 +55,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -69,7 +69,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -83,7 +83,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * The resource name of the Secret in the format `projects/*{@literal /}secrets/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
      * 
      */
-    @OutputExport(name="replication", type=ReplicationResponse.class, parameters={})
+    @Export(name="replication", type=ReplicationResponse.class, parameters={})
     private Output<ReplicationResponse> replication;
 
     /**
@@ -111,7 +111,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Optional. Rotation policy attached to the Secret. May be excluded if there is no rotation policy.
      * 
      */
-    @OutputExport(name="rotation", type=RotationResponse.class, parameters={})
+    @Export(name="rotation", type=RotationResponse.class, parameters={})
     private Output<RotationResponse> rotation;
 
     /**
@@ -125,7 +125,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions.
      * 
      */
-    @OutputExport(name="topics", type=List.class, parameters={TopicResponse.class})
+    @Export(name="topics", type=List.class, parameters={TopicResponse.class})
     private Output<List<TopicResponse>> topics;
 
     /**
@@ -139,7 +139,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Input only. The TTL for the Secret.
      * 
      */
-    @OutputExport(name="ttl", type=String.class, parameters={})
+    @Export(name="ttl", type=String.class, parameters={})
     private Output<String> ttl;
 
     /**

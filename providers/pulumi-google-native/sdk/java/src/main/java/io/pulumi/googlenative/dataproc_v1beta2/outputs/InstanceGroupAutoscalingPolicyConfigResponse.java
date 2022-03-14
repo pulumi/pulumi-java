@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupAutoscalingPolicyConfigResponse {
     /**
      * Optional. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required. Secondary workers - Bounds: [min_instances, ). Default: 0.
@@ -25,11 +25,11 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupAutoscalingPolicyConfigResponse(
-        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
-        @OutputCustomType.Parameter("minInstances") Integer minInstances,
-        @OutputCustomType.Parameter("weight") Integer weight) {
+        @CustomType.Parameter("maxInstances") Integer maxInstances,
+        @CustomType.Parameter("minInstances") Integer minInstances,
+        @CustomType.Parameter("weight") Integer weight) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.weight = weight;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetDatacenterConnectorArgs extends io.pulumi.resources.Invoke
 
     public static final GetDatacenterConnectorArgs Empty = new GetDatacenterConnectorArgs();
 
-    @InputImport(name="datacenterConnectorId", required=true)
+    @Import(name="datacenterConnectorId", required=true)
       private final String datacenterConnectorId;
 
     public String getDatacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final String sourceId;
 
     public String getSourceId() {

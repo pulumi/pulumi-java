@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datapipelines_v1.PipelineArgs;
@@ -25,7 +25,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Immutable. The timestamp when the pipeline was initially created. Set by the Data Pipelines service.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -39,7 +39,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -53,7 +53,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Number of jobs.
      * 
      */
-    @OutputExport(name="jobCount", type=Integer.class, parameters={})
+    @Export(name="jobCount", type=Integer.class, parameters={})
     private Output<Integer> jobCount;
 
     /**
@@ -67,7 +67,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Immutable. The timestamp when the pipeline was last modified. Set by the Data Pipelines service.
      * 
      */
-    @OutputExport(name="lastUpdateTime", type=String.class, parameters={})
+    @Export(name="lastUpdateTime", type=String.class, parameters={})
     private Output<String> lastUpdateTime;
 
     /**
@@ -81,7 +81,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the pipeline's location. The list of available locations can be obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by the corresponding sources during pipeline creation.
      * 
      */
-    @OutputExport(name="pipelineSources", type=Map.class, parameters={String.class, String.class})
+    @Export(name="pipelineSources", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> pipelineSources;
 
     /**
@@ -109,7 +109,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Internal scheduling information for a pipeline. If this information is provided, periodic jobs will be created per the schedule. If not, users are responsible for creating jobs externally.
      * 
      */
-    @OutputExport(name="scheduleInfo", type=GoogleCloudDatapipelinesV1ScheduleSpecResponse.class, parameters={})
+    @Export(name="scheduleInfo", type=GoogleCloudDatapipelinesV1ScheduleSpecResponse.class, parameters={})
     private Output<GoogleCloudDatapipelinesV1ScheduleSpecResponse> scheduleInfo;
 
     /**
@@ -123,7 +123,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Optional. A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
      * 
      */
-    @OutputExport(name="schedulerServiceAccountEmail", type=String.class, parameters={})
+    @Export(name="schedulerServiceAccountEmail", type=String.class, parameters={})
     private Output<String> schedulerServiceAccountEmail;
 
     /**
@@ -137,7 +137,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The state of the pipeline. When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -151,7 +151,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -165,7 +165,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Workload information for creating new jobs.
      * 
      */
-    @OutputExport(name="workload", type=GoogleCloudDatapipelinesV1WorkloadResponse.class, parameters={})
+    @Export(name="workload", type=GoogleCloudDatapipelinesV1WorkloadResponse.class, parameters={})
     private Output<GoogleCloudDatapipelinesV1WorkloadResponse> workload;
 
     /**

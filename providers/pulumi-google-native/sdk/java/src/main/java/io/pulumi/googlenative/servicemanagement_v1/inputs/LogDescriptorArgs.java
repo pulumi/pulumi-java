@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * A human-readable description of this log. This information appears in the documentation and can contain details.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name for this log. This information appears on the user interface and should be concise.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -46,7 +46,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * The set of labels that are available to describe a specific log entry. Runtime requests that contain labels not specified here are considered invalid.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<LabelDescriptorArgs>> labels;
 
     public Output<List<LabelDescriptorArgs>> getLabels() {
@@ -57,7 +57,7 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the log. It must be less than 512 characters long and can include the following characters: upper- and lower-case alphanumeric characters [A-Za-z0-9], and punctuation characters including slash, underscore, hyphen, period [/_-.].
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

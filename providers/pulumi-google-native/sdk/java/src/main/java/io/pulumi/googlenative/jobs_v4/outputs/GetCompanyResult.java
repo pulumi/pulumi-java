@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.CompanyDerivedInfoResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCompanyResult {
     /**
      * The URI to employer's career site or careers page on the employer's web site, for example, "https://careers.google.com".
@@ -78,21 +78,21 @@ public final class GetCompanyResult {
      */
     private final String websiteUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCompanyResult(
-        @OutputCustomType.Parameter("careerSiteUri") String careerSiteUri,
-        @OutputCustomType.Parameter("derivedInfo") CompanyDerivedInfoResponse derivedInfo,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("eeoText") String eeoText,
-        @OutputCustomType.Parameter("externalId") String externalId,
-        @OutputCustomType.Parameter("headquartersAddress") String headquartersAddress,
-        @OutputCustomType.Parameter("hiringAgency") Boolean hiringAgency,
-        @OutputCustomType.Parameter("imageUri") String imageUri,
-        @OutputCustomType.Parameter("keywordSearchableJobCustomAttributes") List<String> keywordSearchableJobCustomAttributes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("size") String size,
-        @OutputCustomType.Parameter("suspended") Boolean suspended,
-        @OutputCustomType.Parameter("websiteUri") String websiteUri) {
+        @CustomType.Parameter("careerSiteUri") String careerSiteUri,
+        @CustomType.Parameter("derivedInfo") CompanyDerivedInfoResponse derivedInfo,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("eeoText") String eeoText,
+        @CustomType.Parameter("externalId") String externalId,
+        @CustomType.Parameter("headquartersAddress") String headquartersAddress,
+        @CustomType.Parameter("hiringAgency") Boolean hiringAgency,
+        @CustomType.Parameter("imageUri") String imageUri,
+        @CustomType.Parameter("keywordSearchableJobCustomAttributes") List<String> keywordSearchableJobCustomAttributes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("size") String size,
+        @CustomType.Parameter("suspended") Boolean suspended,
+        @CustomType.Parameter("websiteUri") String websiteUri) {
         this.careerSiteUri = careerSiteUri;
         this.derivedInfo = derivedInfo;
         this.displayName = displayName;

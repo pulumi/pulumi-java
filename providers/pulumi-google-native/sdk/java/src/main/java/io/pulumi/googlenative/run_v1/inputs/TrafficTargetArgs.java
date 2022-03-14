@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
      * 
      */
-    @InputImport(name="configurationName")
+    @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
@@ -35,7 +35,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
      * 
      */
-    @InputImport(name="latestRevision")
+    @Import(name="latestRevision")
       private final @Nullable Output<Boolean> latestRevision;
 
     public Output<Boolean> getLatestRevision() {
@@ -46,7 +46,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Percent specifies percent of the traffic to this Revision or Configuration. This defaults to zero if unspecified.
      * 
      */
-    @InputImport(name="percent")
+    @Import(name="percent")
       private final @Nullable Output<Integer> percent;
 
     public Output<Integer> getPercent() {
@@ -57,7 +57,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * RevisionName of a specific revision to which to send this portion of traffic. This is mutually exclusive with ConfigurationName.
      * 
      */
-    @InputImport(name="revisionName")
+    @Import(name="revisionName")
       private final @Nullable Output<String> revisionName;
 
     public Output<String> getRevisionName() {
@@ -68,7 +68,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Tag is used to expose a dedicated url for referencing this target exclusively.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {

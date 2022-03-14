@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryreservation_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.enums.CapacityCommitmentPlan;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.enums.CapacityCommitmentRenewalPlan;
 import java.lang.String;
@@ -16,21 +16,21 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
 
     public static final CapacityCommitmentArgs Empty = new CapacityCommitmentArgs();
 
-    @InputImport(name="capacityCommitmentId")
+    @Import(name="capacityCommitmentId")
       private final @Nullable Output<String> capacityCommitmentId;
 
     public Output<String> getCapacityCommitmentId() {
         return this.capacityCommitmentId == null ? Output.empty() : this.capacityCommitmentId;
     }
 
-    @InputImport(name="enforceSingleAdminProjectPerOrg")
+    @Import(name="enforceSingleAdminProjectPerOrg")
       private final @Nullable Output<String> enforceSingleAdminProjectPerOrg;
 
     public Output<String> getEnforceSingleAdminProjectPerOrg() {
         return this.enforceSingleAdminProjectPerOrg == null ? Output.empty() : this.enforceSingleAdminProjectPerOrg;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,14 +41,14 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * Capacity commitment commitment plan.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<CapacityCommitmentPlan> plan;
 
     public Output<CapacityCommitmentPlan> getPlan() {
         return this.plan == null ? Output.empty() : this.plan;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -59,7 +59,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
      * 
      */
-    @InputImport(name="renewalPlan")
+    @Import(name="renewalPlan")
       private final @Nullable Output<CapacityCommitmentRenewalPlan> renewalPlan;
 
     public Output<CapacityCommitmentRenewalPlan> getRenewalPlan() {
@@ -70,7 +70,7 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
      * Number of slots in this commitment.
      * 
      */
-    @InputImport(name="slotCount")
+    @Import(name="slotCount")
       private final @Nullable Output<String> slotCount;
 
     public Output<String> getSlotCount() {

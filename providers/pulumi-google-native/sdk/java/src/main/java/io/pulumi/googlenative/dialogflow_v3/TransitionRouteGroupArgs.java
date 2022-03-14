@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TransitionRouteArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
 
     public static final TransitionRouteGroupArgs Empty = new TransitionRouteGroupArgs();
 
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
     public Output<String> getAgentId() {
@@ -27,28 +27,28 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
      * The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName;
     }
 
-    @InputImport(name="flowId", required=true)
+    @Import(name="flowId", required=true)
       private final Output<String> flowId;
 
     public Output<String> getFlowId() {
         return this.flowId;
     }
 
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
         return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -59,14 +59,14 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
      * The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -77,7 +77,7 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
      * Transition routes associated with the TransitionRouteGroup.
      * 
      */
-    @InputImport(name="transitionRoutes")
+    @Import(name="transitionRoutes")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 
     public Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> getTransitionRoutes() {

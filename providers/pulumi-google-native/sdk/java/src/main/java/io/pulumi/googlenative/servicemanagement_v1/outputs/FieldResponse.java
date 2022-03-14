@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FieldResponse {
     /**
      * The field cardinality.
@@ -64,18 +64,18 @@ public final class FieldResponse {
      */
     private final String typeUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FieldResponse(
-        @OutputCustomType.Parameter("cardinality") String cardinality,
-        @OutputCustomType.Parameter("defaultValue") String defaultValue,
-        @OutputCustomType.Parameter("jsonName") String jsonName,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("number") Integer number,
-        @OutputCustomType.Parameter("oneofIndex") Integer oneofIndex,
-        @OutputCustomType.Parameter("options") List<OptionResponse> options,
-        @OutputCustomType.Parameter("packed") Boolean packed,
-        @OutputCustomType.Parameter("typeUrl") String typeUrl) {
+        @CustomType.Parameter("cardinality") String cardinality,
+        @CustomType.Parameter("defaultValue") String defaultValue,
+        @CustomType.Parameter("jsonName") String jsonName,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("number") Integer number,
+        @CustomType.Parameter("oneofIndex") Integer oneofIndex,
+        @CustomType.Parameter("options") List<OptionResponse> options,
+        @CustomType.Parameter("packed") Boolean packed,
+        @CustomType.Parameter("typeUrl") String typeUrl) {
         this.cardinality = cardinality;
         this.defaultValue = defaultValue;
         this.jsonName = jsonName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KindExpressionResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PartitionIdResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.
      * The kind to process.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final GooglePrivacyDlpV2KindExpressionResponse kind;
 
     public GooglePrivacyDlpV2KindExpressionResponse getKind() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.
      * A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
      * 
      */
-    @InputImport(name="partitionId", required=true)
+    @Import(name="partitionId", required=true)
       private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
     public GooglePrivacyDlpV2PartitionIdResponse getPartitionId() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
      * PDF file for the instruction. Only gcs path is allowed.
      * 
      */
-    @InputImport(name="gcsFileUri")
+    @Import(name="gcsFileUri")
       private final @Nullable Output<String> gcsFileUri;
 
     public Output<String> getGcsFileUri() {

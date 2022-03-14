@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1beta4.BackupRunArgs;
@@ -25,7 +25,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
      * 
      */
-    @OutputExport(name="backupKind", type=String.class, parameters={})
+    @Export(name="backupKind", type=String.class, parameters={})
     private Output<String> backupKind;
 
     /**
@@ -39,7 +39,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * The description of this run, only applicable to on-demand backups.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -53,7 +53,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * Encryption configuration specific to a backup.
      * 
      */
-    @OutputExport(name="diskEncryptionConfiguration", type=DiskEncryptionConfigurationResponse.class, parameters={})
+    @Export(name="diskEncryptionConfiguration", type=DiskEncryptionConfigurationResponse.class, parameters={})
     private Output<DiskEncryptionConfigurationResponse> diskEncryptionConfiguration;
 
     /**
@@ -67,7 +67,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * Encryption status specific to a backup.
      * 
      */
-    @OutputExport(name="diskEncryptionStatus", type=DiskEncryptionStatusResponse.class, parameters={})
+    @Export(name="diskEncryptionStatus", type=DiskEncryptionStatusResponse.class, parameters={})
     private Output<DiskEncryptionStatusResponse> diskEncryptionStatus;
 
     /**
@@ -81,7 +81,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * The time the backup operation completed in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -95,7 +95,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * The time the run was enqueued in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @OutputExport(name="enqueuedTime", type=String.class, parameters={})
+    @Export(name="enqueuedTime", type=String.class, parameters={})
     private Output<String> enqueuedTime;
 
     /**
@@ -109,7 +109,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * Information about why the backup operation failed. This is only present if the run has the FAILED status.
      * 
      */
-    @OutputExport(name="error", type=OperationErrorResponse.class, parameters={})
+    @Export(name="error", type=OperationErrorResponse.class, parameters={})
     private Output<OperationErrorResponse> error;
 
     /**
@@ -123,7 +123,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * Name of the database instance.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -137,7 +137,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * This is always `sql#backupRun`.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -151,7 +151,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * Location of the backups.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -165,7 +165,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * The URI of this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -179,7 +179,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * The time the backup operation actually started in UTC timezone in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -193,7 +193,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * The status of this run.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -207,7 +207,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to "ON_DEMAND" and is ignored, when specified for insert requests.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -221,7 +221,7 @@ public class BackupRun extends io.pulumi.resources.CustomResource {
      * The start time of the backup window during which this the backup was attempted in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @OutputExport(name="windowStartTime", type=String.class, parameters={})
+    @Export(name="windowStartTime", type=String.class, parameters={})
     private Output<String> windowStartTime;
 
     /**

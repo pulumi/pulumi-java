@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1EduDataResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * URI of Customer's Admin console dashboard.
      * 
      */
-    @InputImport(name="adminConsoleUri", required=true)
+    @Import(name="adminConsoleUri", required=true)
       private final String adminConsoleUri;
 
     public String getAdminConsoleUri() {
@@ -33,7 +33,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * The alternate email.
      * 
      */
-    @InputImport(name="alternateEmail", required=true)
+    @Import(name="alternateEmail", required=true)
       private final String alternateEmail;
 
     public String getAlternateEmail() {
@@ -44,7 +44,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * CustomerType indicates verification type needed for using services.
      * 
      */
-    @InputImport(name="customerType", required=true)
+    @Import(name="customerType", required=true)
       private final String customerType;
 
     public String getCustomerType() {
@@ -55,7 +55,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * Edu information about the customer.
      * 
      */
-    @InputImport(name="eduData", required=true)
+    @Import(name="eduData", required=true)
       private final GoogleCloudChannelV1EduDataResponse eduData;
 
     public GoogleCloudChannelV1EduDataResponse getEduData() {
@@ -66,7 +66,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * Whether the domain is verified. This field is not returned for a Customer's cloud_identity_info resource. Partners can use the domains.get() method of the Workspace SDK's Directory API, or listen to the PRIMARY_DOMAIN_VERIFIED Pub/Sub event in to track domain verification of their resolve Workspace customers.
      * 
      */
-    @InputImport(name="isDomainVerified", required=true)
+    @Import(name="isDomainVerified", required=true)
       private final Boolean isDomainVerified;
 
     public Boolean getIsDomainVerified() {
@@ -77,7 +77,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * Language code.
      * 
      */
-    @InputImport(name="languageCode", required=true)
+    @Import(name="languageCode", required=true)
       private final String languageCode;
 
     public String getLanguageCode() {
@@ -88,7 +88,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * Phone number associated with the Cloud Identity.
      * 
      */
-    @InputImport(name="phoneNumber", required=true)
+    @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
 
     public String getPhoneNumber() {
@@ -99,7 +99,7 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse extends io.pulu
      * The primary domain name.
      * 
      */
-    @InputImport(name="primaryDomain", required=true)
+    @Import(name="primaryDomain", required=true)
       private final String primaryDomain;
 
     public String getPrimaryDomain() {

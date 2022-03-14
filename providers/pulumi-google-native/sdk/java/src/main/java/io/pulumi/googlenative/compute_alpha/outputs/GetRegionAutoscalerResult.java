@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AutoscalerStatusDetailsResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AutoscalingPolicyResponse;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionAutoscalerResult {
     /**
      * The configuration parameters for the autoscaling algorithm. You can define one or more signals for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.
@@ -85,22 +85,22 @@ public final class GetRegionAutoscalerResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionAutoscalerResult(
-        @OutputCustomType.Parameter("autoscalingPolicy") AutoscalingPolicyResponse autoscalingPolicy,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("recommendedSize") Integer recommendedSize,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("scalingScheduleStatus") Map<String,String> scalingScheduleStatus,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetails") List<AutoscalerStatusDetailsResponse> statusDetails,
-        @OutputCustomType.Parameter("target") String target,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("autoscalingPolicy") AutoscalingPolicyResponse autoscalingPolicy,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("recommendedSize") Integer recommendedSize,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("scalingScheduleStatus") Map<String,String> scalingScheduleStatus,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetails") List<AutoscalerStatusDetailsResponse> statusDetails,
+        @CustomType.Parameter("target") String target,
+        @CustomType.Parameter("zone") String zone) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IdentityResponse {
     /**
      * The revision number of the update.
@@ -21,10 +21,10 @@ public final class IdentityResponse {
      */
     private final String updateId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityResponse(
-        @OutputCustomType.Parameter("revision") Integer revision,
-        @OutputCustomType.Parameter("updateId") String updateId) {
+        @CustomType.Parameter("revision") Integer revision,
+        @CustomType.Parameter("updateId") String updateId) {
         this.revision = revision;
         this.updateId = updateId;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.workflowexecutions_v1beta.outputs.StackTraceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ErrorResponse {
     /**
      * Human-readable stack trace string.
@@ -26,11 +26,11 @@ public final class ErrorResponse {
      */
     private final StackTraceResponse stackTrace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorResponse(
-        @OutputCustomType.Parameter("context") String context,
-        @OutputCustomType.Parameter("payload") String payload,
-        @OutputCustomType.Parameter("stackTrace") StackTraceResponse stackTrace) {
+        @CustomType.Parameter("context") String context,
+        @CustomType.Parameter("payload") String payload,
+        @CustomType.Parameter("stackTrace") StackTraceResponse stackTrace) {
         this.context = context;
         this.payload = payload;
         this.stackTrace = stackTrace;

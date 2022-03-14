@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RegexResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
     /**
      * Description of the StoredInfoType (max 256 characters).
@@ -38,13 +38,13 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
      */
     private final GooglePrivacyDlpV2RegexResponse regex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2StoredInfoTypeConfigResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("largeCustomDictionary") GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary,
-        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("largeCustomDictionary") GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary,
+        @CustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex) {
         this.description = description;
         this.dictionary = dictionary;
         this.displayName = displayName;

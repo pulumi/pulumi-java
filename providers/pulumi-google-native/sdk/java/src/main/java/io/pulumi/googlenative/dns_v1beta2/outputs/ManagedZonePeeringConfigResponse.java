@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZonePeeringConfigTargetNetworkResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZonePeeringConfigResponse {
     private final String kind;
     /**
@@ -17,10 +17,10 @@ public final class ManagedZonePeeringConfigResponse {
      */
     private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZonePeeringConfigResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("targetNetwork") ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("targetNetwork") ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
         this.kind = kind;
         this.targetNetwork = targetNetwork;
     }

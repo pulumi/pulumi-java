@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
      * If not empty, the ID of the namespace to which the entities belong.
      * 
      */
-    @InputImport(name="namespaceId")
+    @Import(name="namespaceId")
       private final @Nullable Output<String> namespaceId;
 
     public Output<String> getNamespaceId() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
      * The ID of the project to which the entities belong.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunWarningTraceCode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceA
      * Indicates the warning code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<ScanRunWarningTraceCode> code;
 
     public Output<ScanRunWarningTraceCode> getCode() {

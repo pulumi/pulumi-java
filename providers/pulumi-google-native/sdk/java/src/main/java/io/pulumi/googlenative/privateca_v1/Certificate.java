@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CertificateArgs;
@@ -29,7 +29,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * A structured description of the issued X.509 certificate.
      * 
      */
-    @OutputExport(name="certificateDescription", type=CertificateDescriptionResponse.class, parameters={})
+    @Export(name="certificateDescription", type=CertificateDescriptionResponse.class, parameters={})
     private Output<CertificateDescriptionResponse> certificateDescription;
 
     /**
@@ -43,7 +43,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.
      * 
      */
-    @OutputExport(name="certificateTemplate", type=String.class, parameters={})
+    @Export(name="certificateTemplate", type=String.class, parameters={})
     private Output<String> certificateTemplate;
 
     /**
@@ -57,7 +57,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
      * 
      */
-    @OutputExport(name="config", type=CertificateConfigResponse.class, parameters={})
+    @Export(name="config", type=CertificateConfigResponse.class, parameters={})
     private Output<CertificateConfigResponse> config;
 
     /**
@@ -71,7 +71,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The time at which this Certificate was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -85,7 +85,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The resource name of the issuing CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      * 
      */
-    @OutputExport(name="issuerCertificateAuthority", type=String.class, parameters={})
+    @Export(name="issuerCertificateAuthority", type=String.class, parameters={})
     private Output<String> issuerCertificateAuthority;
 
     /**
@@ -99,7 +99,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Optional. Labels with user-defined metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -113,7 +113,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
      */
-    @OutputExport(name="lifetime", type=String.class, parameters={})
+    @Export(name="lifetime", type=String.class, parameters={})
     private Output<String> lifetime;
 
     /**
@@ -127,7 +127,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The resource name for this Certificate in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificates/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -141,7 +141,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The pem-encoded, signed X.509 certificate.
      * 
      */
-    @OutputExport(name="pemCertificate", type=String.class, parameters={})
+    @Export(name="pemCertificate", type=String.class, parameters={})
     private Output<String> pemCertificate;
 
     /**
@@ -155,7 +155,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC 5246.
      * 
      */
-    @OutputExport(name="pemCertificateChain", type=List.class, parameters={String.class})
+    @Export(name="pemCertificateChain", type=List.class, parameters={String.class})
     private Output<List<String>> pemCertificateChain;
 
     /**
@@ -169,7 +169,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
      */
-    @OutputExport(name="pemCsr", type=String.class, parameters={})
+    @Export(name="pemCsr", type=String.class, parameters={})
     private Output<String> pemCsr;
 
     /**
@@ -183,7 +183,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.
      * 
      */
-    @OutputExport(name="revocationDetails", type=RevocationDetailsResponse.class, parameters={})
+    @Export(name="revocationDetails", type=RevocationDetailsResponse.class, parameters={})
     private Output<RevocationDetailsResponse> revocationDetails;
 
     /**
@@ -197,7 +197,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Immutable. Specifies how the Certificate's identity fields are to be decided. If this is omitted, the `DEFAULT` subject mode will be used.
      * 
      */
-    @OutputExport(name="subjectMode", type=String.class, parameters={})
+    @Export(name="subjectMode", type=String.class, parameters={})
     private Output<String> subjectMode;
 
     /**
@@ -211,7 +211,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The time at which this Certificate was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

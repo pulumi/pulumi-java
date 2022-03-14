@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConditionContextResponse extends io.pulumi.resources.InvokeAr
      * The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
      * 
      */
-    @InputImport(name="accessTime", required=true)
+    @Import(name="accessTime", required=true)
       private final String accessTime;
 
     public String getAccessTime() {

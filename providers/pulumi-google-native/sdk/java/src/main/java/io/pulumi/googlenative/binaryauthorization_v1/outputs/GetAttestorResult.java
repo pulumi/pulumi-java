@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.binaryauthorization_v1.outputs.UserOwnedGrafeasNoteResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAttestorResult {
     /**
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
@@ -31,12 +31,12 @@ public final class GetAttestorResult {
      */
     private final UserOwnedGrafeasNoteResponse userOwnedGrafeasNote;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAttestorResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("userOwnedGrafeasNote") UserOwnedGrafeasNoteResponse userOwnedGrafeasNote) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("userOwnedGrafeasNote") UserOwnedGrafeasNoteResponse userOwnedGrafeasNote) {
         this.description = description;
         this.name = name;
         this.updateTime = updateTime;

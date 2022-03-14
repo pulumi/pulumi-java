@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ErrorProtoResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatusResponse {
     /**
      * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
@@ -27,11 +27,11 @@ public final class JobStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatusResponse(
-        @OutputCustomType.Parameter("errorResult") ErrorProtoResponse errorResult,
-        @OutputCustomType.Parameter("errors") List<ErrorProtoResponse> errors,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("errorResult") ErrorProtoResponse errorResult,
+        @CustomType.Parameter("errors") List<ErrorProtoResponse> errors,
+        @CustomType.Parameter("state") String state) {
         this.errorResult = errorResult;
         this.errors = errors;
         this.state = state;

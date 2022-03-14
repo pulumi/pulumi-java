@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCryptoKeyArgs Empty = new GetCryptoKeyArgs();
 
-    @InputImport(name="cryptoKeyId", required=true)
+    @Import(name="cryptoKeyId", required=true)
       private final String cryptoKeyId;
 
     public String getCryptoKeyId() {
         return this.cryptoKeyId;
     }
 
-    @InputImport(name="keyRingId", required=true)
+    @Import(name="keyRingId", required=true)
       private final String keyRingId;
 
     public String getKeyRingId() {
         return this.keyRingId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

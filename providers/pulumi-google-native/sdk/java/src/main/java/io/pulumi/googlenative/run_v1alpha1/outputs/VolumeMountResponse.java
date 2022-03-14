@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VolumeMountResponse {
     /**
      * Path within the container at which the volume should be mounted. Must not contain ':'.
@@ -31,12 +31,12 @@ public final class VolumeMountResponse {
      */
     private final String subPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeMountResponse(
-        @OutputCustomType.Parameter("mountPath") String mountPath,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("readOnly") Boolean readOnly,
-        @OutputCustomType.Parameter("subPath") String subPath) {
+        @CustomType.Parameter("mountPath") String mountPath,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("readOnly") Boolean readOnly,
+        @CustomType.Parameter("subPath") String subPath) {
         this.mountPath = mountPath;
         this.name = name;
         this.readOnly = readOnly;

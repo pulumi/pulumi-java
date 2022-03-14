@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
 
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
-    @InputImport(name="notificationChannelId", required=true)
+    @Import(name="notificationChannelId", required=true)
       private final String notificationChannelId;
 
     public String getNotificationChannelId() {
         return this.notificationChannelId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
     /**
      * The number of hybrid inspection requests aborted because the job ran out of quota or was ended before they could be processed.
@@ -25,11 +25,11 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
      */
     private final String processedCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2HybridInspectStatisticsResponse(
-        @OutputCustomType.Parameter("abortedCount") String abortedCount,
-        @OutputCustomType.Parameter("pendingCount") String pendingCount,
-        @OutputCustomType.Parameter("processedCount") String processedCount) {
+        @CustomType.Parameter("abortedCount") String abortedCount,
+        @CustomType.Parameter("pendingCount") String pendingCount,
+        @CustomType.Parameter("processedCount") String processedCount) {
         this.abortedCount = abortedCount;
         this.pendingCount = pendingCount;
         this.processedCount = processedCount;

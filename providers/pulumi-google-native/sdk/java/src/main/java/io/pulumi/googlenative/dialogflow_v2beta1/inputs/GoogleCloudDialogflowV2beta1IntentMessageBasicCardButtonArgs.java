@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs 
      * Action to take when a user taps on the button.
      * 
      */
-    @InputImport(name="openUriAction", required=true)
+    @Import(name="openUriAction", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionArgs> getOpenUriAction() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs 
      * The title of the button.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

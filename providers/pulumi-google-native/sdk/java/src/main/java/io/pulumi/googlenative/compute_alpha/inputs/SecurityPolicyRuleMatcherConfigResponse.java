@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherConfigDestinationPortResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherConfigLayer4ConfigResponse;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
      * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="destIpRanges", required=true)
+    @Import(name="destIpRanges", required=true)
       private final List<String> destIpRanges;
 
     public List<String> getDestIpRanges() {
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
      * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="destPorts", required=true)
+    @Import(name="destPorts", required=true)
       private final List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts;
 
     public List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> getDestPorts() {
@@ -41,7 +41,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
      * Pairs of IP protocols and ports that the rule should match. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="layer4Configs", required=true)
+    @Import(name="layer4Configs", required=true)
       private final List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs;
 
     public List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> getLayer4Configs() {
@@ -52,7 +52,7 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends io.pulumi.res
      * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
      * 
      */
-    @InputImport(name="srcIpRanges", required=true)
+    @Import(name="srcIpRanges", required=true)
       private final List<String> srcIpRanges;
 
     public List<String> getSrcIpRanges() {

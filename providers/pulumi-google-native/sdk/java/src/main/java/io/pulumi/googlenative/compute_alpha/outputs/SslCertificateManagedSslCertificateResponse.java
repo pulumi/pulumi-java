@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SslCertificateManagedSslCertificateResponse {
     /**
      * [Output only] Detailed statuses of the domains specified for managed certificate resource.
@@ -27,11 +27,11 @@ public final class SslCertificateManagedSslCertificateResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SslCertificateManagedSslCertificateResponse(
-        @OutputCustomType.Parameter("domainStatus") Map<String,String> domainStatus,
-        @OutputCustomType.Parameter("domains") List<String> domains,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("domainStatus") Map<String,String> domainStatus,
+        @CustomType.Parameter("domains") List<String> domains,
+        @CustomType.Parameter("status") String status) {
         this.domainStatus = domainStatus;
         this.domains = domains;
         this.status = status;

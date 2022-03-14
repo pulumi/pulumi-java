@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firestore_v1beta1.IndexArgs;
@@ -23,7 +23,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The collection ID to which this index applies. Required.
      * 
      */
-    @OutputExport(name="collectionId", type=String.class, parameters={})
+    @Export(name="collectionId", type=String.class, parameters={})
     private Output<String> collectionId;
 
     /**
@@ -37,7 +37,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The fields to index.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={GoogleFirestoreAdminV1beta1IndexFieldResponse.class})
+    @Export(name="fields", type=List.class, parameters={GoogleFirestoreAdminV1beta1IndexFieldResponse.class})
     private Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> fields;
 
     /**
@@ -51,7 +51,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The resource name of the index. Output only.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The state of the index. Output only.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

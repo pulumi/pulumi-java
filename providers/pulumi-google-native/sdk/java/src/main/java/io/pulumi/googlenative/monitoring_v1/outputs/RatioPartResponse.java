@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AggregationResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RatioPartResponse {
     /**
      * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
@@ -21,10 +21,10 @@ public final class RatioPartResponse {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RatioPartResponse(
-        @OutputCustomType.Parameter("aggregation") AggregationResponse aggregation,
-        @OutputCustomType.Parameter("filter") String filter) {
+        @CustomType.Parameter("aggregation") AggregationResponse aggregation,
+        @CustomType.Parameter("filter") String filter) {
         this.aggregation = aggregation;
         this.filter = filter;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.oslogin_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.oslogin_v1alpha.SshPublicKeyArgs;
@@ -22,7 +22,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * An expiration time in microseconds since epoch.
      * 
      */
-    @OutputExport(name="expirationTimeUsec", type=String.class, parameters={})
+    @Export(name="expirationTimeUsec", type=String.class, parameters={})
     private Output<String> expirationTimeUsec;
 
     /**
@@ -36,7 +36,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * The SHA-256 fingerprint of the SSH public key.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -50,7 +50,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * Public key text in SSH format, defined by RFC4253 section 6.6.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
@@ -64,7 +64,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * The canonical resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

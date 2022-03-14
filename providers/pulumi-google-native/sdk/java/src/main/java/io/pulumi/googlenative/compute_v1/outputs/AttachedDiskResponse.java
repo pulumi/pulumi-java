@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AttachedDiskInitializeParamsResponse;
 import io.pulumi.googlenative.compute_v1.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.GuestOsFeatureResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttachedDiskResponse {
     /**
      * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
@@ -92,23 +92,23 @@ public final class AttachedDiskResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttachedDiskResponse(
-        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
-        @OutputCustomType.Parameter("boot") Boolean boot,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
-        @OutputCustomType.Parameter("index") Integer index,
-        @OutputCustomType.Parameter("initializeParams") AttachedDiskInitializeParamsResponse initializeParams,
-        @OutputCustomType.Parameter("interface") String $interface,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("licenses") List<String> licenses,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("shieldedInstanceInitialState") InitialStateConfigResponse shieldedInstanceInitialState,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoDelete") Boolean autoDelete,
+        @CustomType.Parameter("boot") Boolean boot,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("index") Integer index,
+        @CustomType.Parameter("initializeParams") AttachedDiskInitializeParamsResponse initializeParams,
+        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("licenses") List<String> licenses,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("shieldedInstanceInitialState") InitialStateConfigResponse shieldedInstanceInitialState,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

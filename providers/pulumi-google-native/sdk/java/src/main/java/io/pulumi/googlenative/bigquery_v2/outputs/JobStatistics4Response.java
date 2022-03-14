@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatistics4Response {
     /**
      * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the 'destinationUris' field.
@@ -21,10 +21,10 @@ public final class JobStatistics4Response {
      */
     private final String inputBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatistics4Response(
-        @OutputCustomType.Parameter("destinationUriFileCounts") List<String> destinationUriFileCounts,
-        @OutputCustomType.Parameter("inputBytes") String inputBytes) {
+        @CustomType.Parameter("destinationUriFileCounts") List<String> destinationUriFileCounts,
+        @CustomType.Parameter("inputBytes") String inputBytes) {
         this.destinationUriFileCounts = destinationUriFileCounts;
         this.inputBytes = inputBytes;
     }

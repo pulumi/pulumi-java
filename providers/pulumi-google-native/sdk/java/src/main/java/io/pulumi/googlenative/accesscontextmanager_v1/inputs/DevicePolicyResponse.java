@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.OsConstraintResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Allowed device management levels, an empty list allows all management levels.
      * 
      */
-    @InputImport(name="allowedDeviceManagementLevels", required=true)
+    @Import(name="allowedDeviceManagementLevels", required=true)
       private final List<String> allowedDeviceManagementLevels;
 
     public List<String> getAllowedDeviceManagementLevels() {
@@ -34,7 +34,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Allowed encryptions statuses, an empty list allows all statuses.
      * 
      */
-    @InputImport(name="allowedEncryptionStatuses", required=true)
+    @Import(name="allowedEncryptionStatuses", required=true)
       private final List<String> allowedEncryptionStatuses;
 
     public List<String> getAllowedEncryptionStatuses() {
@@ -45,7 +45,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Allowed OS versions, an empty list allows all types and all versions.
      * 
      */
-    @InputImport(name="osConstraints", required=true)
+    @Import(name="osConstraints", required=true)
       private final List<OsConstraintResponse> osConstraints;
 
     public List<OsConstraintResponse> getOsConstraints() {
@@ -56,7 +56,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Whether the device needs to be approved by the customer admin.
      * 
      */
-    @InputImport(name="requireAdminApproval", required=true)
+    @Import(name="requireAdminApproval", required=true)
       private final Boolean requireAdminApproval;
 
     public Boolean getRequireAdminApproval() {
@@ -67,7 +67,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Whether the device needs to be corp owned.
      * 
      */
-    @InputImport(name="requireCorpOwned", required=true)
+    @Import(name="requireCorpOwned", required=true)
       private final Boolean requireCorpOwned;
 
     public Boolean getRequireCorpOwned() {
@@ -78,7 +78,7 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
      * 
      */
-    @InputImport(name="requireScreenlock", required=true)
+    @Import(name="requireScreenlock", required=true)
       private final Boolean requireScreenlock;
 
     public Boolean getRequireScreenlock() {

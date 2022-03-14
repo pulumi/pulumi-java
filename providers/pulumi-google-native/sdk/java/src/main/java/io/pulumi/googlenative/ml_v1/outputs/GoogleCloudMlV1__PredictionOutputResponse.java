@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__PredictionOutputResponse {
     /**
      * The number of data instances which resulted in errors.
@@ -31,12 +31,12 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
      */
     private final String predictionCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__PredictionOutputResponse(
-        @OutputCustomType.Parameter("errorCount") String errorCount,
-        @OutputCustomType.Parameter("nodeHours") Double nodeHours,
-        @OutputCustomType.Parameter("outputPath") String outputPath,
-        @OutputCustomType.Parameter("predictionCount") String predictionCount) {
+        @CustomType.Parameter("errorCount") String errorCount,
+        @CustomType.Parameter("nodeHours") Double nodeHours,
+        @CustomType.Parameter("outputPath") String outputPath,
+        @CustomType.Parameter("predictionCount") String predictionCount) {
         this.errorCount = errorCount;
         this.nodeHours = nodeHours;
         this.outputPath = outputPath;

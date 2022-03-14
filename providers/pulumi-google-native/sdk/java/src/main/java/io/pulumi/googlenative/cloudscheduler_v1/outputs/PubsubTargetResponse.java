@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PubsubTargetResponse {
     /**
      * Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
@@ -26,11 +26,11 @@ public final class PubsubTargetResponse {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PubsubTargetResponse(
-        @OutputCustomType.Parameter("attributes") Map<String,String> attributes,
-        @OutputCustomType.Parameter("data") String data,
-        @OutputCustomType.Parameter("topicName") String topicName) {
+        @CustomType.Parameter("attributes") Map<String,String> attributes,
+        @CustomType.Parameter("data") String data,
+        @CustomType.Parameter("topicName") String topicName) {
         this.attributes = attributes;
         this.data = data;
         this.topicName = topicName;

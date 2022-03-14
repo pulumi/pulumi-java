@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
      * The status code, which should be an enum value of google.rpc.Code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<Integer> code;
 
     public Output<Integer> getCode() {
@@ -36,7 +36,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
      * A list of messages that carry the error details. There is a common set of message types for APIs to use.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<List<Map<String,String>>> details;
 
     public Output<List<Map<String,String>>> getDetails() {
@@ -47,7 +47,7 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
      * A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {

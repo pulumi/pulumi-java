@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__StudyConfigAlgorithm;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_MetricSpecArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_ParameterSpecArgs;
@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
      * The search algorithm specified for the study.
      * 
      */
-    @InputImport(name="algorithm")
+    @Import(name="algorithm")
       private final @Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
 
     public Output<GoogleCloudMlV1__StudyConfigAlgorithm> getAlgorithm() {
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
      * Configuration for automated stopping of unpromising Trials.
      * 
      */
-    @InputImport(name="automatedStoppingConfig")
+    @Import(name="automatedStoppingConfig")
       private final @Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
 
     public Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> getAutomatedStoppingConfig() {
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
      * Metric specs for the study.
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
 
     public Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> getMetrics() {
@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
      * The set of parameters to tune.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters;
 
     public Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> getParameters() {

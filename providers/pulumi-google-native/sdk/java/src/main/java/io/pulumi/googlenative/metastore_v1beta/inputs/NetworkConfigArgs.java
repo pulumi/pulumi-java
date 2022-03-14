@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1beta.inputs.ConsumerArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
      * 
      */
-    @InputImport(name="consumers")
+    @Import(name="consumers")
       private final @Nullable Output<List<ConsumerArgs>> consumers;
 
     public Output<List<ConsumerArgs>> getConsumers() {

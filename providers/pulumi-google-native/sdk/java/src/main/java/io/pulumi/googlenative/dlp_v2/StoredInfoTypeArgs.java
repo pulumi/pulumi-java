@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StoredInfoTypeConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,21 +19,21 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration of the storedInfoType to create.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> config;
 
     public Output<GooglePrivacyDlpV2StoredInfoTypeConfigArgs> getConfig() {
         return this.config;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -44,7 +44,7 @@ public final class StoredInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
      * 
      */
-    @InputImport(name="storedInfoTypeId")
+    @Import(name="storedInfoTypeId")
       private final @Nullable Output<String> storedInfoTypeId;
 
     public Output<String> getStoredInfoTypeId() {

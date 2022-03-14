@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.outputs.WorkerConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkerPoolResult {
     /**
      * Time at which the request to create the `WorkerPool` was received.
@@ -62,18 +62,18 @@ public final class GetWorkerPoolResult {
      */
     private final String workerCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkerPoolResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("regions") List<String> regions,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig,
-        @OutputCustomType.Parameter("workerCount") String workerCount) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("regions") List<String> regions,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig,
+        @CustomType.Parameter("workerCount") String workerCount) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.name = name;

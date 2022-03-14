@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.PolicyAlternativeNameServerConfigResponse;
 import io.pulumi.googlenative.dns_v1.outputs.PolicyNetworkResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyResult {
     /**
      * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
@@ -45,15 +45,15 @@ public final class GetPolicyResult {
      */
     private final List<PolicyNetworkResponse> networks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyResult(
-        @OutputCustomType.Parameter("alternativeNameServerConfig") PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enableInboundForwarding") Boolean enableInboundForwarding,
-        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networks") List<PolicyNetworkResponse> networks) {
+        @CustomType.Parameter("alternativeNameServerConfig") PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enableInboundForwarding") Boolean enableInboundForwarding,
+        @CustomType.Parameter("enableLogging") Boolean enableLogging,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networks") List<PolicyNetworkResponse> networks) {
         this.alternativeNameServerConfig = alternativeNameServerConfig;
         this.description = description;
         this.enableInboundForwarding = enableInboundForwarding;

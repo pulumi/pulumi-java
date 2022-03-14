@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Column collation.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -35,7 +35,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Column name.
      * 
      */
-    @InputImport(name="columnName")
+    @Import(name="columnName")
       private final @Nullable Output<String> columnName;
 
     public Output<String> getColumnName() {
@@ -46,7 +46,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
     public Output<String> getDataType() {
@@ -57,7 +57,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Column length.
      * 
      */
-    @InputImport(name="length")
+    @Import(name="length")
       private final @Nullable Output<Integer> length;
 
     public Output<Integer> getLength() {
@@ -68,7 +68,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not the column can accept a null value.
      * 
      */
-    @InputImport(name="nullable")
+    @Import(name="nullable")
       private final @Nullable Output<Boolean> nullable;
 
     public Output<Boolean> getNullable() {
@@ -79,7 +79,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * The ordinal position of the column in the table.
      * 
      */
-    @InputImport(name="ordinalPosition")
+    @Import(name="ordinalPosition")
       private final @Nullable Output<Integer> ordinalPosition;
 
     public Output<Integer> getOrdinalPosition() {
@@ -90,7 +90,7 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not the column represents a primary key.
      * 
      */
-    @InputImport(name="primaryKey")
+    @Import(name="primaryKey")
       private final @Nullable Output<Boolean> primaryKey;
 
     public Output<Boolean> getPrimaryKey() {

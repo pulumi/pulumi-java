@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.BigtableColumnArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable Output<List<BigtableColumnArgs>> columns;
 
     public Output<List<BigtableColumnArgs>> getColumns() {
@@ -32,7 +32,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific column by listing that column in 'columns' and specifying an encoding for it.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
@@ -43,7 +43,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * Identifier of the column family.
      * 
      */
-    @InputImport(name="familyId")
+    @Import(name="familyId")
       private final @Nullable Output<String> familyId;
 
     public Output<String> getFamilyId() {
@@ -54,7 +54,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * [Optional] If this is set only the latest version of value are exposed for all columns in this column family. This can be overridden for a specific column by listing that column in 'columns' and specifying a different setting for that column.
      * 
      */
-    @InputImport(name="onlyReadLatest")
+    @Import(name="onlyReadLatest")
       private final @Nullable Output<Boolean> onlyReadLatest;
 
     public Output<Boolean> getOnlyReadLatest() {
@@ -65,7 +65,7 @@ public final class BigtableColumnFamilyArgs extends io.pulumi.resources.Resource
      * [Optional] The type to convert the value in cells of this column family. The values are expected to be encoded using HBase Bytes.toBytes function when using the BINARY encoding value. Following BigQuery types are allowed (case-sensitive) - BYTES STRING INTEGER FLOAT BOOLEAN Default type is BYTES. This can be overridden for a specific column by listing that column in 'columns' and specifying a type for it.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

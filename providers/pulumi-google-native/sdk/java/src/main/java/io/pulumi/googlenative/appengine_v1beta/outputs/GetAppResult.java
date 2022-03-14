@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.appengine_v1beta.outputs.FeatureSettingsResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.IdentityAwareProxyResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.UrlDispatchRuleResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAppResult {
     /**
      * Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.
@@ -80,22 +80,22 @@ public final class GetAppResult {
      */
     private final String servingStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppResult(
-        @OutputCustomType.Parameter("authDomain") String authDomain,
-        @OutputCustomType.Parameter("codeBucket") String codeBucket,
-        @OutputCustomType.Parameter("databaseType") String databaseType,
-        @OutputCustomType.Parameter("defaultBucket") String defaultBucket,
-        @OutputCustomType.Parameter("defaultCookieExpiration") String defaultCookieExpiration,
-        @OutputCustomType.Parameter("defaultHostname") String defaultHostname,
-        @OutputCustomType.Parameter("dispatchRules") List<UrlDispatchRuleResponse> dispatchRules,
-        @OutputCustomType.Parameter("featureSettings") FeatureSettingsResponse featureSettings,
-        @OutputCustomType.Parameter("gcrDomain") String gcrDomain,
-        @OutputCustomType.Parameter("iap") IdentityAwareProxyResponse iap,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("servingStatus") String servingStatus) {
+        @CustomType.Parameter("authDomain") String authDomain,
+        @CustomType.Parameter("codeBucket") String codeBucket,
+        @CustomType.Parameter("databaseType") String databaseType,
+        @CustomType.Parameter("defaultBucket") String defaultBucket,
+        @CustomType.Parameter("defaultCookieExpiration") String defaultCookieExpiration,
+        @CustomType.Parameter("defaultHostname") String defaultHostname,
+        @CustomType.Parameter("dispatchRules") List<UrlDispatchRuleResponse> dispatchRules,
+        @CustomType.Parameter("featureSettings") FeatureSettingsResponse featureSettings,
+        @CustomType.Parameter("gcrDomain") String gcrDomain,
+        @CustomType.Parameter("iap") IdentityAwareProxyResponse iap,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("servingStatus") String servingStatus) {
         this.authDomain = authDomain;
         this.codeBucket = codeBucket;
         this.databaseType = databaseType;

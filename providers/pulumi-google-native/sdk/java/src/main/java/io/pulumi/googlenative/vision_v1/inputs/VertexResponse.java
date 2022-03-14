@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
      * X coordinate.
      * 
      */
-    @InputImport(name="x", required=true)
+    @Import(name="x", required=true)
       private final Integer x;
 
     public Integer getX() {
@@ -31,7 +31,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
      * Y coordinate.
      * 
      */
-    @InputImport(name="y", required=true)
+    @Import(name="y", required=true)
       private final Integer y;
 
     public Integer getY() {

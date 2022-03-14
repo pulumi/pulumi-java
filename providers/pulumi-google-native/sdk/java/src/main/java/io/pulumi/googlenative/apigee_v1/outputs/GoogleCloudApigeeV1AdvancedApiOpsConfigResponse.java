@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse {
     /**
      * Flag that specifies whether the Advanced API Ops add-on is enabled.
@@ -15,8 +15,8 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudApigeeV1AdvancedApiOpsConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GoogleCloudApigeeV1AdvancedApiOpsConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

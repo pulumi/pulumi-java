@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * The ids of the set of Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
-    @InputImport(name="androidModelIds", required=true)
+    @Import(name="androidModelIds", required=true)
       private final Output<List<String>> androidModelIds;
 
     public Output<List<String>> getAndroidModelIds() {
@@ -33,7 +33,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * The ids of the set of Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
-    @InputImport(name="androidVersionIds", required=true)
+    @Import(name="androidVersionIds", required=true)
       private final Output<List<String>> androidVersionIds;
 
     public Output<List<String>> getAndroidVersionIds() {
@@ -44,7 +44,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * The set of locales the test device will enable for testing. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
-    @InputImport(name="locales", required=true)
+    @Import(name="locales", required=true)
       private final Output<List<String>> locales;
 
     public Output<List<String>> getLocales() {
@@ -55,7 +55,7 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
      * The set of orientations to test with. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
-    @InputImport(name="orientations", required=true)
+    @Import(name="orientations", required=true)
       private final Output<List<String>> orientations;
 
     public Output<List<String>> getOrientations() {

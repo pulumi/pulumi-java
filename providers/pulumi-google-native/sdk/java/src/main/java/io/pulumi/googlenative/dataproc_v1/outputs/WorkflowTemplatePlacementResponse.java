@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.ClusterSelectorResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.ManagedClusterResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementResponse {
     /**
      * Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
@@ -21,10 +21,10 @@ public final class WorkflowTemplatePlacementResponse {
      */
     private final ManagedClusterResponse managedCluster;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementResponse(
-        @OutputCustomType.Parameter("clusterSelector") ClusterSelectorResponse clusterSelector,
-        @OutputCustomType.Parameter("managedCluster") ManagedClusterResponse managedCluster) {
+        @CustomType.Parameter("clusterSelector") ClusterSelectorResponse clusterSelector,
+        @CustomType.Parameter("managedCluster") ManagedClusterResponse managedCluster) {
         this.clusterSelector = clusterSelector;
         this.managedCluster = managedCluster;
     }

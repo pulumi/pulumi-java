@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetCustomerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCustomerArgs Empty = new GetCustomerArgs();
 
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {
         return this.accountId;
     }
 
-    @InputImport(name="channelPartnerLinkId", required=true)
+    @Import(name="channelPartnerLinkId", required=true)
       private final String channelPartnerLinkId;
 
     public String getChannelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
-    @InputImport(name="customerId", required=true)
+    @Import(name="customerId", required=true)
       private final String customerId;
 
     public String getCustomerId() {

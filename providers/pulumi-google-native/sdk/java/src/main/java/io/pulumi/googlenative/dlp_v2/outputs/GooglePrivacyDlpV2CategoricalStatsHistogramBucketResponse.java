@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueFrequencyResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
     /**
      * Total number of values in this bucket.
@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
      */
     private final String valueFrequencyUpperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse(
-        @OutputCustomType.Parameter("bucketSize") String bucketSize,
-        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
-        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues,
-        @OutputCustomType.Parameter("valueFrequencyLowerBound") String valueFrequencyLowerBound,
-        @OutputCustomType.Parameter("valueFrequencyUpperBound") String valueFrequencyUpperBound) {
+        @CustomType.Parameter("bucketSize") String bucketSize,
+        @CustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @CustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues,
+        @CustomType.Parameter("valueFrequencyLowerBound") String valueFrequencyLowerBound,
+        @CustomType.Parameter("valueFrequencyUpperBound") String valueFrequencyUpperBound) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

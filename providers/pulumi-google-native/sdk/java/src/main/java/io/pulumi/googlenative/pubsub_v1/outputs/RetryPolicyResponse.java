@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RetryPolicyResponse {
     /**
      * The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
@@ -20,10 +20,10 @@ public final class RetryPolicyResponse {
      */
     private final String minimumBackoff;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetryPolicyResponse(
-        @OutputCustomType.Parameter("maximumBackoff") String maximumBackoff,
-        @OutputCustomType.Parameter("minimumBackoff") String minimumBackoff) {
+        @CustomType.Parameter("maximumBackoff") String maximumBackoff,
+        @CustomType.Parameter("minimumBackoff") String minimumBackoff) {
         this.maximumBackoff = maximumBackoff;
         this.minimumBackoff = minimumBackoff;
     }

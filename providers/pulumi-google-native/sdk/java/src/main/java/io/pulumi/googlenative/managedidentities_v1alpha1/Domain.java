@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.managedidentities_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.managedidentities_v1alpha1.DomainArgs;
@@ -26,7 +26,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.
      * 
      */
-    @OutputExport(name="auditLogsEnabled", type=Boolean.class, parameters={})
+    @Export(name="auditLogsEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> auditLogsEnabled;
 
     /**
@@ -40,7 +40,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Network can be added using UpdateDomain later. Domain is only available on network part of authorized_networks. Caller needs to make sure that CIDR subnets do not overlap between networks, else domain creation will fail.
      * 
      */
-    @OutputExport(name="authorizedNetworks", type=List.class, parameters={String.class})
+    @Export(name="authorizedNetworks", type=List.class, parameters={String.class})
     private Output<List<String>> authorizedNetworks;
 
     /**
@@ -54,7 +54,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The time the instance was created. Synthetic field is populated automatically by CCFE. go/ccfe-synthetic-field-user-guide
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -68,7 +68,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Fully-qualified domain name of the exposed domain used by clients to connect to the service. Similar to what would be chosen for an Active Directory that is set up on an internal network.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -82,7 +82,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Optional. Resource labels to represent user provided metadata
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -96,7 +96,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
      * 
      */
-    @OutputExport(name="locations", type=List.class, parameters={String.class})
+    @Export(name="locations", type=List.class, parameters={String.class})
     private Output<List<String>> locations;
 
     /**
@@ -110,7 +110,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Optional. Name of customer-visible admin used to perform Active Directory operations. If not specified `setupadmin` would be used.
      * 
      */
-    @OutputExport(name="managedIdentitiesAdminName", type=String.class, parameters={})
+    @Export(name="managedIdentitiesAdminName", type=String.class, parameters={})
     private Output<String> managedIdentitiesAdminName;
 
     /**
@@ -124,7 +124,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Unique name of the domain in this scope including projects and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. Ranges must be unique and non-overlapping with existing subnets in [Domain].[authorized_networks].
      * 
      */
-    @OutputExport(name="reservedIpRange", type=String.class, parameters={})
+    @Export(name="reservedIpRange", type=String.class, parameters={})
     private Output<String> reservedIpRange;
 
     /**
@@ -152,7 +152,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The current state of this domain.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -166,7 +166,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Additional information about the current status of this domain, if available.
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -180,7 +180,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The current trusts associated with the domain.
      * 
      */
-    @OutputExport(name="trusts", type=List.class, parameters={TrustResponse.class})
+    @Export(name="trusts", type=List.class, parameters={TrustResponse.class})
     private Output<List<TrustResponse>> trusts;
 
     /**
@@ -194,7 +194,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Last update time. Synthetic field is populated automatically by CCFE.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

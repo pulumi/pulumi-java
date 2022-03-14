@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * Provides additional information about the rule that specifies how to apply the rule.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config;
 
     public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> getConfig() {
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * Specifies whether the phrase must be missing from the transcript segment or present in the transcript segment.
      * 
      */
-    @InputImport(name="negated")
+    @Import(name="negated")
       private final @Nullable Output<Boolean> negated;
 
     public Output<Boolean> getNegated() {
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
      * The phrase to be matched.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {

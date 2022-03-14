@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetTcpProxyResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -51,16 +51,16 @@ public final class GetTargetTcpProxyResult {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetTcpProxyResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("proxyBind") Boolean proxyBind,
-        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("proxyBind") Boolean proxyBind,
+        @CustomType.Parameter("proxyHeader") String proxyHeader,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("service") String service) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

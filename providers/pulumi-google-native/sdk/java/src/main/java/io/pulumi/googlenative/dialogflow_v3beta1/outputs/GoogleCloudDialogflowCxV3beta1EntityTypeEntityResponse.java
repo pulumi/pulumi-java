@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse {
     /**
      * A collection of value synonyms. For example, if the entity type is *vegetable*, and `value` is *scallions*, a synonym could be *green onions*. For `KIND_LIST` entity types: * This collection must contain exactly one synonym equal to `value`.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse(
-        @OutputCustomType.Parameter("synonyms") List<String> synonyms,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("synonyms") List<String> synonyms,
+        @CustomType.Parameter("value") String value) {
         this.synonyms = synonyms;
         this.value = value;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyVmMaintenancePolicyResponse {
     private final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
     /**
@@ -17,10 +17,10 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
      */
     private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyVmMaintenancePolicyResponse(
-        @OutputCustomType.Parameter("concurrencyControlGroup") ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup,
-        @OutputCustomType.Parameter("maintenanceWindow") ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
+        @CustomType.Parameter("concurrencyControlGroup") ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup,
+        @CustomType.Parameter("maintenanceWindow") ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
         this.concurrencyControlGroup = concurrencyControlGroup;
         this.maintenanceWindow = maintenanceWindow;
     }

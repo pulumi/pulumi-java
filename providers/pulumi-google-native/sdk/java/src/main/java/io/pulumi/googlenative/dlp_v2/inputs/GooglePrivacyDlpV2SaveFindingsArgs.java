@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2OutputStorageConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2SaveFindingsArgs extends io.pulumi.resource
      * Location to store findings outside of DLP.
      * 
      */
-    @InputImport(name="outputConfig")
+    @Import(name="outputConfig")
       private final @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigArgs> outputConfig;
 
     public Output<GooglePrivacyDlpV2OutputStorageConfigArgs> getOutputConfig() {

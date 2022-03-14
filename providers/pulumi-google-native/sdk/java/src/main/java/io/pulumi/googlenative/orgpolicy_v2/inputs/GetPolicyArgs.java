@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPolicyArgs Empty = new GetPolicyArgs();
 
-    @InputImport(name="policyId", required=true)
+    @Import(name="policyId", required=true)
       private final String policyId;
 
     public String getPolicyId() {
         return this.policyId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

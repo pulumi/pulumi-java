@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
     /**
      * Optional. One or more suggestions to show to the user.
@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(
-        @OutputCustomType.Parameter("rbmSuggestion") List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion,
-        @OutputCustomType.Parameter("text") String text) {
+        @CustomType.Parameter("rbmSuggestion") List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion,
+        @CustomType.Parameter("text") String text) {
         this.rbmSuggestion = rbmSuggestion;
         this.text = text;
     }

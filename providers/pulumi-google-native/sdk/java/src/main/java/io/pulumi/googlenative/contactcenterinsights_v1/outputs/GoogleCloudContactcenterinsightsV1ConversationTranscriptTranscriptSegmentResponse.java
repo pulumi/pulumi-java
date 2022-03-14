@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationParticipantResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse {
     /**
      * For conversations derived from multi-channel audio, this is the channel number corresponding to the audio from that channel. For audioChannelCount = N, its output values can range from '1' to 'N'. A channel tag of 0 indicates that the audio is mono.
@@ -62,17 +62,17 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      */
     private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(
-        @OutputCustomType.Parameter("channelTag") Integer channelTag,
-        @OutputCustomType.Parameter("confidence") Double confidence,
-        @OutputCustomType.Parameter("dialogflowSegmentMetadata") GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("messageTime") String messageTime,
-        @OutputCustomType.Parameter("segmentParticipant") GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant,
-        @OutputCustomType.Parameter("sentiment") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
-        @OutputCustomType.Parameter("text") String text,
-        @OutputCustomType.Parameter("words") List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
+        @CustomType.Parameter("channelTag") Integer channelTag,
+        @CustomType.Parameter("confidence") Double confidence,
+        @CustomType.Parameter("dialogflowSegmentMetadata") GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("messageTime") String messageTime,
+        @CustomType.Parameter("segmentParticipant") GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant,
+        @CustomType.Parameter("sentiment") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
+        @CustomType.Parameter("text") String text,
+        @CustomType.Parameter("words") List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
         this.channelTag = channelTag;
         this.confidence = confidence;
         this.dialogflowSegmentMetadata = dialogflowSegmentMetadata;

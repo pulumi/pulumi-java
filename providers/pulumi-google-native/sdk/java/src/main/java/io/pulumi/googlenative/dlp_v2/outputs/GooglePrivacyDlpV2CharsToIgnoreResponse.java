@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
     /**
      * Characters to not transform when masking.
@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
      */
     private final String commonCharactersToIgnore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CharsToIgnoreResponse(
-        @OutputCustomType.Parameter("charactersToSkip") String charactersToSkip,
-        @OutputCustomType.Parameter("commonCharactersToIgnore") String commonCharactersToIgnore) {
+        @CustomType.Parameter("charactersToSkip") String charactersToSkip,
+        @CustomType.Parameter("commonCharactersToIgnore") String commonCharactersToIgnore) {
         this.charactersToSkip = charactersToSkip;
         this.commonCharactersToIgnore = commonCharactersToIgnore;
     }

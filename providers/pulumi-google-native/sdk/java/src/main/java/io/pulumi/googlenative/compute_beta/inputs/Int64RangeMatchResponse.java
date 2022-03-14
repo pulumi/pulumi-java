@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
      * The end of the range (exclusive) in signed long integer format.
      * 
      */
-    @InputImport(name="rangeEnd", required=true)
+    @Import(name="rangeEnd", required=true)
       private final String rangeEnd;
 
     public String getRangeEnd() {
@@ -31,7 +31,7 @@ public final class Int64RangeMatchResponse extends io.pulumi.resources.InvokeArg
      * The start of the range (inclusive) in signed long integer format.
      * 
      */
-    @InputImport(name="rangeStart", required=true)
+    @Import(name="rangeStart", required=true)
       private final String rangeStart;
 
     public String getRangeStart() {

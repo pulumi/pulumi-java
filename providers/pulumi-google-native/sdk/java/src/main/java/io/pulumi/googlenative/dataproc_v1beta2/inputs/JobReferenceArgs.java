@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The job ID, which must be unique within the project. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or hyphens (-). The maximum length is 100 characters.If not specified by the caller, the job ID will be provided by the server.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -33,7 +33,7 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The ID of the Google Cloud Platform project that the job belongs to. If specified, must match the request project ID.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

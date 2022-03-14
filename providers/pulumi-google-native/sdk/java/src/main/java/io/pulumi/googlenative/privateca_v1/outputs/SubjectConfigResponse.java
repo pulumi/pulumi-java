@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.SubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.SubjectResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubjectConfigResponse {
     /**
      * Contains distinguished name fields such as the common name, location and organization.
@@ -21,10 +21,10 @@ public final class SubjectConfigResponse {
      */
     private final SubjectAltNamesResponse subjectAltName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectConfigResponse(
-        @OutputCustomType.Parameter("subject") SubjectResponse subject,
-        @OutputCustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
+        @CustomType.Parameter("subject") SubjectResponse subject,
+        @CustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
         this.subject = subject;
         this.subjectAltName = subjectAltName;
     }

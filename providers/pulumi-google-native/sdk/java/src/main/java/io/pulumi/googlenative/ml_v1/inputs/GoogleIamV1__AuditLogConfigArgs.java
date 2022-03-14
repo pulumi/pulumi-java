@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.enums.GoogleIamV1__AuditLogConfigLogType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.R
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
      */
-    @InputImport(name="exemptedMembers")
+    @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
 
     public Output<List<String>> getExemptedMembers() {
@@ -35,7 +35,7 @@ public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.R
      * The log type that this config enables.
      * 
      */
-    @InputImport(name="logType")
+    @Import(name="logType")
       private final @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType;
 
     public Output<GoogleIamV1__AuditLogConfigLogType> getLogType() {

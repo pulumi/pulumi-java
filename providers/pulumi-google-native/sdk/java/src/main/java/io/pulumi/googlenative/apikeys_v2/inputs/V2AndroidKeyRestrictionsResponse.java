@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2AndroidApplicationResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class V2AndroidKeyRestrictionsResponse extends io.pulumi.resources.
      * A list of Android applications that are allowed to make API calls with this key.
      * 
      */
-    @InputImport(name="allowedApplications", required=true)
+    @Import(name="allowedApplications", required=true)
       private final List<V2AndroidApplicationResponse> allowedApplications;
 
     public List<V2AndroidApplicationResponse> getAllowedApplications() {

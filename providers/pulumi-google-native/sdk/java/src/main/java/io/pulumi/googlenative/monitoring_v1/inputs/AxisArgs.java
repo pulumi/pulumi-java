@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.enums.AxisScale;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
      * The label of the axis.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -34,7 +34,7 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
      * The axis scale. By default, a linear scale is used.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable Output<AxisScale> scale;
 
     public Output<AxisScale> getScale() {

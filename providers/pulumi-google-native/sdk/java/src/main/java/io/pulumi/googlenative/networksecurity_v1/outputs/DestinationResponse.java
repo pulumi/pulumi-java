@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.HttpHeaderMatchResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DestinationResponse {
     /**
      * List of host names to match. Matched against the ":authority" header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example "mydomain.*") or a suffix match (example // *.myorg.com") or a presence(any) match "*".
@@ -33,12 +33,12 @@ public final class DestinationResponse {
      */
     private final List<Integer> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DestinationResponse(
-        @OutputCustomType.Parameter("hosts") List<String> hosts,
-        @OutputCustomType.Parameter("httpHeaderMatch") HttpHeaderMatchResponse httpHeaderMatch,
-        @OutputCustomType.Parameter("methods") List<String> methods,
-        @OutputCustomType.Parameter("ports") List<Integer> ports) {
+        @CustomType.Parameter("hosts") List<String> hosts,
+        @CustomType.Parameter("httpHeaderMatch") HttpHeaderMatchResponse httpHeaderMatch,
+        @CustomType.Parameter("methods") List<String> methods,
+        @CustomType.Parameter("ports") List<Integer> ports) {
         this.hosts = hosts;
         this.httpHeaderMatch = httpHeaderMatch;
         this.methods = methods;

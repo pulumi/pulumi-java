@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column name.
      * 
      */
-    @InputImport(name="columnName", required=true)
+    @Import(name="columnName", required=true)
       private final String columnName;
 
     public String getColumnName() {
@@ -33,7 +33,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * The Oracle data type.
      * 
      */
-    @InputImport(name="dataType", required=true)
+    @Import(name="dataType", required=true)
       private final String dataType;
 
     public String getDataType() {
@@ -44,7 +44,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column encoding.
      * 
      */
-    @InputImport(name="encoding", required=true)
+    @Import(name="encoding", required=true)
       private final String encoding;
 
     public String getEncoding() {
@@ -55,7 +55,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column length.
      * 
      */
-    @InputImport(name="length", required=true)
+    @Import(name="length", required=true)
       private final Integer length;
 
     public Integer getLength() {
@@ -66,7 +66,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Whether or not the column can accept a null value.
      * 
      */
-    @InputImport(name="nullable", required=true)
+    @Import(name="nullable", required=true)
       private final Boolean nullable;
 
     public Boolean getNullable() {
@@ -77,7 +77,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * The ordinal position of the column in the table.
      * 
      */
-    @InputImport(name="ordinalPosition", required=true)
+    @Import(name="ordinalPosition", required=true)
       private final Integer ordinalPosition;
 
     public Integer getOrdinalPosition() {
@@ -88,7 +88,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column precision.
      * 
      */
-    @InputImport(name="precision", required=true)
+    @Import(name="precision", required=true)
       private final Integer precision;
 
     public Integer getPrecision() {
@@ -99,7 +99,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Whether or not the column represents a primary key.
      * 
      */
-    @InputImport(name="primaryKey", required=true)
+    @Import(name="primaryKey", required=true)
       private final Boolean primaryKey;
 
     public Boolean getPrimaryKey() {
@@ -110,7 +110,7 @@ public final class OracleColumnResponse extends io.pulumi.resources.InvokeArgs {
      * Column scale.
      * 
      */
-    @InputImport(name="scale", required=true)
+    @Import(name="scale", required=true)
       private final Integer scale;
 
     public Integer getScale() {

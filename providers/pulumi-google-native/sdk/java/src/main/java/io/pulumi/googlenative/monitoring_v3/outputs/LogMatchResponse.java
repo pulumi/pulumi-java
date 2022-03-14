@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogMatchResponse {
     /**
      * A logs-based filter. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries) for how this filter should be constructed.
@@ -21,10 +21,10 @@ public final class LogMatchResponse {
      */
     private final Map<String,String> labelExtractors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogMatchResponse(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("labelExtractors") Map<String,String> labelExtractors) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("labelExtractors") Map<String,String> labelExtractors) {
         this.filter = filter;
         this.labelExtractors = labelExtractors;
     }

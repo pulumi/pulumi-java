@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
      * 
      */
-    @InputImport(name="forwardingPath", required=true)
+    @Import(name="forwardingPath", required=true)
       private final String forwardingPath;
 
     public String getForwardingPath() {
@@ -27,7 +27,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * IPv4 address to forward to.
      * 
      */
-    @InputImport(name="ipv4Address", required=true)
+    @Import(name="ipv4Address", required=true)
       private final String ipv4Address;
 
     public String getIpv4Address() {
@@ -38,14 +38,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
      * 
      */
-    @InputImport(name="ipv6Address", required=true)
+    @Import(name="ipv6Address", required=true)
       private final String ipv6Address;
 
     public String getIpv6Address() {
         return this.ipv6Address;
     }
 
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {

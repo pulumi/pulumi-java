@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ErrorResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeStatsResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
     /**
      * StoredInfoType configuration.
@@ -39,13 +39,13 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
      */
     private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2StoredInfoTypeVersionResponse(
-        @OutputCustomType.Parameter("config") GooglePrivacyDlpV2StoredInfoTypeConfigResponse config,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("errors") List<GooglePrivacyDlpV2ErrorResponse> errors,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stats") GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats) {
+        @CustomType.Parameter("config") GooglePrivacyDlpV2StoredInfoTypeConfigResponse config,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("errors") List<GooglePrivacyDlpV2ErrorResponse> errors,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stats") GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats) {
         this.config = config;
         this.createTime = createTime;
         this.errors = errors;

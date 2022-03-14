@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NodeTaintResponse extends io.pulumi.resources.InvokeArgs {
      * Effect for taint.
      * 
      */
-    @InputImport(name="effect", required=true)
+    @Import(name="effect", required=true)
       private final String effect;
 
     public String getEffect() {
@@ -31,7 +31,7 @@ public final class NodeTaintResponse extends io.pulumi.resources.InvokeArgs {
      * Key for taint.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -42,7 +42,7 @@ public final class NodeTaintResponse extends io.pulumi.resources.InvokeArgs {
      * Value for taint.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

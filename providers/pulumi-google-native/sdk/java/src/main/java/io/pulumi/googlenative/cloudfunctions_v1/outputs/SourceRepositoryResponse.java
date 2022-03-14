@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceRepositoryResponse {
     /**
      * The URL pointing to the hosted repository where the function were defined at the time of deployment. It always points to a specific commit in the format described above.
@@ -20,10 +20,10 @@ public final class SourceRepositoryResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceRepositoryResponse(
-        @OutputCustomType.Parameter("deployedUrl") String deployedUrl,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("deployedUrl") String deployedUrl,
+        @CustomType.Parameter("url") String url) {
         this.deployedUrl = deployedUrl;
         this.url = url;
     }

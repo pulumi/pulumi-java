@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.enums.WeekDayOfMonthDayOfWeek;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
      * A day of the week.
      * 
      */
-    @InputImport(name="dayOfWeek", required=true)
+    @Import(name="dayOfWeek", required=true)
       private final Output<WeekDayOfMonthDayOfWeek> dayOfWeek;
 
     public Output<WeekDayOfMonthDayOfWeek> getDayOfWeek() {
@@ -34,7 +34,7 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Represents the number of days before or after the given week day of month that the patch deployment is scheduled for. For example if `week_ordinal` and `day_of_week` values point to the second day of the month and this `day_offset` value is set to `3`, the patch deployment takes place three days after the second Tuesday of the month. If this value is negative, for example -5, the patches are deployed five days before before the second Tuesday of the month. Allowed values are in range [-30, 30].
      * 
      */
-    @InputImport(name="dayOffset")
+    @Import(name="dayOffset")
       private final @Nullable Output<Integer> dayOffset;
 
     public Output<Integer> getDayOffset() {
@@ -45,7 +45,7 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
      * Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
      * 
      */
-    @InputImport(name="weekOrdinal", required=true)
+    @Import(name="weekOrdinal", required=true)
       private final Output<Integer> weekOrdinal;
 
     public Output<Integer> getWeekOrdinal() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvgroupAttachmentResult {
     /**
      * The time at which the environment group attachment was created as milliseconds since epoch.
@@ -25,11 +25,11 @@ public final class GetEnvgroupAttachmentResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvgroupAttachmentResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("environment") String environment,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("environment") String environment,
+        @CustomType.Parameter("name") String name) {
         this.createdAt = createdAt;
         this.environment = environment;
         this.name = name;

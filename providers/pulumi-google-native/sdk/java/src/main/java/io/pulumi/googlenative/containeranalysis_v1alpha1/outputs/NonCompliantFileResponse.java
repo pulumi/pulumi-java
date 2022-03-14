@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NonCompliantFileResponse {
     /**
      * Command to display the non-compliant files.
@@ -25,11 +25,11 @@ public final class NonCompliantFileResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NonCompliantFileResponse(
-        @OutputCustomType.Parameter("displayCommand") String displayCommand,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("reason") String reason) {
+        @CustomType.Parameter("displayCommand") String displayCommand,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("reason") String reason) {
         this.displayCommand = displayCommand;
         this.path = path;
         this.reason = reason;

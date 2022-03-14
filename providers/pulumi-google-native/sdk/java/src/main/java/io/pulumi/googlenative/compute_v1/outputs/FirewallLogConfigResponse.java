@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallLogConfigResponse {
     /**
      * This field denotes whether to enable logging for a particular firewall rule.
@@ -21,10 +21,10 @@ public final class FirewallLogConfigResponse {
      */
     private final String metadata;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallLogConfigResponse(
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("metadata") String metadata) {
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("metadata") String metadata) {
         this.enable = enable;
         this.metadata = metadata;
     }

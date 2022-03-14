@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocalDiskInitializeParamsResponse {
     /**
      * Optional. Provide this property when creating the disk.
@@ -36,13 +36,13 @@ public final class LocalDiskInitializeParamsResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocalDiskInitializeParamsResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("labels") Map<String,String> labels) {
         this.description = description;
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;

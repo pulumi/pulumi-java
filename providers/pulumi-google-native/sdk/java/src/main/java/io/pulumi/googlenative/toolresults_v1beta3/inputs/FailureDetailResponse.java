@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * If the failure was severe because the system (app) under test crashed.
      * 
      */
-    @InputImport(name="crashed", required=true)
+    @Import(name="crashed", required=true)
       private final Boolean crashed;
 
     public Boolean getCrashed() {
@@ -31,7 +31,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * If the device ran out of memory during a test, causing the test to crash.
      * 
      */
-    @InputImport(name="deviceOutOfMemory", required=true)
+    @Import(name="deviceOutOfMemory", required=true)
       private final Boolean deviceOutOfMemory;
 
     public Boolean getDeviceOutOfMemory() {
@@ -42,7 +42,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
      * 
      */
-    @InputImport(name="failedRoboscript", required=true)
+    @Import(name="failedRoboscript", required=true)
       private final Boolean failedRoboscript;
 
     public Boolean getFailedRoboscript() {
@@ -53,7 +53,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
      * 
      */
-    @InputImport(name="notInstalled", required=true)
+    @Import(name="notInstalled", required=true)
       private final Boolean notInstalled;
 
     public Boolean getNotInstalled() {
@@ -64,7 +64,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * If a native process (including any other than the app) crashed.
      * 
      */
-    @InputImport(name="otherNativeCrash", required=true)
+    @Import(name="otherNativeCrash", required=true)
       private final Boolean otherNativeCrash;
 
     public Boolean getOtherNativeCrash() {
@@ -75,7 +75,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * If the test overran some time limit, and that is why it failed.
      * 
      */
-    @InputImport(name="timedOut", required=true)
+    @Import(name="timedOut", required=true)
       private final Boolean timedOut;
 
     public Boolean getTimedOut() {
@@ -86,7 +86,7 @@ public final class FailureDetailResponse extends io.pulumi.resources.InvokeArgs 
      * If the robo was unable to crawl the app; perhaps because the app did not start.
      * 
      */
-    @InputImport(name="unableToCrawl", required=true)
+    @Import(name="unableToCrawl", required=true)
       private final Boolean unableToCrawl;
 
     public Boolean getUnableToCrawl() {

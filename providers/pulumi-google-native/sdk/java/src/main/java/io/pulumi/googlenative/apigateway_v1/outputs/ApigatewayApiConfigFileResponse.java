@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApigatewayApiConfigFileResponse {
     /**
      * The bytes that constitute the file.
@@ -20,10 +20,10 @@ public final class ApigatewayApiConfigFileResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApigatewayApiConfigFileResponse(
-        @OutputCustomType.Parameter("contents") String contents,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("contents") String contents,
+        @CustomType.Parameter("path") String path) {
         this.contents = contents;
         this.path = path;
     }

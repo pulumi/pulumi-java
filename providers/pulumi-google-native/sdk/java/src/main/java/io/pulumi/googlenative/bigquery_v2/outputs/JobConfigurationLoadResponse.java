@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ClusteringResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.DestinationTablePropertiesResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.EncryptionConfigurationResponse;
@@ -19,7 +19,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobConfigurationLoadResponse {
     /**
      * [Optional] Accept rows that are missing trailing optional columns. The missing values are treated as nulls. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
@@ -162,36 +162,36 @@ public final class JobConfigurationLoadResponse {
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobConfigurationLoadResponse(
-        @OutputCustomType.Parameter("allowJaggedRows") Boolean allowJaggedRows,
-        @OutputCustomType.Parameter("allowQuotedNewlines") Boolean allowQuotedNewlines,
-        @OutputCustomType.Parameter("autodetect") Boolean autodetect,
-        @OutputCustomType.Parameter("clustering") ClusteringResponse clustering,
-        @OutputCustomType.Parameter("createDisposition") String createDisposition,
-        @OutputCustomType.Parameter("decimalTargetTypes") List<String> decimalTargetTypes,
-        @OutputCustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        @OutputCustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
-        @OutputCustomType.Parameter("destinationTableProperties") DestinationTablePropertiesResponse destinationTableProperties,
-        @OutputCustomType.Parameter("encoding") String encoding,
-        @OutputCustomType.Parameter("fieldDelimiter") String fieldDelimiter,
-        @OutputCustomType.Parameter("hivePartitioningOptions") HivePartitioningOptionsResponse hivePartitioningOptions,
-        @OutputCustomType.Parameter("ignoreUnknownValues") Boolean ignoreUnknownValues,
-        @OutputCustomType.Parameter("jsonExtension") String jsonExtension,
-        @OutputCustomType.Parameter("maxBadRecords") Integer maxBadRecords,
-        @OutputCustomType.Parameter("nullMarker") String nullMarker,
-        @OutputCustomType.Parameter("parquetOptions") ParquetOptionsResponse parquetOptions,
-        @OutputCustomType.Parameter("projectionFields") List<String> projectionFields,
-        @OutputCustomType.Parameter("quote") String quote,
-        @OutputCustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
-        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
-        @OutputCustomType.Parameter("schemaUpdateOptions") List<String> schemaUpdateOptions,
-        @OutputCustomType.Parameter("skipLeadingRows") Integer skipLeadingRows,
-        @OutputCustomType.Parameter("sourceFormat") String sourceFormat,
-        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris,
-        @OutputCustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
-        @OutputCustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes,
-        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
+        @CustomType.Parameter("allowJaggedRows") Boolean allowJaggedRows,
+        @CustomType.Parameter("allowQuotedNewlines") Boolean allowQuotedNewlines,
+        @CustomType.Parameter("autodetect") Boolean autodetect,
+        @CustomType.Parameter("clustering") ClusteringResponse clustering,
+        @CustomType.Parameter("createDisposition") String createDisposition,
+        @CustomType.Parameter("decimalTargetTypes") List<String> decimalTargetTypes,
+        @CustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
+        @CustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
+        @CustomType.Parameter("destinationTableProperties") DestinationTablePropertiesResponse destinationTableProperties,
+        @CustomType.Parameter("encoding") String encoding,
+        @CustomType.Parameter("fieldDelimiter") String fieldDelimiter,
+        @CustomType.Parameter("hivePartitioningOptions") HivePartitioningOptionsResponse hivePartitioningOptions,
+        @CustomType.Parameter("ignoreUnknownValues") Boolean ignoreUnknownValues,
+        @CustomType.Parameter("jsonExtension") String jsonExtension,
+        @CustomType.Parameter("maxBadRecords") Integer maxBadRecords,
+        @CustomType.Parameter("nullMarker") String nullMarker,
+        @CustomType.Parameter("parquetOptions") ParquetOptionsResponse parquetOptions,
+        @CustomType.Parameter("projectionFields") List<String> projectionFields,
+        @CustomType.Parameter("quote") String quote,
+        @CustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
+        @CustomType.Parameter("schema") TableSchemaResponse schema,
+        @CustomType.Parameter("schemaUpdateOptions") List<String> schemaUpdateOptions,
+        @CustomType.Parameter("skipLeadingRows") Integer skipLeadingRows,
+        @CustomType.Parameter("sourceFormat") String sourceFormat,
+        @CustomType.Parameter("sourceUris") List<String> sourceUris,
+        @CustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
+        @CustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes,
+        @CustomType.Parameter("writeDisposition") String writeDisposition) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.autodetect = autodetect;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
      * Height of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
      * 
      */
-    @InputImport(name="height")
+    @Import(name="height")
       private final @Nullable Output<Integer> height;
 
     public Output<Integer> getHeight() {
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
      * URI of the image. This field must be a valid UTF-8 encoded URI with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2betaImageArgs extends io.pulumi.resources.
      * Width of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
      * 
      */
-    @InputImport(name="width")
+    @Import(name="width")
       private final @Nullable Output<Integer> width;
 
     public Output<Integer> getWidth() {

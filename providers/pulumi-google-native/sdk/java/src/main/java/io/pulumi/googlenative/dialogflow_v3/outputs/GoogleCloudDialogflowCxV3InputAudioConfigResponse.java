@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse {
     /**
      * Audio encoding of the audio content to process.
@@ -48,15 +48,15 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse {
      */
     private final Boolean singleUtterance;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3InputAudioConfigResponse(
-        @OutputCustomType.Parameter("audioEncoding") String audioEncoding,
-        @OutputCustomType.Parameter("enableWordInfo") Boolean enableWordInfo,
-        @OutputCustomType.Parameter("model") String model,
-        @OutputCustomType.Parameter("modelVariant") String modelVariant,
-        @OutputCustomType.Parameter("phraseHints") List<String> phraseHints,
-        @OutputCustomType.Parameter("sampleRateHertz") Integer sampleRateHertz,
-        @OutputCustomType.Parameter("singleUtterance") Boolean singleUtterance) {
+        @CustomType.Parameter("audioEncoding") String audioEncoding,
+        @CustomType.Parameter("enableWordInfo") Boolean enableWordInfo,
+        @CustomType.Parameter("model") String model,
+        @CustomType.Parameter("modelVariant") String modelVariant,
+        @CustomType.Parameter("phraseHints") List<String> phraseHints,
+        @CustomType.Parameter("sampleRateHertz") Integer sampleRateHertz,
+        @CustomType.Parameter("singleUtterance") Boolean singleUtterance) {
         this.audioEncoding = audioEncoding;
         this.enableWordInfo = enableWordInfo;
         this.model = model;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1VersionVariantsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse ex
      * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final String condition;
 
     public String getCondition() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse ex
      * The flow versions as the variants of this experiment.
      * 
      */
-    @InputImport(name="versionVariants", required=true)
+    @Import(name="versionVariants", required=true)
       private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 
     public GoogleCloudDialogflowCxV3beta1VersionVariantsResponse getVersionVariants() {

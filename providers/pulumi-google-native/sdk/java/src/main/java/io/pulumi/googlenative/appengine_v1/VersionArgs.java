@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1.enums.VersionInboundServicesItem;
 import io.pulumi.googlenative.appengine_v1.enums.VersionServingStatus;
 import io.pulumi.googlenative.appengine_v1.inputs.ApiConfigHandlerArgs;
@@ -39,14 +39,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="apiConfig")
+    @Import(name="apiConfig")
       private final @Nullable Output<ApiConfigHandlerArgs> apiConfig;
 
     public Output<ApiConfigHandlerArgs> getApiConfig() {
         return this.apiConfig == null ? Output.empty() : this.apiConfig;
     }
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
@@ -57,7 +57,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
      * 
      */
-    @InputImport(name="automaticScaling")
+    @Import(name="automaticScaling")
       private final @Nullable Output<AutomaticScalingArgs> automaticScaling;
 
     public Output<AutomaticScalingArgs> getAutomaticScaling() {
@@ -68,7 +68,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * A service with basic scaling will create an instance when the application receives a request. The instance will be turned down when the app becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
      * 
      */
-    @InputImport(name="basicScaling")
+    @Import(name="basicScaling")
       private final @Nullable Output<BasicScalingArgs> basicScaling;
 
     public Output<BasicScalingArgs> getBasicScaling() {
@@ -79,7 +79,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata settings that are supplied to this version to enable beta runtime features.
      * 
      */
-    @InputImport(name="betaSettings")
+    @Import(name="betaSettings")
       private final @Nullable Output<Map<String,String>> betaSettings;
 
     public Output<Map<String,String>> getBetaSettings() {
@@ -90,7 +90,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Environment variables available to the build environment.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="buildEnvVariables")
+    @Import(name="buildEnvVariables")
       private final @Nullable Output<Map<String,String>> buildEnvVariables;
 
     public Output<Map<String,String>> getBuildEnvVariables() {
@@ -101,7 +101,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Duration that static files should be cached by web proxies and browsers. Only applicable if the corresponding StaticFilesHandler (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StaticFilesHandler) does not specify its own expiration time.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="defaultExpiration")
+    @Import(name="defaultExpiration")
       private final @Nullable Output<String> defaultExpiration;
 
     public Output<String> getDefaultExpiration() {
@@ -112,7 +112,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Code and application artifacts that make up this version.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="deployment")
+    @Import(name="deployment")
       private final @Nullable Output<DeploymentArgs> deployment;
 
     public Output<DeploymentArgs> getDeployment() {
@@ -123,7 +123,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Endpoints configuration.If endpoints_api_service is set, the Cloud Endpoints Extensible Service Proxy will be provided to serve the API implemented by the app.
      * 
      */
-    @InputImport(name="endpointsApiService")
+    @Import(name="endpointsApiService")
       private final @Nullable Output<EndpointsApiServiceArgs> endpointsApiService;
 
     public Output<EndpointsApiServiceArgs> getEndpointsApiService() {
@@ -134,7 +134,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * The entrypoint for the application.
      * 
      */
-    @InputImport(name="entrypoint")
+    @Import(name="entrypoint")
       private final @Nullable Output<EntrypointArgs> entrypoint;
 
     public Output<EntrypointArgs> getEntrypoint() {
@@ -145,7 +145,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * App Engine execution environment for this version.Defaults to standard.
      * 
      */
-    @InputImport(name="env")
+    @Import(name="env")
       private final @Nullable Output<String> env;
 
     public Output<String> getEnv() {
@@ -156,7 +156,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Environment variables available to the application.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="envVariables")
+    @Import(name="envVariables")
       private final @Nullable Output<Map<String,String>> envVariables;
 
     public Output<Map<String,String>> getEnvVariables() {
@@ -167,7 +167,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Custom static error pages. Limited to 10KB per page.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="errorHandlers")
+    @Import(name="errorHandlers")
       private final @Nullable Output<List<ErrorHandlerArgs>> errorHandlers;
 
     public Output<List<ErrorHandlerArgs>> getErrorHandlers() {
@@ -178,7 +178,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="handlers")
+    @Import(name="handlers")
       private final @Nullable Output<List<UrlMapArgs>> handlers;
 
     public Output<List<UrlMapArgs>> getHandlers() {
@@ -189,7 +189,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Configures health checking for instances. Unhealthy instances are stopped and replaced with new instances. Only applicable in the App Engine flexible environment.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="healthCheck")
+    @Import(name="healthCheck")
       private final @Nullable Output<HealthCheckArgs> healthCheck;
 
     public Output<HealthCheckArgs> getHealthCheck() {
@@ -200,7 +200,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Relative name of the version within the service. Example: v1. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names: "default", "latest", and any name with the prefix "ah-".
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -211,7 +211,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Before an application can receive email or XMPP messages, the application must be configured to enable the service.
      * 
      */
-    @InputImport(name="inboundServices")
+    @Import(name="inboundServices")
       private final @Nullable Output<List<VersionInboundServicesItem>> inboundServices;
 
     public Output<List<VersionInboundServicesItem>> getInboundServices() {
@@ -222,7 +222,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Instance class that is used to run this version. Valid values are: AutomaticScaling: F1, F2, F4, F4_1G ManualScaling or BasicScaling: B1, B2, B4, B8, B4_1GDefaults to F1 for AutomaticScaling and B1 for ManualScaling or BasicScaling.
      * 
      */
-    @InputImport(name="instanceClass")
+    @Import(name="instanceClass")
       private final @Nullable Output<String> instanceClass;
 
     public Output<String> getInstanceClass() {
@@ -233,7 +233,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for third-party Python runtime libraries that are required by the application.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="libraries")
+    @Import(name="libraries")
       private final @Nullable Output<List<LibraryArgs>> libraries;
 
     public Output<List<LibraryArgs>> getLibraries() {
@@ -244,7 +244,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Configures liveness health checking for instances. Unhealthy instances are stopped and replaced with new instancesOnly returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="livenessCheck")
+    @Import(name="livenessCheck")
       private final @Nullable Output<LivenessCheckArgs> livenessCheck;
 
     public Output<LivenessCheckArgs> getLivenessCheck() {
@@ -255,7 +255,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time. Manually scaled versions are sometimes referred to as "backends".
      * 
      */
-    @InputImport(name="manualScaling")
+    @Import(name="manualScaling")
       private final @Nullable Output<ManualScalingArgs> manualScaling;
 
     public Output<ManualScalingArgs> getManualScaling() {
@@ -266,7 +266,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Extra network settings. Only applicable in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<NetworkArgs> network;
 
     public Output<NetworkArgs> getNetwork() {
@@ -277,7 +277,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Files that match this pattern will not be built into this version. Only applicable for Go runtimes.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="nobuildFilesRegex")
+    @Import(name="nobuildFilesRegex")
       private final @Nullable Output<String> nobuildFilesRegex;
 
     public Output<String> getNobuildFilesRegex() {
@@ -288,7 +288,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.Only returned in GET requests if view=FULL is set.
      * 
      */
-    @InputImport(name="readinessCheck")
+    @Import(name="readinessCheck")
       private final @Nullable Output<ReadinessCheckArgs> readinessCheck;
 
     public Output<ReadinessCheckArgs> getReadinessCheck() {
@@ -299,7 +299,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Machine resources for this version. Only applicable in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<ResourcesArgs> resources;
 
     public Output<ResourcesArgs> getResources() {
@@ -310,7 +310,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Desired runtime. Example: python27.
      * 
      */
-    @InputImport(name="runtime")
+    @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
     public Output<String> getRuntime() {
@@ -321,7 +321,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the API in the given runtime environment. Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
      * 
      */
-    @InputImport(name="runtimeApiVersion")
+    @Import(name="runtimeApiVersion")
       private final @Nullable Output<String> runtimeApiVersion;
 
     public Output<String> getRuntimeApiVersion() {
@@ -332,7 +332,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * The channel of the runtime to use. Only available for some runtimes. Defaults to the default channel.
      * 
      */
-    @InputImport(name="runtimeChannel")
+    @Import(name="runtimeChannel")
       private final @Nullable Output<String> runtimeChannel;
 
     public Output<String> getRuntimeChannel() {
@@ -343,7 +343,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * The path or name of the app's main executable.
      * 
      */
-    @InputImport(name="runtimeMainExecutablePath")
+    @Import(name="runtimeMainExecutablePath")
       private final @Nullable Output<String> runtimeMainExecutablePath;
 
     public Output<String> getRuntimeMainExecutablePath() {
@@ -354,14 +354,14 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as default if this field is neither provided in app.yaml file nor through CLI flag.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
         return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
     public Output<String> getServiceId() {
@@ -372,7 +372,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
      * 
      */
-    @InputImport(name="servingStatus")
+    @Import(name="servingStatus")
       private final @Nullable Output<VersionServingStatus> servingStatus;
 
     public Output<VersionServingStatus> getServingStatus() {
@@ -383,7 +383,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether multiple requests can be dispatched to this version at once.
      * 
      */
-    @InputImport(name="threadsafe")
+    @Import(name="threadsafe")
       private final @Nullable Output<Boolean> threadsafe;
 
     public Output<Boolean> getThreadsafe() {
@@ -394,7 +394,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to deploy this version in a container on a virtual machine.
      * 
      */
-    @InputImport(name="vm")
+    @Import(name="vm")
       private final @Nullable Output<Boolean> vm;
 
     public Output<Boolean> getVm() {
@@ -405,7 +405,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Enables VPC connectivity for standard apps.
      * 
      */
-    @InputImport(name="vpcAccessConnector")
+    @Import(name="vpcAccessConnector")
       private final @Nullable Output<VpcAccessConnectorArgs> vpcAccessConnector;
 
     public Output<VpcAccessConnectorArgs> getVpcAccessConnector() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectJobConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectTemplateResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2RequestedOptionsResponse {
     /**
      * Inspect config.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
      */
     private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2RequestedOptionsResponse(
-        @OutputCustomType.Parameter("jobConfig") GooglePrivacyDlpV2InspectJobConfigResponse jobConfig,
-        @OutputCustomType.Parameter("snapshotInspectTemplate") GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
+        @CustomType.Parameter("jobConfig") GooglePrivacyDlpV2InspectJobConfigResponse jobConfig,
+        @CustomType.Parameter("snapshotInspectTemplate") GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
         this.jobConfig = jobConfig;
         this.snapshotInspectTemplate = snapshotInspectTemplate;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceExecResourceExecResponse {
     /**
      * Optional arguments to pass to the source during execution.
@@ -37,13 +37,13 @@ public final class OSPolicyResourceExecResourceExecResponse {
      */
     private final String script;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceExecResourceExecResponse(
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("file") OSPolicyResourceFileResponse file,
-        @OutputCustomType.Parameter("interpreter") String interpreter,
-        @OutputCustomType.Parameter("outputFilePath") String outputFilePath,
-        @OutputCustomType.Parameter("script") String script) {
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("file") OSPolicyResourceFileResponse file,
+        @CustomType.Parameter("interpreter") String interpreter,
+        @CustomType.Parameter("outputFilePath") String outputFilePath,
+        @CustomType.Parameter("script") String script) {
         this.args = args;
         this.file = file;
         this.interpreter = interpreter;

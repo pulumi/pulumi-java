@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs;
 import java.lang.String;
@@ -17,7 +17,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
     public Output<String> getAgentId() {
@@ -28,7 +28,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -39,14 +39,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,14 +57,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the environment. Format: `projects//locations//agents//environments/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -75,7 +75,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The test cases config for continuous tests of this environment.
      * 
      */
-    @InputImport(name="testCasesConfig")
+    @Import(name="testCasesConfig")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs> testCasesConfig;
 
     public Output<GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs> getTestCasesConfig() {
@@ -86,7 +86,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
      * 
      */
-    @InputImport(name="versionConfigs", required=true)
+    @Import(name="versionConfigs", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs>> versionConfigs;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs>> getVersionConfigs() {

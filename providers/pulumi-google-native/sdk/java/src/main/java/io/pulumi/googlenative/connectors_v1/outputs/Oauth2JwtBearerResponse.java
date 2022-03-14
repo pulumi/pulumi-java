@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.JwtClaimsResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.SecretResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Oauth2JwtBearerResponse {
     /**
      * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
@@ -21,10 +21,10 @@ public final class Oauth2JwtBearerResponse {
      */
     private final JwtClaimsResponse jwtClaims;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Oauth2JwtBearerResponse(
-        @OutputCustomType.Parameter("clientKey") SecretResponse clientKey,
-        @OutputCustomType.Parameter("jwtClaims") JwtClaimsResponse jwtClaims) {
+        @CustomType.Parameter("clientKey") SecretResponse clientKey,
+        @CustomType.Parameter("jwtClaims") JwtClaimsResponse jwtClaims) {
         this.clientKey = clientKey;
         this.jwtClaims = jwtClaims;
     }

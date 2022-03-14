@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.composer_v1beta1.inputs.IPAllocationPolicyResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="diskSizeGb", required=true)
+    @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
@@ -35,7 +35,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for all destination addresses, except between pods traffic. See: https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent
      * 
      */
-    @InputImport(name="enableIpMasqAgent", required=true)
+    @Import(name="enableIpMasqAgent", required=true)
       private final Boolean enableIpMasqAgent;
 
     public Boolean getEnableIpMasqAgent() {
@@ -46,7 +46,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The IPAllocationPolicy fields for the GKE cluster.
      * 
      */
-    @InputImport(name="ipAllocationPolicy", required=true)
+    @Import(name="ipAllocationPolicy", required=true)
       private final IPAllocationPolicyResponse ipAllocationPolicy;
 
     public IPAllocationPolicyResponse getIpAllocationPolicy() {
@@ -57,7 +57,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs used to run the Apache Airflow software, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}". This `location` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.machineType` are specified, `nodeConfig.machineType` must belong to this `location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If only one field (`location` or `nodeConfig.machineType`) is specified, the location information from the specified field will be propagated to the unspecified field. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -68,7 +68,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The Compute Engine [machine type](/compute/docs/machine-types) used for cluster instances, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}". The `machineType` must belong to the enclosing environment's project and location. If both this field and `nodeConfig.location` are specified, this `machineType` must belong to the `nodeConfig.location`; if both are unspecified, the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer location, and propagate that choice to both fields. If exactly one of this field and `nodeConfig.location` is specified, the location information from the specified field will be propagated to the unspecified field. The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1". This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -79,7 +79,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The maximum number of pods per node in the Cloud Composer GKE cluster. The value must be between 8 and 110 and it can be set only if the environment is VPC-native. The default value is 32. Values of this field will be propagated both to the `default-pool` node pool of the newly created GKE cluster, and to the default "Maximum Pods per Node" value which is used for newly created node pools if their value is not explicitly set during node pool creation. For more information, see [Optimizing IP address allocation] (https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr). Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="maxPodsPerNode", required=true)
+    @Import(name="maxPodsPerNode", required=true)
       private final Integer maxPodsPerNode;
 
     public Integer getMaxPodsPerNode() {
@@ -90,7 +90,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The Compute Engine network to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the environment's project is used. If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see `nodeConfig.subnetwork`.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -101,7 +101,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes` is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="oauthScopes", required=true)
+    @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
     public List<String> getOauthScopes() {
@@ -112,7 +112,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The Google Cloud Platform Service Account to be used by the workloads. If a service account is not specified, the "default" Compute Engine service account is used. Cannot be updated.
      * 
      */
-    @InputImport(name="serviceAccount", required=true)
+    @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
     public String getServiceAccount() {
@@ -123,7 +123,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The Compute Engine subnetwork to be used for machine communications, specified as a [relative resource name](/apis/design/resource_names#relative_resource_name). For example: "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}" If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork must belong to the enclosing environment's project and location.
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {
@@ -134,7 +134,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The list of instance tags applied to all node VMs. Tags are used to identify valid sources or targets for network firewalls. Each tag within the list must comply with [RFC1035](https://www.ietf.org/rfc/rfc1035.txt). Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final List<String> tags;
 
     public List<String> getTags() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppDevExperienceFeatureSpecResponse {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppDevExperienceFeatureSpecResponse() {
     }
 

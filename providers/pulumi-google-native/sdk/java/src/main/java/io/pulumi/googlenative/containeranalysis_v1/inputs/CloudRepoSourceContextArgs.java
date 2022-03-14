@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.AliasContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.RepoIdArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
      * An alias, which may be a branch or tag.
      * 
      */
-    @InputImport(name="aliasContext")
+    @Import(name="aliasContext")
       private final @Nullable Output<AliasContextArgs> aliasContext;
 
     public Output<AliasContextArgs> getAliasContext() {
@@ -35,7 +35,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
      * The ID of the repo.
      * 
      */
-    @InputImport(name="repoId")
+    @Import(name="repoId")
       private final @Nullable Output<RepoIdArgs> repoId;
 
     public Output<RepoIdArgs> getRepoId() {
@@ -46,7 +46,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
      * A revision ID.
      * 
      */
-    @InputImport(name="revisionId")
+    @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {

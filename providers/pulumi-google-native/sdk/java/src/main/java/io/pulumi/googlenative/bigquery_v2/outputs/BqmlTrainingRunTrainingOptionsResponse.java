@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BqmlTrainingRunTrainingOptionsResponse {
     private final Boolean earlyStop;
     private final Double l1Reg;
@@ -21,17 +21,17 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
     private final Double minRelProgress;
     private final Boolean warmStart;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BqmlTrainingRunTrainingOptionsResponse(
-        @OutputCustomType.Parameter("earlyStop") Boolean earlyStop,
-        @OutputCustomType.Parameter("l1Reg") Double l1Reg,
-        @OutputCustomType.Parameter("l2Reg") Double l2Reg,
-        @OutputCustomType.Parameter("learnRate") Double learnRate,
-        @OutputCustomType.Parameter("learnRateStrategy") String learnRateStrategy,
-        @OutputCustomType.Parameter("lineSearchInitLearnRate") Double lineSearchInitLearnRate,
-        @OutputCustomType.Parameter("maxIteration") String maxIteration,
-        @OutputCustomType.Parameter("minRelProgress") Double minRelProgress,
-        @OutputCustomType.Parameter("warmStart") Boolean warmStart) {
+        @CustomType.Parameter("earlyStop") Boolean earlyStop,
+        @CustomType.Parameter("l1Reg") Double l1Reg,
+        @CustomType.Parameter("l2Reg") Double l2Reg,
+        @CustomType.Parameter("learnRate") Double learnRate,
+        @CustomType.Parameter("learnRateStrategy") String learnRateStrategy,
+        @CustomType.Parameter("lineSearchInitLearnRate") Double lineSearchInitLearnRate,
+        @CustomType.Parameter("maxIteration") String maxIteration,
+        @CustomType.Parameter("minRelProgress") Double minRelProgress,
+        @CustomType.Parameter("warmStart") Boolean warmStart) {
         this.earlyStop = earlyStop;
         this.l1Reg = l1Reg;
         this.l2Reg = l2Reg;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
      * An IPv4 internal IP address to assign to the instance for this subinterface. If specified, ip_allocation_mode should be set to ALLOCATE_IP.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
     }
 
-    @InputImport(name="ipAllocationMode", required=true)
+    @Import(name="ipAllocationMode", required=true)
       private final String ipAllocationMode;
 
     public String getIpAllocationMode() {
@@ -35,7 +35,7 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
      * If specified, this subnetwork must belong to the same network as that of the network interface. If not specified the subnet of network interface will be used. If you specify this property, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {
@@ -46,7 +46,7 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
      * VLAN tag. Should match the VLAN(s) supported by the subnetwork to which this subinterface is connecting.
      * 
      */
-    @InputImport(name="vlan", required=true)
+    @Import(name="vlan", required=true)
       private final Integer vlan;
 
     public Integer getVlan() {

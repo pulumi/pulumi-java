@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.inputs.DnsKeySpecResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,14 +18,14 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
      * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
      * 
      */
-    @InputImport(name="defaultKeySpecs", required=true)
+    @Import(name="defaultKeySpecs", required=true)
       private final List<DnsKeySpecResponse> defaultKeySpecs;
 
     public List<DnsKeySpecResponse> getDefaultKeySpecs() {
         return this.defaultKeySpecs;
     }
 
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -36,7 +36,7 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
      * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
      * 
      */
-    @InputImport(name="nonExistence", required=true)
+    @Import(name="nonExistence", required=true)
       private final String nonExistence;
 
     public String getNonExistence() {
@@ -47,7 +47,7 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
      * Specifies whether DNSSEC is enabled, and what mode it is in.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

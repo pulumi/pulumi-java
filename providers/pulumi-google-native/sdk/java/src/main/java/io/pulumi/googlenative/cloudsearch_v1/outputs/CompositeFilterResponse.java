@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.FilterResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CompositeFilterResponse {
     /**
      * The logic operator of the sub filter.
@@ -22,10 +22,10 @@ public final class CompositeFilterResponse {
      */
     private final List<FilterResponse> subFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CompositeFilterResponse(
-        @OutputCustomType.Parameter("logicOperator") String logicOperator,
-        @OutputCustomType.Parameter("subFilters") List<FilterResponse> subFilters) {
+        @CustomType.Parameter("logicOperator") String logicOperator,
+        @CustomType.Parameter("subFilters") List<FilterResponse> subFilters) {
         this.logicOperator = logicOperator;
         this.subFilters = subFilters;
     }

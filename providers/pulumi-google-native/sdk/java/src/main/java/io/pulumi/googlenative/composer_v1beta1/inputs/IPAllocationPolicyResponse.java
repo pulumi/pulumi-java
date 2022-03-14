@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * Optional. The IP address range used to allocate IP addresses to pods in the cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
      * 
      */
-    @InputImport(name="clusterIpv4CidrBlock", required=true)
+    @Import(name="clusterIpv4CidrBlock", required=true)
       private final String clusterIpv4CidrBlock;
 
     public String getClusterIpv4CidrBlock() {
@@ -32,7 +32,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * Optional. The name of the cluster's secondary range used to allocate IP addresses to pods. Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
      */
-    @InputImport(name="clusterSecondaryRangeName", required=true)
+    @Import(name="clusterSecondaryRangeName", required=true)
       private final String clusterSecondaryRangeName;
 
     public String getClusterSecondaryRangeName() {
@@ -43,7 +43,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * Optional. The IP address range of the services IP addresses in this cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
      * 
      */
-    @InputImport(name="servicesIpv4CidrBlock", required=true)
+    @Import(name="servicesIpv4CidrBlock", required=true)
       private final String servicesIpv4CidrBlock;
 
     public String getServicesIpv4CidrBlock() {
@@ -54,7 +54,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * Optional. The name of the services' secondary range used to allocate IP addresses to the cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
      * 
      */
-    @InputImport(name="servicesSecondaryRangeName", required=true)
+    @Import(name="servicesSecondaryRangeName", required=true)
       private final String servicesSecondaryRangeName;
 
     public String getServicesSecondaryRangeName() {
@@ -65,7 +65,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native cluster is created. This field is only supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. Environments in newer versions always use VPC-native GKE clusters.
      * 
      */
-    @InputImport(name="useIpAliases", required=true)
+    @Import(name="useIpAliases", required=true)
       private final Boolean useIpAliases;
 
     public Boolean getUseIpAliases() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArg
      * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
      * 
      */
-    @InputImport(name="toolExecution")
+    @Import(name="toolExecution")
       private final @Nullable Output<ToolExecutionArgs> toolExecution;
 
     public Output<ToolExecutionArgs> getToolExecution() {

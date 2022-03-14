@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.NetworkEdgeSecurityServiceArgs;
@@ -21,7 +21,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -35,7 +35,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -49,7 +49,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a NetworkEdgeSecurityService. An up-to-date fingerprint must be provided in order to update the NetworkEdgeSecurityService, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a NetworkEdgeSecurityService.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -59,7 +59,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
     public Output<String> getFingerprint() {
         return this.fingerprint;
     }
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     public Output<String> getKind() {
@@ -69,7 +69,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -83,7 +83,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * URL of the region where the resource resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -97,7 +97,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * The resource URL for the network edge security service associated with this network edge security service.
      * 
      */
-    @OutputExport(name="securityPolicy", type=String.class, parameters={})
+    @Export(name="securityPolicy", type=String.class, parameters={})
     private Output<String> securityPolicy;
 
     /**
@@ -111,7 +111,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -125,7 +125,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**

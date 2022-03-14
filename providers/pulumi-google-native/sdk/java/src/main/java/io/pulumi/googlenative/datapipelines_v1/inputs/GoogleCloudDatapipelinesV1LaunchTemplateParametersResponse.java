@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * The runtime environment for the job.
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
 
     public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse getEnvironment() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * The job name to use for the created job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final String jobName;
 
     public String getJobName() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * The runtime parameters to pass to the job.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
      * 
      */
-    @InputImport(name="transformNameMapping", required=true)
+    @Import(name="transformNameMapping", required=true)
       private final Map<String,String> transformNameMapping;
 
     public Map<String,String> getTransformNameMapping() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
      * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
      * 
      */
-    @InputImport(name="update", required=true)
+    @Import(name="update", required=true)
       private final Boolean update;
 
     public Boolean getUpdate() {

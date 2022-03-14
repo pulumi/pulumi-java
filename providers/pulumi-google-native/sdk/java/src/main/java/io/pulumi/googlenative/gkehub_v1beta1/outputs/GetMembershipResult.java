@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gkehub_v1beta1.outputs.AuthorityResponse;
 import io.pulumi.googlenative.gkehub_v1beta1.outputs.MembershipEndpointResponse;
 import io.pulumi.googlenative.gkehub_v1beta1.outputs.MembershipStateResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMembershipResult {
     /**
      * Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
@@ -79,21 +79,21 @@ public final class GetMembershipResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMembershipResult(
-        @OutputCustomType.Parameter("authority") AuthorityResponse authority,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endpoint") MembershipEndpointResponse endpoint,
-        @OutputCustomType.Parameter("externalId") String externalId,
-        @OutputCustomType.Parameter("infrastructureType") String infrastructureType,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lastConnectionTime") String lastConnectionTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") MembershipStateResponse state,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("authority") AuthorityResponse authority,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endpoint") MembershipEndpointResponse endpoint,
+        @CustomType.Parameter("externalId") String externalId,
+        @CustomType.Parameter("infrastructureType") String infrastructureType,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lastConnectionTime") String lastConnectionTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") MembershipStateResponse state,
+        @CustomType.Parameter("uniqueId") String uniqueId,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.authority = authority;
         this.createTime = createTime;
         this.deleteTime = deleteTime;

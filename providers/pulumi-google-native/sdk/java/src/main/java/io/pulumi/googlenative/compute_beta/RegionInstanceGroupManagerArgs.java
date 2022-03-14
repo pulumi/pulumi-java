@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.RegionInstanceGroupManagerFailoverAction;
 import io.pulumi.googlenative.compute_beta.inputs.DistributionPolicyArgs;
 import io.pulumi.googlenative.compute_beta.inputs.InstanceGroupManagerAutoHealingPolicyArgs;
@@ -27,7 +27,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The autohealing policy for this managed instance group. You can specify only one value.
      * 
      */
-    @InputImport(name="autoHealingPolicies")
+    @Import(name="autoHealingPolicies")
       private final @Nullable Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies;
 
     public Output<List<InstanceGroupManagerAutoHealingPolicyArgs>> getAutoHealingPolicies() {
@@ -38,7 +38,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The base instance name to use for instances in this group. The value must be 1-58 characters long. Instances are named by appending a hyphen and a random four-character string to the base instance name. The base instance name must comply with RFC1035.
      * 
      */
-    @InputImport(name="baseInstanceName")
+    @Import(name="baseInstanceName")
       private final @Nullable Output<String> baseInstanceName;
 
     public Output<String> getBaseInstanceName() {
@@ -49,7 +49,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -60,7 +60,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
      * 
      */
-    @InputImport(name="distributionPolicy")
+    @Import(name="distributionPolicy")
       private final @Nullable Output<DistributionPolicyArgs> distributionPolicy;
 
     public Output<DistributionPolicyArgs> getDistributionPolicy() {
@@ -71,7 +71,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The action to perform in case of zone failure. Only one value is supported, NO_FAILOVER. The default is NO_FAILOVER.
      * 
      */
-    @InputImport(name="failoverAction")
+    @Import(name="failoverAction")
       private final @Nullable Output<RegionInstanceGroupManagerFailoverAction> failoverAction;
 
     public Output<RegionInstanceGroupManagerFailoverAction> getFailoverAction() {
@@ -82,7 +82,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
      * 
      */
-    @InputImport(name="instanceTemplate")
+    @Import(name="instanceTemplate")
       private final @Nullable Output<String> instanceTemplate;
 
     public Output<String> getInstanceTemplate() {
@@ -93,7 +93,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -104,28 +104,28 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * Named ports configured for the Instance Groups complementary to this Instance Group Manager.
      * 
      */
-    @InputImport(name="namedPorts")
+    @Import(name="namedPorts")
       private final @Nullable Output<List<NamedPortArgs>> namedPorts;
 
     public Output<List<NamedPortArgs>> getNamedPorts() {
         return this.namedPorts == null ? Output.empty() : this.namedPorts;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -136,7 +136,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The service account to be used as credentials for all operations performed by the managed instance group on instances. The service accounts needs all permissions required to create and delete instances. By default, the service account {projectNumber}@cloudservices.gserviceaccount.com is used.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -147,7 +147,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * Stateful configuration for this Instanced Group Manager
      * 
      */
-    @InputImport(name="statefulPolicy")
+    @Import(name="statefulPolicy")
       private final @Nullable Output<StatefulPolicyArgs> statefulPolicy;
 
     public Output<StatefulPolicyArgs> getStatefulPolicy() {
@@ -158,7 +158,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
      * 
      */
-    @InputImport(name="targetPools")
+    @Import(name="targetPools")
       private final @Nullable Output<List<String>> targetPools;
 
     public Output<List<String>> getTargetPools() {
@@ -169,7 +169,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
      * 
      */
-    @InputImport(name="targetSize")
+    @Import(name="targetSize")
       private final @Nullable Output<Integer> targetSize;
 
     public Output<Integer> getTargetSize() {
@@ -180,7 +180,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * The update policy for this managed instance group.
      * 
      */
-    @InputImport(name="updatePolicy")
+    @Import(name="updatePolicy")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
     public Output<InstanceGroupManagerUpdatePolicyArgs> getUpdatePolicy() {
@@ -191,7 +191,7 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
      * Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
      * 
      */
-    @InputImport(name="versions")
+    @Import(name="versions")
       private final @Nullable Output<List<InstanceGroupManagerVersionArgs>> versions;
 
     public Output<List<InstanceGroupManagerVersionArgs>> getVersions() {

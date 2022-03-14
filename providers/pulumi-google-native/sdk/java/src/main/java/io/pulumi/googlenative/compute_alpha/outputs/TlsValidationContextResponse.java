@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SdsConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TlsValidationContextResponse {
     /**
      * The path to the file holding the CA certificate to validate the client or server certificate.
@@ -26,11 +26,11 @@ public final class TlsValidationContextResponse {
      */
     private final String validationSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TlsValidationContextResponse(
-        @OutputCustomType.Parameter("certificatePath") String certificatePath,
-        @OutputCustomType.Parameter("sdsConfig") SdsConfigResponse sdsConfig,
-        @OutputCustomType.Parameter("validationSource") String validationSource) {
+        @CustomType.Parameter("certificatePath") String certificatePath,
+        @CustomType.Parameter("sdsConfig") SdsConfigResponse sdsConfig,
+        @CustomType.Parameter("validationSource") String validationSource) {
         this.certificatePath = certificatePath;
         this.sdsConfig = sdsConfig;
         this.validationSource = validationSource;

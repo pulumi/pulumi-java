@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse {
     /**
      * A filter to reduce the conversations used for training the model to a specific subset.
@@ -25,11 +25,11 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      */
     private final String trainingConversationsCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("medium") String medium,
-        @OutputCustomType.Parameter("trainingConversationsCount") String trainingConversationsCount) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("medium") String medium,
+        @CustomType.Parameter("trainingConversationsCount") String trainingConversationsCount) {
         this.filter = filter;
         this.medium = medium;
         this.trainingConversationsCount = trainingConversationsCount;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RRSetRoutingPolicyGeoPolicyResponse {
     /**
      * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
@@ -18,10 +18,10 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
     private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RRSetRoutingPolicyGeoPolicyResponse(
-        @OutputCustomType.Parameter("items") List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("items") List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items,
+        @CustomType.Parameter("kind") String kind) {
         this.items = items;
         this.kind = kind;
     }

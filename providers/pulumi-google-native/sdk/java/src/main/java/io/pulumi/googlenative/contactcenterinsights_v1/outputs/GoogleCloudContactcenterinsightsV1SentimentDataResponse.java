@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
     /**
      * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
      */
     private final Double score;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1SentimentDataResponse(
-        @OutputCustomType.Parameter("magnitude") Double magnitude,
-        @OutputCustomType.Parameter("score") Double score) {
+        @CustomType.Parameter("magnitude") Double magnitude,
+        @CustomType.Parameter("score") Double score) {
         this.magnitude = magnitude;
         this.score = score;
     }

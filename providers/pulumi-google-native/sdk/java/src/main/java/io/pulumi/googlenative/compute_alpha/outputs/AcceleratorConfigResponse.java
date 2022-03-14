@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AcceleratorConfigResponse {
     /**
      * The number of the guest accelerator cards exposed to this instance.
@@ -21,10 +21,10 @@ public final class AcceleratorConfigResponse {
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AcceleratorConfigResponse(
-        @OutputCustomType.Parameter("acceleratorCount") Integer acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
+        @CustomType.Parameter("acceleratorCount") Integer acceleratorCount,
+        @CustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }

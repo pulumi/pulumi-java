@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse {
     /**
      * A list of case content.
@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
      */
     private final String condition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse(
-        @OutputCustomType.Parameter("caseContent") List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent,
-        @OutputCustomType.Parameter("condition") String condition) {
+        @CustomType.Parameter("caseContent") List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent,
+        @CustomType.Parameter("condition") String condition) {
         this.caseContent = caseContent;
         this.condition = condition;
     }

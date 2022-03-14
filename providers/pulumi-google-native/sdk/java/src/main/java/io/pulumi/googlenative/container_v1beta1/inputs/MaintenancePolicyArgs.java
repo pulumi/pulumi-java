@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.MaintenanceWindowArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * A hash identifying the version of this policy, so that updates to fields of the policy won't accidentally undo intermediate changes (and so that users of the API unaware of some fields won't accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
      * 
      */
-    @InputImport(name="resourceVersion")
+    @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
     public Output<String> getResourceVersion() {
@@ -34,7 +34,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * Specifies the maintenance window in which maintenance may be performed.
      * 
      */
-    @InputImport(name="window")
+    @Import(name="window")
       private final @Nullable Output<MaintenanceWindowArgs> window;
 
     public Output<MaintenanceWindowArgs> getWindow() {

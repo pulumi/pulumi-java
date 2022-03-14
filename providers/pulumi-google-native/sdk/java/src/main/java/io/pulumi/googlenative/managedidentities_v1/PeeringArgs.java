@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.managedidentities_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Caller needs to make sure that CIDR subnets do not overlap between networks, else peering creation will fail.
      * 
      */
-    @InputImport(name="authorizedNetwork", required=true)
+    @Import(name="authorizedNetwork", required=true)
       private final Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
@@ -30,7 +30,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Full domain resource path for the Managed AD Domain involved in peering. The resource path should be in the form: `projects/{project_id}/locations/global/domains/{domain_name}`
      * 
      */
-    @InputImport(name="domainResource", required=true)
+    @Import(name="domainResource", required=true)
       private final Output<String> domainResource;
 
     public Output<String> getDomainResource() {
@@ -41,21 +41,21 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="peeringId", required=true)
+    @Import(name="peeringId", required=true)
       private final Output<String> peeringId;
 
     public Output<String> getPeeringId() {
         return this.peeringId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

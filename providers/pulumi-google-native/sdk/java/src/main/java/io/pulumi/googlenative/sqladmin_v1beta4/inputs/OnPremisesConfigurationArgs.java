@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sqladmin_v1beta4.inputs.InstanceReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * PEM representation of the trusted CA's x509 certificate.
      * 
      */
-    @InputImport(name="caCertificate")
+    @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
     public Output<String> getCaCertificate() {
@@ -34,7 +34,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * PEM representation of the replica's x509 certificate.
      * 
      */
-    @InputImport(name="clientCertificate")
+    @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
@@ -45,7 +45,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
      * 
      */
-    @InputImport(name="clientKey")
+    @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {
@@ -56,7 +56,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * The dump file to create the Cloud SQL replica.
      * 
      */
-    @InputImport(name="dumpFilePath")
+    @Import(name="dumpFilePath")
       private final @Nullable Output<String> dumpFilePath;
 
     public Output<String> getDumpFilePath() {
@@ -67,7 +67,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * The host and port of the on-premises instance in host:port format
      * 
      */
-    @InputImport(name="hostPort")
+    @Import(name="hostPort")
       private final @Nullable Output<String> hostPort;
 
     public Output<String> getHostPort() {
@@ -78,7 +78,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * This is always `sql#onPremisesConfiguration`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -89,7 +89,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * The password for connecting to on-premises instance.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -100,7 +100,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * The reference to Cloud SQL instance if the source is Cloud SQL.
      * 
      */
-    @InputImport(name="sourceInstance")
+    @Import(name="sourceInstance")
       private final @Nullable Output<InstanceReferenceArgs> sourceInstance;
 
     public Output<InstanceReferenceArgs> getSourceInstance() {
@@ -111,7 +111,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
      * The username for connecting to on-premises instance.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

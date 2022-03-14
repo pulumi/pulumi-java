@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryTimelineSampleResponse {
     /**
      * Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
@@ -35,13 +35,13 @@ public final class QueryTimelineSampleResponse {
      */
     private final String totalSlotMs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueryTimelineSampleResponse(
-        @OutputCustomType.Parameter("activeUnits") String activeUnits,
-        @OutputCustomType.Parameter("completedUnits") String completedUnits,
-        @OutputCustomType.Parameter("elapsedMs") String elapsedMs,
-        @OutputCustomType.Parameter("pendingUnits") String pendingUnits,
-        @OutputCustomType.Parameter("totalSlotMs") String totalSlotMs) {
+        @CustomType.Parameter("activeUnits") String activeUnits,
+        @CustomType.Parameter("completedUnits") String completedUnits,
+        @CustomType.Parameter("elapsedMs") String elapsedMs,
+        @CustomType.Parameter("pendingUnits") String pendingUnits,
+        @CustomType.Parameter("totalSlotMs") String totalSlotMs) {
         this.activeUnits = activeUnits;
         this.completedUnits = completedUnits;
         this.elapsedMs = elapsedMs;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * Immutable. Display name of the assigned issue. This field is set at time of analyis and immutable since then.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * Resource name of the assigned issue.
      * 
      */
-    @InputImport(name="issue", required=true)
+    @Import(name="issue", required=true)
       private final String issue;
 
     public String getIssue() {
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * Score indicating the likelihood of the issue assignment. currently bounded on [0,1].
      * 
      */
-    @InputImport(name="score", required=true)
+    @Import(name="score", required=true)
       private final Double score;
 
     public Double getScore() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
      * Metric name.
      * 
      */
-    @InputImport(name="metric", required=true)
+    @Import(name="metric", required=true)
       private final Output<String> metric;
 
     public Output<String> getMetric() {
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
      * The value for this metric.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Double> value;
 
     public Output<Double> getValue() {

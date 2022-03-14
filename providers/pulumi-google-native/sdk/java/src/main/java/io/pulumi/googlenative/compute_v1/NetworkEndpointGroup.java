@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.NetworkEndpointGroupArgs;
@@ -26,7 +26,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Metadata defined as annotations on the network endpoint group.
      * 
      */
-    @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
@@ -40,7 +40,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    @OutputExport(name="appEngine", type=NetworkEndpointGroupAppEngineResponse.class, parameters={})
+    @Export(name="appEngine", type=NetworkEndpointGroupAppEngineResponse.class, parameters={})
     private Output<NetworkEndpointGroupAppEngineResponse> appEngine;
 
     /**
@@ -54,7 +54,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    @OutputExport(name="cloudFunction", type=NetworkEndpointGroupCloudFunctionResponse.class, parameters={})
+    @Export(name="cloudFunction", type=NetworkEndpointGroupCloudFunctionResponse.class, parameters={})
     private Output<NetworkEndpointGroupCloudFunctionResponse> cloudFunction;
 
     /**
@@ -68,7 +68,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    @OutputExport(name="cloudRun", type=NetworkEndpointGroupCloudRunResponse.class, parameters={})
+    @Export(name="cloudRun", type=NetworkEndpointGroupCloudRunResponse.class, parameters={})
     private Output<NetworkEndpointGroupCloudRunResponse> cloudRun;
 
     /**
@@ -82,7 +82,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -96,7 +96,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * The default port used if the port number is not specified in the network endpoint.
      * 
      */
-    @OutputExport(name="defaultPort", type=Integer.class, parameters={})
+    @Export(name="defaultPort", type=Integer.class, parameters={})
     private Output<Integer> defaultPort;
 
     /**
@@ -110,7 +110,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -124,7 +124,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#networkEndpointGroup for network endpoint group.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -138,7 +138,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -152,7 +152,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -166,7 +166,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
-    @OutputExport(name="networkEndpointType", type=String.class, parameters={})
+    @Export(name="networkEndpointType", type=String.class, parameters={})
     private Output<String> networkEndpointType;
 
     /**
@@ -180,7 +180,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
      * 
      */
-    @OutputExport(name="pscTargetService", type=String.class, parameters={})
+    @Export(name="pscTargetService", type=String.class, parameters={})
     private Output<String> pscTargetService;
 
     /**
@@ -194,7 +194,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * The URL of the region where the network endpoint group is located.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -208,7 +208,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -222,7 +222,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * [Output only] Number of network endpoints in the network endpoint group.
      * 
      */
-    @OutputExport(name="size", type=Integer.class, parameters={})
+    @Export(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
     /**
@@ -236,7 +236,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * Optional URL of the subnetwork to which all network endpoints in the NEG belong.
      * 
      */
-    @OutputExport(name="subnetwork", type=String.class, parameters={})
+    @Export(name="subnetwork", type=String.class, parameters={})
     private Output<String> subnetwork;
 
     /**
@@ -250,7 +250,7 @@ public class NetworkEndpointGroup extends io.pulumi.resources.CustomResource {
      * The URL of the zone where the network endpoint group is located.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.EnvironmentResponse;
 import io.pulumi.googlenative.testing_v1.inputs.ShardResponse;
 import io.pulumi.googlenative.testing_v1.inputs.TestDetailsResponse;
@@ -25,7 +25,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * How the host machine(s) are configured.
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final EnvironmentResponse environment;
 
     public EnvironmentResponse getEnvironment() {
@@ -36,7 +36,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * Id of the containing TestMatrix.
      * 
      */
-    @InputImport(name="matrixId", required=true)
+    @Import(name="matrixId", required=true)
       private final String matrixId;
 
     public String getMatrixId() {
@@ -47,7 +47,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * The cloud project that owns the test execution.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -58,7 +58,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * Details about the shard.
      * 
      */
-    @InputImport(name="shard", required=true)
+    @Import(name="shard", required=true)
       private final ShardResponse shard;
 
     public ShardResponse getShard() {
@@ -69,7 +69,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * Indicates the current progress of the test execution (e.g., FINISHED).
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -80,7 +80,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * Additional details about the running test.
      * 
      */
-    @InputImport(name="testDetails", required=true)
+    @Import(name="testDetails", required=true)
       private final TestDetailsResponse testDetails;
 
     public TestDetailsResponse getTestDetails() {
@@ -91,7 +91,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * How to run the test.
      * 
      */
-    @InputImport(name="testSpecification", required=true)
+    @Import(name="testSpecification", required=true)
       private final TestSpecificationResponse testSpecification;
 
     public TestSpecificationResponse getTestSpecification() {
@@ -102,7 +102,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * The time this test execution was initially created.
      * 
      */
-    @InputImport(name="timestamp", required=true)
+    @Import(name="timestamp", required=true)
       private final String timestamp;
 
     public String getTimestamp() {
@@ -113,7 +113,7 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * Where the results for this execution are written.
      * 
      */
-    @InputImport(name="toolResultsStep", required=true)
+    @Import(name="toolResultsStep", required=true)
       private final ToolResultsStepResponse toolResultsStep;
 
     public ToolResultsStepResponse getToolResultsStep() {

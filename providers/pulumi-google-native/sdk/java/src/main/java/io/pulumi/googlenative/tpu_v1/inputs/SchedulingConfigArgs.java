@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.tpu_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
      * Defines whether the node is preemptible.
      * 
      */
-    @InputImport(name="preemptible")
+    @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
     public Output<Boolean> getPreemptible() {
@@ -33,7 +33,7 @@ public final class SchedulingConfigArgs extends io.pulumi.resources.ResourceArgs
      * Whether the node is created under a reservation.
      * 
      */
-    @InputImport(name="reserved")
+    @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
     public Output<Boolean> getReserved() {

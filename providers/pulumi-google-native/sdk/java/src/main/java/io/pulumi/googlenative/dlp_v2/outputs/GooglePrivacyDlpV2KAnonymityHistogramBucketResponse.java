@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
     /**
      * Total number of equivalence classes in this bucket.
@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
      */
     private final String equivalenceClassSizeUpperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(
-        @OutputCustomType.Parameter("bucketSize") String bucketSize,
-        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
-        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues,
-        @OutputCustomType.Parameter("equivalenceClassSizeLowerBound") String equivalenceClassSizeLowerBound,
-        @OutputCustomType.Parameter("equivalenceClassSizeUpperBound") String equivalenceClassSizeUpperBound) {
+        @CustomType.Parameter("bucketSize") String bucketSize,
+        @CustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @CustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues,
+        @CustomType.Parameter("equivalenceClassSizeLowerBound") String equivalenceClassSizeLowerBound,
+        @CustomType.Parameter("equivalenceClassSizeUpperBound") String equivalenceClassSizeUpperBound) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

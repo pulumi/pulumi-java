@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.ExprResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CustomLevelResponse extends io.pulumi.resources.InvokeArgs {
      * A Cloud CEL expression evaluating to a boolean.
      * 
      */
-    @InputImport(name="expr", required=true)
+    @Import(name="expr", required=true)
       private final ExprResponse expr;
 
     public ExprResponse getExpr() {

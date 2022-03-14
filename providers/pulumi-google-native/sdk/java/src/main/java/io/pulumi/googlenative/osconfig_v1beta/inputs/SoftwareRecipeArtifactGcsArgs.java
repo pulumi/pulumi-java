@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -33,7 +33,7 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.
      * 
      */
-    @InputImport(name="generation")
+    @Import(name="generation")
       private final @Nullable Output<String> generation;
 
     public Output<String> getGeneration() {
@@ -44,7 +44,7 @@ public final class SoftwareRecipeArtifactGcsArgs extends io.pulumi.resources.Res
      * Name of the Google Cloud Storage object. As specified [here] (https://cloud.google.com/storage/docs/naming#objectnames) Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `foo/bar`.
      * 
      */
-    @InputImport(name="object")
+    @Import(name="object")
       private final @Nullable Output<String> object;
 
     public Output<String> getObject() {

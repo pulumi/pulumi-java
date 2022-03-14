@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationErrorErrorsItemResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OperationErrorResponse {
     /**
      * The array of errors encountered while processing this operation.
@@ -16,8 +16,8 @@ public final class OperationErrorResponse {
      */
     private final List<OperationErrorErrorsItemResponse> errors;
 
-    @OutputCustomType.Constructor
-    private OperationErrorResponse(@OutputCustomType.Parameter("errors") List<OperationErrorErrorsItemResponse> errors) {
+    @CustomType.Constructor
+    private OperationErrorResponse(@CustomType.Parameter("errors") List<OperationErrorErrorsItemResponse> errors) {
         this.errors = errors;
     }
 

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1.outputs.AutoUpgradeOptionsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeManagementResponse {
     /**
      * A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
@@ -26,11 +26,11 @@ public final class NodeManagementResponse {
      */
     private final AutoUpgradeOptionsResponse upgradeOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeManagementResponse(
-        @OutputCustomType.Parameter("autoRepair") Boolean autoRepair,
-        @OutputCustomType.Parameter("autoUpgrade") Boolean autoUpgrade,
-        @OutputCustomType.Parameter("upgradeOptions") AutoUpgradeOptionsResponse upgradeOptions) {
+        @CustomType.Parameter("autoRepair") Boolean autoRepair,
+        @CustomType.Parameter("autoUpgrade") Boolean autoUpgrade,
+        @CustomType.Parameter("upgradeOptions") AutoUpgradeOptionsResponse upgradeOptions) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
         this.upgradeOptions = upgradeOptions;

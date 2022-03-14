@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ContactInfoArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleTypePostalAddressArgs;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomerArgs Empty = new CustomerArgs();
 
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -27,7 +27,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
      * 
      */
-    @InputImport(name="alternateEmail")
+    @Import(name="alternateEmail")
       private final @Nullable Output<String> alternateEmail;
 
     public Output<String> getAlternateEmail() {
@@ -38,14 +38,14 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
      * 
      */
-    @InputImport(name="channelPartnerId")
+    @Import(name="channelPartnerId")
       private final @Nullable Output<String> channelPartnerId;
 
     public Output<String> getChannelPartnerId() {
         return this.channelPartnerId == null ? Output.empty() : this.channelPartnerId;
     }
 
-    @InputImport(name="channelPartnerLinkId", required=true)
+    @Import(name="channelPartnerLinkId", required=true)
       private final Output<String> channelPartnerLinkId;
 
     public Output<String> getChannelPartnerLinkId() {
@@ -56,7 +56,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * The customer's primary domain. Must match the primary contact email's domain.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<String> domain;
 
     public Output<String> getDomain() {
@@ -67,7 +67,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
      */
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
@@ -78,7 +78,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the organization that the customer entity represents.
      * 
      */
-    @InputImport(name="orgDisplayName", required=true)
+    @Import(name="orgDisplayName", required=true)
       private final Output<String> orgDisplayName;
 
     public Output<String> getOrgDisplayName() {
@@ -89,7 +89,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
      * 
      */
-    @InputImport(name="orgPostalAddress", required=true)
+    @Import(name="orgPostalAddress", required=true)
       private final Output<GoogleTypePostalAddressArgs> orgPostalAddress;
 
     public Output<GoogleTypePostalAddressArgs> getOrgPostalAddress() {
@@ -100,7 +100,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
      * Primary contact info.
      * 
      */
-    @InputImport(name="primaryContactInfo")
+    @Import(name="primaryContactInfo")
       private final @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
 
     public Output<GoogleCloudChannelV1ContactInfoArgs> getPrimaryContactInfo() {

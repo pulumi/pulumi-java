@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
      * Description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -31,7 +31,7 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
      * State.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -42,7 +42,7 @@ public final class ConnectionStatusResponse extends io.pulumi.resources.InvokeAr
      * Status provides detailed information for the state.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

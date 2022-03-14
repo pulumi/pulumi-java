@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
      * Textual representation of an expression in Common Expression Language syntax.
      * 
      */
-    @InputImport(name="expression")
+    @Import(name="expression")
       private final @Nullable Output<String> expression;
 
     public Output<String> getExpression() {
@@ -44,7 +44,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

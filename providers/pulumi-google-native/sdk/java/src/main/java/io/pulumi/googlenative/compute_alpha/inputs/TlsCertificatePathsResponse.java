@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
      * The path to the file holding the client or server TLS certificate to use.
      * 
      */
-    @InputImport(name="certificatePath", required=true)
+    @Import(name="certificatePath", required=true)
       private final String certificatePath;
 
     public String getCertificatePath() {
@@ -31,7 +31,7 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
      * The path to the file holding the client or server private key.
      * 
      */
-    @InputImport(name="privateKeyPath", required=true)
+    @Import(name="privateKeyPath", required=true)
       private final String privateKeyPath;
 
     public String getPrivateKeyPath() {

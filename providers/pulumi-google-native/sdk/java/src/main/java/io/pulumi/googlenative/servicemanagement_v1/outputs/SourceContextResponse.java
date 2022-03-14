@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceContextResponse {
     /**
      * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
@@ -15,8 +15,8 @@ public final class SourceContextResponse {
      */
     private final String fileName;
 
-    @OutputCustomType.Constructor
-    private SourceContextResponse(@OutputCustomType.Parameter("fileName") String fileName) {
+    @CustomType.Constructor
+    private SourceContextResponse(@CustomType.Parameter("fileName") String fileName) {
         this.fileName = fileName;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datastore_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
     /**
      * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
@@ -20,10 +20,10 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDatastoreAdminV1IndexedPropertyResponse(
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("name") String name) {
         this.direction = direction;
         this.name = name;
     }

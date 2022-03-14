@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2AutomatedAgentConfigArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs;
@@ -24,7 +24,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Configuration for an automated agent to use with this profile.
      * 
      */
-    @InputImport(name="automatedAgentConfig")
+    @Import(name="automatedAgentConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2AutomatedAgentConfigArgs> automatedAgentConfig;
 
     public Output<GoogleCloudDialogflowV2AutomatedAgentConfigArgs> getAutomatedAgentConfig() {
@@ -35,7 +35,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Human readable name for this profile. Max length 1024 bytes.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -46,7 +46,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Configuration for agent assistance to use with this profile.
      * 
      */
-    @InputImport(name="humanAgentAssistantConfig")
+    @Import(name="humanAgentAssistantConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs> humanAgentAssistantConfig;
 
     public Output<GoogleCloudDialogflowV2HumanAgentAssistantConfigArgs> getHumanAgentAssistantConfig() {
@@ -57,7 +57,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.
      * 
      */
-    @InputImport(name="humanAgentHandoffConfig")
+    @Import(name="humanAgentHandoffConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs> humanAgentHandoffConfig;
 
     public Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs> getHumanAgentHandoffConfig() {
@@ -68,14 +68,14 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-US languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
      * 
      */
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
         return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -86,7 +86,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Configuration for logging conversation lifecycle events.
      * 
      */
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2LoggingConfigArgs> loggingConfig;
 
     public Output<GoogleCloudDialogflowV2LoggingConfigArgs> getLoggingConfig() {
@@ -97,7 +97,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -108,7 +108,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Configuration for publishing new message events. Event will be sent in format of ConversationEvent
      * 
      */
-    @InputImport(name="newMessageEventNotificationConfig")
+    @Import(name="newMessageEventNotificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2NotificationConfigArgs> newMessageEventNotificationConfig;
 
     public Output<GoogleCloudDialogflowV2NotificationConfigArgs> getNewMessageEventNotificationConfig() {
@@ -119,14 +119,14 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Configuration for publishing conversation lifecycle events.
      * 
      */
-    @InputImport(name="notificationConfig")
+    @Import(name="notificationConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2NotificationConfigArgs> notificationConfig;
 
     public Output<GoogleCloudDialogflowV2NotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -137,7 +137,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
      */
-    @InputImport(name="securitySettings")
+    @Import(name="securitySettings")
       private final @Nullable Output<String> securitySettings;
 
     public Output<String> getSecuritySettings() {
@@ -148,7 +148,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * Settings for speech transcription.
      * 
      */
-    @InputImport(name="sttConfig")
+    @Import(name="sttConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2SpeechToTextConfigArgs> sttConfig;
 
     public Output<GoogleCloudDialogflowV2SpeechToTextConfigArgs> getSttConfig() {
@@ -159,7 +159,7 @@ public final class ConversationProfileArgs extends io.pulumi.resources.ResourceA
      * The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

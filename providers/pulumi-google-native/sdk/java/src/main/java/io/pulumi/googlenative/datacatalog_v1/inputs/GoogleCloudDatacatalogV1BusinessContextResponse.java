@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsResponse;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1EntryOverviewResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
      * Contact people for the entry.
      * 
      */
-    @InputImport(name="contacts", required=true)
+    @Import(name="contacts", required=true)
       private final GoogleCloudDatacatalogV1ContactsResponse contacts;
 
     public GoogleCloudDatacatalogV1ContactsResponse getContacts() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
      * Entry overview fields for rich text descriptions of entries.
      * 
      */
-    @InputImport(name="entryOverview", required=true)
+    @Import(name="entryOverview", required=true)
       private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
     public GoogleCloudDatacatalogV1EntryOverviewResponse getEntryOverview() {

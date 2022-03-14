@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.ExecutionConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.PeripheralsConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigResponse {
     /**
      * Optional. Execution configuration for a workload.
@@ -21,10 +21,10 @@ public final class EnvironmentConfigResponse {
      */
     private final PeripheralsConfigResponse peripheralsConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfigResponse(
-        @OutputCustomType.Parameter("executionConfig") ExecutionConfigResponse executionConfig,
-        @OutputCustomType.Parameter("peripheralsConfig") PeripheralsConfigResponse peripheralsConfig) {
+        @CustomType.Parameter("executionConfig") ExecutionConfigResponse executionConfig,
+        @CustomType.Parameter("peripheralsConfig") PeripheralsConfigResponse peripheralsConfig) {
         this.executionConfig = executionConfig;
         this.peripheralsConfig = peripheralsConfig;
     }

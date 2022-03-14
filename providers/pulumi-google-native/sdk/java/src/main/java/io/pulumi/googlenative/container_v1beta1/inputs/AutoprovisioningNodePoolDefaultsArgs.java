@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.NodeManagementArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.ShieldedInstanceConfigArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.UpgradeSettingsArgs;
@@ -27,7 +27,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      *  The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
      * 
      */
-    @InputImport(name="bootDiskKmsKey")
+    @Import(name="bootDiskKmsKey")
       private final @Nullable Output<String> bootDiskKmsKey;
 
     public Output<String> getBootDiskKmsKey() {
@@ -38,7 +38,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
@@ -49,7 +49,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
@@ -60,7 +60,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * The image type to use for NAP created node.
      * 
      */
-    @InputImport(name="imageType")
+    @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
     public Output<String> getImageType() {
@@ -71,7 +71,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * NodeManagement configuration for this NodePool.
      * 
      */
-    @InputImport(name="management")
+    @Import(name="management")
       private final @Nullable Output<NodeManagementArgs> management;
 
     public Output<NodeManagementArgs> getManagement() {
@@ -82,7 +82,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass "automatic" as field value.
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -93,7 +93,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * The set of Google API scopes to be made available on all of the node VMs under the "default" service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
      * 
      */
-    @InputImport(name="oauthScopes")
+    @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
     public Output<List<String>> getOauthScopes() {
@@ -104,7 +104,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the "default" service account is used.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -115,7 +115,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * Shielded Instance options.
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
@@ -126,7 +126,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * Upgrade settings control disruption and speed of the upgrade.
      * 
      */
-    @InputImport(name="upgradeSettings")
+    @Import(name="upgradeSettings")
       private final @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
     public Output<UpgradeSettingsArgs> getUpgradeSettings() {

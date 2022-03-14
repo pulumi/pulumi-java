@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ArtifactObjectsResponse {
     /**
      * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
@@ -27,11 +27,11 @@ public final class ArtifactObjectsResponse {
      */
     private final TimeSpanResponse timing;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArtifactObjectsResponse(
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("paths") List<String> paths,
-        @OutputCustomType.Parameter("timing") TimeSpanResponse timing) {
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("paths") List<String> paths,
+        @CustomType.Parameter("timing") TimeSpanResponse timing) {
         this.location = location;
         this.paths = paths;
         this.timing = timing;

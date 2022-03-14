@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gkehub_v1.outputs.ResourceManifestResponse;
 import io.pulumi.googlenative.gkehub_v1.outputs.ResourceOptionsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesResourceResponse {
     /**
      * The Kubernetes resources for installing the GKE Connect agent This field is only populated in the Membership returned from a successful long-running operation from CreateMembership or UpdateMembership. It is not populated during normal GetMembership or ListMemberships requests. To get the resource manifest after the initial registration, the caller should make a UpdateMembership call with an empty field mask.
@@ -33,12 +33,12 @@ public final class KubernetesResourceResponse {
      */
     private final ResourceOptionsResponse resourceOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesResourceResponse(
-        @OutputCustomType.Parameter("connectResources") List<ResourceManifestResponse> connectResources,
-        @OutputCustomType.Parameter("membershipCrManifest") String membershipCrManifest,
-        @OutputCustomType.Parameter("membershipResources") List<ResourceManifestResponse> membershipResources,
-        @OutputCustomType.Parameter("resourceOptions") ResourceOptionsResponse resourceOptions) {
+        @CustomType.Parameter("connectResources") List<ResourceManifestResponse> connectResources,
+        @CustomType.Parameter("membershipCrManifest") String membershipCrManifest,
+        @CustomType.Parameter("membershipResources") List<ResourceManifestResponse> membershipResources,
+        @CustomType.Parameter("resourceOptions") ResourceOptionsResponse resourceOptions) {
         this.connectResources = connectResources;
         this.membershipCrManifest = membershipCrManifest;
         this.membershipResources = membershipResources;

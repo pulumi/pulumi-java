@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseTypeResponse {
     /**
      * The database engine.
@@ -20,10 +20,10 @@ public final class DatabaseTypeResponse {
      */
     private final String provider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseTypeResponse(
-        @OutputCustomType.Parameter("engine") String engine,
-        @OutputCustomType.Parameter("provider") String provider) {
+        @CustomType.Parameter("engine") String engine,
+        @CustomType.Parameter("provider") String provider) {
         this.engine = engine;
         this.provider = provider;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.FingerprintResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.LayerResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DerivedResponse {
     /**
      * This contains the base image URL for the derived image occurrence.
@@ -34,12 +34,12 @@ public final class DerivedResponse {
      */
     private final List<LayerResponse> layerInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DerivedResponse(
-        @OutputCustomType.Parameter("baseResourceUrl") String baseResourceUrl,
-        @OutputCustomType.Parameter("distance") Integer distance,
-        @OutputCustomType.Parameter("fingerprint") FingerprintResponse fingerprint,
-        @OutputCustomType.Parameter("layerInfo") List<LayerResponse> layerInfo) {
+        @CustomType.Parameter("baseResourceUrl") String baseResourceUrl,
+        @CustomType.Parameter("distance") Integer distance,
+        @CustomType.Parameter("fingerprint") FingerprintResponse fingerprint,
+        @CustomType.Parameter("layerInfo") List<LayerResponse> layerInfo) {
         this.baseResourceUrl = baseResourceUrl;
         this.distance = distance;
         this.fingerprint = fingerprint;

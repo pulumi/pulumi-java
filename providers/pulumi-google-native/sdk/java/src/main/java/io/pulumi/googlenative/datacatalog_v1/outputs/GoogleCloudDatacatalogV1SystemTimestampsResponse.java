@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
     /**
      * Creation timestamp of the resource within the given system.
@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1SystemTimestampsResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.updateTime = updateTime;

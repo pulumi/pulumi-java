@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.file_v1beta1.inputs.NfsExportOptionsArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
      * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
      * 
      */
-    @InputImport(name="capacityGb")
+    @Import(name="capacityGb")
       private final @Nullable Output<String> capacityGb;
 
     public Output<String> getCapacityGb() {
@@ -35,7 +35,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the file share (must be 32 characters or less for Enterprise and High Scale SSD tiers and 16 characters or less for all other tiers).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Nfs Export Options. There is a limit of 10 export options per file share.
      * 
      */
-    @InputImport(name="nfsExportOptions")
+    @Import(name="nfsExportOptions")
       private final @Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions;
 
     public Output<List<NfsExportOptionsArgs>> getNfsExportOptions() {
@@ -57,7 +57,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
      * The resource name of the backup, in the format `projects/{project_id}/locations/{location_id}/backups/{backup_id}`, that this file share has been restored from.
      * 
      */
-    @InputImport(name="sourceBackup")
+    @Import(name="sourceBackup")
       private final @Nullable Output<String> sourceBackup;
 
     public Output<String> getSourceBackup() {

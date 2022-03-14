@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomHttpPatternArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
      * 
      */
-    @InputImport(name="additionalBindings")
+    @Import(name="additionalBindings")
       private final @Nullable Output<List<HttpRuleArgs>> additionalBindings;
 
     public Output<List<HttpRuleArgs>> getAdditionalBindings() {
@@ -35,7 +35,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the request field whose value is mapped to the HTTP request body, or `*` for mapping all request fields not captured by the path pattern to the HTTP body, or omitted for not having any HTTP request body. NOTE: the referred field must be present at the top-level of the request message type.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -46,7 +46,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The custom pattern is used for specifying an HTTP method that is not included in the `pattern` field, such as HEAD, or "*" to leave the HTTP method unspecified for this rule. The wild-card rule is useful for services that provide content to Web (HTML) clients.
      * 
      */
-    @InputImport(name="custom")
+    @Import(name="custom")
       private final @Nullable Output<CustomHttpPatternArgs> custom;
 
     public Output<CustomHttpPatternArgs> getCustom() {
@@ -57,7 +57,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Maps to HTTP DELETE. Used for deleting a resource.
      * 
      */
-    @InputImport(name="delete")
+    @Import(name="delete")
       private final @Nullable Output<String> delete;
 
     public Output<String> getDelete() {
@@ -68,7 +68,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Maps to HTTP GET. Used for listing and getting information about resources.
      * 
      */
-    @InputImport(name="get")
+    @Import(name="get")
       private final @Nullable Output<String> get;
 
     public Output<String> getGet() {
@@ -79,7 +79,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Maps to HTTP PATCH. Used for updating a resource.
      * 
      */
-    @InputImport(name="patch")
+    @Import(name="patch")
       private final @Nullable Output<String> patch;
 
     public Output<String> getPatch() {
@@ -90,7 +90,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Maps to HTTP POST. Used for creating a resource or performing an action.
      * 
      */
-    @InputImport(name="post")
+    @Import(name="post")
       private final @Nullable Output<String> post;
 
     public Output<String> getPost() {
@@ -101,7 +101,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Maps to HTTP PUT. Used for replacing a resource.
      * 
      */
-    @InputImport(name="put")
+    @Import(name="put")
       private final @Nullable Output<String> put;
 
     public Output<String> getPut() {
@@ -112,7 +112,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The name of the response field whose value is mapped to the HTTP response body. When omitted, the entire response message will be used as the HTTP response body. NOTE: The referred field must be present at the top-level of the response message type.
      * 
      */
-    @InputImport(name="responseBody")
+    @Import(name="responseBody")
       private final @Nullable Output<String> responseBody;
 
     public Output<String> getResponseBody() {
@@ -123,7 +123,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Selects a method to which this rule applies. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {

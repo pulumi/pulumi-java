@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleMonitoringV3RangeResponse {
     /**
      * Range maximum.
@@ -20,10 +20,10 @@ public final class GoogleMonitoringV3RangeResponse {
      */
     private final Double min;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleMonitoringV3RangeResponse(
-        @OutputCustomType.Parameter("max") Double max,
-        @OutputCustomType.Parameter("min") Double min) {
+        @CustomType.Parameter("max") Double max,
+        @CustomType.Parameter("min") Double min) {
         this.max = max;
         this.min = min;
     }

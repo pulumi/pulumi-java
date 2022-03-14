@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GitHubEnterpriseSecretsResponse {
     /**
      * The resource name for the OAuth client ID secret in Secret Manager.
@@ -50,16 +50,16 @@ public final class GitHubEnterpriseSecretsResponse {
      */
     private final String webhookSecretVersionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitHubEnterpriseSecretsResponse(
-        @OutputCustomType.Parameter("oauthClientIdName") String oauthClientIdName,
-        @OutputCustomType.Parameter("oauthClientIdVersionName") String oauthClientIdVersionName,
-        @OutputCustomType.Parameter("oauthSecretName") String oauthSecretName,
-        @OutputCustomType.Parameter("oauthSecretVersionName") String oauthSecretVersionName,
-        @OutputCustomType.Parameter("privateKeyName") String privateKeyName,
-        @OutputCustomType.Parameter("privateKeyVersionName") String privateKeyVersionName,
-        @OutputCustomType.Parameter("webhookSecretName") String webhookSecretName,
-        @OutputCustomType.Parameter("webhookSecretVersionName") String webhookSecretVersionName) {
+        @CustomType.Parameter("oauthClientIdName") String oauthClientIdName,
+        @CustomType.Parameter("oauthClientIdVersionName") String oauthClientIdVersionName,
+        @CustomType.Parameter("oauthSecretName") String oauthSecretName,
+        @CustomType.Parameter("oauthSecretVersionName") String oauthSecretVersionName,
+        @CustomType.Parameter("privateKeyName") String privateKeyName,
+        @CustomType.Parameter("privateKeyVersionName") String privateKeyVersionName,
+        @CustomType.Parameter("webhookSecretName") String webhookSecretName,
+        @CustomType.Parameter("webhookSecretVersionName") String webhookSecretVersionName) {
         this.oauthClientIdName = oauthClientIdName;
         this.oauthClientIdVersionName = oauthClientIdVersionName;
         this.oauthSecretName = oauthSecretName;

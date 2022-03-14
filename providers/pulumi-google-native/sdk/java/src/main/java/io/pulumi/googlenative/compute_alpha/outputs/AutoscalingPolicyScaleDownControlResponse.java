@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FixedOrPercentResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingPolicyScaleDownControlResponse {
     /**
      * Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
@@ -21,10 +21,10 @@ public final class AutoscalingPolicyScaleDownControlResponse {
      */
     private final Integer timeWindowSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingPolicyScaleDownControlResponse(
-        @OutputCustomType.Parameter("maxScaledDownReplicas") FixedOrPercentResponse maxScaledDownReplicas,
-        @OutputCustomType.Parameter("timeWindowSec") Integer timeWindowSec) {
+        @CustomType.Parameter("maxScaledDownReplicas") FixedOrPercentResponse maxScaledDownReplicas,
+        @CustomType.Parameter("timeWindowSec") Integer timeWindowSec) {
         this.maxScaledDownReplicas = maxScaledDownReplicas;
         this.timeWindowSec = timeWindowSec;
     }

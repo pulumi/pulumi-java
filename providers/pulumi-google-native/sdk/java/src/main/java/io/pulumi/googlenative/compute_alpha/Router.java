@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RouterArgs;
@@ -28,7 +28,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * BGP information specific to this router.
      * 
      */
-    @OutputExport(name="bgp", type=RouterBgpResponse.class, parameters={})
+    @Export(name="bgp", type=RouterBgpResponse.class, parameters={})
     private Output<RouterBgpResponse> bgp;
 
     /**
@@ -42,7 +42,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
      * 
      */
-    @OutputExport(name="bgpPeers", type=List.class, parameters={RouterBgpPeerResponse.class})
+    @Export(name="bgpPeers", type=List.class, parameters={RouterBgpPeerResponse.class})
     private Output<List<RouterBgpPeerResponse>> bgpPeers;
 
     /**
@@ -56,7 +56,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -70,7 +70,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -84,7 +84,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
      * 
      */
-    @OutputExport(name="encryptedInterconnectRouter", type=Boolean.class, parameters={})
+    @Export(name="encryptedInterconnectRouter", type=Boolean.class, parameters={})
     private Output<Boolean> encryptedInterconnectRouter;
 
     /**
@@ -98,7 +98,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
      * 
      */
-    @OutputExport(name="interfaces", type=List.class, parameters={RouterInterfaceResponse.class})
+    @Export(name="interfaces", type=List.class, parameters={RouterInterfaceResponse.class})
     private Output<List<RouterInterfaceResponse>> interfaces;
 
     /**
@@ -112,7 +112,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Type of resource. Always compute#router for routers.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -126,7 +126,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Keys used for MD5 authentication.
      * 
      */
-    @OutputExport(name="md5AuthenticationKeys", type=List.class, parameters={RouterMd5AuthenticationKeyResponse.class})
+    @Export(name="md5AuthenticationKeys", type=List.class, parameters={RouterMd5AuthenticationKeyResponse.class})
     private Output<List<RouterMd5AuthenticationKeyResponse>> md5AuthenticationKeys;
 
     /**
@@ -140,7 +140,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -154,7 +154,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * A list of NAT services created in this router.
      * 
      */
-    @OutputExport(name="nats", type=List.class, parameters={RouterNatResponse.class})
+    @Export(name="nats", type=List.class, parameters={RouterNatResponse.class})
     private Output<List<RouterNatResponse>> nats;
 
     /**
@@ -168,7 +168,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * URI of the network to which this router belongs.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -182,7 +182,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -196,7 +196,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -210,7 +210,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**

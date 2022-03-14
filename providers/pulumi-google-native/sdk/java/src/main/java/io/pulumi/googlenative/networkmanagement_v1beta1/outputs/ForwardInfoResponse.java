@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ForwardInfoResponse {
     /**
      * URI of the resource that the packet is forwarded to.
@@ -20,10 +20,10 @@ public final class ForwardInfoResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ForwardInfoResponse(
-        @OutputCustomType.Parameter("resourceUri") String resourceUri,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("resourceUri") String resourceUri,
+        @CustomType.Parameter("target") String target) {
         this.resourceUri = resourceUri;
         this.target = target;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
     /**
      * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
      */
     private final List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3RolloutConfigResponse(
-        @OutputCustomType.Parameter("failureCondition") String failureCondition,
-        @OutputCustomType.Parameter("rolloutCondition") String rolloutCondition,
-        @OutputCustomType.Parameter("rolloutSteps") List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
+        @CustomType.Parameter("failureCondition") String failureCondition,
+        @CustomType.Parameter("rolloutCondition") String rolloutCondition,
+        @CustomType.Parameter("rolloutSteps") List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
         this.failureCondition = failureCondition;
         this.rolloutCondition = rolloutCondition;
         this.rolloutSteps = rolloutSteps;

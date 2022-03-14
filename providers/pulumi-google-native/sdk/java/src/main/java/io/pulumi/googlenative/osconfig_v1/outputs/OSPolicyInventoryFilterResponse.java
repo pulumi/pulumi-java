@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyInventoryFilterResponse {
     /**
      * The OS short name
@@ -20,10 +20,10 @@ public final class OSPolicyInventoryFilterResponse {
      */
     private final String osVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyInventoryFilterResponse(
-        @OutputCustomType.Parameter("osShortName") String osShortName,
-        @OutputCustomType.Parameter("osVersion") String osVersion) {
+        @CustomType.Parameter("osShortName") String osShortName,
+        @CustomType.Parameter("osVersion") String osVersion) {
         this.osShortName = osShortName;
         this.osVersion = osVersion;
     }

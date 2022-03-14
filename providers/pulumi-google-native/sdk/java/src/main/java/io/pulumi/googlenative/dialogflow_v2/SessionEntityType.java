@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.SessionEntityTypeArgs;
@@ -24,7 +24,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * The collection of entities associated with this session entity type.
      * 
      */
-    @OutputExport(name="entities", type=List.class, parameters={GoogleCloudDialogflowV2EntityTypeEntityResponse.class})
+    @Export(name="entities", type=List.class, parameters={GoogleCloudDialogflowV2EntityTypeEntityResponse.class})
     private Output<List<GoogleCloudDialogflowV2EntityTypeEntityResponse>> entities;
 
     /**
@@ -38,7 +38,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * Indicates whether the additional data should override or supplement the custom entity type definition.
      * 
      */
-    @OutputExport(name="entityOverrideMode", type=String.class, parameters={})
+    @Export(name="entityOverrideMode", type=String.class, parameters={})
     private Output<String> entityOverrideMode;
 
     /**
@@ -52,7 +52,7 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
      * The unique identifier of this session entity type. Format: `projects//agent/sessions//entityTypes/`, or `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

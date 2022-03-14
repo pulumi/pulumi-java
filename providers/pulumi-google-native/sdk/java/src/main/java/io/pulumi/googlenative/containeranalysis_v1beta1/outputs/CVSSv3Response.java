@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CVSSv3Response {
     private final String attackComplexity;
     /**
@@ -30,19 +30,19 @@ public final class CVSSv3Response {
     private final String scope;
     private final String userInteraction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CVSSv3Response(
-        @OutputCustomType.Parameter("attackComplexity") String attackComplexity,
-        @OutputCustomType.Parameter("attackVector") String attackVector,
-        @OutputCustomType.Parameter("availabilityImpact") String availabilityImpact,
-        @OutputCustomType.Parameter("baseScore") Double baseScore,
-        @OutputCustomType.Parameter("confidentialityImpact") String confidentialityImpact,
-        @OutputCustomType.Parameter("exploitabilityScore") Double exploitabilityScore,
-        @OutputCustomType.Parameter("impactScore") Double impactScore,
-        @OutputCustomType.Parameter("integrityImpact") String integrityImpact,
-        @OutputCustomType.Parameter("privilegesRequired") String privilegesRequired,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("userInteraction") String userInteraction) {
+        @CustomType.Parameter("attackComplexity") String attackComplexity,
+        @CustomType.Parameter("attackVector") String attackVector,
+        @CustomType.Parameter("availabilityImpact") String availabilityImpact,
+        @CustomType.Parameter("baseScore") Double baseScore,
+        @CustomType.Parameter("confidentialityImpact") String confidentialityImpact,
+        @CustomType.Parameter("exploitabilityScore") Double exploitabilityScore,
+        @CustomType.Parameter("impactScore") Double impactScore,
+        @CustomType.Parameter("integrityImpact") String integrityImpact,
+        @CustomType.Parameter("privilegesRequired") String privilegesRequired,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("userInteraction") String userInteraction) {
         this.attackComplexity = attackComplexity;
         this.attackVector = attackVector;
         this.availabilityImpact = availabilityImpact;

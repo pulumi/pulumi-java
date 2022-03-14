@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
      * Timeout for Spark graceful decommissioning of spark workers. Specifies the duration to wait for spark worker to complete spark decomissioning tasks before forcefully removing workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
      * 
      */
-    @InputImport(name="gracefulDecommissionTimeout", required=true)
+    @Import(name="gracefulDecommissionTimeout", required=true)
       private final Output<String> gracefulDecommissionTimeout;
 
     public Output<String> getGracefulDecommissionTimeout() {
@@ -34,7 +34,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
      * Fraction of required executors to remove from Spark Serverless clusters. A scale-down factor of 1.0 will result in scaling down so that there are no more executors for the Spark Job.(more aggressive scaling). A scale-down factor closer to 0 will result in a smaller magnitude of scaling donw (less aggressive scaling).Bounds: 0.0, 1.0.
      * 
      */
-    @InputImport(name="scaleDownFactor", required=true)
+    @Import(name="scaleDownFactor", required=true)
       private final Output<Double> scaleDownFactor;
 
     public Output<Double> getScaleDownFactor() {
@@ -45,7 +45,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
      * Optional. Minimum scale-down threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the autoscaler will scale down on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.
      * 
      */
-    @InputImport(name="scaleDownMinWorkerFraction")
+    @Import(name="scaleDownMinWorkerFraction")
       private final @Nullable Output<Double> scaleDownMinWorkerFraction;
 
     public Output<Double> getScaleDownMinWorkerFraction() {
@@ -56,7 +56,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
      * Fraction of required workers to add to Spark Standalone clusters. A scale-up factor of 1.0 will result in scaling up so that there are no more required workers for the Spark Job (more aggressive scaling). A scale-up factor closer to 0 will result in a smaller magnitude of scaling up (less aggressive scaling).Bounds: 0.0, 1.0.
      * 
      */
-    @InputImport(name="scaleUpFactor", required=true)
+    @Import(name="scaleUpFactor", required=true)
       private final Output<Double> scaleUpFactor;
 
     public Output<Double> getScaleUpFactor() {
@@ -67,7 +67,7 @@ public final class SparkStandaloneAutoscalingConfigArgs extends io.pulumi.resour
      * Optional. Minimum scale-up threshold as a fraction of total cluster size before scaling occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will scale up on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.
      * 
      */
-    @InputImport(name="scaleUpMinWorkerFraction")
+    @Import(name="scaleUpMinWorkerFraction")
       private final @Nullable Output<Double> scaleUpMinWorkerFraction;
 
     public Output<Double> getScaleUpMinWorkerFraction() {

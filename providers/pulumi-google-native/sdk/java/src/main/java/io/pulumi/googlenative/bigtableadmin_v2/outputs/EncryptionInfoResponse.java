@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionInfoResponse {
     /**
      * The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
@@ -26,11 +26,11 @@ public final class EncryptionInfoResponse {
      */
     private final String kmsKeyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionInfoResponse(
-        @OutputCustomType.Parameter("encryptionStatus") StatusResponse encryptionStatus,
-        @OutputCustomType.Parameter("encryptionType") String encryptionType,
-        @OutputCustomType.Parameter("kmsKeyVersion") String kmsKeyVersion) {
+        @CustomType.Parameter("encryptionStatus") StatusResponse encryptionStatus,
+        @CustomType.Parameter("encryptionType") String encryptionType,
+        @CustomType.Parameter("kmsKeyVersion") String kmsKeyVersion) {
         this.encryptionStatus = encryptionStatus;
         this.encryptionType = encryptionType;
         this.kmsKeyVersion = kmsKeyVersion;

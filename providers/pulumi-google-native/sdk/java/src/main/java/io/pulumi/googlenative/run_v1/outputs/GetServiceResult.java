@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.ObjectMetaResponse;
 import io.pulumi.googlenative.run_v1.outputs.ServiceSpecResponse;
 import io.pulumi.googlenative.run_v1.outputs.ServiceStatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * The API version for this call such as "serving.knative.dev/v1".
@@ -38,13 +38,13 @@ public final class GetServiceResult {
      */
     private final ServiceStatusResponse status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("apiVersion") String apiVersion,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
-        @OutputCustomType.Parameter("spec") ServiceSpecResponse spec,
-        @OutputCustomType.Parameter("status") ServiceStatusResponse status) {
+        @CustomType.Parameter("apiVersion") String apiVersion,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @CustomType.Parameter("spec") ServiceSpecResponse spec,
+        @CustomType.Parameter("status") ServiceStatusResponse status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionInfoResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupResult {
     /**
      * The time the CreateBackup request is received. If the request does not specify `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
@@ -62,18 +62,18 @@ public final class GetBackupResult {
      */
     private final String versionTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("databaseDialect") String databaseDialect,
-        @OutputCustomType.Parameter("encryptionInfo") EncryptionInfoResponse encryptionInfo,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("referencingDatabases") List<String> referencingDatabases,
-        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("versionTime") String versionTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("databaseDialect") String databaseDialect,
+        @CustomType.Parameter("encryptionInfo") EncryptionInfoResponse encryptionInfo,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("referencingDatabases") List<String> referencingDatabases,
+        @CustomType.Parameter("sizeBytes") String sizeBytes,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("versionTime") String versionTime) {
         this.createTime = createTime;
         this.database = database;
         this.databaseDialect = databaseDialect;

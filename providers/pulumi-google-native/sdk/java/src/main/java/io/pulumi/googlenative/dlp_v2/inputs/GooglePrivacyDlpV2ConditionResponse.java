@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ConditionResponse extends io.pulumi.resourc
      * Field within the record this condition is evaluated against.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse getField() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2ConditionResponse extends io.pulumi.resourc
      * Operator used to compare the field or infoType to the value.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2ConditionResponse extends io.pulumi.resourc
      * Value to compare against. [Mandatory, except for `EXISTS` tests.]
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final GooglePrivacyDlpV2ValueResponse value;
 
     public GooglePrivacyDlpV2ValueResponse getValue() {

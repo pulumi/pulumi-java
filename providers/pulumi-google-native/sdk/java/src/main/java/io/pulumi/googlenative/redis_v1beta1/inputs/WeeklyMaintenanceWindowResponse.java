@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.redis_v1beta1.inputs.TimeOfDayResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
      * The day of week that maintenance updates occur.
      * 
      */
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final String day;
 
     public String getDay() {
@@ -32,7 +32,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
      * Duration of the maintenance window. The current window is fixed at 1 hour.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final String duration;
 
     public String getDuration() {
@@ -43,7 +43,7 @@ public final class WeeklyMaintenanceWindowResponse extends io.pulumi.resources.I
      * Start time of the window in UTC time.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final TimeOfDayResponse startTime;
 
     public TimeOfDayResponse getStartTime() {

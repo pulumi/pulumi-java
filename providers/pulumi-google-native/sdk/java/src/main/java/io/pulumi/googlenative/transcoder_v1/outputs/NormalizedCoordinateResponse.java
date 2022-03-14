@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NormalizedCoordinateResponse {
     /**
      * Normalized x coordinate.
@@ -20,10 +20,10 @@ public final class NormalizedCoordinateResponse {
      */
     private final Double y;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NormalizedCoordinateResponse(
-        @OutputCustomType.Parameter("x") Double x,
-        @OutputCustomType.Parameter("y") Double y) {
+        @CustomType.Parameter("x") Double x,
+        @CustomType.Parameter("y") Double y) {
         this.x = x;
         this.y = y;
     }

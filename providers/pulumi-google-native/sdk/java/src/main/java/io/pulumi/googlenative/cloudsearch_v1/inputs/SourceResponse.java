@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * Source name for content indexed by the Indexing API.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * Predefined content source for Google Apps.
      * 
      */
-    @InputImport(name="predefinedSource", required=true)
+    @Import(name="predefinedSource", required=true)
       private final String predefinedSource;
 
     public String getPredefinedSource() {

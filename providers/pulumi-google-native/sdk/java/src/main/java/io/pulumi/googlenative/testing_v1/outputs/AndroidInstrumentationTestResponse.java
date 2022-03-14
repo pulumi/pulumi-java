@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ShardingOptionResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidInstrumentationTestResponse {
     /**
      * The APK for the application under test.
@@ -59,17 +59,17 @@ public final class AndroidInstrumentationTestResponse {
      */
     private final List<String> testTargets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AndroidInstrumentationTestResponse(
-        @OutputCustomType.Parameter("appApk") FileReferenceResponse appApk,
-        @OutputCustomType.Parameter("appBundle") AppBundleResponse appBundle,
-        @OutputCustomType.Parameter("appPackageId") String appPackageId,
-        @OutputCustomType.Parameter("orchestratorOption") String orchestratorOption,
-        @OutputCustomType.Parameter("shardingOption") ShardingOptionResponse shardingOption,
-        @OutputCustomType.Parameter("testApk") FileReferenceResponse testApk,
-        @OutputCustomType.Parameter("testPackageId") String testPackageId,
-        @OutputCustomType.Parameter("testRunnerClass") String testRunnerClass,
-        @OutputCustomType.Parameter("testTargets") List<String> testTargets) {
+        @CustomType.Parameter("appApk") FileReferenceResponse appApk,
+        @CustomType.Parameter("appBundle") AppBundleResponse appBundle,
+        @CustomType.Parameter("appPackageId") String appPackageId,
+        @CustomType.Parameter("orchestratorOption") String orchestratorOption,
+        @CustomType.Parameter("shardingOption") ShardingOptionResponse shardingOption,
+        @CustomType.Parameter("testApk") FileReferenceResponse testApk,
+        @CustomType.Parameter("testPackageId") String testPackageId,
+        @CustomType.Parameter("testRunnerClass") String testRunnerClass,
+        @CustomType.Parameter("testTargets") List<String> testTargets) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appPackageId = appPackageId;

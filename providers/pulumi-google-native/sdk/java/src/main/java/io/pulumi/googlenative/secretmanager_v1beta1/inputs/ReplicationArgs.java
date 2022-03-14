@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.AutomaticArgs;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.UserManagedArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The Secret will automatically be replicated without any restrictions.
      * 
      */
-    @InputImport(name="automatic")
+    @Import(name="automatic")
       private final @Nullable Output<AutomaticArgs> automatic;
 
     public Output<AutomaticArgs> getAutomatic() {
@@ -34,7 +34,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The Secret will only be replicated into the locations specified.
      * 
      */
-    @InputImport(name="userManaged")
+    @Import(name="userManaged")
       private final @Nullable Output<UserManagedArgs> userManaged;
 
     public Output<UserManagedArgs> getUserManaged() {

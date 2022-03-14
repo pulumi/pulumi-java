@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.CollectionOverrideResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.CredentialResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.OperationResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTypeProviderResult {
     /**
      * Allows resource handling overrides for specific collections
@@ -71,19 +71,19 @@ public final class GetTypeProviderResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTypeProviderResult(
-        @OutputCustomType.Parameter("collectionOverrides") List<CollectionOverrideResponse> collectionOverrides,
-        @OutputCustomType.Parameter("credential") CredentialResponse credential,
-        @OutputCustomType.Parameter("customCertificateAuthorityRoots") List<String> customCertificateAuthorityRoots,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("descriptorUrl") String descriptorUrl,
-        @OutputCustomType.Parameter("insertTime") String insertTime,
-        @OutputCustomType.Parameter("labels") List<TypeProviderLabelEntryResponse> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operation") OperationResponse operation,
-        @OutputCustomType.Parameter("options") OptionsResponse options,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("collectionOverrides") List<CollectionOverrideResponse> collectionOverrides,
+        @CustomType.Parameter("credential") CredentialResponse credential,
+        @CustomType.Parameter("customCertificateAuthorityRoots") List<String> customCertificateAuthorityRoots,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("descriptorUrl") String descriptorUrl,
+        @CustomType.Parameter("insertTime") String insertTime,
+        @CustomType.Parameter("labels") List<TypeProviderLabelEntryResponse> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operation") OperationResponse operation,
+        @CustomType.Parameter("options") OptionsResponse options,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.collectionOverrides = collectionOverrides;
         this.credential = credential;
         this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.AppEngineRoutingResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppEngineHttpRequestResponse {
     /**
      * Task-level setting for App Engine routing. * If app_engine_routing_override is set on the queue, this value is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
@@ -37,13 +37,13 @@ public final class AppEngineHttpRequestResponse {
      */
     private final String relativeUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppEngineHttpRequestResponse(
-        @OutputCustomType.Parameter("appEngineRouting") AppEngineRoutingResponse appEngineRouting,
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("headers") Map<String,String> headers,
-        @OutputCustomType.Parameter("httpMethod") String httpMethod,
-        @OutputCustomType.Parameter("relativeUri") String relativeUri) {
+        @CustomType.Parameter("appEngineRouting") AppEngineRoutingResponse appEngineRouting,
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("headers") Map<String,String> headers,
+        @CustomType.Parameter("httpMethod") String httpMethod,
+        @CustomType.Parameter("relativeUri") String relativeUri) {
         this.appEngineRouting = appEngineRouting;
         this.body = body;
         this.headers = headers;

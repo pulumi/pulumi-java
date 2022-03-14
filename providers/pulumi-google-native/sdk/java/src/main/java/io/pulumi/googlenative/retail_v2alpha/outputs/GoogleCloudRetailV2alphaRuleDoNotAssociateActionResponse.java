@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse {
     /**
      * Cannot contain duplicates or the query term. Can specify up to 100 terms.
@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse {
      */
     private final List<String> terms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse(
-        @OutputCustomType.Parameter("doNotAssociateTerms") List<String> doNotAssociateTerms,
-        @OutputCustomType.Parameter("queryTerms") List<String> queryTerms,
-        @OutputCustomType.Parameter("terms") List<String> terms) {
+        @CustomType.Parameter("doNotAssociateTerms") List<String> doNotAssociateTerms,
+        @CustomType.Parameter("queryTerms") List<String> queryTerms,
+        @CustomType.Parameter("terms") List<String> terms) {
         this.doNotAssociateTerms = doNotAssociateTerms;
         this.queryTerms = queryTerms;
         this.terms = terms;

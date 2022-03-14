@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse {
     /**
      * Cloud Storage path to a file with a JSON-serialized ContainerSpec as content.
@@ -48,15 +48,15 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      */
     private final Boolean update;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(
-        @OutputCustomType.Parameter("containerSpecGcsPath") String containerSpecGcsPath,
-        @OutputCustomType.Parameter("environment") GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment,
-        @OutputCustomType.Parameter("jobName") String jobName,
-        @OutputCustomType.Parameter("launchOptions") Map<String,String> launchOptions,
-        @OutputCustomType.Parameter("parameters") Map<String,String> parameters,
-        @OutputCustomType.Parameter("transformNameMappings") Map<String,String> transformNameMappings,
-        @OutputCustomType.Parameter("update") Boolean update) {
+        @CustomType.Parameter("containerSpecGcsPath") String containerSpecGcsPath,
+        @CustomType.Parameter("environment") GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment,
+        @CustomType.Parameter("jobName") String jobName,
+        @CustomType.Parameter("launchOptions") Map<String,String> launchOptions,
+        @CustomType.Parameter("parameters") Map<String,String> parameters,
+        @CustomType.Parameter("transformNameMappings") Map<String,String> transformNameMappings,
+        @CustomType.Parameter("update") Boolean update) {
         this.containerSpecGcsPath = containerSpecGcsPath;
         this.environment = environment;
         this.jobName = jobName;

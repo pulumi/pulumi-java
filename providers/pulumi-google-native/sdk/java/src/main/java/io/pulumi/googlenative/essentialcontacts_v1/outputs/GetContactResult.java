@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.essentialcontacts_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetContactResult {
     /**
      * The email address to send notifications to. This does not need to be a Google account.
@@ -41,14 +41,14 @@ public final class GetContactResult {
      */
     private final String validationState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactResult(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("languageTag") String languageTag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationCategorySubscriptions") List<String> notificationCategorySubscriptions,
-        @OutputCustomType.Parameter("validateTime") String validateTime,
-        @OutputCustomType.Parameter("validationState") String validationState) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("languageTag") String languageTag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationCategorySubscriptions") List<String> notificationCategorySubscriptions,
+        @CustomType.Parameter("validateTime") String validateTime,
+        @CustomType.Parameter("validationState") String validationState) {
         this.email = email;
         this.languageTag = languageTag;
         this.name = name;

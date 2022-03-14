@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1alpha2.enums.DsRecordAlgorithm;
 import io.pulumi.googlenative.domains_v1alpha2.enums.DsRecordDigestType;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The algorithm used to generate the referenced DNSKEY.
      * 
      */
-    @InputImport(name="algorithm")
+    @Import(name="algorithm")
       private final @Nullable Output<DsRecordAlgorithm> algorithm;
 
     public Output<DsRecordAlgorithm> getAlgorithm() {
@@ -36,7 +36,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The digest generated from the referenced DNSKEY.
      * 
      */
-    @InputImport(name="digest")
+    @Import(name="digest")
       private final @Nullable Output<String> digest;
 
     public Output<String> getDigest() {
@@ -47,7 +47,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The hash function used to generate the digest of the referenced DNSKEY.
      * 
      */
-    @InputImport(name="digestType")
+    @Import(name="digestType")
       private final @Nullable Output<DsRecordDigestType> digestType;
 
     public Output<DsRecordDigestType> getDigestType() {
@@ -58,7 +58,7 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The key tag of the record. Must be set in range 0 -- 65535.
      * 
      */
-    @InputImport(name="keyTag")
+    @Import(name="keyTag")
       private final @Nullable Output<Integer> keyTag;
 
     public Output<Integer> getKeyTag() {

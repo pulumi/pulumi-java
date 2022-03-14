@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CategoricalStatsResultResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse;
@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * Categorical stats result
      * 
      */
-    @InputImport(name="categoricalStatsResult", required=true)
+    @Import(name="categoricalStatsResult", required=true)
       private final GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
 
     public GooglePrivacyDlpV2CategoricalStatsResultResponse getCategoricalStatsResult() {
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * Delta-presence result
      * 
      */
-    @InputImport(name="deltaPresenceEstimationResult", required=true)
+    @Import(name="deltaPresenceEstimationResult", required=true)
       private final GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
 
     public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse getDeltaPresenceEstimationResult() {
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * K-anonymity result
      * 
      */
-    @InputImport(name="kAnonymityResult", required=true)
+    @Import(name="kAnonymityResult", required=true)
       private final GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
 
     public GooglePrivacyDlpV2KAnonymityResultResponse getKAnonymityResult() {
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * K-map result
      * 
      */
-    @InputImport(name="kMapEstimationResult", required=true)
+    @Import(name="kMapEstimationResult", required=true)
       private final GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
 
     public GooglePrivacyDlpV2KMapEstimationResultResponse getKMapEstimationResult() {
@@ -72,7 +72,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * L-divesity result
      * 
      */
-    @InputImport(name="lDiversityResult", required=true)
+    @Import(name="lDiversityResult", required=true)
       private final GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
 
     public GooglePrivacyDlpV2LDiversityResultResponse getLDiversityResult() {
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * Numerical stats result
      * 
      */
-    @InputImport(name="numericalStatsResult", required=true)
+    @Import(name="numericalStatsResult", required=true)
       private final GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
 
     public GooglePrivacyDlpV2NumericalStatsResultResponse getNumericalStatsResult() {
@@ -94,7 +94,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * The configuration used for this job.
      * 
      */
-    @InputImport(name="requestedOptions", required=true)
+    @Import(name="requestedOptions", required=true)
       private final GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
 
     public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse getRequestedOptions() {
@@ -105,7 +105,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * Privacy metric to compute.
      * 
      */
-    @InputImport(name="requestedPrivacyMetric", required=true)
+    @Import(name="requestedPrivacyMetric", required=true)
       private final GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
 
     public GooglePrivacyDlpV2PrivacyMetricResponse getRequestedPrivacyMetric() {
@@ -116,7 +116,7 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
      * Input dataset to compute metrics over.
      * 
      */
-    @InputImport(name="requestedSourceTable", required=true)
+    @Import(name="requestedSourceTable", required=true)
       private final GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
 
     public GooglePrivacyDlpV2BigQueryTableResponse getRequestedSourceTable() {

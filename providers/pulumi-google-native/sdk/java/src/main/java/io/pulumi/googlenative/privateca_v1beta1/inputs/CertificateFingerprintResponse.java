@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CertificateFingerprintResponse extends io.pulumi.resources.In
      * The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.
      * 
      */
-    @InputImport(name="sha256Hash", required=true)
+    @Import(name="sha256Hash", required=true)
       private final String sha256Hash;
 
     public String getSha256Hash() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1.EntryArgs;
@@ -35,7 +35,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
      * 
      */
-    @OutputExport(name="bigqueryDateShardedSpec", type=GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse.class, parameters={})
+    @Export(name="bigqueryDateShardedSpec", type=GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse> bigqueryDateShardedSpec;
 
     /**
@@ -49,7 +49,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification that applies to a BigQuery table. Valid only for entries with the `TABLE` type.
      * 
      */
-    @OutputExport(name="bigqueryTableSpec", type=GoogleCloudDatacatalogV1BigQueryTableSpecResponse.class, parameters={})
+    @Export(name="bigqueryTableSpec", type=GoogleCloudDatacatalogV1BigQueryTableSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1BigQueryTableSpecResponse> bigqueryTableSpec;
 
     /**
@@ -63,7 +63,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Business Context of the entry.
      * 
      */
-    @OutputExport(name="businessContext", type=GoogleCloudDatacatalogV1BusinessContextResponse.class, parameters={})
+    @Export(name="businessContext", type=GoogleCloudDatacatalogV1BusinessContextResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1BusinessContextResponse> businessContext;
 
     /**
@@ -77,7 +77,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Physical location of the entry.
      * 
      */
-    @OutputExport(name="dataSource", type=GoogleCloudDatacatalogV1DataSourceResponse.class, parameters={})
+    @Export(name="dataSource", type=GoogleCloudDatacatalogV1DataSourceResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1DataSourceResponse> dataSource;
 
     /**
@@ -91,7 +91,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type.
      * 
      */
-    @OutputExport(name="dataSourceConnectionSpec", type=GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse.class, parameters={})
+    @Export(name="dataSourceConnectionSpec", type=GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse> dataSourceConnectionSpec;
 
     /**
@@ -105,7 +105,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
      * 
      */
-    @OutputExport(name="databaseTableSpec", type=GoogleCloudDatacatalogV1DatabaseTableSpecResponse.class, parameters={})
+    @Export(name="databaseTableSpec", type=GoogleCloudDatacatalogV1DatabaseTableSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1DatabaseTableSpecResponse> databaseTableSpec;
 
     /**
@@ -119,7 +119,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Entry description that can consist of several sentences or paragraphs that describe entry contents. The description must not contain Unicode non-characters as well as C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF). The maximum size is 2000 bytes when encoded in UTF-8. Default value is an empty string.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -133,7 +133,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Display name of an entry. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end with spaces. The maximum size is 200 bytes when encoded in UTF-8. Default value is an empty string.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -147,7 +147,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
      * 
      */
-    @OutputExport(name="fullyQualifiedName", type=String.class, parameters={})
+    @Export(name="fullyQualifiedName", type=String.class, parameters={})
     private Output<String> fullyQualifiedName;
 
     /**
@@ -161,7 +161,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification that applies to a Cloud Storage fileset. Valid only for entries with the `FILESET` type.
      * 
      */
-    @OutputExport(name="gcsFilesetSpec", type=GoogleCloudDatacatalogV1GcsFilesetSpecResponse.class, parameters={})
+    @Export(name="gcsFilesetSpec", type=GoogleCloudDatacatalogV1GcsFilesetSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1GcsFilesetSpecResponse> gcsFilesetSpec;
 
     /**
@@ -175,7 +175,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Indicates the entry's source system that Data Catalog integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
      * 
      */
-    @OutputExport(name="integratedSystem", type=String.class, parameters={})
+    @Export(name="integratedSystem", type=String.class, parameters={})
     private Output<String> integratedSystem;
 
     /**
@@ -189,7 +189,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Cloud labels attached to the entry. In Data Catalog, you can create and modify labels attached only to custom entries. Synced entries have unmodifiable labels that come from the source system.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -203,7 +203,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [Full Resource Name] (https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: `//bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/tables/{TABLE_ID}` Output only when the entry is one of the types in the `EntryType` enum. For entries with a `user_specified_type`, this field is optional and defaults to an empty string. The resource string must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), periods (.), colons (:), slashes (/), dashes (-), and hashes (#). The maximum size is 200 bytes when encoded in UTF-8.
      * 
      */
-    @OutputExport(name="linkedResource", type=String.class, parameters={})
+    @Export(name="linkedResource", type=String.class, parameters={})
     private Output<String> linkedResource;
 
     /**
@@ -217,7 +217,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * The resource name of an entry in URL format. Note: The entry itself and its child resources might not be stored in the location specified in its name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -231,7 +231,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Additional information related to the entry. Private to the current user.
      * 
      */
-    @OutputExport(name="personalDetails", type=GoogleCloudDatacatalogV1PersonalDetailsResponse.class, parameters={})
+    @Export(name="personalDetails", type=GoogleCloudDatacatalogV1PersonalDetailsResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1PersonalDetailsResponse> personalDetails;
 
     /**
@@ -245,7 +245,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification that applies to a user-defined function or procedure. Valid only for entries with the `ROUTINE` type.
      * 
      */
-    @OutputExport(name="routineSpec", type=GoogleCloudDatacatalogV1RoutineSpecResponse.class, parameters={})
+    @Export(name="routineSpec", type=GoogleCloudDatacatalogV1RoutineSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1RoutineSpecResponse> routineSpec;
 
     /**
@@ -259,7 +259,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Schema of the entry. An entry might not have any schema attached to it.
      * 
      */
-    @OutputExport(name="schema", type=GoogleCloudDatacatalogV1SchemaResponse.class, parameters={})
+    @Export(name="schema", type=GoogleCloudDatacatalogV1SchemaResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1SchemaResponse> schema;
 
     /**
@@ -273,7 +273,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the entry has a type listed in the `EntryType` enum. For entries with `user_specified_type`, this field is optional and defaults to an empty timestamp.
      * 
      */
-    @OutputExport(name="sourceSystemTimestamps", type=GoogleCloudDatacatalogV1SystemTimestampsResponse.class, parameters={})
+    @Export(name="sourceSystemTimestamps", type=GoogleCloudDatacatalogV1SystemTimestampsResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1SystemTimestampsResponse> sourceSystemTimestamps;
 
     /**
@@ -287,7 +287,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * The type of the entry. Only used for entries with types listed in the `EntryType` enum. Currently, only `FILESET` enum value is allowed. All other entries created in Data Catalog must use the `user_specified_type`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -301,7 +301,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Resource usage statistics.
      * 
      */
-    @OutputExport(name="usageSignal", type=GoogleCloudDatacatalogV1UsageSignalResponse.class, parameters={})
+    @Export(name="usageSignal", type=GoogleCloudDatacatalogV1UsageSignalResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1UsageSignalResponse> usageSignal;
 
     /**
@@ -315,7 +315,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Indicates the entry's source system that Data Catalog doesn't automatically integrate with. The `user_specified_system` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
      * 
      */
-    @OutputExport(name="userSpecifiedSystem", type=String.class, parameters={})
+    @Export(name="userSpecifiedSystem", type=String.class, parameters={})
     private Output<String> userSpecifiedSystem;
 
     /**
@@ -329,7 +329,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Custom entry type that doesn't match any of the values allowed for input and listed in the `EntryType` enum. When creating an entry, first check the type values in the enum. If there are no appropriate types for the new entry, provide a custom value, for example, `my_special_type`. The `user_specified_type` string has the following limitations: * Is case insensitive. * Must begin with a letter or underscore. * Can only contain letters, numbers, and underscores. * Must be at least 1 character and at most 64 characters long.
      * 
      */
-    @OutputExport(name="userSpecifiedType", type=String.class, parameters={})
+    @Export(name="userSpecifiedType", type=String.class, parameters={})
     private Output<String> userSpecifiedType;
 
     /**

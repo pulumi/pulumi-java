@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DocumentationRuleResponse {
     /**
      * Deprecation description of the selected element(s). It can be provided if an element is marked as `deprecated`.
@@ -25,11 +25,11 @@ public final class DocumentationRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentationRuleResponse(
-        @OutputCustomType.Parameter("deprecationDescription") String deprecationDescription,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("selector") String selector) {
+        @CustomType.Parameter("deprecationDescription") String deprecationDescription,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("selector") String selector) {
         this.deprecationDescription = deprecationDescription;
         this.description = description;
         this.selector = selector;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PositionResponse {
     /**
      * The source code column position (of the line) the current instruction was generated from.
@@ -25,11 +25,11 @@ public final class PositionResponse {
      */
     private final String line;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PositionResponse(
-        @OutputCustomType.Parameter("column") String column,
-        @OutputCustomType.Parameter("length") String length,
-        @OutputCustomType.Parameter("line") String line) {
+        @CustomType.Parameter("column") String column,
+        @CustomType.Parameter("length") String length,
+        @CustomType.Parameter("line") String line) {
         this.column = column;
         this.length = length;
         this.line = line;

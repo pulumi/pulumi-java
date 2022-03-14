@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class InstanceReferenceArgs extends io.pulumi.resources.ResourceArg
      * The name of the Cloud SQL instance being referenced. This does not include the project ID.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class InstanceReferenceArgs extends io.pulumi.resources.ResourceArg
      * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -44,7 +44,7 @@ public final class InstanceReferenceArgs extends io.pulumi.resources.ResourceArg
      * The region of the Cloud SQL instance being referenced.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

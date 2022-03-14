@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.compute_v1.outputs.AttachedDiskResponse;
@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstancePropertiesResponse {
     /**
      * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
@@ -125,28 +125,28 @@ public final class InstancePropertiesResponse {
      */
     private final TagsResponse tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstancePropertiesResponse(
-        @OutputCustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
-        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
-        @OutputCustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disks") List<AttachedDiskResponse> disks,
-        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
-        @OutputCustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags,
-        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
-        @OutputCustomType.Parameter("scheduling") SchedulingResponse scheduling,
-        @OutputCustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("tags") TagsResponse tags) {
+        @CustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
+        @CustomType.Parameter("canIpForward") Boolean canIpForward,
+        @CustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disks") List<AttachedDiskResponse> disks,
+        @CustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") MetadataResponse metadata,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @CustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags,
+        @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("scheduling") SchedulingResponse scheduling,
+        @CustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
+        @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("tags") TagsResponse tags) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfig = confidentialInstanceConfig;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.EnvVarSourceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the environment variable. Must be a C_IDENTIFIER.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {
@@ -43,7 +43,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.
      * 
      */
-    @InputImport(name="valueFrom", required=true)
+    @Import(name="valueFrom", required=true)
       private final EnvVarSourceResponse valueFrom;
 
     public EnvVarSourceResponse getValueFrom() {

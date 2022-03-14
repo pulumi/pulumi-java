@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.AppDevExperienceFeatureSpecResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.CloudAuditLoggingFeatureSpecResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.MultiClusterIngressFeatureSpecResponse;
@@ -22,7 +22,7 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
      * Appdevexperience specific spec.
      * 
      */
-    @InputImport(name="appdevexperience", required=true)
+    @Import(name="appdevexperience", required=true)
       private final AppDevExperienceFeatureSpecResponse appdevexperience;
 
     public AppDevExperienceFeatureSpecResponse getAppdevexperience() {
@@ -33,7 +33,7 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
      * Cloud Audit Logging-specific spec.
      * 
      */
-    @InputImport(name="cloudauditlogging", required=true)
+    @Import(name="cloudauditlogging", required=true)
       private final CloudAuditLoggingFeatureSpecResponse cloudauditlogging;
 
     public CloudAuditLoggingFeatureSpecResponse getCloudauditlogging() {
@@ -44,7 +44,7 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
      * Multicluster Ingress-specific spec.
      * 
      */
-    @InputImport(name="multiclusteringress", required=true)
+    @Import(name="multiclusteringress", required=true)
       private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
     public MultiClusterIngressFeatureSpecResponse getMulticlusteringress() {

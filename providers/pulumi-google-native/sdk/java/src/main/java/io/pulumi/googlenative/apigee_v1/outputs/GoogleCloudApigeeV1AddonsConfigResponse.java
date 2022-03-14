@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AdvancedApiOpsConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ConnectorsPlatformConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1IntegrationConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1MonetizationConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1AddonsConfigResponse {
     /**
      * Configuration for the Advanced API Ops add-on.
@@ -33,12 +33,12 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
      */
     private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1AddonsConfigResponse(
-        @OutputCustomType.Parameter("advancedApiOpsConfig") GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig,
-        @OutputCustomType.Parameter("connectorsPlatformConfig") GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig,
-        @OutputCustomType.Parameter("integrationConfig") GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig,
-        @OutputCustomType.Parameter("monetizationConfig") GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
+        @CustomType.Parameter("advancedApiOpsConfig") GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig,
+        @CustomType.Parameter("connectorsPlatformConfig") GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig,
+        @CustomType.Parameter("integrationConfig") GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig,
+        @CustomType.Parameter("monetizationConfig") GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
         this.advancedApiOpsConfig = advancedApiOpsConfig;
         this.connectorsPlatformConfig = connectorsPlatformConfig;
         this.integrationConfig = integrationConfig;

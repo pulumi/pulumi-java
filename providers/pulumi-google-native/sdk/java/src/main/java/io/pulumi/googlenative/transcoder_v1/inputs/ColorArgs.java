@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
      * 
      */
-    @InputImport(name="brightness")
+    @Import(name="brightness")
       private final @Nullable Output<Double> brightness;
 
     public Output<Double> getBrightness() {
@@ -33,7 +33,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
      * 
      */
-    @InputImport(name="contrast")
+    @Import(name="contrast")
       private final @Nullable Output<Double> contrast;
 
     public Output<Double> getContrast() {
@@ -44,7 +44,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
      * 
      */
-    @InputImport(name="saturation")
+    @Import(name="saturation")
       private final @Nullable Output<Double> saturation;
 
     public Output<Double> getSaturation() {

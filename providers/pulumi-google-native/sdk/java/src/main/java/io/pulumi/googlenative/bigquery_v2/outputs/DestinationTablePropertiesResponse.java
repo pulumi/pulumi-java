@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DestinationTablePropertiesResponse {
     /**
      * [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
@@ -31,12 +31,12 @@ public final class DestinationTablePropertiesResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DestinationTablePropertiesResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("labels") Map<String,String> labels) {
         this.description = description;
         this.expirationTime = expirationTime;
         this.friendlyName = friendlyName;

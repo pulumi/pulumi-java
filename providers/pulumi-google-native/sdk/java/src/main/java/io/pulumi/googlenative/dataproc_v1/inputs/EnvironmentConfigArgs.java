@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.ExecutionConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.PeripheralsConfigArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. Execution configuration for a workload.
      * 
      */
-    @InputImport(name="executionConfig")
+    @Import(name="executionConfig")
       private final @Nullable Output<ExecutionConfigArgs> executionConfig;
 
     public Output<ExecutionConfigArgs> getExecutionConfig() {
@@ -34,7 +34,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. Peripherals configuration that workload has access to.
      * 
      */
-    @InputImport(name="peripheralsConfig")
+    @Import(name="peripheralsConfig")
       private final @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
 
     public Output<PeripheralsConfigArgs> getPeripheralsConfig() {

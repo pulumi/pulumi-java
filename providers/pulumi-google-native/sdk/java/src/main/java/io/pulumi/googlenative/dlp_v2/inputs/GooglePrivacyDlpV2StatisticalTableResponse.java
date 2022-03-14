@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2QuasiIdentifierFieldResponse;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends io.pulumi.
      * Quasi-identifier columns.
      * 
      */
-    @InputImport(name="quasiIds", required=true)
+    @Import(name="quasiIds", required=true)
       private final List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2QuasiIdentifierFieldResponse> getQuasiIds() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends io.pulumi.
      * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive). Null values are assumed to be zero.
      * 
      */
-    @InputImport(name="relativeFrequency", required=true)
+    @Import(name="relativeFrequency", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse relativeFrequency;
 
     public GooglePrivacyDlpV2FieldIdResponse getRelativeFrequency() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2StatisticalTableResponse extends io.pulumi.
      * Auxiliary table location.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse getTable() {

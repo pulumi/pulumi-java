@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
      * Debugging information. This property is internal to Google and should not be used.
      * 
      */
-    @InputImport(name="debugInfo", required=true)
+    @Import(name="debugInfo", required=true)
       private final String debugInfo;
 
     public String getDebugInfo() {
@@ -27,7 +27,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies where the error occurred, if present.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -38,7 +38,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
      * A human-readable description of the error.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -49,7 +49,7 @@ public final class ErrorProtoResponse extends io.pulumi.resources.InvokeArgs {
      * A short error code that summarizes the error.
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final String reason;
 
     public String getReason() {

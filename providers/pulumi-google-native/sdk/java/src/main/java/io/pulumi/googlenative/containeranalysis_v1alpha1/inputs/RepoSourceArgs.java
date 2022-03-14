@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the branch to build.
      * 
      */
-    @InputImport(name="branchName")
+    @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
     public Output<String> getBranchName() {
@@ -33,7 +33,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Explicit commit SHA to build.
      * 
      */
-    @InputImport(name="commitSha")
+    @Import(name="commitSha")
       private final @Nullable Output<String> commitSha;
 
     public Output<String> getCommitSha() {
@@ -44,7 +44,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the project that owns the repo.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -55,7 +55,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the repo.
      * 
      */
-    @InputImport(name="repoName")
+    @Import(name="repoName")
       private final @Nullable Output<String> repoName;
 
     public Output<String> getRepoName() {
@@ -66,7 +66,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the tag to build.
      * 
      */
-    @InputImport(name="tagName")
+    @Import(name="tagName")
       private final @Nullable Output<String> tagName;
 
     public Output<String> getTagName() {

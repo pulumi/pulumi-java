@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNICResponse {
     /**
      * Whether gVNIC features are enabled in the node pool.
@@ -15,8 +15,8 @@ public final class VirtualNICResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private VirtualNICResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private VirtualNICResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.PubsubResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransportResponse {
     /**
      * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
@@ -15,8 +15,8 @@ public final class TransportResponse {
      */
     private final PubsubResponse pubsub;
 
-    @OutputCustomType.Constructor
-    private TransportResponse(@OutputCustomType.Parameter("pubsub") PubsubResponse pubsub) {
+    @CustomType.Constructor
+    private TransportResponse(@CustomType.Parameter("pubsub") PubsubResponse pubsub) {
         this.pubsub = pubsub;
     }
 

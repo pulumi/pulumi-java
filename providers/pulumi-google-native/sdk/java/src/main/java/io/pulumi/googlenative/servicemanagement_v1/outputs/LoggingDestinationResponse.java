@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingDestinationResponse {
     /**
      * Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by "/".
@@ -21,10 +21,10 @@ public final class LoggingDestinationResponse {
      */
     private final String monitoredResource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingDestinationResponse(
-        @OutputCustomType.Parameter("logs") List<String> logs,
-        @OutputCustomType.Parameter("monitoredResource") String monitoredResource) {
+        @CustomType.Parameter("logs") List<String> logs,
+        @CustomType.Parameter("monitoredResource") String monitoredResource) {
         this.logs = logs;
         this.monitoredResource = monitoredResource;
     }

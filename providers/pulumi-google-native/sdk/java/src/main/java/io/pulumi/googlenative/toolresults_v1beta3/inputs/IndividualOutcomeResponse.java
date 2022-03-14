@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
      * 
      */
-    @InputImport(name="multistepNumber", required=true)
+    @Import(name="multistepNumber", required=true)
       private final Integer multistepNumber;
 
     public Integer getMultistepNumber() {
         return this.multistepNumber;
     }
 
-    @InputImport(name="outcomeSummary", required=true)
+    @Import(name="outcomeSummary", required=true)
       private final String outcomeSummary;
 
     public String getOutcomeSummary() {
@@ -40,14 +40,14 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
      * How long it took for this step to run.
      * 
      */
-    @InputImport(name="runDuration", required=true)
+    @Import(name="runDuration", required=true)
       private final DurationResponse runDuration;
 
     public DurationResponse getRunDuration() {
         return this.runDuration;
     }
 
-    @InputImport(name="stepId", required=true)
+    @Import(name="stepId", required=true)
       private final String stepId;
 
     public String getStepId() {

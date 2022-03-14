@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryFieldResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStorageFileSetResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStoragePathResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
     /**
      * Field in a BigQuery table where each cell represents a dictionary phrase.
@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
      */
     private final GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(
-        @OutputCustomType.Parameter("bigQueryField") GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField,
-        @OutputCustomType.Parameter("cloudStorageFileSet") GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet,
-        @OutputCustomType.Parameter("outputPath") GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
+        @CustomType.Parameter("bigQueryField") GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField,
+        @CustomType.Parameter("cloudStorageFileSet") GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet,
+        @CustomType.Parameter("outputPath") GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
         this.bigQueryField = bigQueryField;
         this.cloudStorageFileSet = cloudStorageFileSet;
         this.outputPath = outputPath;

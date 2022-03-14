@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationExtractArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationLoadArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationQueryArgs;
@@ -24,7 +24,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * [Pick one] Copies a table.
      * 
      */
-    @InputImport(name="copy")
+    @Import(name="copy")
       private final @Nullable Output<JobConfigurationTableCopyArgs> copy;
 
     public Output<JobConfigurationTableCopyArgs> getCopy() {
@@ -35,7 +35,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] If set, don't actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run. Behavior of non-query jobs is undefined.
      * 
      */
-    @InputImport(name="dryRun")
+    @Import(name="dryRun")
       private final @Nullable Output<Boolean> dryRun;
 
     public Output<Boolean> getDryRun() {
@@ -46,7 +46,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * [Pick one] Configures an extract job.
      * 
      */
-    @InputImport(name="extract")
+    @Import(name="extract")
       private final @Nullable Output<JobConfigurationExtractArgs> extract;
 
     public Output<JobConfigurationExtractArgs> getExtract() {
@@ -57,7 +57,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
      * 
      */
-    @InputImport(name="jobTimeoutMs")
+    @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
 
     public Output<String> getJobTimeoutMs() {
@@ -68,7 +68,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -79,7 +79,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * [Pick one] Configures a load job.
      * 
      */
-    @InputImport(name="load")
+    @Import(name="load")
       private final @Nullable Output<JobConfigurationLoadArgs> load;
 
     public Output<JobConfigurationLoadArgs> getLoad() {
@@ -90,7 +90,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * [Pick one] Configures a query job.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<JobConfigurationQueryArgs> query;
 
     public Output<JobConfigurationQueryArgs> getQuery() {

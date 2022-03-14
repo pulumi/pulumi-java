@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageSuggestionResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse exten
      * The list of suggested replies.
      * 
      */
-    @InputImport(name="suggestions", required=true)
+    @Import(name="suggestions", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions;
 
     public List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> getSuggestions() {

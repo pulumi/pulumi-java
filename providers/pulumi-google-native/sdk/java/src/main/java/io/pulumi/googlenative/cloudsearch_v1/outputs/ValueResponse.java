@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.DateResponse;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ValueResponse {
     private final Boolean booleanValue;
     private final DateResponse dateValue;
@@ -19,14 +19,14 @@ public final class ValueResponse {
     private final String stringValue;
     private final String timestampValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValueResponse(
-        @OutputCustomType.Parameter("booleanValue") Boolean booleanValue,
-        @OutputCustomType.Parameter("dateValue") DateResponse dateValue,
-        @OutputCustomType.Parameter("doubleValue") Double doubleValue,
-        @OutputCustomType.Parameter("integerValue") String integerValue,
-        @OutputCustomType.Parameter("stringValue") String stringValue,
-        @OutputCustomType.Parameter("timestampValue") String timestampValue) {
+        @CustomType.Parameter("booleanValue") Boolean booleanValue,
+        @CustomType.Parameter("dateValue") DateResponse dateValue,
+        @CustomType.Parameter("doubleValue") Double doubleValue,
+        @CustomType.Parameter("integerValue") String integerValue,
+        @CustomType.Parameter("stringValue") String stringValue,
+        @CustomType.Parameter("timestampValue") String timestampValue) {
         this.booleanValue = booleanValue;
         this.dateValue = dateValue;
         this.doubleValue = doubleValue;

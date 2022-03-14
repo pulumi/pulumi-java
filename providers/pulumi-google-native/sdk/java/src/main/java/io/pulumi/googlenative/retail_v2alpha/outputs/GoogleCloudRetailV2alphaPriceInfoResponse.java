@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2alphaPriceInfoResponse {
     /**
      * The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).
@@ -47,15 +47,15 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse {
      */
     private final GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2alphaPriceInfoResponse(
-        @OutputCustomType.Parameter("cost") Double cost,
-        @OutputCustomType.Parameter("currencyCode") String currencyCode,
-        @OutputCustomType.Parameter("originalPrice") Double originalPrice,
-        @OutputCustomType.Parameter("price") Double price,
-        @OutputCustomType.Parameter("priceEffectiveTime") String priceEffectiveTime,
-        @OutputCustomType.Parameter("priceExpireTime") String priceExpireTime,
-        @OutputCustomType.Parameter("priceRange") GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange) {
+        @CustomType.Parameter("cost") Double cost,
+        @CustomType.Parameter("currencyCode") String currencyCode,
+        @CustomType.Parameter("originalPrice") Double originalPrice,
+        @CustomType.Parameter("price") Double price,
+        @CustomType.Parameter("priceEffectiveTime") String priceEffectiveTime,
+        @CustomType.Parameter("priceExpireTime") String priceExpireTime,
+        @CustomType.Parameter("priceRange") GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange) {
         this.cost = cost;
         this.currencyCode = currencyCode;
         this.originalPrice = originalPrice;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.pubsublite_v1.inputs.CapacityResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PartitionConfigResponse extends io.pulumi.resources.InvokeArg
      * The capacity configuration.
      * 
      */
-    @InputImport(name="capacity", required=true)
+    @Import(name="capacity", required=true)
       private final CapacityResponse capacity;
 
     public CapacityResponse getCapacity() {
@@ -32,7 +32,7 @@ public final class PartitionConfigResponse extends io.pulumi.resources.InvokeArg
      * The number of partitions in the topic. Must be at least 1. Once a topic has been created the number of partitions can be increased but not decreased. Message ordering is not guaranteed across a topic resize. For more information see https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final String count;
 
     public String getCount() {

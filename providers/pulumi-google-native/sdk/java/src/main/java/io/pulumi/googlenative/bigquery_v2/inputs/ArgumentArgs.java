@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.enums.ArgumentArgumentKind;
 import io.pulumi.googlenative.bigquery_v2.enums.ArgumentMode;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
@@ -25,7 +25,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Defaults to FIXED_TYPE.
      * 
      */
-    @InputImport(name="argumentKind")
+    @Import(name="argumentKind")
       private final @Nullable Output<ArgumentArgumentKind> argumentKind;
 
     public Output<ArgumentArgumentKind> getArgumentKind() {
@@ -36,7 +36,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * Required unless argument_kind = ANY_TYPE.
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable Output<StandardSqlDataTypeArgs> dataType;
 
     public Output<StandardSqlDataTypeArgs> getDataType() {
@@ -47,7 +47,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Specifies whether the argument is input or output. Can be set for procedures only.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<ArgumentMode> mode;
 
     public Output<ArgumentMode> getMode() {
@@ -58,7 +58,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The name of this argument. Can be absent for function return argument.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

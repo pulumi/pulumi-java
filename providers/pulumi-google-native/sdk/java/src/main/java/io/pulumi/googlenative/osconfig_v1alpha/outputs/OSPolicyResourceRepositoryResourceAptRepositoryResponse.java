@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
     /**
      * Type of archive files in this repository.
@@ -36,13 +36,13 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceRepositoryResourceAptRepositoryResponse(
-        @OutputCustomType.Parameter("archiveType") String archiveType,
-        @OutputCustomType.Parameter("components") List<String> components,
-        @OutputCustomType.Parameter("distribution") String distribution,
-        @OutputCustomType.Parameter("gpgKey") String gpgKey,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("archiveType") String archiveType,
+        @CustomType.Parameter("components") List<String> components,
+        @CustomType.Parameter("distribution") String distribution,
+        @CustomType.Parameter("gpgKey") String gpgKey,
+        @CustomType.Parameter("uri") String uri) {
         this.archiveType = archiveType;
         this.components = components;
         this.distribution = distribution;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTagArgs Empty = new GetTagArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="packageId", required=true)
+    @Import(name="packageId", required=true)
       private final String packageId;
 
     public String getPackageId() {
         return this.packageId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="repositoryId", required=true)
+    @Import(name="repositoryId", required=true)
       private final String repositoryId;
 
     public String getRepositoryId() {
         return this.repositoryId;
     }
 
-    @InputImport(name="tagId", required=true)
+    @Import(name="tagId", required=true)
       private final String tagId;
 
     public String getTagId() {

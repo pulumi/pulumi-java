@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidTestResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosTestResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
      * An Android mobile test execution specification.
      * 
      */
-    @InputImport(name="androidTest", required=true)
+    @Import(name="androidTest", required=true)
       private final AndroidTestResponse androidTest;
 
     public AndroidTestResponse getAndroidTest() {
@@ -32,7 +32,7 @@ public final class SpecificationResponse extends io.pulumi.resources.InvokeArgs 
      * An iOS mobile test execution specification.
      * 
      */
-    @InputImport(name="iosTest", required=true)
+    @Import(name="iosTest", required=true)
       private final IosTestResponse iosTest;
 
     public IosTestResponse getIosTest() {

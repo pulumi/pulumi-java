@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FixedOrPercentResponse {
     /**
      * Absolute value of VM instances calculated based on the specific mode. - If the value is fixed, then the calculated value is equal to the fixed value. - If the value is a percent, then the calculated value is percent/100 * targetSize. For example, the calculated value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.
@@ -25,11 +25,11 @@ public final class FixedOrPercentResponse {
      */
     private final Integer percent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FixedOrPercentResponse(
-        @OutputCustomType.Parameter("calculated") Integer calculated,
-        @OutputCustomType.Parameter("fixed") Integer fixed,
-        @OutputCustomType.Parameter("percent") Integer percent) {
+        @CustomType.Parameter("calculated") Integer calculated,
+        @CustomType.Parameter("fixed") Integer fixed,
+        @CustomType.Parameter("percent") Integer percent) {
         this.calculated = calculated;
         this.fixed = fixed;
         this.percent = percent;

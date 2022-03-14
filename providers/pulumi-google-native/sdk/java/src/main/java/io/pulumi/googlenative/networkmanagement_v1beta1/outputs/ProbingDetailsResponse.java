@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.LatencyDistributionResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.StatusResponse;
@@ -11,7 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProbingDetailsResponse {
     /**
      * The reason probing was aborted.
@@ -54,16 +54,16 @@ public final class ProbingDetailsResponse {
      */
     private final String verifyTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProbingDetailsResponse(
-        @OutputCustomType.Parameter("abortCause") String abortCause,
-        @OutputCustomType.Parameter("endpointInfo") EndpointInfoResponse endpointInfo,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("probingLatency") LatencyDistributionResponse probingLatency,
-        @OutputCustomType.Parameter("result") String result,
-        @OutputCustomType.Parameter("sentProbeCount") Integer sentProbeCount,
-        @OutputCustomType.Parameter("successfulProbeCount") Integer successfulProbeCount,
-        @OutputCustomType.Parameter("verifyTime") String verifyTime) {
+        @CustomType.Parameter("abortCause") String abortCause,
+        @CustomType.Parameter("endpointInfo") EndpointInfoResponse endpointInfo,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("probingLatency") LatencyDistributionResponse probingLatency,
+        @CustomType.Parameter("result") String result,
+        @CustomType.Parameter("sentProbeCount") Integer sentProbeCount,
+        @CustomType.Parameter("successfulProbeCount") Integer successfulProbeCount,
+        @CustomType.Parameter("verifyTime") String verifyTime) {
         this.abortCause = abortCause;
         this.endpointInfo = endpointInfo;
         this.error = error;

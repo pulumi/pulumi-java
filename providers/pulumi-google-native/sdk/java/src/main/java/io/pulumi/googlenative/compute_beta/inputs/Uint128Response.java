@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class Uint128Response extends io.pulumi.resources.InvokeArgs {
 
     public static final Uint128Response Empty = new Uint128Response();
 
-    @InputImport(name="high", required=true)
+    @Import(name="high", required=true)
       private final String high;
 
     public String getHigh() {
         return this.high;
     }
 
-    @InputImport(name="low", required=true)
+    @Import(name="low", required=true)
       private final String low;
 
     public String getLow() {

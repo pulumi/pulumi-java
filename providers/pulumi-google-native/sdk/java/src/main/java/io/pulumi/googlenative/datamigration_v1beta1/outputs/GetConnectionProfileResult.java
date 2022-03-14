@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.CloudSqlConnectionProfileResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.MySqlConnectionProfileResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.StatusResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionProfileResult {
     /**
      * A CloudSQL database connection profile.
@@ -64,18 +64,18 @@ public final class GetConnectionProfileResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionProfileResult(
-        @OutputCustomType.Parameter("cloudsql") CloudSqlConnectionProfileResponse cloudsql,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("mysql") MySqlConnectionProfileResponse mysql,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provider") String provider,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("cloudsql") CloudSqlConnectionProfileResponse cloudsql,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("mysql") MySqlConnectionProfileResponse mysql,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provider") String provider,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.cloudsql = cloudsql;
         this.createTime = createTime;
         this.displayName = displayName;

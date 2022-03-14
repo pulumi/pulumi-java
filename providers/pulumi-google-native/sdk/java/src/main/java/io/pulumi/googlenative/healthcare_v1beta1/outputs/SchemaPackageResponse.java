@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.Hl7SchemaConfigResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.Hl7TypesConfigResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchemaPackageResponse {
     /**
      * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
@@ -39,13 +39,13 @@ public final class SchemaPackageResponse {
      */
     private final String unexpectedSegmentHandling;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchemaPackageResponse(
-        @OutputCustomType.Parameter("ignoreMinOccurs") Boolean ignoreMinOccurs,
-        @OutputCustomType.Parameter("schemas") List<Hl7SchemaConfigResponse> schemas,
-        @OutputCustomType.Parameter("schematizedParsingType") String schematizedParsingType,
-        @OutputCustomType.Parameter("types") List<Hl7TypesConfigResponse> types,
-        @OutputCustomType.Parameter("unexpectedSegmentHandling") String unexpectedSegmentHandling) {
+        @CustomType.Parameter("ignoreMinOccurs") Boolean ignoreMinOccurs,
+        @CustomType.Parameter("schemas") List<Hl7SchemaConfigResponse> schemas,
+        @CustomType.Parameter("schematizedParsingType") String schematizedParsingType,
+        @CustomType.Parameter("types") List<Hl7TypesConfigResponse> types,
+        @CustomType.Parameter("unexpectedSegmentHandling") String unexpectedSegmentHandling) {
         this.ignoreMinOccurs = ignoreMinOccurs;
         this.schemas = schemas;
         this.schematizedParsingType = schematizedParsingType;

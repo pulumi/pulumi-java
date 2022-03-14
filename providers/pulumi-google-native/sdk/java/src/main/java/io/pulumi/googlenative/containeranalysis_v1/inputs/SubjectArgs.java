@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
      * 
      */
-    @InputImport(name="digest")
+    @Import(name="digest")
       private final @Nullable Output<Map<String,String>> digest;
 
     public Output<Map<String,String>> getDigest() {
         return this.digest == null ? Output.empty() : this.digest;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

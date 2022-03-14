@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.ConfigFileResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.ImportFileResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TargetConfigurationResponse {
     /**
      * The configuration to use for this deployment.
@@ -22,10 +22,10 @@ public final class TargetConfigurationResponse {
      */
     private final List<ImportFileResponse> imports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetConfigurationResponse(
-        @OutputCustomType.Parameter("config") ConfigFileResponse config,
-        @OutputCustomType.Parameter("imports") List<ImportFileResponse> imports) {
+        @CustomType.Parameter("config") ConfigFileResponse config,
+        @CustomType.Parameter("imports") List<ImportFileResponse> imports) {
         this.config = config;
         this.imports = imports;
     }

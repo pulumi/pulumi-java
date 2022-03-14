@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,42 +14,42 @@ public final class GetFhirArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFhirArgs Empty = new GetFhirArgs();
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="fhirId", required=true)
+    @Import(name="fhirId", required=true)
       private final String fhirId;
 
     public String getFhirId() {
         return this.fhirId;
     }
 
-    @InputImport(name="fhirId1", required=true)
+    @Import(name="fhirId1", required=true)
       private final String fhirId1;
 
     public String getFhirId1() {
         return this.fhirId1;
     }
 
-    @InputImport(name="fhirStoreId", required=true)
+    @Import(name="fhirStoreId", required=true)
       private final String fhirStoreId;
 
     public String getFhirStoreId() {
         return this.fhirStoreId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

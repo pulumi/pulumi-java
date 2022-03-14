@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AnimationResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.ImageResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OverlayResponse {
     /**
      * List of Animations. The list should be chronological, without any time overlap.
@@ -22,10 +22,10 @@ public final class OverlayResponse {
      */
     private final ImageResponse image;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OverlayResponse(
-        @OutputCustomType.Parameter("animations") List<AnimationResponse> animations,
-        @OutputCustomType.Parameter("image") ImageResponse image) {
+        @CustomType.Parameter("animations") List<AnimationResponse> animations,
+        @CustomType.Parameter("image") ImageResponse image) {
         this.animations = animations;
         this.image = image;
     }

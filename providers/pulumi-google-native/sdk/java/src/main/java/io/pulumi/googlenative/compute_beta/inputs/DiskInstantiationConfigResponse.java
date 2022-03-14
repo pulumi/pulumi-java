@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
      * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
      */
-    @InputImport(name="autoDelete", required=true)
+    @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
     public Boolean getAutoDelete() {
@@ -32,7 +32,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
      * The custom source image to be used to restore this disk when instantiating this instance template.
      * 
      */
-    @InputImport(name="customImage", required=true)
+    @Import(name="customImage", required=true)
       private final String customImage;
 
     public String getCustomImage() {
@@ -43,7 +43,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
      * Specifies the device name of the disk to which the configurations apply to.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -54,7 +54,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
      * Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
      * 
      */
-    @InputImport(name="instantiateFrom", required=true)
+    @Import(name="instantiateFrom", required=true)
       private final String instantiateFrom;
 
     public String getInstantiateFrom() {

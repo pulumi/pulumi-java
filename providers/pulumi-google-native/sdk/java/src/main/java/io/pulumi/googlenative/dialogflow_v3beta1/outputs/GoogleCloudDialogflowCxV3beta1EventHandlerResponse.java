@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
     /**
      * The name of the event to handle.
@@ -36,13 +36,13 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1EventHandlerResponse(
-        @OutputCustomType.Parameter("event") String event,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("targetFlow") String targetFlow,
-        @OutputCustomType.Parameter("targetPage") String targetPage,
-        @OutputCustomType.Parameter("triggerFulfillment") GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
+        @CustomType.Parameter("event") String event,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("targetFlow") String targetFlow,
+        @CustomType.Parameter("targetPage") String targetPage,
+        @CustomType.Parameter("triggerFulfillment") GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
         this.event = event;
         this.name = name;
         this.targetFlow = targetFlow;

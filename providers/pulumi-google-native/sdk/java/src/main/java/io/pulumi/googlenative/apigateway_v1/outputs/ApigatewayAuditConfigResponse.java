@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayAuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApigatewayAuditConfigResponse {
     /**
      * The configuration for logging of each type of permission.
@@ -22,10 +22,10 @@ public final class ApigatewayAuditConfigResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApigatewayAuditConfigResponse(
-        @OutputCustomType.Parameter("auditLogConfigs") List<ApigatewayAuditLogConfigResponse> auditLogConfigs,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("auditLogConfigs") List<ApigatewayAuditLogConfigResponse> auditLogConfigs,
+        @CustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PackageRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PackageResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGuestPolicyResult {
     /**
      * Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
@@ -60,17 +60,17 @@ public final class GetGuestPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGuestPolicyResult(
-        @OutputCustomType.Parameter("assignment") AssignmentResponse assignment,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("packageRepositories") List<PackageRepositoryResponse> packageRepositories,
-        @OutputCustomType.Parameter("packages") List<PackageResponse> packages,
-        @OutputCustomType.Parameter("recipes") List<SoftwareRecipeResponse> recipes,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("assignment") AssignmentResponse assignment,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("packageRepositories") List<PackageRepositoryResponse> packageRepositories,
+        @CustomType.Parameter("packages") List<PackageResponse> packages,
+        @CustomType.Parameter("recipes") List<SoftwareRecipeResponse> recipes,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.assignment = assignment;
         this.createTime = createTime;
         this.description = description;

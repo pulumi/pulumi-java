@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleResponse {
     /**
      * The duration of time between executions in days.
@@ -21,10 +21,10 @@ public final class ScheduleResponse {
      */
     private final String scheduleTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleResponse(
-        @OutputCustomType.Parameter("intervalDurationDays") Integer intervalDurationDays,
-        @OutputCustomType.Parameter("scheduleTime") String scheduleTime) {
+        @CustomType.Parameter("intervalDurationDays") Integer intervalDurationDays,
+        @CustomType.Parameter("scheduleTime") String scheduleTime) {
         this.intervalDurationDays = intervalDurationDays;
         this.scheduleTime = scheduleTime;
     }

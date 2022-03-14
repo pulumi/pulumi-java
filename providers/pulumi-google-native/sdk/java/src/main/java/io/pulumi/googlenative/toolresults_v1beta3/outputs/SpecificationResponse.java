@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.AndroidTestResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.IosTestResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpecificationResponse {
     /**
      * An Android mobile test execution specification.
@@ -21,10 +21,10 @@ public final class SpecificationResponse {
      */
     private final IosTestResponse iosTest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpecificationResponse(
-        @OutputCustomType.Parameter("androidTest") AndroidTestResponse androidTest,
-        @OutputCustomType.Parameter("iosTest") IosTestResponse iosTest) {
+        @CustomType.Parameter("androidTest") AndroidTestResponse androidTest,
+        @CustomType.Parameter("iosTest") IosTestResponse iosTest) {
         this.androidTest = androidTest;
         this.iosTest = iosTest;
     }

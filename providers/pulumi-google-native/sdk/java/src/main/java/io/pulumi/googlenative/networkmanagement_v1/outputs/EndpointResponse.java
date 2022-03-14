@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointResponse {
     /**
      * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
@@ -51,16 +51,16 @@ public final class EndpointResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointResponse(
-        @OutputCustomType.Parameter("cloudSqlInstance") String cloudSqlInstance,
-        @OutputCustomType.Parameter("gkeMasterCluster") String gkeMasterCluster,
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkType") String networkType,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("cloudSqlInstance") String cloudSqlInstance,
+        @CustomType.Parameter("gkeMasterCluster") String gkeMasterCluster,
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkType") String networkType,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("project") String project) {
         this.cloudSqlInstance = cloudSqlInstance;
         this.gkeMasterCluster = gkeMasterCluster;
         this.instance = instance;

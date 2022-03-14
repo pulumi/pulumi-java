@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReferenceResult {
     /**
      * Optional. A human-readable description of this reference.
@@ -30,12 +30,12 @@ public final class GetReferenceResult {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReferenceResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("refers") String refers,
-        @OutputCustomType.Parameter("resourceType") String resourceType) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("refers") String refers,
+        @CustomType.Parameter("resourceType") String resourceType) {
         this.description = description;
         this.name = name;
         this.refers = refers;

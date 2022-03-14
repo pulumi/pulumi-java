@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetKeystoreArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeystoreArgs Empty = new GetKeystoreArgs();
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
-    @InputImport(name="keystoreId", required=true)
+    @Import(name="keystoreId", required=true)
       private final String keystoreId;
 
     public String getKeystoreId() {
         return this.keystoreId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {

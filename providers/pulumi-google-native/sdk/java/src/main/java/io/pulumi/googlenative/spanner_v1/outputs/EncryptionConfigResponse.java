@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionConfigResponse {
     /**
      * The Cloud KMS key to be used for encrypting and decrypting the database. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
@@ -15,8 +15,8 @@ public final class EncryptionConfigResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private EncryptionConfigResponse(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+    @CustomType.Constructor
+    private EncryptionConfigResponse(@CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

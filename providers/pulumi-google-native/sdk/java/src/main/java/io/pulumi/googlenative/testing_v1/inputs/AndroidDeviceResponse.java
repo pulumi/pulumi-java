@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
-    @InputImport(name="androidModelId", required=true)
+    @Import(name="androidModelId", required=true)
       private final String androidModelId;
 
     public String getAndroidModelId() {
@@ -31,7 +31,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * The id of the Android OS version to be used. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
-    @InputImport(name="androidVersionId", required=true)
+    @Import(name="androidVersionId", required=true)
       private final String androidVersionId;
 
     public String getAndroidVersionId() {
@@ -42,7 +42,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * The locale the test device used for testing. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
-    @InputImport(name="locale", required=true)
+    @Import(name="locale", required=true)
       private final String locale;
 
     public String getLocale() {
@@ -53,7 +53,7 @@ public final class AndroidDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * How the device is oriented during the test. Use the TestEnvironmentDiscoveryService to get supported options.
      * 
      */
-    @InputImport(name="orientation", required=true)
+    @Import(name="orientation", required=true)
       private final String orientation;
 
     public String getOrientation() {

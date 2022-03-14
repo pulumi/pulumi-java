@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleRateLimitOptionsThresholdResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleRedirectOptionsResponse;
 import java.lang.Integer;
@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
      * 
      */
-    @InputImport(name="banDurationSec", required=true)
+    @Import(name="banDurationSec", required=true)
       private final Integer banDurationSec;
 
     public Integer getBanDurationSec() {
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.
      * 
      */
-    @InputImport(name="banThreshold", required=true)
+    @Import(name="banThreshold", required=true)
       private final SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold;
 
     public SecurityPolicyRuleRateLimitOptionsThresholdResponse getBanThreshold() {
@@ -41,7 +41,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.
      * 
      */
-    @InputImport(name="conformAction", required=true)
+    @Import(name="conformAction", required=true)
       private final String conformAction;
 
     public String getConformAction() {
@@ -52,7 +52,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * Determines the key to enforce the rate_limit_threshold on. Possible values are: - ALL: A single rate limit threshold is applied to all the requests matching this rule. This is the default value if this field 'enforce_on_key' is not configured. - IP: The source IP address of the request is the key. Each IP has this limit enforced separately. - HTTP_HEADER: The value of the HTTP header whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to ALL. - XFF_IP: The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key type defaults to ALL. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under "enforce_on_key_name". The key value is truncated to the first 128 bytes of the cookie value. If no such cookie is present in the request, the key type defaults to ALL.
      * 
      */
-    @InputImport(name="enforceOnKey", required=true)
+    @Import(name="enforceOnKey", required=true)
       private final String enforceOnKey;
 
     public String getEnforceOnKey() {
@@ -63,7 +63,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
      * 
      */
-    @InputImport(name="enforceOnKeyName", required=true)
+    @Import(name="enforceOnKeyName", required=true)
       private final String enforceOnKeyName;
 
     public String getEnforceOnKeyName() {
@@ -74,7 +74,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502, and "redirect" where the redirect parameters come from exceed_redirect_options below.
      * 
      */
-    @InputImport(name="exceedAction", required=true)
+    @Import(name="exceedAction", required=true)
       private final String exceedAction;
 
     public String getExceedAction() {
@@ -85,7 +85,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.
      * 
      */
-    @InputImport(name="exceedRedirectOptions", required=true)
+    @Import(name="exceedRedirectOptions", required=true)
       private final SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions;
 
     public SecurityPolicyRuleRedirectOptionsResponse getExceedRedirectOptions() {
@@ -96,7 +96,7 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse extends io.pulumi.
      * Threshold at which to begin ratelimiting.
      * 
      */
-    @InputImport(name="rateLimitThreshold", required=true)
+    @Import(name="rateLimitThreshold", required=true)
       private final SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
 
     public SecurityPolicyRuleRateLimitOptionsThresholdResponse getRateLimitThreshold() {

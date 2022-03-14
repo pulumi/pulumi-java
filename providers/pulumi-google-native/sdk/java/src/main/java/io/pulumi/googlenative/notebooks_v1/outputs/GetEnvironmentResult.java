@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.VmImageResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     /**
      * Use a container image to start the notebook instance.
@@ -47,15 +47,15 @@ public final class GetEnvironmentResult {
      */
     private final VmImageResponse vmImage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("containerImage") ContainerImageResponse containerImage,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("postStartupScript") String postStartupScript,
-        @OutputCustomType.Parameter("vmImage") VmImageResponse vmImage) {
+        @CustomType.Parameter("containerImage") ContainerImageResponse containerImage,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("postStartupScript") String postStartupScript,
+        @CustomType.Parameter("vmImage") VmImageResponse vmImage) {
         this.containerImage = containerImage;
         this.createTime = createTime;
         this.description = description;

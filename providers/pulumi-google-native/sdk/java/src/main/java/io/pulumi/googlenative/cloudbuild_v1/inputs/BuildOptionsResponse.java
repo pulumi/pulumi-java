@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PoolOptionResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.VolumeResponse;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
      * 
      */
-    @InputImport(name="diskSizeGb", required=true)
+    @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
     public String getDiskSizeGb() {
@@ -35,7 +35,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Option to specify whether or not to apply bash style string operations to the substitutions. NOTE: this is always enabled for triggered builds and cannot be overridden in the build configuration file.
      * 
      */
-    @InputImport(name="dynamicSubstitutions", required=true)
+    @Import(name="dynamicSubstitutions", required=true)
       private final Boolean dynamicSubstitutions;
 
     public Boolean getDynamicSubstitutions() {
@@ -46,7 +46,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * A list of global environment variable definitions that will exist for all build steps in this build. If a variable is defined in both globally and in a build step, the variable will use the build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
      */
-    @InputImport(name="env", required=true)
+    @Import(name="env", required=true)
       private final List<String> env;
 
     public List<String> getEnv() {
@@ -57,7 +57,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Option to define build log streaming behavior to Google Cloud Storage.
      * 
      */
-    @InputImport(name="logStreamingOption", required=true)
+    @Import(name="logStreamingOption", required=true)
       private final String logStreamingOption;
 
     public String getLogStreamingOption() {
@@ -68,7 +68,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Option to specify the logging mode, which determines if and where build logs are stored.
      * 
      */
-    @InputImport(name="logging", required=true)
+    @Import(name="logging", required=true)
       private final String logging;
 
     public String getLogging() {
@@ -79,7 +79,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Compute Engine machine type on which to run the build.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -90,7 +90,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.
      * 
      */
-    @InputImport(name="pool", required=true)
+    @Import(name="pool", required=true)
       private final PoolOptionResponse pool;
 
     public PoolOptionResponse getPool() {
@@ -101,7 +101,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Requested verifiability options.
      * 
      */
-    @InputImport(name="requestedVerifyOption", required=true)
+    @Import(name="requestedVerifyOption", required=true)
       private final String requestedVerifyOption;
 
     public String getRequestedVerifyOption() {
@@ -112,7 +112,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * A list of global environment variables, which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's `Secret`. These variables will be available to all build steps in this build.
      * 
      */
-    @InputImport(name="secretEnv", required=true)
+    @Import(name="secretEnv", required=true)
       private final List<String> secretEnv;
 
     public List<String> getSecretEnv() {
@@ -123,7 +123,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Requested hash for SourceProvenance.
      * 
      */
-    @InputImport(name="sourceProvenanceHash", required=true)
+    @Import(name="sourceProvenanceHash", required=true)
       private final List<String> sourceProvenanceHash;
 
     public List<String> getSourceProvenanceHash() {
@@ -134,7 +134,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Option to specify behavior when there is an error in the substitution checks. NOTE: this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file.
      * 
      */
-    @InputImport(name="substitutionOption", required=true)
+    @Import(name="substitutionOption", required=true)
       private final String substitutionOption;
 
     public String getSubstitutionOption() {
@@ -145,7 +145,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Global list of volumes to mount for ALL build steps Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded. Global volume names and paths cannot conflict with the volumes defined a build step. Using a global volume in a build with only one step is not valid as it is indicative of a build request with an incorrect configuration.
      * 
      */
-    @InputImport(name="volumes", required=true)
+    @Import(name="volumes", required=true)
       private final List<VolumeResponse> volumes;
 
     public List<VolumeResponse> getVolumes() {
@@ -156,7 +156,7 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * This field deprecated; please use `pool.name` instead.
      * 
      */
-    @InputImport(name="workerPool", required=true)
+    @Import(name="workerPool", required=true)
       private final String workerPool;
 
     public String getWorkerPool() {

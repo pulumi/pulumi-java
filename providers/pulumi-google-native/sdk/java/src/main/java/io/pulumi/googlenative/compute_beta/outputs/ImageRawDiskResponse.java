@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageRawDiskResponse {
     /**
      * The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.
@@ -20,10 +20,10 @@ public final class ImageRawDiskResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageRawDiskResponse(
-        @OutputCustomType.Parameter("containerType") String containerType,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("containerType") String containerType,
+        @CustomType.Parameter("source") String source) {
         this.containerType = containerType;
         this.source = source;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
      * The number of pixels to crop from the bottom. The default is 0.
      * 
      */
-    @InputImport(name="bottomPixels")
+    @Import(name="bottomPixels")
       private final @Nullable Output<Integer> bottomPixels;
 
     public Output<Integer> getBottomPixels() {
@@ -33,7 +33,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
      * The number of pixels to crop from the left. The default is 0.
      * 
      */
-    @InputImport(name="leftPixels")
+    @Import(name="leftPixels")
       private final @Nullable Output<Integer> leftPixels;
 
     public Output<Integer> getLeftPixels() {
@@ -44,7 +44,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
      * The number of pixels to crop from the right. The default is 0.
      * 
      */
-    @InputImport(name="rightPixels")
+    @Import(name="rightPixels")
       private final @Nullable Output<Integer> rightPixels;
 
     public Output<Integer> getRightPixels() {
@@ -55,7 +55,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
      * The number of pixels to crop from the top. The default is 0.
      * 
      */
-    @InputImport(name="topPixels")
+    @Import(name="topPixels")
       private final @Nullable Output<Integer> topPixels;
 
     public Output<Integer> getTopPixels() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CompletenessResponse {
     /**
      * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
@@ -25,11 +25,11 @@ public final class CompletenessResponse {
      */
     private final Boolean materials;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CompletenessResponse(
-        @OutputCustomType.Parameter("arguments") Boolean arguments,
-        @OutputCustomType.Parameter("environment") Boolean environment,
-        @OutputCustomType.Parameter("materials") Boolean materials) {
+        @CustomType.Parameter("arguments") Boolean arguments,
+        @CustomType.Parameter("environment") Boolean environment,
+        @CustomType.Parameter("materials") Boolean materials) {
         this.arguments = arguments;
         this.environment = environment;
         this.materials = materials;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StreamingbufferResponse {
     /**
      * A lower-bound estimate of the number of bytes currently in the streaming buffer.
@@ -25,11 +25,11 @@ public final class StreamingbufferResponse {
      */
     private final String oldestEntryTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamingbufferResponse(
-        @OutputCustomType.Parameter("estimatedBytes") String estimatedBytes,
-        @OutputCustomType.Parameter("estimatedRows") String estimatedRows,
-        @OutputCustomType.Parameter("oldestEntryTime") String oldestEntryTime) {
+        @CustomType.Parameter("estimatedBytes") String estimatedBytes,
+        @CustomType.Parameter("estimatedRows") String estimatedRows,
+        @CustomType.Parameter("oldestEntryTime") String oldestEntryTime) {
         this.estimatedBytes = estimatedBytes;
         this.estimatedRows = estimatedRows;
         this.oldestEntryTime = oldestEntryTime;

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.JobSpecResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.JobStatusResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.ObjectMetaResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources +optional
@@ -38,13 +38,13 @@ public final class GetJobResult {
      */
     private final JobStatusResponse status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("apiVersion") String apiVersion,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
-        @OutputCustomType.Parameter("spec") JobSpecResponse spec,
-        @OutputCustomType.Parameter("status") JobStatusResponse status) {
+        @CustomType.Parameter("apiVersion") String apiVersion,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @CustomType.Parameter("spec") JobSpecResponse spec,
+        @CustomType.Parameter("status") JobStatusResponse status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

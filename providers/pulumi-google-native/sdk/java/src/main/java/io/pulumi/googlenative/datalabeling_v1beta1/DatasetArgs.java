@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the dataset. Maximum of 64 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -40,14 +40,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
      * 
      */
-    @InputImport(name="lastMigrateTime")
+    @Import(name="lastMigrateTime")
       private final @Nullable Output<String> lastMigrateTime;
 
     public Output<String> getLastMigrateTime() {
         return this.lastMigrateTime == null ? Output.empty() : this.lastMigrateTime;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.enums.CertificateExtensionConstraintsKnownExtensionsItem;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
      * Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
      * 
      */
-    @InputImport(name="additionalExtensions")
+    @Import(name="additionalExtensions")
       private final @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
 
     public Output<List<ObjectIdArgs>> getAdditionalExtensions() {
@@ -35,7 +35,7 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
      * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
      * 
      */
-    @InputImport(name="knownExtensions")
+    @Import(name="knownExtensions")
       private final @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
 
     public Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> getKnownExtensions() {

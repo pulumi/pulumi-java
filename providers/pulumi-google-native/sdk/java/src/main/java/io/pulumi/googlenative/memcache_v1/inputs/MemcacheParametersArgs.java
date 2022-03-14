@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.memcache_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
      * User defined set of parameters to use in the memcached process.
      * 
      */
-    @InputImport(name="params")
+    @Import(name="params")
       private final @Nullable Output<Map<String,String>> params;
 
     public Output<Map<String,String>> getParams() {

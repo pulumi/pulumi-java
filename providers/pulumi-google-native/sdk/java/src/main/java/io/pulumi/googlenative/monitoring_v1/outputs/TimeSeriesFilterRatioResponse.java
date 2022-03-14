@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AggregationResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.PickTimeSeriesFilterResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.RatioPartResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeSeriesFilterRatioResponse {
     /**
      * The denominator of the ratio.
@@ -32,12 +32,12 @@ public final class TimeSeriesFilterRatioResponse {
      */
     private final AggregationResponse secondaryAggregation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeSeriesFilterRatioResponse(
-        @OutputCustomType.Parameter("denominator") RatioPartResponse denominator,
-        @OutputCustomType.Parameter("numerator") RatioPartResponse numerator,
-        @OutputCustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        @OutputCustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
+        @CustomType.Parameter("denominator") RatioPartResponse denominator,
+        @CustomType.Parameter("numerator") RatioPartResponse numerator,
+        @CustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
+        @CustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
         this.denominator = denominator;
         this.numerator = numerator;
         this.pickTimeSeriesFilter = pickTimeSeriesFilter;

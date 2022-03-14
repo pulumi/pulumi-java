@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PoolOptionResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.VolumeResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildOptionsResponse {
     /**
      * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 1000GB; builds that request more than the maximum are rejected with an error.
@@ -79,21 +79,21 @@ public final class BuildOptionsResponse {
      */
     private final String workerPool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildOptionsResponse(
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("dynamicSubstitutions") Boolean dynamicSubstitutions,
-        @OutputCustomType.Parameter("env") List<String> env,
-        @OutputCustomType.Parameter("logStreamingOption") String logStreamingOption,
-        @OutputCustomType.Parameter("logging") String logging,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("pool") PoolOptionResponse pool,
-        @OutputCustomType.Parameter("requestedVerifyOption") String requestedVerifyOption,
-        @OutputCustomType.Parameter("secretEnv") List<String> secretEnv,
-        @OutputCustomType.Parameter("sourceProvenanceHash") List<String> sourceProvenanceHash,
-        @OutputCustomType.Parameter("substitutionOption") String substitutionOption,
-        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes,
-        @OutputCustomType.Parameter("workerPool") String workerPool) {
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("dynamicSubstitutions") Boolean dynamicSubstitutions,
+        @CustomType.Parameter("env") List<String> env,
+        @CustomType.Parameter("logStreamingOption") String logStreamingOption,
+        @CustomType.Parameter("logging") String logging,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("pool") PoolOptionResponse pool,
+        @CustomType.Parameter("requestedVerifyOption") String requestedVerifyOption,
+        @CustomType.Parameter("secretEnv") List<String> secretEnv,
+        @CustomType.Parameter("sourceProvenanceHash") List<String> sourceProvenanceHash,
+        @CustomType.Parameter("substitutionOption") String substitutionOption,
+        @CustomType.Parameter("volumes") List<VolumeResponse> volumes,
+        @CustomType.Parameter("workerPool") String workerPool) {
         this.diskSizeGb = diskSizeGb;
         this.dynamicSubstitutions = dynamicSubstitutions;
         this.env = env;

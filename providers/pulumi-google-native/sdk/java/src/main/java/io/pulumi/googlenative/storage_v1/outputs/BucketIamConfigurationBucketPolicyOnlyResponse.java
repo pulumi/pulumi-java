@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketIamConfigurationBucketPolicyOnlyResponse {
     /**
      * If set, access is controlled only by bucket-level or above IAM policies.
@@ -21,10 +21,10 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse {
      */
     private final String lockedTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketIamConfigurationBucketPolicyOnlyResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("lockedTime") String lockedTime) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("lockedTime") String lockedTime) {
         this.enabled = enabled;
         this.lockedTime = lockedTime;
     }

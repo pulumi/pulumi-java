@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.speech_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ClassItemResponse extends io.pulumi.resources.InvokeArgs {
      * The class item's value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

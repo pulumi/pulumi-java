@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AcceleratorResponse {
     /**
      * The type of an accelator for a CDF instance.
@@ -15,8 +15,8 @@ public final class AcceleratorResponse {
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor
-    private AcceleratorResponse(@OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
+    @CustomType.Constructor
+    private AcceleratorResponse(@CustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorType = acceleratorType;
     }
 

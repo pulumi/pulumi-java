@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.SegmentSettingsResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
      * 
      */
-    @InputImport(name="container", required=true)
+    @Import(name="container", required=true)
       private final String container;
 
     public String getContainer() {
@@ -33,7 +33,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * List of `ElementaryStream.key`s multiplexed in this stream.
      * 
      */
-    @InputImport(name="elementaryStreams", required=true)
+    @Import(name="elementaryStreams", required=true)
       private final List<String> elementaryStreams;
 
     public List<String> getElementaryStreams() {
@@ -44,7 +44,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the generated file. The default is `MuxStream.key` with the extension suffix corresponding to the `MuxStream.container`. Individual segments also have an incremental 10-digit zero-padded suffix starting from 0 before the extension, such as `mux_stream0000000123.ts`.
      * 
      */
-    @InputImport(name="fileName", required=true)
+    @Import(name="fileName", required=true)
       private final String fileName;
 
     public String getFileName() {
@@ -55,7 +55,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * A unique key for this multiplexed stream. HLS media manifests will be named `MuxStream.key` with the `.m3u8` extension suffix.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -66,7 +66,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * Segment settings for `ts`, `fmp4` and `vtt`.
      * 
      */
-    @InputImport(name="segmentSettings", required=true)
+    @Import(name="segmentSettings", required=true)
       private final SegmentSettingsResponse segmentSettings;
 
     public SegmentSettingsResponse getSegmentSettings() {

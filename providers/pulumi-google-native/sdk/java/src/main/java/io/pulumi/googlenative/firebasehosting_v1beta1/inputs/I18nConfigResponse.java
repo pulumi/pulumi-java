@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class I18nConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The user-supplied path where country and language specific content will be looked for within the public directory.
      * 
      */
-    @InputImport(name="root", required=true)
+    @Import(name="root", required=true)
       private final String root;
 
     public String getRoot() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.redis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.redis_v1.outputs.TimeOfDayResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WeeklyMaintenanceWindowResponse {
     /**
      * The day of week that maintenance updates occur.
@@ -26,11 +26,11 @@ public final class WeeklyMaintenanceWindowResponse {
      */
     private final TimeOfDayResponse startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WeeklyMaintenanceWindowResponse(
-        @OutputCustomType.Parameter("day") String day,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("startTime") TimeOfDayResponse startTime) {
+        @CustomType.Parameter("day") String day,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("startTime") TimeOfDayResponse startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;

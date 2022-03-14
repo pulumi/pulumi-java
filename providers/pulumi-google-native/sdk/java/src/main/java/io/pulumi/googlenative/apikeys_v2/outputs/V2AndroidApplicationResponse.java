@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class V2AndroidApplicationResponse {
     /**
      * The package name of the application.
@@ -20,10 +20,10 @@ public final class V2AndroidApplicationResponse {
      */
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private V2AndroidApplicationResponse(
-        @OutputCustomType.Parameter("packageName") String packageName,
-        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
+        @CustomType.Parameter("packageName") String packageName,
+        @CustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.packageName = packageName;
         this.sha1Fingerprint = sha1Fingerprint;
     }

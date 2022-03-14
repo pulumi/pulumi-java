@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.ExecActionArgs;
 import io.pulumi.googlenative.run_v1.inputs.HTTPGetActionArgs;
 import io.pulumi.googlenative.run_v1.inputs.TCPSocketActionArgs;
@@ -25,7 +25,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.
      * 
      */
-    @InputImport(name="exec")
+    @Import(name="exec")
       private final @Nullable Output<ExecActionArgs> exec;
 
     public Output<ExecActionArgs> getExec() {
@@ -36,7 +36,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
@@ -47,7 +47,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.
      * 
      */
-    @InputImport(name="httpGet")
+    @Import(name="httpGet")
       private final @Nullable Output<HTTPGetActionArgs> httpGet;
 
     public Output<HTTPGetActionArgs> getHttpGet() {
@@ -58,7 +58,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
-    @InputImport(name="initialDelaySeconds")
+    @Import(name="initialDelaySeconds")
       private final @Nullable Output<Integer> initialDelaySeconds;
 
     public Output<Integer> getInitialDelaySeconds() {
@@ -69,7 +69,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.
      * 
      */
-    @InputImport(name="periodSeconds")
+    @Import(name="periodSeconds")
       private final @Nullable Output<Integer> periodSeconds;
 
     public Output<Integer> getPeriodSeconds() {
@@ -80,7 +80,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
     public Output<Integer> getSuccessThreshold() {
@@ -91,7 +91,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.
      * 
      */
-    @InputImport(name="tcpSocket")
+    @Import(name="tcpSocket")
       private final @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
     public Output<TCPSocketActionArgs> getTcpSocket() {
@@ -102,7 +102,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {

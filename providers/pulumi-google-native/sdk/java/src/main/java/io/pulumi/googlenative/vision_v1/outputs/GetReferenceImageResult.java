@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vision_v1.outputs.BoundingPolyResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReferenceImageResult {
     /**
      * Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
@@ -27,11 +27,11 @@ public final class GetReferenceImageResult {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReferenceImageResult(
-        @OutputCustomType.Parameter("boundingPolys") List<BoundingPolyResponse> boundingPolys,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("boundingPolys") List<BoundingPolyResponse> boundingPolys,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("uri") String uri) {
         this.boundingPolys = boundingPolys;
         this.name = name;
         this.uri = uri;

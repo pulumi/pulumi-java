@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.recaptchaenterprise_v1.KeyArgs;
@@ -27,7 +27,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Settings for keys that can be used by Android apps.
      * 
      */
-    @OutputExport(name="androidSettings", type=GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse.class, parameters={})
+    @Export(name="androidSettings", type=GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse.class, parameters={})
     private Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse> androidSettings;
 
     /**
@@ -41,7 +41,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The timestamp corresponding to the creation of this Key.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -55,7 +55,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Human-readable display name of this key. Modifiable by user.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -69,7 +69,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Settings for keys that can be used by iOS apps.
      * 
      */
-    @OutputExport(name="iosSettings", type=GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse.class, parameters={})
+    @Export(name="iosSettings", type=GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse.class, parameters={})
     private Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse> iosSettings;
 
     /**
@@ -83,7 +83,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * See Creating and managing labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -97,7 +97,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The resource name for the Key in the format "projects/{project}/keys/{key}".
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -111,7 +111,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Options for user acceptance testing.
      * 
      */
-    @OutputExport(name="testingOptions", type=GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse.class, parameters={})
+    @Export(name="testingOptions", type=GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse.class, parameters={})
     private Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse> testingOptions;
 
     /**
@@ -125,7 +125,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Settings for WAF
      * 
      */
-    @OutputExport(name="wafSettings", type=GoogleCloudRecaptchaenterpriseV1WafSettingsResponse.class, parameters={})
+    @Export(name="wafSettings", type=GoogleCloudRecaptchaenterpriseV1WafSettingsResponse.class, parameters={})
     private Output<GoogleCloudRecaptchaenterpriseV1WafSettingsResponse> wafSettings;
 
     /**
@@ -139,7 +139,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Settings for keys that can be used by websites.
      * 
      */
-    @OutputExport(name="webSettings", type=GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse.class, parameters={})
+    @Export(name="webSettings", type=GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse.class, parameters={})
     private Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse> webSettings;
 
     /**

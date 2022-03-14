@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      * Column heading.
      * 
      */
-    @InputImport(name="header", required=true)
+    @Import(name="header", required=true)
       private final String header;
 
     public String getHeader() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      * Optional. Defines text alignment for all cells in this column.
      * 
      */
-    @InputImport(name="horizontalAlignment", required=true)
+    @Import(name="horizontalAlignment", required=true)
       private final String horizontalAlignment;
 
     public String getHorizontalAlignment() {

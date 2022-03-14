@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.SslPolicyWarningsItemResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSslPolicyResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -67,19 +67,19 @@ public final class GetSslPolicyResult {
      */
     private final List<SslPolicyWarningsItemResponse> warnings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSslPolicyResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customFeatures") List<String> customFeatures,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("minTlsVersion") String minTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("profile") String profile,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("warnings") List<SslPolicyWarningsItemResponse> warnings) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customFeatures") List<String> customFeatures,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("minTlsVersion") String minTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("profile") String profile,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("warnings") List<SslPolicyWarningsItemResponse> warnings) {
         this.creationTimestamp = creationTimestamp;
         this.customFeatures = customFeatures;
         this.description = description;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.GcsDestinationConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
      * Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
      * 
      */
-    @InputImport(name="destinationConnectionProfile", required=true)
+    @Import(name="destinationConnectionProfile", required=true)
       private final String destinationConnectionProfile;
 
     public String getDestinationConnectionProfile() {
@@ -32,7 +32,7 @@ public final class DestinationConfigResponse extends io.pulumi.resources.InvokeA
      * A configuration for how data should be loaded to Cloud Storage.
      * 
      */
-    @InputImport(name="gcsDestinationConfig", required=true)
+    @Import(name="gcsDestinationConfig", required=true)
       private final GcsDestinationConfigResponse gcsDestinationConfig;
 
     public GcsDestinationConfigResponse getGcsDestinationConfig() {

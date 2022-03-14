@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.enums.SandboxConfigType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the sandbox to use for the node (e.g. 'gvisor')
      * 
      */
-    @InputImport(name="sandboxType")
+    @Import(name="sandboxType")
       private final @Nullable Output<String> sandboxType;
 
     public Output<String> getSandboxType() {
@@ -34,7 +34,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the sandbox to use for the node.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<SandboxConfigType> type;
 
     public Output<SandboxConfigType> getType() {

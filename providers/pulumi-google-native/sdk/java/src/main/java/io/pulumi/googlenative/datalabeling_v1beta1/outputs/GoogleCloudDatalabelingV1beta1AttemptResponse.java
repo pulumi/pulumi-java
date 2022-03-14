@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleRpcStatusResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
     private final String attemptTime;
     /**
@@ -18,10 +18,10 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
      */
     private final List<GoogleRpcStatusResponse> partialFailures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1AttemptResponse(
-        @OutputCustomType.Parameter("attemptTime") String attemptTime,
-        @OutputCustomType.Parameter("partialFailures") List<GoogleRpcStatusResponse> partialFailures) {
+        @CustomType.Parameter("attemptTime") String attemptTime,
+        @CustomType.Parameter("partialFailures") List<GoogleRpcStatusResponse> partialFailures) {
         this.attemptTime = attemptTime;
         this.partialFailures = partialFailures;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.sourcerepo_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sourcerepo_v1.outputs.MirrorConfigResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRepoResult {
     /**
      * How this repository mirrors a repository managed by another service. Read-only field.
@@ -37,13 +37,13 @@ public final class GetRepoResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepoResult(
-        @OutputCustomType.Parameter("mirrorConfig") MirrorConfigResponse mirrorConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pubsubConfigs") Map<String,String> pubsubConfigs,
-        @OutputCustomType.Parameter("size") String size,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("mirrorConfig") MirrorConfigResponse mirrorConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pubsubConfigs") Map<String,String> pubsubConfigs,
+        @CustomType.Parameter("size") String size,
+        @CustomType.Parameter("url") String url) {
         this.mirrorConfig = mirrorConfig;
         this.name = name;
         this.pubsubConfigs = pubsubConfigs;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLienResult {
     /**
      * The creation time of this Lien.
@@ -41,14 +41,14 @@ public final class GetLienResult {
      */
     private final List<String> restrictions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLienResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("origin") String origin,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("restrictions") List<String> restrictions) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("origin") String origin,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("restrictions") List<String> restrictions) {
         this.createTime = createTime;
         this.name = name;
         this.origin = origin;

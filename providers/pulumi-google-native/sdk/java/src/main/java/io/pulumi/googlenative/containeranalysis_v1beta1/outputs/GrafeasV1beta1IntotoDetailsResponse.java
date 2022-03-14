@@ -3,21 +3,21 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.GrafeasV1beta1IntotoSignatureResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.LinkResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GrafeasV1beta1IntotoDetailsResponse {
     private final List<GrafeasV1beta1IntotoSignatureResponse> signatures;
     private final LinkResponse signed;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GrafeasV1beta1IntotoDetailsResponse(
-        @OutputCustomType.Parameter("signatures") List<GrafeasV1beta1IntotoSignatureResponse> signatures,
-        @OutputCustomType.Parameter("signed") LinkResponse signed) {
+        @CustomType.Parameter("signatures") List<GrafeasV1beta1IntotoSignatureResponse> signatures,
+        @CustomType.Parameter("signed") LinkResponse signed) {
         this.signatures = signatures;
         this.signed = signed;
     }

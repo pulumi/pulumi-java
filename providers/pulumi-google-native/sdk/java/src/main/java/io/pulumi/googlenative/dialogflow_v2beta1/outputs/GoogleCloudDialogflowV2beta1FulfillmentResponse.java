@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1FulfillmentResponse {
     /**
      * The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
@@ -39,13 +39,13 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1FulfillmentResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("features") List<GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse> features,
-        @OutputCustomType.Parameter("genericWebService") GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse genericWebService,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("features") List<GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse> features,
+        @CustomType.Parameter("genericWebService") GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse genericWebService,
+        @CustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.enabled = enabled;
         this.features = features;

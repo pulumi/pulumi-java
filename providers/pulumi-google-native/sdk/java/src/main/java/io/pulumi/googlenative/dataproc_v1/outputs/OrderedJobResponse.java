@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.HadoopJobResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.HiveJobResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.JobSchedulingResponse;
@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OrderedJobResponse {
     /**
      * Optional. Job is a Hadoop job.
@@ -81,20 +81,20 @@ public final class OrderedJobResponse {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrderedJobResponse(
-        @OutputCustomType.Parameter("hadoopJob") HadoopJobResponse hadoopJob,
-        @OutputCustomType.Parameter("hiveJob") HiveJobResponse hiveJob,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("pigJob") PigJobResponse pigJob,
-        @OutputCustomType.Parameter("prerequisiteStepIds") List<String> prerequisiteStepIds,
-        @OutputCustomType.Parameter("prestoJob") PrestoJobResponse prestoJob,
-        @OutputCustomType.Parameter("pysparkJob") PySparkJobResponse pysparkJob,
-        @OutputCustomType.Parameter("scheduling") JobSchedulingResponse scheduling,
-        @OutputCustomType.Parameter("sparkJob") SparkJobResponse sparkJob,
-        @OutputCustomType.Parameter("sparkRJob") SparkRJobResponse sparkRJob,
-        @OutputCustomType.Parameter("sparkSqlJob") SparkSqlJobResponse sparkSqlJob,
-        @OutputCustomType.Parameter("stepId") String stepId) {
+        @CustomType.Parameter("hadoopJob") HadoopJobResponse hadoopJob,
+        @CustomType.Parameter("hiveJob") HiveJobResponse hiveJob,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("pigJob") PigJobResponse pigJob,
+        @CustomType.Parameter("prerequisiteStepIds") List<String> prerequisiteStepIds,
+        @CustomType.Parameter("prestoJob") PrestoJobResponse prestoJob,
+        @CustomType.Parameter("pysparkJob") PySparkJobResponse pysparkJob,
+        @CustomType.Parameter("scheduling") JobSchedulingResponse scheduling,
+        @CustomType.Parameter("sparkJob") SparkJobResponse sparkJob,
+        @CustomType.Parameter("sparkRJob") SparkRJobResponse sparkRJob,
+        @CustomType.Parameter("sparkSqlJob") SparkSqlJobResponse sparkSqlJob,
+        @CustomType.Parameter("stepId") String stepId) {
         this.hadoopJob = hadoopJob;
         this.hiveJob = hiveJob;
         this.labels = labels;

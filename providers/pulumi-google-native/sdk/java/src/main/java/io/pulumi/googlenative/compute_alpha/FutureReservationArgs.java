@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.FutureReservationSpecificSKUPropertiesArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.FutureReservationTimeWindowArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ShareSettingsArgs;
@@ -21,14 +21,14 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * An optional description of this resource. Provide this property when you create the future reservation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -39,7 +39,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -50,21 +50,21 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
         return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -75,7 +75,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * List of Projects/Folders to share with.
      * 
      */
-    @InputImport(name="shareSettings")
+    @Import(name="shareSettings")
       private final @Nullable Output<ShareSettingsArgs> shareSettings;
 
     public Output<ShareSettingsArgs> getShareSettings() {
@@ -86,7 +86,7 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * Future Reservation configuration to indicate instance properties and total count.
      * 
      */
-    @InputImport(name="specificSkuProperties")
+    @Import(name="specificSkuProperties")
       private final @Nullable Output<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties;
 
     public Output<FutureReservationSpecificSKUPropertiesArgs> getSpecificSkuProperties() {
@@ -97,14 +97,14 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
      * Time window for this Future Reservation.
      * 
      */
-    @InputImport(name="timeWindow")
+    @Import(name="timeWindow")
       private final @Nullable Output<FutureReservationTimeWindowArgs> timeWindow;
 
     public Output<FutureReservationTimeWindowArgs> getTimeWindow() {
         return this.timeWindow == null ? Output.empty() : this.timeWindow;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

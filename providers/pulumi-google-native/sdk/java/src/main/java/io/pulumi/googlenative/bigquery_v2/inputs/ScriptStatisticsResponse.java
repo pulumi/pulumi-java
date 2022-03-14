@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.ScriptStackFrameResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
      * Whether this child job was a statement or expression.
      * 
      */
-    @InputImport(name="evaluationKind", required=true)
+    @Import(name="evaluationKind", required=true)
       private final String evaluationKind;
 
     public String getEvaluationKind() {
@@ -29,7 +29,7 @@ public final class ScriptStatisticsResponse extends io.pulumi.resources.InvokeAr
      * Stack trace showing the line/column/procedure name of each frame on the stack at the point where the current evaluation happened. The leaf frame is first, the primary script is last. Never empty.
      * 
      */
-    @InputImport(name="stackFrames", required=true)
+    @Import(name="stackFrames", required=true)
       private final List<ScriptStackFrameResponse> stackFrames;
 
     public List<ScriptStackFrameResponse> getStackFrames() {

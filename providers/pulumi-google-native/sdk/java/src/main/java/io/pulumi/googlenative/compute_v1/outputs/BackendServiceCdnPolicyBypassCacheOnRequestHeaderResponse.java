@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse {
     /**
      * The header field name to match on when bypassing cache. Values are case-insensitive.
@@ -15,8 +15,8 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse {
      */
     private final String headerName;
 
-    @OutputCustomType.Constructor
-    private BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse(@OutputCustomType.Parameter("headerName") String headerName) {
+    @CustomType.Constructor
+    private BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse(@CustomType.Parameter("headerName") String headerName) {
         this.headerName = headerName;
     }
 

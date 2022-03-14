@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudchannel_v1.ChannelPartnerLinkArgs;
@@ -25,7 +25,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * Cloud Identity info of the channel partner (IR).
      * 
      */
-    @OutputExport(name="channelPartnerCloudIdentityInfo", type=GoogleCloudChannelV1CloudIdentityInfoResponse.class, parameters={})
+    @Export(name="channelPartnerCloudIdentityInfo", type=GoogleCloudChannelV1CloudIdentityInfoResponse.class, parameters={})
     private Output<GoogleCloudChannelV1CloudIdentityInfoResponse> channelPartnerCloudIdentityInfo;
 
     /**
@@ -39,7 +39,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * Timestamp of when the channel partner link is created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -53,7 +53,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * URI of the web page where partner accepts the link invitation.
      * 
      */
-    @OutputExport(name="inviteLinkUri", type=String.class, parameters={})
+    @Export(name="inviteLinkUri", type=String.class, parameters={})
     private Output<String> inviteLinkUri;
 
     /**
@@ -67,7 +67,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * State of the channel partner link.
      * 
      */
-    @OutputExport(name="linkState", type=String.class, parameters={})
+    @Export(name="linkState", type=String.class, parameters={})
     private Output<String> linkState;
 
     /**
@@ -81,7 +81,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
      * 
      */
-    @OutputExport(name="publicId", type=String.class, parameters={})
+    @Export(name="publicId", type=String.class, parameters={})
     private Output<String> publicId;
 
     /**
@@ -109,7 +109,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * Cloud Identity ID of the linked reseller.
      * 
      */
-    @OutputExport(name="resellerCloudIdentityId", type=String.class, parameters={})
+    @Export(name="resellerCloudIdentityId", type=String.class, parameters={})
     private Output<String> resellerCloudIdentityId;
 
     /**
@@ -123,7 +123,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * Timestamp of when the channel partner link is updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

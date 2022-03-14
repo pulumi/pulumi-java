@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse {
     /**
      * The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterResponse {
      */
     private final Boolean redact;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1IntentParameterResponse(
-        @OutputCustomType.Parameter("entityType") String entityType,
-        @OutputCustomType.Parameter("isList") Boolean isList,
-        @OutputCustomType.Parameter("redact") Boolean redact) {
+        @CustomType.Parameter("entityType") String entityType,
+        @CustomType.Parameter("isList") Boolean isList,
+        @CustomType.Parameter("redact") Boolean redact) {
         this.entityType = entityType;
         this.isList = isList;
         this.redact = redact;

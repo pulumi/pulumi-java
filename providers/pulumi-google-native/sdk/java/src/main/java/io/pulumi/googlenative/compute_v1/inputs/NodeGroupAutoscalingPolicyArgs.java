@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.NodeGroupAutoscalingPolicyMode;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
      * 
      */
-    @InputImport(name="maxNodes")
+    @Import(name="maxNodes")
       private final @Nullable Output<Integer> maxNodes;
 
     public Output<Integer> getMaxNodes() {
@@ -30,7 +30,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * The minimum number of nodes that the group should have.
      * 
      */
-    @InputImport(name="minNodes")
+    @Import(name="minNodes")
       private final @Nullable Output<Integer> minNodes;
 
     public Output<Integer> getMinNodes() {
@@ -41,7 +41,7 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<NodeGroupAutoscalingPolicyMode> mode;
 
     public Output<NodeGroupAutoscalingPolicyMode> getMode() {

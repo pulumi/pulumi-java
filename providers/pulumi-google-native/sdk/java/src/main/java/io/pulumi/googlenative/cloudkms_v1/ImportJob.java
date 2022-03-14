@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.ImportJobArgs;
@@ -26,7 +26,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.
      * 
      */
-    @OutputExport(name="attestation", type=KeyOperationAttestationResponse.class, parameters={})
+    @Export(name="attestation", type=KeyOperationAttestationResponse.class, parameters={})
     private Output<KeyOperationAttestationResponse> attestation;
 
     /**
@@ -40,7 +40,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * The time at which this ImportJob was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -54,7 +54,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * The time this ImportJob expired. Only present if state is EXPIRED.
      * 
      */
-    @OutputExport(name="expireEventTime", type=String.class, parameters={})
+    @Export(name="expireEventTime", type=String.class, parameters={})
     private Output<String> expireEventTime;
 
     /**
@@ -68,7 +68,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * The time at which this ImportJob is scheduled for expiration and can no longer be used to import key material.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -82,7 +82,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * The time this ImportJob's key material was generated.
      * 
      */
-    @OutputExport(name="generateTime", type=String.class, parameters={})
+    @Export(name="generateTime", type=String.class, parameters={})
     private Output<String> generateTime;
 
     /**
@@ -96,7 +96,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * Immutable. The wrapping method to be used for incoming key material.
      * 
      */
-    @OutputExport(name="importMethod", type=String.class, parameters={})
+    @Export(name="importMethod", type=String.class, parameters={})
     private Output<String> importMethod;
 
     /**
@@ -110,7 +110,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * The resource name for this ImportJob in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}importJobs/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
      * 
      */
-    @OutputExport(name="protectionLevel", type=String.class, parameters={})
+    @Export(name="protectionLevel", type=String.class, parameters={})
     private Output<String> protectionLevel;
 
     /**
@@ -138,7 +138,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * The public key with which to wrap key material prior to import. Only returned if state is ACTIVE.
      * 
      */
-    @OutputExport(name="publicKey", type=WrappingPublicKeyResponse.class, parameters={})
+    @Export(name="publicKey", type=WrappingPublicKeyResponse.class, parameters={})
     private Output<WrappingPublicKeyResponse> publicKey;
 
     /**
@@ -152,7 +152,7 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
      * The current state of the ImportJob, indicating if it can be used.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

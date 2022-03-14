@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessSelectorResponse {
     /**
      * Optional. The permissions to appear in result.
@@ -21,10 +21,10 @@ public final class AccessSelectorResponse {
      */
     private final List<String> roles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessSelectorResponse(
-        @OutputCustomType.Parameter("permissions") List<String> permissions,
-        @OutputCustomType.Parameter("roles") List<String> roles) {
+        @CustomType.Parameter("permissions") List<String> permissions,
+        @CustomType.Parameter("roles") List<String> roles) {
         this.permissions = permissions;
         this.roles = roles;
     }

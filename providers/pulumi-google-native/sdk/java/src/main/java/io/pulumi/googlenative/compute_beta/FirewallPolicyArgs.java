@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.FirewallPolicyAssociationArgs;
 import io.pulumi.googlenative.compute_beta.inputs.FirewallPolicyRuleArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A list of associations that belong to this firewall policy.
      * 
      */
-    @InputImport(name="associations")
+    @Import(name="associations")
       private final @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
 
     public Output<List<FirewallPolicyAssociationArgs>> getAssociations() {
@@ -32,21 +32,21 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="parentId")
+    @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
     public Output<String> getParentId() {
         return this.parentId == null ? Output.empty() : this.parentId;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -57,7 +57,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match "*"). If no rules are provided when creating a firewall policy, a default rule with action "allow" will be added.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
 
     public Output<List<FirewallPolicyRuleArgs>> getRules() {
@@ -68,7 +68,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided name of the Organization firewall plicy. The name should be unique in the organization in which the firewall policy is created. This name must be set on creation and cannot be changed. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="shortName")
+    @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
     public Output<String> getShortName() {

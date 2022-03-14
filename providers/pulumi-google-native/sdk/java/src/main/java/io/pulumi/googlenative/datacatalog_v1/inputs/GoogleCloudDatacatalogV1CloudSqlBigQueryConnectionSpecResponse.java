@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * Database name.
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final String database;
 
     public String getDatabase() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * Cloud SQL instance ID in the format of `project:location:instance`.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -42,7 +42,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * Type of the Cloud SQL database.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

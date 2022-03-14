@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.WaiterArgs;
@@ -24,7 +24,7 @@ public class Waiter extends io.pulumi.resources.CustomResource {
      * The instant at which this Waiter resource was created. Adding the value of `timeout` to this instant yields the timeout deadline for the waiter.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -38,7 +38,7 @@ public class Waiter extends io.pulumi.resources.CustomResource {
      * If the value is `false`, it means the waiter is still waiting for one of its conditions to be met. If true, the waiter has finished. If the waiter finished due to a timeout or failure, `error` will be set.
      * 
      */
-    @OutputExport(name="done", type=Boolean.class, parameters={})
+    @Export(name="done", type=Boolean.class, parameters={})
     private Output<Boolean> done;
 
     /**
@@ -52,7 +52,7 @@ public class Waiter extends io.pulumi.resources.CustomResource {
      * If the waiter ended due to a failure or timeout, this value will be set.
      * 
      */
-    @OutputExport(name="error", type=StatusResponse.class, parameters={})
+    @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
@@ -66,7 +66,7 @@ public class Waiter extends io.pulumi.resources.CustomResource {
      * [Optional] The failure condition of this waiter. If this condition is met, `done` will be set to `true` and the `error` code will be set to `ABORTED`. The failure condition takes precedence over the success condition. If both conditions are met, a failure will be indicated. This value is optional; if no failure condition is set, the only failure scenario will be a timeout.
      * 
      */
-    @OutputExport(name="failure", type=EndConditionResponse.class, parameters={})
+    @Export(name="failure", type=EndConditionResponse.class, parameters={})
     private Output<EndConditionResponse> failure;
 
     /**
@@ -80,7 +80,7 @@ public class Waiter extends io.pulumi.resources.CustomResource {
      * The name of the Waiter resource, in the format: projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME] The `[PROJECT_ID]` must be a valid Google Cloud project ID, the `[CONFIG_NAME]` must be a valid RuntimeConfig resource, the `[WAITER_NAME]` must match RFC 1035 segment specification, and the length of `[WAITER_NAME]` must be less than 64 bytes. After you create a Waiter resource, you cannot change the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Waiter extends io.pulumi.resources.CustomResource {
      * [Required] The success condition. If this condition is met, `done` will be set to `true` and the `error` value will remain unset. The failure condition takes precedence over the success condition. If both conditions are met, a failure will be indicated.
      * 
      */
-    @OutputExport(name="success", type=EndConditionResponse.class, parameters={})
+    @Export(name="success", type=EndConditionResponse.class, parameters={})
     private Output<EndConditionResponse> success;
 
     /**
@@ -108,7 +108,7 @@ public class Waiter extends io.pulumi.resources.CustomResource {
      * [Required] Specifies the timeout of the waiter in seconds, beginning from the instant that `waiters().create` method is called. If this time elapses before the success or failure conditions are met, the waiter fails and sets the `error` code to `DEADLINE_EXCEEDED`.
      * 
      */
-    @OutputExport(name="timeout", type=String.class, parameters={})
+    @Export(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
     /**

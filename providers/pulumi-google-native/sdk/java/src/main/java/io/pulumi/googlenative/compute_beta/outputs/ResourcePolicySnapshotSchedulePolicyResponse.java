@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicyScheduleResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicySnapshotSchedulePolicyResponse {
     /**
      * Retention policy applied to snapshots created by this resource policy.
@@ -27,11 +27,11 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
      */
     private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyResponse(
-        @OutputCustomType.Parameter("retentionPolicy") ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy,
-        @OutputCustomType.Parameter("schedule") ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule,
-        @OutputCustomType.Parameter("snapshotProperties") ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
+        @CustomType.Parameter("retentionPolicy") ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy,
+        @CustomType.Parameter("schedule") ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule,
+        @CustomType.Parameter("snapshotProperties") ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
         this.retentionPolicy = retentionPolicy;
         this.schedule = schedule;
         this.snapshotProperties = snapshotProperties;

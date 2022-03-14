@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.inputs.PolicyAlternativeNameServerConfigArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.PolicyNetworkArgs;
 import java.lang.Boolean;
@@ -22,14 +22,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
      * 
      */
-    @InputImport(name="alternativeNameServerConfig")
+    @Import(name="alternativeNameServerConfig")
       private final @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
 
     public Output<PolicyAlternativeNameServerConfigArgs> getAlternativeNameServerConfig() {
         return this.alternativeNameServerConfig == null ? Output.empty() : this.alternativeNameServerConfig;
     }
 
-    @InputImport(name="clientOperationId")
+    @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
     public Output<String> getClientOperationId() {
@@ -40,7 +40,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
      * 
      */
-    @InputImport(name="enableInboundForwarding")
+    @Import(name="enableInboundForwarding")
       private final @Nullable Output<Boolean> enableInboundForwarding;
 
     public Output<Boolean> getEnableInboundForwarding() {
@@ -62,7 +62,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
      * 
      */
-    @InputImport(name="enableLogging")
+    @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
@@ -73,14 +73,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier for the resource; defined by the server (output only).
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
         return this.id == null ? Output.empty() : this.id;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -91,7 +91,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * User-assigned name for this policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -102,14 +102,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * List of network names specifying networks to which this policy is applied.
      * 
      */
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<PolicyNetworkArgs>> networks;
 
     public Output<List<PolicyNetworkArgs>> getNetworks() {
         return this.networks == null ? Output.empty() : this.networks;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.enums.TypePrimitive;
 import io.pulumi.googlenative.healthcare_v1.inputs.FieldArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * The (sub) fields this type has (if not primitive).
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<FieldArgs>> fields;
 
     public Output<List<FieldArgs>> getFields() {
@@ -36,7 +36,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
      * 
      */
-    @InputImport(name="primitive")
+    @Import(name="primitive")
       private final @Nullable Output<TypePrimitive> primitive;
 
     public Output<TypePrimitive> getPrimitive() {

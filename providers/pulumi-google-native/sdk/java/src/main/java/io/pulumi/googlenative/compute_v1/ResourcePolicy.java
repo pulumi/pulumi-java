@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.ResourcePolicyArgs;
@@ -25,7 +25,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -35,7 +35,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Resource policy for instances for placement configuration.
      * 
      */
-    @OutputExport(name="groupPlacementPolicy", type=ResourcePolicyGroupPlacementPolicyResponse.class, parameters={})
+    @Export(name="groupPlacementPolicy", type=ResourcePolicyGroupPlacementPolicyResponse.class, parameters={})
     private Output<ResourcePolicyGroupPlacementPolicyResponse> groupPlacementPolicy;
 
     /**
@@ -59,7 +59,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Resource policy for scheduling instance operations.
      * 
      */
-    @OutputExport(name="instanceSchedulePolicy", type=ResourcePolicyInstanceSchedulePolicyResponse.class, parameters={})
+    @Export(name="instanceSchedulePolicy", type=ResourcePolicyInstanceSchedulePolicyResponse.class, parameters={})
     private Output<ResourcePolicyInstanceSchedulePolicyResponse> instanceSchedulePolicy;
 
     /**
@@ -73,7 +73,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#resource_policies for resource policies.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -87,7 +87,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     public Output<String> getRegion() {
@@ -107,7 +107,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * The system status of the resource policy.
      * 
      */
-    @OutputExport(name="resourceStatus", type=ResourcePolicyResourceStatusResponse.class, parameters={})
+    @Export(name="resourceStatus", type=ResourcePolicyResourceStatusResponse.class, parameters={})
     private Output<ResourcePolicyResourceStatusResponse> resourceStatus;
 
     /**
@@ -121,7 +121,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Server-defined fully-qualified URL for this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -135,7 +135,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Resource policy for persistent disks for creating snapshots.
      * 
      */
-    @OutputExport(name="snapshotSchedulePolicy", type=ResourcePolicySnapshotSchedulePolicyResponse.class, parameters={})
+    @Export(name="snapshotSchedulePolicy", type=ResourcePolicySnapshotSchedulePolicyResponse.class, parameters={})
     private Output<ResourcePolicySnapshotSchedulePolicyResponse> snapshotSchedulePolicy;
 
     /**
@@ -149,7 +149,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * The status of resource policy creation.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

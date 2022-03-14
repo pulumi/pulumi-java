@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.RegexValidationResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.ValueValidationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ParameterValidationResponse {
     /**
      * Validation based on regular expressions.
@@ -21,10 +21,10 @@ public final class ParameterValidationResponse {
      */
     private final ValueValidationResponse values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParameterValidationResponse(
-        @OutputCustomType.Parameter("regex") RegexValidationResponse regex,
-        @OutputCustomType.Parameter("values") ValueValidationResponse values) {
+        @CustomType.Parameter("regex") RegexValidationResponse regex,
+        @CustomType.Parameter("values") ValueValidationResponse values) {
         this.regex = regex;
         this.values = values;
     }

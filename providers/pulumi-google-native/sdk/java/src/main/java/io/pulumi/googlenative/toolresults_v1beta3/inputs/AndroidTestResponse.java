@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidAppInfoResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidInstrumentationTestResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidRoboTestResponse;
@@ -24,7 +24,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * Information about the application under test.
      * 
      */
-    @InputImport(name="androidAppInfo", required=true)
+    @Import(name="androidAppInfo", required=true)
       private final AndroidAppInfoResponse androidAppInfo;
 
     public AndroidAppInfoResponse getAndroidAppInfo() {
@@ -35,7 +35,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * An Android instrumentation test.
      * 
      */
-    @InputImport(name="androidInstrumentationTest", required=true)
+    @Import(name="androidInstrumentationTest", required=true)
       private final AndroidInstrumentationTestResponse androidInstrumentationTest;
 
     public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
@@ -46,7 +46,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * An Android robo test.
      * 
      */
-    @InputImport(name="androidRoboTest", required=true)
+    @Import(name="androidRoboTest", required=true)
       private final AndroidRoboTestResponse androidRoboTest;
 
     public AndroidRoboTestResponse getAndroidRoboTest() {
@@ -57,7 +57,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * An Android test loop.
      * 
      */
-    @InputImport(name="androidTestLoop", required=true)
+    @Import(name="androidTestLoop", required=true)
       private final AndroidTestLoopResponse androidTestLoop;
 
     public AndroidTestLoopResponse getAndroidTestLoop() {
@@ -68,7 +68,7 @@ public final class AndroidTestResponse extends io.pulumi.resources.InvokeArgs {
      * Max time a test is allowed to run before it is automatically cancelled.
      * 
      */
-    @InputImport(name="testTimeout", required=true)
+    @Import(name="testTimeout", required=true)
       private final DurationResponse testTimeout;
 
     public DurationResponse getTestTimeout() {

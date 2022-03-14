@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.translate_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.translate_v3beta1.inputs.GlossaryInputConfigArgs;
 import io.pulumi.googlenative.translate_v3beta1.inputs.LanguageCodePairArgs;
 import io.pulumi.googlenative.translate_v3beta1.inputs.LanguageCodesSetArgs;
@@ -21,7 +21,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
      * 
      */
-    @InputImport(name="inputConfig", required=true)
+    @Import(name="inputConfig", required=true)
       private final Output<GlossaryInputConfigArgs> inputConfig;
 
     public Output<GlossaryInputConfigArgs> getInputConfig() {
@@ -32,7 +32,7 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * Used with equivalent term set glossaries.
      * 
      */
-    @InputImport(name="languageCodesSet")
+    @Import(name="languageCodesSet")
       private final @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
 
     public Output<LanguageCodesSetArgs> getLanguageCodesSet() {
@@ -43,14 +43,14 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * Used with unidirectional glossaries.
      * 
      */
-    @InputImport(name="languagePair")
+    @Import(name="languagePair")
       private final @Nullable Output<LanguageCodePairArgs> languagePair;
 
     public Output<LanguageCodePairArgs> getLanguagePair() {
         return this.languagePair == null ? Output.empty() : this.languagePair;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -61,14 +61,14 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

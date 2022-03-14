@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.LoggingComponentConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Logging components configuration
      * 
      */
-    @InputImport(name="componentConfig")
+    @Import(name="componentConfig")
       private final @Nullable Output<LoggingComponentConfigArgs> componentConfig;
 
     public Output<LoggingComponentConfigArgs> getComponentConfig() {

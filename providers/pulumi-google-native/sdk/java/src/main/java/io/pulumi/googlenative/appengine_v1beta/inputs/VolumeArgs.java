@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name for the volume.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Volume size in gigabytes.
      * 
      */
-    @InputImport(name="sizeGb")
+    @Import(name="sizeGb")
       private final @Nullable Output<Double> sizeGb;
 
     public Output<Double> getSizeGb() {
@@ -45,7 +45,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Underlying volume type, e.g. 'tmpfs'.
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

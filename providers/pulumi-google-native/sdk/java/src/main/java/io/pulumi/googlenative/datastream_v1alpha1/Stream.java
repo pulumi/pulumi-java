@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1alpha1.StreamArgs;
@@ -29,7 +29,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
      * 
      */
-    @OutputExport(name="backfillAll", type=BackfillAllStrategyResponse.class, parameters={})
+    @Export(name="backfillAll", type=BackfillAllStrategyResponse.class, parameters={})
     private Output<BackfillAllStrategyResponse> backfillAll;
 
     /**
@@ -43,7 +43,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * Do not automatically backfill any objects.
      * 
      */
-    @OutputExport(name="backfillNone", type=BackfillNoneStrategyResponse.class, parameters={})
+    @Export(name="backfillNone", type=BackfillNoneStrategyResponse.class, parameters={})
     private Output<BackfillNoneStrategyResponse> backfillNone;
 
     /**
@@ -57,7 +57,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The creation time of the stream.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -71,7 +71,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
      * 
      */
-    @OutputExport(name="customerManagedEncryptionKey", type=String.class, parameters={})
+    @Export(name="customerManagedEncryptionKey", type=String.class, parameters={})
     private Output<String> customerManagedEncryptionKey;
 
     /**
@@ -85,7 +85,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * Destination connection profile configuration.
      * 
      */
-    @OutputExport(name="destinationConfig", type=DestinationConfigResponse.class, parameters={})
+    @Export(name="destinationConfig", type=DestinationConfigResponse.class, parameters={})
     private Output<DestinationConfigResponse> destinationConfig;
 
     /**
@@ -99,7 +99,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * Display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -113,7 +113,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * Errors on the Stream.
      * 
      */
-    @OutputExport(name="errors", type=List.class, parameters={ErrorResponse.class})
+    @Export(name="errors", type=List.class, parameters={ErrorResponse.class})
     private Output<List<ErrorResponse>> errors;
 
     /**
@@ -127,7 +127,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * Labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -141,7 +141,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The stream's name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -155,7 +155,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * Source connection profile configuration.
      * 
      */
-    @OutputExport(name="sourceConfig", type=SourceConfigResponse.class, parameters={})
+    @Export(name="sourceConfig", type=SourceConfigResponse.class, parameters={})
     private Output<SourceConfigResponse> sourceConfig;
 
     /**
@@ -169,7 +169,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The state of the stream.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -183,7 +183,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The last update time of the stream.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

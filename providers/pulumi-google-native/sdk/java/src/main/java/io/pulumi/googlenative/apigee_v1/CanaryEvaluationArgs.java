@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * The stable version that is serving requests.
      * 
      */
-    @InputImport(name="control", required=true)
+    @Import(name="control", required=true)
       private final Output<String> control;
 
     public Output<String> getControl() {
@@ -29,14 +29,14 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * End time for the evaluation's analysis.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
     public Output<String> getEndTime() {
         return this.endTime;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -47,14 +47,14 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * Labels used to filter the metrics used for a canary evaluation.
      * 
      */
-    @InputImport(name="metricLabels", required=true)
+    @Import(name="metricLabels", required=true)
       private final Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
 
     public Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> getMetricLabels() {
         return this.metricLabels;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -65,7 +65,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * Start time for the canary evaluation's analysis.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -76,7 +76,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * The newer version that is serving requests.
      * 
      */
-    @InputImport(name="treatment", required=true)
+    @Import(name="treatment", required=true)
       private final Output<String> treatment;
 
     public Output<String> getTreatment() {

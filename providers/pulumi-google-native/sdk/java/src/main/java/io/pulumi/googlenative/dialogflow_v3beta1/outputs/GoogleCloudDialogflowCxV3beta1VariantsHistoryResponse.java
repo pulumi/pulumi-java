@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1VersionVariantsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse {
     /**
      * Update time of the variants.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1VariantsHistoryResponse(
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("versionVariants") GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("versionVariants") GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
         this.updateTime = updateTime;
         this.versionVariants = versionVariants;
     }

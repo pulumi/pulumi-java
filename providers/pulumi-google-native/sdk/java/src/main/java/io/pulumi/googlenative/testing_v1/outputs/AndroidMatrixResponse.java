@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidMatrixResponse {
     /**
      * The ids of the set of Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
@@ -31,12 +31,12 @@ public final class AndroidMatrixResponse {
      */
     private final List<String> orientations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AndroidMatrixResponse(
-        @OutputCustomType.Parameter("androidModelIds") List<String> androidModelIds,
-        @OutputCustomType.Parameter("androidVersionIds") List<String> androidVersionIds,
-        @OutputCustomType.Parameter("locales") List<String> locales,
-        @OutputCustomType.Parameter("orientations") List<String> orientations) {
+        @CustomType.Parameter("androidModelIds") List<String> androidModelIds,
+        @CustomType.Parameter("androidVersionIds") List<String> androidVersionIds,
+        @CustomType.Parameter("locales") List<String> locales,
+        @CustomType.Parameter("orientations") List<String> orientations) {
         this.androidModelIds = androidModelIds;
         this.androidVersionIds = androidVersionIds;
         this.locales = locales;

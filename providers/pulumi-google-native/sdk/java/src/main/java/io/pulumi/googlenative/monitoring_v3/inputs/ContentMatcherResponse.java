@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ContentMatcherResponse extends io.pulumi.resources.InvokeArgs
      * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final String content;
 
     public String getContent() {
@@ -31,7 +31,7 @@ public final class ContentMatcherResponse extends io.pulumi.resources.InvokeArgs
      * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
      * 
      */
-    @InputImport(name="matcher", required=true)
+    @Import(name="matcher", required=true)
       private final String matcher;
 
     public String getMatcher() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeDistributionResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.WindowsUpdateResponse;
@@ -23,7 +23,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
      * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
      * 
      */
-    @InputImport(name="distribution", required=true)
+    @Import(name="distribution", required=true)
       private final UpgradeDistributionResponse distribution;
 
     public UpgradeDistributionResponse getDistribution() {
@@ -34,7 +34,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
      */
-    @InputImport(name="package", required=true)
+    @Import(name="package", required=true)
       private final String $package;
 
     public String get$package() {
@@ -45,7 +45,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
      * Required for non-Windows OS. The version of the package in a machine + human readable form.
      * 
      */
-    @InputImport(name="parsedVersion", required=true)
+    @Import(name="parsedVersion", required=true)
       private final VersionResponse parsedVersion;
 
     public VersionResponse getParsedVersion() {
@@ -56,7 +56,7 @@ public final class UpgradeOccurrenceResponse extends io.pulumi.resources.InvokeA
      * Required for Windows OS. Represents the metadata about the Windows update.
      * 
      */
-    @InputImport(name="windowsUpdate", required=true)
+    @Import(name="windowsUpdate", required=true)
       private final WindowsUpdateResponse windowsUpdate;
 
     public WindowsUpdateResponse getWindowsUpdate() {

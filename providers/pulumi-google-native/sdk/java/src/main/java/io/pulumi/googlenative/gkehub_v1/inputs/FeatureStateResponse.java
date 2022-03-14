@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FeatureStateResponse extends io.pulumi.resources.InvokeArgs {
      * The high-level, machine-readable status of this Feature.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -31,7 +31,7 @@ public final class FeatureStateResponse extends io.pulumi.resources.InvokeArgs {
      * A human-readable description of the current status.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -42,7 +42,7 @@ public final class FeatureStateResponse extends io.pulumi.resources.InvokeArgs {
      * The time this status and any related Feature-specific details were updated.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

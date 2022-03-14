@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.FirewallLogConfigMetadata;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
      * This field denotes whether to enable logging for a particular firewall rule.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -34,7 +34,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
      * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<FirewallLogConfigMetadata> metadata;
 
     public Output<FirewallLogConfigMetadata> getMetadata() {

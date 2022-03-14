@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetHostQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHostQueryArgs Empty = new GetHostQueryArgs();
 
-    @InputImport(name="hostQueryId", required=true)
+    @Import(name="hostQueryId", required=true)
       private final String hostQueryId;
 
     public String getHostQueryId() {
         return this.hostQueryId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {

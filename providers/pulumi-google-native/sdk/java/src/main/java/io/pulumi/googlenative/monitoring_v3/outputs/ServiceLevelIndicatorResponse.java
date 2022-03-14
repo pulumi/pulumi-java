@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.BasicSliResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.RequestBasedSliResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.WindowsBasedSliResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceLevelIndicatorResponse {
     /**
      * Basic SLI on a well-known service type.
@@ -27,11 +27,11 @@ public final class ServiceLevelIndicatorResponse {
      */
     private final WindowsBasedSliResponse windowsBased;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceLevelIndicatorResponse(
-        @OutputCustomType.Parameter("basicSli") BasicSliResponse basicSli,
-        @OutputCustomType.Parameter("requestBased") RequestBasedSliResponse requestBased,
-        @OutputCustomType.Parameter("windowsBased") WindowsBasedSliResponse windowsBased) {
+        @CustomType.Parameter("basicSli") BasicSliResponse basicSli,
+        @CustomType.Parameter("requestBased") RequestBasedSliResponse requestBased,
+        @CustomType.Parameter("windowsBased") WindowsBasedSliResponse windowsBased) {
         this.basicSli = basicSli;
         this.requestBased = requestBased;
         this.windowsBased = windowsBased;

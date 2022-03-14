@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.CisBenchmarkResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.ComplianceVersionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComplianceNoteResponse {
     private final CisBenchmarkResponse cisBenchmark;
     /**
@@ -44,15 +44,15 @@ public final class ComplianceNoteResponse {
      */
     private final List<ComplianceVersionResponse> version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComplianceNoteResponse(
-        @OutputCustomType.Parameter("cisBenchmark") CisBenchmarkResponse cisBenchmark,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("rationale") String rationale,
-        @OutputCustomType.Parameter("remediation") String remediation,
-        @OutputCustomType.Parameter("scanInstructions") String scanInstructions,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("version") List<ComplianceVersionResponse> version) {
+        @CustomType.Parameter("cisBenchmark") CisBenchmarkResponse cisBenchmark,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("rationale") String rationale,
+        @CustomType.Parameter("remediation") String remediation,
+        @CustomType.Parameter("scanInstructions") String scanInstructions,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("version") List<ComplianceVersionResponse> version) {
         this.cisBenchmark = cisBenchmark;
         this.description = description;
         this.rationale = rationale;

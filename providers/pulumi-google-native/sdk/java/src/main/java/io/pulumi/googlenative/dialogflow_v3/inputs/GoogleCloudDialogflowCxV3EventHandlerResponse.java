@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * The name of the event to handle.
      * 
      */
-    @InputImport(name="event", required=true)
+    @Import(name="event", required=true)
       private final String event;
 
     public String getEvent() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * The unique identifier of this event handler.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
      */
-    @InputImport(name="targetFlow", required=true)
+    @Import(name="targetFlow", required=true)
       private final String targetFlow;
 
     public String getTargetFlow() {
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
      */
-    @InputImport(name="targetPage", required=true)
+    @Import(name="targetPage", required=true)
       private final String targetPage;
 
     public String getTargetPage() {
@@ -65,7 +65,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse extends io.pulu
      * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
      * 
      */
-    @InputImport(name="triggerFulfillment", required=true)
+    @Import(name="triggerFulfillment", required=true)
       private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
     public GoogleCloudDialogflowCxV3FulfillmentResponse getTriggerFulfillment() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BigQueryIODetailsResponse {
     /**
      * Dataset accessed in the connection.
@@ -30,12 +30,12 @@ public final class BigQueryIODetailsResponse {
      */
     private final String table;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BigQueryIODetailsResponse(
-        @OutputCustomType.Parameter("dataset") String dataset,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("table") String table) {
+        @CustomType.Parameter("dataset") String dataset,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("table") String table) {
         this.dataset = dataset;
         this.project = project;
         this.query = query;

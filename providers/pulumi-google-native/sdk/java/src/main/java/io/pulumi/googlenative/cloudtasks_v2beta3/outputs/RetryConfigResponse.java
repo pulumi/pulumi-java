@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RetryConfigResponse {
     /**
      * Number of attempts per task. Cloud Tasks will attempt the task `max_attempts` times (that is, if the first attempt fails, then there will be `max_attempts - 1` retries). Must be >= -1. If unspecified when the queue is created, Cloud Tasks will pick the default. -1 indicates unlimited attempts. This field has the same meaning as [task_retry_limit in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
@@ -36,13 +36,13 @@ public final class RetryConfigResponse {
      */
     private final String minBackoff;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetryConfigResponse(
-        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
-        @OutputCustomType.Parameter("maxBackoff") String maxBackoff,
-        @OutputCustomType.Parameter("maxDoublings") Integer maxDoublings,
-        @OutputCustomType.Parameter("maxRetryDuration") String maxRetryDuration,
-        @OutputCustomType.Parameter("minBackoff") String minBackoff) {
+        @CustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @CustomType.Parameter("maxBackoff") String maxBackoff,
+        @CustomType.Parameter("maxDoublings") Integer maxDoublings,
+        @CustomType.Parameter("maxRetryDuration") String maxRetryDuration,
+        @CustomType.Parameter("minBackoff") String minBackoff) {
         this.maxAttempts = maxAttempts;
         this.maxBackoff = maxBackoff;
         this.maxDoublings = maxDoublings;

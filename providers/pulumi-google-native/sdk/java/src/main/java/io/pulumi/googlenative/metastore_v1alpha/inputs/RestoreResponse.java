@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * The relative resource name of the metastore service backup to restore from, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}.
      * 
      */
-    @InputImport(name="backup", required=true)
+    @Import(name="backup", required=true)
       private final String backup;
 
     public String getBackup() {
@@ -31,7 +31,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * The restore details containing the revision of the service to be restored to, in format of JSON.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final String details;
 
     public String getDetails() {
@@ -42,7 +42,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * The time when the restore ended.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -53,7 +53,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * The time when the restore started.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -64,7 +64,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * The current state of the restore.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -75,7 +75,7 @@ public final class RestoreResponse extends io.pulumi.resources.InvokeArgs {
      * The type of restore.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

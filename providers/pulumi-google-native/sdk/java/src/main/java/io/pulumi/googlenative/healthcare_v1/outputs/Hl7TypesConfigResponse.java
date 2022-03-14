@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.TypeResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.VersionSourceResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Hl7TypesConfigResponse {
     /**
      * The HL7v2 type definitions.
@@ -22,10 +22,10 @@ public final class Hl7TypesConfigResponse {
      */
     private final List<VersionSourceResponse> version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Hl7TypesConfigResponse(
-        @OutputCustomType.Parameter("type") List<TypeResponse> type,
-        @OutputCustomType.Parameter("version") List<VersionSourceResponse> version) {
+        @CustomType.Parameter("type") List<TypeResponse> type,
+        @CustomType.Parameter("version") List<VersionSourceResponse> version) {
         this.type = type;
         this.version = version;
     }

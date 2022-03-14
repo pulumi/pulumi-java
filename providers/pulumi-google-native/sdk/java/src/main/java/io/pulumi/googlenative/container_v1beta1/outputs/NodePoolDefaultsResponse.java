@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.NodeConfigDefaultsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodePoolDefaultsResponse {
     /**
      * Subset of NodeConfig message that has defaults.
@@ -15,8 +15,8 @@ public final class NodePoolDefaultsResponse {
      */
     private final NodeConfigDefaultsResponse nodeConfigDefaults;
 
-    @OutputCustomType.Constructor
-    private NodePoolDefaultsResponse(@OutputCustomType.Parameter("nodeConfigDefaults") NodeConfigDefaultsResponse nodeConfigDefaults) {
+    @CustomType.Constructor
+    private NodePoolDefaultsResponse(@CustomType.Parameter("nodeConfigDefaults") NodeConfigDefaultsResponse nodeConfigDefaults) {
         this.nodeConfigDefaults = nodeConfigDefaults;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceAptRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceGooRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceYumRepositoryResponse;
@@ -23,7 +23,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
      * An Apt Repository.
      * 
      */
-    @InputImport(name="apt", required=true)
+    @Import(name="apt", required=true)
       private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
 
     public OSPolicyResourceRepositoryResourceAptRepositoryResponse getApt() {
@@ -34,7 +34,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
      * A Goo Repository.
      * 
      */
-    @InputImport(name="goo", required=true)
+    @Import(name="goo", required=true)
       private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
 
     public OSPolicyResourceRepositoryResourceGooRepositoryResponse getGoo() {
@@ -45,7 +45,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
      * A Yum Repository.
      * 
      */
-    @InputImport(name="yum", required=true)
+    @Import(name="yum", required=true)
       private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
 
     public OSPolicyResourceRepositoryResourceYumRepositoryResponse getYum() {
@@ -56,7 +56,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends io.pulumi.
      * A Zypper Repository.
      * 
      */
-    @InputImport(name="zypper", required=true)
+    @Import(name="zypper", required=true)
       private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
     public OSPolicyResourceRepositoryResourceZypperRepositoryResponse getZypper() {

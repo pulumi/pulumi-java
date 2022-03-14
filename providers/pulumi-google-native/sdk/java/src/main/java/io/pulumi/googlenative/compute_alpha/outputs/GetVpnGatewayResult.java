@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.VpnGatewayVpnGatewayInterfaceResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVpnGatewayResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -68,19 +68,19 @@ public final class GetVpnGatewayResult {
      */
     private final List<VpnGatewayVpnGatewayInterfaceResponse> vpnInterfaces;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpnGatewayResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("stackType") String stackType,
-        @OutputCustomType.Parameter("vpnInterfaces") List<VpnGatewayVpnGatewayInterfaceResponse> vpnInterfaces) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("stackType") String stackType,
+        @CustomType.Parameter("vpnInterfaces") List<VpnGatewayVpnGatewayInterfaceResponse> vpnInterfaces) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

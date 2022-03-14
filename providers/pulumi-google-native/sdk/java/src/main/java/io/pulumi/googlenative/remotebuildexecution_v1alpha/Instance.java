@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.remotebuildexecution_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.InstanceArgs;
@@ -24,7 +24,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The policy to define whether or not RBE features can be used or how they can be used.
      * 
      */
-    @OutputExport(name="featurePolicy", type=GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse.class, parameters={})
+    @Export(name="featurePolicy", type=GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse.class, parameters={})
     private Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse> featurePolicy;
 
     /**
@@ -38,7 +38,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The location is a GCP region. Currently only `us-central1` is supported.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -52,7 +52,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Whether stack driver logging is enabled for the instance.
      * 
      */
-    @OutputExport(name="loggingEnabled", type=Boolean.class, parameters={})
+    @Export(name="loggingEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> loggingEnabled;
 
     /**
@@ -66,7 +66,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an instance since it is provided in the `instance_id` field.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * State of the instance.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

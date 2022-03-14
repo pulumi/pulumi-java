@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse {
     /**
      * URL must have length equal or less than 2000 characters.
@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse {
      */
     private final String redirectUri;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudRetailV2alphaRuleRedirectActionResponse(@OutputCustomType.Parameter("redirectUri") String redirectUri) {
+    @CustomType.Constructor
+    private GoogleCloudRetailV2alphaRuleRedirectActionResponse(@CustomType.Parameter("redirectUri") String redirectUri) {
         this.redirectUri = redirectUri;
     }
 

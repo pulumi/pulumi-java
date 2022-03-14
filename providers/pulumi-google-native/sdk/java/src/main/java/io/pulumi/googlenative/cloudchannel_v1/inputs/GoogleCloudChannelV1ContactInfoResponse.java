@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * The customer account contact's display name, formatted as a combination of the customer's first and last name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -31,7 +31,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * The customer account's contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer's username for those accounts. Use this email to invite Team customers.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -42,7 +42,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * The customer account contact's first name. Optional for Team customers.
      * 
      */
-    @InputImport(name="firstName", required=true)
+    @Import(name="firstName", required=true)
       private final String firstName;
 
     public String getFirstName() {
@@ -53,7 +53,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * The customer account contact's last name. Optional for Team customers.
      * 
      */
-    @InputImport(name="lastName", required=true)
+    @Import(name="lastName", required=true)
       private final String lastName;
 
     public String getLastName() {
@@ -64,7 +64,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * The customer account's contact phone number.
      * 
      */
-    @InputImport(name="phone", required=true)
+    @Import(name="phone", required=true)
       private final String phone;
 
     public String getPhone() {
@@ -75,7 +75,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * Optional. The customer account contact's job title.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

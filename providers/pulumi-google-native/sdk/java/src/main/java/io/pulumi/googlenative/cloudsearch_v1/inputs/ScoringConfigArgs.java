@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
      * 
      */
-    @InputImport(name="disableFreshness")
+    @Import(name="disableFreshness")
       private final @Nullable Output<Boolean> disableFreshness;
 
     public Output<Boolean> getDisableFreshness() {
@@ -33,7 +33,7 @@ public final class ScoringConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to personalize the results. By default, personal signals will be used to boost results.
      * 
      */
-    @InputImport(name="disablePersonalization")
+    @Import(name="disablePersonalization")
       private final @Nullable Output<Boolean> disablePersonalization;
 
     public Output<Boolean> getDisablePersonalization() {

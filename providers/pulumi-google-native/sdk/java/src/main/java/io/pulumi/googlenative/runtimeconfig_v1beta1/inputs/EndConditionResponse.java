@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.CardinalityResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
      * The cardinality of the `EndCondition`.
      * 
      */
-    @InputImport(name="cardinality", required=true)
+    @Import(name="cardinality", required=true)
       private final CardinalityResponse cardinality;
 
     public CardinalityResponse getCardinality() {

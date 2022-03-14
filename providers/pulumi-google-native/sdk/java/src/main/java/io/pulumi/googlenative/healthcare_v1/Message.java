@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.MessageArgs;
@@ -26,7 +26,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * The datetime when the message was created. Set by the server.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * Raw message bytes.
      * 
      */
-    @OutputExport(name="data", type=String.class, parameters={})
+    @Export(name="data", type=String.class, parameters={})
     private Output<String> data;
 
     /**
@@ -54,7 +54,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * User-supplied key-value pairs used to organize HL7v2 stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -68,7 +68,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * The message type for this message. MSH-9.1.
      * 
      */
-    @OutputExport(name="messageType", type=String.class, parameters={})
+    @Export(name="messageType", type=String.class, parameters={})
     private Output<String> messageType;
 
     /**
@@ -82,7 +82,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * Resource name of the Message, of the form `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * The parsed version of the raw message data.
      * 
      */
-    @OutputExport(name="parsedData", type=ParsedDataResponse.class, parameters={})
+    @Export(name="parsedData", type=ParsedDataResponse.class, parameters={})
     private Output<ParsedDataResponse> parsedData;
 
     /**
@@ -110,7 +110,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * All patient IDs listed in the PID-2, PID-3, and PID-4 segments of this message.
      * 
      */
-    @OutputExport(name="patientIds", type=List.class, parameters={PatientIdResponse.class})
+    @Export(name="patientIds", type=List.class, parameters={PatientIdResponse.class})
     private Output<List<PatientIdResponse>> patientIds;
 
     /**
@@ -124,7 +124,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * The parsed version of the raw message data schematized according to this store's schemas and type definitions.
      * 
      */
-    @OutputExport(name="schematizedData", type=SchematizedDataResponse.class, parameters={})
+    @Export(name="schematizedData", type=SchematizedDataResponse.class, parameters={})
     private Output<SchematizedDataResponse> schematizedData;
 
     /**
@@ -138,7 +138,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * The hospital that this message came from. MSH-4.
      * 
      */
-    @OutputExport(name="sendFacility", type=String.class, parameters={})
+    @Export(name="sendFacility", type=String.class, parameters={})
     private Output<String> sendFacility;
 
     /**
@@ -152,7 +152,7 @@ public class Message extends io.pulumi.resources.CustomResource {
      * The datetime the sending application sent this message. MSH-7.
      * 
      */
-    @OutputExport(name="sendTime", type=String.class, parameters={})
+    @Export(name="sendTime", type=String.class, parameters={})
     private Output<String> sendTime;
 
     /**

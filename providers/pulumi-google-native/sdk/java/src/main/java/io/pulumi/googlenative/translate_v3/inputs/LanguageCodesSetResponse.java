@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LanguageCodesSetResponse extends io.pulumi.resources.InvokeAr
      * The BCP-47 language code(s) for terms defined in the glossary. All entries are unique. The list contains at least two entries. Expected to be an exact match for GlossaryTerm.language_code.
      * 
      */
-    @InputImport(name="languageCodes", required=true)
+    @Import(name="languageCodes", required=true)
       private final List<String> languageCodes;
 
     public List<String> getLanguageCodes() {

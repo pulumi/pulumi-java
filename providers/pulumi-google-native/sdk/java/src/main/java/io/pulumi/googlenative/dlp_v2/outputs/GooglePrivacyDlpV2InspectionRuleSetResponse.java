@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectionRuleResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
     /**
      * List of infoTypes this rule set is applied to.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
      */
     private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2InspectionRuleSetResponse(
-        @OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        @OutputCustomType.Parameter("rules") List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
+        @CustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
+        @CustomType.Parameter("rules") List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
         this.infoTypes = infoTypes;
         this.rules = rules;
     }

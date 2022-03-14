@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogConfigDataAccessOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
@@ -15,8 +15,8 @@ public final class LogConfigDataAccessOptionsResponse {
      */
     private final String logMode;
 
-    @OutputCustomType.Constructor
-    private LogConfigDataAccessOptionsResponse(@OutputCustomType.Parameter("logMode") String logMode) {
+    @CustomType.Constructor
+    private LogConfigDataAccessOptionsResponse(@CustomType.Parameter("logMode") String logMode) {
         this.logMode = logMode;
     }
 

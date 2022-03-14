@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DebugSessionArgs Empty = new DebugSessionArgs();
 
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -26,14 +26,14 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
         return this.count == null ? Output.empty() : this.count;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -44,7 +44,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -55,21 +55,21 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * A unique ID for this DebugSession.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="revisionId", required=true)
+    @Import(name="revisionId", required=true)
       private final Output<String> revisionId;
 
     public Output<String> getRevisionId() {
@@ -80,7 +80,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
@@ -91,7 +91,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
      * 
      */
-    @InputImport(name="tracesize")
+    @Import(name="tracesize")
       private final @Nullable Output<Integer> tracesize;
 
     public Output<Integer> getTracesize() {
@@ -102,7 +102,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
      */
-    @InputImport(name="validity")
+    @Import(name="validity")
       private final @Nullable Output<Integer> validity;
 
     public Output<Integer> getValidity() {

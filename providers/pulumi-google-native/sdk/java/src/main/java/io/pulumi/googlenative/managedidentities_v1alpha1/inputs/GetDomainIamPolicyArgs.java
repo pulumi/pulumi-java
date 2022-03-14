@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetDomainIamPolicyArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetDomainIamPolicyArgs Empty = new GetDomainIamPolicyArgs();
 
-    @InputImport(name="domainId", required=true)
+    @Import(name="domainId", required=true)
       private final String domainId;
 
     public String getDomainId() {
         return this.domainId;
     }
 
-    @InputImport(name="optionsRequestedPolicyVersion")
+    @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

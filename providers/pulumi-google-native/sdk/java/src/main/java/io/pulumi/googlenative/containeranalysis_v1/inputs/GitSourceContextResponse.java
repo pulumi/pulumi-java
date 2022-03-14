@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GitSourceContextResponse extends io.pulumi.resources.InvokeAr
      * Git commit hash.
      * 
      */
-    @InputImport(name="revisionId", required=true)
+    @Import(name="revisionId", required=true)
       private final String revisionId;
 
     public String getRevisionId() {
@@ -31,7 +31,7 @@ public final class GitSourceContextResponse extends io.pulumi.resources.InvokeAr
      * Git repository URL.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

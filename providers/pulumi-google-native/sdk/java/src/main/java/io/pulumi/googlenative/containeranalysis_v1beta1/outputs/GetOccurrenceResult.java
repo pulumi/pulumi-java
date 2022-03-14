@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DetailsResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DocumentOccurrenceResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.FileOccurrenceResponse;
@@ -20,7 +20,7 @@ import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ResourceResponse
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOccurrenceResult {
     /**
      * Describes an attestation of an artifact.
@@ -118,27 +118,27 @@ public final class GetOccurrenceResult {
      */
     private final GrafeasV1beta1VulnerabilityDetailsResponse vulnerability;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOccurrenceResult(
-        @OutputCustomType.Parameter("attestation") DetailsResponse attestation,
-        @OutputCustomType.Parameter("build") GrafeasV1beta1BuildDetailsResponse build,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deployment") GrafeasV1beta1DeploymentDetailsResponse deployment,
-        @OutputCustomType.Parameter("derivedImage") GrafeasV1beta1ImageDetailsResponse derivedImage,
-        @OutputCustomType.Parameter("discovered") GrafeasV1beta1DiscoveryDetailsResponse discovered,
-        @OutputCustomType.Parameter("installation") GrafeasV1beta1PackageDetailsResponse installation,
-        @OutputCustomType.Parameter("intoto") GrafeasV1beta1IntotoDetailsResponse intoto,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("noteName") String noteName,
-        @OutputCustomType.Parameter("remediation") String remediation,
-        @OutputCustomType.Parameter("resource") ResourceResponse resource,
-        @OutputCustomType.Parameter("sbom") DocumentOccurrenceResponse sbom,
-        @OutputCustomType.Parameter("spdxFile") FileOccurrenceResponse spdxFile,
-        @OutputCustomType.Parameter("spdxPackage") PackageInfoOccurrenceResponse spdxPackage,
-        @OutputCustomType.Parameter("spdxRelationship") RelationshipOccurrenceResponse spdxRelationship,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("vulnerability") GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
+        @CustomType.Parameter("attestation") DetailsResponse attestation,
+        @CustomType.Parameter("build") GrafeasV1beta1BuildDetailsResponse build,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deployment") GrafeasV1beta1DeploymentDetailsResponse deployment,
+        @CustomType.Parameter("derivedImage") GrafeasV1beta1ImageDetailsResponse derivedImage,
+        @CustomType.Parameter("discovered") GrafeasV1beta1DiscoveryDetailsResponse discovered,
+        @CustomType.Parameter("installation") GrafeasV1beta1PackageDetailsResponse installation,
+        @CustomType.Parameter("intoto") GrafeasV1beta1IntotoDetailsResponse intoto,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("noteName") String noteName,
+        @CustomType.Parameter("remediation") String remediation,
+        @CustomType.Parameter("resource") ResourceResponse resource,
+        @CustomType.Parameter("sbom") DocumentOccurrenceResponse sbom,
+        @CustomType.Parameter("spdxFile") FileOccurrenceResponse spdxFile,
+        @CustomType.Parameter("spdxPackage") PackageInfoOccurrenceResponse spdxPackage,
+        @CustomType.Parameter("spdxRelationship") RelationshipOccurrenceResponse spdxRelationship,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("vulnerability") GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.createTime = createTime;

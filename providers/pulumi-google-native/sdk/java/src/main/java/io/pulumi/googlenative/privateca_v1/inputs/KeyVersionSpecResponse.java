@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
      * The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final String algorithm;
 
     public String getAlgorithm() {
@@ -31,7 +31,7 @@ public final class KeyVersionSpecResponse extends io.pulumi.resources.InvokeArgs
      * The resource name for an existing Cloud KMS CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`. This option enables full flexibility in the key's capabilities and properties.
      * 
      */
-    @InputImport(name="cloudKmsKeyVersion", required=true)
+    @Import(name="cloudKmsKeyVersion", required=true)
       private final String cloudKmsKeyVersion;
 
     public String getCloudKmsKeyVersion() {

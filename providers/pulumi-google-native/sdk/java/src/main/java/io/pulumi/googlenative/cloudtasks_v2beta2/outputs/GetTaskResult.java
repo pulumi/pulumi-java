@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AppEngineHttpRequestResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.PullMessageResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.TaskStatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskResult {
     /**
      * App Engine HTTP request that is sent to the task's target. Can be set only if app_engine_http_target is set on the queue. An App Engine task is a task that has AppEngineHttpRequest set.
@@ -48,15 +48,15 @@ public final class GetTaskResult {
      */
     private final String view;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskResult(
-        @OutputCustomType.Parameter("appEngineHttpRequest") AppEngineHttpRequestResponse appEngineHttpRequest,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pullMessage") PullMessageResponse pullMessage,
-        @OutputCustomType.Parameter("scheduleTime") String scheduleTime,
-        @OutputCustomType.Parameter("status") TaskStatusResponse status,
-        @OutputCustomType.Parameter("view") String view) {
+        @CustomType.Parameter("appEngineHttpRequest") AppEngineHttpRequestResponse appEngineHttpRequest,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pullMessage") PullMessageResponse pullMessage,
+        @CustomType.Parameter("scheduleTime") String scheduleTime,
+        @CustomType.Parameter("status") TaskStatusResponse status,
+        @CustomType.Parameter("view") String view) {
         this.appEngineHttpRequest = appEngineHttpRequest;
         this.createTime = createTime;
         this.name = name;

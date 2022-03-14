@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.memcache_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceMessageResponse {
     /**
      * A code that correspond to one type of user-facing message.
@@ -20,10 +20,10 @@ public final class InstanceMessageResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceMessageResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.message = message;
     }

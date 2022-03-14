@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2EntityIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
      * Message indicating that multiple rows might be associated to a single individual. If the same entity_id is associated to multiple quasi-identifier tuples over distinct rows, we consider the entire collection of tuples as the composite quasi-identifier. This collection is a multiset: the order in which the different tuples appear in the dataset is ignored, but their frequency is taken into account. Important note: a maximum of 1000 rows can be associated to a single entity ID. If more rows are associated with the same entity ID, some might be ignored.
      * 
      */
-    @InputImport(name="entityId")
+    @Import(name="entityId")
       private final @Nullable Output<GooglePrivacyDlpV2EntityIdArgs> entityId;
 
     public Output<GooglePrivacyDlpV2EntityIdArgs> getEntityId() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
      * Set of fields to compute k-anonymity over. When multiple fields are specified, they are considered a single composite key. Structs and repeated data types are not supported; however, nested fields are supported so long as they are not structs themselves or nested within a repeated field.
      * 
      */
-    @InputImport(name="quasiIds")
+    @Import(name="quasiIds")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
     public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getQuasiIds() {

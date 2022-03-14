@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse {
     /**
      * The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      */
     private final String dialogflowIntentId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(
-        @OutputCustomType.Parameter("confidence") Double confidence,
-        @OutputCustomType.Parameter("dialogflowIntentId") String dialogflowIntentId) {
+        @CustomType.Parameter("confidence") Double confidence,
+        @CustomType.Parameter("dialogflowIntentId") String dialogflowIntentId) {
         this.confidence = confidence;
         this.dialogflowIntentId = dialogflowIntentId;
     }

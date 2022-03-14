@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Name of a VPN tunnel.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -31,7 +31,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * URI of a Compute Engine network where the VPN tunnel is configured.
      * 
      */
-    @InputImport(name="networkUri", required=true)
+    @Import(name="networkUri", required=true)
       private final String networkUri;
 
     public String getNetworkUri() {
@@ -42,7 +42,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Name of a Google Cloud region where this VPN tunnel is configured.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
@@ -53,7 +53,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * URI of a VPN gateway at remote end of the tunnel.
      * 
      */
-    @InputImport(name="remoteGateway", required=true)
+    @Import(name="remoteGateway", required=true)
       private final String remoteGateway;
 
     public String getRemoteGateway() {
@@ -64,7 +64,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Remote VPN gateway's IP address.
      * 
      */
-    @InputImport(name="remoteGatewayIp", required=true)
+    @Import(name="remoteGatewayIp", required=true)
       private final String remoteGatewayIp;
 
     public String getRemoteGatewayIp() {
@@ -75,7 +75,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Type of the routing policy.
      * 
      */
-    @InputImport(name="routingType", required=true)
+    @Import(name="routingType", required=true)
       private final String routingType;
 
     public String getRoutingType() {
@@ -86,7 +86,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * URI of the VPN gateway at local end of the tunnel.
      * 
      */
-    @InputImport(name="sourceGateway", required=true)
+    @Import(name="sourceGateway", required=true)
       private final String sourceGateway;
 
     public String getSourceGateway() {
@@ -97,7 +97,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Local VPN gateway's IP address.
      * 
      */
-    @InputImport(name="sourceGatewayIp", required=true)
+    @Import(name="sourceGatewayIp", required=true)
       private final String sourceGatewayIp;
 
     public String getSourceGatewayIp() {
@@ -108,7 +108,7 @@ public final class VpnTunnelInfoResponse extends io.pulumi.resources.InvokeArgs 
      * URI of a VPN tunnel.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

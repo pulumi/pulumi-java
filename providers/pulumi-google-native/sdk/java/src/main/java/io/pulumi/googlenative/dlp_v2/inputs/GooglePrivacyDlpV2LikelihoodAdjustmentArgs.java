@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
      * Set the likelihood of a finding to a fixed value.
      * 
      */
-    @InputImport(name="fixedLikelihood")
+    @Import(name="fixedLikelihood")
       private final @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> fixedLikelihood;
 
     public Output<GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihood> getFixedLikelihood() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentArgs extends io.pulumi.
      * Increase or decrease the likelihood by the specified number of levels. For example, if a finding would be `POSSIBLE` without the detection rule and `relative_likelihood` is 1, then it is upgraded to `LIKELY`, while a value of -1 would downgrade it to `UNLIKELY`. Likelihood may never drop below `VERY_UNLIKELY` or exceed `VERY_LIKELY`, so applying an adjustment of 1 followed by an adjustment of -1 when base likelihood is `VERY_LIKELY` will result in a final likelihood of `LIKELY`.
      * 
      */
-    @InputImport(name="relativeLikelihood")
+    @Import(name="relativeLikelihood")
       private final @Nullable Output<Integer> relativeLikelihood;
 
     public Output<Integer> getRelativeLikelihood() {

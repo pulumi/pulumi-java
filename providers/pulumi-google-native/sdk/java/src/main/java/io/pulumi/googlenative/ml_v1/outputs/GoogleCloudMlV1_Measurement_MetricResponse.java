@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_Measurement_MetricResponse {
     /**
      * Metric name.
@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1_Measurement_MetricResponse(
-        @OutputCustomType.Parameter("metric") String metric,
-        @OutputCustomType.Parameter("value") Double value) {
+        @CustomType.Parameter("metric") String metric,
+        @CustomType.Parameter("value") Double value) {
         this.metric = metric;
         this.value = value;
     }

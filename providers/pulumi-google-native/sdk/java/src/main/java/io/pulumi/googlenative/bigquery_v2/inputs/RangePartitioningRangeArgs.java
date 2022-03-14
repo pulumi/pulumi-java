@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * [TrustedTester] [Required] The end of range partitioning, exclusive.
      * 
      */
-    @InputImport(name="end")
+    @Import(name="end")
       private final @Nullable Output<String> end;
 
     public Output<String> getEnd() {
@@ -33,7 +33,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * [TrustedTester] [Required] The width of each interval.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<String> interval;
 
     public Output<String> getInterval() {
@@ -44,7 +44,7 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
      * [TrustedTester] [Required] The start of range partitioning, inclusive.
      * 
      */
-    @InputImport(name="start")
+    @Import(name="start")
       private final @Nullable Output<String> start;
 
     public Output<String> getStart() {

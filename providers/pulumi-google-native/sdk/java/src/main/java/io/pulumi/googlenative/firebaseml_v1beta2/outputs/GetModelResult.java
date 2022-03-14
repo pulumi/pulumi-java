@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.ModelStateResponse;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.OperationResponse;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.TfLiteModelResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetModelResult {
     /**
      * Lists operation ids associated with this model whose status is NOT done.
@@ -64,18 +64,18 @@ public final class GetModelResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetModelResult(
-        @OutputCustomType.Parameter("activeOperations") List<OperationResponse> activeOperations,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("modelHash") String modelHash,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") ModelStateResponse state,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("tfliteModel") TfLiteModelResponse tfliteModel,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("activeOperations") List<OperationResponse> activeOperations,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("modelHash") String modelHash,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") ModelStateResponse state,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("tfliteModel") TfLiteModelResponse tfliteModel,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.activeOperations = activeOperations;
         this.createTime = createTime;
         this.displayName = displayName;

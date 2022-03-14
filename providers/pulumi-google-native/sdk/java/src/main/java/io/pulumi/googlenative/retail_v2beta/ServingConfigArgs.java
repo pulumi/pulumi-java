@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.retail_v2beta.enums.ServingConfigSolutionTypesItem;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 10. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="boostControlIds")
+    @Import(name="boostControlIds")
       private final @Nullable Output<List<String>> boostControlIds;
 
     public Output<List<String>> getBoostControlIds() {
         return this.boostControlIds == null ? Output.empty() : this.boostControlIds;
     }
 
-    @InputImport(name="catalogId", required=true)
+    @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -39,7 +39,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The human readable serving config display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -50,7 +50,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * How much diversity to use in recommendation model results e.g. 'medium-diversity' or 'high-diversity'. Currently supported values: * 'no-diversity' * 'low-diversity' * 'medium-diversity' * 'high-diversity' * 'auto-diversity' If not specified, we choose default based on recommendation model type. Default value: 'no-diversity'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
      */
-    @InputImport(name="diversityLevel")
+    @Import(name="diversityLevel")
       private final @Nullable Output<String> diversityLevel;
 
     public Output<String> getDiversityLevel() {
@@ -61,7 +61,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Condition do not associate specifications. If multiple do not associate conditions match, all matching do not associate controls in the list will execute. - Order does not matter. - Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="doNotAssociateControlIds")
+    @Import(name="doNotAssociateControlIds")
       private final @Nullable Output<List<String>> doNotAssociateControlIds;
 
     public Output<List<String>> getDoNotAssociateControlIds() {
@@ -72,7 +72,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The specification for dynamically generated facets. Notice that only textual facets can be dynamically generated. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="dynamicFacetSpec")
+    @Import(name="dynamicFacetSpec")
       private final @Nullable Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs> dynamicFacetSpec;
 
     public Output<GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecArgs> getDynamicFacetSpec() {
@@ -83,7 +83,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to add additional category filters on the 'similar-items' model. If not specified, we enable it by default. Allowed values are: * 'no-category-match': No additional filtering of original results from the model and the customer's filters. * 'relaxed-category-match': Only keep results with categories that match at least one item categories in the PredictRequests's context item. * If customer also sends filters in the PredictRequest, then the results will satisfy both conditions (user given and category match). Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
      */
-    @InputImport(name="enableCategoryFilterLevel")
+    @Import(name="enableCategoryFilterLevel")
       private final @Nullable Output<String> enableCategoryFilterLevel;
 
     public Output<String> getEnableCategoryFilterLevel() {
@@ -94,7 +94,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Facet specifications for faceted search. If empty, no facets are returned. The ids refer to the ids of Control resources with only the Facet control set. These controls are assumed to be in the same Catalog as the ServingConfig. A maximum of 100 values are allowed. Otherwise, an INVALID_ARGUMENT error is returned. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="facetControlIds")
+    @Import(name="facetControlIds")
       private final @Nullable Output<List<String>> facetControlIds;
 
     public Output<List<String>> getFacetControlIds() {
@@ -105,7 +105,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Condition filter specifications. If a product matches multiple conditions in the specifications, filters from these specifications are all applied and combined via the AND operator. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="filterControlIds")
+    @Import(name="filterControlIds")
       private final @Nullable Output<List<String>> filterControlIds;
 
     public Output<List<String>> getFilterControlIds() {
@@ -116,14 +116,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Condition ignore specifications. If multiple ignore conditions match, all matching ignore controls in the list will execute. - Order does not matter. - Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="ignoreControlIds")
+    @Import(name="ignoreControlIds")
       private final @Nullable Output<List<String>> ignoreControlIds;
 
     public Output<List<String>> getIgnoreControlIds() {
         return this.ignoreControlIds == null ? Output.empty() : this.ignoreControlIds;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -134,7 +134,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the model to use at serving time. Currently only RecommendationModels are supported: https://cloud.google.com/retail/recommendations-ai/docs/create-models Can be changed but only to a compatible model (e.g. others-you-may-like CTR to others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
      */
-    @InputImport(name="modelId")
+    @Import(name="modelId")
       private final @Nullable Output<String> modelId;
 
     public Output<String> getModelId() {
@@ -145,7 +145,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}servingConfig/*
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -156,7 +156,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Condition oneway synonyms specifications. If multiple oneway synonyms conditions match, all matching oneway synonyms controls in the list will execute. Order of controls in the list will not matter. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="onewaySynonymsControlIds")
+    @Import(name="onewaySynonymsControlIds")
       private final @Nullable Output<List<String>> onewaySynonymsControlIds;
 
     public Output<List<String>> getOnewaySynonymsControlIds() {
@@ -167,14 +167,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * How much price ranking we want in serving results. Price reranking causes product items with a similar recommendation probability to be ordered by price, with the highest-priced items first. This setting could result in a decrease in click-through and conversion rates. Allowed values are: * 'no-price-reranking' * 'low-price-raranking' * 'medium-price-reranking' * 'high-price-reranking' If not specified, we choose default based on model type. Default value: 'no-price-reranking'. Can only be set if solution_types is SOLUTION_TYPE_RECOMMENDATION.
      * 
      */
-    @InputImport(name="priceRerankingLevel")
+    @Import(name="priceRerankingLevel")
       private final @Nullable Output<String> priceRerankingLevel;
 
     public Output<String> getPriceRerankingLevel() {
         return this.priceRerankingLevel == null ? Output.empty() : this.priceRerankingLevel;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -185,7 +185,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="redirectControlIds")
+    @Import(name="redirectControlIds")
       private final @Nullable Output<List<String>> redirectControlIds;
 
     public Output<List<String>> getRedirectControlIds() {
@@ -196,14 +196,14 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Condition replacement specifications. - Applied according to the order in the list. - A previously replaced term can not be re-replaced. - Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="replacementControlIds")
+    @Import(name="replacementControlIds")
       private final @Nullable Output<List<String>> replacementControlIds;
 
     public Output<List<String>> getReplacementControlIds() {
         return this.replacementControlIds == null ? Output.empty() : this.replacementControlIds;
     }
 
-    @InputImport(name="servingConfigId", required=true)
+    @Import(name="servingConfigId", required=true)
       private final Output<String> servingConfigId;
 
     public Output<String> getServingConfigId() {
@@ -214,7 +214,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Specifies the solution types that a serving config can be associated with. Currently we support setting only one type of solution.
      * 
      */
-    @InputImport(name="solutionTypes", required=true)
+    @Import(name="solutionTypes", required=true)
       private final Output<List<ServingConfigSolutionTypesItem>> solutionTypes;
 
     public Output<List<ServingConfigSolutionTypesItem>> getSolutionTypes() {
@@ -225,7 +225,7 @@ public final class ServingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Condition synonyms specifications. If multiple syonyms conditions match, all matching synonyms control in the list will execute. Order of controls in the list will not matter. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
-    @InputImport(name="twowaySynonymsControlIds")
+    @Import(name="twowaySynonymsControlIds")
       private final @Nullable Output<List<String>> twowaySynonymsControlIds;
 
     public Output<List<String>> getTwowaySynonymsControlIds() {

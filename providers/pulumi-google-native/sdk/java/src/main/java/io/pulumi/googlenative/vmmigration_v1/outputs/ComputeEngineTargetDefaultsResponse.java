@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.AppliedLicenseResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.ComputeSchedulingResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.NetworkInterfaceResponse;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComputeEngineTargetDefaultsResponse {
     /**
      * Additional licenses to assign to the VM.
@@ -101,25 +101,25 @@ public final class ComputeEngineTargetDefaultsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeEngineTargetDefaultsResponse(
-        @OutputCustomType.Parameter("additionalLicenses") List<String> additionalLicenses,
-        @OutputCustomType.Parameter("appliedLicense") AppliedLicenseResponse appliedLicense,
-        @OutputCustomType.Parameter("bootOption") String bootOption,
-        @OutputCustomType.Parameter("computeScheduling") ComputeSchedulingResponse computeScheduling,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("licenseType") String licenseType,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("machineTypeSeries") String machineTypeSeries,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
-        @OutputCustomType.Parameter("secureBoot") Boolean secureBoot,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("targetProject") String targetProject,
-        @OutputCustomType.Parameter("vmName") String vmName,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("additionalLicenses") List<String> additionalLicenses,
+        @CustomType.Parameter("appliedLicense") AppliedLicenseResponse appliedLicense,
+        @CustomType.Parameter("bootOption") String bootOption,
+        @CustomType.Parameter("computeScheduling") ComputeSchedulingResponse computeScheduling,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("licenseType") String licenseType,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("machineTypeSeries") String machineTypeSeries,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("networkTags") List<String> networkTags,
+        @CustomType.Parameter("secureBoot") Boolean secureBoot,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("targetProject") String targetProject,
+        @CustomType.Parameter("vmName") String vmName,
+        @CustomType.Parameter("zone") String zone) {
         this.additionalLicenses = additionalLicenses;
         this.appliedLicense = appliedLicense;
         this.bootOption = bootOption;

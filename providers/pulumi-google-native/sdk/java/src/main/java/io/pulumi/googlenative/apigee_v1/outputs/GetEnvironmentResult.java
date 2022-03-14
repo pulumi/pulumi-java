@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1PropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     /**
      * Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
@@ -56,17 +56,17 @@ public final class GetEnvironmentResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("apiProxyType") String apiProxyType,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("deploymentType") String deploymentType,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") GoogleCloudApigeeV1PropertiesResponse properties,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("apiProxyType") String apiProxyType,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("deploymentType") String deploymentType,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") GoogleCloudApigeeV1PropertiesResponse properties,
+        @CustomType.Parameter("state") String state) {
         this.apiProxyType = apiProxyType;
         this.createdAt = createdAt;
         this.deploymentType = deploymentType;

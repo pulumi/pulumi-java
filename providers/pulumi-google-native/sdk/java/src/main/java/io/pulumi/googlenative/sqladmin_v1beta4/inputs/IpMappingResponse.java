@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The IP address assigned.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
@@ -31,7 +31,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`. This field is only available when the IP is scheduled to be retired.
      * 
      */
-    @InputImport(name="timeToRetire", required=true)
+    @Import(name="timeToRetire", required=true)
       private final String timeToRetire;
 
     public String getTimeToRetire() {
@@ -42,7 +42,7 @@ public final class IpMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The type of this IP address. A `PRIMARY` address is a public address that can accept incoming connections. A `PRIVATE` address is a private address that can accept incoming connections. An `OUTGOING` address is the source address of connections originating from the instance, if supported.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

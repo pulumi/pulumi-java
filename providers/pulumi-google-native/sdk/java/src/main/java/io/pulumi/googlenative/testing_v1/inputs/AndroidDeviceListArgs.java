@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidDeviceArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
      * A list of Android devices.
      * 
      */
-    @InputImport(name="androidDevices", required=true)
+    @Import(name="androidDevices", required=true)
       private final Output<List<AndroidDeviceArgs>> androidDevices;
 
     public Output<List<AndroidDeviceArgs>> getAndroidDevices() {

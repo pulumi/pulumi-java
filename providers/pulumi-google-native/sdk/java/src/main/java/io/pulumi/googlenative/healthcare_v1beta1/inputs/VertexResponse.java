@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
      * X coordinate.
      * 
      */
-    @InputImport(name="x", required=true)
+    @Import(name="x", required=true)
       private final Double x;
 
     public Double getX() {
@@ -31,7 +31,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
      * Y coordinate.
      * 
      */
-    @InputImport(name="y", required=true)
+    @Import(name="y", required=true)
       private final Double y;
 
     public Double getY() {

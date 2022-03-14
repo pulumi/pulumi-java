@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse extends io.pu
      * The dtmf digits.
      * 
      */
-    @InputImport(name="digits", required=true)
+    @Import(name="digits", required=true)
       private final String digits;
 
     public String getDigits() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse extends io.pu
      * The finish digit (if any).
      * 
      */
-    @InputImport(name="finishDigit", required=true)
+    @Import(name="finishDigit", required=true)
       private final String finishDigit;
 
     public String getFinishDigit() {

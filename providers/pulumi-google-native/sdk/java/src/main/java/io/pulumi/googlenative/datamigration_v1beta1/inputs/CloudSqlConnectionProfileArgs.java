@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1beta1.inputs.CloudSqlSettingsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
      * Immutable. Metadata used to create the destination Cloud SQL database.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<CloudSqlSettingsArgs> settings;
 
     public Output<CloudSqlSettingsArgs> getSettings() {

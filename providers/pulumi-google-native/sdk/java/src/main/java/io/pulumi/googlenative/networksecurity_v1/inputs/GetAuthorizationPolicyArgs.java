@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetAuthorizationPolicyArgs extends io.pulumi.resources.Invoke
 
     public static final GetAuthorizationPolicyArgs Empty = new GetAuthorizationPolicyArgs();
 
-    @InputImport(name="authorizationPolicyId", required=true)
+    @Import(name="authorizationPolicyId", required=true)
       private final String authorizationPolicyId;
 
     public String getAuthorizationPolicyId() {
         return this.authorizationPolicyId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

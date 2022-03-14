@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.GameServerClusterConnectionInfoResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.KubernetesClusterStateResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGameServerClusterResult {
     /**
      * The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
@@ -53,16 +53,16 @@ public final class GetGameServerClusterResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGameServerClusterResult(
-        @OutputCustomType.Parameter("clusterState") KubernetesClusterStateResponse clusterState,
-        @OutputCustomType.Parameter("connectionInfo") GameServerClusterConnectionInfoResponse connectionInfo,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("clusterState") KubernetesClusterStateResponse clusterState,
+        @CustomType.Parameter("connectionInfo") GameServerClusterConnectionInfoResponse connectionInfo,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.clusterState = clusterState;
         this.connectionInfo = connectionInfo;
         this.createTime = createTime;

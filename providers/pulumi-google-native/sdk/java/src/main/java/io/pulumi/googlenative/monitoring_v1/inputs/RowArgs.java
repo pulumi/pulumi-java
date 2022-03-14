@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
      * The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<String> weight;
 
     public Output<String> getWeight() {
@@ -35,7 +35,7 @@ public final class RowArgs extends io.pulumi.resources.ResourceArgs {
      * The display widgets arranged horizontally in this row.
      * 
      */
-    @InputImport(name="widgets")
+    @Import(name="widgets")
       private final @Nullable Output<List<WidgetArgs>> widgets;
 
     public Output<List<WidgetArgs>> getWidgets() {

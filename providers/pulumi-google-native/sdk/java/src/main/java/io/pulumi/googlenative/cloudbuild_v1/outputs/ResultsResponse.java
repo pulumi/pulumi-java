@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BuiltImageResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResultsResponse {
     /**
      * Path to the artifact manifest. Only populated when artifacts are uploaded.
@@ -43,14 +43,14 @@ public final class ResultsResponse {
      */
     private final String numArtifacts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResultsResponse(
-        @OutputCustomType.Parameter("artifactManifest") String artifactManifest,
-        @OutputCustomType.Parameter("artifactTiming") TimeSpanResponse artifactTiming,
-        @OutputCustomType.Parameter("buildStepImages") List<String> buildStepImages,
-        @OutputCustomType.Parameter("buildStepOutputs") List<String> buildStepOutputs,
-        @OutputCustomType.Parameter("images") List<BuiltImageResponse> images,
-        @OutputCustomType.Parameter("numArtifacts") String numArtifacts) {
+        @CustomType.Parameter("artifactManifest") String artifactManifest,
+        @CustomType.Parameter("artifactTiming") TimeSpanResponse artifactTiming,
+        @CustomType.Parameter("buildStepImages") List<String> buildStepImages,
+        @CustomType.Parameter("buildStepOutputs") List<String> buildStepOutputs,
+        @CustomType.Parameter("images") List<BuiltImageResponse> images,
+        @CustomType.Parameter("numArtifacts") String numArtifacts) {
         this.artifactManifest = artifactManifest;
         this.artifactTiming = artifactTiming;
         this.buildStepImages = buildStepImages;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetInterconnectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInterconnectArgs Empty = new GetInterconnectArgs();
 
-    @InputImport(name="interconnect", required=true)
+    @Import(name="interconnect", required=true)
       private final String interconnect;
 
     public String getInterconnect() {
         return this.interconnect;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

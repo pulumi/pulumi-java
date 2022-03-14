@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AptRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.GooRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.YumRepositoryResponse;
@@ -23,7 +23,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
      * An Apt Repository.
      * 
      */
-    @InputImport(name="apt", required=true)
+    @Import(name="apt", required=true)
       private final AptRepositoryResponse apt;
 
     public AptRepositoryResponse getApt() {
@@ -34,7 +34,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
      * A Goo Repository.
      * 
      */
-    @InputImport(name="goo", required=true)
+    @Import(name="goo", required=true)
       private final GooRepositoryResponse goo;
 
     public GooRepositoryResponse getGoo() {
@@ -45,7 +45,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
      * A Yum Repository.
      * 
      */
-    @InputImport(name="yum", required=true)
+    @Import(name="yum", required=true)
       private final YumRepositoryResponse yum;
 
     public YumRepositoryResponse getYum() {
@@ -56,7 +56,7 @@ public final class PackageRepositoryResponse extends io.pulumi.resources.InvokeA
      * A Zypper Repository.
      * 
      */
-    @InputImport(name="zypper", required=true)
+    @Import(name="zypper", required=true)
       private final ZypperRepositoryResponse zypper;
 
     public ZypperRepositoryResponse getZypper() {

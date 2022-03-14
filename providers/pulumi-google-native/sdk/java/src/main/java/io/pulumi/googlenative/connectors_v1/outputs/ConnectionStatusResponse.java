@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionStatusResponse {
     /**
      * Description.
@@ -25,11 +25,11 @@ public final class ConnectionStatusResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionStatusResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("status") String status) {
         this.description = description;
         this.state = state;
         this.status = status;

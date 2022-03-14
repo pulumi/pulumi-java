@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs;
@@ -24,7 +24,7 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
      * Retention policy applied to snapshots created by this resource policy.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs> retentionPolicy;
 
     public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs> getRetentionPolicy() {
@@ -35,7 +35,7 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
      * A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs> schedule;
 
     public Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs> getSchedule() {
@@ -46,7 +46,7 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
      * Properties with which snapshots are created such as labels, encryption keys.
      * 
      */
-    @InputImport(name="snapshotProperties")
+    @Import(name="snapshotProperties")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> snapshotProperties;
 
     public Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> getSnapshotProperties() {

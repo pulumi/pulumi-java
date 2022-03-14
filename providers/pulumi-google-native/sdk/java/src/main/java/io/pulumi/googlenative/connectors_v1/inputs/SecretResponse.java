@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * The resource name of the secret version in the format, format as: `projects/*{@literal /}secrets/*{@literal /}versions/*`.
      * 
      */
-    @InputImport(name="secretVersion", required=true)
+    @Import(name="secretVersion", required=true)
       private final String secretVersion;
 
     public String getSecretVersion() {

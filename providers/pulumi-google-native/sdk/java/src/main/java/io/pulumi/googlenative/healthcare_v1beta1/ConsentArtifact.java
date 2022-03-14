@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.ConsentArtifactArgs;
@@ -25,7 +25,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
      * 
      */
-    @OutputExport(name="consentContentScreenshots", type=List.class, parameters={ImageResponse.class})
+    @Export(name="consentContentScreenshots", type=List.class, parameters={ImageResponse.class})
     private Output<List<ImageResponse>> consentContentScreenshots;
 
     /**
@@ -39,7 +39,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * Optional. An string indicating the version of the consent information shown to the user.
      * 
      */
-    @OutputExport(name="consentContentVersion", type=String.class, parameters={})
+    @Export(name="consentContentVersion", type=String.class, parameters={})
     private Output<String> consentContentVersion;
 
     /**
@@ -53,7 +53,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * Optional. A signature from a guardian.
      * 
      */
-    @OutputExport(name="guardianSignature", type=SignatureResponse.class, parameters={})
+    @Export(name="guardianSignature", type=SignatureResponse.class, parameters={})
     private Output<SignatureResponse> guardianSignature;
 
     /**
@@ -67,7 +67,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
@@ -81,7 +81,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * User's UUID provided by the client.
      * 
      */
-    @OutputExport(name="userId", type=String.class, parameters={})
+    @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
@@ -109,7 +109,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * Optional. User's signature.
      * 
      */
-    @OutputExport(name="userSignature", type=SignatureResponse.class, parameters={})
+    @Export(name="userSignature", type=SignatureResponse.class, parameters={})
     private Output<SignatureResponse> userSignature;
 
     /**
@@ -123,7 +123,7 @@ public class ConsentArtifact extends io.pulumi.resources.CustomResource {
      * Optional. A signature from a witness.
      * 
      */
-    @OutputExport(name="witnessSignature", type=SignatureResponse.class, parameters={})
+    @Export(name="witnessSignature", type=SignatureResponse.class, parameters={})
     private Output<SignatureResponse> witnessSignature;
 
     /**

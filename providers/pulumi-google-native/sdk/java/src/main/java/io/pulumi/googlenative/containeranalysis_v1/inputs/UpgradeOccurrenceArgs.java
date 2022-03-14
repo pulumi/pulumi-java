@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.WindowsUpdateArgs;
@@ -25,7 +25,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
      * 
      */
-    @InputImport(name="distribution")
+    @Import(name="distribution")
       private final @Nullable Output<UpgradeDistributionArgs> distribution;
 
     public Output<UpgradeDistributionArgs> getDistribution() {
@@ -36,7 +36,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
      */
-    @InputImport(name="package")
+    @Import(name="package")
       private final @Nullable Output<String> $package;
 
     public Output<String> get$package() {
@@ -47,7 +47,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * Required for non-Windows OS. The version of the package in a machine + human readable form.
      * 
      */
-    @InputImport(name="parsedVersion")
+    @Import(name="parsedVersion")
       private final @Nullable Output<VersionArgs> parsedVersion;
 
     public Output<VersionArgs> getParsedVersion() {
@@ -58,7 +58,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * Required for Windows OS. Represents the metadata about the Windows update.
      * 
      */
-    @InputImport(name="windowsUpdate")
+    @Import(name="windowsUpdate")
       private final @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
     public Output<WindowsUpdateArgs> getWindowsUpdate() {

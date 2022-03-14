@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticResponse {
     /**
      * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
@@ -20,10 +20,10 @@ public final class DiagnosticResponse {
      */
     private final String level;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiagnosticResponse(
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("level") String level) {
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("level") String level) {
         this.field = field;
         this.level = level;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
     /**
      * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
@@ -21,11 +21,11 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
     private final String ipv4Address;
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyAlternativeNameServerConfigTargetNameServerResponse(
-        @OutputCustomType.Parameter("forwardingPath") String forwardingPath,
-        @OutputCustomType.Parameter("ipv4Address") String ipv4Address,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("forwardingPath") String forwardingPath,
+        @CustomType.Parameter("ipv4Address") String ipv4Address,
+        @CustomType.Parameter("kind") String kind) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = ipv4Address;
         this.kind = kind;

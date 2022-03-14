@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Int64RangeMatchResponse {
     /**
      * The end of the range (exclusive) in signed long integer format.
@@ -20,10 +20,10 @@ public final class Int64RangeMatchResponse {
      */
     private final String rangeStart;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Int64RangeMatchResponse(
-        @OutputCustomType.Parameter("rangeEnd") String rangeEnd,
-        @OutputCustomType.Parameter("rangeStart") String rangeStart) {
+        @CustomType.Parameter("rangeEnd") String rangeEnd,
+        @CustomType.Parameter("rangeStart") String rangeStart) {
         this.rangeEnd = rangeEnd;
         this.rangeStart = rangeStart;
     }

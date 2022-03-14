@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetEntityTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEntityTypeArgs Empty = new GetEntityTypeArgs();
 
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
     }
 
-    @InputImport(name="entityTypeId", required=true)
+    @Import(name="entityTypeId", required=true)
       private final String entityTypeId;
 
     public String getEntityTypeId() {
         return this.entityTypeId;
     }
 
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable String languageCode;
 
     public Optional<String> getLanguageCode() {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
      * Upper bound of the range, exclusive; type must match min.
      * 
      */
-    @InputImport(name="max", required=true)
+    @Import(name="max", required=true)
       private final GooglePrivacyDlpV2ValueResponse max;
 
     public GooglePrivacyDlpV2ValueResponse getMax() {
@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
      * Lower bound of the range, inclusive. Type should be the same as max if used.
      * 
      */
-    @InputImport(name="min", required=true)
+    @Import(name="min", required=true)
       private final GooglePrivacyDlpV2ValueResponse min;
 
     public GooglePrivacyDlpV2ValueResponse getMin() {
@@ -42,7 +42,7 @@ public final class GooglePrivacyDlpV2BucketResponse extends io.pulumi.resources.
      * Replacement value for this bucket.
      * 
      */
-    @InputImport(name="replacementValue", required=true)
+    @Import(name="replacementValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse replacementValue;
 
     public GooglePrivacyDlpV2ValueResponse getReplacementValue() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidDeviceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentResponse {
     /**
      * An Android device which must be used with an Android test.
@@ -21,10 +21,10 @@ public final class EnvironmentResponse {
      */
     private final IosDeviceResponse iosDevice;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentResponse(
-        @OutputCustomType.Parameter("androidDevice") AndroidDeviceResponse androidDevice,
-        @OutputCustomType.Parameter("iosDevice") IosDeviceResponse iosDevice) {
+        @CustomType.Parameter("androidDevice") AndroidDeviceResponse androidDevice,
+        @CustomType.Parameter("iosDevice") IosDeviceResponse iosDevice) {
         this.androidDevice = androidDevice;
         this.iosDevice = iosDevice;
     }

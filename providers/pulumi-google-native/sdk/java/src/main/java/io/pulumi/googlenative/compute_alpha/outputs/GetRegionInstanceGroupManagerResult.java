@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DistributionPolicyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerActionsSummaryResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerAllInstancesConfigResponse;
@@ -20,7 +20,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionInstanceGroupManagerResult {
     /**
      * Specifies the instances configs overrides that should be applied for all instances in the MIG.
@@ -168,37 +168,37 @@ public final class GetRegionInstanceGroupManagerResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionInstanceGroupManagerResult(
-        @OutputCustomType.Parameter("allInstancesConfig") InstanceGroupManagerAllInstancesConfigResponse allInstancesConfig,
-        @OutputCustomType.Parameter("autoHealingPolicies") List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies,
-        @OutputCustomType.Parameter("baseInstanceName") String baseInstanceName,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("currentActions") InstanceGroupManagerActionsSummaryResponse currentActions,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("distributionPolicy") DistributionPolicyResponse distributionPolicy,
-        @OutputCustomType.Parameter("failoverAction") String failoverAction,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("instanceGroup") String instanceGroup,
-        @OutputCustomType.Parameter("instanceLifecyclePolicy") InstanceGroupManagerInstanceLifecyclePolicyResponse instanceLifecyclePolicy,
-        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namedPorts") List<NamedPortResponse> namedPorts,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("standbyPolicy") InstanceGroupManagerStandbyPolicyResponse standbyPolicy,
-        @OutputCustomType.Parameter("statefulPolicy") StatefulPolicyResponse statefulPolicy,
-        @OutputCustomType.Parameter("status") InstanceGroupManagerStatusResponse status,
-        @OutputCustomType.Parameter("targetPools") List<String> targetPools,
-        @OutputCustomType.Parameter("targetSize") Integer targetSize,
-        @OutputCustomType.Parameter("targetStoppedSize") Integer targetStoppedSize,
-        @OutputCustomType.Parameter("targetSuspendedSize") Integer targetSuspendedSize,
-        @OutputCustomType.Parameter("updatePolicy") InstanceGroupManagerUpdatePolicyResponse updatePolicy,
-        @OutputCustomType.Parameter("versions") List<InstanceGroupManagerVersionResponse> versions,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("allInstancesConfig") InstanceGroupManagerAllInstancesConfigResponse allInstancesConfig,
+        @CustomType.Parameter("autoHealingPolicies") List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies,
+        @CustomType.Parameter("baseInstanceName") String baseInstanceName,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("currentActions") InstanceGroupManagerActionsSummaryResponse currentActions,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("distributionPolicy") DistributionPolicyResponse distributionPolicy,
+        @CustomType.Parameter("failoverAction") String failoverAction,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("instanceGroup") String instanceGroup,
+        @CustomType.Parameter("instanceLifecyclePolicy") InstanceGroupManagerInstanceLifecyclePolicyResponse instanceLifecyclePolicy,
+        @CustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namedPorts") List<NamedPortResponse> namedPorts,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("standbyPolicy") InstanceGroupManagerStandbyPolicyResponse standbyPolicy,
+        @CustomType.Parameter("statefulPolicy") StatefulPolicyResponse statefulPolicy,
+        @CustomType.Parameter("status") InstanceGroupManagerStatusResponse status,
+        @CustomType.Parameter("targetPools") List<String> targetPools,
+        @CustomType.Parameter("targetSize") Integer targetSize,
+        @CustomType.Parameter("targetStoppedSize") Integer targetStoppedSize,
+        @CustomType.Parameter("targetSuspendedSize") Integer targetSuspendedSize,
+        @CustomType.Parameter("updatePolicy") InstanceGroupManagerUpdatePolicyResponse updatePolicy,
+        @CustomType.Parameter("versions") List<InstanceGroupManagerVersionResponse> versions,
+        @CustomType.Parameter("zone") String zone) {
         this.allInstancesConfig = allInstancesConfig;
         this.autoHealingPolicies = autoHealingPolicies;
         this.baseInstanceName = baseInstanceName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FileSetResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
      * 
      */
-    @InputImport(name="bytesLimitPerFile", required=true)
+    @Import(name="bytesLimitPerFile", required=true)
       private final String bytesLimitPerFile;
 
     public String getBytesLimitPerFile() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
      * 
      */
-    @InputImport(name="bytesLimitPerFilePercent", required=true)
+    @Import(name="bytesLimitPerFilePercent", required=true)
       private final Integer bytesLimitPerFilePercent;
 
     public Integer getBytesLimitPerFilePercent() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * The set of one or more files to scan.
      * 
      */
-    @InputImport(name="fileSet", required=true)
+    @Import(name="fileSet", required=true)
       private final GooglePrivacyDlpV2FileSetResponse fileSet;
 
     public GooglePrivacyDlpV2FileSetResponse getFileSet() {
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * List of file type groups to include in the scan. If empty, all files are scanned and available data format processors are applied. In addition, the binary content of the selected files is always scanned as well. Images are scanned only as binary if the specified region does not support image inspection and no file_types were specified. Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.
      * 
      */
-    @InputImport(name="fileTypes", required=true)
+    @Import(name="fileTypes", required=true)
       private final List<String> fileTypes;
 
     public List<String> getFileTypes() {
@@ -67,14 +67,14 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.
      * 
      */
-    @InputImport(name="filesLimitPercent", required=true)
+    @Import(name="filesLimitPercent", required=true)
       private final Integer filesLimitPercent;
 
     public Integer getFilesLimitPercent() {
         return this.filesLimitPercent;
     }
 
-    @InputImport(name="sampleMethod", required=true)
+    @Import(name="sampleMethod", required=true)
       private final String sampleMethod;
 
     public String getSampleMethod() {

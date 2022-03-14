@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1.SchemaArgs;
@@ -21,7 +21,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
      * 
      */
-    @OutputExport(name="definition", type=String.class, parameters={})
+    @Export(name="definition", type=String.class, parameters={})
     private Output<String> definition;
 
     /**
@@ -35,7 +35,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Name of the schema. Format is `projects/{project}/schemas/{schema}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The type of the schema definition.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

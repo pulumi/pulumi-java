@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
      * Resource identifier. For a project this represents project_number.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {
@@ -31,7 +31,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
      * Indicates the type of resource.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {

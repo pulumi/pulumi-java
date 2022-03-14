@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsearch_v1.SearchApplicationArgs;
@@ -29,7 +29,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * Retrictions applied to the configurations. The maximum number of elements is 10.
      * 
      */
-    @OutputExport(name="dataSourceRestrictions", type=List.class, parameters={DataSourceRestrictionResponse.class})
+    @Export(name="dataSourceRestrictions", type=List.class, parameters={DataSourceRestrictionResponse.class})
     private Output<List<DataSourceRestrictionResponse>> dataSourceRestrictions;
 
     /**
@@ -43,7 +43,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
      * 
      */
-    @OutputExport(name="defaultFacetOptions", type=List.class, parameters={FacetOptionsResponse.class})
+    @Export(name="defaultFacetOptions", type=List.class, parameters={FacetOptionsResponse.class})
     private Output<List<FacetOptionsResponse>> defaultFacetOptions;
 
     /**
@@ -57,7 +57,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * The default options for sorting the search results
      * 
      */
-    @OutputExport(name="defaultSortOptions", type=SortOptionsResponse.class, parameters={})
+    @Export(name="defaultSortOptions", type=SortOptionsResponse.class, parameters={})
     private Output<SortOptionsResponse> defaultSortOptions;
 
     /**
@@ -71,7 +71,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * Display name of the Search Application. The maximum length is 300 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -85,7 +85,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
      * 
      */
-    @OutputExport(name="enableAuditLog", type=Boolean.class, parameters={})
+    @Export(name="enableAuditLog", type=Boolean.class, parameters={})
     private Output<Boolean> enableAuditLog;
 
     /**
@@ -99,7 +99,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * Name of the Search Application. Format: searchapplications/{application_id}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -113,7 +113,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
      * 
      */
-    @OutputExport(name="operationIds", type=List.class, parameters={String.class})
+    @Export(name="operationIds", type=List.class, parameters={String.class})
     private Output<List<String>> operationIds;
 
     /**
@@ -127,7 +127,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * The default options for query interpretation
      * 
      */
-    @OutputExport(name="queryInterpretationConfig", type=QueryInterpretationConfigResponse.class, parameters={})
+    @Export(name="queryInterpretationConfig", type=QueryInterpretationConfigResponse.class, parameters={})
     private Output<QueryInterpretationConfigResponse> queryInterpretationConfig;
 
     /**
@@ -141,7 +141,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * With each result we should return the URI for its thumbnail (when applicable)
      * 
      */
-    @OutputExport(name="returnResultThumbnailUrls", type=Boolean.class, parameters={})
+    @Export(name="returnResultThumbnailUrls", type=Boolean.class, parameters={})
     private Output<Boolean> returnResultThumbnailUrls;
 
     /**
@@ -155,7 +155,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * Configuration for ranking results.
      * 
      */
-    @OutputExport(name="scoringConfig", type=ScoringConfigResponse.class, parameters={})
+    @Export(name="scoringConfig", type=ScoringConfigResponse.class, parameters={})
     private Output<ScoringConfigResponse> scoringConfig;
 
     /**
@@ -169,7 +169,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * Configuration for a sources specified in data_source_restrictions.
      * 
      */
-    @OutputExport(name="sourceConfig", type=List.class, parameters={SourceConfigResponse.class})
+    @Export(name="sourceConfig", type=List.class, parameters={SourceConfigResponse.class})
     private Output<List<SourceConfigResponse>> sourceConfig;
 
     /**

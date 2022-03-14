@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ServiceMeshAnalysisMessageResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceMeshFeatureStateResponse extends io.pulumi.resources.I
      * Results of running Service Mesh analyzers.
      * 
      */
-    @InputImport(name="analysisMessages", required=true)
+    @Import(name="analysisMessages", required=true)
       private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
     public List<ServiceMeshAnalysisMessageResponse> getAnalysisMessages() {

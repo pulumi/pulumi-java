@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * A place for the SPDX file creator to record any general comments about the package being described
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -34,7 +34,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * Provide the actual file name of the package, or path of the directory being treated as a package
      * 
      */
-    @InputImport(name="filename")
+    @Import(name="filename")
       private final @Nullable Output<String> filename;
 
     public Output<String> getFilename() {
@@ -45,7 +45,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * Uniquely identify any element in an SPDX document which may be referenced by other elements
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -56,7 +56,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * package or alternative values, if the governing license cannot be determined
      * 
      */
-    @InputImport(name="licenseConcluded")
+    @Import(name="licenseConcluded")
       private final @Nullable Output<LicenseArgs> licenseConcluded;
 
     public Output<LicenseArgs> getLicenseConcluded() {
@@ -67,7 +67,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
      * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
      * 
      */
-    @InputImport(name="sourceInfo")
+    @Import(name="sourceInfo")
       private final @Nullable Output<String> sourceInfo;
 
     public Output<String> getSourceInfo() {

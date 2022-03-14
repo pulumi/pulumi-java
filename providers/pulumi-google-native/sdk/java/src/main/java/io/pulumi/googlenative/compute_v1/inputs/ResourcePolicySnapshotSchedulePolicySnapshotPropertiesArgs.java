@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * Chain name that the snapshot is created in.
      * 
      */
-    @InputImport(name="chainName")
+    @Import(name="chainName")
       private final @Nullable Output<String> chainName;
 
     public Output<String> getChainName() {
@@ -36,7 +36,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * Indication to perform a 'guest aware' snapshot.
      * 
      */
-    @InputImport(name="guestFlush")
+    @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
     public Output<Boolean> getGuestFlush() {
@@ -47,7 +47,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -58,7 +58,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
      * 
      */
-    @InputImport(name="storageLocations")
+    @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
     public Output<List<String>> getStorageLocations() {

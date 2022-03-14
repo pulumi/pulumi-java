@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.spanner_v1.inputs.BackupInfoResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Information about the backup used to restore the database. The backup may no longer exist.
      * 
      */
-    @InputImport(name="backupInfo", required=true)
+    @Import(name="backupInfo", required=true)
       private final BackupInfoResponse backupInfo;
 
     public BackupInfoResponse getBackupInfo() {
@@ -32,7 +32,7 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the restore source.
      * 
      */
-    @InputImport(name="sourceType", required=true)
+    @Import(name="sourceType", required=true)
       private final String sourceType;
 
     public String getSourceType() {

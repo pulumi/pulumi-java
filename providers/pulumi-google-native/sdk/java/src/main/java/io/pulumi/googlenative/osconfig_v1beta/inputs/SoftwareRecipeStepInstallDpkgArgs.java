@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SoftwareRecipeStepInstallDpkgArgs extends io.pulumi.resources
      * The id of the relevant artifact in the recipe.
      * 
      */
-    @InputImport(name="artifactId", required=true)
+    @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
     public Output<String> getArtifactId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResourceManifestResponse extends io.pulumi.resources.InvokeAr
      * Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.
      * 
      */
-    @InputImport(name="clusterScoped", required=true)
+    @Import(name="clusterScoped", required=true)
       private final Boolean clusterScoped;
 
     public Boolean getClusterScoped() {
@@ -32,7 +32,7 @@ public final class ResourceManifestResponse extends io.pulumi.resources.InvokeAr
      * YAML manifest of the resource.
      * 
      */
-    @InputImport(name="manifest", required=true)
+    @Import(name="manifest", required=true)
       private final String manifest;
 
     public String getManifest() {

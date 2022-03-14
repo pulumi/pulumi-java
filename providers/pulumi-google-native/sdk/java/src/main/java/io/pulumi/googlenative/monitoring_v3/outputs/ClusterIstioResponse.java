@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterIstioResponse {
     /**
      * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
@@ -30,12 +30,12 @@ public final class ClusterIstioResponse {
      */
     private final String serviceNamespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterIstioResponse(
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace) {
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("serviceNamespace") String serviceNamespace) {
         this.clusterName = clusterName;
         this.location = location;
         this.serviceName = serviceName;

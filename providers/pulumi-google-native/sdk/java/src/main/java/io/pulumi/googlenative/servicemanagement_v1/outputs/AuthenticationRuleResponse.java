@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthRequirementResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OAuthRequirementsResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthenticationRuleResponse {
     /**
      * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
@@ -34,12 +34,12 @@ public final class AuthenticationRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthenticationRuleResponse(
-        @OutputCustomType.Parameter("allowWithoutCredential") Boolean allowWithoutCredential,
-        @OutputCustomType.Parameter("oauth") OAuthRequirementsResponse oauth,
-        @OutputCustomType.Parameter("requirements") List<AuthRequirementResponse> requirements,
-        @OutputCustomType.Parameter("selector") String selector) {
+        @CustomType.Parameter("allowWithoutCredential") Boolean allowWithoutCredential,
+        @CustomType.Parameter("oauth") OAuthRequirementsResponse oauth,
+        @CustomType.Parameter("requirements") List<AuthRequirementResponse> requirements,
+        @CustomType.Parameter("selector") String selector) {
         this.allowWithoutCredential = allowWithoutCredential;
         this.oauth = oauth;
         this.requirements = requirements;

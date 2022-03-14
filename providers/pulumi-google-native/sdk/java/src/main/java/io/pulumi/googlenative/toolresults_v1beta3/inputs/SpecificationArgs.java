@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidTestArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosTestArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
      * An Android mobile test execution specification.
      * 
      */
-    @InputImport(name="androidTest")
+    @Import(name="androidTest")
       private final @Nullable Output<AndroidTestArgs> androidTest;
 
     public Output<AndroidTestArgs> getAndroidTest() {
@@ -34,7 +34,7 @@ public final class SpecificationArgs extends io.pulumi.resources.ResourceArgs {
      * An iOS mobile test execution specification.
      * 
      */
-    @InputImport(name="iosTest")
+    @Import(name="iosTest")
       private final @Nullable Output<IosTestArgs> iosTest;
 
     public Output<IosTestArgs> getIosTest() {

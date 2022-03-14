@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2BigQueryTableResponse {
     /**
      * Dataset ID of the table.
@@ -25,11 +25,11 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2BigQueryTableResponse(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("tableId") String tableId) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.project = project;
         this.tableId = tableId;

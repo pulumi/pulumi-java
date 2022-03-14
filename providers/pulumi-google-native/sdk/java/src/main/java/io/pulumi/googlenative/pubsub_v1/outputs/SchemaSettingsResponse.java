@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchemaSettingsResponse {
     /**
      * The encoding of messages validated against `schema`.
@@ -20,10 +20,10 @@ public final class SchemaSettingsResponse {
      */
     private final String schema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchemaSettingsResponse(
-        @OutputCustomType.Parameter("encoding") String encoding,
-        @OutputCustomType.Parameter("schema") String schema) {
+        @CustomType.Parameter("encoding") String encoding,
+        @CustomType.Parameter("schema") String schema) {
         this.encoding = encoding;
         this.schema = schema;
     }

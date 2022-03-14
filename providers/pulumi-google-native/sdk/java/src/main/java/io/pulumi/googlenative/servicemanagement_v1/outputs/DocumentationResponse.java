@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.DocumentationRuleResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.PageResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DocumentationResponse {
     /**
      * The URL to the root of documentation.
@@ -43,14 +43,14 @@ public final class DocumentationResponse {
      */
     private final String summary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentationResponse(
-        @OutputCustomType.Parameter("documentationRootUrl") String documentationRootUrl,
-        @OutputCustomType.Parameter("overview") String overview,
-        @OutputCustomType.Parameter("pages") List<PageResponse> pages,
-        @OutputCustomType.Parameter("rules") List<DocumentationRuleResponse> rules,
-        @OutputCustomType.Parameter("serviceRootUrl") String serviceRootUrl,
-        @OutputCustomType.Parameter("summary") String summary) {
+        @CustomType.Parameter("documentationRootUrl") String documentationRootUrl,
+        @CustomType.Parameter("overview") String overview,
+        @CustomType.Parameter("pages") List<PageResponse> pages,
+        @CustomType.Parameter("rules") List<DocumentationRuleResponse> rules,
+        @CustomType.Parameter("serviceRootUrl") String serviceRootUrl,
+        @CustomType.Parameter("summary") String summary) {
         this.documentationRootUrl = documentationRootUrl;
         this.overview = overview;
         this.pages = pages;

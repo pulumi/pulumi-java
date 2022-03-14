@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleSheetsOptionsResponse {
     /**
      * [Optional] Range of a sheet to query from. Only used when non-empty. Typical format: sheet_name!top_left_cell_id:bottom_right_cell_id For example: sheet1!A1:B20
@@ -20,10 +20,10 @@ public final class GoogleSheetsOptionsResponse {
      */
     private final String skipLeadingRows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleSheetsOptionsResponse(
-        @OutputCustomType.Parameter("range") String range,
-        @OutputCustomType.Parameter("skipLeadingRows") String skipLeadingRows) {
+        @CustomType.Parameter("range") String range,
+        @CustomType.Parameter("skipLeadingRows") String skipLeadingRows) {
         this.range = range;
         this.skipLeadingRows = skipLeadingRows;
     }

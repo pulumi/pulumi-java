@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.ConfidentialInstanceConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.NodeGroupAffinityResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.ReservationAffinityResponse;
@@ -27,7 +27,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs).
      * 
      */
-    @InputImport(name="confidentialInstanceConfig", required=true)
+    @Import(name="confidentialInstanceConfig", required=true)
       private final ConfidentialInstanceConfigResponse confidentialInstanceConfig;
 
     public ConfidentialInstanceConfigResponse getConfidentialInstanceConfig() {
@@ -38,7 +38,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
      * 
      */
-    @InputImport(name="internalIpOnly", required=true)
+    @Import(name="internalIpOnly", required=true)
       private final Boolean internalIpOnly;
 
     public Boolean getInternalIpOnly() {
@@ -49,7 +49,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * The Compute Engine metadata entries to add to all instances (see Project and instance metadata (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -60,7 +60,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default projects/[project_id]/regions/global/default default
      * 
      */
-    @InputImport(name="networkUri", required=true)
+    @Import(name="networkUri", required=true)
       private final String networkUri;
 
     public String getNetworkUri() {
@@ -71,7 +71,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. Node Group Affinity for sole-tenant clusters.
      * 
      */
-    @InputImport(name="nodeGroupAffinity", required=true)
+    @Import(name="nodeGroupAffinity", required=true)
       private final NodeGroupAffinityResponse nodeGroupAffinity;
 
     public NodeGroupAffinityResponse getNodeGroupAffinity() {
@@ -82,7 +82,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. The type of IPv6 access for a cluster.
      * 
      */
-    @InputImport(name="privateIpv6GoogleAccess", required=true)
+    @Import(name="privateIpv6GoogleAccess", required=true)
       private final String privateIpv6GoogleAccess;
 
     public String getPrivateIpv6GoogleAccess() {
@@ -93,7 +93,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. Reservation Affinity for consuming Zonal reservation.
      * 
      */
-    @InputImport(name="reservationAffinity", required=true)
+    @Import(name="reservationAffinity", required=true)
       private final ReservationAffinityResponse reservationAffinity;
 
     public ReservationAffinityResponse getReservationAffinity() {
@@ -104,7 +104,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services.If not specified, the Compute Engine default service account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
      * 
      */
-    @InputImport(name="serviceAccount", required=true)
+    @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
     public String getServiceAccount() {
@@ -115,7 +115,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control
      * 
      */
-    @InputImport(name="serviceAccountScopes", required=true)
+    @Import(name="serviceAccountScopes", required=true)
       private final List<String> serviceAccountScopes;
 
     public List<String> getServiceAccountScopes() {
@@ -126,7 +126,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).
      * 
      */
-    @InputImport(name="shieldedInstanceConfig", required=true)
+    @Import(name="shieldedInstanceConfig", required=true)
       private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
@@ -137,7 +137,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0 projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
      * 
      */
-    @InputImport(name="subnetworkUri", required=true)
+    @Import(name="subnetworkUri", required=true)
       private final String subnetworkUri;
 
     public String getSubnetworkUri() {
@@ -148,7 +148,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final List<String> tags;
 
     public List<String> getTags() {
@@ -159,7 +159,7 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f
      * 
      */
-    @InputImport(name="zoneUri", required=true)
+    @Import(name="zoneUri", required=true)
       private final String zoneUri;
 
     public String getZoneUri() {

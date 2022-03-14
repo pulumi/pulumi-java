@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
      * Target bytes read per second.
      * 
      */
-    @InputImport(name="targetReadBytesPerSecond")
+    @Import(name="targetReadBytesPerSecond")
       private final @Nullable Output<Integer> targetReadBytesPerSecond;
 
     public Output<Integer> getTargetReadBytesPerSecond() {
@@ -33,7 +33,7 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
      * Target ops read per seconds.
      * 
      */
-    @InputImport(name="targetReadOpsPerSecond")
+    @Import(name="targetReadOpsPerSecond")
       private final @Nullable Output<Integer> targetReadOpsPerSecond;
 
     public Output<Integer> getTargetReadOpsPerSecond() {
@@ -44,7 +44,7 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
      * Target bytes written per second.
      * 
      */
-    @InputImport(name="targetWriteBytesPerSecond")
+    @Import(name="targetWriteBytesPerSecond")
       private final @Nullable Output<Integer> targetWriteBytesPerSecond;
 
     public Output<Integer> getTargetWriteBytesPerSecond() {
@@ -55,7 +55,7 @@ public final class DiskUtilizationArgs extends io.pulumi.resources.ResourceArgs 
      * Target ops written per second.
      * 
      */
-    @InputImport(name="targetWriteOpsPerSecond")
+    @Import(name="targetWriteOpsPerSecond")
       private final @Nullable Output<Integer> targetWriteOpsPerSecond;
 
     public Output<Integer> getTargetWriteOpsPerSecond() {

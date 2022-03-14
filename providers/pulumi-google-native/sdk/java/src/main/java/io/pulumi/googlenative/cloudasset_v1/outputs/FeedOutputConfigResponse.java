@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.PubsubDestinationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FeedOutputConfigResponse {
     /**
      * Destination on Pub/Sub.
@@ -15,8 +15,8 @@ public final class FeedOutputConfigResponse {
      */
     private final PubsubDestinationResponse pubsubDestination;
 
-    @OutputCustomType.Constructor
-    private FeedOutputConfigResponse(@OutputCustomType.Parameter("pubsubDestination") PubsubDestinationResponse pubsubDestination) {
+    @CustomType.Constructor
+    private FeedOutputConfigResponse(@CustomType.Parameter("pubsubDestination") PubsubDestinationResponse pubsubDestination) {
         this.pubsubDestination = pubsubDestination;
     }
 

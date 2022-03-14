@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class CloneJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloneJobArgs Empty = new CloneJobArgs();
 
-    @InputImport(name="cloneJobId", required=true)
+    @Import(name="cloneJobId", required=true)
       private final Output<String> cloneJobId;
 
     public Output<String> getCloneJobId() {
         return this.cloneJobId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="migratingVmId", required=true)
+    @Import(name="migratingVmId", required=true)
       private final Output<String> migratingVmId;
 
     public Output<String> getMigratingVmId() {
@@ -39,28 +39,28 @@ public final class CloneJobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the clone.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
     public Output<String> getSourceId() {

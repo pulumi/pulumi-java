@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AdvancedMachineFeaturesResponse {
     /**
      * Whether to enable nested virtualization or not (default is false).
@@ -26,11 +26,11 @@ public final class AdvancedMachineFeaturesResponse {
      */
     private final Integer threadsPerCore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdvancedMachineFeaturesResponse(
-        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
-        @OutputCustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
-        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
+        @CustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @CustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
+        @CustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.enableUefiNetworking = enableUefiNetworking;
         this.threadsPerCore = threadsPerCore;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.policysimulator_v1.inputs.GoogleTypeDateResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
      * The number of replayed log entries with a difference between baseline and simulated policies.
      * 
      */
-    @InputImport(name="differenceCount", required=true)
+    @Import(name="differenceCount", required=true)
       private final Integer differenceCount;
 
     public Integer getDifferenceCount() {
@@ -32,7 +32,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
      * The number of log entries that could not be replayed.
      * 
      */
-    @InputImport(name="errorCount", required=true)
+    @Import(name="errorCount", required=true)
       private final Integer errorCount;
 
     public Integer getErrorCount() {
@@ -43,7 +43,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
      * The total number of log entries replayed.
      * 
      */
-    @InputImport(name="logCount", required=true)
+    @Import(name="logCount", required=true)
       private final Integer logCount;
 
     public Integer getLogCount() {
@@ -54,7 +54,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
      * The date of the newest log entry replayed.
      * 
      */
-    @InputImport(name="newestDate", required=true)
+    @Import(name="newestDate", required=true)
       private final GoogleTypeDateResponse newestDate;
 
     public GoogleTypeDateResponse getNewestDate() {
@@ -65,7 +65,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
      * The date of the oldest log entry replayed.
      * 
      */
-    @InputImport(name="oldestDate", required=true)
+    @Import(name="oldestDate", required=true)
       private final GoogleTypeDateResponse oldestDate;
 
     public GoogleTypeDateResponse getOldestDate() {
@@ -76,7 +76,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse exte
      * The number of replayed log entries with no difference between baseline and simulated policies.
      * 
      */
-    @InputImport(name="unchangedCount", required=true)
+    @Import(name="unchangedCount", required=true)
       private final Integer unchangedCount;
 
     public Integer getUnchangedCount() {

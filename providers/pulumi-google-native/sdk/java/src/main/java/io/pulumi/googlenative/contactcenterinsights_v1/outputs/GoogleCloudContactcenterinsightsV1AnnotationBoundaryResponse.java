@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse {
     /**
      * The index in the sequence of transcribed pieces of the conversation where the boundary is located. This index starts at zero.
@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      */
     private final Integer wordIndex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(
-        @OutputCustomType.Parameter("transcriptIndex") Integer transcriptIndex,
-        @OutputCustomType.Parameter("wordIndex") Integer wordIndex) {
+        @CustomType.Parameter("transcriptIndex") Integer transcriptIndex,
+        @CustomType.Parameter("wordIndex") Integer wordIndex) {
         this.transcriptIndex = transcriptIndex;
         this.wordIndex = wordIndex;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      * Do not trigger if last utterance is small talk.
      * 
      */
-    @InputImport(name="noSmalltalk")
+    @Import(name="noSmalltalk")
       private final @Nullable Output<Boolean> noSmalltalk;
 
     public Output<Boolean> getNoSmalltalk() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      * Only trigger suggestion if participant role of last utterance is END_USER.
      * 
      */
-    @InputImport(name="onlyEndUser")
+    @Import(name="onlyEndUser")
       private final @Nullable Output<Boolean> onlyEndUser;
 
     public Output<Boolean> getOnlyEndUser() {

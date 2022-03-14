@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ProjectRepoIdResponse extends io.pulumi.resources.InvokeArgs 
      * The ID of the project.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -31,7 +31,7 @@ public final class ProjectRepoIdResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the repo. Leave empty for the default repo.
      * 
      */
-    @InputImport(name="repoName", required=true)
+    @Import(name="repoName", required=true)
       private final String repoName;
 
     public String getRepoName() {

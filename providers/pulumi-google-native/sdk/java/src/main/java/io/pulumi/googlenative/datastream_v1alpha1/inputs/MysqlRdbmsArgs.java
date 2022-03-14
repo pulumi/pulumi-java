@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlDatabaseArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
      * Mysql databases on the server
      * 
      */
-    @InputImport(name="mysqlDatabases")
+    @Import(name="mysqlDatabases")
       private final @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
 
     public Output<List<MysqlDatabaseArgs>> getMysqlDatabases() {

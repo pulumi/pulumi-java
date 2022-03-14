@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidDeviceListResponse;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidMatrixResponse;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceListResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentMatrixResponse {
     /**
      * A list of Android devices; the test will be run only on the specified devices.
@@ -27,11 +27,11 @@ public final class EnvironmentMatrixResponse {
      */
     private final IosDeviceListResponse iosDeviceList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentMatrixResponse(
-        @OutputCustomType.Parameter("androidDeviceList") AndroidDeviceListResponse androidDeviceList,
-        @OutputCustomType.Parameter("androidMatrix") AndroidMatrixResponse androidMatrix,
-        @OutputCustomType.Parameter("iosDeviceList") IosDeviceListResponse iosDeviceList) {
+        @CustomType.Parameter("androidDeviceList") AndroidDeviceListResponse androidDeviceList,
+        @CustomType.Parameter("androidMatrix") AndroidMatrixResponse androidMatrix,
+        @CustomType.Parameter("iosDeviceList") IosDeviceListResponse iosDeviceList) {
         this.androidDeviceList = androidDeviceList;
         this.androidMatrix = androidMatrix;
         this.iosDeviceList = iosDeviceList;

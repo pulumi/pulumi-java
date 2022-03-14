@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.HttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpRedirectActionResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpRouteActionResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PathMatcherResponse {
     /**
      * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the urlRewrite action within a path matcher's defaultRouteAction.
@@ -56,16 +56,16 @@ public final class PathMatcherResponse {
      */
     private final List<HttpRouteRuleResponse> routeRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PathMatcherResponse(
-        @OutputCustomType.Parameter("defaultRouteAction") HttpRouteActionResponse defaultRouteAction,
-        @OutputCustomType.Parameter("defaultService") String defaultService,
-        @OutputCustomType.Parameter("defaultUrlRedirect") HttpRedirectActionResponse defaultUrlRedirect,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pathRules") List<PathRuleResponse> pathRules,
-        @OutputCustomType.Parameter("routeRules") List<HttpRouteRuleResponse> routeRules) {
+        @CustomType.Parameter("defaultRouteAction") HttpRouteActionResponse defaultRouteAction,
+        @CustomType.Parameter("defaultService") String defaultService,
+        @CustomType.Parameter("defaultUrlRedirect") HttpRedirectActionResponse defaultUrlRedirect,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pathRules") List<PathRuleResponse> pathRules,
+        @CustomType.Parameter("routeRules") List<HttpRouteRuleResponse> routeRules) {
         this.defaultRouteAction = defaultRouteAction;
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlSourceConfigArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleSourceConfigArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * MySQL data source configuration
      * 
      */
-    @InputImport(name="mysqlSourceConfig")
+    @Import(name="mysqlSourceConfig")
       private final @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
 
     public Output<MysqlSourceConfigArgs> getMysqlSourceConfig() {
@@ -35,7 +35,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Oracle data source configuration
      * 
      */
-    @InputImport(name="oracleSourceConfig")
+    @Import(name="oracleSourceConfig")
       private final @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
 
     public Output<OracleSourceConfigArgs> getOracleSourceConfig() {
@@ -46,7 +46,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Source connection profile identifier.
      * 
      */
-    @InputImport(name="sourceConnectionProfileName", required=true)
+    @Import(name="sourceConnectionProfileName", required=true)
       private final Output<String> sourceConnectionProfileName;
 
     public Output<String> getSourceConnectionProfileName() {

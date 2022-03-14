@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.pubsublite_v1.inputs.PartitionConfigArgs;
 import io.pulumi.googlenative.pubsublite_v1.inputs.ReservationConfigArgs;
 import io.pulumi.googlenative.pubsublite_v1.inputs.RetentionConfigArgs;
@@ -17,7 +17,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TopicArgs Empty = new TopicArgs();
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -28,7 +28,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -39,14 +39,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * The settings for this topic's partitions.
      * 
      */
-    @InputImport(name="partitionConfig")
+    @Import(name="partitionConfig")
       private final @Nullable Output<PartitionConfigArgs> partitionConfig;
 
     public Output<PartitionConfigArgs> getPartitionConfig() {
         return this.partitionConfig == null ? Output.empty() : this.partitionConfig;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -57,7 +57,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * The settings for this topic's Reservation usage.
      * 
      */
-    @InputImport(name="reservationConfig")
+    @Import(name="reservationConfig")
       private final @Nullable Output<ReservationConfigArgs> reservationConfig;
 
     public Output<ReservationConfigArgs> getReservationConfig() {
@@ -68,14 +68,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * The settings for this topic's message retention.
      * 
      */
-    @InputImport(name="retentionConfig")
+    @Import(name="retentionConfig")
       private final @Nullable Output<RetentionConfigArgs> retentionConfig;
 
     public Output<RetentionConfigArgs> getRetentionConfig() {
         return this.retentionConfig == null ? Output.empty() : this.retentionConfig;
     }
 
-    @InputImport(name="topicId", required=true)
+    @Import(name="topicId", required=true)
       private final Output<String> topicId;
 
     public Output<String> getTopicId() {

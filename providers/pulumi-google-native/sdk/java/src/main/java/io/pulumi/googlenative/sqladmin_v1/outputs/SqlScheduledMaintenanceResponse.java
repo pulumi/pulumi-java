@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlScheduledMaintenanceResponse {
     private final Boolean canDefer;
     /**
@@ -27,12 +27,12 @@ public final class SqlScheduledMaintenanceResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlScheduledMaintenanceResponse(
-        @OutputCustomType.Parameter("canDefer") Boolean canDefer,
-        @OutputCustomType.Parameter("canReschedule") Boolean canReschedule,
-        @OutputCustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("canDefer") Boolean canDefer,
+        @CustomType.Parameter("canReschedule") Boolean canReschedule,
+        @CustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.canDefer = canDefer;
         this.canReschedule = canReschedule;
         this.scheduleDeadlineTime = scheduleDeadlineTime;

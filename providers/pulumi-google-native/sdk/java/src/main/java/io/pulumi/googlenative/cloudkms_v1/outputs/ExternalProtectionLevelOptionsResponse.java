@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExternalProtectionLevelOptionsResponse {
     /**
      * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of external_key_uri when using an EkmConnection.
@@ -20,10 +20,10 @@ public final class ExternalProtectionLevelOptionsResponse {
      */
     private final String externalKeyUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalProtectionLevelOptionsResponse(
-        @OutputCustomType.Parameter("ekmConnectionKeyPath") String ekmConnectionKeyPath,
-        @OutputCustomType.Parameter("externalKeyUri") String externalKeyUri) {
+        @CustomType.Parameter("ekmConnectionKeyPath") String ekmConnectionKeyPath,
+        @CustomType.Parameter("externalKeyUri") String externalKeyUri) {
         this.ekmConnectionKeyPath = ekmConnectionKeyPath;
         this.externalKeyUri = externalKeyUri;
     }

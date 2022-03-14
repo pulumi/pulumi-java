@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceAptRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceGooRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceRepositoryResourceYumRepositoryArgs;
@@ -25,7 +25,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
      * An Apt Repository.
      * 
      */
-    @InputImport(name="apt")
+    @Import(name="apt")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt;
 
     public Output<OSPolicyResourceRepositoryResourceAptRepositoryArgs> getApt() {
@@ -36,7 +36,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
      * A Goo Repository.
      * 
      */
-    @InputImport(name="goo")
+    @Import(name="goo")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo;
 
     public Output<OSPolicyResourceRepositoryResourceGooRepositoryArgs> getGoo() {
@@ -47,7 +47,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
      * A Yum Repository.
      * 
      */
-    @InputImport(name="yum")
+    @Import(name="yum")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum;
 
     public Output<OSPolicyResourceRepositoryResourceYumRepositoryArgs> getYum() {
@@ -58,7 +58,7 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
      * A Zypper Repository.
      * 
      */
-    @InputImport(name="zypper")
+    @Import(name="zypper")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper;
 
     public Output<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> getZypper() {

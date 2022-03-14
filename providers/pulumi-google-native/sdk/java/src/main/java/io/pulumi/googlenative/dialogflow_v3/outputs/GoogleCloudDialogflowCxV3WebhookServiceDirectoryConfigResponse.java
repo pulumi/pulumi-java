@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse {
     /**
      * Generic Service configuration of this webhook.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse(
-        @OutputCustomType.Parameter("genericWebService") GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("genericWebService") GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService,
+        @CustomType.Parameter("service") String service) {
         this.genericWebService = genericWebService;
         this.service = service;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApkResponse {
     /**
      * The path to an APK to be installed on the device before the test begins.
@@ -21,10 +21,10 @@ public final class ApkResponse {
      */
     private final String packageName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApkResponse(
-        @OutputCustomType.Parameter("location") FileReferenceResponse location,
-        @OutputCustomType.Parameter("packageName") String packageName) {
+        @CustomType.Parameter("location") FileReferenceResponse location,
+        @CustomType.Parameter("packageName") String packageName) {
         this.location = location;
         this.packageName = packageName;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtrace_v2beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudtrace_v2beta1.TraceSinkArgs;
@@ -22,7 +22,7 @@ public class TraceSink extends io.pulumi.resources.CustomResource {
      * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -36,7 +36,7 @@ public class TraceSink extends io.pulumi.resources.CustomResource {
      * The export destination.
      * 
      */
-    @OutputExport(name="outputConfig", type=OutputConfigResponse.class, parameters={})
+    @Export(name="outputConfig", type=OutputConfigResponse.class, parameters={})
     private Output<OutputConfigResponse> outputConfig;
 
     /**
@@ -50,7 +50,7 @@ public class TraceSink extends io.pulumi.resources.CustomResource {
      * A service account name for exporting the data. This field is set by sinks.create and sinks.update. The service account will need to be granted write access to the destination specified in the output configuration, see [Granting access for a resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource). To create tables and write data this account will need the dataEditor role. Read more about roles in the [BigQuery documentation](https://cloud.google.com/bigquery/docs/access-control). E.g.: "service-00000001@00000002.iam.gserviceaccount.com"
      * 
      */
-    @OutputExport(name="writerIdentity", type=String.class, parameters={})
+    @Export(name="writerIdentity", type=String.class, parameters={})
     private Output<String> writerIdentity;
 
     /**

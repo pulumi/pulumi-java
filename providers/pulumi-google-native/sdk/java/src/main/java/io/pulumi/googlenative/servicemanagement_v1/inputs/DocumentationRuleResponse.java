@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DocumentationRuleResponse extends io.pulumi.resources.InvokeA
      * Deprecation description of the selected element(s). It can be provided if an element is marked as `deprecated`.
      * 
      */
-    @InputImport(name="deprecationDescription", required=true)
+    @Import(name="deprecationDescription", required=true)
       private final String deprecationDescription;
 
     public String getDeprecationDescription() {
@@ -31,7 +31,7 @@ public final class DocumentationRuleResponse extends io.pulumi.resources.InvokeA
      * Description of the selected proto element (e.g. a message, a method, a 'service' definition, or a field). Defaults to leading & trailing comments taken from the proto source definition of the proto element.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -42,7 +42,7 @@ public final class DocumentationRuleResponse extends io.pulumi.resources.InvokeA
      * The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final String selector;
 
     public String getSelector() {

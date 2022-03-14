@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplateResponse {
     /**
      * The Major version of the template. Example: 100.
@@ -20,10 +20,10 @@ public final class CertificateTemplateResponse {
      */
     private final Integer minorVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateTemplateResponse(
-        @OutputCustomType.Parameter("majorVersion") Integer majorVersion,
-        @OutputCustomType.Parameter("minorVersion") Integer minorVersion) {
+        @CustomType.Parameter("majorVersion") Integer majorVersion,
+        @CustomType.Parameter("minorVersion") Integer minorVersion) {
         this.majorVersion = majorVersion;
         this.minorVersion = minorVersion;
     }

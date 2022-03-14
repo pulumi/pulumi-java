@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.SourceContextResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceResponse {
     /**
      * If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
@@ -33,12 +33,12 @@ public final class SourceResponse {
      */
     private final Map<String,String> fileHashes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceResponse(
-        @OutputCustomType.Parameter("additionalContexts") List<SourceContextResponse> additionalContexts,
-        @OutputCustomType.Parameter("artifactStorageSourceUri") String artifactStorageSourceUri,
-        @OutputCustomType.Parameter("context") SourceContextResponse context,
-        @OutputCustomType.Parameter("fileHashes") Map<String,String> fileHashes) {
+        @CustomType.Parameter("additionalContexts") List<SourceContextResponse> additionalContexts,
+        @CustomType.Parameter("artifactStorageSourceUri") String artifactStorageSourceUri,
+        @CustomType.Parameter("context") SourceContextResponse context,
+        @CustomType.Parameter("fileHashes") Map<String,String> fileHashes) {
         this.additionalContexts = additionalContexts;
         this.artifactStorageSourceUri = artifactStorageSourceUri;
         this.context = context;

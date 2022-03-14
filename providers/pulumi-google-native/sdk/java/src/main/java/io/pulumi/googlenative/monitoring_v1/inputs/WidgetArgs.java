@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.AlertChartArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.EmptyArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.LogsPanelArgs;
@@ -29,7 +29,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * A chart of alert policy data.
      * 
      */
-    @InputImport(name="alertChart")
+    @Import(name="alertChart")
       private final @Nullable Output<AlertChartArgs> alertChart;
 
     public Output<AlertChartArgs> getAlertChart() {
@@ -40,7 +40,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * A blank space.
      * 
      */
-    @InputImport(name="blank")
+    @Import(name="blank")
       private final @Nullable Output<EmptyArgs> blank;
 
     public Output<EmptyArgs> getBlank() {
@@ -51,7 +51,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * A widget that shows a stream of logs.
      * 
      */
-    @InputImport(name="logsPanel")
+    @Import(name="logsPanel")
       private final @Nullable Output<LogsPanelArgs> logsPanel;
 
     public Output<LogsPanelArgs> getLogsPanel() {
@@ -62,7 +62,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * A scorecard summarizing time series data.
      * 
      */
-    @InputImport(name="scorecard")
+    @Import(name="scorecard")
       private final @Nullable Output<ScorecardArgs> scorecard;
 
     public Output<ScorecardArgs> getScorecard() {
@@ -73,7 +73,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * A raw string or markdown displaying textual content.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<TextArgs> text;
 
     public Output<TextArgs> getText() {
@@ -84,7 +84,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * A widget that displays time series data in a tabular format.
      * 
      */
-    @InputImport(name="timeSeriesTable")
+    @Import(name="timeSeriesTable")
       private final @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
 
     public Output<TimeSeriesTableArgs> getTimeSeriesTable() {
@@ -95,7 +95,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The title of the widget.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -106,7 +106,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * A chart of time series data.
      * 
      */
-    @InputImport(name="xyChart")
+    @Import(name="xyChart")
       private final @Nullable Output<XyChartArgs> xyChart;
 
     public Output<XyChartArgs> getXyChart() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse {
     /**
      * Matches values of the parent parameter with type 'CATEGORICAL'. All values must exist in `categorical_value_spec` of parent parameter.
@@ -16,8 +16,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCatego
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse(@OutputCustomType.Parameter("values") List<String> values) {
+    @CustomType.Constructor
+    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse(@CustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 

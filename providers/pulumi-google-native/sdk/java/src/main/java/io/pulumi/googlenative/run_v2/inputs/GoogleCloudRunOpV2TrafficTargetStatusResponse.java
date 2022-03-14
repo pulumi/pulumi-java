@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * Specifies percent of the traffic to this Revision.
      * 
      */
-    @InputImport(name="percent", required=true)
+    @Import(name="percent", required=true)
       private final Integer percent;
 
     public Integer getPercent() {
@@ -32,7 +32,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * Revision to which this traffic is sent.
      * 
      */
-    @InputImport(name="revision", required=true)
+    @Import(name="revision", required=true)
       private final String revision;
 
     public String getRevision() {
@@ -43,7 +43,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * Indicates the string used in the URI to exclusively reference this target.
      * 
      */
-    @InputImport(name="tag", required=true)
+    @Import(name="tag", required=true)
       private final String tag;
 
     public String getTag() {
@@ -54,7 +54,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * The allocation type for this traffic target.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -65,7 +65,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends io.pulu
      * Displays the target URI.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

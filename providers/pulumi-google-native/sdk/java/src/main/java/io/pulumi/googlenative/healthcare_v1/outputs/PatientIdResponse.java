@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatientIdResponse {
     /**
      * ID type. For example, MRN or NHS.
@@ -20,10 +20,10 @@ public final class PatientIdResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatientIdResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

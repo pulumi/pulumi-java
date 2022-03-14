@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.BigQueryIODetailsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.BigTableIODetailsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DatastoreIODetailsResponse;
@@ -27,7 +27,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Identification of a Cloud Bigtable source used in the Dataflow job.
      * 
      */
-    @InputImport(name="bigTableDetails", required=true)
+    @Import(name="bigTableDetails", required=true)
       private final List<BigTableIODetailsResponse> bigTableDetails;
 
     public List<BigTableIODetailsResponse> getBigTableDetails() {
@@ -38,7 +38,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Identification of a BigQuery source used in the Dataflow job.
      * 
      */
-    @InputImport(name="bigqueryDetails", required=true)
+    @Import(name="bigqueryDetails", required=true)
       private final List<BigQueryIODetailsResponse> bigqueryDetails;
 
     public List<BigQueryIODetailsResponse> getBigqueryDetails() {
@@ -49,7 +49,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Identification of a Datastore source used in the Dataflow job.
      * 
      */
-    @InputImport(name="datastoreDetails", required=true)
+    @Import(name="datastoreDetails", required=true)
       private final List<DatastoreIODetailsResponse> datastoreDetails;
 
     public List<DatastoreIODetailsResponse> getDatastoreDetails() {
@@ -60,7 +60,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Identification of a File source used in the Dataflow job.
      * 
      */
-    @InputImport(name="fileDetails", required=true)
+    @Import(name="fileDetails", required=true)
       private final List<FileIODetailsResponse> fileDetails;
 
     public List<FileIODetailsResponse> getFileDetails() {
@@ -71,7 +71,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Identification of a Pub/Sub source used in the Dataflow job.
      * 
      */
-    @InputImport(name="pubsubDetails", required=true)
+    @Import(name="pubsubDetails", required=true)
       private final List<PubSubIODetailsResponse> pubsubDetails;
 
     public List<PubSubIODetailsResponse> getPubsubDetails() {
@@ -82,7 +82,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * The SDK version used to run the job.
      * 
      */
-    @InputImport(name="sdkVersion", required=true)
+    @Import(name="sdkVersion", required=true)
       private final SdkVersionResponse sdkVersion;
 
     public SdkVersionResponse getSdkVersion() {
@@ -93,7 +93,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Identification of a Spanner source used in the Dataflow job.
      * 
      */
-    @InputImport(name="spannerDetails", required=true)
+    @Import(name="spannerDetails", required=true)
       private final List<SpannerIODetailsResponse> spannerDetails;
 
     public List<SpannerIODetailsResponse> getSpannerDetails() {

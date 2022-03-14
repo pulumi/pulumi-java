@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SlsaRecipeResponse {
     /**
      * Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were "make", then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint. Depending on the recipe Type, the structure may be different.
@@ -36,13 +36,13 @@ public final class SlsaRecipeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SlsaRecipeResponse(
-        @OutputCustomType.Parameter("arguments") Map<String,String> arguments,
-        @OutputCustomType.Parameter("definedInMaterial") String definedInMaterial,
-        @OutputCustomType.Parameter("entryPoint") String entryPoint,
-        @OutputCustomType.Parameter("environment") Map<String,String> environment,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("arguments") Map<String,String> arguments,
+        @CustomType.Parameter("definedInMaterial") String definedInMaterial,
+        @CustomType.Parameter("entryPoint") String entryPoint,
+        @CustomType.Parameter("environment") Map<String,String> environment,
+        @CustomType.Parameter("type") String type) {
         this.arguments = arguments;
         this.definedInMaterial = definedInMaterial;
         this.entryPoint = entryPoint;

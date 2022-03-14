@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.Int64RangeMatchResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpHeaderMatchResponse {
     /**
      * The value should exactly match contents of exactMatch. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.
@@ -52,16 +52,16 @@ public final class HttpHeaderMatchResponse {
      */
     private final String suffixMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpHeaderMatchResponse(
-        @OutputCustomType.Parameter("exactMatch") String exactMatch,
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("invertMatch") Boolean invertMatch,
-        @OutputCustomType.Parameter("prefixMatch") String prefixMatch,
-        @OutputCustomType.Parameter("presentMatch") Boolean presentMatch,
-        @OutputCustomType.Parameter("rangeMatch") Int64RangeMatchResponse rangeMatch,
-        @OutputCustomType.Parameter("regexMatch") String regexMatch,
-        @OutputCustomType.Parameter("suffixMatch") String suffixMatch) {
+        @CustomType.Parameter("exactMatch") String exactMatch,
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("invertMatch") Boolean invertMatch,
+        @CustomType.Parameter("prefixMatch") String prefixMatch,
+        @CustomType.Parameter("presentMatch") Boolean presentMatch,
+        @CustomType.Parameter("rangeMatch") Int64RangeMatchResponse rangeMatch,
+        @CustomType.Parameter("regexMatch") String regexMatch,
+        @CustomType.Parameter("suffixMatch") String suffixMatch) {
         this.exactMatch = exactMatch;
         this.headerName = headerName;
         this.invertMatch = invertMatch;

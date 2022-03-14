@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketAccessControlProjectTeamResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketAccessControlResult {
     /**
      * The name of the bucket.
@@ -72,18 +72,18 @@ public final class GetBucketAccessControlResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketAccessControlResult(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("entity") String entity,
-        @OutputCustomType.Parameter("entityId") String entityId,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("projectTeam") BucketAccessControlProjectTeamResponse projectTeam,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("entity") String entity,
+        @CustomType.Parameter("entityId") String entityId,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("projectTeam") BucketAccessControlProjectTeamResponse projectTeam,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.bucket = bucket;
         this.domain = domain;
         this.email = email;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleTypeMoneyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1RateRangeResponse {
     /**
      * Ending value of the range. Set to 0 or `null` for the last range of values.
@@ -26,11 +26,11 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
      */
     private final String start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1RateRangeResponse(
-        @OutputCustomType.Parameter("end") String end,
-        @OutputCustomType.Parameter("fee") GoogleTypeMoneyResponse fee,
-        @OutputCustomType.Parameter("start") String start) {
+        @CustomType.Parameter("end") String end,
+        @CustomType.Parameter("fee") GoogleTypeMoneyResponse fee,
+        @CustomType.Parameter("start") String start) {
         this.end = end;
         this.fee = fee;
         this.start = start;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.ExternalRefCategory;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable Output<ExternalRefCategory> category;
 
     public Output<ExternalRefCategory> getCategory() {
@@ -34,7 +34,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable information about the purpose and target of the reference
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -45,7 +45,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * The unique string with no spaces necessary to access the package-specific information, metadata, or content within the target location
      * 
      */
-    @InputImport(name="locator")
+    @Import(name="locator")
       private final @Nullable Output<String> locator;
 
     public Output<String> getLocator() {
@@ -56,7 +56,7 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * Type of category (e.g. 'npm' for the PACKAGE_MANAGER category)
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

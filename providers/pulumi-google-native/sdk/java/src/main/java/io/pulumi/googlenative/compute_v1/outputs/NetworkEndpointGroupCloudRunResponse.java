@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkEndpointGroupCloudRunResponse {
     /**
      * Cloud Run service is the main resource of Cloud Run. The service must be 1-63 characters long, and comply with RFC1035. Example value: "run-service".
@@ -25,11 +25,11 @@ public final class NetworkEndpointGroupCloudRunResponse {
      */
     private final String urlMask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkEndpointGroupCloudRunResponse(
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("tag") String tag,
-        @OutputCustomType.Parameter("urlMask") String urlMask) {
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("tag") String tag,
+        @CustomType.Parameter("urlMask") String urlMask) {
         this.service = service;
         this.tag = tag;
         this.urlMask = urlMask;

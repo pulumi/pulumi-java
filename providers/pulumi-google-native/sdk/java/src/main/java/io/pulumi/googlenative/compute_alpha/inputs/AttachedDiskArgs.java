@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskInterface;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskMode;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskSavedState;
@@ -31,7 +31,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
      */
-    @InputImport(name="autoDelete")
+    @Import(name="autoDelete")
       private final @Nullable Output<Boolean> autoDelete;
 
     public Output<Boolean> getAutoDelete() {
@@ -42,7 +42,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
      * 
      */
-    @InputImport(name="boot")
+    @Import(name="boot")
       private final @Nullable Output<Boolean> boot;
 
     public Output<Boolean> getBoot() {
@@ -53,7 +53,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -64,7 +64,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Encrypts or decrypts a disk using a customer-supplied encryption key. If you are creating a new disk, this field encrypts the new disk using an encryption key that you provide. If you are attaching an existing disk that is already encrypted, this field decrypts the disk using the customer-supplied encryption key. If you encrypt a disk using a customer-supplied key, you must provide the same key again when you attempt to use this resource at a later time. For example, you must provide the key when you create a snapshot or an image from the disk or when you attach the disk to a virtual machine instance. If you do not provide an encryption key, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the disk later. Instance templates do not store customer-supplied encryption keys, so you cannot use your own keys to encrypt disks in a managed instance group.
      * 
      */
-    @InputImport(name="diskEncryptionKey")
+    @Import(name="diskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
@@ -75,7 +75,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the disk in GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
@@ -86,7 +86,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * [Input Only] Whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error.
      * 
      */
-    @InputImport(name="forceAttach")
+    @Import(name="forceAttach")
       private final @Nullable Output<Boolean> forceAttach;
 
     public Output<Boolean> getForceAttach() {
@@ -97,7 +97,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
      * 
      */
-    @InputImport(name="guestOsFeatures")
+    @Import(name="guestOsFeatures")
       private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
     public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
@@ -108,7 +108,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
      * 
      */
-    @InputImport(name="initializeParams")
+    @Import(name="initializeParams")
       private final @Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams;
 
     public Output<AttachedDiskInitializeParamsArgs> getInitializeParams() {
@@ -119,7 +119,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
      */
-    @InputImport(name="interface")
+    @Import(name="interface")
       private final @Nullable Output<AttachedDiskInterface> $interface;
 
     public Output<AttachedDiskInterface> get$interface() {
@@ -130,7 +130,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<AttachedDiskMode> mode;
 
     public Output<AttachedDiskMode> getMode() {
@@ -141,7 +141,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is set to PRESERVED if the LocalSSD data has been saved to a persistent location by customer request. (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
      * 
      */
-    @InputImport(name="savedState")
+    @Import(name="savedState")
       private final @Nullable Output<AttachedDiskSavedState> savedState;
 
     public Output<AttachedDiskSavedState> getSavedState() {
@@ -152,7 +152,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD. If desired, you can also attach existing non-root persistent disks using this property. This field is only applicable for persistent disks. Note that for InstanceTemplate, specify the disk name for zonal disk, and the URL for regional disk.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
@@ -163,7 +163,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<AttachedDiskType> type;
 
     public Output<AttachedDiskType> getType() {

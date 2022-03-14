@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DebugOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * When true, enables the logging of the literal hot key to the user's Cloud Logging.
      * 
      */
-    @InputImport(name="enableHotKeyLogging")
+    @Import(name="enableHotKeyLogging")
       private final @Nullable Output<Boolean> enableHotKeyLogging;
 
     public Output<Boolean> getEnableHotKeyLogging() {

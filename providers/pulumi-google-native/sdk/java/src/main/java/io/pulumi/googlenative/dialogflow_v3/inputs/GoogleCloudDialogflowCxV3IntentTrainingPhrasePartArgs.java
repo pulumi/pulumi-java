@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs extends
      * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
      * 
      */
-    @InputImport(name="parameterId")
+    @Import(name="parameterId")
       private final @Nullable Output<String> parameterId;
 
     public Output<String> getParameterId() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs extends
      * The text for this part.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final Output<String> text;
 
     public Output<String> getText() {

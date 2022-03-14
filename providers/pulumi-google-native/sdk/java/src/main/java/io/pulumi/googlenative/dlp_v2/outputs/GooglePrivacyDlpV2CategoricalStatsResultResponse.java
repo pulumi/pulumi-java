@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
     /**
      * Histogram of value frequencies in the column.
@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
      */
     private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2CategoricalStatsResultResponse(@OutputCustomType.Parameter("valueFrequencyHistogramBuckets") List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2CategoricalStatsResultResponse(@CustomType.Parameter("valueFrequencyHistogramBuckets") List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
         this.valueFrequencyHistogramBuckets = valueFrequencyHistogramBuckets;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse {
     /**
      * Suggested client side action: Dial a phone number
@@ -38,13 +38,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      */
     private final String text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(
-        @OutputCustomType.Parameter("dial") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial,
-        @OutputCustomType.Parameter("openUrl") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl,
-        @OutputCustomType.Parameter("postbackData") String postbackData,
-        @OutputCustomType.Parameter("shareLocation") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation,
-        @OutputCustomType.Parameter("text") String text) {
+        @CustomType.Parameter("dial") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial,
+        @CustomType.Parameter("openUrl") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl,
+        @CustomType.Parameter("postbackData") String postbackData,
+        @CustomType.Parameter("shareLocation") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation,
+        @CustomType.Parameter("text") String text) {
         this.dial = dial;
         this.openUrl = openUrl;
         this.postbackData = postbackData;

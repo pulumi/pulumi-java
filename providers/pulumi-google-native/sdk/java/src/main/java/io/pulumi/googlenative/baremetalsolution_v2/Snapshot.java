@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.baremetalsolution_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.baremetalsolution_v2.SnapshotArgs;
@@ -22,7 +22,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The creation time of the storage volume snapshot.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -36,7 +36,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The description of the storage volume snapshot.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The name of the storage volume snapshot.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The size of the storage volume snapshot, in bytes.
      * 
      */
-    @OutputExport(name="sizeBytes", type=String.class, parameters={})
+    @Export(name="sizeBytes", type=String.class, parameters={})
     private Output<String> sizeBytes;
 
     /**
@@ -78,7 +78,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The storage volume this snapshot belongs to.
      * 
      */
-    @OutputExport(name="storageVolume", type=String.class, parameters={})
+    @Export(name="storageVolume", type=String.class, parameters={})
     private Output<String> storageVolume;
 
     /**

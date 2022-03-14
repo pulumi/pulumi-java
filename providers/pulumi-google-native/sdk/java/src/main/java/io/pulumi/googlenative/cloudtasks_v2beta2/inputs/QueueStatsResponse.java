@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * The number of requests that the queue has dispatched but has not received a reply for yet.
      * 
      */
-    @InputImport(name="concurrentDispatchesCount", required=true)
+    @Import(name="concurrentDispatchesCount", required=true)
       private final String concurrentDispatchesCount;
 
     public String getConcurrentDispatchesCount() {
@@ -32,7 +32,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * The current maximum number of tasks per second executed by the queue. The maximum value of this variable is controlled by the RateLimits of the Queue. However, this value could be less to avoid overloading the endpoints tasks in the queue are targeting.
      * 
      */
-    @InputImport(name="effectiveExecutionRate", required=true)
+    @Import(name="effectiveExecutionRate", required=true)
       private final Double effectiveExecutionRate;
 
     public Double getEffectiveExecutionRate() {
@@ -43,7 +43,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * The number of tasks that the queue has dispatched and received a reply for during the last minute. This variable counts both successful and non-successful executions.
      * 
      */
-    @InputImport(name="executedLastMinuteCount", required=true)
+    @Import(name="executedLastMinuteCount", required=true)
       private final String executedLastMinuteCount;
 
     public String getExecutedLastMinuteCount() {
@@ -54,7 +54,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * An estimation of the nearest time in the future where a task in the queue is scheduled to be executed.
      * 
      */
-    @InputImport(name="oldestEstimatedArrivalTime", required=true)
+    @Import(name="oldestEstimatedArrivalTime", required=true)
       private final String oldestEstimatedArrivalTime;
 
     public String getOldestEstimatedArrivalTime() {
@@ -65,7 +65,7 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
      * An estimation of the number of tasks in the queue, that is, the tasks in the queue that haven't been executed, the tasks in the queue which the queue has dispatched but has not yet received a reply for, and the failed tasks that the queue is retrying.
      * 
      */
-    @InputImport(name="tasksCount", required=true)
+    @Import(name="tasksCount", required=true)
       private final String tasksCount;
 
     public String getTasksCount() {

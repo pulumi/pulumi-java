@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceResponse;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * Elapsed time of test suite.
      * 
      */
-    @InputImport(name="elapsedTime", required=true)
+    @Import(name="elapsedTime", required=true)
       private final DurationResponse elapsedTime;
 
     public DurationResponse getElapsedTime() {
@@ -34,7 +34,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
      * 
      */
-    @InputImport(name="errorCount", required=true)
+    @Import(name="errorCount", required=true)
       private final Integer errorCount;
 
     public Integer getErrorCount() {
@@ -45,7 +45,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never
      * 
      */
-    @InputImport(name="failureCount", required=true)
+    @Import(name="failureCount", required=true)
       private final Integer failureCount;
 
     public Integer getFailureCount() {
@@ -56,7 +56,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.
      * 
      */
-    @InputImport(name="flakyCount", required=true)
+    @Import(name="flakyCount", required=true)
       private final Integer flakyCount;
 
     public Integer getFlakyCount() {
@@ -67,7 +67,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * The name of the test suite. - In create/response: always set - In update request: never
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -78,7 +78,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
      * 
      */
-    @InputImport(name="skippedCount", required=true)
+    @Import(name="skippedCount", required=true)
       private final Integer skippedCount;
 
     public Integer getSkippedCount() {
@@ -89,7 +89,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
      * 
      */
-    @InputImport(name="totalCount", required=true)
+    @Import(name="totalCount", required=true)
       private final Integer totalCount;
 
     public Integer getTotalCount() {
@@ -100,7 +100,7 @@ public final class TestSuiteOverviewResponse extends io.pulumi.resources.InvokeA
      * If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never
      * 
      */
-    @InputImport(name="xmlSource", required=true)
+    @Import(name="xmlSource", required=true)
       private final FileReferenceResponse xmlSource;
 
     public FileReferenceResponse getXmlSource() {

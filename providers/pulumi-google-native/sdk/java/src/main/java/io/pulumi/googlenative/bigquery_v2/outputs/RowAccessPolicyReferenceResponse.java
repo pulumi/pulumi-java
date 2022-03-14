@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RowAccessPolicyReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this row access policy.
@@ -30,12 +30,12 @@ public final class RowAccessPolicyReferenceResponse {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RowAccessPolicyReferenceResponse(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("policyId") String policyId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("tableId") String tableId) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("policyId") String policyId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.policyId = policyId;
         this.project = project;

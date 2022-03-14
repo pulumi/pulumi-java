@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.EncryptionConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableReferenceResponse;
 import java.lang.Object;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobConfigurationTableCopyResponse {
     /**
      * [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
@@ -54,16 +54,16 @@ public final class JobConfigurationTableCopyResponse {
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobConfigurationTableCopyResponse(
-        @OutputCustomType.Parameter("createDisposition") String createDisposition,
-        @OutputCustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        @OutputCustomType.Parameter("destinationExpirationTime") Object destinationExpirationTime,
-        @OutputCustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
-        @OutputCustomType.Parameter("operationType") String operationType,
-        @OutputCustomType.Parameter("sourceTable") TableReferenceResponse sourceTable,
-        @OutputCustomType.Parameter("sourceTables") List<TableReferenceResponse> sourceTables,
-        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
+        @CustomType.Parameter("createDisposition") String createDisposition,
+        @CustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
+        @CustomType.Parameter("destinationExpirationTime") Object destinationExpirationTime,
+        @CustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
+        @CustomType.Parameter("operationType") String operationType,
+        @CustomType.Parameter("sourceTable") TableReferenceResponse sourceTable,
+        @CustomType.Parameter("sourceTables") List<TableReferenceResponse> sourceTables,
+        @CustomType.Parameter("writeDisposition") String writeDisposition) {
         this.createDisposition = createDisposition;
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
         this.destinationExpirationTime = destinationExpirationTime;

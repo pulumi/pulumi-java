@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse {
     /**
      * When the next Scheduler job is going to run.
@@ -25,11 +25,11 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatapipelinesV1ScheduleSpecResponse(
-        @OutputCustomType.Parameter("nextJobTime") String nextJobTime,
-        @OutputCustomType.Parameter("schedule") String schedule,
-        @OutputCustomType.Parameter("timeZone") String timeZone) {
+        @CustomType.Parameter("nextJobTime") String nextJobTime,
+        @CustomType.Parameter("schedule") String schedule,
+        @CustomType.Parameter("timeZone") String timeZone) {
         this.nextJobTime = nextJobTime;
         this.schedule = schedule;
         this.timeZone = timeZone;

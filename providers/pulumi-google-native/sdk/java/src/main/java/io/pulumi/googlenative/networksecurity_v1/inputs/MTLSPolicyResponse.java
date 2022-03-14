@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networksecurity_v1.inputs.ValidationCAResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MTLSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
      * 
      */
-    @InputImport(name="clientValidationCa", required=true)
+    @Import(name="clientValidationCa", required=true)
       private final List<ValidationCAResponse> clientValidationCa;
 
     public List<ValidationCAResponse> getClientValidationCa() {

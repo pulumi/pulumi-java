@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaterialResponse {
     /**
      * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
@@ -21,10 +21,10 @@ public final class MaterialResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaterialResponse(
-        @OutputCustomType.Parameter("digest") Map<String,String> digest,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("digest") Map<String,String> digest,
+        @CustomType.Parameter("uri") String uri) {
         this.digest = digest;
         this.uri = uri;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebasedatabase_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * Immutable. The globally unique hostname of the database.
@@ -35,13 +35,13 @@ public final class GetInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("databaseUrl") String databaseUrl,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.databaseUrl = databaseUrl;
         this.name = name;
         this.project = project;

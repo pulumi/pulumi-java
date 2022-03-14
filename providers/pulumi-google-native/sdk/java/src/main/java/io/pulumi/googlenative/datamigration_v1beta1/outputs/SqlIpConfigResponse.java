@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.SqlAclEntryResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlIpConfigResponse {
     /**
      * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
@@ -33,12 +33,12 @@ public final class SqlIpConfigResponse {
      */
     private final Boolean requireSsl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlIpConfigResponse(
-        @OutputCustomType.Parameter("authorizedNetworks") List<SqlAclEntryResponse> authorizedNetworks,
-        @OutputCustomType.Parameter("enableIpv4") Boolean enableIpv4,
-        @OutputCustomType.Parameter("privateNetwork") String privateNetwork,
-        @OutputCustomType.Parameter("requireSsl") Boolean requireSsl) {
+        @CustomType.Parameter("authorizedNetworks") List<SqlAclEntryResponse> authorizedNetworks,
+        @CustomType.Parameter("enableIpv4") Boolean enableIpv4,
+        @CustomType.Parameter("privateNetwork") String privateNetwork,
+        @CustomType.Parameter("requireSsl") Boolean requireSsl) {
         this.authorizedNetworks = authorizedNetworks;
         this.enableIpv4 = enableIpv4;
         this.privateNetwork = privateNetwork;

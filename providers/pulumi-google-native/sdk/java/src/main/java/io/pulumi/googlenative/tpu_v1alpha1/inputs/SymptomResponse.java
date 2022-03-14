@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
      * Timestamp when the Symptom is created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -31,7 +31,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
      * Detailed information of the current Symptom.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final String details;
 
     public String getDetails() {
@@ -42,7 +42,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the Symptom.
      * 
      */
-    @InputImport(name="symptomType", required=true)
+    @Import(name="symptomType", required=true)
       private final String symptomType;
 
     public String getSymptomType() {
@@ -53,7 +53,7 @@ public final class SymptomResponse extends io.pulumi.resources.InvokeArgs {
      * A string used to uniquely distinguish a worker within a TPU node.
      * 
      */
-    @InputImport(name="workerId", required=true)
+    @Import(name="workerId", required=true)
       private final String workerId;
 
     public String getWorkerId() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnumValueResponse {
     /**
      * Enum value name.
@@ -28,11 +28,11 @@ public final class EnumValueResponse {
      */
     private final List<OptionResponse> options;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnumValueResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("number") Integer number,
-        @OutputCustomType.Parameter("options") List<OptionResponse> options) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("number") Integer number,
+        @CustomType.Parameter("options") List<OptionResponse> options) {
         this.name = name;
         this.number = number;
         this.options = options;

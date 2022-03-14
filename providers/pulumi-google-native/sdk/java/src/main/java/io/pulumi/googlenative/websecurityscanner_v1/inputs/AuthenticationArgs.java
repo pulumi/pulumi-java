@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.CustomAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.GoogleAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1.inputs.IapCredentialArgs;
@@ -24,7 +24,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication using a custom account.
      * 
      */
-    @InputImport(name="customAccount")
+    @Import(name="customAccount")
       private final @Nullable Output<CustomAccountArgs> customAccount;
 
     public Output<CustomAccountArgs> getCustomAccount() {
@@ -35,7 +35,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication using a Google account.
      * 
      */
-    @InputImport(name="googleAccount")
+    @Import(name="googleAccount")
       private final @Nullable Output<GoogleAccountArgs> googleAccount;
 
     public Output<GoogleAccountArgs> getGoogleAccount() {
@@ -46,7 +46,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication using Identity-Aware-Proxy (IAP).
      * 
      */
-    @InputImport(name="iapCredential")
+    @Import(name="iapCredential")
       private final @Nullable Output<IapCredentialArgs> iapCredential;
 
     public Output<IapCredentialArgs> getIapCredential() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1beta.ConfigArgs;
@@ -25,7 +25,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -39,7 +39,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The description of the game server config.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -53,7 +53,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
      * 
      */
-    @OutputExport(name="fleetConfigs", type=List.class, parameters={FleetConfigResponse.class})
+    @Export(name="fleetConfigs", type=List.class, parameters={FleetConfigResponse.class})
     private Output<List<FleetConfigResponse>> fleetConfigs;
 
     /**
@@ -67,7 +67,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The labels associated with this game server config. Each label is a key-value pair.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -81,7 +81,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The autoscaling settings.
      * 
      */
-    @OutputExport(name="scalingConfigs", type=List.class, parameters={ScalingConfigResponse.class})
+    @Export(name="scalingConfigs", type=List.class, parameters={ScalingConfigResponse.class})
     private Output<List<ScalingConfigResponse>> scalingConfigs;
 
     /**
@@ -109,7 +109,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The last-modified time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.BasicAuthArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ServiceAccountArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * Basic Auth Credential, only used by TypeProvider.
      * 
      */
-    @InputImport(name="basicAuth")
+    @Import(name="basicAuth")
       private final @Nullable Output<BasicAuthArgs> basicAuth;
 
     public Output<BasicAuthArgs> getBasicAuth() {
@@ -35,7 +35,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * Service Account Credential, only used by Deployment.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountArgs> serviceAccount;
 
     public Output<ServiceAccountArgs> getServiceAccount() {
@@ -46,7 +46,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * Specify to use the project default credential, only supported by Deployment.
      * 
      */
-    @InputImport(name="useProjectDefault")
+    @Import(name="useProjectDefault")
       private final @Nullable Output<Boolean> useProjectDefault;
 
     public Output<Boolean> getUseProjectDefault() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.memcache_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MemcacheParametersResponse {
     /**
      * User defined set of parameters to use in the memcached process.
@@ -16,8 +16,8 @@ public final class MemcacheParametersResponse {
      */
     private final Map<String,String> params;
 
-    @OutputCustomType.Constructor
-    private MemcacheParametersResponse(@OutputCustomType.Parameter("params") Map<String,String> params) {
+    @CustomType.Constructor
+    private MemcacheParametersResponse(@CustomType.Parameter("params") Map<String,String> params) {
         this.params = params;
     }
 

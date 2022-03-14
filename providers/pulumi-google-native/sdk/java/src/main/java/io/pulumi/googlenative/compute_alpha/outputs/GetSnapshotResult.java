@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotResult {
     /**
      * The architecture of the snapshot. Valid values are ARM64 or X86_64.
@@ -170,39 +170,39 @@ public final class GetSnapshotResult {
      */
     private final List<String> userLicenses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotResult(
-        @OutputCustomType.Parameter("architecture") String architecture,
-        @OutputCustomType.Parameter("autoCreated") Boolean autoCreated,
-        @OutputCustomType.Parameter("chainName") String chainName,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("downloadBytes") String downloadBytes,
-        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
-        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
-        @OutputCustomType.Parameter("licenses") List<String> licenses,
-        @OutputCustomType.Parameter("locationHint") String locationHint,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("snapshotEncryptionKey") CustomerEncryptionKeyResponse snapshotEncryptionKey,
-        @OutputCustomType.Parameter("snapshotType") String snapshotType,
-        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
-        @OutputCustomType.Parameter("sourceDiskEncryptionKey") CustomerEncryptionKeyResponse sourceDiskEncryptionKey,
-        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
-        @OutputCustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
-        @OutputCustomType.Parameter("sourceInstantSnapshotId") String sourceInstantSnapshotId,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("storageBytes") String storageBytes,
-        @OutputCustomType.Parameter("storageBytesStatus") String storageBytesStatus,
-        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations,
-        @OutputCustomType.Parameter("userLicenses") List<String> userLicenses) {
+        @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("autoCreated") Boolean autoCreated,
+        @CustomType.Parameter("chainName") String chainName,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("downloadBytes") String downloadBytes,
+        @CustomType.Parameter("guestFlush") Boolean guestFlush,
+        @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @CustomType.Parameter("licenses") List<String> licenses,
+        @CustomType.Parameter("locationHint") String locationHint,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("snapshotEncryptionKey") CustomerEncryptionKeyResponse snapshotEncryptionKey,
+        @CustomType.Parameter("snapshotType") String snapshotType,
+        @CustomType.Parameter("sourceDisk") String sourceDisk,
+        @CustomType.Parameter("sourceDiskEncryptionKey") CustomerEncryptionKeyResponse sourceDiskEncryptionKey,
+        @CustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @CustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
+        @CustomType.Parameter("sourceInstantSnapshotId") String sourceInstantSnapshotId,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("storageBytes") String storageBytes,
+        @CustomType.Parameter("storageBytesStatus") String storageBytesStatus,
+        @CustomType.Parameter("storageLocations") List<String> storageLocations,
+        @CustomType.Parameter("userLicenses") List<String> userLicenses) {
         this.architecture = architecture;
         this.autoCreated = autoCreated;
         this.chainName = chainName;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.enums.TrialState;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Trial_ParameterArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__MeasurementArgs;
@@ -22,14 +22,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * The final measurement containing the objective value.
      * 
      */
-    @InputImport(name="finalMeasurement")
+    @Import(name="finalMeasurement")
       private final @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
 
     public Output<GoogleCloudMlV1__MeasurementArgs> getFinalMeasurement() {
         return this.finalMeasurement == null ? Output.empty() : this.finalMeasurement;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -40,7 +40,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
      * 
      */
-    @InputImport(name="measurements")
+    @Import(name="measurements")
       private final @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
 
     public Output<List<GoogleCloudMlV1__MeasurementArgs>> getMeasurements() {
@@ -51,14 +51,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters of the trial.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
 
     public Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> getParameters() {
         return this.parameters == null ? Output.empty() : this.parameters;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,14 +69,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
      * The detailed state of a trial.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<TrialState> state;
 
     public Output<TrialState> getState() {
         return this.state == null ? Output.empty() : this.state;
     }
 
-    @InputImport(name="studyId", required=true)
+    @Import(name="studyId", required=true)
       private final Output<String> studyId;
 
     public Output<String> getStudyId() {

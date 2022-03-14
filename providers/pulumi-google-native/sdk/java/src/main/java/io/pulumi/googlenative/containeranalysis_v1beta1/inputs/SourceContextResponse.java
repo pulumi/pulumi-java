@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.CloudRepoSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GerritSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GitSourceContextResponse;
@@ -24,7 +24,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
      * 
      */
-    @InputImport(name="cloudRepo", required=true)
+    @Import(name="cloudRepo", required=true)
       private final CloudRepoSourceContextResponse cloudRepo;
 
     public CloudRepoSourceContextResponse getCloudRepo() {
@@ -35,7 +35,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
      * A SourceContext referring to a Gerrit project.
      * 
      */
-    @InputImport(name="gerrit", required=true)
+    @Import(name="gerrit", required=true)
       private final GerritSourceContextResponse gerrit;
 
     public GerritSourceContextResponse getGerrit() {
@@ -46,7 +46,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
      * A SourceContext referring to any third party Git repo (e.g., GitHub).
      * 
      */
-    @InputImport(name="git", required=true)
+    @Import(name="git", required=true)
       private final GitSourceContextResponse git;
 
     public GitSourceContextResponse getGit() {
@@ -57,7 +57,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
      * Labels with user defined metadata.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {

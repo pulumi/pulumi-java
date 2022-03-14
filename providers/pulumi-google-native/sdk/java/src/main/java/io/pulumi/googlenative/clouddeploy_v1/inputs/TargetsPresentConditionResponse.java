@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
      * The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
      * 
      */
-    @InputImport(name="missingTargets", required=true)
+    @Import(name="missingTargets", required=true)
       private final List<String> missingTargets;
 
     public List<String> getMissingTargets() {
@@ -33,7 +33,7 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
      * True if there aren't any missing Targets.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Boolean status;
 
     public Boolean getStatus() {
@@ -44,7 +44,7 @@ public final class TargetsPresentConditionResponse extends io.pulumi.resources.I
      * Last time the condition was updated.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

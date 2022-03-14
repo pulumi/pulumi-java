@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsResponse extends io.
      * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
      * 
      */
-    @InputImport(name="loggingSettings", required=true)
+    @Import(name="loggingSettings", required=true)
       private final GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse loggingSettings;
 
     public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse getLoggingSettings() {

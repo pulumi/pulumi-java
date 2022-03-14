@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.EnvironmentArgs;
@@ -22,7 +22,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed.
      * 
      */
-    @OutputExport(name="apiProxyType", type=String.class, parameters={})
+    @Export(name="apiProxyType", type=String.class, parameters={})
     private Output<String> apiProxyType;
 
     /**
@@ -36,7 +36,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Creation time of this environment as milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -50,7 +50,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be **prevented from performing** a [subset of actions](/apigee/docs/api-platform/local-development/overview#prevented-actions) within the environment, including: * Managing the deployment of API proxy or shared flow revisions * Creating, updating, or deleting resource files * Creating, updating, or deleting target servers
      * 
      */
-    @OutputExport(name="deploymentType", type=String.class, parameters={})
+    @Export(name="deploymentType", type=String.class, parameters={})
     private Output<String> deploymentType;
 
     /**
@@ -64,7 +64,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Optional. Description of the environment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -78,7 +78,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Optional. Display name for this environment.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -92,7 +92,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Last modification time of this environment as milliseconds since epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -106,7 +106,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Name of the environment. Values must match the regular expression `^[.\\p{Alnum}-_]{1,255}$`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Optional. Key-value pairs that may be used for customizing the environment.
      * 
      */
-    @OutputExport(name="properties", type=GoogleCloudApigeeV1PropertiesResponse.class, parameters={})
+    @Export(name="properties", type=GoogleCloudApigeeV1PropertiesResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1PropertiesResponse> properties;
 
     /**
@@ -134,7 +134,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * State of the environment. Values other than ACTIVE means the resource is not ready to use.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

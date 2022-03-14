@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RouteAsPathResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.RouteWarningsItemResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteResult {
     /**
      * Whether this route can conflict with existing subnetworks. Setting this to true allows this route to conflict with subnetworks that have already been configured on the corresponding network.
@@ -135,32 +135,32 @@ public final class GetRouteResult {
      */
     private final List<RouteWarningsItemResponse> warnings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteResult(
-        @OutputCustomType.Parameter("allowConflictingSubnetworks") Boolean allowConflictingSubnetworks,
-        @OutputCustomType.Parameter("asPaths") List<RouteAsPathResponse> asPaths,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("destRange") String destRange,
-        @OutputCustomType.Parameter("ilbRouteBehaviorOnUnhealthy") String ilbRouteBehaviorOnUnhealthy,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("nextHopGateway") String nextHopGateway,
-        @OutputCustomType.Parameter("nextHopIlb") String nextHopIlb,
-        @OutputCustomType.Parameter("nextHopInstance") String nextHopInstance,
-        @OutputCustomType.Parameter("nextHopInterconnectAttachment") String nextHopInterconnectAttachment,
-        @OutputCustomType.Parameter("nextHopIp") String nextHopIp,
-        @OutputCustomType.Parameter("nextHopNetwork") String nextHopNetwork,
-        @OutputCustomType.Parameter("nextHopPeering") String nextHopPeering,
-        @OutputCustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("routeStatus") String routeStatus,
-        @OutputCustomType.Parameter("routeType") String routeType,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("warnings") List<RouteWarningsItemResponse> warnings) {
+        @CustomType.Parameter("allowConflictingSubnetworks") Boolean allowConflictingSubnetworks,
+        @CustomType.Parameter("asPaths") List<RouteAsPathResponse> asPaths,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("destRange") String destRange,
+        @CustomType.Parameter("ilbRouteBehaviorOnUnhealthy") String ilbRouteBehaviorOnUnhealthy,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("nextHopGateway") String nextHopGateway,
+        @CustomType.Parameter("nextHopIlb") String nextHopIlb,
+        @CustomType.Parameter("nextHopInstance") String nextHopInstance,
+        @CustomType.Parameter("nextHopInterconnectAttachment") String nextHopInterconnectAttachment,
+        @CustomType.Parameter("nextHopIp") String nextHopIp,
+        @CustomType.Parameter("nextHopNetwork") String nextHopNetwork,
+        @CustomType.Parameter("nextHopPeering") String nextHopPeering,
+        @CustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("routeStatus") String routeStatus,
+        @CustomType.Parameter("routeType") String routeType,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("warnings") List<RouteWarningsItemResponse> warnings) {
         this.allowConflictingSubnetworks = allowConflictingSubnetworks;
         this.asPaths = asPaths;
         this.creationTimestamp = creationTimestamp;

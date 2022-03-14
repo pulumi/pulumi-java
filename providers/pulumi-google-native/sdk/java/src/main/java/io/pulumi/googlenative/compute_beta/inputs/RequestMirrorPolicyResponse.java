@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RequestMirrorPolicyResponse extends io.pulumi.resources.Invok
      * The full or partial URL to the BackendService resource being mirrored to.
      * 
      */
-    @InputImport(name="backendService", required=true)
+    @Import(name="backendService", required=true)
       private final String backendService;
 
     public String getBackendService() {

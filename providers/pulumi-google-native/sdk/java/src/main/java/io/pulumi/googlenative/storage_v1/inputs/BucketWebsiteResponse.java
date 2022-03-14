@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BucketWebsiteResponse extends io.pulumi.resources.InvokeArgs 
      * If the requested object path is missing, the service will ensure the path has a trailing '/', append this suffix, and attempt to retrieve the resulting object. This allows the creation of index.html objects to represent directory pages.
      * 
      */
-    @InputImport(name="mainPageSuffix", required=true)
+    @Import(name="mainPageSuffix", required=true)
       private final String mainPageSuffix;
 
     public String getMainPageSuffix() {
@@ -31,7 +31,7 @@ public final class BucketWebsiteResponse extends io.pulumi.resources.InvokeArgs 
      * If the requested object path is missing, and any mainPageSuffix object is missing, if applicable, the service will return the named object from this bucket as the content for a 404 Not Found result.
      * 
      */
-    @InputImport(name="notFoundPage", required=true)
+    @Import(name="notFoundPage", required=true)
       private final String notFoundPage;
 
     public String getNotFoundPage() {

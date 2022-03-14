@@ -3,19 +3,19 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyAdvancedOptionsConfigResponse {
     private final String jsonParsing;
     private final String logLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyAdvancedOptionsConfigResponse(
-        @OutputCustomType.Parameter("jsonParsing") String jsonParsing,
-        @OutputCustomType.Parameter("logLevel") String logLevel) {
+        @CustomType.Parameter("jsonParsing") String jsonParsing,
+        @CustomType.Parameter("logLevel") String logLevel) {
         this.jsonParsing = jsonParsing;
         this.logLevel = logLevel;
     }

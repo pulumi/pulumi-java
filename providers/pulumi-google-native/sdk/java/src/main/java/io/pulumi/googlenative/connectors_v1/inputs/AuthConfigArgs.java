@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.connectors_v1.enums.AuthConfigAuthType;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2ClientCredentialsArgs;
@@ -27,7 +27,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * List containing additional auth configs.
      * 
      */
-    @InputImport(name="additionalVariables")
+    @Import(name="additionalVariables")
       private final @Nullable Output<List<ConfigVariableArgs>> additionalVariables;
 
     public Output<List<ConfigVariableArgs>> getAdditionalVariables() {
@@ -38,7 +38,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The type of authentication configured.
      * 
      */
-    @InputImport(name="authType")
+    @Import(name="authType")
       private final @Nullable Output<AuthConfigAuthType> authType;
 
     public Output<AuthConfigAuthType> getAuthType() {
@@ -49,7 +49,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Oauth2ClientCredentials.
      * 
      */
-    @InputImport(name="oauth2ClientCredentials")
+    @Import(name="oauth2ClientCredentials")
       private final @Nullable Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials;
 
     public Output<Oauth2ClientCredentialsArgs> getOauth2ClientCredentials() {
@@ -60,7 +60,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Oauth2JwtBearer.
      * 
      */
-    @InputImport(name="oauth2JwtBearer")
+    @Import(name="oauth2JwtBearer")
       private final @Nullable Output<Oauth2JwtBearerArgs> oauth2JwtBearer;
 
     public Output<Oauth2JwtBearerArgs> getOauth2JwtBearer() {
@@ -71,7 +71,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * UserPassword.
      * 
      */
-    @InputImport(name="userPassword")
+    @Import(name="userPassword")
       private final @Nullable Output<UserPasswordArgs> userPassword;
 
     public Output<UserPasswordArgs> getUserPassword() {

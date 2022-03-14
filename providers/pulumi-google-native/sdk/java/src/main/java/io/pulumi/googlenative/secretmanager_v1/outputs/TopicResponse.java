@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicResponse {
     /**
      * The resource name of the Pub/Sub topic that will be published to, in the following format: `projects/*{@literal /}topics/*`. For publication to succeed, the Secret Manager P4SA must have `pubsub.publisher` permissions on the topic.
@@ -15,8 +15,8 @@ public final class TopicResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private TopicResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private TopicResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

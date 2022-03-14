@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleHttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleMatcherArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleRateLimitOptionsArgs;
@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -39,7 +39,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -50,7 +50,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Optional, additional actions that are performed on headers.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
     public Output<SecurityPolicyRuleHttpHeaderActionArgs> getHeaderAction() {
@@ -61,7 +61,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
      * 
      */
-    @InputImport(name="match")
+    @Import(name="match")
       private final @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
 
     public Output<SecurityPolicyRuleMatcherArgs> getMatch() {
@@ -72,7 +72,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * If set to true, the specified action is not enforced.
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
@@ -83,7 +83,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -94,7 +94,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
      * 
      */
-    @InputImport(name="rateLimitOptions")
+    @Import(name="rateLimitOptions")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
     public Output<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
@@ -105,7 +105,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Parameters defining the redirect action. Cannot be specified for any other actions.
      * 
      */
-    @InputImport(name="redirectOptions")
+    @Import(name="redirectOptions")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
     public Output<SecurityPolicyRuleRedirectOptionsArgs> getRedirectOptions() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEntityTypeResult {
     /**
      * Indicates whether the entity type can be automatically expanded.
@@ -54,16 +54,16 @@ public final class GetEntityTypeResult {
      */
     private final Boolean redact;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntityTypeResult(
-        @OutputCustomType.Parameter("autoExpansionMode") String autoExpansionMode,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enableFuzzyExtraction") Boolean enableFuzzyExtraction,
-        @OutputCustomType.Parameter("entities") List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities,
-        @OutputCustomType.Parameter("excludedPhrases") List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("redact") Boolean redact) {
+        @CustomType.Parameter("autoExpansionMode") String autoExpansionMode,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enableFuzzyExtraction") Boolean enableFuzzyExtraction,
+        @CustomType.Parameter("entities") List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities,
+        @CustomType.Parameter("excludedPhrases") List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("redact") Boolean redact) {
         this.autoExpansionMode = autoExpansionMode;
         this.displayName = displayName;
         this.enableFuzzyExtraction = enableFuzzyExtraction;

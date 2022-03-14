@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
      * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
      * 
      */
-    @InputImport(name="disks", required=true)
+    @Import(name="disks", required=true)
       private final Map<String,String> disks;
 
     public Map<String,String> getDisks() {

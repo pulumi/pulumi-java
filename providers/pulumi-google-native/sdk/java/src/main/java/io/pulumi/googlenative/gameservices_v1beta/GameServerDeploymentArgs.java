@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
 
     public static final GameServerDeploymentArgs Empty = new GameServerDeploymentArgs();
 
-    @InputImport(name="deploymentId", required=true)
+    @Import(name="deploymentId", required=true)
       private final Output<String> deploymentId;
 
     public Output<String> getDeploymentId() {
@@ -26,7 +26,7 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
      * Human readable description of the game server delpoyment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,7 +37,7 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
      * ETag of the resource.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -48,14 +48,14 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
      * The labels associated with this game server deployment. Each label is a key-value pair.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,14 +66,14 @@ public final class GameServerDeploymentArgs extends io.pulumi.resources.Resource
      * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

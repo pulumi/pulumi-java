@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.DiskResponse;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineResourcesResponse {
     /**
      * Optional. The number of accelerators of the specified type to attach. By specifying this parameter, you will download and install the following third-party software onto your managed Compute Engine instances: NVIDIA® Tesla® drivers and NVIDIA® CUDA toolkit.
@@ -60,17 +60,17 @@ public final class PipelineResourcesResponse {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineResourcesResponse(
-        @OutputCustomType.Parameter("acceleratorCount") String acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
-        @OutputCustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
-        @OutputCustomType.Parameter("disks") List<DiskResponse> disks,
-        @OutputCustomType.Parameter("minimumCpuCores") Integer minimumCpuCores,
-        @OutputCustomType.Parameter("minimumRamGb") Double minimumRamGb,
-        @OutputCustomType.Parameter("noAddress") Boolean noAddress,
-        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
-        @OutputCustomType.Parameter("zones") List<String> zones) {
+        @CustomType.Parameter("acceleratorCount") String acceleratorCount,
+        @CustomType.Parameter("acceleratorType") String acceleratorType,
+        @CustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
+        @CustomType.Parameter("disks") List<DiskResponse> disks,
+        @CustomType.Parameter("minimumCpuCores") Integer minimumCpuCores,
+        @CustomType.Parameter("minimumRamGb") Double minimumRamGb,
+        @CustomType.Parameter("noAddress") Boolean noAddress,
+        @CustomType.Parameter("preemptible") Boolean preemptible,
+        @CustomType.Parameter("zones") List<String> zones) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
         this.bootDiskSizeGb = bootDiskSizeGb;

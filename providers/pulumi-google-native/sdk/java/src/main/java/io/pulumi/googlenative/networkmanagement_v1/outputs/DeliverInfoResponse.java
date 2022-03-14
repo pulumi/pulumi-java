@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliverInfoResponse {
     /**
      * URI of the resource that the packet is delivered to.
@@ -20,10 +20,10 @@ public final class DeliverInfoResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliverInfoResponse(
-        @OutputCustomType.Parameter("resourceUri") String resourceUri,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("resourceUri") String resourceUri,
+        @CustomType.Parameter("target") String target) {
         this.resourceUri = resourceUri;
         this.target = target;
     }

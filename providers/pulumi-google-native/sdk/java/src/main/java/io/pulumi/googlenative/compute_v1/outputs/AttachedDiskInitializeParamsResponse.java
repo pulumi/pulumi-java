@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.CustomerEncryptionKeyResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttachedDiskInitializeParamsResponse {
     /**
      * An optional description. Provide this property when creating the disk.
@@ -78,21 +78,21 @@ public final class AttachedDiskInitializeParamsResponse {
      */
     private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttachedDiskInitializeParamsResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("licenses") List<String> licenses,
-        @OutputCustomType.Parameter("onUpdateAction") String onUpdateAction,
-        @OutputCustomType.Parameter("provisionedIops") String provisionedIops,
-        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
-        @OutputCustomType.Parameter("sourceImage") String sourceImage,
-        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
-        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("licenses") List<String> licenses,
+        @CustomType.Parameter("onUpdateAction") String onUpdateAction,
+        @CustomType.Parameter("provisionedIops") String provisionedIops,
+        @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("sourceImage") String sourceImage,
+        @CustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @CustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @CustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
         this.description = description;
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DynamicGroupQueryResponse extends io.pulumi.resources.InvokeA
      * Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive queries add `equalsIgnoreCase()` to the value being queried). `user.name.value.equalsIgnoreCase('jOhn DoE')`
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final String query;
 
     public String getQuery() {
@@ -31,7 +31,7 @@ public final class DynamicGroupQueryResponse extends io.pulumi.resources.InvokeA
      * Resource type for the Dynamic Group Query
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {

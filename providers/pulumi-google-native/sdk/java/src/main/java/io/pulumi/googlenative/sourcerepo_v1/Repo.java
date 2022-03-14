@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sourcerepo_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sourcerepo_v1.RepoArgs;
@@ -23,7 +23,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * How this repository mirrors a repository managed by another service. Read-only field.
      * 
      */
-    @OutputExport(name="mirrorConfig", type=MirrorConfigResponse.class, parameters={})
+    @Export(name="mirrorConfig", type=MirrorConfigResponse.class, parameters={})
     private Output<MirrorConfigResponse> mirrorConfig;
 
     /**
@@ -37,7 +37,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -51,7 +51,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
      * 
      */
-    @OutputExport(name="pubsubConfigs", type=Map.class, parameters={String.class, String.class})
+    @Export(name="pubsubConfigs", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> pubsubConfigs;
 
     /**
@@ -65,7 +65,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
      * 
      */
-    @OutputExport(name="size", type=String.class, parameters={})
+    @Export(name="size", type=String.class, parameters={})
     private Output<String> size;
 
     /**
@@ -79,7 +79,7 @@ public class Repo extends io.pulumi.resources.CustomResource {
      * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

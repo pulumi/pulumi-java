@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class StaticFilesHandlerArgs extends io.pulumi.resources.ResourceAr
      * Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
      * 
      */
-    @InputImport(name="applicationReadable")
+    @Import(name="applicationReadable")
       private final @Nullable Output<Boolean> applicationReadable;
 
     public Output<Boolean> getApplicationReadable() {
@@ -35,7 +35,7 @@ public final class StaticFilesHandlerArgs extends io.pulumi.resources.ResourceAr
      * Time a static file served by this handler should be cached by web proxies and browsers.
      * 
      */
-    @InputImport(name="expiration")
+    @Import(name="expiration")
       private final @Nullable Output<String> expiration;
 
     public Output<String> getExpiration() {
@@ -46,7 +46,7 @@ public final class StaticFilesHandlerArgs extends io.pulumi.resources.ResourceAr
      * HTTP headers to use for all responses from these URLs.
      * 
      */
-    @InputImport(name="httpHeaders")
+    @Import(name="httpHeaders")
       private final @Nullable Output<Map<String,String>> httpHeaders;
 
     public Output<Map<String,String>> getHttpHeaders() {
@@ -57,7 +57,7 @@ public final class StaticFilesHandlerArgs extends io.pulumi.resources.ResourceAr
      * MIME type used to serve all files served by this handler.Defaults to file-specific MIME types, which are derived from each file's filename extension.
      * 
      */
-    @InputImport(name="mimeType")
+    @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
     public Output<String> getMimeType() {
@@ -68,7 +68,7 @@ public final class StaticFilesHandlerArgs extends io.pulumi.resources.ResourceAr
      * Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -79,7 +79,7 @@ public final class StaticFilesHandlerArgs extends io.pulumi.resources.ResourceAr
      * Whether this handler should match the request if the file referenced by the handler does not exist.
      * 
      */
-    @InputImport(name="requireMatchingFile")
+    @Import(name="requireMatchingFile")
       private final @Nullable Output<Boolean> requireMatchingFile;
 
     public Output<Boolean> getRequireMatchingFile() {
@@ -90,7 +90,7 @@ public final class StaticFilesHandlerArgs extends io.pulumi.resources.ResourceAr
      * Regular expression that matches the file paths for all files that should be referenced by this handler.
      * 
      */
-    @InputImport(name="uploadPathRegex")
+    @Import(name="uploadPathRegex")
       private final @Nullable Output<String> uploadPathRegex;
 
     public Output<String> getUploadPathRegex() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdaptiveProtectionConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdvancedOptionsConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.SecurityPolicyRecaptchaOptionsConfigResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecurityPolicyResult {
     private final SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig;
     private final SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig;
@@ -58,19 +58,19 @@ public final class GetSecurityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecurityPolicyResult(
-        @OutputCustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
-        @OutputCustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
-        @OutputCustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
+        @CustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
+        @CustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("type") String type) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.creationTimestamp = creationTimestamp;

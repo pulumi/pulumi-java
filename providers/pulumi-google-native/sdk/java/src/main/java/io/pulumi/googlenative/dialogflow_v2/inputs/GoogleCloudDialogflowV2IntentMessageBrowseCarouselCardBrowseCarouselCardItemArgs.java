@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * Optional. Description of the carousel item. Maximum of four lines of text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
      * 
      */
-    @InputImport(name="footer")
+    @Import(name="footer")
       private final @Nullable Output<String> footer;
 
     public Output<String> getFooter() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * Optional. Hero image for the carousel item.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
     public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * Action to present to the user.
      * 
      */
-    @InputImport(name="openUriAction", required=true)
+    @Import(name="openUriAction", required=true)
       private final Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> openUriAction;
 
     public Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionArgs> getOpenUriAction() {
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      * Title of the carousel item. Maximum of two lines of text.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

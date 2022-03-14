@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.SchedulingNodeAffinityOperator;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * Corresponds to the label key of Node resource.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -35,7 +35,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable Output<SchedulingNodeAffinityOperator> operator;
 
     public Output<SchedulingNodeAffinityOperator> getOperator() {
@@ -46,7 +46,7 @@ public final class SchedulingNodeAffinityArgs extends io.pulumi.resources.Resour
      * Corresponds to the label values of Node resource.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

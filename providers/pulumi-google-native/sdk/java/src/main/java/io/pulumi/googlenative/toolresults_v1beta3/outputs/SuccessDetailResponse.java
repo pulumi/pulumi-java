@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SuccessDetailResponse {
     /**
      * If a native process other than the app crashed.
@@ -15,8 +15,8 @@ public final class SuccessDetailResponse {
      */
     private final Boolean otherNativeCrash;
 
-    @OutputCustomType.Constructor
-    private SuccessDetailResponse(@OutputCustomType.Parameter("otherNativeCrash") Boolean otherNativeCrash) {
+    @CustomType.Constructor
+    private SuccessDetailResponse(@CustomType.Parameter("otherNativeCrash") Boolean otherNativeCrash) {
         this.otherNativeCrash = otherNativeCrash;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.JwtArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SignatureArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * One or more JWTs encoding a self-contained attestation. Each JWT encodes the payload that it verifies within the JWT itself. Verifier implementation SHOULD ignore the `serialized_payload` field when verifying these JWTs. If only JWTs are present on this AttestationOccurrence, then the `serialized_payload` SHOULD be left empty. Each JWT SHOULD encode a claim specific to the `resource_uri` of this Occurrence, but this is not validated by Grafeas metadata API implementations. The JWT itself is opaque to Grafeas.
      * 
      */
-    @InputImport(name="jwts")
+    @Import(name="jwts")
       private final @Nullable Output<List<JwtArgs>> jwts;
 
     public Output<List<JwtArgs>> getJwts() {
@@ -36,7 +36,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * The serialized payload that is verified by one or more `signatures`.
      * 
      */
-    @InputImport(name="serializedPayload", required=true)
+    @Import(name="serializedPayload", required=true)
       private final Output<String> serializedPayload;
 
     public Output<String> getSerializedPayload() {
@@ -47,7 +47,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
      * 
      */
-    @InputImport(name="signatures")
+    @Import(name="signatures")
       private final @Nullable Output<List<SignatureArgs>> signatures;
 
     public Output<List<SignatureArgs>> getSignatures() {

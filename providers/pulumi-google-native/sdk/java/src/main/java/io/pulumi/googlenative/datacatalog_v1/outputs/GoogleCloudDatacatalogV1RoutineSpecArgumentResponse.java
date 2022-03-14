@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse {
     /**
      * Specifies whether the argument is input or output.
@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.mode = mode;
         this.name = name;
         this.type = type;

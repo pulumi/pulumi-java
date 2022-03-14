@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuilderConfigArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.MetadataArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RecipeArgs;
@@ -22,7 +22,7 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
      * required
      * 
      */
-    @InputImport(name="builderConfig")
+    @Import(name="builderConfig")
       private final @Nullable Output<BuilderConfigArgs> builderConfig;
 
     public Output<BuilderConfigArgs> getBuilderConfig() {
@@ -33,14 +33,14 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
      * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
      * 
      */
-    @InputImport(name="materials")
+    @Import(name="materials")
       private final @Nullable Output<List<String>> materials;
 
     public Output<List<String>> getMaterials() {
         return this.materials == null ? Output.empty() : this.materials;
     }
 
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<MetadataArgs> metadata;
 
     public Output<MetadataArgs> getMetadata() {
@@ -51,7 +51,7 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
      * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
      * 
      */
-    @InputImport(name="recipe")
+    @Import(name="recipe")
       private final @Nullable Output<RecipeArgs> recipe;
 
     public Output<RecipeArgs> getRecipe() {

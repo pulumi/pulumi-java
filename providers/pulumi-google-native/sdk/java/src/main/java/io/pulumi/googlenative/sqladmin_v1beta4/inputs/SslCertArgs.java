@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * PEM representation.
      * 
      */
-    @InputImport(name="cert")
+    @Import(name="cert")
       private final @Nullable Output<String> cert;
 
     public Output<String> getCert() {
@@ -33,7 +33,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * Serial number, as extracted from the certificate.
      * 
      */
-    @InputImport(name="certSerialNumber")
+    @Import(name="certSerialNumber")
       private final @Nullable Output<String> certSerialNumber;
 
     public Output<String> getCertSerialNumber() {
@@ -44,7 +44,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * User supplied name. Constrained to [a-zA-Z.-_ ]+.
      * 
      */
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
@@ -55,7 +55,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -66,7 +66,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -77,7 +77,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the database instance.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -88,7 +88,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * This is always `sql#sslCert`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -99,7 +99,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of this resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -110,7 +110,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * Sha1 Fingerprint.
      * 
      */
-    @InputImport(name="sha1Fingerprint")
+    @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
     public Output<String> getSha1Fingerprint() {

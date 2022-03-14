@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1alpha.enums.OSPolicyResourceRepositoryResourceAptRepositoryArchiveType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * Type of archive files in this repository.
      * 
      */
-    @InputImport(name="archiveType", required=true)
+    @Import(name="archiveType", required=true)
       private final Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType;
 
     public Output<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> getArchiveType() {
@@ -35,7 +35,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * List of components for this repository. Must contain at least one item.
      * 
      */
-    @InputImport(name="components", required=true)
+    @Import(name="components", required=true)
       private final Output<List<String>> components;
 
     public Output<List<String>> getComponents() {
@@ -46,7 +46,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * Distribution of this repository.
      * 
      */
-    @InputImport(name="distribution", required=true)
+    @Import(name="distribution", required=true)
       private final Output<String> distribution;
 
     public Output<String> getDistribution() {
@@ -57,7 +57,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
      */
-    @InputImport(name="gpgKey")
+    @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
 
     public Output<String> getGpgKey() {
@@ -68,7 +68,7 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
      * URI for this repository.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

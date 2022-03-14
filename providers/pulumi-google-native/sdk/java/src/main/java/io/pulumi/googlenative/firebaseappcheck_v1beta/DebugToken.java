@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaseappcheck_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaseappcheck_v1beta.DebugTokenArgs;
@@ -21,7 +21,7 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
      * A human readable display name used to identify this debug token.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -35,7 +35,7 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
      * The relative resource name of the debug token, in the format: ```projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id}```
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
      * Input only. Immutable. The secret token itself. Must be provided during creation, and must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided during an UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any response.
      * 
      */
-    @OutputExport(name="token", type=String.class, parameters={})
+    @Export(name="token", type=String.class, parameters={})
     private Output<String> token;
 
     /**

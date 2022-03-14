@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
      */
-    @InputImport(name="branchName")
+    @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
     public Output<String> getBranchName() {
@@ -35,7 +35,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Explicit commit SHA to build.
      * 
      */
-    @InputImport(name="commitSha")
+    @Import(name="commitSha")
       private final @Nullable Output<String> commitSha;
 
     public Output<String> getCommitSha() {
@@ -46,7 +46,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.
      * 
      */
-    @InputImport(name="dir")
+    @Import(name="dir")
       private final @Nullable Output<String> dir;
 
     public Output<String> getDir() {
@@ -57,7 +57,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
      */
-    @InputImport(name="invertRegex")
+    @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
     public Output<Boolean> getInvertRegex() {
@@ -68,7 +68,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting the build is assumed.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -79,7 +79,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Cloud Source Repository.
      * 
      */
-    @InputImport(name="repoName")
+    @Import(name="repoName")
       private final @Nullable Output<String> repoName;
 
     public Output<String> getRepoName() {
@@ -90,7 +90,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
      * 
      */
-    @InputImport(name="substitutions")
+    @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
     public Output<Map<String,String>> getSubstitutions() {
@@ -101,7 +101,7 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Regex matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
      */
-    @InputImport(name="tagName")
+    @Import(name="tagName")
       private final @Nullable Output<String> tagName;
 
     public Output<String> getTagName() {

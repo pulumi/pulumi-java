@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetGuestPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGuestPolicyArgs Empty = new GetGuestPolicyArgs();
 
-    @InputImport(name="guestPolicyId", required=true)
+    @Import(name="guestPolicyId", required=true)
       private final String guestPolicyId;
 
     public String getGuestPolicyId() {
         return this.guestPolicyId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

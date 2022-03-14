@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpRedirectActionResponse {
     /**
      * The host that is used in the redirect response instead of the one that was supplied in the request. The value must be from 1 to 255 characters.
@@ -41,14 +41,14 @@ public final class HttpRedirectActionResponse {
      */
     private final Boolean stripQuery;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRedirectActionResponse(
-        @OutputCustomType.Parameter("hostRedirect") String hostRedirect,
-        @OutputCustomType.Parameter("httpsRedirect") Boolean httpsRedirect,
-        @OutputCustomType.Parameter("pathRedirect") String pathRedirect,
-        @OutputCustomType.Parameter("prefixRedirect") String prefixRedirect,
-        @OutputCustomType.Parameter("redirectResponseCode") String redirectResponseCode,
-        @OutputCustomType.Parameter("stripQuery") Boolean stripQuery) {
+        @CustomType.Parameter("hostRedirect") String hostRedirect,
+        @CustomType.Parameter("httpsRedirect") Boolean httpsRedirect,
+        @CustomType.Parameter("pathRedirect") String pathRedirect,
+        @CustomType.Parameter("prefixRedirect") String prefixRedirect,
+        @CustomType.Parameter("redirectResponseCode") String redirectResponseCode,
+        @CustomType.Parameter("stripQuery") Boolean stripQuery) {
         this.hostRedirect = hostRedirect;
         this.httpsRedirect = httpsRedirect;
         this.pathRedirect = pathRedirect;

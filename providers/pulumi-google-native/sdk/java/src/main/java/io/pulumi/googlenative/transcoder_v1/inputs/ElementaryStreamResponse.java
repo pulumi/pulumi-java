@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioStreamResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.TextStreamResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.VideoStreamResponse;
@@ -23,7 +23,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
      * Encoding of an audio stream.
      * 
      */
-    @InputImport(name="audioStream", required=true)
+    @Import(name="audioStream", required=true)
       private final AudioStreamResponse audioStream;
 
     public AudioStreamResponse getAudioStream() {
@@ -34,7 +34,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
      * A unique key for this elementary stream.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -45,7 +45,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
      * Encoding of a text stream. For example, closed captions or subtitles.
      * 
      */
-    @InputImport(name="textStream", required=true)
+    @Import(name="textStream", required=true)
       private final TextStreamResponse textStream;
 
     public TextStreamResponse getTextStream() {
@@ -56,7 +56,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
      * Encoding of a video stream.
      * 
      */
-    @InputImport(name="videoStream", required=true)
+    @Import(name="videoStream", required=true)
       private final VideoStreamResponse videoStream;
 
     public VideoStreamResponse getVideoStream() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatusResponse {
     /**
      * Optional Job state details, such as an error description if the state is ERROR.
@@ -30,12 +30,12 @@ public final class JobStatusResponse {
      */
     private final String substate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatusResponse(
-        @OutputCustomType.Parameter("details") String details,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateStartTime") String stateStartTime,
-        @OutputCustomType.Parameter("substate") String substate) {
+        @CustomType.Parameter("details") String details,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateStartTime") String stateStartTime,
+        @CustomType.Parameter("substate") String substate) {
         this.details = details;
         this.state = state;
         this.stateStartTime = stateStartTime;

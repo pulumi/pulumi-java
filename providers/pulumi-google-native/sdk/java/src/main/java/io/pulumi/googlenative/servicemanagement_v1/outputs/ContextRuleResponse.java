@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContextRuleResponse {
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
@@ -36,13 +36,13 @@ public final class ContextRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContextRuleResponse(
-        @OutputCustomType.Parameter("allowedRequestExtensions") List<String> allowedRequestExtensions,
-        @OutputCustomType.Parameter("allowedResponseExtensions") List<String> allowedResponseExtensions,
-        @OutputCustomType.Parameter("provided") List<String> provided,
-        @OutputCustomType.Parameter("requested") List<String> requested,
-        @OutputCustomType.Parameter("selector") String selector) {
+        @CustomType.Parameter("allowedRequestExtensions") List<String> allowedRequestExtensions,
+        @CustomType.Parameter("allowedResponseExtensions") List<String> allowedResponseExtensions,
+        @CustomType.Parameter("provided") List<String> provided,
+        @CustomType.Parameter("requested") List<String> requested,
+        @CustomType.Parameter("selector") String selector) {
         this.allowedRequestExtensions = allowedRequestExtensions;
         this.allowedResponseExtensions = allowedResponseExtensions;
         this.provided = provided;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TimestampArgs extends io.pulumi.resources.ResourceArgs {
      * Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive.
      * 
      */
-    @InputImport(name="nanos")
+    @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
@@ -34,7 +34,7 @@ public final class TimestampArgs extends io.pulumi.resources.ResourceArgs {
      * Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.
      * 
      */
-    @InputImport(name="seconds")
+    @Import(name="seconds")
       private final @Nullable Output<String> seconds;
 
     public Output<String> getSeconds() {

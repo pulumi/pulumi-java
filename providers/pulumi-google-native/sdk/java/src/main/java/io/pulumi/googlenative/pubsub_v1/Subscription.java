@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1.SubscriptionArgs;
@@ -28,7 +28,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
      * 
      */
-    @OutputExport(name="ackDeadlineSeconds", type=Integer.class, parameters={})
+    @Export(name="ackDeadlineSeconds", type=Integer.class, parameters={})
     private Output<Integer> ackDeadlineSeconds;
 
     /**
@@ -42,7 +42,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription.
      * 
      */
-    @OutputExport(name="deadLetterPolicy", type=DeadLetterPolicyResponse.class, parameters={})
+    @Export(name="deadLetterPolicy", type=DeadLetterPolicyResponse.class, parameters={})
     private Output<DeadLetterPolicyResponse> deadLetterPolicy;
 
     /**
@@ -56,7 +56,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Indicates whether the subscription is detached from its topic. Detached subscriptions don't receive messages from their topic and don't retain any backlog. `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to the endpoint will not be made.
      * 
      */
-    @OutputExport(name="detached", type=Boolean.class, parameters={})
+    @Export(name="detached", type=Boolean.class, parameters={})
     private Output<Boolean> detached;
 
     /**
@@ -70,7 +70,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
      * 
      */
-    @OutputExport(name="enableMessageOrdering", type=Boolean.class, parameters={})
+    @Export(name="enableMessageOrdering", type=Boolean.class, parameters={})
     private Output<Boolean> enableMessageOrdering;
 
     /**
@@ -84,7 +84,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If `expiration_policy` is not set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is not set, the subscription never expires.
      * 
      */
-    @OutputExport(name="expirationPolicy", type=ExpirationPolicyResponse.class, parameters={})
+    @Export(name="expirationPolicy", type=ExpirationPolicyResponse.class, parameters={})
     private Output<ExpirationPolicyResponse> expirationPolicy;
 
     /**
@@ -98,7 +98,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * An expression written in the Pub/Sub [filter language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only `PubsubMessage`s whose `attributes` field matches the filter are delivered on this subscription. If empty, then no messages are filtered out.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
@@ -112,7 +112,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * See Creating and managing labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -126,7 +126,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If `retain_acked_messages` is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a `Seek` can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
      * 
      */
-    @OutputExport(name="messageRetentionDuration", type=String.class, parameters={})
+    @Export(name="messageRetentionDuration", type=String.class, parameters={})
     private Output<String> messageRetentionDuration;
 
     /**
@@ -140,7 +140,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * The name of the subscription. It must have the format `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -154,7 +154,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * If push delivery is used with this subscription, this field is used to configure it. At most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber will pull and ack messages using API methods.
      * 
      */
-    @OutputExport(name="pushConfig", type=PushConfigResponse.class, parameters={})
+    @Export(name="pushConfig", type=PushConfigResponse.class, parameters={})
     private Output<PushConfigResponse> pushConfig;
 
     /**
@@ -168,7 +168,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from the subscription's backlog, even if they are acknowledged, until they fall out of the `message_retention_duration` window. This must be true if you would like to [`Seek` to a timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to replay previously-acknowledged messages.
      * 
      */
-    @OutputExport(name="retainAckedMessages", type=Boolean.class, parameters={})
+    @Export(name="retainAckedMessages", type=Boolean.class, parameters={})
     private Output<Boolean> retainAckedMessages;
 
     /**
@@ -182,7 +182,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message.
      * 
      */
-    @OutputExport(name="retryPolicy", type=RetryPolicyResponse.class, parameters={})
+    @Export(name="retryPolicy", type=RetryPolicyResponse.class, parameters={})
     private Output<RetryPolicyResponse> retryPolicy;
 
     /**
@@ -196,7 +196,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * An output-only field indicating whether or not the subscription can receive messages.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -210,7 +210,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the topic has been deleted.
      * 
      */
-    @OutputExport(name="topic", type=String.class, parameters={})
+    @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**
@@ -224,7 +224,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Indicates the minimum duration for which a message is retained after it is published to the subscription's topic. If this field is set, messages published to the subscription's topic in the last `topic_message_retention_duration` are always available to subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in responses from the server; it is ignored if it is set in any requests.
      * 
      */
-    @OutputExport(name="topicMessageRetentionDuration", type=String.class, parameters={})
+    @Export(name="topicMessageRetentionDuration", type=String.class, parameters={})
     private Output<String> topicMessageRetentionDuration;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      * The maximum product price.
      * 
      */
-    @InputImport(name="max", required=true)
+    @Import(name="max", required=true)
       private final Output<Double> max;
 
     public Output<Double> getMax() {
@@ -32,7 +32,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      * The minimum product price.
      * 
      */
-    @InputImport(name="min", required=true)
+    @Import(name="min", required=true)
       private final Output<Double> min;
 
     public Output<Double> getMin() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * Service Directory namespace to register the forwarding rule under.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -33,7 +33,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * Service Directory service to register the forwarding rule under.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -44,7 +44,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * [Optional] Service Directory region to register this global forwarding rule under. Default to "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on the same network should use the same Service Directory region.
      * 
      */
-    @InputImport(name="serviceDirectoryRegion")
+    @Import(name="serviceDirectoryRegion")
       private final @Nullable Output<String> serviceDirectoryRegion;
 
     public Output<String> getServiceDirectoryRegion() {

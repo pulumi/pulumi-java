@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PoolOptionResponse {
     /**
      * The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use` on the project hosting the WorkerPool. Format projects/{project}/locations/{location}/workerPools/{workerPoolId}
@@ -15,8 +15,8 @@ public final class PoolOptionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private PoolOptionResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private PoolOptionResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

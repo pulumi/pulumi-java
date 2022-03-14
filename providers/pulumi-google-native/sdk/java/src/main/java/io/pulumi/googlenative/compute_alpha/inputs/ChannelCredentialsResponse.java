@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
      * The call credentials to access the SDS server.
      * 
      */
-    @InputImport(name="certificates", required=true)
+    @Import(name="certificates", required=true)
       private final TlsCertificatePathsResponse certificates;
 
     public TlsCertificatePathsResponse getCertificates() {
@@ -32,7 +32,7 @@ public final class ChannelCredentialsResponse extends io.pulumi.resources.Invoke
      * The channel credentials to access the SDS server. This field can be set to one of the following: CERTIFICATES: Use TLS certificates to access the SDS server. GCE_VM: Use local GCE VM credentials to access the SDS server.
      * 
      */
-    @InputImport(name="channelCredentialType", required=true)
+    @Import(name="channelCredentialType", required=true)
       private final String channelCredentialType;
 
     public String getChannelCredentialType() {

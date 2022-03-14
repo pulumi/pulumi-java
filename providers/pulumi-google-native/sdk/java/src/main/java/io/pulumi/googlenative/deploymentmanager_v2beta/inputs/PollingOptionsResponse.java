@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.DiagnosticResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
      * 
      */
-    @InputImport(name="diagnostics", required=true)
+    @Import(name="diagnostics", required=true)
       private final List<DiagnosticResponse> diagnostics;
 
     public List<DiagnosticResponse> getDiagnostics() {
@@ -29,7 +29,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * JsonPath expression that determines if the request failed.
      * 
      */
-    @InputImport(name="failCondition", required=true)
+    @Import(name="failCondition", required=true)
       private final String failCondition;
 
     public String getFailCondition() {
@@ -40,7 +40,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * JsonPath expression that determines if the request is completed.
      * 
      */
-    @InputImport(name="finishCondition", required=true)
+    @Import(name="finishCondition", required=true)
       private final String finishCondition;
 
     public String getFinishCondition() {
@@ -51,7 +51,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * JsonPath expression that evaluates to string, it indicates where to poll.
      * 
      */
-    @InputImport(name="pollingLink", required=true)
+    @Import(name="pollingLink", required=true)
       private final String pollingLink;
 
     public String getPollingLink() {
@@ -62,7 +62,7 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
      * JsonPath expression, after polling is completed, indicates where to fetch the resource.
      * 
      */
-    @InputImport(name="targetLink", required=true)
+    @Import(name="targetLink", required=true)
       private final String targetLink;
 
     public String getTargetLink() {

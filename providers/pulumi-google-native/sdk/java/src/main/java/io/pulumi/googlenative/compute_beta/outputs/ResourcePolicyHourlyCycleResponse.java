@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyHourlyCycleResponse {
     /**
      * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
@@ -26,11 +26,11 @@ public final class ResourcePolicyHourlyCycleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyHourlyCycleResponse(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("hoursInCycle") Integer hoursInCycle,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("hoursInCycle") Integer hoursInCycle,
+        @CustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.hoursInCycle = hoursInCycle;
         this.startTime = startTime;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
      * A local certificate file. The certificate must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -33,7 +33,7 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
      * A write-only private key in PEM format. Only insert requests will include this field.
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {

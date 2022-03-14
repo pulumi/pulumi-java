@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2SuggestionFeatureResponse {
     /**
      * Type of Human Agent Assistant API feature to request.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2SuggestionFeatureResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2SuggestionFeatureResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointResponse {
     /**
      * Allowing [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), aka cross-domain traffic, would allow the backends served from this endpoint to receive and respond to HTTP OPTIONS requests. The response will be used by the browser to determine whether the subsequent cross-origin request is allowed to proceed.
@@ -26,11 +26,11 @@ public final class EndpointResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointResponse(
-        @OutputCustomType.Parameter("allowCors") Boolean allowCors,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("allowCors") Boolean allowCors,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("target") String target) {
         this.allowCors = allowCors;
         this.name = name;
         this.target = target;

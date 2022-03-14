@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.DebugSessionArgs;
@@ -24,7 +24,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
      * 
      */
-    @OutputExport(name="count", type=Integer.class, parameters={})
+    @Export(name="count", type=Integer.class, parameters={})
     private Output<Integer> count;
 
     /**
@@ -38,7 +38,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
@@ -52,7 +52,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * A unique ID for this DebugSession.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
      * 
      */
-    @OutputExport(name="timeout", type=String.class, parameters={})
+    @Export(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
     /**
@@ -80,7 +80,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
      * 
      */
-    @OutputExport(name="tracesize", type=Integer.class, parameters={})
+    @Export(name="tracesize", type=Integer.class, parameters={})
     private Output<Integer> tracesize;
 
     /**
@@ -94,7 +94,7 @@ public class DebugSession extends io.pulumi.resources.CustomResource {
      * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
      * 
      */
-    @OutputExport(name="validity", type=Integer.class, parameters={})
+    @Export(name="validity", type=Integer.class, parameters={})
     private Output<Integer> validity;
 
     /**

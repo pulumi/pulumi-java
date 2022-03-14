@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeSignatureArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,21 +20,21 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvelopeArgs Empty = new EnvelopeArgs();
 
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable Output<String> payload;
 
     public Output<String> getPayload() {
         return this.payload == null ? Output.empty() : this.payload;
     }
 
-    @InputImport(name="payloadType")
+    @Import(name="payloadType")
       private final @Nullable Output<String> payloadType;
 
     public Output<String> getPayloadType() {
         return this.payloadType == null ? Output.empty() : this.payloadType;
     }
 
-    @InputImport(name="signatures")
+    @Import(name="signatures")
       private final @Nullable Output<List<EnvelopeSignatureArgs>> signatures;
 
     public Output<List<EnvelopeSignatureArgs>> getSignatures() {

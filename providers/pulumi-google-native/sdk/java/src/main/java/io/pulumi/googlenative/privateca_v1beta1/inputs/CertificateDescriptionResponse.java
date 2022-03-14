@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.CertificateFingerprintResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.KeyIdResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.PublicKeyResponse;
@@ -26,7 +26,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.
      * 
      */
-    @InputImport(name="aiaIssuingCertificateUrls", required=true)
+    @Import(name="aiaIssuingCertificateUrls", required=true)
       private final List<String> aiaIssuingCertificateUrls;
 
     public List<String> getAiaIssuingCertificateUrls() {
@@ -37,7 +37,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1
      * 
      */
-    @InputImport(name="authorityKeyId", required=true)
+    @Import(name="authorityKeyId", required=true)
       private final KeyIdResponse authorityKeyId;
 
     public KeyIdResponse getAuthorityKeyId() {
@@ -48,7 +48,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * The hash of the x.509 certificate.
      * 
      */
-    @InputImport(name="certFingerprint", required=true)
+    @Import(name="certFingerprint", required=true)
       private final CertificateFingerprintResponse certFingerprint;
 
     public CertificateFingerprintResponse getCertFingerprint() {
@@ -59,7 +59,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * Describes some of the technical fields in a certificate.
      * 
      */
-    @InputImport(name="configValues", required=true)
+    @Import(name="configValues", required=true)
       private final ReusableConfigValuesResponse configValues;
 
     public ReusableConfigValuesResponse getConfigValues() {
@@ -70,7 +70,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
      * 
      */
-    @InputImport(name="crlDistributionPoints", required=true)
+    @Import(name="crlDistributionPoints", required=true)
       private final List<String> crlDistributionPoints;
 
     public List<String> getCrlDistributionPoints() {
@@ -81,7 +81,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * The public key that corresponds to an issued certificate.
      * 
      */
-    @InputImport(name="publicKey", required=true)
+    @Import(name="publicKey", required=true)
       private final PublicKeyResponse publicKey;
 
     public PublicKeyResponse getPublicKey() {
@@ -92,7 +92,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * Describes some of the values in a certificate that are related to the subject and lifetime.
      * 
      */
-    @InputImport(name="subjectDescription", required=true)
+    @Import(name="subjectDescription", required=true)
       private final SubjectDescriptionResponse subjectDescription;
 
     public SubjectDescriptionResponse getSubjectDescription() {
@@ -103,7 +103,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.
      * 
      */
-    @InputImport(name="subjectKeyId", required=true)
+    @Import(name="subjectKeyId", required=true)
       private final KeyIdResponse subjectKeyId;
 
     public KeyIdResponse getSubjectKeyId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScriptHandlerResponse {
     /**
      * Path to the script from the application root directory.
@@ -15,8 +15,8 @@ public final class ScriptHandlerResponse {
      */
     private final String scriptPath;
 
-    @OutputCustomType.Constructor
-    private ScriptHandlerResponse(@OutputCustomType.Parameter("scriptPath") String scriptPath) {
+    @CustomType.Constructor
+    private ScriptHandlerResponse(@CustomType.Parameter("scriptPath") String scriptPath) {
         this.scriptPath = scriptPath;
     }
 

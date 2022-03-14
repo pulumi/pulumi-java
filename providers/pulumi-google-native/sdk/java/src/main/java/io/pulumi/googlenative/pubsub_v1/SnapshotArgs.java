@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,21 +19,21 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * See Creating and managing labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="snapshotId", required=true)
+    @Import(name="snapshotId", required=true)
       private final Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
@@ -44,7 +44,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The subscription whose backlog the snapshot retains. Specifically, the created snapshot is guaranteed to retain: (a) The existing backlog on the subscription. More precisely, this is defined as the messages in the subscription's backlog that are unacknowledged upon the successful completion of the `CreateSnapshot` request; as well as: (b) Any messages published to the subscription's topic following the successful completion of the CreateSnapshot request. Format is `projects/{project}/subscriptions/{sub}`.
      * 
      */
-    @InputImport(name="subscription", required=true)
+    @Import(name="subscription", required=true)
       private final Output<String> subscription;
 
     public Output<String> getSubscription() {

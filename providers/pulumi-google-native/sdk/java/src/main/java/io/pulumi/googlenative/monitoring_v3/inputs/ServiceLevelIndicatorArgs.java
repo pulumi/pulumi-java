@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.BasicSliArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.WindowsBasedSliArgs;
@@ -24,7 +24,7 @@ public final class ServiceLevelIndicatorArgs extends io.pulumi.resources.Resourc
      * Basic SLI on a well-known service type.
      * 
      */
-    @InputImport(name="basicSli")
+    @Import(name="basicSli")
       private final @Nullable Output<BasicSliArgs> basicSli;
 
     public Output<BasicSliArgs> getBasicSli() {
@@ -35,7 +35,7 @@ public final class ServiceLevelIndicatorArgs extends io.pulumi.resources.Resourc
      * Request-based SLIs
      * 
      */
-    @InputImport(name="requestBased")
+    @Import(name="requestBased")
       private final @Nullable Output<RequestBasedSliArgs> requestBased;
 
     public Output<RequestBasedSliArgs> getRequestBased() {
@@ -46,7 +46,7 @@ public final class ServiceLevelIndicatorArgs extends io.pulumi.resources.Resourc
      * Windows-based SLIs
      * 
      */
-    @InputImport(name="windowsBased")
+    @Import(name="windowsBased")
       private final @Nullable Output<WindowsBasedSliArgs> windowsBased;
 
     public Output<WindowsBasedSliArgs> getWindowsBased() {

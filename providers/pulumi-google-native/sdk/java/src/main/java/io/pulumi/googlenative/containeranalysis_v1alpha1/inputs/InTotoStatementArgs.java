@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoProvenanceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaProvenanceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SubjectArgs;
@@ -26,7 +26,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
      * 
      */
-    @InputImport(name="predicateType")
+    @Import(name="predicateType")
       private final @Nullable Output<String> predicateType;
 
     public Output<String> getPredicateType() {
@@ -37,7 +37,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * provenance is a predicate of type intotoprovenance
      * 
      */
-    @InputImport(name="provenance")
+    @Import(name="provenance")
       private final @Nullable Output<InTotoProvenanceArgs> provenance;
 
     public Output<InTotoProvenanceArgs> getProvenance() {
@@ -48,7 +48,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * slsa_provenance is a predicate of type slsaProvenance
      * 
      */
-    @InputImport(name="slsaProvenance")
+    @Import(name="slsaProvenance")
       private final @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
 
     public Output<SlsaProvenanceArgs> getSlsaProvenance() {
@@ -59,7 +59,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * subject is the subjects of the intoto statement
      * 
      */
-    @InputImport(name="subject")
+    @Import(name="subject")
       private final @Nullable Output<List<SubjectArgs>> subject;
 
     public Output<List<SubjectArgs>> getSubject() {
@@ -70,7 +70,7 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * Always "https://in-toto.io/Statement/v0.1".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

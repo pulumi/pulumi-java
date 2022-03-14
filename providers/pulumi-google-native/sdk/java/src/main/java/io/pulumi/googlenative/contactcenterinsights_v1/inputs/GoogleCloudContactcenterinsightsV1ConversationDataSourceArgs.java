@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1DialogflowSourceArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1GcsSourceArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
      * The source when the conversation comes from Dialogflow.
      * 
      */
-    @InputImport(name="dialogflowSource")
+    @Import(name="dialogflowSource")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
 
     public Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> getDialogflowSource() {
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
      * A Cloud Storage location specification for the audio and transcript.
      * 
      */
-    @InputImport(name="gcsSource")
+    @Import(name="gcsSource")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
 
     public Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> getGcsSource() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
      * If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.
      * 
      */
-    @InputImport(name="clusterMissing", required=true)
+    @Import(name="clusterMissing", required=true)
       private final Boolean clusterMissing;
 
     public Boolean getClusterMissing() {
@@ -32,7 +32,7 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
      * 
      */
-    @InputImport(name="resourceLink", required=true)
+    @Import(name="resourceLink", required=true)
       private final String resourceLink;
 
     public String getResourceLink() {

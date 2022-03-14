@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
 
     public static final ManagedZoneServiceDirectoryConfigArgs Empty = new ManagedZoneServiceDirectoryConfigArgs();
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -30,7 +30,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
      * Contains information about the namespace associated with the zone.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
     public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> getNamespace() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EdgeClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
      * 
      */
-    @InputImport(name="resourceLink")
+    @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;
 
     public Output<String> getResourceLink() {

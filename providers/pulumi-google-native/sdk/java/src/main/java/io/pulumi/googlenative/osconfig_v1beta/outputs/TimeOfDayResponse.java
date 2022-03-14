@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeOfDayResponse {
     /**
      * Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
@@ -30,12 +30,12 @@ public final class TimeOfDayResponse {
      */
     private final Integer seconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeOfDayResponse(
-        @OutputCustomType.Parameter("hours") Integer hours,
-        @OutputCustomType.Parameter("minutes") Integer minutes,
-        @OutputCustomType.Parameter("nanos") Integer nanos,
-        @OutputCustomType.Parameter("seconds") Integer seconds) {
+        @CustomType.Parameter("hours") Integer hours,
+        @CustomType.Parameter("minutes") Integer minutes,
+        @CustomType.Parameter("nanos") Integer nanos,
+        @CustomType.Parameter("seconds") Integer seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.nanos = nanos;

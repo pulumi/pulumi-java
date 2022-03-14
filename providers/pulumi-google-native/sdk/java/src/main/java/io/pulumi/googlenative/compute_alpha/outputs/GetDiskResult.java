@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDiskResult {
     /**
      * The architecture of the disk. Valid values are ARM64 or X86_64.
@@ -230,51 +230,51 @@ public final class GetDiskResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiskResult(
-        @OutputCustomType.Parameter("architecture") String architecture,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
-        @OutputCustomType.Parameter("eraseWindowsVssSignature") Boolean eraseWindowsVssSignature,
-        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lastAttachTimestamp") String lastAttachTimestamp,
-        @OutputCustomType.Parameter("lastDetachTimestamp") String lastDetachTimestamp,
-        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
-        @OutputCustomType.Parameter("licenses") List<String> licenses,
-        @OutputCustomType.Parameter("locationHint") String locationHint,
-        @OutputCustomType.Parameter("locked") Boolean locked,
-        @OutputCustomType.Parameter("multiWriter") Boolean multiWriter,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") String options,
-        @OutputCustomType.Parameter("physicalBlockSizeBytes") String physicalBlockSizeBytes,
-        @OutputCustomType.Parameter("provisionedIops") String provisionedIops,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("replicaZones") List<String> replicaZones,
-        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("sizeGb") String sizeGb,
-        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
-        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
-        @OutputCustomType.Parameter("sourceImage") String sourceImage,
-        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        @OutputCustomType.Parameter("sourceImageId") String sourceImageId,
-        @OutputCustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
-        @OutputCustomType.Parameter("sourceInstantSnapshotId") String sourceInstantSnapshotId,
-        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
-        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey,
-        @OutputCustomType.Parameter("sourceSnapshotId") String sourceSnapshotId,
-        @OutputCustomType.Parameter("sourceStorageObject") String sourceStorageObject,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userLicenses") List<String> userLicenses,
-        @OutputCustomType.Parameter("users") List<String> users,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @CustomType.Parameter("eraseWindowsVssSignature") Boolean eraseWindowsVssSignature,
+        @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lastAttachTimestamp") String lastAttachTimestamp,
+        @CustomType.Parameter("lastDetachTimestamp") String lastDetachTimestamp,
+        @CustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @CustomType.Parameter("licenses") List<String> licenses,
+        @CustomType.Parameter("locationHint") String locationHint,
+        @CustomType.Parameter("locked") Boolean locked,
+        @CustomType.Parameter("multiWriter") Boolean multiWriter,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") String options,
+        @CustomType.Parameter("physicalBlockSizeBytes") String physicalBlockSizeBytes,
+        @CustomType.Parameter("provisionedIops") String provisionedIops,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("replicaZones") List<String> replicaZones,
+        @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("sizeGb") String sizeGb,
+        @CustomType.Parameter("sourceDisk") String sourceDisk,
+        @CustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @CustomType.Parameter("sourceImage") String sourceImage,
+        @CustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @CustomType.Parameter("sourceImageId") String sourceImageId,
+        @CustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
+        @CustomType.Parameter("sourceInstantSnapshotId") String sourceInstantSnapshotId,
+        @CustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @CustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey,
+        @CustomType.Parameter("sourceSnapshotId") String sourceSnapshotId,
+        @CustomType.Parameter("sourceStorageObject") String sourceStorageObject,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userLicenses") List<String> userLicenses,
+        @CustomType.Parameter("users") List<String> users,
+        @CustomType.Parameter("zone") String zone) {
         this.architecture = architecture;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1QuotaResponse {
     /**
      * Time interval over which the number of request messages is calculated.
@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1QuotaResponse {
      */
     private final String timeUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1QuotaResponse(
-        @OutputCustomType.Parameter("interval") String interval,
-        @OutputCustomType.Parameter("limit") String limit,
-        @OutputCustomType.Parameter("timeUnit") String timeUnit) {
+        @CustomType.Parameter("interval") String interval,
+        @CustomType.Parameter("limit") String limit,
+        @CustomType.Parameter("timeUnit") String timeUnit) {
         this.interval = interval;
         this.limit = limit;
         this.timeUnit = timeUnit;

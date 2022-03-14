@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * The java package for the test to be executed. Required
      * 
      */
-    @InputImport(name="testPackageId", required=true)
+    @Import(name="testPackageId", required=true)
       private final String testPackageId;
 
     public String getTestPackageId() {
@@ -33,7 +33,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * The InstrumentationTestRunner class. Required
      * 
      */
-    @InputImport(name="testRunnerClass", required=true)
+    @Import(name="testRunnerClass", required=true)
       private final String testRunnerClass;
 
     public String getTestRunnerClass() {
@@ -44,7 +44,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
      * 
      */
-    @InputImport(name="testTargets", required=true)
+    @Import(name="testTargets", required=true)
       private final List<String> testTargets;
 
     public List<String> getTestTargets() {
@@ -55,7 +55,7 @@ public final class AndroidInstrumentationTestResponse extends io.pulumi.resource
      * The flag indicates whether Android Test Orchestrator will be used to run test or not.
      * 
      */
-    @InputImport(name="useOrchestrator", required=true)
+    @Import(name="useOrchestrator", required=true)
       private final Boolean useOrchestrator;
 
     public Boolean getUseOrchestrator() {

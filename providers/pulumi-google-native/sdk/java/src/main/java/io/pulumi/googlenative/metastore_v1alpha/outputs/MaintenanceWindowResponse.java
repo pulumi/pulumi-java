@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowResponse {
     /**
      * The day of week, when the window starts.
@@ -21,10 +21,10 @@ public final class MaintenanceWindowResponse {
      */
     private final Integer hourOfDay;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowResponse(
-        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
-        @OutputCustomType.Parameter("hourOfDay") Integer hourOfDay) {
+        @CustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @CustomType.Parameter("hourOfDay") Integer hourOfDay) {
         this.dayOfWeek = dayOfWeek;
         this.hourOfDay = hourOfDay;
     }

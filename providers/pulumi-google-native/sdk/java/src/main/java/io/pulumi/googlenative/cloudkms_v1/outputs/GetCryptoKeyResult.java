@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CryptoKeyVersionResponse;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CryptoKeyVersionTemplateResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCryptoKeyResult {
     /**
      * The time at which this CryptoKey was created.
@@ -69,19 +69,19 @@ public final class GetCryptoKeyResult {
      */
     private final CryptoKeyVersionTemplateResponse versionTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCryptoKeyResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("cryptoKeyBackend") String cryptoKeyBackend,
-        @OutputCustomType.Parameter("destroyScheduledDuration") String destroyScheduledDuration,
-        @OutputCustomType.Parameter("importOnly") Boolean importOnly,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
-        @OutputCustomType.Parameter("primary") CryptoKeyVersionResponse primary,
-        @OutputCustomType.Parameter("purpose") String purpose,
-        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod,
-        @OutputCustomType.Parameter("versionTemplate") CryptoKeyVersionTemplateResponse versionTemplate) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("cryptoKeyBackend") String cryptoKeyBackend,
+        @CustomType.Parameter("destroyScheduledDuration") String destroyScheduledDuration,
+        @CustomType.Parameter("importOnly") Boolean importOnly,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @CustomType.Parameter("primary") CryptoKeyVersionResponse primary,
+        @CustomType.Parameter("purpose") String purpose,
+        @CustomType.Parameter("rotationPeriod") String rotationPeriod,
+        @CustomType.Parameter("versionTemplate") CryptoKeyVersionTemplateResponse versionTemplate) {
         this.createTime = createTime;
         this.cryptoKeyBackend = cryptoKeyBackend;
         this.destroyScheduledDuration = destroyScheduledDuration;

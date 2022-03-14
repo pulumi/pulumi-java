@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
      * The TLS Common Name string of the certificate.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
@@ -30,7 +30,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
      * Indicates whether the cert should be matched against as a wildcard cert.
      * 
      */
-    @InputImport(name="wildcardMatch")
+    @Import(name="wildcardMatch")
       private final @Nullable Output<Boolean> wildcardMatch;
 
     public Output<Boolean> getWildcardMatch() {

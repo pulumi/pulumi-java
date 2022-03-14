@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.IdentityConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.KerberosConfigArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Identity related configuration, including service account based secure multi-tenancy user mappings.
      * 
      */
-    @InputImport(name="identityConfig")
+    @Import(name="identityConfig")
       private final @Nullable Output<IdentityConfigArgs> identityConfig;
 
     public Output<IdentityConfigArgs> getIdentityConfig() {
@@ -34,7 +34,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Kerberos related configuration.
      * 
      */
-    @InputImport(name="kerberosConfig")
+    @Import(name="kerberosConfig")
       private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
     public Output<KerberosConfigArgs> getKerberosConfig() {

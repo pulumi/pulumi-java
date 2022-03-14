@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.VersionResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageIssueResponse {
     /**
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
@@ -57,17 +57,17 @@ public final class PackageIssueResponse {
      */
     private final String packageType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageIssueResponse(
-        @OutputCustomType.Parameter("affectedCpeUri") String affectedCpeUri,
-        @OutputCustomType.Parameter("affectedPackage") String affectedPackage,
-        @OutputCustomType.Parameter("affectedVersion") VersionResponse affectedVersion,
-        @OutputCustomType.Parameter("effectiveSeverity") String effectiveSeverity,
-        @OutputCustomType.Parameter("fixAvailable") Boolean fixAvailable,
-        @OutputCustomType.Parameter("fixedCpeUri") String fixedCpeUri,
-        @OutputCustomType.Parameter("fixedPackage") String fixedPackage,
-        @OutputCustomType.Parameter("fixedVersion") VersionResponse fixedVersion,
-        @OutputCustomType.Parameter("packageType") String packageType) {
+        @CustomType.Parameter("affectedCpeUri") String affectedCpeUri,
+        @CustomType.Parameter("affectedPackage") String affectedPackage,
+        @CustomType.Parameter("affectedVersion") VersionResponse affectedVersion,
+        @CustomType.Parameter("effectiveSeverity") String effectiveSeverity,
+        @CustomType.Parameter("fixAvailable") Boolean fixAvailable,
+        @CustomType.Parameter("fixedCpeUri") String fixedCpeUri,
+        @CustomType.Parameter("fixedPackage") String fixedPackage,
+        @CustomType.Parameter("fixedVersion") VersionResponse fixedVersion,
+        @CustomType.Parameter("packageType") String packageType) {
         this.affectedCpeUri = affectedCpeUri;
         this.affectedPackage = affectedPackage;
         this.affectedVersion = affectedVersion;

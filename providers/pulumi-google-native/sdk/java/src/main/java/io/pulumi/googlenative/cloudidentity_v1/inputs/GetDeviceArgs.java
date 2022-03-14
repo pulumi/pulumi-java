@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
-    @InputImport(name="customer")
+    @Import(name="customer")
       private final @Nullable String customer;
 
     public Optional<String> getCustomer() {
         return this.customer == null ? Optional.empty() : Optional.ofNullable(this.customer);
     }
 
-    @InputImport(name="deviceId", required=true)
+    @Import(name="deviceId", required=true)
       private final String deviceId;
 
     public String getDeviceId() {

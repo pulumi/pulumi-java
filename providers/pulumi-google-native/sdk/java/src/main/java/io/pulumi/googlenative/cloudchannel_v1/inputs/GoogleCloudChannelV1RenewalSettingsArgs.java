@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.enums.GoogleCloudChannelV1RenewalSettingsPaymentPlan;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1PeriodArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
      * If false, the plan will be completed at the end date.
      * 
      */
-    @InputImport(name="enableRenewal")
+    @Import(name="enableRenewal")
       private final @Nullable Output<Boolean> enableRenewal;
 
     public Output<Boolean> getEnableRenewal() {
@@ -35,7 +35,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
      * Describes how frequently the reseller will be billed, such as once per month.
      * 
      */
-    @InputImport(name="paymentCycle")
+    @Import(name="paymentCycle")
       private final @Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle;
 
     public Output<GoogleCloudChannelV1PeriodArgs> getPaymentCycle() {
@@ -46,7 +46,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
      * Describes how a reseller will be billed.
      * 
      */
-    @InputImport(name="paymentPlan")
+    @Import(name="paymentPlan")
       private final @Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
 
     public Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> getPaymentPlan() {
@@ -57,7 +57,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
      * If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
      * 
      */
-    @InputImport(name="resizeUnitCount")
+    @Import(name="resizeUnitCount")
       private final @Nullable Output<Boolean> resizeUnitCount;
 
     public Output<Boolean> getResizeUnitCount() {

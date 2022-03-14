@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.ReleaseArgs;
@@ -29,7 +29,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
@@ -43,7 +43,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * List of artifacts to pass through to Skaffold command.
      * 
      */
-    @OutputExport(name="buildArtifacts", type=List.class, parameters={BuildArtifactResponse.class})
+    @Export(name="buildArtifacts", type=List.class, parameters={BuildArtifactResponse.class})
     private Output<List<BuildArtifactResponse>> buildArtifacts;
 
     /**
@@ -57,7 +57,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Time at which the `Release` was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -71,7 +71,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Snapshot of the parent pipeline taken at release creation time.
      * 
      */
-    @OutputExport(name="deliveryPipelineSnapshot", type=DeliveryPipelineResponse.class, parameters={})
+    @Export(name="deliveryPipelineSnapshot", type=DeliveryPipelineResponse.class, parameters={})
     private Output<DeliveryPipelineResponse> deliveryPipelineSnapshot;
 
     /**
@@ -85,7 +85,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Description of the `Release`. Max length is 255 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -99,7 +99,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -113,7 +113,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -127,7 +127,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -141,7 +141,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Time at which the render completed.
      * 
      */
-    @OutputExport(name="renderEndTime", type=String.class, parameters={})
+    @Export(name="renderEndTime", type=String.class, parameters={})
     private Output<String> renderEndTime;
 
     /**
@@ -155,7 +155,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Time at which the render began.
      * 
      */
-    @OutputExport(name="renderStartTime", type=String.class, parameters={})
+    @Export(name="renderStartTime", type=String.class, parameters={})
     private Output<String> renderStartTime;
 
     /**
@@ -169,7 +169,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Current state of the render operation.
      * 
      */
-    @OutputExport(name="renderState", type=String.class, parameters={})
+    @Export(name="renderState", type=String.class, parameters={})
     private Output<String> renderState;
 
     /**
@@ -183,7 +183,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Filepath of the Skaffold config inside of the config URI.
      * 
      */
-    @OutputExport(name="skaffoldConfigPath", type=String.class, parameters={})
+    @Export(name="skaffoldConfigPath", type=String.class, parameters={})
     private Output<String> skaffoldConfigPath;
 
     /**
@@ -197,7 +197,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Cloud Storage URI of tar.gz archive containing Skaffold configuration.
      * 
      */
-    @OutputExport(name="skaffoldConfigUri", type=String.class, parameters={})
+    @Export(name="skaffoldConfigUri", type=String.class, parameters={})
     private Output<String> skaffoldConfigUri;
 
     /**
@@ -211,7 +211,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
      * 
      */
-    @OutputExport(name="skaffoldVersion", type=String.class, parameters={})
+    @Export(name="skaffoldVersion", type=String.class, parameters={})
     private Output<String> skaffoldVersion;
 
     /**
@@ -225,7 +225,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Map from target ID to the target artifacts created during the render operation.
      * 
      */
-    @OutputExport(name="targetArtifacts", type=Map.class, parameters={String.class, String.class})
+    @Export(name="targetArtifacts", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> targetArtifacts;
 
     /**
@@ -239,7 +239,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Map from target ID to details of the render operation for that target.
      * 
      */
-    @OutputExport(name="targetRenders", type=Map.class, parameters={String.class, String.class})
+    @Export(name="targetRenders", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> targetRenders;
 
     /**
@@ -253,7 +253,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Snapshot of the targets taken at release creation time.
      * 
      */
-    @OutputExport(name="targetSnapshots", type=List.class, parameters={TargetResponse.class})
+    @Export(name="targetSnapshots", type=List.class, parameters={TargetResponse.class})
     private Output<List<TargetResponse>> targetSnapshots;
 
     /**
@@ -267,7 +267,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Unique identifier of the `Release`.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**

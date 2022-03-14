@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The duration of time between executions in days.
      * 
      */
-    @InputImport(name="intervalDurationDays", required=true)
+    @Import(name="intervalDurationDays", required=true)
       private final Output<Integer> intervalDurationDays;
 
     public Output<Integer> getIntervalDurationDays() {
@@ -34,7 +34,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * A timestamp indicates when the next run will be scheduled. The value is refreshed by the server after each run. If unspecified, it will default to current server time, which means the scan will be scheduled to start immediately.
      * 
      */
-    @InputImport(name="scheduleTime")
+    @Import(name="scheduleTime")
       private final @Nullable Output<String> scheduleTime;
 
     public Output<String> getScheduleTime() {

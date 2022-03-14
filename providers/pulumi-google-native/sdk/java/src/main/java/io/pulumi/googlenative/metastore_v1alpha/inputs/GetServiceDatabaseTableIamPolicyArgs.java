@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,42 +14,42 @@ public final class GetServiceDatabaseTableIamPolicyArgs extends io.pulumi.resour
 
     public static final GetServiceDatabaseTableIamPolicyArgs Empty = new GetServiceDatabaseTableIamPolicyArgs();
 
-    @InputImport(name="databaseId", required=true)
+    @Import(name="databaseId", required=true)
       private final String databaseId;
 
     public String getDatabaseId() {
         return this.databaseId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="optionsRequestedPolicyVersion")
+    @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
     }
 
-    @InputImport(name="tableId", required=true)
+    @Import(name="tableId", required=true)
       private final String tableId;
 
     public String getTableId() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.binaryauthorization_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.binaryauthorization_v1beta1.inputs.UserOwnedDrydockNoteArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttestorArgs Empty = new AttestorArgs();
 
-    @InputImport(name="attestorId", required=true)
+    @Import(name="attestorId", required=true)
       private final Output<String> attestorId;
 
     public Output<String> getAttestorId() {
@@ -26,7 +26,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,14 +37,14 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -55,7 +55,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * A Drydock ATTESTATION_AUTHORITY Note, created by the user.
      * 
      */
-    @InputImport(name="userOwnedDrydockNote")
+    @Import(name="userOwnedDrydockNote")
       private final @Nullable Output<UserOwnedDrydockNoteArgs> userOwnedDrydockNote;
 
     public Output<UserOwnedDrydockNoteArgs> getUserOwnedDrydockNote() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LifecycleConfigResponse {
     /**
      * Optional. The time when cluster will be auto-deleted. (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
@@ -30,12 +30,12 @@ public final class LifecycleConfigResponse {
      */
     private final String idleStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LifecycleConfigResponse(
-        @OutputCustomType.Parameter("autoDeleteTime") String autoDeleteTime,
-        @OutputCustomType.Parameter("autoDeleteTtl") String autoDeleteTtl,
-        @OutputCustomType.Parameter("idleDeleteTtl") String idleDeleteTtl,
-        @OutputCustomType.Parameter("idleStartTime") String idleStartTime) {
+        @CustomType.Parameter("autoDeleteTime") String autoDeleteTime,
+        @CustomType.Parameter("autoDeleteTtl") String autoDeleteTtl,
+        @CustomType.Parameter("idleDeleteTtl") String idleDeleteTtl,
+        @CustomType.Parameter("idleStartTime") String idleStartTime) {
         this.autoDeleteTime = autoDeleteTime;
         this.autoDeleteTtl = autoDeleteTtl;
         this.idleDeleteTtl = idleDeleteTtl;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DataplexConfigResponse extends io.pulumi.resources.InvokeArgs
      * A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
      * 
      */
-    @InputImport(name="lakeResources", required=true)
+    @Import(name="lakeResources", required=true)
       private final Map<String,String> lakeResources;
 
     public Map<String,String> getLakeResources() {

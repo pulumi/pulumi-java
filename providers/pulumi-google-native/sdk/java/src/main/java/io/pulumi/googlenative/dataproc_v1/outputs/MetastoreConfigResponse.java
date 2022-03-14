@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetastoreConfigResponse {
     /**
      * Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
@@ -15,8 +15,8 @@ public final class MetastoreConfigResponse {
      */
     private final String dataprocMetastoreService;
 
-    @OutputCustomType.Constructor
-    private MetastoreConfigResponse(@OutputCustomType.Parameter("dataprocMetastoreService") String dataprocMetastoreService) {
+    @CustomType.Constructor
+    private MetastoreConfigResponse(@CustomType.Parameter("dataprocMetastoreService") String dataprocMetastoreService) {
         this.dataprocMetastoreService = dataprocMetastoreService;
     }
 

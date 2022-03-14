@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DeliveryConfigResponse extends io.pulumi.resources.InvokeArgs
      * The DeliveryRequirement for this subscription.
      * 
      */
-    @InputImport(name="deliveryRequirement", required=true)
+    @Import(name="deliveryRequirement", required=true)
       private final String deliveryRequirement;
 
     public String getDeliveryRequirement() {

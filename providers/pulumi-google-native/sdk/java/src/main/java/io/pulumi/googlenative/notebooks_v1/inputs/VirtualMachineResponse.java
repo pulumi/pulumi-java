@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.inputs.VirtualMachineConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
      * The unique identifier of the Managed Compute Engine instance.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -32,7 +32,7 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
      * The user-friendly name of the Managed Compute Engine instance.
      * 
      */
-    @InputImport(name="instanceName", required=true)
+    @Import(name="instanceName", required=true)
       private final String instanceName;
 
     public String getInstanceName() {
@@ -43,7 +43,7 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
      * Virtual Machine configuration settings.
      * 
      */
-    @InputImport(name="virtualMachineConfig", required=true)
+    @Import(name="virtualMachineConfig", required=true)
       private final VirtualMachineConfigResponse virtualMachineConfig;
 
     public VirtualMachineConfigResponse getVirtualMachineConfig() {

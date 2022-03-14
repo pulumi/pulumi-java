@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,42 +14,42 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMessageArgs Empty = new GetMessageArgs();
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="hl7V2StoreId", required=true)
+    @Import(name="hl7V2StoreId", required=true)
       private final String hl7V2StoreId;
 
     public String getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="messageId", required=true)
+    @Import(name="messageId", required=true)
       private final String messageId;
 
     public String getMessageId() {
         return this.messageId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable String view;
 
     public Optional<String> getView() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
      * Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.
      * 
      */
-    @InputImport(name="strength", required=true)
+    @Import(name="strength", required=true)
       private final Double strength;
 
     public Double getStrength() {
@@ -32,7 +32,7 @@ public final class DenoiseResponse extends io.pulumi.resources.InvokeArgs {
      * Set the denoiser mode. The default is `standard`. Supported denoiser modes: - `standard` - `grain`
      * 
      */
-    @InputImport(name="tune", required=true)
+    @Import(name="tune", required=true)
       private final String tune;
 
     public String getTune() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
      * Unencrypted PEM encoded RSA private key. This field is set once on certificate creation and then encrypted. The key size must be 2048 bits or fewer. Must include the header and footer. Example: -----BEGIN RSA PRIVATE KEY----- -----END RSA PRIVATE KEY----- @InputOnly
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -33,7 +33,7 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
      * PEM encoded x.509 public key certificate. This field is set once on certificate creation. Must include the header and footer. Example: -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
      * 
      */
-    @InputImport(name="publicCertificate")
+    @Import(name="publicCertificate")
       private final @Nullable Output<String> publicCertificate;
 
     public Output<String> getPublicCertificate() {

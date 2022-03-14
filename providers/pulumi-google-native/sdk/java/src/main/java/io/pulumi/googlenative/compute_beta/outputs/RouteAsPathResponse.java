@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouteAsPathResponse {
     /**
      * The AS numbers of the AS Path.
@@ -22,10 +22,10 @@ public final class RouteAsPathResponse {
      */
     private final String pathSegmentType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteAsPathResponse(
-        @OutputCustomType.Parameter("asLists") List<Integer> asLists,
-        @OutputCustomType.Parameter("pathSegmentType") String pathSegmentType) {
+        @CustomType.Parameter("asLists") List<Integer> asLists,
+        @CustomType.Parameter("pathSegmentType") String pathSegmentType) {
         this.asLists = asLists;
         this.pathSegmentType = pathSegmentType;
     }

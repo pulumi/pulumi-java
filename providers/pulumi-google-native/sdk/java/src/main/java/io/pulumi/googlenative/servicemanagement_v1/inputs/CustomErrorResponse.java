@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomErrorRuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CustomErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final List<CustomErrorRuleResponse> rules;
 
     public List<CustomErrorRuleResponse> getRules() {
@@ -33,7 +33,7 @@ public final class CustomErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
      * 
      */
-    @InputImport(name="types", required=true)
+    @Import(name="types", required=true)
       private final List<String> types;
 
     public List<String> getTypes() {

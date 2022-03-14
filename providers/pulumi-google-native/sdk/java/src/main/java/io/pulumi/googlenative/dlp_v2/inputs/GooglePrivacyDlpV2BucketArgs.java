@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
      * Upper bound of the range, exclusive; type must match min.
      * 
      */
-    @InputImport(name="max")
+    @Import(name="max")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> max;
 
     public Output<GooglePrivacyDlpV2ValueArgs> getMax() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
      * Lower bound of the range, inclusive. Type should be the same as max if used.
      * 
      */
-    @InputImport(name="min")
+    @Import(name="min")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> min;
 
     public Output<GooglePrivacyDlpV2ValueArgs> getMin() {
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
      * Replacement value for this bucket.
      * 
      */
-    @InputImport(name="replacementValue", required=true)
+    @Import(name="replacementValue", required=true)
       private final Output<GooglePrivacyDlpV2ValueArgs> replacementValue;
 
     public Output<GooglePrivacyDlpV2ValueArgs> getReplacementValue() {

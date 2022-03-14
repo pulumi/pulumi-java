@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ml_v1.TrialArgs;
@@ -26,7 +26,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * The identifier of the client that originally requested this trial.
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
@@ -40,7 +40,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * Time at which the trial's status changed to COMPLETED.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -54,7 +54,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * The final measurement containing the objective value.
      * 
      */
-    @OutputExport(name="finalMeasurement", type=GoogleCloudMlV1__MeasurementResponse.class, parameters={})
+    @Export(name="finalMeasurement", type=GoogleCloudMlV1__MeasurementResponse.class, parameters={})
     private Output<GoogleCloudMlV1__MeasurementResponse> finalMeasurement;
 
     /**
@@ -68,7 +68,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * A human readable string describing why the trial is infeasible. This should only be set if trial_infeasible is true.
      * 
      */
-    @OutputExport(name="infeasibleReason", type=String.class, parameters={})
+    @Export(name="infeasibleReason", type=String.class, parameters={})
     private Output<String> infeasibleReason;
 
     /**
@@ -82,7 +82,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * A list of measurements that are strictly lexicographically ordered by their induced tuples (steps, elapsed_time). These are used for early stopping computations.
      * 
      */
-    @OutputExport(name="measurements", type=List.class, parameters={GoogleCloudMlV1__MeasurementResponse.class})
+    @Export(name="measurements", type=List.class, parameters={GoogleCloudMlV1__MeasurementResponse.class})
     private Output<List<GoogleCloudMlV1__MeasurementResponse>> measurements;
 
     /**
@@ -96,7 +96,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * Name of the trial assigned by the service.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * The parameters of the trial.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={GoogleCloudMlV1_Trial_ParameterResponse.class})
+    @Export(name="parameters", type=List.class, parameters={GoogleCloudMlV1_Trial_ParameterResponse.class})
     private Output<List<GoogleCloudMlV1_Trial_ParameterResponse>> parameters;
 
     /**
@@ -124,7 +124,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * Time at which the trial was started.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -138,7 +138,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * The detailed state of a trial.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -152,7 +152,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * If true, the parameters in this trial are not attempted again.
      * 
      */
-    @OutputExport(name="trialInfeasible", type=Boolean.class, parameters={})
+    @Export(name="trialInfeasible", type=Boolean.class, parameters={})
     private Output<Boolean> trialInfeasible;
 
     /**

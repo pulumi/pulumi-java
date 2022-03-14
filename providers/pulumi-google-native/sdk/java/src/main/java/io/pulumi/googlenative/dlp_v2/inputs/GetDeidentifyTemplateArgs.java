@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetDeidentifyTemplateArgs extends io.pulumi.resources.InvokeA
 
     public static final GetDeidentifyTemplateArgs Empty = new GetDeidentifyTemplateArgs();
 
-    @InputImport(name="deidentifyTemplateId", required=true)
+    @Import(name="deidentifyTemplateId", required=true)
       private final String deidentifyTemplateId;
 
     public String getDeidentifyTemplateId() {
         return this.deidentifyTemplateId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

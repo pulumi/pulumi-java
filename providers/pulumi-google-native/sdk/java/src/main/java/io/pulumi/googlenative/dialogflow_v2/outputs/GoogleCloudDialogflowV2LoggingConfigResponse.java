@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2LoggingConfigResponse {
     /**
      * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2LoggingConfigResponse {
      */
     private final Boolean enableStackdriverLogging;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2LoggingConfigResponse(@OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2LoggingConfigResponse(@CustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging) {
         this.enableStackdriverLogging = enableStackdriverLogging;
     }
 

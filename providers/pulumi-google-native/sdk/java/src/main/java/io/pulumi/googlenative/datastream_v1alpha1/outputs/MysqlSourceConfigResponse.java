@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.MysqlRdbmsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MysqlSourceConfigResponse {
     /**
      * MySQL objects to retrieve from the source.
@@ -20,10 +20,10 @@ public final class MysqlSourceConfigResponse {
      */
     private final MysqlRdbmsResponse rejectlist;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlSourceConfigResponse(
-        @OutputCustomType.Parameter("allowlist") MysqlRdbmsResponse allowlist,
-        @OutputCustomType.Parameter("rejectlist") MysqlRdbmsResponse rejectlist) {
+        @CustomType.Parameter("allowlist") MysqlRdbmsResponse allowlist,
+        @CustomType.Parameter("rejectlist") MysqlRdbmsResponse rejectlist) {
         this.allowlist = allowlist;
         this.rejectlist = rejectlist;
     }

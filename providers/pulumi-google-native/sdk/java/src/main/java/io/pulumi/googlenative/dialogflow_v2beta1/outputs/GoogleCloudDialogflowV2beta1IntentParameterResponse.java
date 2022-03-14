@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentParameterResponse {
     /**
      * Optional. The default value to use when the `value` yields an empty result. Default values can be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
@@ -52,16 +52,16 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentParameterResponse(
-        @OutputCustomType.Parameter("defaultValue") String defaultValue,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("entityTypeDisplayName") String entityTypeDisplayName,
-        @OutputCustomType.Parameter("isList") Boolean isList,
-        @OutputCustomType.Parameter("mandatory") Boolean mandatory,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("prompts") List<String> prompts,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("defaultValue") String defaultValue,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("entityTypeDisplayName") String entityTypeDisplayName,
+        @CustomType.Parameter("isList") Boolean isList,
+        @CustomType.Parameter("mandatory") Boolean mandatory,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("prompts") List<String> prompts,
+        @CustomType.Parameter("value") String value) {
         this.defaultValue = defaultValue;
         this.displayName = displayName;
         this.entityTypeDisplayName = entityTypeDisplayName;

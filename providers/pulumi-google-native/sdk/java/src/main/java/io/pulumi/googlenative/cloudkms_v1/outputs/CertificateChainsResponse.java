@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateChainsResponse {
     /**
      * Cavium certificate chain corresponding to the attestation.
@@ -26,11 +26,11 @@ public final class CertificateChainsResponse {
      */
     private final List<String> googlePartitionCerts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateChainsResponse(
-        @OutputCustomType.Parameter("caviumCerts") List<String> caviumCerts,
-        @OutputCustomType.Parameter("googleCardCerts") List<String> googleCardCerts,
-        @OutputCustomType.Parameter("googlePartitionCerts") List<String> googlePartitionCerts) {
+        @CustomType.Parameter("caviumCerts") List<String> caviumCerts,
+        @CustomType.Parameter("googleCardCerts") List<String> googleCardCerts,
+        @CustomType.Parameter("googlePartitionCerts") List<String> googlePartitionCerts) {
         this.caviumCerts = caviumCerts;
         this.googleCardCerts = googleCardCerts;
         this.googlePartitionCerts = googlePartitionCerts;

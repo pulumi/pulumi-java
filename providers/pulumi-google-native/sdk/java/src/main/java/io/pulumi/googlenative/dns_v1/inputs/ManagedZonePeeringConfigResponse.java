@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.inputs.ManagedZonePeeringConfigTargetNetworkResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class ManagedZonePeeringConfigResponse extends io.pulumi.resources.
 
     public static final ManagedZonePeeringConfigResponse Empty = new ManagedZonePeeringConfigResponse();
 
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -24,7 +24,7 @@ public final class ManagedZonePeeringConfigResponse extends io.pulumi.resources.
      * The network with which to peer.
      * 
      */
-    @InputImport(name="targetNetwork", required=true)
+    @Import(name="targetNetwork", required=true)
       private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 
     public ManagedZonePeeringConfigTargetNetworkResponse getTargetNetwork() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3ConversationTurnResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3TestCaseResultResponse {
     /**
      * The conversation turns uttered during the test case replay in chronological order.
@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse {
      */
     private final String testTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3TestCaseResultResponse(
-        @OutputCustomType.Parameter("conversationTurns") List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns,
-        @OutputCustomType.Parameter("environment") String environment,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("testResult") String testResult,
-        @OutputCustomType.Parameter("testTime") String testTime) {
+        @CustomType.Parameter("conversationTurns") List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns,
+        @CustomType.Parameter("environment") String environment,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("testResult") String testResult,
+        @CustomType.Parameter("testTime") String testTime) {
         this.conversationTurns = conversationTurns;
         this.environment = environment;
         this.name = name;

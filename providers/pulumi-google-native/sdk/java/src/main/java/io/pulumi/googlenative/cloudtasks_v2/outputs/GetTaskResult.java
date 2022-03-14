@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.AppEngineHttpRequestResponse;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.AttemptResponse;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.HttpRequestResponse;
@@ -11,7 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskResult {
     /**
      * HTTP request that is sent to the App Engine app handler. An App Engine task is a task that has AppEngineHttpRequest set.
@@ -69,19 +69,19 @@ public final class GetTaskResult {
      */
     private final String view;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskResult(
-        @OutputCustomType.Parameter("appEngineHttpRequest") AppEngineHttpRequestResponse appEngineHttpRequest,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dispatchCount") Integer dispatchCount,
-        @OutputCustomType.Parameter("dispatchDeadline") String dispatchDeadline,
-        @OutputCustomType.Parameter("firstAttempt") AttemptResponse firstAttempt,
-        @OutputCustomType.Parameter("httpRequest") HttpRequestResponse httpRequest,
-        @OutputCustomType.Parameter("lastAttempt") AttemptResponse lastAttempt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("responseCount") Integer responseCount,
-        @OutputCustomType.Parameter("scheduleTime") String scheduleTime,
-        @OutputCustomType.Parameter("view") String view) {
+        @CustomType.Parameter("appEngineHttpRequest") AppEngineHttpRequestResponse appEngineHttpRequest,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dispatchCount") Integer dispatchCount,
+        @CustomType.Parameter("dispatchDeadline") String dispatchDeadline,
+        @CustomType.Parameter("firstAttempt") AttemptResponse firstAttempt,
+        @CustomType.Parameter("httpRequest") HttpRequestResponse httpRequest,
+        @CustomType.Parameter("lastAttempt") AttemptResponse lastAttempt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("responseCount") Integer responseCount,
+        @CustomType.Parameter("scheduleTime") String scheduleTime,
+        @CustomType.Parameter("view") String view) {
         this.appEngineHttpRequest = appEngineHttpRequest;
         this.createTime = createTime;
         this.dispatchCount = dispatchCount;

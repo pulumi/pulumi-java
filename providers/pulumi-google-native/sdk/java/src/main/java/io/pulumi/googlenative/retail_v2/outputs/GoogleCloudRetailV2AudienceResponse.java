@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2AudienceResponse {
     /**
      * The age groups of the audience. Strongly encouraged to use the standard values: "newborn" (up to 3 months old), "infant" (3–12 months old), "toddler" (1–5 years old), "kids" (5–13 years old), "adult" (typically teens or older). At most 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [age_group](https://support.google.com/merchants/answer/6324463). Schema.org property [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).
@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2AudienceResponse {
      */
     private final List<String> genders;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2AudienceResponse(
-        @OutputCustomType.Parameter("ageGroups") List<String> ageGroups,
-        @OutputCustomType.Parameter("genders") List<String> genders) {
+        @CustomType.Parameter("ageGroups") List<String> ageGroups,
+        @CustomType.Parameter("genders") List<String> genders) {
         this.ageGroups = ageGroups;
         this.genders = genders;
     }

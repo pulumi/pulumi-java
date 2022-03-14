@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
 
     public static final RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs Empty = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs();
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -30,14 +30,14 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
      * The geo-location granularity is a GCP region. This location string should correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-east1", etc.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="rrdatas")
+    @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
     public Output<List<String>> getRrdatas() {
@@ -48,7 +48,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
      * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked targets are provided for DNSSEC enabled zones, there's a restriction of 1 ip per item. .
      * 
      */
-    @InputImport(name="signatureRrdatas")
+    @Import(name="signatureRrdatas")
       private final @Nullable Output<List<String>> signatureRrdatas;
 
     public Output<List<String>> getSignatureRrdatas() {

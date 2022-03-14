@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayAuthMethod;
 import io.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayType;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates how to authorize and/or authenticate devices to access the gateway.
      * 
      */
-    @InputImport(name="gatewayAuthMethod")
+    @Import(name="gatewayAuthMethod")
       private final @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
 
     public Output<GatewayConfigGatewayAuthMethod> getGatewayAuthMethod() {
@@ -34,7 +34,7 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the device is a gateway.
      * 
      */
-    @InputImport(name="gatewayType")
+    @Import(name="gatewayType")
       private final @Nullable Output<GatewayConfigGatewayType> gatewayType;
 
     public Output<GatewayConfigGatewayType> getGatewayType() {

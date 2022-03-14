@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubjectResponse {
     /**
      * "": "" Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
@@ -21,10 +21,10 @@ public final class SubjectResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectResponse(
-        @OutputCustomType.Parameter("digest") Map<String,String> digest,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("digest") Map<String,String> digest,
+        @CustomType.Parameter("name") String name) {
         this.digest = digest;
         this.name = name;
     }

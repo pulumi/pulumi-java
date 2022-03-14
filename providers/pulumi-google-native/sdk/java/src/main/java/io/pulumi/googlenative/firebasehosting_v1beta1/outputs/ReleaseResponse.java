@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.ActingUserResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.VersionResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReleaseResponse {
     /**
      * The deploy description when the release was created. The value can be up to 512 characters.
@@ -42,14 +42,14 @@ public final class ReleaseResponse {
      */
     private final VersionResponse version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReleaseResponse(
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("releaseTime") String releaseTime,
-        @OutputCustomType.Parameter("releaseUser") ActingUserResponse releaseUser,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") VersionResponse version) {
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("releaseTime") String releaseTime,
+        @CustomType.Parameter("releaseUser") ActingUserResponse releaseUser,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") VersionResponse version) {
         this.message = message;
         this.name = name;
         this.releaseTime = releaseTime;

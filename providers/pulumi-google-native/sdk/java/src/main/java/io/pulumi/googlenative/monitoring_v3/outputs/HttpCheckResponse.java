@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.BasicAuthenticationResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpCheckResponse {
     /**
      * The authentication information. Optional when creating an HTTP check; defaults to empty.
@@ -64,18 +64,18 @@ public final class HttpCheckResponse {
      */
     private final Boolean validateSsl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpCheckResponse(
-        @OutputCustomType.Parameter("authInfo") BasicAuthenticationResponse authInfo,
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("headers") Map<String,String> headers,
-        @OutputCustomType.Parameter("maskHeaders") Boolean maskHeaders,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("requestMethod") String requestMethod,
-        @OutputCustomType.Parameter("useSsl") Boolean useSsl,
-        @OutputCustomType.Parameter("validateSsl") Boolean validateSsl) {
+        @CustomType.Parameter("authInfo") BasicAuthenticationResponse authInfo,
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("headers") Map<String,String> headers,
+        @CustomType.Parameter("maskHeaders") Boolean maskHeaders,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("requestMethod") String requestMethod,
+        @CustomType.Parameter("useSsl") Boolean useSsl,
+        @CustomType.Parameter("validateSsl") Boolean validateSsl) {
         this.authInfo = authInfo;
         this.body = body;
         this.contentType = contentType;

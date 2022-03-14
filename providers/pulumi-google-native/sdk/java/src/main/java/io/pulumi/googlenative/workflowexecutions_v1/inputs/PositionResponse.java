@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
      * The source code column position (of the line) the current instruction was generated from.
      * 
      */
-    @InputImport(name="column", required=true)
+    @Import(name="column", required=true)
       private final String column;
 
     public String getColumn() {
@@ -31,7 +31,7 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
      * The number of bytes of source code making up this stack trace element.
      * 
      */
-    @InputImport(name="length", required=true)
+    @Import(name="length", required=true)
       private final String length;
 
     public String getLength() {
@@ -42,7 +42,7 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
      * The source code line number the current instruction was generated from.
      * 
      */
-    @InputImport(name="line", required=true)
+    @Import(name="line", required=true)
       private final String line;
 
     public String getLine() {

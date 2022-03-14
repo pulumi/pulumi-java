@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IstioConfigResponse {
     /**
      * The specified Istio auth mode, either none, or mutual TLS.
@@ -21,10 +21,10 @@ public final class IstioConfigResponse {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IstioConfigResponse(
-        @OutputCustomType.Parameter("auth") String auth,
-        @OutputCustomType.Parameter("disabled") Boolean disabled) {
+        @CustomType.Parameter("auth") String auth,
+        @CustomType.Parameter("disabled") Boolean disabled) {
         this.auth = auth;
         this.disabled = disabled;
     }

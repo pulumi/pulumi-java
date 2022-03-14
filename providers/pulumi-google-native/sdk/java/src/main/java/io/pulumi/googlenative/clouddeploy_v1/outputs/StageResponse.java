@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StageResponse {
     /**
      * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
@@ -21,10 +21,10 @@ public final class StageResponse {
      */
     private final String targetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StageResponse(
-        @OutputCustomType.Parameter("profiles") List<String> profiles,
-        @OutputCustomType.Parameter("targetId") String targetId) {
+        @CustomType.Parameter("profiles") List<String> profiles,
+        @CustomType.Parameter("targetId") String targetId) {
         this.profiles = profiles;
         this.targetId = targetId;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.
      * 
      */
-    @InputImport(name="disk", required=true)
+    @Import(name="disk", required=true)
       private final Output<String> disk;
 
     public Output<String> getDisk() {
@@ -32,7 +32,7 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
      * The path within the user's docker container where this input should be localized to and from, relative to the specified disk's mount point. For example: file.txt,
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
      * Optional. The main text describing the item.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
      * Optional. The image to display.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
      * Additional information about this option.
      * 
      */
-    @InputImport(name="info", required=true)
+    @Import(name="info", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> getInfo() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
      * The title of the list item.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

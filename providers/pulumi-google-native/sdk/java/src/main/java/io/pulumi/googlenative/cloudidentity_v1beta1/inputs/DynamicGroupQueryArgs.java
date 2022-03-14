@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudidentity_v1beta1.enums.DynamicGroupQueryResourceType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
      * Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive queries add `equalsIgnoreCase()` to the value being queried). `user.name.value.equalsIgnoreCase('jOhn DoE')`
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
         return this.query == null ? Output.empty() : this.query;
     }
 
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<DynamicGroupQueryResourceType> resourceType;
 
     public Output<DynamicGroupQueryResourceType> getPropResourceType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
      * Whether Cloud Run addon is enabled for this cluster.
      * 
      */
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Boolean disabled;
 
     public Boolean getDisabled() {
@@ -32,7 +32,7 @@ public final class CloudRunConfigResponse extends io.pulumi.resources.InvokeArgs
      * Which load balancer type is installed for Cloud Run.
      * 
      */
-    @InputImport(name="loadBalancerType", required=true)
+    @Import(name="loadBalancerType", required=true)
       private final String loadBalancerType;
 
     public String getLoadBalancerType() {

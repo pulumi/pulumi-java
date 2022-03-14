@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.BuildSignatureResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildResponse {
     /**
      * Immutable. Version of the builder which produced this build.
@@ -21,10 +21,10 @@ public final class BuildResponse {
      */
     private final BuildSignatureResponse signature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildResponse(
-        @OutputCustomType.Parameter("builderVersion") String builderVersion,
-        @OutputCustomType.Parameter("signature") BuildSignatureResponse signature) {
+        @CustomType.Parameter("builderVersion") String builderVersion,
+        @CustomType.Parameter("signature") BuildSignatureResponse signature) {
         this.builderVersion = builderVersion;
         this.signature = signature;
     }

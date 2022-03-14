@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse {
     /**
      * Configs of custom conversation model.
@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      */
     private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse(
-        @OutputCustomType.Parameter("conversationModelConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig,
-        @OutputCustomType.Parameter("conversationProcessConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig,
-        @OutputCustomType.Parameter("enableEventBasedSuggestion") Boolean enableEventBasedSuggestion,
-        @OutputCustomType.Parameter("queryConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig,
-        @OutputCustomType.Parameter("suggestionFeature") GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature,
-        @OutputCustomType.Parameter("suggestionTriggerSettings") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
+        @CustomType.Parameter("conversationModelConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig,
+        @CustomType.Parameter("conversationProcessConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig,
+        @CustomType.Parameter("enableEventBasedSuggestion") Boolean enableEventBasedSuggestion,
+        @CustomType.Parameter("queryConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig,
+        @CustomType.Parameter("suggestionFeature") GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature,
+        @CustomType.Parameter("suggestionTriggerSettings") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
         this.conversationModelConfig = conversationModelConfig;
         this.conversationProcessConfig = conversationProcessConfig;
         this.enableEventBasedSuggestion = enableEventBasedSuggestion;

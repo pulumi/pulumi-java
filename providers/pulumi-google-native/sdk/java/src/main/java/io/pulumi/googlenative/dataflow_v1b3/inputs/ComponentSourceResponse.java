@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
      * Dataflow service generated name for this source.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
      * User name for the original user transform or collection with which this source is most closely associated.
      * 
      */
-    @InputImport(name="originalTransformOrCollection", required=true)
+    @Import(name="originalTransformOrCollection", required=true)
       private final String originalTransformOrCollection;
 
     public String getOriginalTransformOrCollection() {
@@ -42,7 +42,7 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
      * Human-readable name for this transform; may be user or system generated.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

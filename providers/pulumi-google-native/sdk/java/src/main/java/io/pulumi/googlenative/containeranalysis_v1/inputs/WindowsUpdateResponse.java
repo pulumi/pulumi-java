@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CategoryResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.IdentityResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * The list of categories to which the update belongs.
      * 
      */
-    @InputImport(name="categories", required=true)
+    @Import(name="categories", required=true)
       private final List<CategoryResponse> categories;
 
     public List<CategoryResponse> getCategories() {
@@ -34,7 +34,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * The localized description of the update.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -45,7 +45,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * Required - The unique identifier for the update.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final IdentityResponse identity;
 
     public IdentityResponse getIdentity() {
@@ -56,7 +56,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * The Microsoft Knowledge Base article IDs that are associated with the update.
      * 
      */
-    @InputImport(name="kbArticleIds", required=true)
+    @Import(name="kbArticleIds", required=true)
       private final List<String> kbArticleIds;
 
     public List<String> getKbArticleIds() {
@@ -67,7 +67,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * The last published timestamp of the update.
      * 
      */
-    @InputImport(name="lastPublishedTimestamp", required=true)
+    @Import(name="lastPublishedTimestamp", required=true)
       private final String lastPublishedTimestamp;
 
     public String getLastPublishedTimestamp() {
@@ -78,7 +78,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * The hyperlink to the support information for the update.
      * 
      */
-    @InputImport(name="supportUrl", required=true)
+    @Import(name="supportUrl", required=true)
       private final String supportUrl;
 
     public String getSupportUrl() {
@@ -89,7 +89,7 @@ public final class WindowsUpdateResponse extends io.pulumi.resources.InvokeArgs 
      * The localized title of the update.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

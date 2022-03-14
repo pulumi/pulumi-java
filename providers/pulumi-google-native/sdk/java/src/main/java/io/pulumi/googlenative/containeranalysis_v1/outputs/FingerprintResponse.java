@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FingerprintResponse {
     /**
      * The layer ID of the final layer in the Docker image's v1 representation.
@@ -26,11 +26,11 @@ public final class FingerprintResponse {
      */
     private final String v2Name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FingerprintResponse(
-        @OutputCustomType.Parameter("v1Name") String v1Name,
-        @OutputCustomType.Parameter("v2Blob") List<String> v2Blob,
-        @OutputCustomType.Parameter("v2Name") String v2Name) {
+        @CustomType.Parameter("v1Name") String v1Name,
+        @CustomType.Parameter("v2Blob") List<String> v2Blob,
+        @CustomType.Parameter("v2Name") String v2Name) {
         this.v1Name = v1Name;
         this.v2Blob = v2Blob;
         this.v2Name = v2Name;

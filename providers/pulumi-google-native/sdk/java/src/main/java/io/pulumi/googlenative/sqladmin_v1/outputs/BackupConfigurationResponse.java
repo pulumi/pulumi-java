@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sqladmin_v1.outputs.BackupRetentionSettingsResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupConfigurationResponse {
     /**
      * Backup retention settings.
@@ -58,17 +58,17 @@ public final class BackupConfigurationResponse {
      */
     private final Integer transactionLogRetentionDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupConfigurationResponse(
-        @OutputCustomType.Parameter("backupRetentionSettings") BackupRetentionSettingsResponse backupRetentionSettings,
-        @OutputCustomType.Parameter("binaryLogEnabled") Boolean binaryLogEnabled,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("pointInTimeRecoveryEnabled") Boolean pointInTimeRecoveryEnabled,
-        @OutputCustomType.Parameter("replicationLogArchivingEnabled") Boolean replicationLogArchivingEnabled,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("transactionLogRetentionDays") Integer transactionLogRetentionDays) {
+        @CustomType.Parameter("backupRetentionSettings") BackupRetentionSettingsResponse backupRetentionSettings,
+        @CustomType.Parameter("binaryLogEnabled") Boolean binaryLogEnabled,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("pointInTimeRecoveryEnabled") Boolean pointInTimeRecoveryEnabled,
+        @CustomType.Parameter("replicationLogArchivingEnabled") Boolean replicationLogArchivingEnabled,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("transactionLogRetentionDays") Integer transactionLogRetentionDays) {
         this.backupRetentionSettings = backupRetentionSettings;
         this.binaryLogEnabled = binaryLogEnabled;
         this.enabled = enabled;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.speech_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.speech_v1.PhraseSetArgs;
@@ -24,7 +24,7 @@ public class PhraseSet extends io.pulumi.resources.CustomResource {
      * Hint Boost. Positive value will increase the probability that a specific phrase will be recognized over other similar sounding phrases. The higher the boost, the higher the chance of false positive recognition as well. Negative boost values would correspond to anti-biasing. Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can accept a wide range of positive values, most use cases are best served with values between 0 (exclusive) and 20. We recommend using a binary search approach to finding the optimal value for your use case. Speech recognition will skip PhraseSets with a boost value of 0.
      * 
      */
-    @OutputExport(name="boost", type=Double.class, parameters={})
+    @Export(name="boost", type=Double.class, parameters={})
     private Output<Double> boost;
 
     /**
@@ -38,7 +38,7 @@ public class PhraseSet extends io.pulumi.resources.CustomResource {
      * The resource name of the phrase set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -52,7 +52,7 @@ public class PhraseSet extends io.pulumi.resources.CustomResource {
      * A list of word and phrases.
      * 
      */
-    @OutputExport(name="phrases", type=List.class, parameters={PhraseResponse.class})
+    @Export(name="phrases", type=List.class, parameters={PhraseResponse.class})
     private Output<List<PhraseResponse>> phrases;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GKEMasterInfoResponse {
     /**
      * URI of a GKE cluster network.
@@ -30,12 +30,12 @@ public final class GKEMasterInfoResponse {
      */
     private final String internalIp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GKEMasterInfoResponse(
-        @OutputCustomType.Parameter("clusterNetworkUri") String clusterNetworkUri,
-        @OutputCustomType.Parameter("clusterUri") String clusterUri,
-        @OutputCustomType.Parameter("externalIp") String externalIp,
-        @OutputCustomType.Parameter("internalIp") String internalIp) {
+        @CustomType.Parameter("clusterNetworkUri") String clusterNetworkUri,
+        @CustomType.Parameter("clusterUri") String clusterUri,
+        @CustomType.Parameter("externalIp") String externalIp,
+        @CustomType.Parameter("internalIp") String internalIp) {
         this.clusterNetworkUri = clusterNetworkUri;
         this.clusterUri = clusterUri;
         this.externalIp = externalIp;

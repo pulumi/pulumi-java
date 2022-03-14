@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceExecResourceExecInterpreter;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * Optional arguments to pass to the source during execution.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -36,7 +36,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * A remote or local file.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileArgs> file;
 
     public Output<OSPolicyResourceFileArgs> getFile() {
@@ -47,7 +47,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * The script interpreter to use.
      * 
      */
-    @InputImport(name="interpreter", required=true)
+    @Import(name="interpreter", required=true)
       private final Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
 
     public Output<OSPolicyResourceExecResourceExecInterpreter> getInterpreter() {
@@ -58,7 +58,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes.
      * 
      */
-    @InputImport(name="outputFilePath")
+    @Import(name="outputFilePath")
       private final @Nullable Output<String> outputFilePath;
 
     public Output<String> getOutputFilePath() {
@@ -69,7 +69,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * An inline script. The size of the script is limited to 1024 characters.
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {

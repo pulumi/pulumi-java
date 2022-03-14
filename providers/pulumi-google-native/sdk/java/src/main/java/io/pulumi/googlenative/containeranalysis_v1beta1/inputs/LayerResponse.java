@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LayerResponse extends io.pulumi.resources.InvokeArgs {
      * The recovered arguments to the Dockerfile directive.
      * 
      */
-    @InputImport(name="arguments", required=true)
+    @Import(name="arguments", required=true)
       private final String arguments;
 
     public String getArguments() {
@@ -31,7 +31,7 @@ public final class LayerResponse extends io.pulumi.resources.InvokeArgs {
      * The recovered Dockerfile directive used to construct this layer.
      * 
      */
-    @InputImport(name="directive", required=true)
+    @Import(name="directive", required=true)
       private final String directive;
 
     public String getDirective() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
      * The renewal method for this `Registration`.
      * 
      */
-    @InputImport(name="renewalMethod", required=true)
+    @Import(name="renewalMethod", required=true)
       private final String renewalMethod;
 
     public String getRenewalMethod() {
@@ -31,7 +31,7 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
      * Controls whether the domain can be transferred to another registrar.
      * 
      */
-    @InputImport(name="transferLockState", required=true)
+    @Import(name="transferLockState", required=true)
       private final String transferLockState;
 
     public String getTransferLockState() {

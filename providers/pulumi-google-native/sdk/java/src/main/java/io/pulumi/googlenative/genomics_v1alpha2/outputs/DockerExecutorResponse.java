@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DockerExecutorResponse {
     /**
      * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.
@@ -20,10 +20,10 @@ public final class DockerExecutorResponse {
      */
     private final String imageName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DockerExecutorResponse(
-        @OutputCustomType.Parameter("cmd") String cmd,
-        @OutputCustomType.Parameter("imageName") String imageName) {
+        @CustomType.Parameter("cmd") String cmd,
+        @CustomType.Parameter("imageName") String imageName) {
         this.cmd = cmd;
         this.imageName = imageName;
     }

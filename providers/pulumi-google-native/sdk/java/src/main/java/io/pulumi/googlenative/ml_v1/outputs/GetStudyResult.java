@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__StudyConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStudyResult {
     /**
      * Time at which the study was created.
@@ -36,13 +36,13 @@ public final class GetStudyResult {
      */
     private final GoogleCloudMlV1__StudyConfigResponse studyConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStudyResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("inactiveReason") String inactiveReason,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("studyConfig") GoogleCloudMlV1__StudyConfigResponse studyConfig) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("inactiveReason") String inactiveReason,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("studyConfig") GoogleCloudMlV1__StudyConfigResponse studyConfig) {
         this.createTime = createTime;
         this.inactiveReason = inactiveReason;
         this.name = name;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdgeClusterResponse {
     /**
      * Immutable. Self-link of the GCP resource for the Edge Cluster. For example: //edgecontainer.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
@@ -15,8 +15,8 @@ public final class EdgeClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor
-    private EdgeClusterResponse(@OutputCustomType.Parameter("resourceLink") String resourceLink) {
+    @CustomType.Constructor
+    private EdgeClusterResponse(@CustomType.Parameter("resourceLink") String resourceLink) {
         this.resourceLink = resourceLink;
     }
 

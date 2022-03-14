@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetEntryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEntryArgs Empty = new GetEntryArgs();
 
-    @InputImport(name="entryGroupId", required=true)
+    @Import(name="entryGroupId", required=true)
       private final String entryGroupId;
 
     public String getEntryGroupId() {
         return this.entryGroupId;
     }
 
-    @InputImport(name="entryId", required=true)
+    @Import(name="entryId", required=true)
       private final String entryId;
 
     public String getEntryId() {
         return this.entryId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

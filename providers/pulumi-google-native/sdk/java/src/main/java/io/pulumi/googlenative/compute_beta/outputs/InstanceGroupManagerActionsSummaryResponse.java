@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerActionsSummaryResponse {
     /**
      * The total number of instances in the managed instance group that are scheduled to be abandoned. Abandoning an instance removes it from the managed instance group without deleting it.
@@ -75,21 +75,21 @@ public final class InstanceGroupManagerActionsSummaryResponse {
      */
     private final Integer verifying;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerActionsSummaryResponse(
-        @OutputCustomType.Parameter("abandoning") Integer abandoning,
-        @OutputCustomType.Parameter("creating") Integer creating,
-        @OutputCustomType.Parameter("creatingWithoutRetries") Integer creatingWithoutRetries,
-        @OutputCustomType.Parameter("deleting") Integer deleting,
-        @OutputCustomType.Parameter("none") Integer none,
-        @OutputCustomType.Parameter("recreating") Integer recreating,
-        @OutputCustomType.Parameter("refreshing") Integer refreshing,
-        @OutputCustomType.Parameter("restarting") Integer restarting,
-        @OutputCustomType.Parameter("resuming") Integer resuming,
-        @OutputCustomType.Parameter("starting") Integer starting,
-        @OutputCustomType.Parameter("stopping") Integer stopping,
-        @OutputCustomType.Parameter("suspending") Integer suspending,
-        @OutputCustomType.Parameter("verifying") Integer verifying) {
+        @CustomType.Parameter("abandoning") Integer abandoning,
+        @CustomType.Parameter("creating") Integer creating,
+        @CustomType.Parameter("creatingWithoutRetries") Integer creatingWithoutRetries,
+        @CustomType.Parameter("deleting") Integer deleting,
+        @CustomType.Parameter("none") Integer none,
+        @CustomType.Parameter("recreating") Integer recreating,
+        @CustomType.Parameter("refreshing") Integer refreshing,
+        @CustomType.Parameter("restarting") Integer restarting,
+        @CustomType.Parameter("resuming") Integer resuming,
+        @CustomType.Parameter("starting") Integer starting,
+        @CustomType.Parameter("stopping") Integer stopping,
+        @CustomType.Parameter("suspending") Integer suspending,
+        @CustomType.Parameter("verifying") Integer verifying) {
         this.abandoning = abandoning;
         this.creating = creating;
         this.creatingWithoutRetries = creatingWithoutRetries;

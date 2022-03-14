@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueueStatsResponse {
     /**
      * The number of requests that the queue has dispatched but has not received a reply for yet.
@@ -36,13 +36,13 @@ public final class QueueStatsResponse {
      */
     private final String tasksCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueueStatsResponse(
-        @OutputCustomType.Parameter("concurrentDispatchesCount") String concurrentDispatchesCount,
-        @OutputCustomType.Parameter("effectiveExecutionRate") Double effectiveExecutionRate,
-        @OutputCustomType.Parameter("executedLastMinuteCount") String executedLastMinuteCount,
-        @OutputCustomType.Parameter("oldestEstimatedArrivalTime") String oldestEstimatedArrivalTime,
-        @OutputCustomType.Parameter("tasksCount") String tasksCount) {
+        @CustomType.Parameter("concurrentDispatchesCount") String concurrentDispatchesCount,
+        @CustomType.Parameter("effectiveExecutionRate") Double effectiveExecutionRate,
+        @CustomType.Parameter("executedLastMinuteCount") String executedLastMinuteCount,
+        @CustomType.Parameter("oldestEstimatedArrivalTime") String oldestEstimatedArrivalTime,
+        @CustomType.Parameter("tasksCount") String tasksCount) {
         this.concurrentDispatchesCount = concurrentDispatchesCount;
         this.effectiveExecutionRate = effectiveExecutionRate;
         this.executedLastMinuteCount = executedLastMinuteCount;

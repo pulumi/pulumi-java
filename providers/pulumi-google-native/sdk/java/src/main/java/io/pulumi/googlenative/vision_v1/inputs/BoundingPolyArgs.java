@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vision_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vision_v1.inputs.NormalizedVertexArgs;
 import io.pulumi.googlenative.vision_v1.inputs.VertexArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
      * The bounding polygon normalized vertices.
      * 
      */
-    @InputImport(name="normalizedVertices")
+    @Import(name="normalizedVertices")
       private final @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices;
 
     public Output<List<NormalizedVertexArgs>> getNormalizedVertices() {
@@ -35,7 +35,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
      * The bounding polygon vertices.
      * 
      */
-    @InputImport(name="vertices")
+    @Import(name="vertices")
       private final @Nullable Output<List<VertexArgs>> vertices;
 
     public Output<List<VertexArgs>> getVertices() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.ExecStepConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
      * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
      * 
      */
-    @InputImport(name="linuxExecStepConfig")
+    @Import(name="linuxExecStepConfig")
       private final @Nullable Output<ExecStepConfigArgs> linuxExecStepConfig;
 
     public Output<ExecStepConfigArgs> getLinuxExecStepConfig() {
@@ -33,7 +33,7 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
      * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
      * 
      */
-    @InputImport(name="windowsExecStepConfig")
+    @Import(name="windowsExecStepConfig")
       private final @Nullable Output<ExecStepConfigArgs> windowsExecStepConfig;
 
     public Output<ExecStepConfigArgs> getWindowsExecStepConfig() {

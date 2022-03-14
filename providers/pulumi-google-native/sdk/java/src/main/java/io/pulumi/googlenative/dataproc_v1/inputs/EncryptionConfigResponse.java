@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
      * 
      */
-    @InputImport(name="gcePdKmsKeyName", required=true)
+    @Import(name="gcePdKmsKeyName", required=true)
       private final String gcePdKmsKeyName;
 
     public String getGcePdKmsKeyName() {

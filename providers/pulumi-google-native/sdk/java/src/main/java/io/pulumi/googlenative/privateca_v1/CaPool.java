@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CaPoolArgs;
@@ -25,7 +25,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
      * 
      */
-    @OutputExport(name="issuancePolicy", type=IssuancePolicyResponse.class, parameters={})
+    @Export(name="issuancePolicy", type=IssuancePolicyResponse.class, parameters={})
     private Output<IssuancePolicyResponse> issuancePolicy;
 
     /**
@@ -39,7 +39,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Optional. Labels with user-defined metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -53,7 +53,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * The resource name for this CaPool in the format `projects/*{@literal /}locations/*{@literal /}caPools/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -67,7 +67,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
      * 
      */
-    @OutputExport(name="publishingOptions", type=PublishingOptionsResponse.class, parameters={})
+    @Export(name="publishingOptions", type=PublishingOptionsResponse.class, parameters={})
     private Output<PublishingOptionsResponse> publishingOptions;
 
     /**
@@ -81,7 +81,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Immutable. The Tier of this CaPool.
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
     /**

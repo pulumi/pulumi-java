@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveredAnalysisStatus;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveredContinuousAnalysis;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StatusArgs;
@@ -25,7 +25,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * The status of discovery for the resource.
      * 
      */
-    @InputImport(name="analysisStatus")
+    @Import(name="analysisStatus")
       private final @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
 
     public Output<DiscoveredAnalysisStatus> getAnalysisStatus() {
@@ -36,7 +36,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage output only and populated by the API.
      * 
      */
-    @InputImport(name="analysisStatusError")
+    @Import(name="analysisStatusError")
       private final @Nullable Output<StatusArgs> analysisStatusError;
 
     public Output<StatusArgs> getAnalysisStatusError() {
@@ -47,7 +47,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the resource is continuously analyzed.
      * 
      */
-    @InputImport(name="continuousAnalysis")
+    @Import(name="continuousAnalysis")
       private final @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
 
     public Output<DiscoveredContinuousAnalysis> getContinuousAnalysis() {
@@ -58,7 +58,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * The CPE of the resource being scanned.
      * 
      */
-    @InputImport(name="cpe")
+    @Import(name="cpe")
       private final @Nullable Output<String> cpe;
 
     public Output<String> getCpe() {

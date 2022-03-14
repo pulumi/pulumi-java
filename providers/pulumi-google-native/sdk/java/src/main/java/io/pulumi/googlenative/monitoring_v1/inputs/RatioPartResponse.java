@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.AggregationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
      * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
      * 
      */
-    @InputImport(name="aggregation", required=true)
+    @Import(name="aggregation", required=true)
       private final AggregationResponse aggregation;
 
     public AggregationResponse getAggregation() {
@@ -32,7 +32,7 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
      * The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final String filter;
 
     public String getFilter() {

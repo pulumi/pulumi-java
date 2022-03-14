@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsublite_v1.ReservationArgs;
@@ -21,7 +21,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -35,7 +35,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
      * 
      */
-    @OutputExport(name="throughputCapacity", type=String.class, parameters={})
+    @Export(name="throughputCapacity", type=String.class, parameters={})
     private Output<String> throughputCapacity;
 
     /**

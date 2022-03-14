@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed.
      * 
      */
-    @InputImport(name="classification")
+    @Import(name="classification")
       private final @Nullable Output<String> classification;
 
     public Output<String> getClassification() {
@@ -34,7 +34,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * Required - The specific operating system this metadata applies to. See https://cpe.mitre.org/specification/.
      * 
      */
-    @InputImport(name="cpeUri")
+    @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
 
     public Output<String> getCpeUri() {
@@ -45,7 +45,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * The cve that would be resolved by this upgrade.
      * 
      */
-    @InputImport(name="cve")
+    @Import(name="cve")
       private final @Nullable Output<List<String>> cve;
 
     public Output<List<String>> getCve() {
@@ -56,7 +56,7 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * The severity as specified by the upstream operating system.
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<String> severity;
 
     public Output<String> getSeverity() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ExprResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BindingResponse {
     /**
      * This is deprecated and has no effect. Do not use.
@@ -32,12 +32,12 @@ public final class BindingResponse {
      */
     private final String role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BindingResponse(
-        @OutputCustomType.Parameter("bindingId") String bindingId,
-        @OutputCustomType.Parameter("condition") ExprResponse condition,
-        @OutputCustomType.Parameter("members") List<String> members,
-        @OutputCustomType.Parameter("role") String role) {
+        @CustomType.Parameter("bindingId") String bindingId,
+        @CustomType.Parameter("condition") ExprResponse condition,
+        @CustomType.Parameter("members") List<String> members,
+        @CustomType.Parameter("role") String role) {
         this.bindingId = bindingId;
         this.condition = condition;
         this.members = members;

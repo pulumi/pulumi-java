@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IPAllocationPolicyResponse {
     /**
      * Optional. The IP address range used to allocate IP addresses to pods in the cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. Specify `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
@@ -36,13 +36,13 @@ public final class IPAllocationPolicyResponse {
      */
     private final Boolean useIpAliases;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPAllocationPolicyResponse(
-        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
-        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
-        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
-        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
-        @OutputCustomType.Parameter("useIpAliases") Boolean useIpAliases) {
+        @CustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @CustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @CustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @CustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
+        @CustomType.Parameter("useIpAliases") Boolean useIpAliases) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UniformShardingArgs extends io.pulumi.resources.ResourceArgs 
      * Total number of shards. When any physical devices are selected, the number must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
      * 
      */
-    @InputImport(name="numShards", required=true)
+    @Import(name="numShards", required=true)
       private final Output<Integer> numShards;
 
     public Output<Integer> getNumShards() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
      * 
      */
-    @InputImport(name="defaultRolloutTime")
+    @Import(name="defaultRolloutTime")
       private final @Nullable Output<String> defaultRolloutTime;
 
     public Output<String> getDefaultRolloutTime() {
@@ -34,7 +34,7 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.
      * 
      */
-    @InputImport(name="locationRolloutPolicies")
+    @Import(name="locationRolloutPolicies")
       private final @Nullable Output<Map<String,String>> locationRolloutPolicies;
 
     public Output<Map<String,String>> getLocationRolloutPolicies() {

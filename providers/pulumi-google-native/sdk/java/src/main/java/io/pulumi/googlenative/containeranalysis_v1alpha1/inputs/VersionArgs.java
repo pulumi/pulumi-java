@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.VersionKind;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Used to correct mistakes in the version numbering scheme.
      * 
      */
-    @InputImport(name="epoch")
+    @Import(name="epoch")
       private final @Nullable Output<Integer> epoch;
 
     public Output<Integer> getEpoch() {
@@ -36,7 +36,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether this version is vulnerable, when defining the version bounds. For example, if the minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would say it's not
      * 
      */
-    @InputImport(name="inclusive")
+    @Import(name="inclusive")
       private final @Nullable Output<Boolean> inclusive;
 
     public Output<Boolean> getInclusive() {
@@ -47,7 +47,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then the other fields are ignored.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<VersionKind> kind;
 
     public Output<VersionKind> getKind() {
@@ -58,7 +58,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * The main part of the version name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * The iteration of the package build from the above version.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {

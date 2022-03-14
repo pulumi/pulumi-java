@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MultiCloudClusterArgs extends io.pulumi.resources.ResourceArg
      * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
      * 
      */
-    @InputImport(name="resourceLink")
+    @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;
 
     public Output<String> getResourceLink() {

@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ArtifactHashesResponse {
     private final String sha256;
 
-    @OutputCustomType.Constructor
-    private ArtifactHashesResponse(@OutputCustomType.Parameter("sha256") String sha256) {
+    @CustomType.Constructor
+    private ArtifactHashesResponse(@CustomType.Parameter("sha256") String sha256) {
         this.sha256 = sha256;
     }
 

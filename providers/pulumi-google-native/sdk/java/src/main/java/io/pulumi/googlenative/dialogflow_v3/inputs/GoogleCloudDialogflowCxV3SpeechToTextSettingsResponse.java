@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse extends
      * Whether to use speech adaptation for speech recognition.
      * 
      */
-    @InputImport(name="enableSpeechAdaptation", required=true)
+    @Import(name="enableSpeechAdaptation", required=true)
       private final Boolean enableSpeechAdaptation;
 
     public Boolean getEnableSpeechAdaptation() {

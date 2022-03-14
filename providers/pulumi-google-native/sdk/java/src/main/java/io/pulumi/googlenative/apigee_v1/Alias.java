@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.AliasArgs;
@@ -23,7 +23,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.
      * 
      */
-    @OutputExport(name="alias", type=String.class, parameters={})
+    @Export(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
     /**
@@ -37,7 +37,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Chain of certificates under this alias.
      * 
      */
-    @OutputExport(name="certsInfo", type=GoogleCloudApigeeV1CertificateResponse.class, parameters={})
+    @Export(name="certsInfo", type=GoogleCloudApigeeV1CertificateResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1CertificateResponse> certsInfo;
 
     /**
@@ -51,7 +51,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Type of alias.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

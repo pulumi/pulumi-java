@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StandardSchedulerSettingsResponse {
     /**
      * Maximum number of instances to run for this version. Set to zero to disable max_instances configuration.
@@ -31,12 +31,12 @@ public final class StandardSchedulerSettingsResponse {
      */
     private final Double targetThroughputUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardSchedulerSettingsResponse(
-        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
-        @OutputCustomType.Parameter("minInstances") Integer minInstances,
-        @OutputCustomType.Parameter("targetCpuUtilization") Double targetCpuUtilization,
-        @OutputCustomType.Parameter("targetThroughputUtilization") Double targetThroughputUtilization) {
+        @CustomType.Parameter("maxInstances") Integer maxInstances,
+        @CustomType.Parameter("minInstances") Integer minInstances,
+        @CustomType.Parameter("targetCpuUtilization") Double targetCpuUtilization,
+        @CustomType.Parameter("targetThroughputUtilization") Double targetThroughputUtilization) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.targetCpuUtilization = targetCpuUtilization;

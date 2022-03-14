@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
      * Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
      * 
      */
-    @InputImport(name="operationConfigType")
+    @Import(name="operationConfigType")
       private final @Nullable Output<String> operationConfigType;
 
     public Output<String> getOperationConfigType() {
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1OperationGroupArgs extends io.pulumi.resou
      * List of operation configurations for either Apigee API proxies or other remote services that are associated with this API product.
      * 
      */
-    @InputImport(name="operationConfigs", required=true)
+    @Import(name="operationConfigs", required=true)
       private final Output<List<GoogleCloudApigeeV1OperationConfigArgs>> operationConfigs;
 
     public Output<List<GoogleCloudApigeeV1OperationConfigArgs>> getOperationConfigs() {

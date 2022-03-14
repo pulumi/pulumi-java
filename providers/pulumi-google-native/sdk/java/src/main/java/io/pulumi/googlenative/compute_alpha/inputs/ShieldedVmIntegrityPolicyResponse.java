@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ShieldedVmIntegrityPolicyResponse extends io.pulumi.resources
      * Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
      * 
      */
-    @InputImport(name="updateAutoLearnPolicy", required=true)
+    @Import(name="updateAutoLearnPolicy", required=true)
       private final Boolean updateAutoLearnPolicy;
 
     public Boolean getUpdateAutoLearnPolicy() {

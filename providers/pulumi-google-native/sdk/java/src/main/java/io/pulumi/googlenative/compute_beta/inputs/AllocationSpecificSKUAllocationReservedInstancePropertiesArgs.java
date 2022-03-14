@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval;
 import io.pulumi.googlenative.compute_beta.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.compute_beta.inputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs;
@@ -27,7 +27,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * Specifies accelerator type and count.
      * 
      */
-    @InputImport(name="guestAccelerators")
+    @Import(name="guestAccelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
     public Output<List<AcceleratorConfigArgs>> getGuestAccelerators() {
@@ -38,7 +38,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
      * 
      */
-    @InputImport(name="localSsds")
+    @Import(name="localSsds")
       private final @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
 
     public Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> getLocalSsds() {
@@ -49,7 +49,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
      * 
      */
-    @InputImport(name="locationHint")
+    @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
     public Output<String> getLocationHint() {
@@ -60,7 +60,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -71,7 +71,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * Specifies the number of hours after reservation creation where instances using the reservation won't be scheduled for maintenance.
      * 
      */
-    @InputImport(name="maintenanceFreezeDurationHours")
+    @Import(name="maintenanceFreezeDurationHours")
       private final @Nullable Output<Integer> maintenanceFreezeDurationHours;
 
     public Output<Integer> getMaintenanceFreezeDurationHours() {
@@ -82,7 +82,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * For more information about maintenance intervals, see Setting maintenance intervals.
      * 
      */
-    @InputImport(name="maintenanceInterval")
+    @Import(name="maintenanceInterval")
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
 
     public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> getMaintenanceInterval() {
@@ -93,7 +93,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * Minimum cpu platform the reservation.
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {

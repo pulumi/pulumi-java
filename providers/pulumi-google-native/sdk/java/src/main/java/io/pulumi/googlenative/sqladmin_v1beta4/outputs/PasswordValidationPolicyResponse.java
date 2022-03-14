@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PasswordValidationPolicyResponse {
     /**
      * The complexity of the password.
@@ -37,13 +37,13 @@ public final class PasswordValidationPolicyResponse {
      */
     private final Integer reuseInterval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PasswordValidationPolicyResponse(
-        @OutputCustomType.Parameter("complexity") String complexity,
-        @OutputCustomType.Parameter("disallowUsernameSubstring") Boolean disallowUsernameSubstring,
-        @OutputCustomType.Parameter("minLength") Integer minLength,
-        @OutputCustomType.Parameter("passwordChangeInterval") String passwordChangeInterval,
-        @OutputCustomType.Parameter("reuseInterval") Integer reuseInterval) {
+        @CustomType.Parameter("complexity") String complexity,
+        @CustomType.Parameter("disallowUsernameSubstring") Boolean disallowUsernameSubstring,
+        @CustomType.Parameter("minLength") Integer minLength,
+        @CustomType.Parameter("passwordChangeInterval") String passwordChangeInterval,
+        @CustomType.Parameter("reuseInterval") Integer reuseInterval) {
         this.complexity = complexity;
         this.disallowUsernameSubstring = disallowUsernameSubstring;
         this.minLength = minLength;

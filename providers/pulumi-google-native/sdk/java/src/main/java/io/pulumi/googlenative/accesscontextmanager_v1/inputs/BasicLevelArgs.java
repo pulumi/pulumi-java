@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.BasicLevelCombiningFunction;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ConditionArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
      * How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.
      * 
      */
-    @InputImport(name="combiningFunction")
+    @Import(name="combiningFunction")
       private final @Nullable Output<BasicLevelCombiningFunction> combiningFunction;
 
     public Output<BasicLevelCombiningFunction> getCombiningFunction() {
@@ -35,7 +35,7 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
      * A list of requirements for the `AccessLevel` to be granted.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final Output<List<ConditionArgs>> conditions;
 
     public Output<List<ConditionArgs>> getConditions() {

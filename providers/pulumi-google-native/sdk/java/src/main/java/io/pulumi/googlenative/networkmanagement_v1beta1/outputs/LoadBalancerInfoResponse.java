@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.LoadBalancerBackendResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerInfoResponse {
     /**
      * Type of load balancer's backend configuration.
@@ -37,13 +37,13 @@ public final class LoadBalancerInfoResponse {
      */
     private final String loadBalancerType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerInfoResponse(
-        @OutputCustomType.Parameter("backendType") String backendType,
-        @OutputCustomType.Parameter("backendUri") String backendUri,
-        @OutputCustomType.Parameter("backends") List<LoadBalancerBackendResponse> backends,
-        @OutputCustomType.Parameter("healthCheckUri") String healthCheckUri,
-        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType) {
+        @CustomType.Parameter("backendType") String backendType,
+        @CustomType.Parameter("backendUri") String backendUri,
+        @CustomType.Parameter("backends") List<LoadBalancerBackendResponse> backends,
+        @CustomType.Parameter("healthCheckUri") String healthCheckUri,
+        @CustomType.Parameter("loadBalancerType") String loadBalancerType) {
         this.backendType = backendType;
         this.backendUri = backendUri;
         this.backends = backends;

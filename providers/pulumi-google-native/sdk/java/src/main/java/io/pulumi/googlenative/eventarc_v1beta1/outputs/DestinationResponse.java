@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.CloudRunServiceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DestinationResponse {
     /**
      * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
@@ -15,8 +15,8 @@ public final class DestinationResponse {
      */
     private final CloudRunServiceResponse cloudRunService;
 
-    @OutputCustomType.Constructor
-    private DestinationResponse(@OutputCustomType.Parameter("cloudRunService") CloudRunServiceResponse cloudRunService) {
+    @CustomType.Constructor
+    private DestinationResponse(@CustomType.Parameter("cloudRunService") CloudRunServiceResponse cloudRunService) {
         this.cloudRunService = cloudRunService;
     }
 

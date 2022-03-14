@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.UrlMapTestHeaderArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * The weight to use for the supplied host and path when using advanced routing rules that involve traffic splitting.
      * 
      */
-    @InputImport(name="backendServiceWeight")
+    @Import(name="backendServiceWeight")
       private final @Nullable Output<Integer> backendServiceWeight;
 
     public Output<Integer> getBackendServiceWeight() {
@@ -36,7 +36,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * Description of this test case.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer's redirect response. If urlRedirect specifies https_redirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies strip_query, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.
      * 
      */
-    @InputImport(name="expectedOutputUrl")
+    @Import(name="expectedOutputUrl")
       private final @Nullable Output<String> expectedOutputUrl;
 
     public Output<String> getExpectedOutputUrl() {
@@ -58,7 +58,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response. expectedRedirectResponseCode cannot be set when service is set.
      * 
      */
-    @InputImport(name="expectedRedirectResponseCode")
+    @Import(name="expectedRedirectResponseCode")
       private final @Nullable Output<Integer> expectedRedirectResponseCode;
 
     public Output<Integer> getExpectedRedirectResponseCode() {
@@ -69,7 +69,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP headers for this request. If headers contains a host header, then host must also match the header value.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<UrlMapTestHeaderArgs>> headers;
 
     public Output<List<UrlMapTestHeaderArgs>> getHeaders() {
@@ -80,7 +80,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * Host portion of the URL. If headers contains a host header, then host must also match the header value.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -91,7 +91,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * Path portion of the URL.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -102,7 +102,7 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
      * Expected BackendService or BackendBucket resource the given URL should be mapped to. The service field cannot be set if expectedRedirectResponseCode is set.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

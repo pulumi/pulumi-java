@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1.outputs.MonitoringComponentConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringConfigResponse {
     /**
      * Monitoring components configuration
@@ -15,8 +15,8 @@ public final class MonitoringConfigResponse {
      */
     private final MonitoringComponentConfigResponse componentConfig;
 
-    @OutputCustomType.Constructor
-    private MonitoringConfigResponse(@OutputCustomType.Parameter("componentConfig") MonitoringComponentConfigResponse componentConfig) {
+    @CustomType.Constructor
+    private MonitoringConfigResponse(@CustomType.Parameter("componentConfig") MonitoringComponentConfigResponse componentConfig) {
         this.componentConfig = componentConfig;
     }
 

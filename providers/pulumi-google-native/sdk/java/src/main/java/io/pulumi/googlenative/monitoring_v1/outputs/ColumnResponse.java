@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.WidgetResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ColumnResponse {
     /**
      * The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
@@ -22,10 +22,10 @@ public final class ColumnResponse {
      */
     private final List<WidgetResponse> widgets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ColumnResponse(
-        @OutputCustomType.Parameter("weight") String weight,
-        @OutputCustomType.Parameter("widgets") List<WidgetResponse> widgets) {
+        @CustomType.Parameter("weight") String weight,
+        @CustomType.Parameter("widgets") List<WidgetResponse> widgets) {
         this.weight = weight;
         this.widgets = widgets;
     }

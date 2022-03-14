@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HttpFaultAbortResponse extends io.pulumi.resources.InvokeArgs
      * The HTTP status code used to abort the request. The value must be from 200 to 599 inclusive. For gRPC protocol, the gRPC status code is mapped to HTTP status code according to this mapping table. HTTP status 200 is mapped to gRPC status UNKNOWN. Injecting an OK status is currently not supported by Traffic Director.
      * 
      */
-    @InputImport(name="httpStatus", required=true)
+    @Import(name="httpStatus", required=true)
       private final Integer httpStatus;
 
     public Integer getHttpStatus() {
@@ -32,7 +32,7 @@ public final class HttpFaultAbortResponse extends io.pulumi.resources.InvokeArgs
      * The percentage of traffic for connections, operations, or requests that is aborted as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
      * 
      */
-    @InputImport(name="percentage", required=true)
+    @Import(name="percentage", required=true)
       private final Double percentage;
 
     public Double getPercentage() {

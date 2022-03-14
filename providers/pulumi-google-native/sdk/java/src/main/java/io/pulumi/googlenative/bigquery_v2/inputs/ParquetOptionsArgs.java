@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] Indicates whether to use schema inference specifically for Parquet LIST logical type.
      * 
      */
-    @InputImport(name="enableListInference")
+    @Import(name="enableListInference")
       private final @Nullable Output<Boolean> enableListInference;
 
     public Output<Boolean> getEnableListInference() {
@@ -29,7 +29,7 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default.
      * 
      */
-    @InputImport(name="enumAsString")
+    @Import(name="enumAsString")
       private final @Nullable Output<Boolean> enumAsString;
 
     public Output<Boolean> getEnumAsString() {

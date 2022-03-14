@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RetryResponse {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetryResponse() {
     }
 

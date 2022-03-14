@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretEnvVarResponse {
     /**
      * Name of the environment variable.
@@ -30,12 +30,12 @@ public final class SecretEnvVarResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretEnvVarResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("secret") String secret,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("secret") String secret,
+        @CustomType.Parameter("version") String version) {
         this.key = key;
         this.project = project;
         this.secret = secret;

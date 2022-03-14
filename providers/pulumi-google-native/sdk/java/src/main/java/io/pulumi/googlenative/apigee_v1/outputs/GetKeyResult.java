@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyResult {
     /**
      * List of API products for which the credential can be used. **Note**: Do not specify the list of API products when creating a consumer key and secret for a developer app. Instead, use the UpdateDeveloperAppKey API to make the association after the consumer key and secret are created.
@@ -58,17 +58,17 @@ public final class GetKeyResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyResult(
-        @OutputCustomType.Parameter("apiProducts") List<Object> apiProducts,
-        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        @OutputCustomType.Parameter("consumerKey") String consumerKey,
-        @OutputCustomType.Parameter("consumerSecret") String consumerSecret,
-        @OutputCustomType.Parameter("expiresAt") String expiresAt,
-        @OutputCustomType.Parameter("expiresInSeconds") String expiresInSeconds,
-        @OutputCustomType.Parameter("issuedAt") String issuedAt,
-        @OutputCustomType.Parameter("scopes") List<String> scopes,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("apiProducts") List<Object> apiProducts,
+        @CustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @CustomType.Parameter("consumerKey") String consumerKey,
+        @CustomType.Parameter("consumerSecret") String consumerSecret,
+        @CustomType.Parameter("expiresAt") String expiresAt,
+        @CustomType.Parameter("expiresInSeconds") String expiresInSeconds,
+        @CustomType.Parameter("issuedAt") String issuedAt,
+        @CustomType.Parameter("scopes") List<String> scopes,
+        @CustomType.Parameter("status") String status) {
         this.apiProducts = apiProducts;
         this.attributes = attributes;
         this.consumerKey = consumerKey;

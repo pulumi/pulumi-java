@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1beta1.inputs.PostalAddressResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
      * Email address of the contact.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -32,7 +32,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
      * Fax number of the contact in international format. For example, `"+1-800-555-0123"`.
      * 
      */
-    @InputImport(name="faxNumber", required=true)
+    @Import(name="faxNumber", required=true)
       private final String faxNumber;
 
     public String getFaxNumber() {
@@ -43,7 +43,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
      * Phone number of the contact in international format. For example, `"+1-800-555-0123"`.
      * 
      */
-    @InputImport(name="phoneNumber", required=true)
+    @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
 
     public String getPhoneNumber() {
@@ -54,7 +54,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
      * Postal address of the contact.
      * 
      */
-    @InputImport(name="postalAddress", required=true)
+    @Import(name="postalAddress", required=true)
       private final PostalAddressResponse postalAddress;
 
     public PostalAddressResponse getPostalAddress() {

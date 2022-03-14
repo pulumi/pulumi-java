@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.PubSubResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NotificationConfigResponse {
     /**
      * Notification config for Pub/Sub.
@@ -15,8 +15,8 @@ public final class NotificationConfigResponse {
      */
     private final PubSubResponse pubsub;
 
-    @OutputCustomType.Constructor
-    private NotificationConfigResponse(@OutputCustomType.Parameter("pubsub") PubSubResponse pubsub) {
+    @CustomType.Constructor
+    private NotificationConfigResponse(@CustomType.Parameter("pubsub") PubSubResponse pubsub) {
         this.pubsub = pubsub;
     }
 

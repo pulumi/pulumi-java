@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.AptSettingsResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.ExecStepResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.GooSettingsResponse;
@@ -27,7 +27,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Apt update settings. Use this setting to override the default `apt` patch rules.
      * 
      */
-    @InputImport(name="apt", required=true)
+    @Import(name="apt", required=true)
       private final AptSettingsResponse apt;
 
     public AptSettingsResponse getApt() {
@@ -38,7 +38,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Goo update settings. Use this setting to override the default `goo` patch rules.
      * 
      */
-    @InputImport(name="goo", required=true)
+    @Import(name="goo", required=true)
       private final GooSettingsResponse goo;
 
     public GooSettingsResponse getGoo() {
@@ -49,7 +49,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Allows the patch job to run on Managed instance groups (MIGs).
      * 
      */
-    @InputImport(name="migInstancesAllowed", required=true)
+    @Import(name="migInstancesAllowed", required=true)
       private final Boolean migInstancesAllowed;
 
     public Boolean getMigInstancesAllowed() {
@@ -60,7 +60,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The `ExecStep` to run after the patch update.
      * 
      */
-    @InputImport(name="postStep", required=true)
+    @Import(name="postStep", required=true)
       private final ExecStepResponse postStep;
 
     public ExecStepResponse getPostStep() {
@@ -71,7 +71,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The `ExecStep` to run before the patch update.
      * 
      */
-    @InputImport(name="preStep", required=true)
+    @Import(name="preStep", required=true)
       private final ExecStepResponse preStep;
 
     public ExecStepResponse getPreStep() {
@@ -82,7 +82,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Post-patch reboot settings.
      * 
      */
-    @InputImport(name="rebootConfig", required=true)
+    @Import(name="rebootConfig", required=true)
       private final String rebootConfig;
 
     public String getRebootConfig() {
@@ -93,7 +93,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Windows update settings. Use this override the default windows patch rules.
      * 
      */
-    @InputImport(name="windowsUpdate", required=true)
+    @Import(name="windowsUpdate", required=true)
       private final WindowsUpdateSettingsResponse windowsUpdate;
 
     public WindowsUpdateSettingsResponse getWindowsUpdate() {
@@ -104,7 +104,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Yum update settings. Use this setting to override the default `yum` patch rules.
      * 
      */
-    @InputImport(name="yum", required=true)
+    @Import(name="yum", required=true)
       private final YumSettingsResponse yum;
 
     public YumSettingsResponse getYum() {
@@ -115,7 +115,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Zypper update settings. Use this setting to override the default `zypper` patch rules.
      * 
      */
-    @InputImport(name="zypper", required=true)
+    @Import(name="zypper", required=true)
       private final ZypperSettingsResponse zypper;
 
     public ZypperSettingsResponse getZypper() {

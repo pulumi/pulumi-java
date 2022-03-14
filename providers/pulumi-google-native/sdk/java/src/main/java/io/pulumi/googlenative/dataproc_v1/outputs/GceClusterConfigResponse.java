@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.ConfidentialInstanceConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.NodeGroupAffinityResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.ReservationAffinityResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GceClusterConfigResponse {
     /**
      * Optional. Confidential Instance Config for clusters using Confidential VMs (https://cloud.google.com/compute/confidential-vm/docs).
@@ -82,21 +82,21 @@ public final class GceClusterConfigResponse {
      */
     private final String zoneUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GceClusterConfigResponse(
-        @OutputCustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
-        @OutputCustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("nodeGroupAffinity") NodeGroupAffinityResponse nodeGroupAffinity,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("serviceAccountScopes") List<String> serviceAccountScopes,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("subnetworkUri") String subnetworkUri,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("zoneUri") String zoneUri) {
+        @CustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
+        @CustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("nodeGroupAffinity") NodeGroupAffinityResponse nodeGroupAffinity,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("serviceAccountScopes") List<String> serviceAccountScopes,
+        @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("subnetworkUri") String subnetworkUri,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("zoneUri") String zoneUri) {
         this.confidentialInstanceConfig = confidentialInstanceConfig;
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;

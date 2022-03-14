@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.OptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * The collection that identifies this resource within its service.
      * 
      */
-    @InputImport(name="collection", required=true)
+    @Import(name="collection", required=true)
       private final String collection;
 
     public String getCollection() {
@@ -32,7 +32,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * The options to apply to this resource-level override
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final OptionsResponse options;
 
     public OptionsResponse getOptions() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
     /**
      * Determines whether CPU should be throttled or not outside of requests.
@@ -22,10 +22,10 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
      */
     private final Map<String,String> limits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2ResourceRequirementsResponse(
-        @OutputCustomType.Parameter("cpuIdle") Boolean cpuIdle,
-        @OutputCustomType.Parameter("limits") Map<String,String> limits) {
+        @CustomType.Parameter("cpuIdle") Boolean cpuIdle,
+        @CustomType.Parameter("limits") Map<String,String> limits) {
         this.cpuIdle = cpuIdle;
         this.limits = limits;
     }

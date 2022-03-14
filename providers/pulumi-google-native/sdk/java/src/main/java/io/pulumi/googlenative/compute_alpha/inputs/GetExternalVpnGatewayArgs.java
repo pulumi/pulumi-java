@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetExternalVpnGatewayArgs extends io.pulumi.resources.InvokeA
 
     public static final GetExternalVpnGatewayArgs Empty = new GetExternalVpnGatewayArgs();
 
-    @InputImport(name="externalVpnGateway", required=true)
+    @Import(name="externalVpnGateway", required=true)
       private final String externalVpnGateway;
 
     public String getExternalVpnGateway() {
         return this.externalVpnGateway;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

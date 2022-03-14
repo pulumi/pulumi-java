@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.SourceCrowdingConfigResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.SourceResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.SourceScoringConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceConfigResponse {
     /**
      * The crowding configuration for the source.
@@ -27,11 +27,11 @@ public final class SourceConfigResponse {
      */
     private final SourceResponse source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceConfigResponse(
-        @OutputCustomType.Parameter("crowdingConfig") SourceCrowdingConfigResponse crowdingConfig,
-        @OutputCustomType.Parameter("scoringConfig") SourceScoringConfigResponse scoringConfig,
-        @OutputCustomType.Parameter("source") SourceResponse source) {
+        @CustomType.Parameter("crowdingConfig") SourceCrowdingConfigResponse crowdingConfig,
+        @CustomType.Parameter("scoringConfig") SourceScoringConfigResponse scoringConfig,
+        @CustomType.Parameter("source") SourceResponse source) {
         this.crowdingConfig = crowdingConfig;
         this.scoringConfig = scoringConfig;
         this.source = source;

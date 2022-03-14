@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
      * The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
      * 
      */
-    @InputImport(name="lowerBound", required=true)
+    @Import(name="lowerBound", required=true)
       private final Double lowerBound;
 
     public Double getLowerBound() {
@@ -31,7 +31,7 @@ public final class GaugeViewResponse extends io.pulumi.resources.InvokeArgs {
      * The upper bound for this gauge chart. The value of the chart should always be less than or equal to this.
      * 
      */
-    @InputImport(name="upperBound", required=true)
+    @Import(name="upperBound", required=true)
       private final Double upperBound;
 
     public Double getUpperBound() {

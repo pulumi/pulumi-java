@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.appengine_v1beta.outputs.CertificateRawDataResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.ManagedCertificateResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAuthorizedCertificateResult {
     /**
      * The SSL certificate serving the AuthorizedCertificate resource. This must be obtained independently from a certificate authority.
@@ -54,16 +54,16 @@ public final class GetAuthorizedCertificateResult {
      */
     private final List<String> visibleDomainMappings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAuthorizedCertificateResult(
-        @OutputCustomType.Parameter("certificateRawData") CertificateRawDataResponse certificateRawData,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("domainMappingsCount") Integer domainMappingsCount,
-        @OutputCustomType.Parameter("domainNames") List<String> domainNames,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("managedCertificate") ManagedCertificateResponse managedCertificate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("visibleDomainMappings") List<String> visibleDomainMappings) {
+        @CustomType.Parameter("certificateRawData") CertificateRawDataResponse certificateRawData,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("domainMappingsCount") Integer domainMappingsCount,
+        @CustomType.Parameter("domainNames") List<String> domainNames,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("managedCertificate") ManagedCertificateResponse managedCertificate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("visibleDomainMappings") List<String> visibleDomainMappings) {
         this.certificateRawData = certificateRawData;
         this.displayName = displayName;
         this.domainMappingsCount = domainMappingsCount;

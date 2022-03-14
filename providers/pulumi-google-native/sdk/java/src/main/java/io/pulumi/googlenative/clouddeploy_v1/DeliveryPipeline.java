@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.DeliveryPipelineArgs;
@@ -25,7 +25,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
@@ -39,7 +39,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * Information around the state of the Delivery Pipeline.
      * 
      */
-    @OutputExport(name="condition", type=PipelineConditionResponse.class, parameters={})
+    @Export(name="condition", type=PipelineConditionResponse.class, parameters={})
     private Output<PipelineConditionResponse> condition;
 
     /**
@@ -53,7 +53,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * Time at which the pipeline was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -67,7 +67,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * Description of the `DeliveryPipeline`. Max length is 255 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -81,7 +81,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -95,7 +95,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -109,7 +109,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
      * 
      */
-    @OutputExport(name="serialPipeline", type=SerialPipelineResponse.class, parameters={})
+    @Export(name="serialPipeline", type=SerialPipelineResponse.class, parameters={})
     private Output<SerialPipelineResponse> serialPipeline;
 
     /**
@@ -137,7 +137,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * Unique identifier of the `DeliveryPipeline`.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
@@ -151,7 +151,7 @@ public class DeliveryPipeline extends io.pulumi.resources.CustomResource {
      * Most recent time at which the pipeline was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

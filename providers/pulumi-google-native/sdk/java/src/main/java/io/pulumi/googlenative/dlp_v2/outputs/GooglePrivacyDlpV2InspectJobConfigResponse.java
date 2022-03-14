@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ActionResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StorageConfigResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2InspectJobConfigResponse {
     /**
      * Actions to execute at the completion of the job.
@@ -34,12 +34,12 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
      */
     private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2InspectJobConfigResponse(
-        @OutputCustomType.Parameter("actions") List<GooglePrivacyDlpV2ActionResponse> actions,
-        @OutputCustomType.Parameter("inspectConfig") GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
-        @OutputCustomType.Parameter("inspectTemplateName") String inspectTemplateName,
-        @OutputCustomType.Parameter("storageConfig") GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
+        @CustomType.Parameter("actions") List<GooglePrivacyDlpV2ActionResponse> actions,
+        @CustomType.Parameter("inspectConfig") GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
+        @CustomType.Parameter("inspectTemplateName") String inspectTemplateName,
+        @CustomType.Parameter("storageConfig") GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
         this.actions = actions;
         this.inspectConfig = inspectConfig;
         this.inspectTemplateName = inspectTemplateName;

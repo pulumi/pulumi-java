@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAttributeDefinitionResult {
     /**
      * Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
@@ -41,14 +41,14 @@ public final class GetAttributeDefinitionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAttributeDefinitionResult(
-        @OutputCustomType.Parameter("allowedValues") List<String> allowedValues,
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("consentDefaultValues") List<String> consentDefaultValues,
-        @OutputCustomType.Parameter("dataMappingDefaultValue") String dataMappingDefaultValue,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("allowedValues") List<String> allowedValues,
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("consentDefaultValues") List<String> consentDefaultValues,
+        @CustomType.Parameter("dataMappingDefaultValue") String dataMappingDefaultValue,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name) {
         this.allowedValues = allowedValues;
         this.category = category;
         this.consentDefaultValues = consentDefaultValues;

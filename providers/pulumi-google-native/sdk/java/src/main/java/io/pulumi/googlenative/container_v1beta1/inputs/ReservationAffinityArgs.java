@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.enums.ReservationAffinityConsumeReservationType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Corresponds to the type of reservation consumption.
      * 
      */
-    @InputImport(name="consumeReservationType")
+    @Import(name="consumeReservationType")
       private final @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
 
     public Output<ReservationAffinityConsumeReservationType> getConsumeReservationType() {
@@ -35,7 +35,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify "googleapis.com/reservation-name" as the key and specify the name of your reservation as its value.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -46,7 +46,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Corresponds to the label value(s) of reservation resource(s).
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

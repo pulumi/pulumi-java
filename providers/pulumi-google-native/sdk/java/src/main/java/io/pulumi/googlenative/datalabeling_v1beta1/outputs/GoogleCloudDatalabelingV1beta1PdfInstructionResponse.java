@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
     /**
      * PDF file for the instruction. Only gcs path is allowed.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
      */
     private final String gcsFileUri;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatalabelingV1beta1PdfInstructionResponse(@OutputCustomType.Parameter("gcsFileUri") String gcsFileUri) {
+    @CustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1PdfInstructionResponse(@CustomType.Parameter("gcsFileUri") String gcsFileUri) {
         this.gcsFileUri = gcsFileUri;
     }
 

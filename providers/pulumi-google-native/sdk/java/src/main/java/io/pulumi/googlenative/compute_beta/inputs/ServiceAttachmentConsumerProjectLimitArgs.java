@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
      * The value of the limit to set.
      * 
      */
-    @InputImport(name="connectionLimit")
+    @Import(name="connectionLimit")
       private final @Nullable Output<Integer> connectionLimit;
 
     public Output<Integer> getConnectionLimit() {
@@ -30,7 +30,7 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
      * The project id or number for the project to set the limit for.
      * 
      */
-    @InputImport(name="projectIdOrNum")
+    @Import(name="projectIdOrNum")
       private final @Nullable Output<String> projectIdOrNum;
 
     public Output<String> getProjectIdOrNum() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IssuingOptionsResponse {
     /**
      * When true, includes a URL to the issuing CA certificate in the "authority information access" X.509 extension.
@@ -20,10 +20,10 @@ public final class IssuingOptionsResponse {
      */
     private final Boolean includeCrlAccessUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IssuingOptionsResponse(
-        @OutputCustomType.Parameter("includeCaCertUrl") Boolean includeCaCertUrl,
-        @OutputCustomType.Parameter("includeCrlAccessUrl") Boolean includeCrlAccessUrl) {
+        @CustomType.Parameter("includeCaCertUrl") Boolean includeCaCertUrl,
+        @CustomType.Parameter("includeCrlAccessUrl") Boolean includeCrlAccessUrl) {
         this.includeCaCertUrl = includeCaCertUrl;
         this.includeCrlAccessUrl = includeCrlAccessUrl;
     }

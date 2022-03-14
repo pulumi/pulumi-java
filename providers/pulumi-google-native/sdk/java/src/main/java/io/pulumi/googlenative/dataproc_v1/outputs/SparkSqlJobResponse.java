@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.LoggingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.QueryListResponse;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SparkSqlJobResponse {
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
@@ -44,14 +44,14 @@ public final class SparkSqlJobResponse {
      */
     private final Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SparkSqlJobResponse(
-        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
-        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
-        @OutputCustomType.Parameter("properties") Map<String,String> properties,
-        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
-        @OutputCustomType.Parameter("queryList") QueryListResponse queryList,
-        @OutputCustomType.Parameter("scriptVariables") Map<String,String> scriptVariables) {
+        @CustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @CustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @CustomType.Parameter("properties") Map<String,String> properties,
+        @CustomType.Parameter("queryFileUri") String queryFileUri,
+        @CustomType.Parameter("queryList") QueryListResponse queryList,
+        @CustomType.Parameter("scriptVariables") Map<String,String> scriptVariables) {
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;
         this.properties = properties;

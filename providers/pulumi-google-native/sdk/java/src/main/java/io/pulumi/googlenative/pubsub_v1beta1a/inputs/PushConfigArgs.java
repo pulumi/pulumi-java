@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1beta1a.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
      * 
      */
-    @InputImport(name="pushEndpoint")
+    @Import(name="pushEndpoint")
       private final @Nullable Output<String> pushEndpoint;
 
     public Output<String> getPushEndpoint() {

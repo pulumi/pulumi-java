@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketCorsItemResponse {
     /**
      * The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
@@ -32,12 +32,12 @@ public final class BucketCorsItemResponse {
      */
     private final List<String> responseHeader;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketCorsItemResponse(
-        @OutputCustomType.Parameter("maxAgeSeconds") Integer maxAgeSeconds,
-        @OutputCustomType.Parameter("method") List<String> method,
-        @OutputCustomType.Parameter("origin") List<String> origin,
-        @OutputCustomType.Parameter("responseHeader") List<String> responseHeader) {
+        @CustomType.Parameter("maxAgeSeconds") Integer maxAgeSeconds,
+        @CustomType.Parameter("method") List<String> method,
+        @CustomType.Parameter("origin") List<String> origin,
+        @CustomType.Parameter("responseHeader") List<String> responseHeader) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.method = method;
         this.origin = origin;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
      * A data payload consumed by the worker to execute the task.
      * 
      */
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable Output<String> payload;
 
     public Output<String> getPayload() {
@@ -33,7 +33,7 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
      * The tasks's tag. The tag is less than 500 characters. SDK compatibility: Although the SDK allows tags to be either string or [bytes](https://cloud.google.com/appengine/docs/standard/java/javadoc/com/google/appengine/api/taskqueue/TaskOptions.html#tag-byte:A-), only UTF-8 encoded tags can be used in Cloud Tasks. If a tag isn't UTF-8 encoded, the tag will be empty when the task is returned by Cloud Tasks.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {

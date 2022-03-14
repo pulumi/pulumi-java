@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1beta1.EntryArgs;
@@ -28,7 +28,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification for a group of BigQuery tables with name pattern `[prefix]YYYYMMDD`. Context: https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
      * 
      */
-    @OutputExport(name="bigqueryDateShardedSpec", type=GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse.class, parameters={})
+    @Export(name="bigqueryDateShardedSpec", type=GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse> bigqueryDateShardedSpec;
 
     /**
@@ -42,7 +42,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification that applies to a BigQuery table. This is only valid on entries of type `TABLE`.
      * 
      */
-    @OutputExport(name="bigqueryTableSpec", type=GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse.class, parameters={})
+    @Export(name="bigqueryTableSpec", type=GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse> bigqueryTableSpec;
 
     /**
@@ -56,7 +56,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Entry description, which can consist of several sentences or paragraphs that describe entry contents. Default value is an empty string.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -70,7 +70,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Display information such as title and description. A short name to identify the entry, for example, "Analytics Data - Jan 2011". Default value is an empty string.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -84,7 +84,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
      * 
      */
-    @OutputExport(name="gcsFilesetSpec", type=GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse.class, parameters={})
+    @Export(name="gcsFilesetSpec", type=GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse> gcsFilesetSpec;
 
     /**
@@ -98,7 +98,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
-    @OutputExport(name="integratedSystem", type=String.class, parameters={})
+    @Export(name="integratedSystem", type=String.class, parameters={})
     private Output<String> integratedSystem;
 
     /**
@@ -112,7 +112,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * The resource this metadata entry refers to. For Google Cloud Platform resources, `linked_resource` is the [full name of the resource](https://cloud.google.com/apis/design/resource_names#full_resource_name). For example, the `linked_resource` for a table resource from BigQuery is: * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableId Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty string.
      * 
      */
-    @OutputExport(name="linkedResource", type=String.class, parameters={})
+    @Export(name="linkedResource", type=String.class, parameters={})
     private Output<String> linkedResource;
 
     /**
@@ -126,7 +126,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * The Data Catalog resource name of the entry in URL format. Example: * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note that this Entry and its child resources may not actually be stored in the location in this name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -140,7 +140,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Schema of the entry. An entry might not have any schema attached to it.
      * 
      */
-    @OutputExport(name="schema", type=GoogleCloudDatacatalogV1beta1SchemaResponse.class, parameters={})
+    @Export(name="schema", type=GoogleCloudDatacatalogV1beta1SchemaResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1SchemaResponse> schema;
 
     /**
@@ -154,7 +154,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Timestamps about the underlying resource, not about this Data Catalog entry. Output only when Entry is of type in the EntryType enum. For entries with user_specified_type, this field is optional and defaults to an empty timestamp.
      * 
      */
-    @OutputExport(name="sourceSystemTimestamps", type=GoogleCloudDatacatalogV1beta1SystemTimestampsResponse.class, parameters={})
+    @Export(name="sourceSystemTimestamps", type=GoogleCloudDatacatalogV1beta1SystemTimestampsResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> sourceSystemTimestamps;
 
     /**
@@ -168,7 +168,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * The type of the entry. Only used for Entries with types in the EntryType enum.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -182,7 +182,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Statistics on the usage level of the resource.
      * 
      */
-    @OutputExport(name="usageSignal", type=GoogleCloudDatacatalogV1beta1UsageSignalResponse.class, parameters={})
+    @Export(name="usageSignal", type=GoogleCloudDatacatalogV1beta1UsageSignalResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1UsageSignalResponse> usageSignal;
 
     /**
@@ -196,7 +196,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * This field indicates the entry's source system that Data Catalog does not integrate with. `user_specified_system` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    @OutputExport(name="userSpecifiedSystem", type=String.class, parameters={})
+    @Export(name="userSpecifiedSystem", type=String.class, parameters={})
     private Output<String> userSpecifiedSystem;
 
     /**
@@ -210,7 +210,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Entry type if it does not fit any of the input-allowed values listed in `EntryType` enum above. When creating an entry, users should check the enum values first, if nothing matches the entry to be created, then provide a custom value, for example "my_special_type". `user_specified_type` strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use `user_specified_type`.
      * 
      */
-    @OutputExport(name="userSpecifiedType", type=String.class, parameters={})
+    @Export(name="userSpecifiedType", type=String.class, parameters={})
     private Output<String> userSpecifiedType;
 
     /**

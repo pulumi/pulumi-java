@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.composer_v1beta1.outputs.SchedulerResourceResponse;
 import io.pulumi.googlenative.composer_v1beta1.outputs.WebServerResourceResponse;
 import io.pulumi.googlenative.composer_v1beta1.outputs.WorkerResourceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadsConfigResponse {
     /**
      * Optional. Resources used by Airflow schedulers.
@@ -27,11 +27,11 @@ public final class WorkloadsConfigResponse {
      */
     private final WorkerResourceResponse worker;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkloadsConfigResponse(
-        @OutputCustomType.Parameter("scheduler") SchedulerResourceResponse scheduler,
-        @OutputCustomType.Parameter("webServer") WebServerResourceResponse webServer,
-        @OutputCustomType.Parameter("worker") WorkerResourceResponse worker) {
+        @CustomType.Parameter("scheduler") SchedulerResourceResponse scheduler,
+        @CustomType.Parameter("webServer") WebServerResourceResponse webServer,
+        @CustomType.Parameter("worker") WorkerResourceResponse worker) {
         this.scheduler = scheduler;
         this.webServer = webServer;
         this.worker = worker;

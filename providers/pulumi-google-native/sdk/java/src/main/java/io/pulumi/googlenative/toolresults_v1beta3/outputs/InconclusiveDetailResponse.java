@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InconclusiveDetailResponse {
     /**
      * If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.
@@ -25,11 +25,11 @@ public final class InconclusiveDetailResponse {
      */
     private final Boolean infrastructureFailure;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InconclusiveDetailResponse(
-        @OutputCustomType.Parameter("abortedByUser") Boolean abortedByUser,
-        @OutputCustomType.Parameter("hasErrorLogs") Boolean hasErrorLogs,
-        @OutputCustomType.Parameter("infrastructureFailure") Boolean infrastructureFailure) {
+        @CustomType.Parameter("abortedByUser") Boolean abortedByUser,
+        @CustomType.Parameter("hasErrorLogs") Boolean hasErrorLogs,
+        @CustomType.Parameter("infrastructureFailure") Boolean infrastructureFailure) {
         this.abortedByUser = abortedByUser;
         this.hasErrorLogs = hasErrorLogs;
         this.infrastructureFailure = infrastructureFailure;

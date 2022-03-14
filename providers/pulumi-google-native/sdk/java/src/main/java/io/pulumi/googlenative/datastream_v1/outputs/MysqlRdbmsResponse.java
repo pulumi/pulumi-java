@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlDatabaseResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MysqlRdbmsResponse {
     /**
      * Mysql databases on the server
@@ -16,8 +16,8 @@ public final class MysqlRdbmsResponse {
      */
     private final List<MysqlDatabaseResponse> mysqlDatabases;
 
-    @OutputCustomType.Constructor
-    private MysqlRdbmsResponse(@OutputCustomType.Parameter("mysqlDatabases") List<MysqlDatabaseResponse> mysqlDatabases) {
+    @CustomType.Constructor
+    private MysqlRdbmsResponse(@CustomType.Parameter("mysqlDatabases") List<MysqlDatabaseResponse> mysqlDatabases) {
         this.mysqlDatabases = mysqlDatabases;
     }
 

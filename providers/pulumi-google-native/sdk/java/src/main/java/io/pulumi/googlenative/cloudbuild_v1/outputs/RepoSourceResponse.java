@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RepoSourceResponse {
     /**
      * Regex matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
@@ -52,16 +52,16 @@ public final class RepoSourceResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepoSourceResponse(
-        @OutputCustomType.Parameter("branchName") String branchName,
-        @OutputCustomType.Parameter("commitSha") String commitSha,
-        @OutputCustomType.Parameter("dir") String dir,
-        @OutputCustomType.Parameter("invertRegex") Boolean invertRegex,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("repoName") String repoName,
-        @OutputCustomType.Parameter("substitutions") Map<String,String> substitutions,
-        @OutputCustomType.Parameter("tagName") String tagName) {
+        @CustomType.Parameter("branchName") String branchName,
+        @CustomType.Parameter("commitSha") String commitSha,
+        @CustomType.Parameter("dir") String dir,
+        @CustomType.Parameter("invertRegex") Boolean invertRegex,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("repoName") String repoName,
+        @CustomType.Parameter("substitutions") Map<String,String> substitutions,
+        @CustomType.Parameter("tagName") String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.dir = dir;

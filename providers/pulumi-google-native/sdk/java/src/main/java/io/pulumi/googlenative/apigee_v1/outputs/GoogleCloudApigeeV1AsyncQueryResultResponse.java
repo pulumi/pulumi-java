@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
     /**
      * Query result will be unaccessable after this time.
@@ -20,10 +20,10 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
      */
     private final String self;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1AsyncQueryResultResponse(
-        @OutputCustomType.Parameter("expires") String expires,
-        @OutputCustomType.Parameter("self") String self) {
+        @CustomType.Parameter("expires") String expires,
+        @CustomType.Parameter("self") String self) {
         this.expires = expires;
         this.self = self;
     }

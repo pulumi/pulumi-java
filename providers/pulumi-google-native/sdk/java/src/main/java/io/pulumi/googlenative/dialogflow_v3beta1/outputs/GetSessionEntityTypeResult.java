@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSessionEntityTypeResult {
     /**
      * The collection of entities to override or supplement the custom entity type.
@@ -27,11 +27,11 @@ public final class GetSessionEntityTypeResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSessionEntityTypeResult(
-        @OutputCustomType.Parameter("entities") List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities,
-        @OutputCustomType.Parameter("entityOverrideMode") String entityOverrideMode,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("entities") List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities,
+        @CustomType.Parameter("entityOverrideMode") String entityOverrideMode,
+        @CustomType.Parameter("name") String name) {
         this.entities = entities;
         this.entityOverrideMode = entityOverrideMode;
         this.name = name;

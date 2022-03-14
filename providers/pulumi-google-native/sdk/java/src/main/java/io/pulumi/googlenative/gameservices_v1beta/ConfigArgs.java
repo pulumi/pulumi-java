@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.FleetConfigArgs;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.ScalingConfigArgs;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigArgs Empty = new ConfigArgs();
 
-    @InputImport(name="configId", required=true)
+    @Import(name="configId", required=true)
       private final Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -29,7 +29,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the game server config.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,14 +40,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
      * 
      */
-    @InputImport(name="fleetConfigs")
+    @Import(name="fleetConfigs")
       private final @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
 
     public Output<List<FleetConfigArgs>> getFleetConfigs() {
         return this.fleetConfigs == null ? Output.empty() : this.fleetConfigs;
     }
 
-    @InputImport(name="gameServerDeploymentId", required=true)
+    @Import(name="gameServerDeploymentId", required=true)
       private final Output<String> gameServerDeploymentId;
 
     public Output<String> getGameServerDeploymentId() {
@@ -58,14 +58,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The labels associated with this game server config. Each label is a key-value pair.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,14 +76,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -94,7 +94,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The autoscaling settings.
      * 
      */
-    @InputImport(name="scalingConfigs")
+    @Import(name="scalingConfigs")
       private final @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;
 
     public Output<List<ScalingConfigArgs>> getScalingConfigs() {

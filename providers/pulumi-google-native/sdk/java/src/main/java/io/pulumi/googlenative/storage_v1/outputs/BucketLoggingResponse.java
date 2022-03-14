@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketLoggingResponse {
     /**
      * The destination bucket where the current bucket's logs should be placed.
@@ -20,10 +20,10 @@ public final class BucketLoggingResponse {
      */
     private final String logObjectPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLoggingResponse(
-        @OutputCustomType.Parameter("logBucket") String logBucket,
-        @OutputCustomType.Parameter("logObjectPrefix") String logObjectPrefix) {
+        @CustomType.Parameter("logBucket") String logBucket,
+        @CustomType.Parameter("logObjectPrefix") String logObjectPrefix) {
         this.logBucket = logBucket;
         this.logObjectPrefix = logObjectPrefix;
     }

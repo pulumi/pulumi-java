@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeInfoResponse {
     /**
      * A URI pointing to the location of the diagnostics tarball.
@@ -26,11 +26,11 @@ public final class RuntimeInfoResponse {
      */
     private final String outputUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeInfoResponse(
-        @OutputCustomType.Parameter("diagnosticOutputUri") String diagnosticOutputUri,
-        @OutputCustomType.Parameter("endpoints") Map<String,String> endpoints,
-        @OutputCustomType.Parameter("outputUri") String outputUri) {
+        @CustomType.Parameter("diagnosticOutputUri") String diagnosticOutputUri,
+        @CustomType.Parameter("endpoints") Map<String,String> endpoints,
+        @CustomType.Parameter("outputUri") String outputUri) {
         this.diagnosticOutputUri = diagnosticOutputUri;
         this.endpoints = endpoints;
         this.outputUri = outputUri;

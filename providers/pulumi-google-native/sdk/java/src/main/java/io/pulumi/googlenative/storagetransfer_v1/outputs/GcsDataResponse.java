@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GcsDataResponse {
     /**
      * Cloud Storage bucket name. Must meet [Bucket Name Requirements](/storage/docs/naming#requirements).
@@ -20,10 +20,10 @@ public final class GcsDataResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GcsDataResponse(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("path") String path) {
         this.bucketName = bucketName;
         this.path = path;
     }

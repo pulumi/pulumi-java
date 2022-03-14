@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.ReservationArgs;
@@ -24,7 +24,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
      * 
      */
-    @OutputExport(name="commitment", type=String.class, parameters={})
+    @Export(name="commitment", type=String.class, parameters={})
     private Output<String> commitment;
 
     /**
@@ -38,7 +38,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -52,7 +52,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -66,7 +66,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#reservations for reservations.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -80,7 +80,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Reserved for future use.
      * 
      */
-    @OutputExport(name="satisfiesPzs", type=Boolean.class, parameters={})
+    @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
@@ -108,7 +108,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Server-defined fully-qualified URL for this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -122,7 +122,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Share-settings for shared-reservation
      * 
      */
-    @OutputExport(name="shareSettings", type=ShareSettingsResponse.class, parameters={})
+    @Export(name="shareSettings", type=ShareSettingsResponse.class, parameters={})
     private Output<ShareSettingsResponse> shareSettings;
 
     /**
@@ -136,7 +136,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Reservation for instances with specific machine shapes.
      * 
      */
-    @OutputExport(name="specificReservation", type=AllocationSpecificSKUReservationResponse.class, parameters={})
+    @Export(name="specificReservation", type=AllocationSpecificSKUReservationResponse.class, parameters={})
     private Output<AllocationSpecificSKUReservationResponse> specificReservation;
 
     /**
@@ -150,7 +150,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
      * 
      */
-    @OutputExport(name="specificReservationRequired", type=Boolean.class, parameters={})
+    @Export(name="specificReservationRequired", type=Boolean.class, parameters={})
     private Output<Boolean> specificReservationRequired;
 
     /**
@@ -164,7 +164,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * The status of the reservation.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -178,7 +178,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

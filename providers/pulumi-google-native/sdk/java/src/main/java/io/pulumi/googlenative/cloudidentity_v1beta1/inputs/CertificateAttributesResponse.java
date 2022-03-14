@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.CertificateTemplateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * The X.509 extension for CertificateTemplate.
      * 
      */
-    @InputImport(name="certificateTemplate", required=true)
+    @Import(name="certificateTemplate", required=true)
       private final CertificateTemplateResponse certificateTemplate;
 
     public CertificateTemplateResponse getCertificateTemplate() {
@@ -32,7 +32,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * The encoded certificate fingerprint.
      * 
      */
-    @InputImport(name="fingerprint", required=true)
+    @Import(name="fingerprint", required=true)
       private final String fingerprint;
 
     public String getFingerprint() {
@@ -43,7 +43,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * The name of the issuer of this certificate.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
@@ -54,7 +54,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * Serial number of the certificate, Example: "123456789".
      * 
      */
-    @InputImport(name="serialNumber", required=true)
+    @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
     public String getSerialNumber() {
@@ -65,7 +65,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * The subject name of this certificate.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final String subject;
 
     public String getSubject() {
@@ -76,7 +76,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * The certificate thumbprint.
      * 
      */
-    @InputImport(name="thumbprint", required=true)
+    @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
     public String getThumbprint() {
@@ -87,7 +87,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * Validation state of this certificate.
      * 
      */
-    @InputImport(name="validationState", required=true)
+    @Import(name="validationState", required=true)
       private final String validationState;
 
     public String getValidationState() {
@@ -98,7 +98,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * Certificate not valid at or after this timestamp.
      * 
      */
-    @InputImport(name="validityExpirationTime", required=true)
+    @Import(name="validityExpirationTime", required=true)
       private final String validityExpirationTime;
 
     public String getValidityExpirationTime() {
@@ -109,7 +109,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * Certificate not valid before this timestamp.
      * 
      */
-    @InputImport(name="validityStartTime", required=true)
+    @Import(name="validityStartTime", required=true)
       private final String validityStartTime;
 
     public String getValidityStartTime() {

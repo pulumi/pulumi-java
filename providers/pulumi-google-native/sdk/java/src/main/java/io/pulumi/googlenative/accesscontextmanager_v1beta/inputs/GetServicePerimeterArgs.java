@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetServicePerimeterArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetServicePerimeterArgs Empty = new GetServicePerimeterArgs();
 
-    @InputImport(name="accessPolicyId", required=true)
+    @Import(name="accessPolicyId", required=true)
       private final String accessPolicyId;
 
     public String getAccessPolicyId() {
         return this.accessPolicyId;
     }
 
-    @InputImport(name="servicePerimeterId", required=true)
+    @Import(name="servicePerimeterId", required=true)
       private final String servicePerimeterId;
 
     public String getServicePerimeterId() {

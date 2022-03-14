@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
      * Optional. The text to send back to the Dialogflow API or a URI to open.
      * 
      */
-    @InputImport(name="postback")
+    @Import(name="postback")
       private final @Nullable Output<String> postback;
 
     public Output<String> getPostback() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
      * Optional. The text to show on the button.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<String> text;
 
     public Output<String> getText() {

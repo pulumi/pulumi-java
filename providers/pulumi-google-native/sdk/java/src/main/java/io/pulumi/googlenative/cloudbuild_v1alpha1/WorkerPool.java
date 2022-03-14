@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.WorkerPoolArgs;
@@ -23,7 +23,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to create the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to delete the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="deleteTime", type=String.class, parameters={})
+    @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
@@ -51,7 +51,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * User-defined name of the `WorkerPool`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * The project ID of the GCP project for which the `WorkerPool` is created.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -79,7 +79,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
      * 
      */
-    @OutputExport(name="regions", type=List.class, parameters={String.class})
+    @Export(name="regions", type=List.class, parameters={String.class})
     private Output<List<String>> regions;
 
     /**
@@ -93,7 +93,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
      * 
      */
-    @OutputExport(name="serviceAccountEmail", type=String.class, parameters={})
+    @Export(name="serviceAccountEmail", type=String.class, parameters={})
     private Output<String> serviceAccountEmail;
 
     /**
@@ -107,7 +107,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * WorkerPool Status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -121,7 +121,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to update the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -135,7 +135,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Configuration to be used for a creating workers in the `WorkerPool`.
      * 
      */
-    @OutputExport(name="workerConfig", type=WorkerConfigResponse.class, parameters={})
+    @Export(name="workerConfig", type=WorkerConfigResponse.class, parameters={})
     private Output<WorkerConfigResponse> workerConfig;
 
     /**
@@ -149,7 +149,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Total number of workers to be created across all requested regions.
      * 
      */
-    @OutputExport(name="workerCount", type=String.class, parameters={})
+    @Export(name="workerCount", type=String.class, parameters={})
     private Output<String> workerCount;
 
     /**

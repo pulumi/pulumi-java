@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2HybridInspectStatisticsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeStatsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ResultResponse {
     /**
      * Statistics related to the processing of hybrid inspect.
@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2ResultResponse {
      */
     private final String totalEstimatedBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ResultResponse(
-        @OutputCustomType.Parameter("hybridStats") GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats,
-        @OutputCustomType.Parameter("infoTypeStats") List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats,
-        @OutputCustomType.Parameter("processedBytes") String processedBytes,
-        @OutputCustomType.Parameter("totalEstimatedBytes") String totalEstimatedBytes) {
+        @CustomType.Parameter("hybridStats") GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats,
+        @CustomType.Parameter("infoTypeStats") List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats,
+        @CustomType.Parameter("processedBytes") String processedBytes,
+        @CustomType.Parameter("totalEstimatedBytes") String totalEstimatedBytes) {
         this.hybridStats = hybridStats;
         this.infoTypeStats = infoTypeStats;
         this.processedBytes = processedBytes;

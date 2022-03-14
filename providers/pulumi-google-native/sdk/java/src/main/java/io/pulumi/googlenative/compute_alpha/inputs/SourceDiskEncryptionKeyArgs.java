@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
      * The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
      * 
      */
-    @InputImport(name="diskEncryptionKey")
+    @Import(name="diskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
@@ -30,7 +30,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
      * URL of the disk attached to the source instance. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk
      * 
      */
-    @InputImport(name="sourceDisk")
+    @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
     public Output<String> getSourceDisk() {

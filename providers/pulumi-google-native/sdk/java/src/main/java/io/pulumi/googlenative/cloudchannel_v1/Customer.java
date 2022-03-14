@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudchannel_v1.CustomerArgs;
@@ -25,7 +25,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
      * 
      */
-    @OutputExport(name="alternateEmail", type=String.class, parameters={})
+    @Export(name="alternateEmail", type=String.class, parameters={})
     private Output<String> alternateEmail;
 
     /**
@@ -39,7 +39,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
      * 
      */
-    @OutputExport(name="channelPartnerId", type=String.class, parameters={})
+    @Export(name="channelPartnerId", type=String.class, parameters={})
     private Output<String> channelPartnerId;
 
     /**
@@ -53,7 +53,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * The customer's Cloud Identity ID if the customer has a Cloud Identity resource.
      * 
      */
-    @OutputExport(name="cloudIdentityId", type=String.class, parameters={})
+    @Export(name="cloudIdentityId", type=String.class, parameters={})
     private Output<String> cloudIdentityId;
 
     /**
@@ -67,7 +67,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Cloud Identity information for the customer. Populated only if a Cloud Identity account exists for this customer.
      * 
      */
-    @OutputExport(name="cloudIdentityInfo", type=GoogleCloudChannelV1CloudIdentityInfoResponse.class, parameters={})
+    @Export(name="cloudIdentityInfo", type=GoogleCloudChannelV1CloudIdentityInfoResponse.class, parameters={})
     private Output<GoogleCloudChannelV1CloudIdentityInfoResponse> cloudIdentityInfo;
 
     /**
@@ -81,7 +81,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Time when the customer was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -95,7 +95,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * The customer's primary domain. Must match the primary contact email's domain.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -109,7 +109,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
      * 
      */
-    @OutputExport(name="languageCode", type=String.class, parameters={})
+    @Export(name="languageCode", type=String.class, parameters={})
     private Output<String> languageCode;
 
     /**
@@ -123,7 +123,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Resource name of the customer. Format: accounts/{account_id}/customers/{customer_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Name of the organization that the customer entity represents.
      * 
      */
-    @OutputExport(name="orgDisplayName", type=String.class, parameters={})
+    @Export(name="orgDisplayName", type=String.class, parameters={})
     private Output<String> orgDisplayName;
 
     /**
@@ -151,7 +151,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
      * 
      */
-    @OutputExport(name="orgPostalAddress", type=GoogleTypePostalAddressResponse.class, parameters={})
+    @Export(name="orgPostalAddress", type=GoogleTypePostalAddressResponse.class, parameters={})
     private Output<GoogleTypePostalAddressResponse> orgPostalAddress;
 
     /**
@@ -165,7 +165,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Primary contact info.
      * 
      */
-    @OutputExport(name="primaryContactInfo", type=GoogleCloudChannelV1ContactInfoResponse.class, parameters={})
+    @Export(name="primaryContactInfo", type=GoogleCloudChannelV1ContactInfoResponse.class, parameters={})
     private Output<GoogleCloudChannelV1ContactInfoResponse> primaryContactInfo;
 
     /**
@@ -179,7 +179,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * Time when the customer was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

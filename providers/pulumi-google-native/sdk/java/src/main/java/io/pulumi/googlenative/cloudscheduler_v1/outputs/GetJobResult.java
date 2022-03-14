@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudscheduler_v1.outputs.AppEngineHttpTargetResponse;
 import io.pulumi.googlenative.cloudscheduler_v1.outputs.HttpTargetResponse;
 import io.pulumi.googlenative.cloudscheduler_v1.outputs.PubsubTargetResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.cloudscheduler_v1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * App Engine HTTP target.
@@ -85,22 +85,22 @@ public final class GetJobResult {
      */
     private final String userUpdateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("appEngineHttpTarget") AppEngineHttpTargetResponse appEngineHttpTarget,
-        @OutputCustomType.Parameter("attemptDeadline") String attemptDeadline,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("httpTarget") HttpTargetResponse httpTarget,
-        @OutputCustomType.Parameter("lastAttemptTime") String lastAttemptTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pubsubTarget") PubsubTargetResponse pubsubTarget,
-        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
-        @OutputCustomType.Parameter("schedule") String schedule,
-        @OutputCustomType.Parameter("scheduleTime") String scheduleTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("status") StatusResponse status,
-        @OutputCustomType.Parameter("timeZone") String timeZone,
-        @OutputCustomType.Parameter("userUpdateTime") String userUpdateTime) {
+        @CustomType.Parameter("appEngineHttpTarget") AppEngineHttpTargetResponse appEngineHttpTarget,
+        @CustomType.Parameter("attemptDeadline") String attemptDeadline,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("httpTarget") HttpTargetResponse httpTarget,
+        @CustomType.Parameter("lastAttemptTime") String lastAttemptTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pubsubTarget") PubsubTargetResponse pubsubTarget,
+        @CustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @CustomType.Parameter("schedule") String schedule,
+        @CustomType.Parameter("scheduleTime") String scheduleTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("status") StatusResponse status,
+        @CustomType.Parameter("timeZone") String timeZone,
+        @CustomType.Parameter("userUpdateTime") String userUpdateTime) {
         this.appEngineHttpTarget = appEngineHttpTarget;
         this.attemptDeadline = attemptDeadline;
         this.description = description;

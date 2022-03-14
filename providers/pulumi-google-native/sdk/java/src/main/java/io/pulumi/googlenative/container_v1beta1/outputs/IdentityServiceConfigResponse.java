@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IdentityServiceConfigResponse {
     /**
      * Whether to enable the Identity Service component
@@ -15,8 +15,8 @@ public final class IdentityServiceConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private IdentityServiceConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private IdentityServiceConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

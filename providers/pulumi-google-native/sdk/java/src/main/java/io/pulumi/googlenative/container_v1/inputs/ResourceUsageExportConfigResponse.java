@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.BigQueryDestinationResponse;
 import io.pulumi.googlenative.container_v1.inputs.ConsumptionMeteringConfigResponse;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
      * Configuration to use BigQuery as usage export destination.
      * 
      */
-    @InputImport(name="bigqueryDestination", required=true)
+    @Import(name="bigqueryDestination", required=true)
       private final BigQueryDestinationResponse bigqueryDestination;
 
     public BigQueryDestinationResponse getBigqueryDestination() {
@@ -33,7 +33,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
      * Configuration to enable resource consumption metering.
      * 
      */
-    @InputImport(name="consumptionMeteringConfig", required=true)
+    @Import(name="consumptionMeteringConfig", required=true)
       private final ConsumptionMeteringConfigResponse consumptionMeteringConfig;
 
     public ConsumptionMeteringConfigResponse getConsumptionMeteringConfig() {
@@ -44,7 +44,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
      * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
      * 
      */
-    @InputImport(name="enableNetworkEgressMetering", required=true)
+    @Import(name="enableNetworkEgressMetering", required=true)
       private final Boolean enableNetworkEgressMetering;
 
     public Boolean getEnableNetworkEgressMetering() {

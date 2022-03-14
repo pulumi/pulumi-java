@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DeploymentPlatform;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Address of the runtime element hosting this deployment.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
@@ -34,7 +34,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration used to create this deployment.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<String> config;
 
     public Output<String> getConfig() {
@@ -45,7 +45,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Beginning of the lifetime of this deployment.
      * 
      */
-    @InputImport(name="deployTime")
+    @Import(name="deployTime")
       private final @Nullable Output<String> deployTime;
 
     public Output<String> getDeployTime() {
@@ -56,7 +56,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Platform hosting this deployment.
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<DeploymentPlatform> platform;
 
     public Output<DeploymentPlatform> getPlatform() {
@@ -67,7 +67,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * End of the lifetime of this deployment.
      * 
      */
-    @InputImport(name="undeployTime")
+    @Import(name="undeployTime")
       private final @Nullable Output<String> undeployTime;
 
     public Output<String> getUndeployTime() {
@@ -78,7 +78,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Identity of the user that triggered this deployment.
      * 
      */
-    @InputImport(name="userEmail")
+    @Import(name="userEmail")
       private final @Nullable Output<String> userEmail;
 
     public Output<String> getUserEmail() {

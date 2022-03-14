@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.managedidentities_v1.outputs.TrustResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     /**
      * Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.
@@ -79,21 +79,21 @@ public final class GetDomainResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("admin") String admin,
-        @OutputCustomType.Parameter("auditLogsEnabled") Boolean auditLogsEnabled,
-        @OutputCustomType.Parameter("authorizedNetworks") List<String> authorizedNetworks,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("locations") List<String> locations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("reservedIpRange") String reservedIpRange,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("trusts") List<TrustResponse> trusts,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("admin") String admin,
+        @CustomType.Parameter("auditLogsEnabled") Boolean auditLogsEnabled,
+        @CustomType.Parameter("authorizedNetworks") List<String> authorizedNetworks,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("locations") List<String> locations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("reservedIpRange") String reservedIpRange,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("trusts") List<TrustResponse> trusts,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.admin = admin;
         this.auditLogsEnabled = auditLogsEnabled;
         this.authorizedNetworks = authorizedNetworks;

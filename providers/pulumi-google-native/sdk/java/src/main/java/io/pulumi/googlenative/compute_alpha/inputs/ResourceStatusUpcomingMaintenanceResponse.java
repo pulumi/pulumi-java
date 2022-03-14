@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ResourceStatusUpcomingMaintenanceResponse extends io.pulumi.r
      * Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
      * 
      */
-    @InputImport(name="canReschedule", required=true)
+    @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
 
     public Boolean getCanReschedule() {

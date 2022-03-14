@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
      * Bucket of the Cloud Storage object.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
@@ -31,7 +31,7 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
      * Generation number of the Cloud Storage object.
      * 
      */
-    @InputImport(name="generation", required=true)
+    @Import(name="generation", required=true)
       private final String generation;
 
     public String getGeneration() {
@@ -42,7 +42,7 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
      * Name of the Cloud Storage object.
      * 
      */
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final String object;
 
     public String getObject() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum value is 100.
      * 
      */
-    @InputImport(name="numFacetBuckets")
+    @Import(name="numFacetBuckets")
       private final @Nullable Output<Integer> numFacetBuckets;
 
     public Output<Integer> getNumFacetBuckets() {
@@ -34,7 +34,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * If object_type is set, only those objects of that type will be used to compute facets. If empty, then all objects will be used to compute facets.
      * 
      */
-    @InputImport(name="objectType")
+    @Import(name="objectType")
       private final @Nullable Output<String> objectType;
 
     public Output<String> getObjectType() {
@@ -45,7 +45,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the operator chosen for faceting. @see cloudsearch.SchemaPropertyOptions
      * 
      */
-    @InputImport(name="operatorName")
+    @Import(name="operatorName")
       private final @Nullable Output<String> operatorName;
 
     public Output<String> getOperatorName() {
@@ -56,7 +56,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Source name to facet on. Format: datasources/{source_id} If empty, all data sources will be used.
      * 
      */
-    @InputImport(name="sourceName")
+    @Import(name="sourceName")
       private final @Nullable Output<String> sourceName;
 
     public Output<String> getSourceName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CertInfoResponse;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GoogleCloudApigeeV1CertificateResponse extends io.pulumi.reso
      * Chain of certificates under this name.
      * 
      */
-    @InputImport(name="certInfo", required=true)
+    @Import(name="certInfo", required=true)
       private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
     public List<GoogleCloudApigeeV1CertInfoResponse> getCertInfo() {

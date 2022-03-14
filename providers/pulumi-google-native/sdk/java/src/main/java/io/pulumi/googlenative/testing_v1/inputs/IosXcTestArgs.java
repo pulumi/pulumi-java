@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
      * 
      */
-    @InputImport(name="testSpecialEntitlements")
+    @Import(name="testSpecialEntitlements")
       private final @Nullable Output<Boolean> testSpecialEntitlements;
 
     public Output<Boolean> getTestSpecialEntitlements() {
@@ -35,7 +35,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
      * 
      */
-    @InputImport(name="testsZip", required=true)
+    @Import(name="testsZip", required=true)
       private final Output<FileReferenceArgs> testsZip;
 
     public Output<FileReferenceArgs> getTestsZip() {
@@ -46,7 +46,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
      * 
      */
-    @InputImport(name="xcodeVersion")
+    @Import(name="xcodeVersion")
       private final @Nullable Output<String> xcodeVersion;
 
     public Output<String> getXcodeVersion() {
@@ -57,7 +57,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
      * An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
      * 
      */
-    @InputImport(name="xctestrun")
+    @Import(name="xctestrun")
       private final @Nullable Output<FileReferenceArgs> xctestrun;
 
     public Output<FileReferenceArgs> getXctestrun() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one image.
      * 
      */
-    @InputImport(name="allowMultiLabel")
+    @Import(name="allowMultiLabel")
       private final @Nullable Output<Boolean> allowMultiLabel;
 
     public Output<Boolean> getAllowMultiLabel() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * Annotation spec set resource name.
      * 
      */
-    @InputImport(name="annotationSpecSet", required=true)
+    @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
 
     public Output<String> getAnnotationSpecSet() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * Optional. The type of how to aggregate answers.
      * 
      */
-    @InputImport(name="answerAggregationType")
+    @Import(name="answerAggregationType")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
 
     public Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> getAnswerAggregationType() {

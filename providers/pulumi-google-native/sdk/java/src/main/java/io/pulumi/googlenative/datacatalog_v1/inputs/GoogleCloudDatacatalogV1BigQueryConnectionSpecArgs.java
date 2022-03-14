@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
      * Specification for the BigQuery connection to a Cloud SQL instance.
      * 
      */
-    @InputImport(name="cloudSql")
+    @Import(name="cloudSql")
       private final @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
 
     public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> getCloudSql() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
      * The type of the BigQuery connection.
      * 
      */
-    @InputImport(name="connectionType")
+    @Import(name="connectionType")
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
 
     public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> getConnectionType() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends io
      * True if there are credentials attached to the BigQuery connection; false otherwise.
      * 
      */
-    @InputImport(name="hasCredential")
+    @Import(name="hasCredential")
       private final @Nullable Output<Boolean> hasCredential;
 
     public Output<Boolean> getHasCredential() {

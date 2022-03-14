@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactHashesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
 
     public static final GrafeasV1beta1IntotoArtifactArgs Empty = new GrafeasV1beta1IntotoArtifactArgs();
 
-    @InputImport(name="hashes")
+    @Import(name="hashes")
       private final @Nullable Output<ArtifactHashesArgs> hashes;
 
     public Output<ArtifactHashesArgs> getHashes() {
         return this.hashes == null ? Output.empty() : this.hashes;
     }
 
-    @InputImport(name="resourceUri")
+    @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
     public Output<String> getResourceUri() {

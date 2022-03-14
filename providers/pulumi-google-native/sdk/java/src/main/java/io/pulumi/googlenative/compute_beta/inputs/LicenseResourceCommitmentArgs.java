@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * The number of licenses purchased.
      * 
      */
-    @InputImport(name="amount")
+    @Import(name="amount")
       private final @Nullable Output<String> amount;
 
     public Output<String> getAmount() {
@@ -33,7 +33,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * Specifies the core range of the instance for which this license applies.
      * 
      */
-    @InputImport(name="coresPerLicense")
+    @Import(name="coresPerLicense")
       private final @Nullable Output<String> coresPerLicense;
 
     public Output<String> getCoresPerLicense() {
@@ -44,7 +44,7 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * Any applicable license URI.
      * 
      */
-    @InputImport(name="license")
+    @Import(name="license")
       private final @Nullable Output<String> license;
 
     public Output<String> getLicense() {

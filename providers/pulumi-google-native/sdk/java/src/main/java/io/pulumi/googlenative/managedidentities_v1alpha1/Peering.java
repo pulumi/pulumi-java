@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.managedidentities_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.managedidentities_v1alpha1.PeeringArgs;
@@ -23,7 +23,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Caller needs to make sure that CIDR subnets do not overlap between networks, else peering creation will fail.
      * 
      */
-    @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
+    @Export(name="authorizedNetwork", type=String.class, parameters={})
     private Output<String> authorizedNetwork;
 
     /**
@@ -37,7 +37,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The time the instance was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -51,7 +51,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * Full domain resource path for the Managed AD Domain involved in peering. The resource path should be in the form: `projects/{project_id}/locations/global/domains/{domain_name}`
      * 
      */
-    @OutputExport(name="domainResource", type=String.class, parameters={})
+    @Export(name="domainResource", type=String.class, parameters={})
     private Output<String> domainResource;
 
     /**
@@ -65,7 +65,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * Optional. Resource labels to represent user provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -79,7 +79,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * Unique name of the peering in this scope including projects and location using the form: `projects/{project_id}/locations/global/peerings/{peering_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The current state of this Peering.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -107,7 +107,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * Additional information about the current status of this peering, if available.
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -121,7 +121,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * Last update time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final String dataset;
 
     public String getDataset() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * Total number of shards.
      * 
      */
-    @InputImport(name="shardCount", required=true)
+    @Import(name="shardCount", required=true)
       private final String shardCount;
 
     public String getShardCount() {
@@ -42,7 +42,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`, for example, for shard `MyTable20180101`, the `table_prefix` is `MyTable`.
      * 
      */
-    @InputImport(name="tablePrefix", required=true)
+    @Import(name="tablePrefix", required=true)
       private final String tablePrefix;
 
     public String getTablePrefix() {

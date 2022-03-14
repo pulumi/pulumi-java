@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretResponse {
     /**
      * Cloud KMS key name to use to decrypt these envs.
@@ -21,10 +21,10 @@ public final class SecretResponse {
      */
     private final Map<String,String> secretEnv;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretResponse(
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("secretEnv") Map<String,String> secretEnv) {
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("secretEnv") Map<String,String> secretEnv) {
         this.kmsKeyName = kmsKeyName;
         this.secretEnv = secretEnv;
     }

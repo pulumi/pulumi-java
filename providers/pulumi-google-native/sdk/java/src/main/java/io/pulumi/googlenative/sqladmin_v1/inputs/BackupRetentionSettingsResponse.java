@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
      * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
      * 
      */
-    @InputImport(name="retainedBackups", required=true)
+    @Import(name="retainedBackups", required=true)
       private final Integer retainedBackups;
 
     public Integer getRetainedBackups() {
@@ -32,7 +32,7 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
      * The unit that 'retained_backups' represents.
      * 
      */
-    @InputImport(name="retentionUnit", required=true)
+    @Import(name="retentionUnit", required=true)
       private final String retentionUnit;
 
     public String getRetentionUnit() {

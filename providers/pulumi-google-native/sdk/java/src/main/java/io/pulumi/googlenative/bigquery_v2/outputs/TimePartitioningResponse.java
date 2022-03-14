@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimePartitioningResponse {
     /**
      * [Optional] Number of milliseconds for which to keep the storage for partitions in the table. The storage in a partition will have an expiration time of its partition time plus this value.
@@ -27,12 +27,12 @@ public final class TimePartitioningResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimePartitioningResponse(
-        @OutputCustomType.Parameter("expirationMs") String expirationMs,
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("expirationMs") String expirationMs,
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
+        @CustomType.Parameter("type") String type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.requirePartitionFilter = requirePartitionFilter;

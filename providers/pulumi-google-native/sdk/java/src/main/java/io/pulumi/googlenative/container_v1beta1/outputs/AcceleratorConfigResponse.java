@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AcceleratorConfigResponse {
     /**
      * The number of the accelerator cards exposed to an instance.
@@ -25,11 +25,11 @@ public final class AcceleratorConfigResponse {
      */
     private final String gpuPartitionSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AcceleratorConfigResponse(
-        @OutputCustomType.Parameter("acceleratorCount") String acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
-        @OutputCustomType.Parameter("gpuPartitionSize") String gpuPartitionSize) {
+        @CustomType.Parameter("acceleratorCount") String acceleratorCount,
+        @CustomType.Parameter("acceleratorType") String acceleratorType,
+        @CustomType.Parameter("gpuPartitionSize") String gpuPartitionSize) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
         this.gpuPartitionSize = gpuPartitionSize;

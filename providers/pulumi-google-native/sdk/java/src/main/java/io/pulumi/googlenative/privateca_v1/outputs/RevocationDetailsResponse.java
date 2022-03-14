@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RevocationDetailsResponse {
     /**
      * Indicates why a Certificate was revoked.
@@ -20,10 +20,10 @@ public final class RevocationDetailsResponse {
      */
     private final String revocationTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RevocationDetailsResponse(
-        @OutputCustomType.Parameter("revocationState") String revocationState,
-        @OutputCustomType.Parameter("revocationTime") String revocationTime) {
+        @CustomType.Parameter("revocationState") String revocationState,
+        @CustomType.Parameter("revocationTime") String revocationTime) {
         this.revocationState = revocationState;
         this.revocationTime = revocationTime;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
      * A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.
      * 
      */
-    @InputImport(name="allEffective", required=true)
+    @Import(name="allEffective", required=true)
       private final Boolean allEffective;
 
     public Boolean getAllEffective() {

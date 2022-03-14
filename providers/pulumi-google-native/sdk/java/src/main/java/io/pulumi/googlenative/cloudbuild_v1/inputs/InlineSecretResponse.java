@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InlineSecretResponse extends io.pulumi.resources.InvokeArgs {
      * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.
      * 
      */
-    @InputImport(name="envMap", required=true)
+    @Import(name="envMap", required=true)
       private final Map<String,String> envMap;
 
     public Map<String,String> getEnvMap() {
@@ -32,7 +32,7 @@ public final class InlineSecretResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format: projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*
      * 
      */
-    @InputImport(name="kmsKeyName", required=true)
+    @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
 
     public String getKmsKeyName() {

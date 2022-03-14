@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
     /**
      * The input URI of source file. This must be a Cloud Storage path (`gs://...`).
@@ -20,10 +20,10 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
      */
     private final String mimeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1GcsSourceResponse(
-        @OutputCustomType.Parameter("inputUri") String inputUri,
-        @OutputCustomType.Parameter("mimeType") String mimeType) {
+        @CustomType.Parameter("inputUri") String inputUri,
+        @CustomType.Parameter("mimeType") String mimeType) {
         this.inputUri = inputUri;
         this.mimeType = mimeType;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * The action identifier for the create method to be used for this collection
      * 
      */
-    @InputImport(name="create", required=true)
+    @Import(name="create", required=true)
       private final String create;
 
     public String getCreate() {
@@ -31,7 +31,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * The action identifier for the delete method to be used for this collection
      * 
      */
-    @InputImport(name="delete", required=true)
+    @Import(name="delete", required=true)
       private final String delete;
 
     public String getDelete() {
@@ -42,7 +42,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * The action identifier for the get method to be used for this collection
      * 
      */
-    @InputImport(name="get", required=true)
+    @Import(name="get", required=true)
       private final String get;
 
     public String getGet() {
@@ -53,7 +53,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * The action identifier for the setIamPolicy method to be used for this collection
      * 
      */
-    @InputImport(name="setIamPolicy", required=true)
+    @Import(name="setIamPolicy", required=true)
       private final String setIamPolicy;
 
     public String getSetIamPolicy() {
@@ -64,7 +64,7 @@ public final class MethodMapResponse extends io.pulumi.resources.InvokeArgs {
      * The action identifier for the update method to be used for this collection
      * 
      */
-    @InputImport(name="update", required=true)
+    @Import(name="update", required=true)
       private final String update;
 
     public String getUpdate() {

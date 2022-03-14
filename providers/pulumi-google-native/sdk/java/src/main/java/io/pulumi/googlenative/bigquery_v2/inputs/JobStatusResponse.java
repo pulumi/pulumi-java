@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.ErrorProtoResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
      * 
      */
-    @InputImport(name="errorResult", required=true)
+    @Import(name="errorResult", required=true)
       private final ErrorProtoResponse errorResult;
 
     public ErrorProtoResponse getErrorResult() {
@@ -29,7 +29,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<ErrorProtoResponse> errors;
 
     public List<ErrorProtoResponse> getErrors() {
@@ -40,7 +40,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Running state of the job.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

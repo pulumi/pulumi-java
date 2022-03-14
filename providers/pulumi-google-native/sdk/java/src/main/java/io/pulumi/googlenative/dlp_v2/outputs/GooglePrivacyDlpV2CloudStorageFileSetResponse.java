@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CloudStorageFileSetResponse {
     /**
      * The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2CloudStorageFileSetResponse(@OutputCustomType.Parameter("url") String url) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2CloudStorageFileSetResponse(@CustomType.Parameter("url") String url) {
         this.url = url;
     }
 

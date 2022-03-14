@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
      * Collection of all external inputs that influenced the build on top of recipe.definedInMaterial and recipe.entryPoint. For example, if the recipe type were "make", then this might be the flags passed to make aside from the target, which is captured in recipe.entryPoint. Depending on the recipe Type, the structure may be different.
      * 
      */
-    @InputImport(name="arguments", required=true)
+    @Import(name="arguments", required=true)
       private final Map<String,String> arguments;
 
     public Map<String,String> getArguments() {
@@ -32,7 +32,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
      * Index in materials containing the recipe steps that are not implied by recipe.type. For example, if the recipe type were "make", then this would point to the source containing the Makefile, not the make program itself. Set to -1 if the recipe doesn't come from a material, as zero is default unset value for int64.
      * 
      */
-    @InputImport(name="definedInMaterial", required=true)
+    @Import(name="definedInMaterial", required=true)
       private final String definedInMaterial;
 
     public String getDefinedInMaterial() {
@@ -43,7 +43,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
      * String identifying the entry point into the build. This is often a path to a configuration file and/or a target label within that file. The syntax and meaning are defined by recipe.type. For example, if the recipe type were "make", then this would reference the directory in which to run make as well as which target to use.
      * 
      */
-    @InputImport(name="entryPoint", required=true)
+    @Import(name="entryPoint", required=true)
       private final String entryPoint;
 
     public String getEntryPoint() {
@@ -54,7 +54,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
      * Any other builder-controlled inputs necessary for correctly evaluating the recipe. Usually only needed for reproducing the build but not evaluated as part of policy. Depending on the recipe Type, the structure may be different.
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final Map<String,String> environment;
 
     public Map<String,String> getEnvironment() {
@@ -65,7 +65,7 @@ public final class SlsaRecipeResponse extends io.pulumi.resources.InvokeArgs {
      * URI indicating what type of recipe was performed. It determines the meaning of recipe.entryPoint, recipe.arguments, recipe.environment, and materials.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

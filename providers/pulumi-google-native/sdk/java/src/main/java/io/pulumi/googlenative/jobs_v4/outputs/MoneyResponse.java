@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MoneyResponse {
     /**
      * The three-letter currency code defined in ISO 4217.
@@ -26,11 +26,11 @@ public final class MoneyResponse {
      */
     private final String units;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MoneyResponse(
-        @OutputCustomType.Parameter("currencyCode") String currencyCode,
-        @OutputCustomType.Parameter("nanos") Integer nanos,
-        @OutputCustomType.Parameter("units") String units) {
+        @CustomType.Parameter("currencyCode") String currencyCode,
+        @CustomType.Parameter("nanos") Integer nanos,
+        @CustomType.Parameter("units") String units) {
         this.currencyCode = currencyCode;
         this.nanos = nanos;
         this.units = units;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.SubnetworkIpv6AccessType;
 import io.pulumi.googlenative.compute_v1.enums.SubnetworkPrivateIpv6GoogleAccess;
 import io.pulumi.googlenative.compute_v1.enums.SubnetworkPurpose;
@@ -27,7 +27,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource. This field can be set only at resource creation time.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -38,7 +38,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
      * 
      */
-    @InputImport(name="enableFlowLogs")
+    @Import(name="enableFlowLogs")
       private final @Nullable Output<Boolean> enableFlowLogs;
 
     public Output<Boolean> getEnableFlowLogs() {
@@ -49,7 +49,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported. This field is set at resource creation time. The range can be any range listed in the Valid ranges list. The range can be expanded after creation using expandIpCidrRange.
      * 
      */
-    @InputImport(name="ipCidrRange")
+    @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
@@ -60,7 +60,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
      * 
      */
-    @InputImport(name="ipv6AccessType")
+    @Import(name="ipv6AccessType")
       private final @Nullable Output<SubnetworkIpv6AccessType> ipv6AccessType;
 
     public Output<SubnetworkIpv6AccessType> getIpv6AccessType() {
@@ -71,7 +71,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled, logs are exported to Cloud Logging.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<SubnetworkLogConfigArgs> logConfig;
 
     public Output<SubnetworkLogConfigArgs> getLogConfig() {
@@ -82,7 +82,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource, provided by the client when initially creating the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -93,7 +93,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The URL of the network to which this subnetwork belongs, provided by the client when initially creating the subnetwork. This field can be set only at resource creation time.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -104,7 +104,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the VMs in this subnet can access Google services without assigned external IP addresses. This field can be both set at resource creation time and updated using setPrivateIpGoogleAccess.
      * 
      */
-    @InputImport(name="privateIpGoogleAccess")
+    @Import(name="privateIpGoogleAccess")
       private final @Nullable Output<Boolean> privateIpGoogleAccess;
 
     public Output<Boolean> getPrivateIpGoogleAccess() {
@@ -115,14 +115,14 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This field can be both set at resource creation time and updated using patch.
      * 
      */
-    @InputImport(name="privateIpv6GoogleAccess")
+    @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<SubnetworkPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
     public Output<SubnetworkPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -133,7 +133,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
      * 
      */
-    @InputImport(name="purpose")
+    @Import(name="purpose")
       private final @Nullable Output<SubnetworkPurpose> purpose;
 
     public Output<SubnetworkPurpose> getPurpose() {
@@ -144,14 +144,14 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * URL of the region where the Subnetwork resides. This field can be set only at resource creation time.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -162,7 +162,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The role of subnetwork. Currently, this field is only used when purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated with a patch request.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<SubnetworkRole> role;
 
     public Output<SubnetworkRole> getRole() {
@@ -173,7 +173,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * An array of configurations for secondary IP ranges for VM instances contained in this subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork. The alias IPs may belong to either primary or secondary ranges. This field can be updated with a patch request.
      * 
      */
-    @InputImport(name="secondaryIpRanges")
+    @Import(name="secondaryIpRanges")
       private final @Nullable Output<List<SubnetworkSecondaryRangeArgs>> secondaryIpRanges;
 
     public Output<List<SubnetworkSecondaryRangeArgs>> getSecondaryIpRanges() {
@@ -184,7 +184,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. This field can be both set at resource creation time and updated using patch.
      * 
      */
-    @InputImport(name="stackType")
+    @Import(name="stackType")
       private final @Nullable Output<SubnetworkStackType> stackType;
 
     public Output<SubnetworkStackType> getStackType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
      * Cloud Storage URI that points to a file that contains the conversation audio.
      * 
      */
-    @InputImport(name="audioUri")
+    @Import(name="audioUri")
       private final @Nullable Output<String> audioUri;
 
     public Output<String> getAudioUri() {
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceArgs extends io.pu
      * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
      * 
      */
-    @InputImport(name="transcriptUri")
+    @Import(name="transcriptUri")
       private final @Nullable Output<String> transcriptUri;
 
     public Output<String> getTranscriptUri() {

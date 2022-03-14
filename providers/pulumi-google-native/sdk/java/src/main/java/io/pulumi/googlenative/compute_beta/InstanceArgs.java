@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.InstancePostKeyRevocationActionType;
 import io.pulumi.googlenative.compute_beta.enums.InstancePrivateIpv6GoogleAccess;
 import io.pulumi.googlenative.compute_beta.inputs.AcceleratorConfigArgs;
@@ -41,7 +41,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Controls for advanced machine-related behavior features.
      * 
      */
-    @InputImport(name="advancedMachineFeatures")
+    @Import(name="advancedMachineFeatures")
       private final @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     public Output<AdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
@@ -52,14 +52,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Allows this instance to send and receive packets with non-matching destination or source IPs. This is required if you plan to use this instance to forward routes. For more information, see Enabling IP Forwarding .
      * 
      */
-    @InputImport(name="canIpForward")
+    @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
     public Output<Boolean> getCanIpForward() {
         return this.canIpForward == null ? Output.empty() : this.canIpForward;
     }
 
-    @InputImport(name="confidentialInstanceConfig")
+    @Import(name="confidentialInstanceConfig")
       private final @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Output<ConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
@@ -70,7 +70,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the resource should be protected against deletion.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -81,7 +81,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -92,7 +92,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Array of disks associated with this instance. Persistent disks must be created before you can assign them.
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable Output<List<AttachedDiskArgs>> disks;
 
     public Output<List<AttachedDiskArgs>> getDisks() {
@@ -103,7 +103,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Enables display device for the instance.
      * 
      */
-    @InputImport(name="displayDevice")
+    @Import(name="displayDevice")
       private final @Nullable Output<DisplayDeviceArgs> displayDevice;
 
     public Output<DisplayDeviceArgs> getDisplayDevice() {
@@ -114,7 +114,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the disks restored from source snapshots or source machine image should erase Windows specific VSS signature.
      * 
      */
-    @InputImport(name="eraseWindowsVssSignature")
+    @Import(name="eraseWindowsVssSignature")
       private final @Nullable Output<Boolean> eraseWindowsVssSignature;
 
     public Output<Boolean> getEraseWindowsVssSignature() {
@@ -125,7 +125,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the type and count of accelerator cards attached to the instance.
      * 
      */
-    @InputImport(name="guestAccelerators")
+    @Import(name="guestAccelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
     public Output<List<AcceleratorConfigArgs>> getGuestAccelerators() {
@@ -136,7 +136,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -147,7 +147,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this instance. These can be later modified by the setLabels method.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -158,7 +158,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Full or partial URL of the machine type resource to use for this instance, in the format: zones/zone/machineTypes/machine-type. This is provided by the client when the instance is created. For example, the following is a valid partial url to a predefined machine type: zones/us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL to a machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6, ... 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of 256 MB and must be supplied in MB (e.g. 5 GB of memory is 5120 MB): zones/zone/machineTypes/custom-CPUS-MEMORY For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of restrictions, read the Specifications for custom machine types.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -169,7 +169,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The metadata key/value pairs assigned to this instance. This includes custom metadata and predefined keys.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<MetadataArgs> metadata;
 
     public Output<MetadataArgs> getMetadata() {
@@ -180,7 +180,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge".
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -191,7 +191,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -202,14 +202,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * An array of network configurations for this instance. These specify how interfaces are configured to interact with other network services, such as connecting to the internet. Multiple interfaces are supported per instance.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
-    @InputImport(name="networkPerformanceConfig")
+    @Import(name="networkPerformanceConfig")
       private final @Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     public Output<NetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
@@ -220,7 +220,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
      * 
      */
-    @InputImport(name="params")
+    @Import(name="params")
       private final @Nullable Output<InstanceParamsArgs> params;
 
     public Output<InstanceParamsArgs> getParams() {
@@ -231,7 +231,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * PostKeyRevocationActionType of the instance.
      * 
      */
-    @InputImport(name="postKeyRevocationActionType")
+    @Import(name="postKeyRevocationActionType")
       private final @Nullable Output<InstancePostKeyRevocationActionType> postKeyRevocationActionType;
 
     public Output<InstancePostKeyRevocationActionType> getPostKeyRevocationActionType() {
@@ -242,21 +242,21 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
      * 
      */
-    @InputImport(name="privateIpv6GoogleAccess")
+    @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<InstancePrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
     public Output<InstancePrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -267,7 +267,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the reservations that this instance can consume from.
      * 
      */
-    @InputImport(name="reservationAffinity")
+    @Import(name="reservationAffinity")
       private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
     public Output<ReservationAffinityArgs> getReservationAffinity() {
@@ -278,7 +278,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource policies applied to this instance.
      * 
      */
-    @InputImport(name="resourcePolicies")
+    @Import(name="resourcePolicies")
       private final @Nullable Output<List<String>> resourcePolicies;
 
     public Output<List<String>> getResourcePolicies() {
@@ -289,7 +289,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the scheduling options for this instance.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
 
     public Output<SchedulingArgs> getScheduling() {
@@ -300,21 +300,21 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A list of service accounts, with their specified scopes, authorized for this instance. Only one service account per VM instance is supported. Service accounts generate access tokens that can be accessed through the metadata server and used to authenticate applications on the instance. See Service Accounts for more information.
      * 
      */
-    @InputImport(name="serviceAccounts")
+    @Import(name="serviceAccounts")
       private final @Nullable Output<List<ServiceAccountArgs>> serviceAccounts;
 
     public Output<List<ServiceAccountArgs>> getServiceAccounts() {
         return this.serviceAccounts == null ? Output.empty() : this.serviceAccounts;
     }
 
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
-    @InputImport(name="shieldedInstanceIntegrityPolicy")
+    @Import(name="shieldedInstanceIntegrityPolicy")
       private final @Nullable Output<ShieldedInstanceIntegrityPolicyArgs> shieldedInstanceIntegrityPolicy;
 
     public Output<ShieldedInstanceIntegrityPolicyArgs> getShieldedInstanceIntegrityPolicy() {
@@ -325,7 +325,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Deprecating, please use shielded_instance_config.
      * 
      */
-    @InputImport(name="shieldedVmConfig")
+    @Import(name="shieldedVmConfig")
       private final @Nullable Output<ShieldedVmConfigArgs> shieldedVmConfig;
 
     public Output<ShieldedVmConfigArgs> getShieldedVmConfig() {
@@ -336,14 +336,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Deprecating, please use shielded_instance_integrity_policy.
      * 
      */
-    @InputImport(name="shieldedVmIntegrityPolicy")
+    @Import(name="shieldedVmIntegrityPolicy")
       private final @Nullable Output<ShieldedVmIntegrityPolicyArgs> shieldedVmIntegrityPolicy;
 
     public Output<ShieldedVmIntegrityPolicyArgs> getShieldedVmIntegrityPolicy() {
         return this.shieldedVmIntegrityPolicy == null ? Output.empty() : this.shieldedVmIntegrityPolicy;
     }
 
-    @InputImport(name="sourceInstanceTemplate")
+    @Import(name="sourceInstanceTemplate")
       private final @Nullable Output<String> sourceInstanceTemplate;
 
     public Output<String> getSourceInstanceTemplate() {
@@ -354,7 +354,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Source machine image
      * 
      */
-    @InputImport(name="sourceMachineImage")
+    @Import(name="sourceMachineImage")
       private final @Nullable Output<String> sourceMachineImage;
 
     public Output<String> getSourceMachineImage() {
@@ -365,7 +365,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Source machine image encryption key when creating an instance from a machine image.
      * 
      */
-    @InputImport(name="sourceMachineImageEncryptionKey")
+    @Import(name="sourceMachineImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceMachineImageEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getSourceMachineImageEncryptionKey() {
@@ -376,14 +376,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<TagsArgs> tags;
 
     public Output<TagsArgs> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

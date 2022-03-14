@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleIamV1__AuditConfigResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleIamV1__BindingResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobIamPolicyResult {
     /**
      * Specifies cloud audit logging configuration for this policy.
@@ -34,12 +34,12 @@ public final class GetJobIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobIamPolicyResult(
-        @OutputCustomType.Parameter("auditConfigs") List<GoogleIamV1__AuditConfigResponse> auditConfigs,
-        @OutputCustomType.Parameter("bindings") List<GoogleIamV1__BindingResponse> bindings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("auditConfigs") List<GoogleIamV1__AuditConfigResponse> auditConfigs,
+        @CustomType.Parameter("bindings") List<GoogleIamV1__BindingResponse> bindings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;

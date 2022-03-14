@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
      * Filter parameters to fetch time series.
      * 
      */
-    @InputImport(name="timeSeriesFilter", required=true)
+    @Import(name="timeSeriesFilter", required=true)
       private final TimeSeriesFilterResponse timeSeriesFilter;
 
     public TimeSeriesFilterResponse getTimeSeriesFilter() {
@@ -33,7 +33,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
      * Parameters to fetch a ratio between two time series filters.
      * 
      */
-    @InputImport(name="timeSeriesFilterRatio", required=true)
+    @Import(name="timeSeriesFilterRatio", required=true)
       private final TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
 
     public TimeSeriesFilterRatioResponse getTimeSeriesFilterRatio() {
@@ -44,7 +44,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
      * A query used to fetch time series.
      * 
      */
-    @InputImport(name="timeSeriesQueryLanguage", required=true)
+    @Import(name="timeSeriesQueryLanguage", required=true)
       private final String timeSeriesQueryLanguage;
 
     public String getTimeSeriesQueryLanguage() {
@@ -55,7 +55,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
      * The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
      * 
      */
-    @InputImport(name="unitOverride", required=true)
+    @Import(name="unitOverride", required=true)
       private final String unitOverride;
 
     public String getUnitOverride() {

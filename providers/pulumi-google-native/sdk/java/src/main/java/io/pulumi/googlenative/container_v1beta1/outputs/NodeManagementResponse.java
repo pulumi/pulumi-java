@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.AutoUpgradeOptionsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeManagementResponse {
     /**
      * Whether the nodes will be automatically repaired.
@@ -26,11 +26,11 @@ public final class NodeManagementResponse {
      */
     private final AutoUpgradeOptionsResponse upgradeOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeManagementResponse(
-        @OutputCustomType.Parameter("autoRepair") Boolean autoRepair,
-        @OutputCustomType.Parameter("autoUpgrade") Boolean autoUpgrade,
-        @OutputCustomType.Parameter("upgradeOptions") AutoUpgradeOptionsResponse upgradeOptions) {
+        @CustomType.Parameter("autoRepair") Boolean autoRepair,
+        @CustomType.Parameter("autoUpgrade") Boolean autoUpgrade,
+        @CustomType.Parameter("upgradeOptions") AutoUpgradeOptionsResponse upgradeOptions) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
         this.upgradeOptions = upgradeOptions;

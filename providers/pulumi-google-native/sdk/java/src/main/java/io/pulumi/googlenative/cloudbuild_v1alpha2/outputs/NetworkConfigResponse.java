@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigResponse {
     /**
      * Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to WorkerPool.project_id on the default network. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number, such as `12345`, and {network} is the name of a VPC network in the project.
@@ -15,8 +15,8 @@ public final class NetworkConfigResponse {
      */
     private final String peeredNetwork;
 
-    @OutputCustomType.Constructor
-    private NetworkConfigResponse(@OutputCustomType.Parameter("peeredNetwork") String peeredNetwork) {
+    @CustomType.Constructor
+    private NetworkConfigResponse(@CustomType.Parameter("peeredNetwork") String peeredNetwork) {
         this.peeredNetwork = peeredNetwork;
     }
 

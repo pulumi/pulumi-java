@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * Whether to enable nested virtualization or not (default is false).
      * 
      */
-    @InputImport(name="enableNestedVirtualization")
+    @Import(name="enableNestedVirtualization")
       private final @Nullable Output<Boolean> enableNestedVirtualization;
 
     public Output<Boolean> getEnableNestedVirtualization() {
@@ -34,7 +34,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * Whether to enable UEFI networking for instance creation.
      * 
      */
-    @InputImport(name="enableUefiNetworking")
+    @Import(name="enableUefiNetworking")
       private final @Nullable Output<Boolean> enableUefiNetworking;
 
     public Output<Boolean> getEnableUefiNetworking() {
@@ -45,7 +45,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * The number of vNUMA nodes.
      * 
      */
-    @InputImport(name="numaNodeCount")
+    @Import(name="numaNodeCount")
       private final @Nullable Output<Integer> numaNodeCount;
 
     public Output<Integer> getNumaNodeCount() {
@@ -56,7 +56,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
      * 
      */
-    @InputImport(name="threadsPerCore")
+    @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
     public Output<Integer> getThreadsPerCore() {
@@ -67,7 +67,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance's nominal CPU count and the underlying platform's SMT width.
      * 
      */
-    @InputImport(name="visibleCoreCount")
+    @Import(name="visibleCoreCount")
       private final @Nullable Output<Integer> visibleCoreCount;
 
     public Output<Integer> getVisibleCoreCount() {

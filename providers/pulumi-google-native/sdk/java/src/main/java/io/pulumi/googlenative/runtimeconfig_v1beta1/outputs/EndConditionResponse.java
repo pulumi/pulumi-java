@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.outputs.CardinalityResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndConditionResponse {
     /**
      * The cardinality of the `EndCondition`.
@@ -15,8 +15,8 @@ public final class EndConditionResponse {
      */
     private final CardinalityResponse cardinality;
 
-    @OutputCustomType.Constructor
-    private EndConditionResponse(@OutputCustomType.Parameter("cardinality") CardinalityResponse cardinality) {
+    @CustomType.Constructor
+    private EndConditionResponse(@CustomType.Parameter("cardinality") CardinalityResponse cardinality) {
         this.cardinality = cardinality;
     }
 

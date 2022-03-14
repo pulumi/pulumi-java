@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      * The number of seconds to wait for a readiness signal during initialization before timing out.
      * 
      */
-    @InputImport(name="timeoutSec", required=true)
+    @Import(name="timeoutSec", required=true)
       private final Integer timeoutSec;
 
     public Integer getTimeoutSec() {

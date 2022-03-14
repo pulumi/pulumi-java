@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse {
     /**
      * Must be specified if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
@@ -16,8 +16,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
      */
     private final List<Double> values;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse(@OutputCustomType.Parameter("values") List<Double> values) {
+    @CustomType.Constructor
+    private GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse(@CustomType.Parameter("values") List<Double> values) {
         this.values = values;
     }
 

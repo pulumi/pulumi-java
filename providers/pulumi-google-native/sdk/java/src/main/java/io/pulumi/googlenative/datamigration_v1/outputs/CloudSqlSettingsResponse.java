@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datamigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datamigration_v1.outputs.SqlIpConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudSqlSettingsResponse {
     /**
      * The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
@@ -93,24 +93,24 @@ public final class CloudSqlSettingsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudSqlSettingsResponse(
-        @OutputCustomType.Parameter("activationPolicy") String activationPolicy,
-        @OutputCustomType.Parameter("autoStorageIncrease") Boolean autoStorageIncrease,
-        @OutputCustomType.Parameter("cmekKeyName") String cmekKeyName,
-        @OutputCustomType.Parameter("collation") String collation,
-        @OutputCustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
-        @OutputCustomType.Parameter("dataDiskType") String dataDiskType,
-        @OutputCustomType.Parameter("databaseFlags") Map<String,String> databaseFlags,
-        @OutputCustomType.Parameter("databaseVersion") String databaseVersion,
-        @OutputCustomType.Parameter("ipConfig") SqlIpConfigResponse ipConfig,
-        @OutputCustomType.Parameter("rootPassword") String rootPassword,
-        @OutputCustomType.Parameter("rootPasswordSet") Boolean rootPasswordSet,
-        @OutputCustomType.Parameter("sourceId") String sourceId,
-        @OutputCustomType.Parameter("storageAutoResizeLimit") String storageAutoResizeLimit,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("activationPolicy") String activationPolicy,
+        @CustomType.Parameter("autoStorageIncrease") Boolean autoStorageIncrease,
+        @CustomType.Parameter("cmekKeyName") String cmekKeyName,
+        @CustomType.Parameter("collation") String collation,
+        @CustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
+        @CustomType.Parameter("dataDiskType") String dataDiskType,
+        @CustomType.Parameter("databaseFlags") Map<String,String> databaseFlags,
+        @CustomType.Parameter("databaseVersion") String databaseVersion,
+        @CustomType.Parameter("ipConfig") SqlIpConfigResponse ipConfig,
+        @CustomType.Parameter("rootPassword") String rootPassword,
+        @CustomType.Parameter("rootPasswordSet") Boolean rootPasswordSet,
+        @CustomType.Parameter("sourceId") String sourceId,
+        @CustomType.Parameter("storageAutoResizeLimit") String storageAutoResizeLimit,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @CustomType.Parameter("zone") String zone) {
         this.activationPolicy = activationPolicy;
         this.autoStorageIncrease = autoStorageIncrease;
         this.cmekKeyName = cmekKeyName;

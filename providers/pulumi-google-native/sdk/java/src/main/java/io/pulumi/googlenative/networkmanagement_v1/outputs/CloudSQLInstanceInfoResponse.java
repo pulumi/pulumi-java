@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudSQLInstanceInfoResponse {
     /**
      * Name of a Cloud SQL instance.
@@ -40,14 +40,14 @@ public final class CloudSQLInstanceInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudSQLInstanceInfoResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("externalIp") String externalIp,
-        @OutputCustomType.Parameter("internalIp") String internalIp,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("externalIp") String externalIp,
+        @CustomType.Parameter("internalIp") String internalIp,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.externalIp = externalIp;
         this.internalIp = internalIp;

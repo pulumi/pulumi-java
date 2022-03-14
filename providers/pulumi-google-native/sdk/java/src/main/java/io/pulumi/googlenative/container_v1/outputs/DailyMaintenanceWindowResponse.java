@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DailyMaintenanceWindowResponse {
     /**
      * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "PTnHnMnS".
@@ -20,10 +20,10 @@ public final class DailyMaintenanceWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DailyMaintenanceWindowResponse(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.startTime = startTime;
     }

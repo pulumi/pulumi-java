@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.SecurityPolicyType;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyAdvancedOptionsConfigArgs;
@@ -22,14 +22,14 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyArgs Empty = new SecurityPolicyArgs();
 
-    @InputImport(name="adaptiveProtectionConfig")
+    @Import(name="adaptiveProtectionConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
         return this.adaptiveProtectionConfig == null ? Output.empty() : this.adaptiveProtectionConfig;
     }
 
-    @InputImport(name="advancedOptionsConfig")
+    @Import(name="advancedOptionsConfig")
       private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
     public Output<SecurityPolicyAdvancedOptionsConfigArgs> getAdvancedOptionsConfig() {
@@ -40,7 +40,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A list of associations that belong to this policy.
      * 
      */
-    @InputImport(name="associations")
+    @Import(name="associations")
       private final @Nullable Output<List<SecurityPolicyAssociationArgs>> associations;
 
     public Output<List<SecurityPolicyAssociationArgs>> getAssociations() {
@@ -51,7 +51,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -62,7 +62,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided name of the Organization security plicy. The name should be unique in the organization in which the security policy is created. This should only be used when SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -73,7 +73,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -84,28 +84,28 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="recaptchaOptionsConfig")
+    @Import(name="recaptchaOptionsConfig")
       private final @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
     public Output<SecurityPolicyRecaptchaOptionsConfigArgs> getRecaptchaOptionsConfig() {
         return this.recaptchaOptionsConfig == null ? Output.empty() : this.recaptchaOptionsConfig;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -116,7 +116,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match "*"). If no rules are provided when creating a security policy, a default rule with action "allow" will be added.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
     public Output<List<SecurityPolicyRuleArgs>> getRules() {
@@ -127,14 +127,14 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<SecurityPolicyType> type;
 
     public Output<SecurityPolicyType> getType() {
         return this.type == null ? Output.empty() : this.type;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

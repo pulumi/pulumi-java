@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3TextInputArgs extends io.pulumi.reso
      * The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final Output<String> text;
 
     public Output<String> getText() {

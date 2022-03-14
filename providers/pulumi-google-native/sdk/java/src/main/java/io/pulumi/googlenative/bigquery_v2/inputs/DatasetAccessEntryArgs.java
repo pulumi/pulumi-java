@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.enums.DatasetAccessEntryTargetTypesItem;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
 import java.util.List;
@@ -20,14 +20,14 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
      * [Required] The dataset this entry applies to.
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable Output<DatasetReferenceArgs> dataset;
 
     public Output<DatasetReferenceArgs> getDataset() {
         return this.dataset == null ? Output.empty() : this.dataset;
     }
 
-    @InputImport(name="targetTypes")
+    @Import(name="targetTypes")
       private final @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
 
     public Output<List<DatasetAccessEntryTargetTypesItem>> getTargetTypes() {

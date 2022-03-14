@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyNetworkArgs Empty = new PolicyNetworkArgs();
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -25,7 +25,7 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
      * 
      */
-    @InputImport(name="networkUrl")
+    @Import(name="networkUrl")
       private final @Nullable Output<String> networkUrl;
 
     public Output<String> getNetworkUrl() {

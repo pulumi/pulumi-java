@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1RateRangeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1RevenueShareRangeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleTypeMoneyResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRatePlanResult {
     /**
      * Name of the API product that the rate plan is associated with.
@@ -105,26 +105,26 @@ public final class GetRatePlanResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRatePlanResult(
-        @OutputCustomType.Parameter("apiproduct") String apiproduct,
-        @OutputCustomType.Parameter("billingPeriod") String billingPeriod,
-        @OutputCustomType.Parameter("consumptionPricingRates") List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates,
-        @OutputCustomType.Parameter("consumptionPricingType") String consumptionPricingType,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("currencyCode") String currencyCode,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("fixedFeeFrequency") Integer fixedFeeFrequency,
-        @OutputCustomType.Parameter("fixedRecurringFee") GoogleTypeMoneyResponse fixedRecurringFee,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("revenueShareRates") List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates,
-        @OutputCustomType.Parameter("revenueShareType") String revenueShareType,
-        @OutputCustomType.Parameter("setupFee") GoogleTypeMoneyResponse setupFee,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("apiproduct") String apiproduct,
+        @CustomType.Parameter("billingPeriod") String billingPeriod,
+        @CustomType.Parameter("consumptionPricingRates") List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates,
+        @CustomType.Parameter("consumptionPricingType") String consumptionPricingType,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("currencyCode") String currencyCode,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("fixedFeeFrequency") Integer fixedFeeFrequency,
+        @CustomType.Parameter("fixedRecurringFee") GoogleTypeMoneyResponse fixedRecurringFee,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("revenueShareRates") List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates,
+        @CustomType.Parameter("revenueShareType") String revenueShareType,
+        @CustomType.Parameter("setupFee") GoogleTypeMoneyResponse setupFee,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state) {
         this.apiproduct = apiproduct;
         this.billingPeriod = billingPeriod;
         this.consumptionPricingRates = consumptionPricingRates;

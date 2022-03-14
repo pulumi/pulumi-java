@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetWorkerPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkerPoolArgs Empty = new GetWorkerPoolArgs();
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="workerpoolId", required=true)
+    @Import(name="workerpoolId", required=true)
       private final String workerpoolId;
 
     public String getWorkerpoolId() {

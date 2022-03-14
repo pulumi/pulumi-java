@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceIAPOAuth2ClientInfoResponse {
     /**
      * Application name to be used in OAuth consent screen.
@@ -25,11 +25,11 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
      */
     private final String developerEmailAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceIAPOAuth2ClientInfoResponse(
-        @OutputCustomType.Parameter("applicationName") String applicationName,
-        @OutputCustomType.Parameter("clientName") String clientName,
-        @OutputCustomType.Parameter("developerEmailAddress") String developerEmailAddress) {
+        @CustomType.Parameter("applicationName") String applicationName,
+        @CustomType.Parameter("clientName") String clientName,
+        @CustomType.Parameter("developerEmailAddress") String developerEmailAddress) {
         this.applicationName = applicationName;
         this.clientName = clientName;
         this.developerEmailAddress = developerEmailAddress;

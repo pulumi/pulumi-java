@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse {
     /**
      * A list of phase match rules that are included in this group.
@@ -22,10 +22,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(
-        @OutputCustomType.Parameter("phraseMatchRules") List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("phraseMatchRules") List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules,
+        @CustomType.Parameter("type") String type) {
         this.phraseMatchRules = phraseMatchRules;
         this.type = type;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SegmentSettingsResponse {
     /**
      * Create an individual segment file. The default is `false`.
@@ -21,10 +21,10 @@ public final class SegmentSettingsResponse {
      */
     private final String segmentDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SegmentSettingsResponse(
-        @OutputCustomType.Parameter("individualSegments") Boolean individualSegments,
-        @OutputCustomType.Parameter("segmentDuration") String segmentDuration) {
+        @CustomType.Parameter("individualSegments") Boolean individualSegments,
+        @CustomType.Parameter("segmentDuration") String segmentDuration) {
         this.individualSegments = individualSegments;
         this.segmentDuration = segmentDuration;
     }

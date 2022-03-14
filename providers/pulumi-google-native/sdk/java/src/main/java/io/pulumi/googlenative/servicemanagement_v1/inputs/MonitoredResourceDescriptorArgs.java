@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.enums.MonitoredResourceDescriptorLaunchStage;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * Optional. A detailed description of the monitored resource type that might be used in documentation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * Optional. A concise name for the monitored resource type that might be displayed in user interfaces. It should be a Title Cased Noun Phrase, without any article or other determiners. For example, `"Google Cloud SQL Database"`.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -47,7 +47,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * A set of labels used to describe instances of this monitored resource type. For example, an individual Google Cloud SQL database is identified by values for the labels `"database_id"` and `"zone"`.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Output<List<LabelDescriptorArgs>> labels;
 
     public Output<List<LabelDescriptorArgs>> getLabels() {
@@ -58,7 +58,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * Optional. The launch stage of the monitored resource definition.
      * 
      */
-    @InputImport(name="launchStage")
+    @Import(name="launchStage")
       private final @Nullable Output<MonitoredResourceDescriptorLaunchStage> launchStage;
 
     public Output<MonitoredResourceDescriptorLaunchStage> getLaunchStage() {
@@ -69,7 +69,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * Optional. The resource name of the monitored resource descriptor: `"projects/{project_id}/monitoredResourceDescriptors/{type}"` where {type} is the value of the `type` field in this object and {project_id} is a project ID that provides API-specific context for accessing the type. APIs that do not use project information can use the resource name format `"monitoredResourceDescriptors/{type}"`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -80,7 +80,7 @@ public final class MonitoredResourceDescriptorArgs extends io.pulumi.resources.R
      * The monitored resource type. For example, the type `"cloudsql_database"` represents databases in Google Cloud SQL. For a list of types, see [Monitoring resource types](https://cloud.google.com/monitoring/api/resources) and [Logging resource types](https://cloud.google.com/logging/docs/api/v2/resource-list).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

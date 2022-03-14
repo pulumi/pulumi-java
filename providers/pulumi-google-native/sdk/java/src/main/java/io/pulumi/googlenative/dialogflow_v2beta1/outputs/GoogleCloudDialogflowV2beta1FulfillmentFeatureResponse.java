@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse {
     /**
      * The type of the feature that enabled for fulfillment.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.RegionNotificationEndpointArgs;
@@ -22,7 +22,7 @@ public class RegionNotificationEndpoint extends io.pulumi.resources.CustomResour
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -36,7 +36,7 @@ public class RegionNotificationEndpoint extends io.pulumi.resources.CustomResour
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class RegionNotificationEndpoint extends io.pulumi.resources.CustomResour
      * Settings of the gRPC notification endpoint including the endpoint URL and the retry duration.
      * 
      */
-    @OutputExport(name="grpcSettings", type=NotificationEndpointGrpcSettingsResponse.class, parameters={})
+    @Export(name="grpcSettings", type=NotificationEndpointGrpcSettingsResponse.class, parameters={})
     private Output<NotificationEndpointGrpcSettingsResponse> grpcSettings;
 
     /**
@@ -64,7 +64,7 @@ public class RegionNotificationEndpoint extends io.pulumi.resources.CustomResour
      * Type of the resource. Always compute#notificationEndpoint for notification endpoints.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -78,7 +78,7 @@ public class RegionNotificationEndpoint extends io.pulumi.resources.CustomResour
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class RegionNotificationEndpoint extends io.pulumi.resources.CustomResour
      * URL of the region where the notification endpoint resides. This field applies only to the regional resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -106,7 +106,7 @@ public class RegionNotificationEndpoint extends io.pulumi.resources.CustomResour
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

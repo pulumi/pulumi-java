@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ResourceIdArgs extends io.pulumi.resources.ResourceArgs {
      * Required field for the type-specific id. This should correspond to the id used in the type-specific API's.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class ResourceIdArgs extends io.pulumi.resources.ResourceArgs {
      * Required field representing the resource type this id is for. At present, the valid types are "project", "folder", and "organization".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

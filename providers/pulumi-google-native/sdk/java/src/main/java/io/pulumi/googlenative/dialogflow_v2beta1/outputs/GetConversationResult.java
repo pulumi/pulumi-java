@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConversationResult {
     /**
      * The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
@@ -46,15 +46,15 @@ public final class GetConversationResult {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConversationResult(
-        @OutputCustomType.Parameter("conversationProfile") String conversationProfile,
-        @OutputCustomType.Parameter("conversationStage") String conversationStage,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("phoneNumber") GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse phoneNumber,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("conversationProfile") String conversationProfile,
+        @CustomType.Parameter("conversationStage") String conversationStage,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("lifecycleState") String lifecycleState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("phoneNumber") GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse phoneNumber,
+        @CustomType.Parameter("startTime") String startTime) {
         this.conversationProfile = conversationProfile;
         this.conversationStage = conversationStage;
         this.endTime = endTime;

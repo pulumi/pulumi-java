@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.FixedOrPercentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
      * The URL of the instance template that is specified for this managed instance group. The group uses this template to create new instances in the managed instance group until the `targetSize` for this version is reached. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE; in those cases, existing instances are updated until the `targetSize` for this version is reached.
      * 
      */
-    @InputImport(name="instanceTemplate")
+    @Import(name="instanceTemplate")
       private final @Nullable Output<String> instanceTemplate;
 
     public Output<String> getInstanceTemplate() {
@@ -30,7 +30,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
      * Name of the version. Unique among all versions in the scope of this managed instance group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
      * Specifies the intended number of instances to be created from the instanceTemplate. The final number of instances created from the template will be equal to: - If expressed as a fixed number, the minimum of either targetSize.fixed or instanceGroupManager.targetSize is used. - if expressed as a percent, the targetSize would be (targetSize.percent/100 * InstanceGroupManager.targetSize) If there is a remainder, the number is rounded. If unset, this version will update any remaining instances not updated by another version. Read Starting a canary update for more information.
      * 
      */
-    @InputImport(name="targetSize")
+    @Import(name="targetSize")
       private final @Nullable Output<FixedOrPercentArgs> targetSize;
 
     public Output<FixedOrPercentArgs> getTargetSize() {

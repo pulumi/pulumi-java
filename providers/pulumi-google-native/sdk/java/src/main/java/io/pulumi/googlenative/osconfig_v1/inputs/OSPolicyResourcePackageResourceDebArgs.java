@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceDebArgs extends io.pulumi.reso
      * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
      * 
      */
-    @InputImport(name="pullDeps")
+    @Import(name="pullDeps")
       private final @Nullable Output<Boolean> pullDeps;
 
     public Output<Boolean> getPullDeps() {
@@ -34,7 +34,7 @@ public final class OSPolicyResourcePackageResourceDebArgs extends io.pulumi.reso
      * A deb package.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<OSPolicyResourceFileArgs> source;
 
     public Output<OSPolicyResourceFileArgs> getSource() {

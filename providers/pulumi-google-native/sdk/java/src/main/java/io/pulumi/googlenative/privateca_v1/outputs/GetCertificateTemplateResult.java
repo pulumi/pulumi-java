@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateExtensionConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateIdentityConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.X509ParametersResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateTemplateResult {
     /**
      * The time at which this CertificateTemplate was created.
@@ -54,16 +54,16 @@ public final class GetCertificateTemplateResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateTemplateResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("identityConstraints") CertificateIdentityConstraintsResponse identityConstraints,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("passthroughExtensions") CertificateExtensionConstraintsResponse passthroughExtensions,
-        @OutputCustomType.Parameter("predefinedValues") X509ParametersResponse predefinedValues,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("identityConstraints") CertificateIdentityConstraintsResponse identityConstraints,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("passthroughExtensions") CertificateExtensionConstraintsResponse passthroughExtensions,
+        @CustomType.Parameter("predefinedValues") X509ParametersResponse predefinedValues,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.identityConstraints = identityConstraints;

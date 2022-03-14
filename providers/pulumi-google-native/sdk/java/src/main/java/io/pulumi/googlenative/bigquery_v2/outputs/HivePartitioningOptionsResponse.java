@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HivePartitioningOptionsResponse {
     /**
      * [Optional] When set, what mode of hive partitioning to use when reading data. The following modes are supported. (1) AUTO: automatically infer partition key name(s) and type(s). (2) STRINGS: automatically infer partition key name(s). All types are interpreted as strings. (3) CUSTOM: partition key schema is encoded in the source URI prefix. Not all storage formats support hive partitioning. Requesting hive partitioning on an unsupported format will lead to an error. Currently supported types include: AVRO, CSV, JSON, ORC and Parquet.
@@ -26,11 +26,11 @@ public final class HivePartitioningOptionsResponse {
      */
     private final String sourceUriPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HivePartitioningOptionsResponse(
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
-        @OutputCustomType.Parameter("sourceUriPrefix") String sourceUriPrefix) {
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
+        @CustomType.Parameter("sourceUriPrefix") String sourceUriPrefix) {
         this.mode = mode;
         this.requirePartitionFilter = requirePartitionFilter;
         this.sourceUriPrefix = sourceUriPrefix;

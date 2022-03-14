@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketObjectCustomerEncryptionResponse {
     /**
      * The encryption algorithm.
@@ -20,10 +20,10 @@ public final class BucketObjectCustomerEncryptionResponse {
      */
     private final String keySha256;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketObjectCustomerEncryptionResponse(
-        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
-        @OutputCustomType.Parameter("keySha256") String keySha256) {
+        @CustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @CustomType.Parameter("keySha256") String keySha256) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.keySha256 = keySha256;
     }

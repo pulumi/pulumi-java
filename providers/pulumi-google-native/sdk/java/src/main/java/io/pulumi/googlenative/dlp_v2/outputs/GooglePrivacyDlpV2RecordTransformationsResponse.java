@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldTransformationResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RecordSuppressionResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2RecordTransformationsResponse {
     /**
      * Transform the record by applying various field transformations.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
      */
     private final List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2RecordTransformationsResponse(
-        @OutputCustomType.Parameter("fieldTransformations") List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations,
-        @OutputCustomType.Parameter("recordSuppressions") List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
+        @CustomType.Parameter("fieldTransformations") List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations,
+        @CustomType.Parameter("recordSuppressions") List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
         this.fieldTransformations = fieldTransformations;
         this.recordSuppressions = recordSuppressions;
     }

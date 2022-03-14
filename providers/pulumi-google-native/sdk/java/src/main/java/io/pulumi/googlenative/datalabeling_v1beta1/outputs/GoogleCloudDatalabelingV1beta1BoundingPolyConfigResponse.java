@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
     /**
      * Annotation spec set resource name.
@@ -20,10 +20,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
      */
     private final String instructionMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(
-        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
-        @OutputCustomType.Parameter("instructionMessage") String instructionMessage) {
+        @CustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @CustomType.Parameter("instructionMessage") String instructionMessage) {
         this.annotationSpecSet = annotationSpecSet;
         this.instructionMessage = instructionMessage;
     }

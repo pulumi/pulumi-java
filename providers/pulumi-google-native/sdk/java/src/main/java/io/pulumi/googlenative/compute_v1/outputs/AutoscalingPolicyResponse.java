@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AutoscalingPolicyCpuUtilizationResponse;
 import io.pulumi.googlenative.compute_v1.outputs.AutoscalingPolicyCustomMetricUtilizationResponse;
 import io.pulumi.googlenative.compute_v1.outputs.AutoscalingPolicyLoadBalancingUtilizationResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingPolicyResponse {
     /**
      * The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
@@ -58,17 +58,17 @@ public final class AutoscalingPolicyResponse {
      */
     private final Map<String,String> scalingSchedules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingPolicyResponse(
-        @OutputCustomType.Parameter("coolDownPeriodSec") Integer coolDownPeriodSec,
-        @OutputCustomType.Parameter("cpuUtilization") AutoscalingPolicyCpuUtilizationResponse cpuUtilization,
-        @OutputCustomType.Parameter("customMetricUtilizations") List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations,
-        @OutputCustomType.Parameter("loadBalancingUtilization") AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization,
-        @OutputCustomType.Parameter("maxNumReplicas") Integer maxNumReplicas,
-        @OutputCustomType.Parameter("minNumReplicas") Integer minNumReplicas,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("scaleInControl") AutoscalingPolicyScaleInControlResponse scaleInControl,
-        @OutputCustomType.Parameter("scalingSchedules") Map<String,String> scalingSchedules) {
+        @CustomType.Parameter("coolDownPeriodSec") Integer coolDownPeriodSec,
+        @CustomType.Parameter("cpuUtilization") AutoscalingPolicyCpuUtilizationResponse cpuUtilization,
+        @CustomType.Parameter("customMetricUtilizations") List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations,
+        @CustomType.Parameter("loadBalancingUtilization") AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization,
+        @CustomType.Parameter("maxNumReplicas") Integer maxNumReplicas,
+        @CustomType.Parameter("minNumReplicas") Integer minNumReplicas,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("scaleInControl") AutoscalingPolicyScaleInControlResponse scaleInControl,
+        @CustomType.Parameter("scalingSchedules") Map<String,String> scalingSchedules) {
         this.coolDownPeriodSec = coolDownPeriodSec;
         this.cpuUtilization = cpuUtilization;
         this.customMetricUtilizations = customMetricUtilizations;

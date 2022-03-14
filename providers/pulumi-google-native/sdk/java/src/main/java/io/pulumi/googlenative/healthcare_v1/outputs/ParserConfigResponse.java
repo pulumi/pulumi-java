@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.SchemaPackageResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ParserConfigResponse {
     /**
      * Determines whether messages with no header are allowed.
@@ -32,12 +32,12 @@ public final class ParserConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParserConfigResponse(
-        @OutputCustomType.Parameter("allowNullHeader") Boolean allowNullHeader,
-        @OutputCustomType.Parameter("schema") SchemaPackageResponse schema,
-        @OutputCustomType.Parameter("segmentTerminator") String segmentTerminator,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("allowNullHeader") Boolean allowNullHeader,
+        @CustomType.Parameter("schema") SchemaPackageResponse schema,
+        @CustomType.Parameter("segmentTerminator") String segmentTerminator,
+        @CustomType.Parameter("version") String version) {
         this.allowNullHeader = allowNullHeader;
         this.schema = schema;
         this.segmentTerminator = segmentTerminator;

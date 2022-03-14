@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BqmlIterationResultResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.BqmlTrainingRunTrainingOptionsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BqmlTrainingRunResponse {
     /**
      * [Output-only, Beta] List of each iteration results.
@@ -33,12 +33,12 @@ public final class BqmlTrainingRunResponse {
      */
     private final BqmlTrainingRunTrainingOptionsResponse trainingOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BqmlTrainingRunResponse(
-        @OutputCustomType.Parameter("iterationResults") List<BqmlIterationResultResponse> iterationResults,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("trainingOptions") BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
+        @CustomType.Parameter("iterationResults") List<BqmlIterationResultResponse> iterationResults,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("trainingOptions") BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
         this.iterationResults = iterationResults;
         this.startTime = startTime;
         this.state = state;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ColorResponse {
     /**
      * Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
@@ -25,11 +25,11 @@ public final class ColorResponse {
      */
     private final Double saturation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ColorResponse(
-        @OutputCustomType.Parameter("brightness") Double brightness,
-        @OutputCustomType.Parameter("contrast") Double contrast,
-        @OutputCustomType.Parameter("saturation") Double saturation) {
+        @CustomType.Parameter("brightness") Double brightness,
+        @CustomType.Parameter("contrast") Double contrast,
+        @CustomType.Parameter("saturation") Double saturation) {
         this.brightness = brightness;
         this.contrast = contrast;
         this.saturation = saturation;

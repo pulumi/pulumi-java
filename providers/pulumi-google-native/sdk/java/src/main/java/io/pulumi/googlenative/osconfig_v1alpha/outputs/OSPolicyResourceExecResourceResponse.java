@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceExecResourceExecResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceExecResourceResponse {
     /**
      * What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.
@@ -20,10 +20,10 @@ public final class OSPolicyResourceExecResourceResponse {
      */
     private final OSPolicyResourceExecResourceExecResponse validate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceExecResourceResponse(
-        @OutputCustomType.Parameter("enforce") OSPolicyResourceExecResourceExecResponse enforce,
-        @OutputCustomType.Parameter("validate") OSPolicyResourceExecResourceExecResponse validate) {
+        @CustomType.Parameter("enforce") OSPolicyResourceExecResourceExecResponse enforce,
+        @CustomType.Parameter("validate") OSPolicyResourceExecResourceExecResponse validate) {
         this.enforce = enforce;
         this.validate = validate;
     }

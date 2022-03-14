@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.accesscontextmanager_v1.ServicePerimeterArgs;
@@ -23,7 +23,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Description of the `ServicePerimeter` and its use. Does not affect behavior.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -37,7 +37,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -51,7 +51,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, the restricted service list as well as access level lists must be empty.
      * 
      */
-    @OutputExport(name="perimeterType", type=String.class, parameters={})
+    @Export(name="perimeterType", type=String.class, parameters={})
     private Output<String> perimeterType;
 
     /**
@@ -65,7 +65,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed to be set when the "use_explicit_dry_run_spec" flag is set.
      * 
      */
-    @OutputExport(name="spec", type=ServicePerimeterConfigResponse.class, parameters={})
+    @Export(name="spec", type=ServicePerimeterConfigResponse.class, parameters={})
     private Output<ServicePerimeterConfigResponse> spec;
 
     /**
@@ -79,7 +79,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
      * 
      */
-    @OutputExport(name="status", type=ServicePerimeterConfigResponse.class, parameters={})
+    @Export(name="status", type=ServicePerimeterConfigResponse.class, parameters={})
     private Output<ServicePerimeterConfigResponse> status;
 
     /**
@@ -93,7 +93,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Human readable title. Must be unique within the Policy.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
@@ -107,7 +107,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists for all Service Perimeters, and that spec is identical to the status for those Service Perimeters. When this flag is set, it inhibits the generation of the implicit spec, thereby allowing the user to explicitly provide a configuration ("spec") to use in a dry-run version of the Service Perimeter. This allows the user to test changes to the enforced config ("status") without actually enforcing them. This testing is done through analyzing the differences between currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True if any of the fields in the spec are set to non-default values.
      * 
      */
-    @OutputExport(name="useExplicitDryRunSpec", type=Boolean.class, parameters={})
+    @Export(name="useExplicitDryRunSpec", type=Boolean.class, parameters={})
     private Output<Boolean> useExplicitDryRunSpec;
 
     /**

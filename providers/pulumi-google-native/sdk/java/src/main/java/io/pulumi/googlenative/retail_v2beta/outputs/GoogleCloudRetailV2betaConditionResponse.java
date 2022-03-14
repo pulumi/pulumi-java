@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaConditionQueryTermResponse;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaConditionTimeRangeResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaConditionResponse {
     /**
      * Range of time(s) specifying when Condition is active. Condition true if any time range matches.
@@ -22,10 +22,10 @@ public final class GoogleCloudRetailV2betaConditionResponse {
      */
     private final List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaConditionResponse(
-        @OutputCustomType.Parameter("activeTimeRange") List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange,
-        @OutputCustomType.Parameter("queryTerms") List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
+        @CustomType.Parameter("activeTimeRange") List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange,
+        @CustomType.Parameter("queryTerms") List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
         this.activeTimeRange = activeTimeRange;
         this.queryTerms = queryTerms;
     }

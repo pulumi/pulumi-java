@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1alpha1.CutoverJobArgs;
@@ -27,7 +27,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * Details of the target VM in Compute Engine.
      * 
      */
-    @OutputExport(name="computeEngineTargetDetails", type=ComputeEngineTargetDetailsResponse.class, parameters={})
+    @Export(name="computeEngineTargetDetails", type=ComputeEngineTargetDetailsResponse.class, parameters={})
     private Output<ComputeEngineTargetDetailsResponse> computeEngineTargetDetails;
 
     /**
@@ -41,7 +41,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * The time the cutover job was created (as an API call, not when it was actually created in the target).
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -55,7 +55,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * Provides details for the errors that led to the Cutover Job's state.
      * 
      */
-    @OutputExport(name="error", type=StatusResponse.class, parameters={})
+    @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
@@ -69,7 +69,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * The name of the cutover job.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -83,7 +83,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * The current progress in percentage of the cutover job.
      * 
      */
-    @OutputExport(name="progress", type=Integer.class, parameters={})
+    @Export(name="progress", type=Integer.class, parameters={})
     private Output<Integer> progress;
 
     /**
@@ -97,7 +97,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * The current progress in percentage of the cutover job.
      * 
      */
-    @OutputExport(name="progressPercent", type=Integer.class, parameters={})
+    @Export(name="progressPercent", type=Integer.class, parameters={})
     private Output<Integer> progressPercent;
 
     /**
@@ -111,7 +111,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * State of the cutover job.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -125,7 +125,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * A message providing possible extra details about the current state.
      * 
      */
-    @OutputExport(name="stateMessage", type=String.class, parameters={})
+    @Export(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
     /**
@@ -139,7 +139,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * The time the state was last updated.
      * 
      */
-    @OutputExport(name="stateTime", type=String.class, parameters={})
+    @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**

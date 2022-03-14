@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
      * Time at which the certificate was last renewed. The renewal process is fully managed. Certificate renewal will automatically occur before the certificate expires. Renewal errors can be tracked via ManagementStatus.
      * 
      */
-    @InputImport(name="lastRenewalTime", required=true)
+    @Import(name="lastRenewalTime", required=true)
       private final String lastRenewalTime;
 
     public String getLastRenewalTime() {
@@ -31,7 +31,7 @@ public final class ManagedCertificateResponse extends io.pulumi.resources.Invoke
      * Status of certificate management. Refers to the most recent certificate acquisition or renewal attempt.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionResponse;
 import io.pulumi.googlenative.run_v1.inputs.ResourceRecordResponse;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final List<GoogleCloudRunV1ConditionResponse> conditions;
 
     public List<GoogleCloudRunV1ConditionResponse> getConditions() {
@@ -35,7 +35,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * The name of the route that the mapping currently points to.
      * 
      */
-    @InputImport(name="mappedRouteName", required=true)
+    @Import(name="mappedRouteName", required=true)
       private final String mappedRouteName;
 
     public String getMappedRouteName() {
@@ -46,7 +46,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * ObservedGeneration is the 'Generation' of the DomainMapping that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
      * 
      */
-    @InputImport(name="observedGeneration", required=true)
+    @Import(name="observedGeneration", required=true)
       private final Integer observedGeneration;
 
     public Integer getObservedGeneration() {
@@ -57,7 +57,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
      * 
      */
-    @InputImport(name="resourceRecords", required=true)
+    @Import(name="resourceRecords", required=true)
       private final List<ResourceRecordResponse> resourceRecords;
 
     public List<ResourceRecordResponse> getResourceRecords() {
@@ -68,7 +68,7 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
      * Optional. Cloud Run fully managed: not supported Cloud Run on GKE: supported Holds the URL that will serve the traffic of the DomainMapping.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

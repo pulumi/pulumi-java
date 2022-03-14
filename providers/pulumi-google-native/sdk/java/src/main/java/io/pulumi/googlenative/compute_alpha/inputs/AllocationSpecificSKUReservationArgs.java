@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
      * Specifies the number of resources that are allocated.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<String> count;
 
     public Output<String> getCount() {
@@ -34,7 +34,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
      * The instance properties for the reservation.
      * 
      */
-    @InputImport(name="instanceProperties")
+    @Import(name="instanceProperties")
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
     public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {

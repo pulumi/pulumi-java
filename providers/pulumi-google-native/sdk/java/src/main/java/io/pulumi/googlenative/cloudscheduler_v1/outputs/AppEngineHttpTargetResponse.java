@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudscheduler_v1.outputs.AppEngineRoutingResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppEngineHttpTargetResponse {
     /**
      * App Engine Routing setting for the job.
@@ -37,13 +37,13 @@ public final class AppEngineHttpTargetResponse {
      */
     private final String relativeUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppEngineHttpTargetResponse(
-        @OutputCustomType.Parameter("appEngineRouting") AppEngineRoutingResponse appEngineRouting,
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("headers") Map<String,String> headers,
-        @OutputCustomType.Parameter("httpMethod") String httpMethod,
-        @OutputCustomType.Parameter("relativeUri") String relativeUri) {
+        @CustomType.Parameter("appEngineRouting") AppEngineRoutingResponse appEngineRouting,
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("headers") Map<String,String> headers,
+        @CustomType.Parameter("httpMethod") String httpMethod,
+        @CustomType.Parameter("relativeUri") String relativeUri) {
         this.appEngineRouting = appEngineRouting;
         this.body = body;
         this.headers = headers;

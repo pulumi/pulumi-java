@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSnapshotArgs Empty = new GetSnapshotArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="snapshotId", required=true)
+    @Import(name="snapshotId", required=true)
       private final String snapshotId;
 
     public String getSnapshotId() {
         return this.snapshotId;
     }
 
-    @InputImport(name="volumeId", required=true)
+    @Import(name="volumeId", required=true)
       private final String volumeId;
 
     public String getVolumeId() {

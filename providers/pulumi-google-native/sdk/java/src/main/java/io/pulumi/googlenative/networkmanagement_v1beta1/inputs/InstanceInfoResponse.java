@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of a Compute Engine instance.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -32,7 +32,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * External IP address of the network interface.
      * 
      */
-    @InputImport(name="externalIp", required=true)
+    @Import(name="externalIp", required=true)
       private final String externalIp;
 
     public String getExternalIp() {
@@ -43,7 +43,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the network interface of a Compute Engine instance.
      * 
      */
-    @InputImport(name="interface", required=true)
+    @Import(name="interface", required=true)
       private final String $interface;
 
     public String get$interface() {
@@ -54,7 +54,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Internal IP address of the network interface.
      * 
      */
-    @InputImport(name="internalIp", required=true)
+    @Import(name="internalIp", required=true)
       private final String internalIp;
 
     public String getInternalIp() {
@@ -65,7 +65,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Network tags configured on the instance.
      * 
      */
-    @InputImport(name="networkTags", required=true)
+    @Import(name="networkTags", required=true)
       private final List<String> networkTags;
 
     public List<String> getNetworkTags() {
@@ -76,7 +76,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * URI of a Compute Engine network.
      * 
      */
-    @InputImport(name="networkUri", required=true)
+    @Import(name="networkUri", required=true)
       private final String networkUri;
 
     public String getNetworkUri() {
@@ -87,7 +87,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Service account authorized for the instance.
      * 
      */
-    @InputImport(name="serviceAccount", required=true)
+    @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
     public String getServiceAccount() {
@@ -98,7 +98,7 @@ public final class InstanceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * URI of a Compute Engine instance.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

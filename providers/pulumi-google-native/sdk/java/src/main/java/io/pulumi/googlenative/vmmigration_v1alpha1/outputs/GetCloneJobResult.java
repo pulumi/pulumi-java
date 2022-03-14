@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCloneJobResult {
     /**
      * Details of the target VM in Compute Engine.
@@ -42,14 +42,14 @@ public final class GetCloneJobResult {
      */
     private final String stateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloneJobResult(
-        @OutputCustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateTime") String stateTime) {
+        @CustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateTime") String stateTime) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         this.createTime = createTime;
         this.error = error;

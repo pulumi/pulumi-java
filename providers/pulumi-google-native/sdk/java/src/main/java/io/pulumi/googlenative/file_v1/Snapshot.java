@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.file_v1.SnapshotArgs;
@@ -23,7 +23,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The time when the snapshot was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -51,7 +51,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The amount of bytes needed to allocate a full copy of the snapshot content
      * 
      */
-    @OutputExport(name="filesystemUsedBytes", type=String.class, parameters={})
+    @Export(name="filesystemUsedBytes", type=String.class, parameters={})
     private Output<String> filesystemUsedBytes;
 
     /**
@@ -65,7 +65,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -79,7 +79,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The resource name of the snapshot, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{snapshot_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The snapshot state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

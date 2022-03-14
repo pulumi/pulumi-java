@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EventHandlerResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse {
     /**
      * The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
      */
     private final List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorResponse(
-        @OutputCustomType.Parameter("initialPromptFulfillment") GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment,
-        @OutputCustomType.Parameter("repromptEventHandlers") List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers) {
+        @CustomType.Parameter("initialPromptFulfillment") GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment,
+        @CustomType.Parameter("repromptEventHandlers") List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers) {
         this.initialPromptFulfillment = initialPromptFulfillment;
         this.repromptEventHandlers = repromptEventHandlers;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalerStatusDetailsResponse {
     /**
      * The status message.
@@ -20,10 +20,10 @@ public final class AutoscalerStatusDetailsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalerStatusDetailsResponse(
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("type") String type) {
         this.message = message;
         this.type = type;
     }

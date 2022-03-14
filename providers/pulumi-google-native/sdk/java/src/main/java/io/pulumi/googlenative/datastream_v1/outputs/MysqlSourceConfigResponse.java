@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlRdbmsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MysqlSourceConfigResponse {
     /**
      * MySQL objects to exclude from the stream.
@@ -20,10 +20,10 @@ public final class MysqlSourceConfigResponse {
      */
     private final MysqlRdbmsResponse includeObjects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlSourceConfigResponse(
-        @OutputCustomType.Parameter("excludeObjects") MysqlRdbmsResponse excludeObjects,
-        @OutputCustomType.Parameter("includeObjects") MysqlRdbmsResponse includeObjects) {
+        @CustomType.Parameter("excludeObjects") MysqlRdbmsResponse excludeObjects,
+        @CustomType.Parameter("includeObjects") MysqlRdbmsResponse includeObjects) {
         this.excludeObjects = excludeObjects;
         this.includeObjects = includeObjects;
     }

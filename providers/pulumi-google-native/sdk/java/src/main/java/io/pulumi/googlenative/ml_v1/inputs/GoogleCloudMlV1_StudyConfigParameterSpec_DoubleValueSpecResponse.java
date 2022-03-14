@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
      * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
      * 
      */
-    @InputImport(name="maxValue", required=true)
+    @Import(name="maxValue", required=true)
       private final Double maxValue;
 
     public Double getMaxValue() {
@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
      * Must be specified if type is `DOUBLE`. Minimum value of the parameter.
      * 
      */
-    @InputImport(name="minValue", required=true)
+    @Import(name="minValue", required=true)
       private final Double minValue;
 
     public Double getMinValue() {

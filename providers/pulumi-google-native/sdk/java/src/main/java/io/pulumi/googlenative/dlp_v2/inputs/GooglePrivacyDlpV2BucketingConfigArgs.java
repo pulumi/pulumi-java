@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BucketArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2BucketingConfigArgs extends io.pulumi.resou
      * Set of buckets. Ranges must be non-overlapping.
      * 
      */
-    @InputImport(name="buckets")
+    @Import(name="buckets")
       private final @Nullable Output<List<GooglePrivacyDlpV2BucketArgs>> buckets;
 
     public Output<List<GooglePrivacyDlpV2BucketArgs>> getBuckets() {

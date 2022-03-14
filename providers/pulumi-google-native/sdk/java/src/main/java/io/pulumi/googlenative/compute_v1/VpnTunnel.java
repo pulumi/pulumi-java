@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.VpnTunnelArgs;
@@ -23,7 +23,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -37,7 +37,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -51,7 +51,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Detailed status message for the VPN tunnel.
      * 
      */
-    @OutputExport(name="detailedStatus", type=String.class, parameters={})
+    @Export(name="detailedStatus", type=String.class, parameters={})
     private Output<String> detailedStatus;
 
     /**
@@ -65,7 +65,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * IKE protocol version to use when establishing the VPN tunnel with the peer VPN gateway. Acceptable IKE versions are 1 or 2. The default version is 2.
      * 
      */
-    @OutputExport(name="ikeVersion", type=Integer.class, parameters={})
+    @Export(name="ikeVersion", type=Integer.class, parameters={})
     private Output<Integer> ikeVersion;
 
     /**
@@ -79,7 +79,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Type of resource. Always compute#vpnTunnel for VPN tunnels.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -93,7 +93,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Local traffic selector to use when establishing the VPN tunnel with the peer VPN gateway. The value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges must be disjoint. Only IPv4 is supported.
      * 
      */
-    @OutputExport(name="localTrafficSelector", type=List.class, parameters={String.class})
+    @Export(name="localTrafficSelector", type=List.class, parameters={String.class})
     private Output<List<String>> localTrafficSelector;
 
     /**
@@ -107,7 +107,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * URL of the peer side external VPN gateway to which this VPN tunnel is connected. Provided by the client when the VPN tunnel is created. This field is exclusive with the field peerGcpGateway.
      * 
      */
-    @OutputExport(name="peerExternalGateway", type=String.class, parameters={})
+    @Export(name="peerExternalGateway", type=String.class, parameters={})
     private Output<String> peerExternalGateway;
 
     /**
@@ -135,7 +135,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * The interface ID of the external VPN gateway to which this VPN tunnel is connected. Provided by the client when the VPN tunnel is created.
      * 
      */
-    @OutputExport(name="peerExternalGatewayInterface", type=Integer.class, parameters={})
+    @Export(name="peerExternalGatewayInterface", type=Integer.class, parameters={})
     private Output<Integer> peerExternalGatewayInterface;
 
     /**
@@ -149,7 +149,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected. Provided by the client when the VPN tunnel is created. This field can be used when creating highly available VPN from VPC network to VPC network, the field is exclusive with the field peerExternalGateway. If provided, the VPN tunnel will automatically use the same vpnGatewayInterface ID in the peer GCP VPN gateway.
      * 
      */
-    @OutputExport(name="peerGcpGateway", type=String.class, parameters={})
+    @Export(name="peerGcpGateway", type=String.class, parameters={})
     private Output<String> peerGcpGateway;
 
     /**
@@ -163,7 +163,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * IP address of the peer VPN gateway. Only IPv4 is supported.
      * 
      */
-    @OutputExport(name="peerIp", type=String.class, parameters={})
+    @Export(name="peerIp", type=String.class, parameters={})
     private Output<String> peerIp;
 
     /**
@@ -177,7 +177,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * URL of the region where the VPN tunnel resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -191,7 +191,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Remote traffic selectors to use when establishing the VPN tunnel with the peer VPN gateway. The value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be disjoint. Only IPv4 is supported.
      * 
      */
-    @OutputExport(name="remoteTrafficSelector", type=List.class, parameters={String.class})
+    @Export(name="remoteTrafficSelector", type=List.class, parameters={String.class})
     private Output<List<String>> remoteTrafficSelector;
 
     /**
@@ -205,7 +205,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * URL of the router resource to be used for dynamic routing.
      * 
      */
-    @OutputExport(name="router", type=String.class, parameters={})
+    @Export(name="router", type=String.class, parameters={})
     private Output<String> router;
 
     /**
@@ -219,7 +219,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -233,7 +233,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Shared secret used to set the secure session between the Cloud VPN gateway and the peer VPN gateway.
      * 
      */
-    @OutputExport(name="sharedSecret", type=String.class, parameters={})
+    @Export(name="sharedSecret", type=String.class, parameters={})
     private Output<String> sharedSecret;
 
     /**
@@ -247,7 +247,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * Hash of the shared secret.
      * 
      */
-    @OutputExport(name="sharedSecretHash", type=String.class, parameters={})
+    @Export(name="sharedSecretHash", type=String.class, parameters={})
     private Output<String> sharedSecretHash;
 
     /**
@@ -261,7 +261,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * The status of the VPN tunnel, which can be one of the following: - PROVISIONING: Resource is being allocated for the VPN tunnel. - WAITING_FOR_FULL_CONFIG: Waiting to receive all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule, and Route resources are needed to setup the VPN tunnel. - FIRST_HANDSHAKE: Successful first handshake with the peer VPN. - ESTABLISHED: Secure session is successfully established with the peer VPN. - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS - AUTHORIZATION_ERROR: Auth error (for example, bad shared secret). - NEGOTIATION_FAILURE: Handshake failed. - DEPROVISIONING: Resources are being deallocated for the VPN tunnel. - FAILED: Tunnel creation has failed and the tunnel is not ready to be used. - NO_INCOMING_PACKETS: No incoming packets from peer. - REJECTED: Tunnel configuration was rejected, can be result of being denied access. - ALLOCATING_RESOURCES: Cloud VPN is in the process of allocating all required resources. - STOPPED: Tunnel is stopped due to its Forwarding Rules being deleted for Classic VPN tunnels or the project is in frozen state. - PEER_IDENTITY_MISMATCH: Peer identity does not match peer IP, probably behind NAT. - TS_NARROWING_NOT_ALLOWED: Traffic selector narrowing not allowed for an HA-VPN tunnel.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -275,7 +275,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * URL of the Target VPN gateway with which this VPN tunnel is associated. Provided by the client when the VPN tunnel is created.
      * 
      */
-    @OutputExport(name="targetVpnGateway", type=String.class, parameters={})
+    @Export(name="targetVpnGateway", type=String.class, parameters={})
     private Output<String> targetVpnGateway;
 
     /**
@@ -289,7 +289,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * URL of the VPN gateway with which this VPN tunnel is associated. Provided by the client when the VPN tunnel is created. This must be used (instead of target_vpn_gateway) if a High Availability VPN gateway resource is created.
      * 
      */
-    @OutputExport(name="vpnGateway", type=String.class, parameters={})
+    @Export(name="vpnGateway", type=String.class, parameters={})
     private Output<String> vpnGateway;
 
     /**
@@ -303,7 +303,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * The interface ID of the VPN gateway with which this VPN tunnel is associated.
      * 
      */
-    @OutputExport(name="vpnGatewayInterface", type=Integer.class, parameters={})
+    @Export(name="vpnGatewayInterface", type=Integer.class, parameters={})
     private Output<Integer> vpnGatewayInterface;
 
     /**

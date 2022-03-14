@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.LocalCopyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
@@ -34,7 +34,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * Human-readable description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.
      * 
      */
-    @InputImport(name="localCopy")
+    @Import(name="localCopy")
       private final @Nullable Output<LocalCopyArgs> localCopy;
 
     public Output<LocalCopyArgs> getLocalCopy() {
@@ -56,7 +56,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
      * Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

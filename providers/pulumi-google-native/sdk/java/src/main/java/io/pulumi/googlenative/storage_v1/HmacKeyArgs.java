@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HmacKeyArgs Empty = new HmacKeyArgs();
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
-    @InputImport(name="userProject")
+    @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
     public Output<String> getUserProject() {

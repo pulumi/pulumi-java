@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
      * If set to true, enables Cloud Armor Machine Learning.
      * 
      */
-    @InputImport(name="layer7DdosDefenseConfig")
+    @Import(name="layer7DdosDefenseConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> getLayer7DdosDefenseConfig() {

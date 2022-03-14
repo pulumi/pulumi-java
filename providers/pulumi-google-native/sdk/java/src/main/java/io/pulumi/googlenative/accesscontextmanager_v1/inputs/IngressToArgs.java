@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ApiOperationArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
      * A list of ApiOperations allowed to be performed by the sources specified in corresponding IngressFrom in this ServicePerimeter.
      * 
      */
-    @InputImport(name="operations")
+    @Import(name="operations")
       private final @Nullable Output<List<ApiOperationArgs>> operations;
 
     public Output<List<ApiOperationArgs>> getOperations() {
@@ -35,7 +35,7 @@ public final class IngressToArgs extends io.pulumi.resources.ResourceArgs {
      * A list of resources, currently only projects in the form `projects/`, protected by this ServicePerimeter that are allowed to be accessed by sources defined in the corresponding IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter are allowed.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.LocalObjectReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigMapEnvSourceResponse {
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
@@ -27,11 +27,11 @@ public final class ConfigMapEnvSourceResponse {
      */
     private final Boolean optional;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigMapEnvSourceResponse(
-        @OutputCustomType.Parameter("localObjectReference") LocalObjectReferenceResponse localObjectReference,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("optional") Boolean optional) {
+        @CustomType.Parameter("localObjectReference") LocalObjectReferenceResponse localObjectReference,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("optional") Boolean optional) {
         this.localObjectReference = localObjectReference;
         this.name = name;
         this.optional = optional;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
      * Indicates the reason code for a configuration failure.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -31,7 +31,7 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
      * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
      * 
      */
-    @InputImport(name="fieldName", required=true)
+    @Import(name="fieldName", required=true)
       private final String fieldName;
 
     public String getFieldName() {

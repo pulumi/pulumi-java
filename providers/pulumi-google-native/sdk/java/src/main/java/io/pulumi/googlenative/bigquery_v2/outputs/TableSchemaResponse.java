@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableFieldSchemaResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableSchemaResponse {
     /**
      * Describes the fields in a table.
@@ -16,8 +16,8 @@ public final class TableSchemaResponse {
      */
     private final List<TableFieldSchemaResponse> fields;
 
-    @OutputCustomType.Constructor
-    private TableSchemaResponse(@OutputCustomType.Parameter("fields") List<TableFieldSchemaResponse> fields) {
+    @CustomType.Constructor
+    private TableSchemaResponse(@CustomType.Parameter("fields") List<TableFieldSchemaResponse> fields) {
         this.fields = fields;
     }
 

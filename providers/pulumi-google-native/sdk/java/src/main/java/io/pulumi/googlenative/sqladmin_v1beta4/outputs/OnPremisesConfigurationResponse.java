@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.InstanceReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OnPremisesConfigurationResponse {
     /**
      * PEM representation of the trusted CA's x509 certificate.
@@ -56,17 +56,17 @@ public final class OnPremisesConfigurationResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnPremisesConfigurationResponse(
-        @OutputCustomType.Parameter("caCertificate") String caCertificate,
-        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
-        @OutputCustomType.Parameter("clientKey") String clientKey,
-        @OutputCustomType.Parameter("dumpFilePath") String dumpFilePath,
-        @OutputCustomType.Parameter("hostPort") String hostPort,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("sourceInstance") InstanceReferenceResponse sourceInstance,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("caCertificate") String caCertificate,
+        @CustomType.Parameter("clientCertificate") String clientCertificate,
+        @CustomType.Parameter("clientKey") String clientKey,
+        @CustomType.Parameter("dumpFilePath") String dumpFilePath,
+        @CustomType.Parameter("hostPort") String hostPort,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("sourceInstance") InstanceReferenceResponse sourceInstance,
+        @CustomType.Parameter("username") String username) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

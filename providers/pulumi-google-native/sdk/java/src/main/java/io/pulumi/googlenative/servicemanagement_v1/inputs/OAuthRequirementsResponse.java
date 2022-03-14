@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class OAuthRequirementsResponse extends io.pulumi.resources.InvokeA
      * The list of publicly documented OAuth scopes that are allowed access. An OAuth token containing any of these scopes will be accepted. Example: canonical_scopes: https://www.googleapis.com/auth/calendar, https://www.googleapis.com/auth/calendar.read
      * 
      */
-    @InputImport(name="canonicalScopes", required=true)
+    @Import(name="canonicalScopes", required=true)
       private final String canonicalScopes;
 
     public String getCanonicalScopes() {

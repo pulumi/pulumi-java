@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDeveloperResult {
     /**
      * Access type.
@@ -82,22 +82,22 @@ public final class GetDeveloperResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeveloperResult(
-        @OutputCustomType.Parameter("accessType") String accessType,
-        @OutputCustomType.Parameter("appFamily") String appFamily,
-        @OutputCustomType.Parameter("apps") List<String> apps,
-        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        @OutputCustomType.Parameter("companies") List<String> companies,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("developerId") String developerId,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("firstName") String firstName,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("lastName") String lastName,
-        @OutputCustomType.Parameter("organizationName") String organizationName,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("accessType") String accessType,
+        @CustomType.Parameter("appFamily") String appFamily,
+        @CustomType.Parameter("apps") List<String> apps,
+        @CustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @CustomType.Parameter("companies") List<String> companies,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("developerId") String developerId,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("firstName") String firstName,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("lastName") String lastName,
+        @CustomType.Parameter("organizationName") String organizationName,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("userName") String userName) {
         this.accessType = accessType;
         this.appFamily = appFamily;
         this.apps = apps;

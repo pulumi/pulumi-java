@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
      * Optional. When true, publishes each CertificateAuthority's CA certificate and includes its URL in the "Authority Information Access" X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.
      * 
      */
-    @InputImport(name="publishCaCert")
+    @Import(name="publishCaCert")
       private final @Nullable Output<Boolean> publishCaCert;
 
     public Output<Boolean> getPublishCaCert() {
@@ -33,7 +33,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
      * Optional. When true, publishes each CertificateAuthority's CRL and includes its URL in the "CRL Distribution Points" X.509 extension in all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not be written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
      * 
      */
-    @InputImport(name="publishCrl")
+    @Import(name="publishCrl")
       private final @Nullable Output<Boolean> publishCrl;
 
     public Output<Boolean> getPublishCrl() {

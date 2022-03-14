@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketAccessControlResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketAutoclassResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketBillingResponse;
@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketResult {
     /**
      * Access controls on the bucket.
@@ -172,37 +172,37 @@ public final class GetBucketResult {
      */
     private final BucketWebsiteResponse website;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketResult(
-        @OutputCustomType.Parameter("acl") List<BucketAccessControlResponse> acl,
-        @OutputCustomType.Parameter("autoclass") BucketAutoclassResponse autoclass,
-        @OutputCustomType.Parameter("billing") BucketBillingResponse billing,
-        @OutputCustomType.Parameter("cors") List<BucketCorsItemResponse> cors,
-        @OutputCustomType.Parameter("customPlacementConfig") BucketCustomPlacementConfigResponse customPlacementConfig,
-        @OutputCustomType.Parameter("defaultEventBasedHold") Boolean defaultEventBasedHold,
-        @OutputCustomType.Parameter("defaultObjectAcl") List<ObjectAccessControlResponse> defaultObjectAcl,
-        @OutputCustomType.Parameter("encryption") BucketEncryptionResponse encryption,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("iamConfiguration") BucketIamConfigurationResponse iamConfiguration,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lifecycle") BucketLifecycleResponse lifecycle,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("locationType") String locationType,
-        @OutputCustomType.Parameter("logging") BucketLoggingResponse logging,
-        @OutputCustomType.Parameter("metageneration") String metageneration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owner") BucketOwnerResponse owner,
-        @OutputCustomType.Parameter("projectNumber") String projectNumber,
-        @OutputCustomType.Parameter("retentionPolicy") BucketRetentionPolicyResponse retentionPolicy,
-        @OutputCustomType.Parameter("rpo") String rpo,
-        @OutputCustomType.Parameter("satisfiesPZS") Boolean satisfiesPZS,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("storageClass") String storageClass,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated,
-        @OutputCustomType.Parameter("updated") String updated,
-        @OutputCustomType.Parameter("versioning") BucketVersioningResponse versioning,
-        @OutputCustomType.Parameter("website") BucketWebsiteResponse website) {
+        @CustomType.Parameter("acl") List<BucketAccessControlResponse> acl,
+        @CustomType.Parameter("autoclass") BucketAutoclassResponse autoclass,
+        @CustomType.Parameter("billing") BucketBillingResponse billing,
+        @CustomType.Parameter("cors") List<BucketCorsItemResponse> cors,
+        @CustomType.Parameter("customPlacementConfig") BucketCustomPlacementConfigResponse customPlacementConfig,
+        @CustomType.Parameter("defaultEventBasedHold") Boolean defaultEventBasedHold,
+        @CustomType.Parameter("defaultObjectAcl") List<ObjectAccessControlResponse> defaultObjectAcl,
+        @CustomType.Parameter("encryption") BucketEncryptionResponse encryption,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("iamConfiguration") BucketIamConfigurationResponse iamConfiguration,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lifecycle") BucketLifecycleResponse lifecycle,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("locationType") String locationType,
+        @CustomType.Parameter("logging") BucketLoggingResponse logging,
+        @CustomType.Parameter("metageneration") String metageneration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owner") BucketOwnerResponse owner,
+        @CustomType.Parameter("projectNumber") String projectNumber,
+        @CustomType.Parameter("retentionPolicy") BucketRetentionPolicyResponse retentionPolicy,
+        @CustomType.Parameter("rpo") String rpo,
+        @CustomType.Parameter("satisfiesPZS") Boolean satisfiesPZS,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("storageClass") String storageClass,
+        @CustomType.Parameter("timeCreated") String timeCreated,
+        @CustomType.Parameter("updated") String updated,
+        @CustomType.Parameter("versioning") BucketVersioningResponse versioning,
+        @CustomType.Parameter("website") BucketWebsiteResponse website) {
         this.acl = acl;
         this.autoclass = autoclass;
         this.billing = billing;

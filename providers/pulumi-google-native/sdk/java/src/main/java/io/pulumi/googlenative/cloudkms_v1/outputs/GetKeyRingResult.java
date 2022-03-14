@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyRingResult {
     /**
      * The time at which this KeyRing was created.
@@ -20,10 +20,10 @@ public final class GetKeyRingResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyRingResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("name") String name) {
         this.createTime = createTime;
         this.name = name;
     }

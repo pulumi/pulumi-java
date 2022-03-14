@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * Access type.
      * 
      */
-    @InputImport(name="accessType")
+    @Import(name="accessType")
       private final @Nullable Output<String> accessType;
 
     public Output<String> getAccessType() {
@@ -31,7 +31,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * Developer app family.
      * 
      */
-    @InputImport(name="appFamily")
+    @Import(name="appFamily")
       private final @Nullable Output<String> appFamily;
 
     public Output<String> getAppFamily() {
@@ -42,7 +42,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * List of apps associated with the developer.
      * 
      */
-    @InputImport(name="apps")
+    @Import(name="apps")
       private final @Nullable Output<List<String>> apps;
 
     public Output<List<String>> getApps() {
@@ -53,7 +53,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Developer attributes (name/value pairs). The custom attribute limit is 18.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
     public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
@@ -64,7 +64,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * List of companies associated with the developer.
      * 
      */
-    @InputImport(name="companies")
+    @Import(name="companies")
       private final @Nullable Output<List<String>> companies;
 
     public Output<List<String>> getCompanies() {
@@ -75,7 +75,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the developer. **Note**: IDs are generated internally by Apigee and are not guaranteed to stay the same over time.
      * 
      */
-    @InputImport(name="developerId")
+    @Import(name="developerId")
       private final @Nullable Output<String> developerId;
 
     public Output<String> getDeveloperId() {
@@ -86,7 +86,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * Email address of the developer. This value is used to uniquely identify the developer in Apigee hybrid. Note that the email address has to be in lowercase only.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final Output<String> email;
 
     public Output<String> getEmail() {
@@ -97,7 +97,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * First name of the developer.
      * 
      */
-    @InputImport(name="firstName", required=true)
+    @Import(name="firstName", required=true)
       private final Output<String> firstName;
 
     public Output<String> getFirstName() {
@@ -108,14 +108,14 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * Last name of the developer.
      * 
      */
-    @InputImport(name="lastName", required=true)
+    @Import(name="lastName", required=true)
       private final Output<String> lastName;
 
     public Output<String> getLastName() {
         return this.lastName;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -126,7 +126,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
      * User name of the developer. Not used by Apigee hybrid.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

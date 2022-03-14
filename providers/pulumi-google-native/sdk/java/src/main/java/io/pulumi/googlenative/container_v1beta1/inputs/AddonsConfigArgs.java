@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.CloudRunConfigArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.ConfigConnectorConfigArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.DnsCacheConfigArgs;
@@ -33,7 +33,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to enable Cloud Run addon. This option can only be enabled at cluster creation time.
      * 
      */
-    @InputImport(name="cloudRunConfig")
+    @Import(name="cloudRunConfig")
       private final @Nullable Output<CloudRunConfigArgs> cloudRunConfig;
 
     public Output<CloudRunConfigArgs> getCloudRunConfig() {
@@ -44,7 +44,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
      * 
      */
-    @InputImport(name="configConnectorConfig")
+    @Import(name="configConnectorConfig")
       private final @Nullable Output<ConfigConnectorConfigArgs> configConnectorConfig;
 
     public Output<ConfigConnectorConfigArgs> getConfigConnectorConfig() {
@@ -55,7 +55,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
      * 
      */
-    @InputImport(name="dnsCacheConfig")
+    @Import(name="dnsCacheConfig")
       private final @Nullable Output<DnsCacheConfigArgs> dnsCacheConfig;
 
     public Output<DnsCacheConfigArgs> getDnsCacheConfig() {
@@ -66,7 +66,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the Compute Engine Persistent Disk CSI driver.
      * 
      */
-    @InputImport(name="gcePersistentDiskCsiDriverConfig")
+    @Import(name="gcePersistentDiskCsiDriverConfig")
       private final @Nullable Output<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
 
     public Output<GcePersistentDiskCsiDriverConfigArgs> getGcePersistentDiskCsiDriverConfig() {
@@ -77,7 +77,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the GCP Filestore CSI driver.
      * 
      */
-    @InputImport(name="gcpFilestoreCsiDriverConfig")
+    @Import(name="gcpFilestoreCsiDriverConfig")
       private final @Nullable Output<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
 
     public Output<GcpFilestoreCsiDriverConfigArgs> getGcpFilestoreCsiDriverConfig() {
@@ -88,7 +88,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the Backup for GKE agent addon.
      * 
      */
-    @InputImport(name="gkeBackupAgentConfig")
+    @Import(name="gkeBackupAgentConfig")
       private final @Nullable Output<GkeBackupAgentConfigArgs> gkeBackupAgentConfig;
 
     public Output<GkeBackupAgentConfigArgs> getGkeBackupAgentConfig() {
@@ -99,7 +99,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
      * 
      */
-    @InputImport(name="horizontalPodAutoscaling")
+    @Import(name="horizontalPodAutoscaling")
       private final @Nullable Output<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
 
     public Output<HorizontalPodAutoscalingArgs> getHorizontalPodAutoscaling() {
@@ -110,7 +110,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
      * 
      */
-    @InputImport(name="httpLoadBalancing")
+    @Import(name="httpLoadBalancing")
       private final @Nullable Output<HttpLoadBalancingArgs> httpLoadBalancing;
 
     public Output<HttpLoadBalancingArgs> getHttpLoadBalancing() {
@@ -121,7 +121,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for Istio, an open platform to connect, manage, and secure microservices.
      * 
      */
-    @InputImport(name="istioConfig")
+    @Import(name="istioConfig")
       private final @Nullable Output<IstioConfigArgs> istioConfig;
 
     public Output<IstioConfigArgs> getIstioConfig() {
@@ -132,7 +132,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the KALM addon, which manages the lifecycle of k8s applications.
      * 
      */
-    @InputImport(name="kalmConfig")
+    @Import(name="kalmConfig")
       private final @Nullable Output<KalmConfigArgs> kalmConfig;
 
     public Output<KalmConfigArgs> getKalmConfig() {
@@ -143,7 +143,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * 
      */
-    @InputImport(name="kubernetesDashboard")
+    @Import(name="kubernetesDashboard")
       private final @Nullable Output<KubernetesDashboardArgs> kubernetesDashboard;
 
     public Output<KubernetesDashboardArgs> getKubernetesDashboard() {
@@ -154,7 +154,7 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
      * 
      */
-    @InputImport(name="networkPolicyConfig")
+    @Import(name="networkPolicyConfig")
       private final @Nullable Output<NetworkPolicyConfigArgs> networkPolicyConfig;
 
     public Output<NetworkPolicyConfigArgs> getNetworkPolicyConfig() {

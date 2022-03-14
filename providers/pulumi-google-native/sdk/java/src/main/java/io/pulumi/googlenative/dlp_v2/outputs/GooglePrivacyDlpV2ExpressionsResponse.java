@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ConditionsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ExpressionsResponse {
     /**
      * Conditions to apply to the expression.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
      */
     private final String logicalOperator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ExpressionsResponse(
-        @OutputCustomType.Parameter("conditions") GooglePrivacyDlpV2ConditionsResponse conditions,
-        @OutputCustomType.Parameter("logicalOperator") String logicalOperator) {
+        @CustomType.Parameter("conditions") GooglePrivacyDlpV2ConditionsResponse conditions,
+        @CustomType.Parameter("logicalOperator") String logicalOperator) {
         this.conditions = conditions;
         this.logicalOperator = logicalOperator;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GitRepoSourceResponse extends io.pulumi.resources.InvokeArgs 
      * The branch or tag to use. Must start with "refs/" (required).
      * 
      */
-    @InputImport(name="ref", required=true)
+    @Import(name="ref", required=true)
       private final String ref;
 
     public String getRef() {
@@ -31,7 +31,7 @@ public final class GitRepoSourceResponse extends io.pulumi.resources.InvokeArgs 
      * See RepoType below.
      * 
      */
-    @InputImport(name="repoType", required=true)
+    @Import(name="repoType", required=true)
       private final String repoType;
 
     public String getRepoType() {
@@ -42,7 +42,7 @@ public final class GitRepoSourceResponse extends io.pulumi.resources.InvokeArgs 
      * The URI of the repo (required).
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScriptStackFrameResponse {
     /**
      * One-based end column.
@@ -41,14 +41,14 @@ public final class ScriptStackFrameResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScriptStackFrameResponse(
-        @OutputCustomType.Parameter("endColumn") Integer endColumn,
-        @OutputCustomType.Parameter("endLine") Integer endLine,
-        @OutputCustomType.Parameter("procedureId") String procedureId,
-        @OutputCustomType.Parameter("startColumn") Integer startColumn,
-        @OutputCustomType.Parameter("startLine") Integer startLine,
-        @OutputCustomType.Parameter("text") String text) {
+        @CustomType.Parameter("endColumn") Integer endColumn,
+        @CustomType.Parameter("endLine") Integer endLine,
+        @CustomType.Parameter("procedureId") String procedureId,
+        @CustomType.Parameter("startColumn") Integer startColumn,
+        @CustomType.Parameter("startLine") Integer startLine,
+        @CustomType.Parameter("text") String text) {
         this.endColumn = endColumn;
         this.endLine = endLine;
         this.procedureId = procedureId;

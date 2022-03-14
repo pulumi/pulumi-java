@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * Domain name of the host in Punycode format.
      * 
      */
-    @InputImport(name="hostName", required=true)
+    @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -34,7 +34,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
      * 
      */
-    @InputImport(name="ipv4Addresses")
+    @Import(name="ipv4Addresses")
       private final @Nullable Output<List<String>> ipv4Addresses;
 
     public Output<List<String>> getIpv4Addresses() {
@@ -45,7 +45,7 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
      * 
      */
-    @InputImport(name="ipv6Addresses")
+    @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
     public Output<List<String>> getIpv6Addresses() {

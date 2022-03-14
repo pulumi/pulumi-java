@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetadataExportResponse {
     /**
      * The type of the database dump.
@@ -35,13 +35,13 @@ public final class MetadataExportResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataExportResponse(
-        @OutputCustomType.Parameter("databaseDumpType") String databaseDumpType,
-        @OutputCustomType.Parameter("destinationGcsUri") String destinationGcsUri,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("databaseDumpType") String databaseDumpType,
+        @CustomType.Parameter("destinationGcsUri") String destinationGcsUri,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state) {
         this.databaseDumpType = databaseDumpType;
         this.destinationGcsUri = destinationGcsUri;
         this.endTime = endTime;

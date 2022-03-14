@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.HttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpRedirectActionResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpRouteActionResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpRouteRuleResponse {
     /**
      * The short description conveying the intent of this routeRule. The description can have a maximum length of 1024 characters.
@@ -51,15 +51,15 @@ public final class HttpRouteRuleResponse {
      */
     private final HttpRedirectActionResponse urlRedirect;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRouteRuleResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
-        @OutputCustomType.Parameter("matchRules") List<HttpRouteRuleMatchResponse> matchRules,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("routeAction") HttpRouteActionResponse routeAction,
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("urlRedirect") HttpRedirectActionResponse urlRedirect) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @CustomType.Parameter("matchRules") List<HttpRouteRuleMatchResponse> matchRules,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("routeAction") HttpRouteActionResponse routeAction,
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("urlRedirect") HttpRedirectActionResponse urlRedirect) {
         this.description = description;
         this.headerAction = headerAction;
         this.matchRules = matchRules;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ZypperRepositoryResponse {
     /**
      * The location of the repository directory.
@@ -26,11 +26,11 @@ public final class ZypperRepositoryResponse {
      */
     private final List<String> gpgKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ZypperRepositoryResponse(
-        @OutputCustomType.Parameter("baseUrl") String baseUrl,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("gpgKeys") List<String> gpgKeys) {
+        @CustomType.Parameter("baseUrl") String baseUrl,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("gpgKeys") List<String> gpgKeys) {
         this.baseUrl = baseUrl;
         this.displayName = displayName;
         this.gpgKeys = gpgKeys;

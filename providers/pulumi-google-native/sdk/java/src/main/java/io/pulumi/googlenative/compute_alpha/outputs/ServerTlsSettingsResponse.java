@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.TlsContextResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerTlsSettingsResponse {
     /**
      * Configures the mechanism to obtain security certificates and identity information.
@@ -27,11 +27,11 @@ public final class ServerTlsSettingsResponse {
      */
     private final String tlsMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerTlsSettingsResponse(
-        @OutputCustomType.Parameter("proxyTlsContext") TlsContextResponse proxyTlsContext,
-        @OutputCustomType.Parameter("subjectAltNames") List<String> subjectAltNames,
-        @OutputCustomType.Parameter("tlsMode") String tlsMode) {
+        @CustomType.Parameter("proxyTlsContext") TlsContextResponse proxyTlsContext,
+        @CustomType.Parameter("subjectAltNames") List<String> subjectAltNames,
+        @CustomType.Parameter("tlsMode") String tlsMode) {
         this.proxyTlsContext = proxyTlsContext;
         this.subjectAltNames = subjectAltNames;
         this.tlsMode = tlsMode;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.AsyncOptionsArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.InputMappingArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.ValidationOptionsArgs;
@@ -26,7 +26,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Options regarding how to thread async requests.
      * 
      */
-    @InputImport(name="asyncOptions")
+    @Import(name="asyncOptions")
       private final @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
 
     public Output<List<AsyncOptionsArgs>> getAsyncOptions() {
@@ -37,7 +37,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The mappings that apply for requests.
      * 
      */
-    @InputImport(name="inputMappings")
+    @Import(name="inputMappings")
       private final @Nullable Output<List<InputMappingArgs>> inputMappings;
 
     public Output<List<InputMappingArgs>> getInputMappings() {
@@ -48,7 +48,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
      * 
      */
-    @InputImport(name="nameProperty")
+    @Import(name="nameProperty")
       private final @Nullable Output<String> nameProperty;
 
     public Output<String> getNameProperty() {
@@ -59,7 +59,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Options for how to validate and process properties on a resource.
      * 
      */
-    @InputImport(name="validationOptions")
+    @Import(name="validationOptions")
       private final @Nullable Output<ValidationOptionsArgs> validationOptions;
 
     public Output<ValidationOptionsArgs> getValidationOptions() {

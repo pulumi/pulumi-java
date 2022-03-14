@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1.DatabaseArgs;
@@ -22,7 +22,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The Cloud SQL charset value.
      * 
      */
-    @OutputExport(name="charset", type=String.class, parameters={})
+    @Export(name="charset", type=String.class, parameters={})
     private Output<String> charset;
 
     /**
@@ -36,7 +36,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The Cloud SQL collation value.
      * 
      */
-    @OutputExport(name="collation", type=String.class, parameters={})
+    @Export(name="collation", type=String.class, parameters={})
     private Output<String> collation;
 
     /**
@@ -50,7 +50,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -64,7 +64,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * This is always `sql#database`.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -78,7 +78,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -106,7 +106,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The URI of this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -116,7 +116,7 @@ public class Database extends io.pulumi.resources.CustomResource {
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
-    @OutputExport(name="sqlserverDatabaseDetails", type=SqlServerDatabaseDetailsResponse.class, parameters={})
+    @Export(name="sqlserverDatabaseDetails", type=SqlServerDatabaseDetailsResponse.class, parameters={})
     private Output<SqlServerDatabaseDetailsResponse> sqlserverDatabaseDetails;
 
     public Output<SqlServerDatabaseDetailsResponse> getSqlserverDatabaseDetails() {

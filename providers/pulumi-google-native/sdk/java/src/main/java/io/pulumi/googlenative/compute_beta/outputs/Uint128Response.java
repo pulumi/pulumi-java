@@ -3,19 +3,19 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Uint128Response {
     private final String high;
     private final String low;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Uint128Response(
-        @OutputCustomType.Parameter("high") String high,
-        @OutputCustomType.Parameter("low") String low) {
+        @CustomType.Parameter("high") String high,
+        @CustomType.Parameter("low") String low) {
         this.high = high;
         this.low = low;
     }

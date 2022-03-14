@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
 
     public static final FutureReservationTimeWindowResponse Empty = new FutureReservationTimeWindowResponse();
 
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final DurationResponse duration;
 
     public DurationResponse getDuration() {
         return this.duration;
     }
 
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -31,7 +31,7 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
      * Start time of the Future Reservation. The start_time is an RFC3339 string.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

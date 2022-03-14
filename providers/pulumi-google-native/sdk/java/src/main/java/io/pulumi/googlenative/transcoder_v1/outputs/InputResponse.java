@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.PreprocessingConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InputResponse {
     /**
      * A unique key for this input. Must be specified when using advanced mapping and edit lists.
@@ -26,11 +26,11 @@ public final class InputResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InputResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("preprocessingConfig") PreprocessingConfigResponse preprocessingConfig,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("preprocessingConfig") PreprocessingConfigResponse preprocessingConfig,
+        @CustomType.Parameter("uri") String uri) {
         this.key = key;
         this.preprocessingConfig = preprocessingConfig;
         this.uri = uri;

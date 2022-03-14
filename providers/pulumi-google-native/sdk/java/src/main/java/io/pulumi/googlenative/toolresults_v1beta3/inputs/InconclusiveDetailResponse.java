@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
      * If the end user aborted the test execution before a pass or fail could be determined. For example, the user pressed ctrl-c which sent a kill signal to the test runner while the test was running.
      * 
      */
-    @InputImport(name="abortedByUser", required=true)
+    @Import(name="abortedByUser", required=true)
       private final Boolean abortedByUser;
 
     public Boolean getAbortedByUser() {
@@ -31,7 +31,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
      * If results are being provided to the user in certain cases of infrastructure failures
      * 
      */
-    @InputImport(name="hasErrorLogs", required=true)
+    @Import(name="hasErrorLogs", required=true)
       private final Boolean hasErrorLogs;
 
     public Boolean getHasErrorLogs() {
@@ -42,7 +42,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
      * If the test runner could not determine success or failure because the test depends on a component other than the system under test which failed. For example, a mobile test requires provisioning a device where the test executes, and that provisioning can fail.
      * 
      */
-    @InputImport(name="infrastructureFailure", required=true)
+    @Import(name="infrastructureFailure", required=true)
       private final Boolean infrastructureFailure;
 
     public Boolean getInfrastructureFailure() {

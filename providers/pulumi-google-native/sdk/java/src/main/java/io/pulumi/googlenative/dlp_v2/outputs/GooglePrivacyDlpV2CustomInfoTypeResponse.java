@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DetectionRuleResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
     /**
      * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
@@ -57,16 +57,16 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
      */
     private final GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CustomInfoTypeResponse(
-        @OutputCustomType.Parameter("detectionRules") List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules,
-        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
-        @OutputCustomType.Parameter("exclusionType") String exclusionType,
-        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType,
-        @OutputCustomType.Parameter("likelihood") String likelihood,
-        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex,
-        @OutputCustomType.Parameter("storedType") GooglePrivacyDlpV2StoredTypeResponse storedType,
-        @OutputCustomType.Parameter("surrogateType") GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
+        @CustomType.Parameter("detectionRules") List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules,
+        @CustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @CustomType.Parameter("exclusionType") String exclusionType,
+        @CustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType,
+        @CustomType.Parameter("likelihood") String likelihood,
+        @CustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex,
+        @CustomType.Parameter("storedType") GooglePrivacyDlpV2StoredTypeResponse storedType,
+        @CustomType.Parameter("surrogateType") GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
         this.detectionRules = detectionRules;
         this.dictionary = dictionary;
         this.exclusionType = exclusionType;

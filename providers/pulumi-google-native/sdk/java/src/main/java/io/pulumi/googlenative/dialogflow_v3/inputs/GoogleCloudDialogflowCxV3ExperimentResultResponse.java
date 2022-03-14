@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.
      * The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.
      * 
      */
-    @InputImport(name="lastUpdateTime", required=true)
+    @Import(name="lastUpdateTime", required=true)
       private final String lastUpdateTime;
 
     public String getLastUpdateTime() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse extends io.
      * Version variants and metrics.
      * 
      */
-    @InputImport(name="versionMetrics", required=true)
+    @Import(name="versionMetrics", required=true)
       private final List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
 
     public List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> getVersionMetrics() {

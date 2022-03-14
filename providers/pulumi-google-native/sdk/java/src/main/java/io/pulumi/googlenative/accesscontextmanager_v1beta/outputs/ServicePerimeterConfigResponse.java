@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.VpcAccessibleServicesResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimeterConfigResponse {
     /**
      * A list of `AccessLevel` resource names that allow resources within the `ServicePerimeter` to be accessed from the internet. `AccessLevels` listed must be in the same policy as this `ServicePerimeter`. Referencing a nonexistent `AccessLevel` is a syntax error. If no `AccessLevel` names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `"accessPolicies/MY_POLICY/accessLevels/MY_LEVEL"`. For Service Perimeter Bridge, must be empty.
@@ -32,12 +32,12 @@ public final class ServicePerimeterConfigResponse {
      */
     private final VpcAccessibleServicesResponse vpcAccessibleServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimeterConfigResponse(
-        @OutputCustomType.Parameter("accessLevels") List<String> accessLevels,
-        @OutputCustomType.Parameter("resources") List<String> resources,
-        @OutputCustomType.Parameter("restrictedServices") List<String> restrictedServices,
-        @OutputCustomType.Parameter("vpcAccessibleServices") VpcAccessibleServicesResponse vpcAccessibleServices) {
+        @CustomType.Parameter("accessLevels") List<String> accessLevels,
+        @CustomType.Parameter("resources") List<String> resources,
+        @CustomType.Parameter("restrictedServices") List<String> restrictedServices,
+        @CustomType.Parameter("vpcAccessibleServices") VpcAccessibleServicesResponse vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.resources = resources;
         this.restrictedServices = restrictedServices;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CategoricalStatsConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KAnonymityConfigArgs;
@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
      * Categorical stats
      * 
      */
-    @InputImport(name="categoricalStatsConfig")
+    @Import(name="categoricalStatsConfig")
       private final @Nullable Output<GooglePrivacyDlpV2CategoricalStatsConfigArgs> categoricalStatsConfig;
 
     public Output<GooglePrivacyDlpV2CategoricalStatsConfigArgs> getCategoricalStatsConfig() {
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
      * delta-presence
      * 
      */
-    @InputImport(name="deltaPresenceEstimationConfig")
+    @Import(name="deltaPresenceEstimationConfig")
       private final @Nullable Output<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> deltaPresenceEstimationConfig;
 
     public Output<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> getDeltaPresenceEstimationConfig() {
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
      * K-anonymity
      * 
      */
-    @InputImport(name="kAnonymityConfig")
+    @Import(name="kAnonymityConfig")
       private final @Nullable Output<GooglePrivacyDlpV2KAnonymityConfigArgs> kAnonymityConfig;
 
     public Output<GooglePrivacyDlpV2KAnonymityConfigArgs> getKAnonymityConfig() {
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
      * k-map
      * 
      */
-    @InputImport(name="kMapEstimationConfig")
+    @Import(name="kMapEstimationConfig")
       private final @Nullable Output<GooglePrivacyDlpV2KMapEstimationConfigArgs> kMapEstimationConfig;
 
     public Output<GooglePrivacyDlpV2KMapEstimationConfigArgs> getKMapEstimationConfig() {
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
      * l-diversity
      * 
      */
-    @InputImport(name="lDiversityConfig")
+    @Import(name="lDiversityConfig")
       private final @Nullable Output<GooglePrivacyDlpV2LDiversityConfigArgs> lDiversityConfig;
 
     public Output<GooglePrivacyDlpV2LDiversityConfigArgs> getLDiversityConfig() {
@@ -82,7 +82,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
      * Numerical stats
      * 
      */
-    @InputImport(name="numericalStatsConfig")
+    @Import(name="numericalStatsConfig")
       private final @Nullable Output<GooglePrivacyDlpV2NumericalStatsConfigArgs> numericalStatsConfig;
 
     public Output<GooglePrivacyDlpV2NumericalStatsConfigArgs> getNumericalStatsConfig() {

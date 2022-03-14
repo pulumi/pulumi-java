@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse {
     /**
      * Segments this audio response is composed of.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioRespon
      */
     private final List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(@OutputCustomType.Parameter("segments") List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse(@CustomType.Parameter("segments") List<GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse> segments) {
         this.segments = segments;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.enums.LocalDiskInitializeParamsDiskType;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * Optional. Provide this property when creating the disk.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * Optional. Specifies the disk name. If not specified, the default is to use the name of the instance. If the disk with the instance name exists already in the given zone/region, a new name will be automatically generated.
      * 
      */
-    @InputImport(name="diskName")
+    @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
     public Output<String> getDiskName() {
@@ -46,7 +46,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * Optional. Specifies the size of the disk in base-2 GB. If not specified, the disk will be the same size as the image (usually 10GB). If specified, the size must be equal to or larger than 10GB. Default 100 GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
@@ -57,7 +57,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<LocalDiskInitializeParamsDiskType> diskType;
 
     public Output<LocalDiskInitializeParamsDiskType> getDiskType() {
@@ -68,7 +68,7 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
      * Optional. Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {

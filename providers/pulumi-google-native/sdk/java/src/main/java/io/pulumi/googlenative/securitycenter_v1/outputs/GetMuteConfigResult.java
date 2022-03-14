@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.securitycenter_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMuteConfigResult {
     /**
      * The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
@@ -45,15 +45,15 @@ public final class GetMuteConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMuteConfigResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("mostRecentEditor") String mostRecentEditor,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("mostRecentEditor") String mostRecentEditor,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

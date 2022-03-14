@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastore_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastore_v1.outputs.GoogleDatastoreAdminV1IndexedPropertyResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIndexResult {
     /**
      * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
@@ -42,14 +42,14 @@ public final class GetIndexResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIndexResult(
-        @OutputCustomType.Parameter("ancestor") String ancestor,
-        @OutputCustomType.Parameter("indexId") String indexId,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("properties") List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("ancestor") String ancestor,
+        @CustomType.Parameter("indexId") String indexId,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("properties") List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties,
+        @CustomType.Parameter("state") String state) {
         this.ancestor = ancestor;
         this.indexId = indexId;
         this.kind = kind;

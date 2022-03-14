@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.InterconnectAttachmentPartnerMetadataResponse;
 import io.pulumi.googlenative.compute_beta.outputs.InterconnectAttachmentPrivateInfoResponse;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInterconnectAttachmentResult {
     /**
      * Determines whether this Attachment will carry packets. Not present for PARTNER_PROVIDER.
@@ -191,43 +191,43 @@ public final class GetInterconnectAttachmentResult {
      */
     private final Integer vlanTag8021q;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInterconnectAttachmentResult(
-        @OutputCustomType.Parameter("adminEnabled") Boolean adminEnabled,
-        @OutputCustomType.Parameter("bandwidth") String bandwidth,
-        @OutputCustomType.Parameter("candidateIpv6Subnets") List<String> candidateIpv6Subnets,
-        @OutputCustomType.Parameter("candidateSubnets") List<String> candidateSubnets,
-        @OutputCustomType.Parameter("cloudRouterIpAddress") String cloudRouterIpAddress,
-        @OutputCustomType.Parameter("cloudRouterIpv6Address") String cloudRouterIpv6Address,
-        @OutputCustomType.Parameter("cloudRouterIpv6InterfaceId") String cloudRouterIpv6InterfaceId,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customerRouterIpAddress") String customerRouterIpAddress,
-        @OutputCustomType.Parameter("customerRouterIpv6Address") String customerRouterIpv6Address,
-        @OutputCustomType.Parameter("customerRouterIpv6InterfaceId") String customerRouterIpv6InterfaceId,
-        @OutputCustomType.Parameter("dataplaneVersion") Integer dataplaneVersion,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("edgeAvailabilityDomain") String edgeAvailabilityDomain,
-        @OutputCustomType.Parameter("encryption") String encryption,
-        @OutputCustomType.Parameter("interconnect") String interconnect,
-        @OutputCustomType.Parameter("ipsecInternalAddresses") List<String> ipsecInternalAddresses,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("mtu") Integer mtu,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationalStatus") String operationalStatus,
-        @OutputCustomType.Parameter("pairingKey") String pairingKey,
-        @OutputCustomType.Parameter("partnerAsn") String partnerAsn,
-        @OutputCustomType.Parameter("partnerMetadata") InterconnectAttachmentPartnerMetadataResponse partnerMetadata,
-        @OutputCustomType.Parameter("privateInterconnectInfo") InterconnectAttachmentPrivateInfoResponse privateInterconnectInfo,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("router") String router,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("stackType") String stackType,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vlanTag8021q") Integer vlanTag8021q) {
+        @CustomType.Parameter("adminEnabled") Boolean adminEnabled,
+        @CustomType.Parameter("bandwidth") String bandwidth,
+        @CustomType.Parameter("candidateIpv6Subnets") List<String> candidateIpv6Subnets,
+        @CustomType.Parameter("candidateSubnets") List<String> candidateSubnets,
+        @CustomType.Parameter("cloudRouterIpAddress") String cloudRouterIpAddress,
+        @CustomType.Parameter("cloudRouterIpv6Address") String cloudRouterIpv6Address,
+        @CustomType.Parameter("cloudRouterIpv6InterfaceId") String cloudRouterIpv6InterfaceId,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customerRouterIpAddress") String customerRouterIpAddress,
+        @CustomType.Parameter("customerRouterIpv6Address") String customerRouterIpv6Address,
+        @CustomType.Parameter("customerRouterIpv6InterfaceId") String customerRouterIpv6InterfaceId,
+        @CustomType.Parameter("dataplaneVersion") Integer dataplaneVersion,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("edgeAvailabilityDomain") String edgeAvailabilityDomain,
+        @CustomType.Parameter("encryption") String encryption,
+        @CustomType.Parameter("interconnect") String interconnect,
+        @CustomType.Parameter("ipsecInternalAddresses") List<String> ipsecInternalAddresses,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("mtu") Integer mtu,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationalStatus") String operationalStatus,
+        @CustomType.Parameter("pairingKey") String pairingKey,
+        @CustomType.Parameter("partnerAsn") String partnerAsn,
+        @CustomType.Parameter("partnerMetadata") InterconnectAttachmentPartnerMetadataResponse partnerMetadata,
+        @CustomType.Parameter("privateInterconnectInfo") InterconnectAttachmentPrivateInfoResponse privateInterconnectInfo,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("router") String router,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("stackType") String stackType,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vlanTag8021q") Integer vlanTag8021q) {
         this.adminEnabled = adminEnabled;
         this.bandwidth = bandwidth;
         this.candidateIpv6Subnets = candidateIpv6Subnets;

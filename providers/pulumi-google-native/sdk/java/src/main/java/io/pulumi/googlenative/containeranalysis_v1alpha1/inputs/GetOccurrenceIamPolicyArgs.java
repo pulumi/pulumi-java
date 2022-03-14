@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetOccurrenceIamPolicyArgs extends io.pulumi.resources.Invoke
 
     public static final GetOccurrenceIamPolicyArgs Empty = new GetOccurrenceIamPolicyArgs();
 
-    @InputImport(name="occurrenceId", required=true)
+    @Import(name="occurrenceId", required=true)
       private final String occurrenceId;
 
     public String getOccurrenceId() {
         return this.occurrenceId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

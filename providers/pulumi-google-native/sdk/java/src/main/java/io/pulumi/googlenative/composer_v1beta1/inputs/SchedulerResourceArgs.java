@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
      * Optional. The number of schedulers.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
      * Optional. CPU request and limit for a single Airflow scheduler replica.
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
@@ -45,7 +45,7 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
      * Optional. Memory (GB) request and limit for a single Airflow scheduler replica.
      * 
      */
-    @InputImport(name="memoryGb")
+    @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
     public Output<Double> getMemoryGb() {
@@ -56,7 +56,7 @@ public final class SchedulerResourceArgs extends io.pulumi.resources.ResourceArg
      * Optional. Storage (GB) request and limit for a single Airflow scheduler replica.
      * 
      */
-    @InputImport(name="storageGb")
+    @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;
 
     public Output<Double> getStorageGb() {
