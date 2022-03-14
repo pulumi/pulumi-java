@@ -459,7 +459,7 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes;
             pulumi stack init dev;
-            pulumi plugin install &&
+            pulumi plugin install resource random v4.3.1
             pulumi up --yes
             pulumi destroy --yes"
       - name: Integration tests
