@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -16,28 +16,28 @@ public final class NetworkIpamConfigGetArgs extends io.pulumi.resources.Resource
 
     public static final NetworkIpamConfigGetArgs Empty = new NetworkIpamConfigGetArgs();
 
-    @InputImport(name="auxAddress")
+    @Import(name="auxAddress")
       private final @Nullable Output<Map<String,Object>> auxAddress;
 
     public Output<Map<String,Object>> getAuxAddress() {
         return this.auxAddress == null ? Output.empty() : this.auxAddress;
     }
 
-    @InputImport(name="gateway")
+    @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
     public Output<String> getGateway() {
         return this.gateway == null ? Output.empty() : this.gateway;
     }
 
-    @InputImport(name="ipRange")
+    @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
     public Output<String> getIpRange() {
         return this.ipRange == null ? Output.empty() : this.ipRange;
     }
 
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {

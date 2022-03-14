@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerPortArgs Empty = new ContainerPortArgs();
 
-    @InputImport(name="external")
+    @Import(name="external")
       private final @Nullable Output<Integer> external;
 
     public Output<Integer> getExternal() {
         return this.external == null ? Output.empty() : this.external;
     }
 
-    @InputImport(name="internal", required=true)
+    @Import(name="internal", required=true)
       private final Output<Integer> internal;
 
     public Output<Integer> getInternal() {
         return this.internal;
     }
 
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
         return this.ip == null ? Output.empty() : this.ip;
     }
 
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {

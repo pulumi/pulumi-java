@@ -3,14 +3,14 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerUpload {
     private final @Nullable String content;
     private final @Nullable String contentBase64;
@@ -19,14 +19,14 @@ public final class ContainerUpload {
     private final @Nullable String source;
     private final @Nullable String sourceHash;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerUpload(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("contentBase64") @Nullable String contentBase64,
-        @OutputCustomType.Parameter("executable") @Nullable Boolean executable,
-        @OutputCustomType.Parameter("file") String file,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("sourceHash") @Nullable String sourceHash) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("contentBase64") @Nullable String contentBase64,
+        @CustomType.Parameter("executable") @Nullable Boolean executable,
+        @CustomType.Parameter("file") String file,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("sourceHash") @Nullable String sourceHash) {
         this.content = content;
         this.contentBase64 = contentBase64;
         this.executable = executable;

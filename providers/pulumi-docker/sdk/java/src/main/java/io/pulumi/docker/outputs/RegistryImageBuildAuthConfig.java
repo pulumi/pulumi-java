@@ -3,13 +3,13 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistryImageBuildAuthConfig {
     private final @Nullable String auth;
     private final @Nullable String email;
@@ -20,16 +20,16 @@ public final class RegistryImageBuildAuthConfig {
     private final @Nullable String serverAddress;
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistryImageBuildAuthConfig(
-        @OutputCustomType.Parameter("auth") @Nullable String auth,
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("identityToken") @Nullable String identityToken,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("registryToken") @Nullable String registryToken,
-        @OutputCustomType.Parameter("serverAddress") @Nullable String serverAddress,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("auth") @Nullable String auth,
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("identityToken") @Nullable String identityToken,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("registryToken") @Nullable String registryToken,
+        @CustomType.Parameter("serverAddress") @Nullable String serverAddress,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.auth = auth;
         this.email = email;
         this.hostName = hostName;

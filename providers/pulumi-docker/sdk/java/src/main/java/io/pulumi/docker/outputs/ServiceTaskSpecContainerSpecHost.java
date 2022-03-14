@@ -3,19 +3,19 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecHost {
     private final String host;
     private final String ip;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecHost(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("ip") String ip) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("ip") String ip) {
         this.host = host;
         this.ip = ip;
     }

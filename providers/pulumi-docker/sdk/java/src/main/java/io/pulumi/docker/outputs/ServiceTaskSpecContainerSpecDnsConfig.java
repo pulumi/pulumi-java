@@ -3,23 +3,23 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecDnsConfig {
     private final List<String> nameservers;
     private final @Nullable List<String> options;
     private final @Nullable List<String> searches;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecDnsConfig(
-        @OutputCustomType.Parameter("nameservers") List<String> nameservers,
-        @OutputCustomType.Parameter("options") @Nullable List<String> options,
-        @OutputCustomType.Parameter("searches") @Nullable List<String> searches) {
+        @CustomType.Parameter("nameservers") List<String> nameservers,
+        @CustomType.Parameter("options") @Nullable List<String> options,
+        @CustomType.Parameter("searches") @Nullable List<String> searches) {
         this.nameservers = nameservers;
         this.options = options;
         this.searches = searches;

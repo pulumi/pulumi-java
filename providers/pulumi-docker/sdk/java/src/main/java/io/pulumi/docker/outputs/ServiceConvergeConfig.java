@@ -3,21 +3,21 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceConvergeConfig {
     private final @Nullable String delay;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceConvergeConfig(
-        @OutputCustomType.Parameter("delay") @Nullable String delay,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("delay") @Nullable String delay,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.delay = delay;
         this.timeout = timeout;
     }

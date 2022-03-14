@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
 
     public static final ContainerNetworksAdvancedArgs Empty = new ContainerNetworksAdvancedArgs();
 
-    @InputImport(name="aliases")
+    @Import(name="aliases")
       private final @Nullable Output<List<String>> aliases;
 
     public Output<List<String>> getAliases() {
         return this.aliases == null ? Output.empty() : this.aliases;
     }
 
-    @InputImport(name="ipv4Address")
+    @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
     public Output<String> getIpv4Address() {
         return this.ipv4Address == null ? Output.empty() : this.ipv4Address;
     }
 
-    @InputImport(name="ipv6Address")
+    @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
     public Output<String> getIpv6Address() {
         return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRemoteImageResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -17,11 +17,11 @@ public final class GetRemoteImageResult {
     private final String name;
     private final String repoDigest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRemoteImageResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("repoDigest") String repoDigest) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("repoDigest") String repoDigest) {
         this.id = id;
         this.name = name;
         this.repoDigest = repoDigest;

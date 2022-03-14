@@ -3,14 +3,14 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistryImageResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -21,12 +21,12 @@ public final class GetRegistryImageResult {
     private final String name;
     private final String sha256Digest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistryImageResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("insecureSkipVerify") @Nullable Boolean insecureSkipVerify,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sha256Digest") String sha256Digest) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("insecureSkipVerify") @Nullable Boolean insecureSkipVerify,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sha256Digest") String sha256Digest) {
         this.id = id;
         this.insecureSkipVerify = insecureSkipVerify;
         this.name = name;

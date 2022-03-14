@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.RegistryImageBuildAuthConfigGetArgs;
 import io.pulumi.docker.inputs.RegistryImageBuildUlimitGetArgs;
 import java.lang.Boolean;
@@ -20,224 +20,224 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
 
     public static final RegistryImageBuildGetArgs Empty = new RegistryImageBuildGetArgs();
 
-    @InputImport(name="authConfigs")
+    @Import(name="authConfigs")
       private final @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
 
     public Output<List<RegistryImageBuildAuthConfigGetArgs>> getAuthConfigs() {
         return this.authConfigs == null ? Output.empty() : this.authConfigs;
     }
 
-    @InputImport(name="buildArgs")
+    @Import(name="buildArgs")
       private final @Nullable Output<Map<String,String>> buildArgs;
 
     public Output<Map<String,String>> getBuildArgs() {
         return this.buildArgs == null ? Output.empty() : this.buildArgs;
     }
 
-    @InputImport(name="buildId")
+    @Import(name="buildId")
       private final @Nullable Output<String> buildId;
 
     public Output<String> getBuildId() {
         return this.buildId == null ? Output.empty() : this.buildId;
     }
 
-    @InputImport(name="cacheFroms")
+    @Import(name="cacheFroms")
       private final @Nullable Output<List<String>> cacheFroms;
 
     public Output<List<String>> getCacheFroms() {
         return this.cacheFroms == null ? Output.empty() : this.cacheFroms;
     }
 
-    @InputImport(name="cgroupParent")
+    @Import(name="cgroupParent")
       private final @Nullable Output<String> cgroupParent;
 
     public Output<String> getCgroupParent() {
         return this.cgroupParent == null ? Output.empty() : this.cgroupParent;
     }
 
-    @InputImport(name="context", required=true)
+    @Import(name="context", required=true)
       private final Output<String> context;
 
     public Output<String> getContext() {
         return this.context;
     }
 
-    @InputImport(name="cpuPeriod")
+    @Import(name="cpuPeriod")
       private final @Nullable Output<Integer> cpuPeriod;
 
     public Output<Integer> getCpuPeriod() {
         return this.cpuPeriod == null ? Output.empty() : this.cpuPeriod;
     }
 
-    @InputImport(name="cpuQuota")
+    @Import(name="cpuQuota")
       private final @Nullable Output<Integer> cpuQuota;
 
     public Output<Integer> getCpuQuota() {
         return this.cpuQuota == null ? Output.empty() : this.cpuQuota;
     }
 
-    @InputImport(name="cpuSetCpus")
+    @Import(name="cpuSetCpus")
       private final @Nullable Output<String> cpuSetCpus;
 
     public Output<String> getCpuSetCpus() {
         return this.cpuSetCpus == null ? Output.empty() : this.cpuSetCpus;
     }
 
-    @InputImport(name="cpuSetMems")
+    @Import(name="cpuSetMems")
       private final @Nullable Output<String> cpuSetMems;
 
     public Output<String> getCpuSetMems() {
         return this.cpuSetMems == null ? Output.empty() : this.cpuSetMems;
     }
 
-    @InputImport(name="cpuShares")
+    @Import(name="cpuShares")
       private final @Nullable Output<Integer> cpuShares;
 
     public Output<Integer> getCpuShares() {
         return this.cpuShares == null ? Output.empty() : this.cpuShares;
     }
 
-    @InputImport(name="dockerfile")
+    @Import(name="dockerfile")
       private final @Nullable Output<String> dockerfile;
 
     public Output<String> getDockerfile() {
         return this.dockerfile == null ? Output.empty() : this.dockerfile;
     }
 
-    @InputImport(name="extraHosts")
+    @Import(name="extraHosts")
       private final @Nullable Output<List<String>> extraHosts;
 
     public Output<List<String>> getExtraHosts() {
         return this.extraHosts == null ? Output.empty() : this.extraHosts;
     }
 
-    @InputImport(name="forceRemove")
+    @Import(name="forceRemove")
       private final @Nullable Output<Boolean> forceRemove;
 
     public Output<Boolean> getForceRemove() {
         return this.forceRemove == null ? Output.empty() : this.forceRemove;
     }
 
-    @InputImport(name="isolation")
+    @Import(name="isolation")
       private final @Nullable Output<String> isolation;
 
     public Output<String> getIsolation() {
         return this.isolation == null ? Output.empty() : this.isolation;
     }
 
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<Integer> memory;
 
     public Output<Integer> getMemory() {
         return this.memory == null ? Output.empty() : this.memory;
     }
 
-    @InputImport(name="memorySwap")
+    @Import(name="memorySwap")
       private final @Nullable Output<Integer> memorySwap;
 
     public Output<Integer> getMemorySwap() {
         return this.memorySwap == null ? Output.empty() : this.memorySwap;
     }
 
-    @InputImport(name="networkMode")
+    @Import(name="networkMode")
       private final @Nullable Output<String> networkMode;
 
     public Output<String> getNetworkMode() {
         return this.networkMode == null ? Output.empty() : this.networkMode;
     }
 
-    @InputImport(name="noCache")
+    @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
     public Output<Boolean> getNoCache() {
         return this.noCache == null ? Output.empty() : this.noCache;
     }
 
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
         return this.platform == null ? Output.empty() : this.platform;
     }
 
-    @InputImport(name="pullParent")
+    @Import(name="pullParent")
       private final @Nullable Output<Boolean> pullParent;
 
     public Output<Boolean> getPullParent() {
         return this.pullParent == null ? Output.empty() : this.pullParent;
     }
 
-    @InputImport(name="remoteContext")
+    @Import(name="remoteContext")
       private final @Nullable Output<String> remoteContext;
 
     public Output<String> getRemoteContext() {
         return this.remoteContext == null ? Output.empty() : this.remoteContext;
     }
 
-    @InputImport(name="remove")
+    @Import(name="remove")
       private final @Nullable Output<Boolean> remove;
 
     public Output<Boolean> getRemove() {
         return this.remove == null ? Output.empty() : this.remove;
     }
 
-    @InputImport(name="securityOpts")
+    @Import(name="securityOpts")
       private final @Nullable Output<List<String>> securityOpts;
 
     public Output<List<String>> getSecurityOpts() {
         return this.securityOpts == null ? Output.empty() : this.securityOpts;
     }
 
-    @InputImport(name="sessionId")
+    @Import(name="sessionId")
       private final @Nullable Output<String> sessionId;
 
     public Output<String> getSessionId() {
         return this.sessionId == null ? Output.empty() : this.sessionId;
     }
 
-    @InputImport(name="shmSize")
+    @Import(name="shmSize")
       private final @Nullable Output<Integer> shmSize;
 
     public Output<Integer> getShmSize() {
         return this.shmSize == null ? Output.empty() : this.shmSize;
     }
 
-    @InputImport(name="squash")
+    @Import(name="squash")
       private final @Nullable Output<Boolean> squash;
 
     public Output<Boolean> getSquash() {
         return this.squash == null ? Output.empty() : this.squash;
     }
 
-    @InputImport(name="suppressOutput")
+    @Import(name="suppressOutput")
       private final @Nullable Output<Boolean> suppressOutput;
 
     public Output<Boolean> getSuppressOutput() {
         return this.suppressOutput == null ? Output.empty() : this.suppressOutput;
     }
 
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
         return this.target == null ? Output.empty() : this.target;
     }
 
-    @InputImport(name="ulimits")
+    @Import(name="ulimits")
       private final @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits;
 
     public Output<List<RegistryImageBuildUlimitGetArgs>> getUlimits() {
         return this.ulimits == null ? Output.empty() : this.ulimits;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

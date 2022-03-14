@@ -3,26 +3,26 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerNetworksAdvanced {
     private final @Nullable List<String> aliases;
     private final @Nullable String ipv4Address;
     private final @Nullable String ipv6Address;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerNetworksAdvanced(
-        @OutputCustomType.Parameter("aliases") @Nullable List<String> aliases,
-        @OutputCustomType.Parameter("ipv4Address") @Nullable String ipv4Address,
-        @OutputCustomType.Parameter("ipv6Address") @Nullable String ipv6Address,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("aliases") @Nullable List<String> aliases,
+        @CustomType.Parameter("ipv4Address") @Nullable String ipv4Address,
+        @CustomType.Parameter("ipv6Address") @Nullable String ipv6Address,
+        @CustomType.Parameter("name") String name) {
         this.aliases = aliases;
         this.ipv4Address = ipv4Address;
         this.ipv6Address = ipv6Address;

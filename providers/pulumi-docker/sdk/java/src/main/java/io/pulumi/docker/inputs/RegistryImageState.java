@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.RegistryImageBuildGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
      * Definition for building the image
      * 
      */
-    @InputImport(name="build")
+    @Import(name="build")
       private final @Nullable Output<RegistryImageBuildGetArgs> build;
 
     public Output<RegistryImageBuildGetArgs> getBuild() {
@@ -31,7 +31,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
      * If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
      * 
      */
-    @InputImport(name="insecureSkipVerify")
+    @Import(name="insecureSkipVerify")
       private final @Nullable Output<Boolean> insecureSkipVerify;
 
     public Output<Boolean> getInsecureSkipVerify() {
@@ -43,7 +43,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
      * the docker registry on destroy operation. Defaults to `false`
      * 
      */
-    @InputImport(name="keepRemotely")
+    @Import(name="keepRemotely")
       private final @Nullable Output<Boolean> keepRemotely;
 
     public Output<Boolean> getKeepRemotely() {
@@ -54,7 +54,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
      * The name of the Docker image.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
      * The sha256 digest of the image.
      * 
      */
-    @InputImport(name="sha256Digest")
+    @Import(name="sha256Digest")
       private final @Nullable Output<String> sha256Digest;
 
     public Output<String> getSha256Digest() {

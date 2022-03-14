@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class ServiceTaskSpecRestartPolicyGetArgs extends io.pulumi.resourc
 
     public static final ServiceTaskSpecRestartPolicyGetArgs Empty = new ServiceTaskSpecRestartPolicyGetArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="delay")
+    @Import(name="delay")
       private final @Nullable Output<String> delay;
 
     public Output<String> getDelay() {
         return this.delay == null ? Output.empty() : this.delay;
     }
 
-    @InputImport(name="maxAttempts")
+    @Import(name="maxAttempts")
       private final @Nullable Output<Integer> maxAttempts;
 
     public Output<Integer> getMaxAttempts() {
         return this.maxAttempts == null ? Output.empty() : this.maxAttempts;
     }
 
-    @InputImport(name="window")
+    @Import(name="window")
       private final @Nullable Output<String> window;
 
     public Output<String> getWindow() {

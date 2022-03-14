@@ -3,19 +3,19 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecPlacementPlatform {
     private final String architecture;
     private final String os;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecPlacementPlatform(
-        @OutputCustomType.Parameter("architecture") String architecture,
-        @OutputCustomType.Parameter("os") String os) {
+        @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("os") String os) {
         this.architecture = architecture;
         this.os = os;
     }

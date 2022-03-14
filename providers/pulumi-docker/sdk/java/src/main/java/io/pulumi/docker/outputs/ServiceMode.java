@@ -3,22 +3,22 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ServiceModeReplicated;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceMode {
     private final @Nullable Boolean global;
     private final @Nullable ServiceModeReplicated replicated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceMode(
-        @OutputCustomType.Parameter("global") @Nullable Boolean global,
-        @OutputCustomType.Parameter("replicated") @Nullable ServiceModeReplicated replicated) {
+        @CustomType.Parameter("global") @Nullable Boolean global,
+        @CustomType.Parameter("replicated") @Nullable ServiceModeReplicated replicated) {
         this.global = global;
         this.replicated = replicated;
     }

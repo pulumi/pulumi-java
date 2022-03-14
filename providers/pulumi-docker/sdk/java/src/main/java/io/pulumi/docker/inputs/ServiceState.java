@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceAuthGetArgs;
 import io.pulumi.docker.inputs.ServiceConvergeConfigGetArgs;
 import io.pulumi.docker.inputs.ServiceEndpointSpecGetArgs;
@@ -27,7 +27,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Configuration for the authentication for pulling the images of the service
      * 
      */
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable Output<ServiceAuthGetArgs> auth;
 
     public Output<ServiceAuthGetArgs> getAuth() {
@@ -38,7 +38,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * A configuration to ensure that a service converges aka reaches the desired that of all task up and running
      * 
      */
-    @InputImport(name="convergeConfig")
+    @Import(name="convergeConfig")
       private final @Nullable Output<ServiceConvergeConfigGetArgs> convergeConfig;
 
     public Output<ServiceConvergeConfigGetArgs> getConvergeConfig() {
@@ -49,7 +49,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Properties that can be configured to access and load balance a service
      * 
      */
-    @InputImport(name="endpointSpec")
+    @Import(name="endpointSpec")
       private final @Nullable Output<ServiceEndpointSpecGetArgs> endpointSpec;
 
     public Output<ServiceEndpointSpecGetArgs> getEndpointSpec() {
@@ -60,7 +60,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * User-defined key/value metadata
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<ServiceLabelGetArgs>> labels;
 
     public Output<List<ServiceLabelGetArgs>> getLabels() {
@@ -71,7 +71,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Scheduling mode for the service
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<ServiceModeGetArgs> mode;
 
     public Output<ServiceModeGetArgs> getMode() {
@@ -82,7 +82,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Name of the service
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -93,7 +93,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Specification for the rollback strategy of the service
      * 
      */
-    @InputImport(name="rollbackConfig")
+    @Import(name="rollbackConfig")
       private final @Nullable Output<ServiceRollbackConfigGetArgs> rollbackConfig;
 
     public Output<ServiceRollbackConfigGetArgs> getRollbackConfig() {
@@ -104,7 +104,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * User modifiable task configuration
      * 
      */
-    @InputImport(name="taskSpec")
+    @Import(name="taskSpec")
       private final @Nullable Output<ServiceTaskSpecGetArgs> taskSpec;
 
     public Output<ServiceTaskSpecGetArgs> getTaskSpec() {
@@ -115,7 +115,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Specification for the update strategy of the service
      * 
      */
-    @InputImport(name="updateConfig")
+    @Import(name="updateConfig")
       private final @Nullable Output<ServiceUpdateConfigGetArgs> updateConfig;
 
     public Output<ServiceUpdateConfigGetArgs> getUpdateConfig() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerNetworkData {
     /**
      * @Deprecated
@@ -38,15 +38,15 @@ public final class ContainerNetworkData {
     private final @Nullable String ipv6Gateway;
     private final @Nullable String networkName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerNetworkData(
-        @OutputCustomType.Parameter("gateway") @Nullable String gateway,
-        @OutputCustomType.Parameter("globalIpv6Address") @Nullable String globalIpv6Address,
-        @OutputCustomType.Parameter("globalIpv6PrefixLength") @Nullable Integer globalIpv6PrefixLength,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("ipPrefixLength") @Nullable Integer ipPrefixLength,
-        @OutputCustomType.Parameter("ipv6Gateway") @Nullable String ipv6Gateway,
-        @OutputCustomType.Parameter("networkName") @Nullable String networkName) {
+        @CustomType.Parameter("gateway") @Nullable String gateway,
+        @CustomType.Parameter("globalIpv6Address") @Nullable String globalIpv6Address,
+        @CustomType.Parameter("globalIpv6PrefixLength") @Nullable Integer globalIpv6PrefixLength,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("ipPrefixLength") @Nullable Integer ipPrefixLength,
+        @CustomType.Parameter("ipv6Gateway") @Nullable String ipv6Gateway,
+        @CustomType.Parameter("networkName") @Nullable String networkName) {
         this.gateway = gateway;
         this.globalIpv6Address = globalIpv6Address;
         this.globalIpv6PrefixLength = globalIpv6PrefixLength;

@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceModeReplicatedArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ServiceModeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceModeArgs Empty = new ServiceModeArgs();
 
-    @InputImport(name="global")
+    @Import(name="global")
       private final @Nullable Output<Boolean> global;
 
     public Output<Boolean> getGlobal() {
         return this.global == null ? Output.empty() : this.global;
     }
 
-    @InputImport(name="replicated")
+    @Import(name="replicated")
       private final @Nullable Output<ServiceModeReplicatedArgs> replicated;
 
     public Output<ServiceModeReplicatedArgs> getReplicated() {

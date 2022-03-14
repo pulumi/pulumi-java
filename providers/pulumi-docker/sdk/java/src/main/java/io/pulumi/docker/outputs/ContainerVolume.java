@@ -3,14 +3,14 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerVolume {
     private final @Nullable String containerPath;
     private final @Nullable String fromContainer;
@@ -18,13 +18,13 @@ public final class ContainerVolume {
     private final @Nullable Boolean readOnly;
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerVolume(
-        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
-        @OutputCustomType.Parameter("fromContainer") @Nullable String fromContainer,
-        @OutputCustomType.Parameter("hostPath") @Nullable String hostPath,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
+        @CustomType.Parameter("containerPath") @Nullable String containerPath,
+        @CustomType.Parameter("fromContainer") @Nullable String fromContainer,
+        @CustomType.Parameter("hostPath") @Nullable String hostPath,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.containerPath = containerPath;
         this.fromContainer = fromContainer;
         this.hostPath = hostPath;

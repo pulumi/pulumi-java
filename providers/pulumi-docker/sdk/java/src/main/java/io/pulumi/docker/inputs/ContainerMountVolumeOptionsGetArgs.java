@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ContainerMountVolumeOptionsLabelGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,28 +18,28 @@ public final class ContainerMountVolumeOptionsGetArgs extends io.pulumi.resource
 
     public static final ContainerMountVolumeOptionsGetArgs Empty = new ContainerMountVolumeOptionsGetArgs();
 
-    @InputImport(name="driverName")
+    @Import(name="driverName")
       private final @Nullable Output<String> driverName;
 
     public Output<String> getDriverName() {
         return this.driverName == null ? Output.empty() : this.driverName;
     }
 
-    @InputImport(name="driverOptions")
+    @Import(name="driverOptions")
       private final @Nullable Output<Map<String,String>> driverOptions;
 
     public Output<Map<String,String>> getDriverOptions() {
         return this.driverOptions == null ? Output.empty() : this.driverOptions;
     }
 
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<ContainerMountVolumeOptionsLabelGetArgs>> labels;
 
     public Output<List<ContainerMountVolumeOptionsLabelGetArgs>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="noCopy")
+    @Import(name="noCopy")
       private final @Nullable Output<Boolean> noCopy;
 
     public Output<Boolean> getNoCopy() {

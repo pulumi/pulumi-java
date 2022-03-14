@@ -3,21 +3,21 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecMountTmpfsOptions {
     private final @Nullable Integer mode;
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecMountTmpfsOptions(
-        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
-        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
+        @CustomType.Parameter("mode") @Nullable Integer mode,
+        @CustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.mode = mode;
         this.sizeBytes = sizeBytes;
     }

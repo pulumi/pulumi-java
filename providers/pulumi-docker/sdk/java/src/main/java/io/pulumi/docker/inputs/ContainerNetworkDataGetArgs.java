@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    @InputImport(name="gateway")
+    @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
@@ -29,14 +29,14 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
         return this.gateway == null ? Output.empty() : this.gateway;
     }
 
-    @InputImport(name="globalIpv6Address")
+    @Import(name="globalIpv6Address")
       private final @Nullable Output<String> globalIpv6Address;
 
     public Output<String> getGlobalIpv6Address() {
         return this.globalIpv6Address == null ? Output.empty() : this.globalIpv6Address;
     }
 
-    @InputImport(name="globalIpv6PrefixLength")
+    @Import(name="globalIpv6PrefixLength")
       private final @Nullable Output<Integer> globalIpv6PrefixLength;
 
     public Output<Integer> getGlobalIpv6PrefixLength() {
@@ -49,7 +49,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
@@ -63,7 +63,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    @InputImport(name="ipPrefixLength")
+    @Import(name="ipPrefixLength")
       private final @Nullable Output<Integer> ipPrefixLength;
 
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
@@ -71,14 +71,14 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
         return this.ipPrefixLength == null ? Output.empty() : this.ipPrefixLength;
     }
 
-    @InputImport(name="ipv6Gateway")
+    @Import(name="ipv6Gateway")
       private final @Nullable Output<String> ipv6Gateway;
 
     public Output<String> getIpv6Gateway() {
         return this.ipv6Gateway == null ? Output.empty() : this.ipv6Gateway;
     }
 
-    @InputImport(name="networkName")
+    @Import(name="networkName")
       private final @Nullable Output<String> networkName;
 
     public Output<String> getNetworkName() {

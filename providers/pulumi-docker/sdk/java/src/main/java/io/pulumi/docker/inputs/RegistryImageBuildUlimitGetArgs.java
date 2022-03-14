@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class RegistryImageBuildUlimitGetArgs extends io.pulumi.resources.R
 
     public static final RegistryImageBuildUlimitGetArgs Empty = new RegistryImageBuildUlimitGetArgs();
 
-    @InputImport(name="hard", required=true)
+    @Import(name="hard", required=true)
       private final Output<Integer> hard;
 
     public Output<Integer> getHard() {
         return this.hard;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="soft", required=true)
+    @Import(name="soft", required=true)
       private final Output<Integer> soft;
 
     public Output<Integer> getSoft() {

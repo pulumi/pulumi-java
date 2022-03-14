@@ -3,24 +3,24 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ServiceTaskSpecResourcesReservationGenericResources;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecResourcesReservation {
     private final @Nullable ServiceTaskSpecResourcesReservationGenericResources genericResources;
     private final @Nullable Integer memoryBytes;
     private final @Nullable Integer nanoCpus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecResourcesReservation(
-        @OutputCustomType.Parameter("genericResources") @Nullable ServiceTaskSpecResourcesReservationGenericResources genericResources,
-        @OutputCustomType.Parameter("memoryBytes") @Nullable Integer memoryBytes,
-        @OutputCustomType.Parameter("nanoCpus") @Nullable Integer nanoCpus) {
+        @CustomType.Parameter("genericResources") @Nullable ServiceTaskSpecResourcesReservationGenericResources genericResources,
+        @CustomType.Parameter("memoryBytes") @Nullable Integer memoryBytes,
+        @CustomType.Parameter("nanoCpus") @Nullable Integer nanoCpus) {
         this.genericResources = genericResources;
         this.memoryBytes = memoryBytes;
         this.nanoCpus = nanoCpus;

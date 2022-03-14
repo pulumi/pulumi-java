@@ -4,7 +4,7 @@
 package io.pulumi.docker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.VolumeArgs;
@@ -60,7 +60,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Driver type for the volume. Defaults to `local`.
      * 
      */
-    @OutputExport(name="driver", type=String.class, parameters={})
+    @Export(name="driver", type=String.class, parameters={})
     private Output<String> driver;
 
     /**
@@ -74,7 +74,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Options specific to the driver.
      * 
      */
-    @OutputExport(name="driverOpts", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="driverOpts", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> driverOpts;
 
     /**
@@ -88,7 +88,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * User-defined key/value metadata
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={VolumeLabel.class})
+    @Export(name="labels", type=List.class, parameters={VolumeLabel.class})
     private Output</* @Nullable */ List<VolumeLabel>> labels;
 
     /**
@@ -102,7 +102,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The mountpoint of the volume.
      * 
      */
-    @OutputExport(name="mountpoint", type=String.class, parameters={})
+    @Export(name="mountpoint", type=String.class, parameters={})
     private Output<String> mountpoint;
 
     /**
@@ -116,7 +116,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The name of the Docker volume (will be generated if not provided).
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.PluginGrantPermissionGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * Docker Plugin alias
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -33,7 +33,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * HTTP client timeout to enable the plugin
      * 
      */
-    @InputImport(name="enableTimeout")
+    @Import(name="enableTimeout")
       private final @Nullable Output<Integer> enableTimeout;
 
     public Output<Integer> getEnableTimeout() {
@@ -44,7 +44,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * If `true` the plugin is enabled. Defaults to `true`
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -55,7 +55,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`
      * 
      */
-    @InputImport(name="envs")
+    @Import(name="envs")
       private final @Nullable Output<List<String>> envs;
 
     public Output<List<String>> getEnvs() {
@@ -66,7 +66,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * If true, then the plugin is destroyed forcibly
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -77,7 +77,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * If true, then the plugin is disabled forcibly
      * 
      */
-    @InputImport(name="forceDisable")
+    @Import(name="forceDisable")
       private final @Nullable Output<Boolean> forceDisable;
 
     public Output<Boolean> getForceDisable() {
@@ -88,7 +88,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * If true, grant all permissions necessary to run the plugin
      * 
      */
-    @InputImport(name="grantAllPermissions")
+    @Import(name="grantAllPermissions")
       private final @Nullable Output<Boolean> grantAllPermissions;
 
     public Output<Boolean> getGrantAllPermissions() {
@@ -99,7 +99,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * Grant specific permissions only
      * 
      */
-    @InputImport(name="grantPermissions")
+    @Import(name="grantPermissions")
       private final @Nullable Output<List<PluginGrantPermissionGetArgs>> grantPermissions;
 
     public Output<List<PluginGrantPermissionGetArgs>> getGrantPermissions() {
@@ -110,7 +110,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * Docker Plugin name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -121,7 +121,7 @@ public final class PluginState extends io.pulumi.resources.ResourceArgs {
      * Docker Plugin Reference
      * 
      */
-    @InputImport(name="pluginReference")
+    @Import(name="pluginReference")
       private final @Nullable Output<String> pluginReference;
 
     public Output<String> getPluginReference() {

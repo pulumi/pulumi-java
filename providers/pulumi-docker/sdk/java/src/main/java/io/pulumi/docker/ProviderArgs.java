@@ -4,7 +4,7 @@
 package io.pulumi.docker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.inputs.ProviderRegistryAuthArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * PEM-encoded content of Docker host CA certificate
      * 
      */
-    @InputImport(name="caMaterial")
+    @Import(name="caMaterial")
       private final @Nullable Output<String> caMaterial;
 
     public Output<String> getCaMaterial() {
@@ -32,7 +32,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * PEM-encoded content of Docker client certificate
      * 
      */
-    @InputImport(name="certMaterial")
+    @Import(name="certMaterial")
       private final @Nullable Output<String> certMaterial;
 
     public Output<String> getCertMaterial() {
@@ -43,7 +43,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Path to directory with Docker TLS config
      * 
      */
-    @InputImport(name="certPath")
+    @Import(name="certPath")
       private final @Nullable Output<String> certPath;
 
     public Output<String> getCertPath() {
@@ -54,7 +54,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Docker daemon address
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -65,14 +65,14 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * PEM-encoded content of Docker client private key
      * 
      */
-    @InputImport(name="keyMaterial")
+    @Import(name="keyMaterial")
       private final @Nullable Output<String> keyMaterial;
 
     public Output<String> getKeyMaterial() {
         return this.keyMaterial == null ? Output.empty() : this.keyMaterial;
     }
 
-    @InputImport(name="registryAuth", json=true)
+    @Import(name="registryAuth", json=true)
       private final @Nullable Output<List<ProviderRegistryAuthArgs>> registryAuth;
 
     public Output<List<ProviderRegistryAuthArgs>> getRegistryAuth() {

@@ -4,7 +4,7 @@
 package io.pulumi.docker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.VolumeLabelArgs;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Driver type for the volume. Defaults to `local`.
      * 
      */
-    @InputImport(name="driver")
+    @Import(name="driver")
       private final @Nullable Output<String> driver;
 
     public Output<String> getDriver() {
@@ -33,7 +33,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Options specific to the driver.
      * 
      */
-    @InputImport(name="driverOpts")
+    @Import(name="driverOpts")
       private final @Nullable Output<Map<String,Object>> driverOpts;
 
     public Output<Map<String,Object>> getDriverOpts() {
@@ -44,7 +44,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * User-defined key/value metadata
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<VolumeLabelArgs>> labels;
 
     public Output<List<VolumeLabelArgs>> getLabels() {
@@ -55,7 +55,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Docker volume (will be generated if not provided).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

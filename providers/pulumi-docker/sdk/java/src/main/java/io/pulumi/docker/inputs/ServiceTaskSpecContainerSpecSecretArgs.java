@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,42 +15,42 @@ public final class ServiceTaskSpecContainerSpecSecretArgs extends io.pulumi.reso
 
     public static final ServiceTaskSpecContainerSpecSecretArgs Empty = new ServiceTaskSpecContainerSpecSecretArgs();
 
-    @InputImport(name="fileGid")
+    @Import(name="fileGid")
       private final @Nullable Output<String> fileGid;
 
     public Output<String> getFileGid() {
         return this.fileGid == null ? Output.empty() : this.fileGid;
     }
 
-    @InputImport(name="fileMode")
+    @Import(name="fileMode")
       private final @Nullable Output<Integer> fileMode;
 
     public Output<Integer> getFileMode() {
         return this.fileMode == null ? Output.empty() : this.fileMode;
     }
 
-    @InputImport(name="fileName", required=true)
+    @Import(name="fileName", required=true)
       private final Output<String> fileName;
 
     public Output<String> getFileName() {
         return this.fileName;
     }
 
-    @InputImport(name="fileUid")
+    @Import(name="fileUid")
       private final @Nullable Output<String> fileUid;
 
     public Output<String> getFileUid() {
         return this.fileUid == null ? Output.empty() : this.fileUid;
     }
 
-    @InputImport(name="secretId", required=true)
+    @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
     public Output<String> getSecretId() {
         return this.secretId;
     }
 
-    @InputImport(name="secretName")
+    @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
     public Output<String> getSecretName() {

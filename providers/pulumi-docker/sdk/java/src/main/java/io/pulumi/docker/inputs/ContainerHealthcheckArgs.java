@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,35 +16,35 @@ public final class ContainerHealthcheckArgs extends io.pulumi.resources.Resource
 
     public static final ContainerHealthcheckArgs Empty = new ContainerHealthcheckArgs();
 
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<String> interval;
 
     public Output<String> getInterval() {
         return this.interval == null ? Output.empty() : this.interval;
     }
 
-    @InputImport(name="retries")
+    @Import(name="retries")
       private final @Nullable Output<Integer> retries;
 
     public Output<Integer> getRetries() {
         return this.retries == null ? Output.empty() : this.retries;
     }
 
-    @InputImport(name="startPeriod")
+    @Import(name="startPeriod")
       private final @Nullable Output<String> startPeriod;
 
     public Output<String> getStartPeriod() {
         return this.startPeriod == null ? Output.empty() : this.startPeriod;
     }
 
-    @InputImport(name="tests", required=true)
+    @Import(name="tests", required=true)
       private final Output<List<String>> tests;
 
     public Output<List<String>> getTests() {
         return this.tests;
     }
 
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

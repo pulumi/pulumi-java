@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceTaskSpecPlacementPlatformGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,28 +17,28 @@ public final class ServiceTaskSpecPlacementGetArgs extends io.pulumi.resources.R
 
     public static final ServiceTaskSpecPlacementGetArgs Empty = new ServiceTaskSpecPlacementGetArgs();
 
-    @InputImport(name="constraints")
+    @Import(name="constraints")
       private final @Nullable Output<List<String>> constraints;
 
     public Output<List<String>> getConstraints() {
         return this.constraints == null ? Output.empty() : this.constraints;
     }
 
-    @InputImport(name="maxReplicas")
+    @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
     public Output<Integer> getMaxReplicas() {
         return this.maxReplicas == null ? Output.empty() : this.maxReplicas;
     }
 
-    @InputImport(name="platforms")
+    @Import(name="platforms")
       private final @Nullable Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms;
 
     public Output<List<ServiceTaskSpecPlacementPlatformGetArgs>> getPlatforms() {
         return this.platforms == null ? Output.empty() : this.platforms;
     }
 
-    @InputImport(name="prefs")
+    @Import(name="prefs")
       private final @Nullable Output<List<String>> prefs;
 
     public Output<List<String>> getPrefs() {

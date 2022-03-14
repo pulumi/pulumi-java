@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ServiceTaskSpecContainerSpec;
 import io.pulumi.docker.outputs.ServiceTaskSpecLogDriver;
 import io.pulumi.docker.outputs.ServiceTaskSpecPlacement;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpec {
     private final ServiceTaskSpecContainerSpec containerSpec;
     private final @Nullable Integer forceUpdate;
@@ -27,16 +27,16 @@ public final class ServiceTaskSpec {
     private final @Nullable ServiceTaskSpecRestartPolicy restartPolicy;
     private final @Nullable String runtime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpec(
-        @OutputCustomType.Parameter("containerSpec") ServiceTaskSpecContainerSpec containerSpec,
-        @OutputCustomType.Parameter("forceUpdate") @Nullable Integer forceUpdate,
-        @OutputCustomType.Parameter("logDriver") @Nullable ServiceTaskSpecLogDriver logDriver,
-        @OutputCustomType.Parameter("networks") @Nullable List<String> networks,
-        @OutputCustomType.Parameter("placement") @Nullable ServiceTaskSpecPlacement placement,
-        @OutputCustomType.Parameter("resources") @Nullable ServiceTaskSpecResources resources,
-        @OutputCustomType.Parameter("restartPolicy") @Nullable ServiceTaskSpecRestartPolicy restartPolicy,
-        @OutputCustomType.Parameter("runtime") @Nullable String runtime) {
+        @CustomType.Parameter("containerSpec") ServiceTaskSpecContainerSpec containerSpec,
+        @CustomType.Parameter("forceUpdate") @Nullable Integer forceUpdate,
+        @CustomType.Parameter("logDriver") @Nullable ServiceTaskSpecLogDriver logDriver,
+        @CustomType.Parameter("networks") @Nullable List<String> networks,
+        @CustomType.Parameter("placement") @Nullable ServiceTaskSpecPlacement placement,
+        @CustomType.Parameter("resources") @Nullable ServiceTaskSpecResources resources,
+        @CustomType.Parameter("restartPolicy") @Nullable ServiceTaskSpecRestartPolicy restartPolicy,
+        @CustomType.Parameter("runtime") @Nullable String runtime) {
         this.containerSpec = containerSpec;
         this.forceUpdate = forceUpdate;
         this.logDriver = logDriver;

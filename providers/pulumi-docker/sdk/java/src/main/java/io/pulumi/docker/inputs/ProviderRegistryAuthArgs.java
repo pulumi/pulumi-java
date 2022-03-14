@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,35 +14,35 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
 
     public static final ProviderRegistryAuthArgs Empty = new ProviderRegistryAuthArgs();
 
-    @InputImport(name="address", required=true)
+    @Import(name="address", required=true)
       private final Output<String> address;
 
     public Output<String> getAddress() {
         return this.address;
     }
 
-    @InputImport(name="configFile")
+    @Import(name="configFile")
       private final @Nullable Output<String> configFile;
 
     public Output<String> getConfigFile() {
         return this.configFile == null ? Output.empty() : this.configFile;
     }
 
-    @InputImport(name="configFileContent")
+    @Import(name="configFileContent")
       private final @Nullable Output<String> configFileContent;
 
     public Output<String> getConfigFileContent() {
         return this.configFileContent == null ? Output.empty() : this.configFileContent;
     }
 
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
         return this.password == null ? Output.empty() : this.password;
     }
 
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

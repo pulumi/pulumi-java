@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerHealthcheck {
     private final @Nullable String interval;
     private final @Nullable Integer retries;
@@ -19,13 +19,13 @@ public final class ContainerHealthcheck {
     private final List<String> tests;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerHealthcheck(
-        @OutputCustomType.Parameter("interval") @Nullable String interval,
-        @OutputCustomType.Parameter("retries") @Nullable Integer retries,
-        @OutputCustomType.Parameter("startPeriod") @Nullable String startPeriod,
-        @OutputCustomType.Parameter("tests") List<String> tests,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("interval") @Nullable String interval,
+        @CustomType.Parameter("retries") @Nullable Integer retries,
+        @CustomType.Parameter("startPeriod") @Nullable String startPeriod,
+        @CustomType.Parameter("tests") List<String> tests,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.interval = interval;
         this.retries = retries;
         this.startPeriod = startPeriod;

@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecLogDriverArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecPlacementArgs;
@@ -21,56 +21,56 @@ public final class ServiceTaskSpecArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ServiceTaskSpecArgs Empty = new ServiceTaskSpecArgs();
 
-    @InputImport(name="containerSpec", required=true)
+    @Import(name="containerSpec", required=true)
       private final Output<ServiceTaskSpecContainerSpecArgs> containerSpec;
 
     public Output<ServiceTaskSpecContainerSpecArgs> getContainerSpec() {
         return this.containerSpec;
     }
 
-    @InputImport(name="forceUpdate")
+    @Import(name="forceUpdate")
       private final @Nullable Output<Integer> forceUpdate;
 
     public Output<Integer> getForceUpdate() {
         return this.forceUpdate == null ? Output.empty() : this.forceUpdate;
     }
 
-    @InputImport(name="logDriver")
+    @Import(name="logDriver")
       private final @Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver;
 
     public Output<ServiceTaskSpecLogDriverArgs> getLogDriver() {
         return this.logDriver == null ? Output.empty() : this.logDriver;
     }
 
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<String>> networks;
 
     public Output<List<String>> getNetworks() {
         return this.networks == null ? Output.empty() : this.networks;
     }
 
-    @InputImport(name="placement")
+    @Import(name="placement")
       private final @Nullable Output<ServiceTaskSpecPlacementArgs> placement;
 
     public Output<ServiceTaskSpecPlacementArgs> getPlacement() {
         return this.placement == null ? Output.empty() : this.placement;
     }
 
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<ServiceTaskSpecResourcesArgs> resources;
 
     public Output<ServiceTaskSpecResourcesArgs> getResources() {
         return this.resources == null ? Output.empty() : this.resources;
     }
 
-    @InputImport(name="restartPolicy")
+    @Import(name="restartPolicy")
       private final @Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy;
 
     public Output<ServiceTaskSpecRestartPolicyArgs> getRestartPolicy() {
         return this.restartPolicy == null ? Output.empty() : this.restartPolicy;
     }
 
-    @InputImport(name="runtime")
+    @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
     public Output<String> getRuntime() {
