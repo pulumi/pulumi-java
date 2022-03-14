@@ -1,7 +1,7 @@
 package designplayground.alt1;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 
 import java.util.List;
 
@@ -17,20 +17,20 @@ public final class ServiceSpecArgs {
             return null;
         }
 
-        public Builder type(Input<Either<String, ServiceSpecType>> typeNew) {
+        public Builder type(Output<Either<String, ServiceSpecType>> typeNew) {
             return this;
         }
 
         public Builder type(ServiceSpecType typeNew) {
-            return type(Input.of(Either.ofRight(typeNew)));
+            return type(Output.of(Either.ofRight(typeNew)));
         }
 
-        public Builder ports(Input<List<ServicePortArgs>> portsNew) {
+        public Builder ports(Output<List<ServicePortArgs>> portsNew) {
             return this;
         }
 
         public Builder ports(List<ServicePortArgs> portsNew) {
-            return ports(Input.of(portsNew));
+            return ports(Output.of(portsNew));
         }
     }
 }

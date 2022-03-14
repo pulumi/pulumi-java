@@ -1,6 +1,6 @@
 package designplayground.alt1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 
 public final class ObjectMetaArgs {
 
@@ -9,7 +9,7 @@ public final class ObjectMetaArgs {
     }
 
     public class Builder {
-        public Builder clusterName(Input<String> clusterNameNew) {
+        public Builder clusterName(Output<String> clusterNameNew) {
             return this;
         }
 

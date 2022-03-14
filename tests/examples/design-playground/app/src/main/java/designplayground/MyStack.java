@@ -16,15 +16,13 @@ public final class MyStack extends Stack {
     public MyStack() {
         final var service = new Service("myservice",
                 ServiceArgs.builder()
-                        // We are working to shorten .setMetadata() here to .metadata()
-                        // https://github.com/pulumi/pulumi-java/issues/212
-                        .setMetadata(ObjectMetaArgs.builder().setClusterName("clusterName").build())
-                        .setSpec(ServiceSpecArgs.builder()
-                                .setType(Either.ofRight(ServiceSpecType.LoadBalancer))
-                                .setPorts(List.of(ServicePortArgs.builder()
-                                        .setPort(80)
+                        .metadata(ObjectMetaArgs.builder().clusterName("clusterName").build())
+                        .spec(ServiceSpecArgs.builder()
+                                .type(Either.ofRight(ServiceSpecType.LoadBalancer))
+                                .ports(List.of(ServicePortArgs.builder()
+                                        .port(80)
                                         // We should build overloads to make ofRight / Either wrapper disappear.
-                                        .setTargetPort(Either.ofRight("http"))
+                                        .targetPort(Either.ofRight("http"))
                                         .build()))
                                 .build())
                         .build()
@@ -44,12 +42,12 @@ final class MyStackAlt extends Stack {
                         // .setMetadata(builder -> builder.setClusterName("clusterName").build())
                         // Name disambiguation and avoiding import is only really useful if this is done for nested
                         // types.
-                        .setMetadata(ObjectMetaArgs.builder().setClusterName("clusterName").build())
-                        .setSpec(ServiceSpecArgs.builder()
-                                .setType(Either.ofRight(ServiceSpecType.LoadBalancer))
-                                .setPorts(List.of(ServicePortArgs.builder()
-                                        .setPort(80)
-                                        .setTargetPort(Either.ofRight("http"))
+                        .metadata(ObjectMetaArgs.builder().clusterName("clusterName").build())
+                        .spec(ServiceSpecArgs.builder()
+                                .type(Either.ofRight(ServiceSpecType.LoadBalancer))
+                                .ports(List.of(ServicePortArgs.builder()
+                                        .port(80)
+                                        .targetPort(Either.ofRight("http"))
                                         .build()))
                                 .build())
                         .build()
