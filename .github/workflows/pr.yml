@@ -117,6 +117,12 @@ jobs:
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: run example aws-java-webserver
         run: |
+          pulumi plugin install resource pulumi v1.0.0;
+          pulumi plugin install resource aws v4.37.3;
+          pulumi plugin install resource azure-native v1.56.0;
+          pulumi plugin install resource kubernetes v3.15.1;
+          pulumi plugin install resource gcp v6.11.0;
+          pulumi plugin install resource random v4.3.1;
           make install_sdk
           make provider.aws.build provider.aws.install
           make bin/pulumi-language-jvm
@@ -172,6 +178,12 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example azure-java-appservice-sql
         run: |
+          pulumi plugin install resource pulumi v1.0.0;
+          pulumi plugin install resource aws v4.37.3;
+          pulumi plugin install resource azure-native v1.56.0;
+          pulumi plugin install resource kubernetes v3.15.1;
+          pulumi plugin install resource gcp v6.11.0;
+          pulumi plugin install resource random v4.3.1;
           make install_sdk
           make provider.azure-native.build
           make provider.azure-native.install
@@ -227,6 +239,12 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example gcp-java-gke-hello-world
         run: |
+          pulumi plugin install resource pulumi v1.0.0;
+          pulumi plugin install resource aws v4.37.3;
+          pulumi plugin install resource azure-native v1.56.0;
+          pulumi plugin install resource kubernetes v3.15.1;
+          pulumi plugin install resource gcp v6.11.0;
+          pulumi plugin install resource random v4.3.1;
           make install_sdk
           make provider.gcp.build provider.gcp.install
           make provider.kubernetes.build make provider.kubernetes.install
@@ -281,6 +299,12 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example minimal
         run: |
+          pulumi plugin install resource pulumi v1.0.0;
+          pulumi plugin install resource aws v4.37.3;
+          pulumi plugin install resource azure-native v1.56.0;
+          pulumi plugin install resource kubernetes v3.15.1;
+          pulumi plugin install resource gcp v6.11.0;
+          pulumi plugin install resource random v4.3.1;
           make install_sdk
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
@@ -344,6 +368,12 @@ jobs:
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: run example aws-native-java-s3-folder
         run: |
+          pulumi plugin install resource pulumi v1.0.0;
+          pulumi plugin install resource aws v4.37.3;
+          pulumi plugin install resource azure-native v1.56.0;
+          pulumi plugin install resource kubernetes v3.15.1;
+          pulumi plugin install resource gcp v6.11.0;
+          pulumi plugin install resource random v4.3.1;
           make install_sdk
           make provider.aws.build provider.aws.install
           make provider.aws-native.build provider.aws-native.install
@@ -398,6 +428,12 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example azure-java-static-website
         run: |
+          pulumi plugin install resource pulumi v1.0.0;
+          pulumi plugin install resource aws v4.37.3;
+          pulumi plugin install resource azure-native v1.56.0;
+          pulumi plugin install resource kubernetes v3.15.1;
+          pulumi plugin install resource gcp v6.11.0;
+          pulumi plugin install resource random v4.3.1;
           make install_sdk
           make provider.azure-native.build provider.azure-native.install
           make bin/pulumi-language-jvm
@@ -451,6 +487,12 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example random
         run: |
+          pulumi plugin install resource pulumi v1.0.0;
+          pulumi plugin install resource aws v4.37.3;
+          pulumi plugin install resource azure-native v1.56.0;
+          pulumi plugin install resource kubernetes v3.15.1;
+          pulumi plugin install resource gcp v6.11.0;
+          pulumi plugin install resource random v4.3.1;
           make install_sdk
           make provider.random.build provider.random.install
           make bin/pulumi-language-jvm
@@ -459,10 +501,6 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes;
             pulumi stack init dev;
-            for plugin in `cat ./app/build.gradle | grep implementation | awk '{ print $2 }' | sed "s/'//g"`; do
-               echo "$(echo $plugin | sed 's/:/ /g' | awk '{ print "pulumi plugin install resource " $2 " v" $3 }')" || true
-               eval "$(echo $plugin | sed 's/:/ /g' | awk '{ print "pulumi plugin install resource " $2 " v" $3 }')" || true
-            done;
             pulumi preview"
       - name: Integration tests
         run: make integration_tests
