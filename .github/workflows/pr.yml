@@ -460,7 +460,8 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi plugin install &&
-            pulumi preview"
+            pulumi up --yes
+            pulumi destroy --yes"
       - name: Integration tests
         run: make integration_tests
     strategy:
