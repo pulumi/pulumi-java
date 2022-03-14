@@ -6,7 +6,7 @@ package io.pulumi.awsnative.stepfunctions.inputs;
 import io.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfigurationLevel;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineLogDestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
 
     public static final StateMachineLoggingConfigurationArgs Empty = new StateMachineLoggingConfigurationArgs();
 
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable Output<List<StateMachineLogDestinationArgs>> destinations;
 
     public Output<List<StateMachineLogDestinationArgs>> getDestinations() {
         return this.destinations == null ? Output.empty() : this.destinations;
     }
 
-    @InputImport(name="includeExecutionData")
+    @Import(name="includeExecutionData")
       private final @Nullable Output<Boolean> includeExecutionData;
 
     public Output<Boolean> getIncludeExecutionData() {
         return this.includeExecutionData == null ? Output.empty() : this.includeExecutionData;
     }
 
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<StateMachineLoggingConfigurationLevel> level;
 
     public Output<StateMachineLoggingConfigurationLevel> getLevel() {

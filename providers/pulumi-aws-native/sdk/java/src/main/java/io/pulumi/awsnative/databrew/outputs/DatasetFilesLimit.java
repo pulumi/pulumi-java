@@ -5,13 +5,13 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrder;
 import io.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrderedBy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetFilesLimit {
     /**
      * Maximum number of files
@@ -29,11 +29,11 @@ public final class DatasetFilesLimit {
      */
     private final @Nullable DatasetFilesLimitOrderedBy orderedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetFilesLimit(
-        @OutputCustomType.Parameter("maxFiles") Integer maxFiles,
-        @OutputCustomType.Parameter("order") @Nullable DatasetFilesLimitOrder order,
-        @OutputCustomType.Parameter("orderedBy") @Nullable DatasetFilesLimitOrderedBy orderedBy) {
+        @CustomType.Parameter("maxFiles") Integer maxFiles,
+        @CustomType.Parameter("order") @Nullable DatasetFilesLimitOrder order,
+        @CustomType.Parameter("orderedBy") @Nullable DatasetFilesLimitOrderedBy orderedBy) {
         this.maxFiles = maxFiles;
         this.order = order;
         this.orderedBy = orderedBy;

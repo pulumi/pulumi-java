@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationTriggerType;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTriggerPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
 
     public static final IntegrationTriggerConfigArgs Empty = new IntegrationTriggerConfigArgs();
 
-    @InputImport(name="triggerProperties")
+    @Import(name="triggerProperties")
       private final @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties;
 
     public Output<IntegrationTriggerPropertiesArgs> getTriggerProperties() {
         return this.triggerProperties == null ? Output.empty() : this.triggerProperties;
     }
 
-    @InputImport(name="triggerType", required=true)
+    @Import(name="triggerType", required=true)
       private final Output<IntegrationTriggerType> triggerType;
 
     public Output<IntegrationTriggerType> getTriggerType() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileInforNexusConnectorProfileProperties {
     /**
      * The location of the InforNexus resource
@@ -15,8 +15,8 @@ public final class ConnectorProfileInforNexusConnectorProfileProperties {
      */
     private final String instanceUrl;
 
-    @OutputCustomType.Constructor
-    private ConnectorProfileInforNexusConnectorProfileProperties(@OutputCustomType.Parameter("instanceUrl") String instanceUrl) {
+    @CustomType.Constructor
+    private ConnectorProfileInforNexusConnectorProfileProperties(@CustomType.Parameter("instanceUrl") String instanceUrl) {
         this.instanceUrl = instanceUrl;
     }
 

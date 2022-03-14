@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorAppFlowConfig {
     private final String flowName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorAppFlowConfig(
-        @OutputCustomType.Parameter("flowName") String flowName,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("flowName") String flowName,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.flowName = flowName;
         this.roleArn = roleArn;
     }

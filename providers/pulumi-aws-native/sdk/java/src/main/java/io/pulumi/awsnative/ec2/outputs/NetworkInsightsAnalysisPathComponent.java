@@ -8,13 +8,13 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisComponent;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisPacketHeader;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisPathComponent {
     private final @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent component;
@@ -28,19 +28,19 @@ public final class NetworkInsightsAnalysisPathComponent {
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisPathComponent(
-        @OutputCustomType.Parameter("aclRule") @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule,
-        @OutputCustomType.Parameter("component") @Nullable NetworkInsightsAnalysisAnalysisComponent component,
-        @OutputCustomType.Parameter("destinationVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc,
-        @OutputCustomType.Parameter("inboundHeader") @Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader,
-        @OutputCustomType.Parameter("outboundHeader") @Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader,
-        @OutputCustomType.Parameter("routeTableRoute") @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute,
-        @OutputCustomType.Parameter("securityGroupRule") @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule,
-        @OutputCustomType.Parameter("sequenceNumber") @Nullable Integer sequenceNumber,
-        @OutputCustomType.Parameter("sourceVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc,
-        @OutputCustomType.Parameter("subnet") @Nullable NetworkInsightsAnalysisAnalysisComponent subnet,
-        @OutputCustomType.Parameter("vpc") @Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
+        @CustomType.Parameter("aclRule") @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule,
+        @CustomType.Parameter("component") @Nullable NetworkInsightsAnalysisAnalysisComponent component,
+        @CustomType.Parameter("destinationVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc,
+        @CustomType.Parameter("inboundHeader") @Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader,
+        @CustomType.Parameter("outboundHeader") @Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader,
+        @CustomType.Parameter("routeTableRoute") @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute,
+        @CustomType.Parameter("securityGroupRule") @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule,
+        @CustomType.Parameter("sequenceNumber") @Nullable Integer sequenceNumber,
+        @CustomType.Parameter("sourceVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc,
+        @CustomType.Parameter("subnet") @Nullable NetworkInsightsAnalysisAnalysisComponent subnet,
+        @CustomType.Parameter("vpc") @Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
         this.aclRule = aclRule;
         this.component = component;
         this.destinationVpc = destinationVpc;

@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionStatusCodes {
     private final List<Integer> items;
     private final Integer quantity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionStatusCodes(
-        @OutputCustomType.Parameter("items") List<Integer> items,
-        @OutputCustomType.Parameter("quantity") Integer quantity) {
+        @CustomType.Parameter("items") List<Integer> items,
+        @CustomType.Parameter("quantity") Integer quantity) {
         this.items = items;
         this.quantity = quantity;
     }

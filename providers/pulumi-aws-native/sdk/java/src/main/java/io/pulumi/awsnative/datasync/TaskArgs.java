@@ -8,7 +8,7 @@ import io.pulumi.awsnative.datasync.inputs.TaskOptionsArgs;
 import io.pulumi.awsnative.datasync.inputs.TaskScheduleArgs;
 import io.pulumi.awsnative.datasync.inputs.TaskTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
      * 
      */
-    @InputImport(name="cloudWatchLogGroupArn")
+    @Import(name="cloudWatchLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogGroupArn;
 
     public Output<String> getCloudWatchLogGroupArn() {
@@ -34,21 +34,21 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of an AWS storage resource's location.
      * 
      */
-    @InputImport(name="destinationLocationArn", required=true)
+    @Import(name="destinationLocationArn", required=true)
       private final Output<String> destinationLocationArn;
 
     public Output<String> getDestinationLocationArn() {
         return this.destinationLocationArn;
     }
 
-    @InputImport(name="excludes")
+    @Import(name="excludes")
       private final @Nullable Output<List<TaskFilterRuleArgs>> excludes;
 
     public Output<List<TaskFilterRuleArgs>> getExcludes() {
         return this.excludes == null ? Output.empty() : this.excludes;
     }
 
-    @InputImport(name="includes")
+    @Import(name="includes")
       private final @Nullable Output<List<TaskFilterRuleArgs>> includes;
 
     public Output<List<TaskFilterRuleArgs>> getIncludes() {
@@ -59,21 +59,21 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of a task. This value is a text reference that is used to identify the task in the console.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<TaskOptionsArgs> options;
 
     public Output<TaskOptionsArgs> getOptions() {
         return this.options == null ? Output.empty() : this.options;
     }
 
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<TaskScheduleArgs> schedule;
 
     public Output<TaskScheduleArgs> getSchedule() {
@@ -84,7 +84,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the source location for the task.
      * 
      */
-    @InputImport(name="sourceLocationArn", required=true)
+    @Import(name="sourceLocationArn", required=true)
       private final Output<String> sourceLocationArn;
 
     public Output<String> getSourceLocationArn() {
@@ -95,7 +95,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TaskTagArgs>> tags;
 
     public Output<List<TaskTagArgs>> getTags() {

@@ -5,13 +5,13 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ProjectStatus;
 import io.pulumi.awsnative.sagemaker.outputs.ServiceCatalogProvisionedProductDetailsProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     /**
      * The time at which the project was created.
@@ -31,13 +31,13 @@ public final class GetProjectResult {
      */
     private final @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("projectArn") @Nullable String projectArn,
-        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
-        @OutputCustomType.Parameter("projectStatus") @Nullable ProjectStatus projectStatus,
-        @OutputCustomType.Parameter("serviceCatalogProvisionedProductDetails") @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("projectArn") @Nullable String projectArn,
+        @CustomType.Parameter("projectId") @Nullable String projectId,
+        @CustomType.Parameter("projectStatus") @Nullable ProjectStatus projectStatus,
+        @CustomType.Parameter("serviceCatalogProvisionedProductDetails") @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
         this.creationTime = creationTime;
         this.projectArn = projectArn;
         this.projectId = projectId;

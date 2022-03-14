@@ -5,14 +5,14 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupVaultLockConfigurationType;
 import io.pulumi.awsnative.backup.outputs.BackupVaultNotificationObjectType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupVaultResult {
     private final @Nullable Object accessPolicy;
     private final @Nullable String backupVaultArn;
@@ -20,13 +20,13 @@ public final class GetBackupVaultResult {
     private final @Nullable BackupVaultLockConfigurationType lockConfiguration;
     private final @Nullable BackupVaultNotificationObjectType notifications;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupVaultResult(
-        @OutputCustomType.Parameter("accessPolicy") @Nullable Object accessPolicy,
-        @OutputCustomType.Parameter("backupVaultArn") @Nullable String backupVaultArn,
-        @OutputCustomType.Parameter("backupVaultTags") @Nullable Object backupVaultTags,
-        @OutputCustomType.Parameter("lockConfiguration") @Nullable BackupVaultLockConfigurationType lockConfiguration,
-        @OutputCustomType.Parameter("notifications") @Nullable BackupVaultNotificationObjectType notifications) {
+        @CustomType.Parameter("accessPolicy") @Nullable Object accessPolicy,
+        @CustomType.Parameter("backupVaultArn") @Nullable String backupVaultArn,
+        @CustomType.Parameter("backupVaultTags") @Nullable Object backupVaultTags,
+        @CustomType.Parameter("lockConfiguration") @Nullable BackupVaultLockConfigurationType lockConfiguration,
+        @CustomType.Parameter("notifications") @Nullable BackupVaultNotificationObjectType notifications) {
         this.accessPolicy = accessPolicy;
         this.backupVaultArn = backupVaultArn;
         this.backupVaultTags = backupVaultTags;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class DeliveryStreamBufferingHintsArgs extends io.pulumi.resources.
 
     public static final DeliveryStreamBufferingHintsArgs Empty = new DeliveryStreamBufferingHintsArgs();
 
-    @InputImport(name="intervalInSeconds")
+    @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
     public Output<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
     }
 
-    @InputImport(name="sizeInMBs")
+    @Import(name="sizeInMBs")
       private final @Nullable Output<Integer> sizeInMBs;
 
     public Output<Integer> getSizeInMBs() {

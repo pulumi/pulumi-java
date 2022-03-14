@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.InstanceProfileTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceProfileResult {
     private final @Nullable String arn;
     private final @Nullable String description;
@@ -22,15 +22,15 @@ public final class GetInstanceProfileResult {
     private final @Nullable Boolean rebootAfterUse;
     private final @Nullable List<InstanceProfileTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceProfileResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("excludeAppPackagesFromCleanup") @Nullable List<String> excludeAppPackagesFromCleanup,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("packageCleanup") @Nullable Boolean packageCleanup,
-        @OutputCustomType.Parameter("rebootAfterUse") @Nullable Boolean rebootAfterUse,
-        @OutputCustomType.Parameter("tags") @Nullable List<InstanceProfileTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("excludeAppPackagesFromCleanup") @Nullable List<String> excludeAppPackagesFromCleanup,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("packageCleanup") @Nullable Boolean packageCleanup,
+        @CustomType.Parameter("rebootAfterUse") @Nullable Boolean rebootAfterUse,
+        @CustomType.Parameter("tags") @Nullable List<InstanceProfileTag> tags) {
         this.arn = arn;
         this.description = description;
         this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;

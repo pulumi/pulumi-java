@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleKinesisAction {
     private final @Nullable String partitionKey;
     private final String roleArn;
     private final String streamName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleKinesisAction(
-        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("streamName") String streamName) {
+        @CustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("streamName") String streamName) {
         this.partitionKey = partitionKey;
         this.roleArn = roleArn;
         this.streamName = streamName;

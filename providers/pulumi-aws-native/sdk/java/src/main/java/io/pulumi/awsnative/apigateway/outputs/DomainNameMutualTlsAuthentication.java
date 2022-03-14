@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainNameMutualTlsAuthentication {
     private final @Nullable String truststoreUri;
     private final @Nullable String truststoreVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainNameMutualTlsAuthentication(
-        @OutputCustomType.Parameter("truststoreUri") @Nullable String truststoreUri,
-        @OutputCustomType.Parameter("truststoreVersion") @Nullable String truststoreVersion) {
+        @CustomType.Parameter("truststoreUri") @Nullable String truststoreUri,
+        @CustomType.Parameter("truststoreVersion") @Nullable String truststoreVersion) {
         this.truststoreUri = truststoreUri;
         this.truststoreVersion = truststoreVersion;
     }

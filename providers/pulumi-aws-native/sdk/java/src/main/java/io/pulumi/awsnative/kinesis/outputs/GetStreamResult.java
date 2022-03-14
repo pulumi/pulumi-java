@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesis.outputs;
 import io.pulumi.awsnative.kinesis.outputs.StreamEncryption;
 import io.pulumi.awsnative.kinesis.outputs.StreamModeDetails;
 import io.pulumi.awsnative.kinesis.outputs.StreamTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamResult {
     /**
      * The Amazon resource name (ARN) of the Kinesis stream
@@ -47,14 +47,14 @@ public final class GetStreamResult {
      */
     private final @Nullable List<StreamTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("retentionPeriodHours") @Nullable Integer retentionPeriodHours,
-        @OutputCustomType.Parameter("shardCount") @Nullable Integer shardCount,
-        @OutputCustomType.Parameter("streamEncryption") @Nullable StreamEncryption streamEncryption,
-        @OutputCustomType.Parameter("streamModeDetails") @Nullable StreamModeDetails streamModeDetails,
-        @OutputCustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("retentionPeriodHours") @Nullable Integer retentionPeriodHours,
+        @CustomType.Parameter("shardCount") @Nullable Integer shardCount,
+        @CustomType.Parameter("streamEncryption") @Nullable StreamEncryption streamEncryption,
+        @CustomType.Parameter("streamModeDetails") @Nullable StreamModeDetails streamModeDetails,
+        @CustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
         this.arn = arn;
         this.retentionPeriodHours = retentionPeriodHours;
         this.shardCount = shardCount;

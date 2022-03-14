@@ -7,14 +7,14 @@ import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanAction;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanChatChannel;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanIncidentTemplate;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResponsePlanResult {
     /**
      * The list of actions.
@@ -44,15 +44,15 @@ public final class GetResponsePlanResult {
      */
     private final @Nullable List<ResponsePlanTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResponsePlanResult(
-        @OutputCustomType.Parameter("actions") @Nullable List<ResponsePlanAction> actions,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("chatChannel") @Nullable ResponsePlanChatChannel chatChannel,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("engagements") @Nullable List<String> engagements,
-        @OutputCustomType.Parameter("incidentTemplate") @Nullable ResponsePlanIncidentTemplate incidentTemplate,
-        @OutputCustomType.Parameter("tags") @Nullable List<ResponsePlanTag> tags) {
+        @CustomType.Parameter("actions") @Nullable List<ResponsePlanAction> actions,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("chatChannel") @Nullable ResponsePlanChatChannel chatChannel,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("engagements") @Nullable List<String> engagements,
+        @CustomType.Parameter("incidentTemplate") @Nullable ResponsePlanIncidentTemplate incidentTemplate,
+        @CustomType.Parameter("tags") @Nullable List<ResponsePlanTag> tags) {
         this.actions = actions;
         this.arn = arn;
         this.chatChannel = chatChannel;

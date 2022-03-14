@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.memorydb.SubnetGroupArgs;
 import io.pulumi.awsnative.memorydb.outputs.SubnetGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the subnet group.
      * 
      */
-    @OutputExport(name="aRN", type=String.class, parameters={})
+    @Export(name="aRN", type=String.class, parameters={})
     private Output<String> aRN;
 
     /**
@@ -37,7 +37,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * An optional description of the subnet group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
      * 
      */
-    @OutputExport(name="subnetGroupName", type=String.class, parameters={})
+    @Export(name="subnetGroupName", type=String.class, parameters={})
     private Output<String> subnetGroupName;
 
     /**
@@ -65,7 +65,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * A list of VPC subnet IDs for the subnet group.
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
@@ -79,7 +79,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this subnet group.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={SubnetGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={SubnetGroupTag.class})
     private Output</* @Nullable */ List<SubnetGroupTag>> tags;
 
     /**

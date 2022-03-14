@@ -6,21 +6,21 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupStatefulRuleAction;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupHeader;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupRuleOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupStatefulRule {
     private final RuleGroupStatefulRuleAction action;
     private final RuleGroupHeader header;
     private final List<RuleGroupRuleOption> ruleOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupStatefulRule(
-        @OutputCustomType.Parameter("action") RuleGroupStatefulRuleAction action,
-        @OutputCustomType.Parameter("header") RuleGroupHeader header,
-        @OutputCustomType.Parameter("ruleOptions") List<RuleGroupRuleOption> ruleOptions) {
+        @CustomType.Parameter("action") RuleGroupStatefulRuleAction action,
+        @CustomType.Parameter("header") RuleGroupHeader header,
+        @CustomType.Parameter("ruleOptions") List<RuleGroupRuleOption> ruleOptions) {
         this.action = action;
         this.header = header;
         this.ruleOptions = ruleOptions;

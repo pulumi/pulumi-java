@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableSSESpecification {
     private final Boolean sSEEnabled;
     private final @Nullable String sSEType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableSSESpecification(
-        @OutputCustomType.Parameter("sSEEnabled") Boolean sSEEnabled,
-        @OutputCustomType.Parameter("sSEType") @Nullable String sSEType) {
+        @CustomType.Parameter("sSEEnabled") Boolean sSEEnabled,
+        @CustomType.Parameter("sSEType") @Nullable String sSEType) {
         this.sSEEnabled = sSEEnabled;
         this.sSEType = sSEType;
     }

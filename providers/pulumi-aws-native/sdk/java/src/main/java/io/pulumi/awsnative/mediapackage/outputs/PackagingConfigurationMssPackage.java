@@ -5,14 +5,14 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationMssEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationMssManifest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationMssPackage {
     private final @Nullable PackagingConfigurationMssEncryption encryption;
     /**
@@ -22,11 +22,11 @@ public final class PackagingConfigurationMssPackage {
     private final List<PackagingConfigurationMssManifest> mssManifests;
     private final @Nullable Integer segmentDurationSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationMssPackage(
-        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationMssEncryption encryption,
-        @OutputCustomType.Parameter("mssManifests") List<PackagingConfigurationMssManifest> mssManifests,
-        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds) {
+        @CustomType.Parameter("encryption") @Nullable PackagingConfigurationMssEncryption encryption,
+        @CustomType.Parameter("mssManifests") List<PackagingConfigurationMssManifest> mssManifests,
+        @CustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds) {
         this.encryption = encryption;
         this.mssManifests = mssManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;

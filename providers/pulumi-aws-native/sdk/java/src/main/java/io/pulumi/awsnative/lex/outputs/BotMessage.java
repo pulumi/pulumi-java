@@ -7,24 +7,24 @@ import io.pulumi.awsnative.lex.outputs.BotCustomPayload;
 import io.pulumi.awsnative.lex.outputs.BotImageResponseCard;
 import io.pulumi.awsnative.lex.outputs.BotPlainTextMessage;
 import io.pulumi.awsnative.lex.outputs.BotSSMLMessage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotMessage {
     private final @Nullable BotCustomPayload customPayload;
     private final @Nullable BotImageResponseCard imageResponseCard;
     private final @Nullable BotPlainTextMessage plainTextMessage;
     private final @Nullable BotSSMLMessage sSMLMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotMessage(
-        @OutputCustomType.Parameter("customPayload") @Nullable BotCustomPayload customPayload,
-        @OutputCustomType.Parameter("imageResponseCard") @Nullable BotImageResponseCard imageResponseCard,
-        @OutputCustomType.Parameter("plainTextMessage") @Nullable BotPlainTextMessage plainTextMessage,
-        @OutputCustomType.Parameter("sSMLMessage") @Nullable BotSSMLMessage sSMLMessage) {
+        @CustomType.Parameter("customPayload") @Nullable BotCustomPayload customPayload,
+        @CustomType.Parameter("imageResponseCard") @Nullable BotImageResponseCard imageResponseCard,
+        @CustomType.Parameter("plainTextMessage") @Nullable BotPlainTextMessage plainTextMessage,
+        @CustomType.Parameter("sSMLMessage") @Nullable BotSSMLMessage sSMLMessage) {
         this.customPayload = customPayload;
         this.imageResponseCard = imageResponseCard;
         this.plainTextMessage = plainTextMessage;

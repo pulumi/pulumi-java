@@ -5,7 +5,7 @@ package io.pulumi.awsnative.codeartifact;
 
 import io.pulumi.awsnative.codeartifact.inputs.DomainTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the domain.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -32,7 +32,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The access control resource policy on the provided domain.
      * 
      */
-    @InputImport(name="permissionsPolicyDocument")
+    @Import(name="permissionsPolicyDocument")
       private final @Nullable Output<Object> permissionsPolicyDocument;
 
     public Output<Object> getPermissionsPolicyDocument() {
@@ -43,7 +43,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;
 
     public Output<List<DomainTagArgs>> getTags() {

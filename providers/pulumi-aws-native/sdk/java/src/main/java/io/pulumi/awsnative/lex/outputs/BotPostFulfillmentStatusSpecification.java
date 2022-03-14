@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotResponseSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotPostFulfillmentStatusSpecification {
     private final @Nullable BotResponseSpecification failureResponse;
     private final @Nullable BotResponseSpecification successResponse;
     private final @Nullable BotResponseSpecification timeoutResponse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotPostFulfillmentStatusSpecification(
-        @OutputCustomType.Parameter("failureResponse") @Nullable BotResponseSpecification failureResponse,
-        @OutputCustomType.Parameter("successResponse") @Nullable BotResponseSpecification successResponse,
-        @OutputCustomType.Parameter("timeoutResponse") @Nullable BotResponseSpecification timeoutResponse) {
+        @CustomType.Parameter("failureResponse") @Nullable BotResponseSpecification failureResponse,
+        @CustomType.Parameter("successResponse") @Nullable BotResponseSpecification successResponse,
+        @CustomType.Parameter("timeoutResponse") @Nullable BotResponseSpecification timeoutResponse) {
         this.failureResponse = failureResponse;
         this.successResponse = successResponse;
         this.timeoutResponse = timeoutResponse;

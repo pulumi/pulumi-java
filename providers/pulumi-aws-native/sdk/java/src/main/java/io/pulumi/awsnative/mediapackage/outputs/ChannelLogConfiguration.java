@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChannelLogConfiguration {
     /**
      * Sets a custom AWS CloudWatch log group name for access logs. If a log group name isn't specified, the defaults are used: /aws/MediaPackage/EgressAccessLogs for egress access logs and /aws/MediaPackage/IngressAccessLogs for ingress access logs.
@@ -17,8 +17,8 @@ public final class ChannelLogConfiguration {
      */
     private final @Nullable String logGroupName;
 
-    @OutputCustomType.Constructor
-    private ChannelLogConfiguration(@OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName) {
+    @CustomType.Constructor
+    private ChannelLogConfiguration(@CustomType.Parameter("logGroupName") @Nullable String logGroupName) {
         this.logGroupName = logGroupName;
     }
 

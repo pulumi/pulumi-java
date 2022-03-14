@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.awsnative.xray.inputs.SamplingRule;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
      * When the rule was created, in Unix time seconds.
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable String createdAt;
 
     public Optional<String> getCreatedAt() {
@@ -30,14 +30,14 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
      * When the rule was modified, in Unix time seconds.
      * 
      */
-    @InputImport(name="modifiedAt")
+    @Import(name="modifiedAt")
       private final @Nullable String modifiedAt;
 
     public Optional<String> getModifiedAt() {
         return this.modifiedAt == null ? Optional.empty() : Optional.ofNullable(this.modifiedAt);
     }
 
-    @InputImport(name="samplingRule")
+    @Import(name="samplingRule")
       private final @Nullable SamplingRule samplingRule;
 
     public Optional<SamplingRule> getSamplingRule() {

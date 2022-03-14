@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketPolicyResult {
     /**
      * A policy document containing permissions to add to the specified bucket.
@@ -17,8 +17,8 @@ public final class GetBucketPolicyResult {
      */
     private final @Nullable Object policyDocument;
 
-    @OutputCustomType.Constructor
-    private GetBucketPolicyResult(@OutputCustomType.Parameter("policyDocument") @Nullable Object policyDocument) {
+    @CustomType.Constructor
+    private GetBucketPolicyResult(@CustomType.Parameter("policyDocument") @Nullable Object policyDocument) {
         this.policyDocument = policyDocument;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSerializer;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class DeliveryStreamOutputFormatConfiguration extends io.pulumi.res
 
     public static final DeliveryStreamOutputFormatConfiguration Empty = new DeliveryStreamOutputFormatConfiguration();
 
-    @InputImport(name="serializer")
+    @Import(name="serializer")
       private final @Nullable DeliveryStreamSerializer serializer;
 
     public Optional<DeliveryStreamSerializer> getSerializer() {

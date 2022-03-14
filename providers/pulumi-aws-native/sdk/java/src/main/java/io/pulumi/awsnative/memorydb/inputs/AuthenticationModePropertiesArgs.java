@@ -5,7 +5,7 @@ package io.pulumi.awsnative.memorydb.inputs;
 
 import io.pulumi.awsnative.memorydb.enums.UserAuthenticationModePropertiesType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
      * Passwords used for this user account. You can create up to two passwords for each user.
      * 
      */
-    @InputImport(name="passwords")
+    @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
 
     public Output<List<String>> getPasswords() {
@@ -31,7 +31,7 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
      * Type of authentication strategy for this user.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<UserAuthenticationModePropertiesType> type;
 
     public Output<UserAuthenticationModePropertiesType> getType() {

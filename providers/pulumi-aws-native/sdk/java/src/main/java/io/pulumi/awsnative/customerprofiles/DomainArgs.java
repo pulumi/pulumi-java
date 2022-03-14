@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles;
 
 import io.pulumi.awsnative.customerprofiles.inputs.DomainTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The URL of the SQS dead letter queue
      * 
      */
-    @InputImport(name="deadLetterQueueUrl")
+    @Import(name="deadLetterQueueUrl")
       private final @Nullable Output<String> deadLetterQueueUrl;
 
     public Output<String> getDeadLetterQueueUrl() {
@@ -32,7 +32,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The default encryption key
      * 
      */
-    @InputImport(name="defaultEncryptionKey")
+    @Import(name="defaultEncryptionKey")
       private final @Nullable Output<String> defaultEncryptionKey;
 
     public Output<String> getDefaultEncryptionKey() {
@@ -43,7 +43,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The default number of days until the data within the domain expires.
      * 
      */
-    @InputImport(name="defaultExpirationDays")
+    @Import(name="defaultExpirationDays")
       private final @Nullable Output<Integer> defaultExpirationDays;
 
     public Output<Integer> getDefaultExpirationDays() {
@@ -54,7 +54,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of the domain.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -65,7 +65,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The tags (keys and values) associated with the domain
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DomainTagArgs>> tags;
 
     public Output<List<DomainTagArgs>> getTags() {

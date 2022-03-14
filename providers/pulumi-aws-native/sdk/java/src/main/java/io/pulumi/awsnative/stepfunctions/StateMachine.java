@@ -13,7 +13,7 @@ import io.pulumi.awsnative.stepfunctions.outputs.StateMachineS3Location;
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineTagsEntry;
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineTracingConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,73 +27,73 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:stepfunctions:StateMachine")
 public class StateMachine extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="definition", type=StateMachineDefinition.class, parameters={})
+    @Export(name="definition", type=StateMachineDefinition.class, parameters={})
     private Output</* @Nullable */ StateMachineDefinition> definition;
 
     public Output</* @Nullable */ StateMachineDefinition> getDefinition() {
         return this.definition;
     }
-    @OutputExport(name="definitionS3Location", type=StateMachineS3Location.class, parameters={})
+    @Export(name="definitionS3Location", type=StateMachineS3Location.class, parameters={})
     private Output</* @Nullable */ StateMachineS3Location> definitionS3Location;
 
     public Output</* @Nullable */ StateMachineS3Location> getDefinitionS3Location() {
         return this.definitionS3Location;
     }
-    @OutputExport(name="definitionString", type=String.class, parameters={})
+    @Export(name="definitionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> definitionString;
 
     public Output</* @Nullable */ String> getDefinitionString() {
         return this.definitionString;
     }
-    @OutputExport(name="definitionSubstitutions", type=StateMachineDefinitionSubstitutions.class, parameters={})
+    @Export(name="definitionSubstitutions", type=StateMachineDefinitionSubstitutions.class, parameters={})
     private Output</* @Nullable */ StateMachineDefinitionSubstitutions> definitionSubstitutions;
 
     public Output</* @Nullable */ StateMachineDefinitionSubstitutions> getDefinitionSubstitutions() {
         return this.definitionSubstitutions;
     }
-    @OutputExport(name="loggingConfiguration", type=StateMachineLoggingConfiguration.class, parameters={})
+    @Export(name="loggingConfiguration", type=StateMachineLoggingConfiguration.class, parameters={})
     private Output</* @Nullable */ StateMachineLoggingConfiguration> loggingConfiguration;
 
     public Output</* @Nullable */ StateMachineLoggingConfiguration> getLoggingConfiguration() {
         return this.loggingConfiguration;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="stateMachineName", type=String.class, parameters={})
+    @Export(name="stateMachineName", type=String.class, parameters={})
     private Output</* @Nullable */ String> stateMachineName;
 
     public Output</* @Nullable */ String> getStateMachineName() {
         return this.stateMachineName;
     }
-    @OutputExport(name="stateMachineType", type=StateMachineType.class, parameters={})
+    @Export(name="stateMachineType", type=StateMachineType.class, parameters={})
     private Output</* @Nullable */ StateMachineType> stateMachineType;
 
     public Output</* @Nullable */ StateMachineType> getStateMachineType() {
         return this.stateMachineType;
     }
-    @OutputExport(name="tags", type=List.class, parameters={StateMachineTagsEntry.class})
+    @Export(name="tags", type=List.class, parameters={StateMachineTagsEntry.class})
     private Output</* @Nullable */ List<StateMachineTagsEntry>> tags;
 
     public Output</* @Nullable */ List<StateMachineTagsEntry>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tracingConfiguration", type=StateMachineTracingConfiguration.class, parameters={})
+    @Export(name="tracingConfiguration", type=StateMachineTracingConfiguration.class, parameters={})
     private Output</* @Nullable */ StateMachineTracingConfiguration> tracingConfiguration;
 
     public Output</* @Nullable */ StateMachineTracingConfiguration> getTracingConfiguration() {

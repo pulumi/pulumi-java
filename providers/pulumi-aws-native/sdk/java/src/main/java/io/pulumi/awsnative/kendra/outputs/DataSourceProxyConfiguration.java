@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceProxyConfiguration {
     private final @Nullable String credentials;
     private final String host;
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceProxyConfiguration(
-        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("credentials") @Nullable String credentials,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Integer port) {
         this.credentials = credentials;
         this.host = host;
         this.port = port;

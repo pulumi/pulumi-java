@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,42 +16,42 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends io.pulumi
 
     public static final InAppTemplateDefaultButtonConfigurationArgs Empty = new InAppTemplateDefaultButtonConfigurationArgs();
 
-    @InputImport(name="backgroundColor")
+    @Import(name="backgroundColor")
       private final @Nullable Output<String> backgroundColor;
 
     public Output<String> getBackgroundColor() {
         return this.backgroundColor == null ? Output.empty() : this.backgroundColor;
     }
 
-    @InputImport(name="borderRadius")
+    @Import(name="borderRadius")
       private final @Nullable Output<Integer> borderRadius;
 
     public Output<Integer> getBorderRadius() {
         return this.borderRadius == null ? Output.empty() : this.borderRadius;
     }
 
-    @InputImport(name="buttonAction")
+    @Import(name="buttonAction")
       private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
     public Output<InAppTemplateButtonAction> getButtonAction() {
         return this.buttonAction == null ? Output.empty() : this.buttonAction;
     }
 
-    @InputImport(name="link")
+    @Import(name="link")
       private final @Nullable Output<String> link;
 
     public Output<String> getLink() {
         return this.link == null ? Output.empty() : this.link;
     }
 
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<String> text;
 
     public Output<String> getText() {
         return this.text == null ? Output.empty() : this.text;
     }
 
-    @InputImport(name="textColor")
+    @Import(name="textColor")
       private final @Nullable Output<String> textColor;
 
     public Output<String> getTextColor() {

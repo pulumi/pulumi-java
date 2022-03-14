@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowScheduledTriggerPropertiesDataPullMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,42 +20,42 @@ public final class FlowScheduledTriggerPropertiesArgs extends io.pulumi.resource
 
     public static final FlowScheduledTriggerPropertiesArgs Empty = new FlowScheduledTriggerPropertiesArgs();
 
-    @InputImport(name="dataPullMode")
+    @Import(name="dataPullMode")
       private final @Nullable Output<FlowScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
     public Output<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
         return this.dataPullMode == null ? Output.empty() : this.dataPullMode;
     }
 
-    @InputImport(name="scheduleEndTime")
+    @Import(name="scheduleEndTime")
       private final @Nullable Output<Double> scheduleEndTime;
 
     public Output<Double> getScheduleEndTime() {
         return this.scheduleEndTime == null ? Output.empty() : this.scheduleEndTime;
     }
 
-    @InputImport(name="scheduleExpression", required=true)
+    @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
-    @InputImport(name="scheduleOffset")
+    @Import(name="scheduleOffset")
       private final @Nullable Output<Double> scheduleOffset;
 
     public Output<Double> getScheduleOffset() {
         return this.scheduleOffset == null ? Output.empty() : this.scheduleOffset;
     }
 
-    @InputImport(name="scheduleStartTime")
+    @Import(name="scheduleStartTime")
       private final @Nullable Output<Double> scheduleStartTime;
 
     public Output<Double> getScheduleStartTime() {
         return this.scheduleStartTime == null ? Output.empty() : this.scheduleStartTime;
     }
 
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopePathStatementRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequestArgs extends 
 
     public static final NetworkInsightsAccessScopeAccessScopePathRequestArgs Empty = new NetworkInsightsAccessScopeAccessScopePathRequestArgs();
 
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> destination;
 
     public Output<NetworkInsightsAccessScopePathStatementRequestArgs> getDestination() {
         return this.destination == null ? Output.empty() : this.destination;
     }
 
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<NetworkInsightsAccessScopePathStatementRequestArgs> source;
 
     public Output<NetworkInsightsAccessScopePathStatementRequestArgs> getSource() {
         return this.source == null ? Output.empty() : this.source;
     }
 
-    @InputImport(name="throughResources")
+    @Import(name="throughResources")
       private final @Nullable Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> throughResources;
 
     public Output<List<NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs>> getThroughResources() {

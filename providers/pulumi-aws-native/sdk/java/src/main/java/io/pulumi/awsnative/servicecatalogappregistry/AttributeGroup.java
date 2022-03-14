@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.AttributeGroupArgs;
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.AttributeGroupTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -19,13 +19,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:servicecatalogappregistry:AttributeGroup")
 public class AttributeGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="attributes", type=Object.class, parameters={})
+    @Export(name="attributes", type=Object.class, parameters={})
     private Output<Object> attributes;
 
     public Output<Object> getAttributes() {
@@ -35,7 +35,7 @@ public class AttributeGroup extends io.pulumi.resources.CustomResource {
      * The description of the attribute group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -49,7 +49,7 @@ public class AttributeGroup extends io.pulumi.resources.CustomResource {
      * The name of the attribute group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -59,7 +59,7 @@ public class AttributeGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=AttributeGroupTags.class, parameters={})
+    @Export(name="tags", type=AttributeGroupTags.class, parameters={})
     private Output</* @Nullable */ AttributeGroupTags> tags;
 
     public Output</* @Nullable */ AttributeGroupTags> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePair;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class ServiceImageConfiguration extends io.pulumi.resources.InvokeA
      * Port
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable String port;
 
     public Optional<String> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    @InputImport(name="runtimeEnvironmentVariables")
+    @Import(name="runtimeEnvironmentVariables")
       private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
 
     public List<ServiceKeyValuePair> getRuntimeEnvironmentVariables() {
@@ -42,7 +42,7 @@ public final class ServiceImageConfiguration extends io.pulumi.resources.InvokeA
      * Start Command
      * 
      */
-    @InputImport(name="startCommand")
+    @Import(name="startCommand")
       private final @Nullable String startCommand;
 
     public Optional<String> getStartCommand() {

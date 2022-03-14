@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.glue;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
      * Metadata key
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -28,7 +28,7 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
      * Represents the version ID associated with the schema version.
      * 
      */
-    @InputImport(name="schemaVersionId", required=true)
+    @Import(name="schemaVersionId", required=true)
       private final Output<String> schemaVersionId;
 
     public Output<String> getSchemaVersionId() {
@@ -39,7 +39,7 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
      * Metadata value
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

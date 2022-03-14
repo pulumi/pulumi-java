@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.inspectorv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FilterNumberFilter {
     private final @Nullable Double lowerInclusive;
     private final @Nullable Double upperInclusive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterNumberFilter(
-        @OutputCustomType.Parameter("lowerInclusive") @Nullable Double lowerInclusive,
-        @OutputCustomType.Parameter("upperInclusive") @Nullable Double upperInclusive) {
+        @CustomType.Parameter("lowerInclusive") @Nullable Double lowerInclusive,
+        @CustomType.Parameter("upperInclusive") @Nullable Double upperInclusive) {
         this.lowerInclusive = lowerInclusive;
         this.upperInclusive = upperInclusive;
     }

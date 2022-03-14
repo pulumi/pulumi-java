@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.athena.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPreparedStatementArgs extends io.pulumi.resources.InvokeAr
      * The name of the prepared statement.
      * 
      */
-    @InputImport(name="statementName", required=true)
+    @Import(name="statementName", required=true)
       private final String statementName;
 
     public String getStatementName() {
@@ -27,7 +27,7 @@ public final class GetPreparedStatementArgs extends io.pulumi.resources.InvokeAr
      * The name of the workgroup to which the prepared statement belongs.
      * 
      */
-    @InputImport(name="workGroup", required=true)
+    @Import(name="workGroup", required=true)
       private final String workGroup;
 
     public String getWorkGroup() {

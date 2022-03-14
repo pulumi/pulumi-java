@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.UserProfileUserSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserProfileResult {
     /**
      * The user profile Amazon Resource Name (ARN).
@@ -23,10 +23,10 @@ public final class GetUserProfileResult {
      */
     private final @Nullable UserProfileUserSettings userSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserProfileResult(
-        @OutputCustomType.Parameter("userProfileArn") @Nullable String userProfileArn,
-        @OutputCustomType.Parameter("userSettings") @Nullable UserProfileUserSettings userSettings) {
+        @CustomType.Parameter("userProfileArn") @Nullable String userProfileArn,
+        @CustomType.Parameter("userSettings") @Nullable UserProfileUserSettings userSettings) {
         this.userProfileArn = userProfileArn;
         this.userSettings = userSettings;
     }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.inputs.UsagePlanQuotaSettingsArgs;
 import io.pulumi.awsnative.apigateway.inputs.UsagePlanTagArgs;
 import io.pulumi.awsnative.apigateway.inputs.UsagePlanThrottleSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The API stages to associate with this usage plan.
      * 
      */
-    @InputImport(name="apiStages")
+    @Import(name="apiStages")
       private final @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
     public Output<List<UsagePlanApiStageArgs>> getApiStages() {
@@ -34,7 +34,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the usage plan.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * Configures the number of requests that users can make within a given interval.
      * 
      */
-    @InputImport(name="quota")
+    @Import(name="quota")
       private final @Nullable Output<UsagePlanQuotaSettingsArgs> quota;
 
     public Output<UsagePlanQuotaSettingsArgs> getQuota() {
@@ -56,7 +56,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<UsagePlanTagArgs>> tags;
 
     public Output<List<UsagePlanTagArgs>> getTags() {
@@ -67,7 +67,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * Configures the overall request rate (average requests per second) and burst capacity.
      * 
      */
-    @InputImport(name="throttle")
+    @Import(name="throttle")
       private final @Nullable Output<UsagePlanThrottleSettingsArgs> throttle;
 
     public Output<UsagePlanThrottleSettingsArgs> getThrottle() {
@@ -78,7 +78,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the usage plan.
      * 
      */
-    @InputImport(name="usagePlanName")
+    @Import(name="usagePlanName")
       private final @Nullable Output<String> usagePlanName;
 
     public Output<String> getUsagePlanName() {

@@ -8,13 +8,13 @@ import io.pulumi.awsnative.s3.outputs.BucketAccessControlTranslation;
 import io.pulumi.awsnative.s3.outputs.BucketEncryptionConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketMetrics;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationTime;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationDestination {
     private final @Nullable BucketAccessControlTranslation accessControlTranslation;
     private final @Nullable String account;
@@ -28,15 +28,15 @@ public final class BucketReplicationDestination {
      */
     private final @Nullable BucketReplicationDestinationStorageClass storageClass;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationDestination(
-        @OutputCustomType.Parameter("accessControlTranslation") @Nullable BucketAccessControlTranslation accessControlTranslation,
-        @OutputCustomType.Parameter("account") @Nullable String account,
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable BucketEncryptionConfiguration encryptionConfiguration,
-        @OutputCustomType.Parameter("metrics") @Nullable BucketMetrics metrics,
-        @OutputCustomType.Parameter("replicationTime") @Nullable BucketReplicationTime replicationTime,
-        @OutputCustomType.Parameter("storageClass") @Nullable BucketReplicationDestinationStorageClass storageClass) {
+        @CustomType.Parameter("accessControlTranslation") @Nullable BucketAccessControlTranslation accessControlTranslation,
+        @CustomType.Parameter("account") @Nullable String account,
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("encryptionConfiguration") @Nullable BucketEncryptionConfiguration encryptionConfiguration,
+        @CustomType.Parameter("metrics") @Nullable BucketMetrics metrics,
+        @CustomType.Parameter("replicationTime") @Nullable BucketReplicationTime replicationTime,
+        @CustomType.Parameter("storageClass") @Nullable BucketReplicationDestinationStorageClass storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.account = account;
         this.bucket = bucket;

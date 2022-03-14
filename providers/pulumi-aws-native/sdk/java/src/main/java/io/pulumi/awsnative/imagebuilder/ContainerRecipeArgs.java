@@ -9,7 +9,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeComponentConfigura
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeTargetContainerRepositoryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * Components for build and test that are included in the container recipe.
      * 
      */
-    @InputImport(name="components")
+    @Import(name="components")
       private final @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components;
 
     public Output<List<ContainerRecipeComponentConfigurationArgs>> getComponents() {
@@ -36,7 +36,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the type of container, such as Docker.
      * 
      */
-    @InputImport(name="containerType")
+    @Import(name="containerType")
       private final @Nullable Output<ContainerRecipeContainerType> containerType;
 
     public Output<ContainerRecipeContainerType> getContainerType() {
@@ -47,7 +47,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * The description of the container recipe.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -58,7 +58,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * Dockerfiles are text documents that are used to build Docker containers, and ensure that they contain all of the elements required by the application running inside. The template data consists of contextual variables where Image Builder places build information or scripts, based on your container image recipe.
      * 
      */
-    @InputImport(name="dockerfileTemplateData")
+    @Import(name="dockerfileTemplateData")
       private final @Nullable Output<String> dockerfileTemplateData;
 
     public Output<String> getDockerfileTemplateData() {
@@ -69,7 +69,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * The S3 URI for the Dockerfile that will be used to build your container image.
      * 
      */
-    @InputImport(name="dockerfileTemplateUri")
+    @Import(name="dockerfileTemplateUri")
       private final @Nullable Output<String> dockerfileTemplateUri;
 
     public Output<String> getDockerfileTemplateUri() {
@@ -80,7 +80,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the operating system version for the source image.
      * 
      */
-    @InputImport(name="imageOsVersionOverride")
+    @Import(name="imageOsVersionOverride")
       private final @Nullable Output<String> imageOsVersionOverride;
 
     public Output<String> getImageOsVersionOverride() {
@@ -91,7 +91,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * A group of options that can be used to configure an instance for building and testing container images.
      * 
      */
-    @InputImport(name="instanceConfiguration")
+    @Import(name="instanceConfiguration")
       private final @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
 
     public Output<ContainerRecipeInstanceConfigurationArgs> getInstanceConfiguration() {
@@ -102,7 +102,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * Identifies which KMS key is used to encrypt the container image.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -113,7 +113,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the container recipe.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -124,7 +124,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * The source image for the container recipe.
      * 
      */
-    @InputImport(name="parentImage")
+    @Import(name="parentImage")
       private final @Nullable Output<String> parentImage;
 
     public Output<String> getParentImage() {
@@ -135,7 +135,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the operating system platform when you use a custom source image.
      * 
      */
-    @InputImport(name="platformOverride")
+    @Import(name="platformOverride")
       private final @Nullable Output<ContainerRecipePlatformOverride> platformOverride;
 
     public Output<ContainerRecipePlatformOverride> getPlatformOverride() {
@@ -146,7 +146,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * Tags that are attached to the container recipe.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
@@ -157,7 +157,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * The destination repository for the container image.
      * 
      */
-    @InputImport(name="targetRepository")
+    @Import(name="targetRepository")
       private final @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
 
     public Output<ContainerRecipeTargetContainerRepositoryArgs> getTargetRepository() {
@@ -168,7 +168,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * The semantic version of the container recipe (<major>.<minor>.<patch>).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -179,7 +179,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
      * The working directory to be used during build and test workflows.
      * 
      */
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {

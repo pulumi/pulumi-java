@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.xray.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetSamplingRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSamplingRuleArgs Empty = new GetSamplingRuleArgs();
 
-    @InputImport(name="ruleARN", required=true)
+    @Import(name="ruleARN", required=true)
       private final String ruleARN;
 
     public String getRuleARN() {

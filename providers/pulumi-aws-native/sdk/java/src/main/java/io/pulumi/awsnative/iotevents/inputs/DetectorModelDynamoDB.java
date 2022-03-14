@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayload;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * The name of the hash key (also called the partition key).
      * 
      */
-    @InputImport(name="hashKeyField", required=true)
+    @Import(name="hashKeyField", required=true)
       private final String hashKeyField;
 
     public String getHashKeyField() {
@@ -40,7 +40,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * If you don't specify `hashKeyType`, the default value is `STRING`.
      * 
      */
-    @InputImport(name="hashKeyType")
+    @Import(name="hashKeyType")
       private final @Nullable String hashKeyType;
 
     public Optional<String> getHashKeyType() {
@@ -51,7 +51,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * The value of the hash key (also called the partition key).
      * 
      */
-    @InputImport(name="hashKeyValue", required=true)
+    @Import(name="hashKeyValue", required=true)
       private final String hashKeyValue;
 
     public String getHashKeyValue() {
@@ -70,14 +70,14 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * If you don't specify this parameter, AWS IoT Events triggers the `INSERT` operation.
      * 
      */
-    @InputImport(name="operation")
+    @Import(name="operation")
       private final @Nullable String operation;
 
     public Optional<String> getOperation() {
         return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);
     }
 
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> getPayload() {
@@ -90,7 +90,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * If you don't specify this parameter, the name of the DynamoDB column is `payload`.
      * 
      */
-    @InputImport(name="payloadField")
+    @Import(name="payloadField")
       private final @Nullable String payloadField;
 
     public Optional<String> getPayloadField() {
@@ -101,7 +101,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * The name of the range key (also called the sort key).
      * 
      */
-    @InputImport(name="rangeKeyField")
+    @Import(name="rangeKeyField")
       private final @Nullable String rangeKeyField;
 
     public Optional<String> getRangeKeyField() {
@@ -118,7 +118,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * If you don't specify `rangeKeyField`, the default value is `STRING`.
      * 
      */
-    @InputImport(name="rangeKeyType")
+    @Import(name="rangeKeyType")
       private final @Nullable String rangeKeyType;
 
     public Optional<String> getRangeKeyType() {
@@ -129,7 +129,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * The value of the range key (also called the sort key).
      * 
      */
-    @InputImport(name="rangeKeyValue")
+    @Import(name="rangeKeyValue")
       private final @Nullable String rangeKeyValue;
 
     public Optional<String> getRangeKeyValue() {
@@ -140,7 +140,7 @@ public final class DetectorModelDynamoDB extends io.pulumi.resources.InvokeArgs 
      * The name of the DynamoDB table.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final String tableName;
 
     public String getTableName() {

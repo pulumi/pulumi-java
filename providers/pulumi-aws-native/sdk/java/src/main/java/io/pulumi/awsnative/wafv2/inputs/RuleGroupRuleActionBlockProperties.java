@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RuleGroupRuleActionBlockProperties extends io.pulumi.resource
 
     public static final RuleGroupRuleActionBlockProperties Empty = new RuleGroupRuleActionBlockProperties();
 
-    @InputImport(name="customResponse")
+    @Import(name="customResponse")
       private final @Nullable RuleGroupCustomResponse customResponse;
 
     public Optional<RuleGroupCustomResponse> getCustomResponse() {

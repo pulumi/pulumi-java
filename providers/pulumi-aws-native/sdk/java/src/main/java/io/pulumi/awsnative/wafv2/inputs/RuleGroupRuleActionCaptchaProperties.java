@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomRequestHandling;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RuleGroupRuleActionCaptchaProperties extends io.pulumi.resour
 
     public static final RuleGroupRuleActionCaptchaProperties Empty = new RuleGroupRuleActionCaptchaProperties();
 
-    @InputImport(name="customRequestHandling")
+    @Import(name="customRequestHandling")
       private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
     public Optional<RuleGroupCustomRequestHandling> getCustomRequestHandling() {

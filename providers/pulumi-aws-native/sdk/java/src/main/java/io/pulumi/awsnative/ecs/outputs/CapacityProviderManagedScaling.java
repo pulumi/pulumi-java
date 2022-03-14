@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.CapacityProviderManagedScalingStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapacityProviderManagedScaling {
     private final @Nullable Integer instanceWarmupPeriod;
     private final @Nullable Integer maximumScalingStepSize;
@@ -18,13 +18,13 @@ public final class CapacityProviderManagedScaling {
     private final @Nullable CapacityProviderManagedScalingStatus status;
     private final @Nullable Integer targetCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityProviderManagedScaling(
-        @OutputCustomType.Parameter("instanceWarmupPeriod") @Nullable Integer instanceWarmupPeriod,
-        @OutputCustomType.Parameter("maximumScalingStepSize") @Nullable Integer maximumScalingStepSize,
-        @OutputCustomType.Parameter("minimumScalingStepSize") @Nullable Integer minimumScalingStepSize,
-        @OutputCustomType.Parameter("status") @Nullable CapacityProviderManagedScalingStatus status,
-        @OutputCustomType.Parameter("targetCapacity") @Nullable Integer targetCapacity) {
+        @CustomType.Parameter("instanceWarmupPeriod") @Nullable Integer instanceWarmupPeriod,
+        @CustomType.Parameter("maximumScalingStepSize") @Nullable Integer maximumScalingStepSize,
+        @CustomType.Parameter("minimumScalingStepSize") @Nullable Integer minimumScalingStepSize,
+        @CustomType.Parameter("status") @Nullable CapacityProviderManagedScalingStatus status,
+        @CustomType.Parameter("targetCapacity") @Nullable Integer targetCapacity) {
         this.instanceWarmupPeriod = instanceWarmupPeriod;
         this.maximumScalingStepSize = maximumScalingStepSize;
         this.minimumScalingStepSize = minimumScalingStepSize;

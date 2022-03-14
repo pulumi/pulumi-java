@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CanaryBaseScreenshot extends io.pulumi.resources.InvokeArgs {
      * List of coordinates of rectangles to be ignored during visual testing
      * 
      */
-    @InputImport(name="ignoreCoordinates")
+    @Import(name="ignoreCoordinates")
       private final @Nullable List<String> ignoreCoordinates;
 
     public List<String> getIgnoreCoordinates() {
@@ -30,7 +30,7 @@ public final class CanaryBaseScreenshot extends io.pulumi.resources.InvokeArgs {
      * Name of the screenshot to be used as base reference for visual testing
      * 
      */
-    @InputImport(name="screenshotName", required=true)
+    @Import(name="screenshotName", required=true)
       private final String screenshotName;
 
     public String getScreenshotName() {

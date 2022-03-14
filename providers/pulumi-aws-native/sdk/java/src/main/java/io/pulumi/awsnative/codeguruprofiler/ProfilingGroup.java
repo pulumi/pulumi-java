@@ -10,7 +10,7 @@ import io.pulumi.awsnative.codeguruprofiler.outputs.AgentPermissionsProperties;
 import io.pulumi.awsnative.codeguruprofiler.outputs.ProfilingGroupChannel;
 import io.pulumi.awsnative.codeguruprofiler.outputs.ProfilingGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * The agent permissions attached to this profiling group.
      * 
      */
-    @OutputExport(name="agentPermissions", type=AgentPermissionsProperties.class, parameters={})
+    @Export(name="agentPermissions", type=AgentPermissionsProperties.class, parameters={})
     private Output</* @Nullable */ AgentPermissionsProperties> agentPermissions;
 
     /**
@@ -40,7 +40,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
      * 
      */
-    @OutputExport(name="anomalyDetectionNotificationConfiguration", type=List.class, parameters={ProfilingGroupChannel.class})
+    @Export(name="anomalyDetectionNotificationConfiguration", type=List.class, parameters={ProfilingGroupChannel.class})
     private Output</* @Nullable */ List<ProfilingGroupChannel>> anomalyDetectionNotificationConfiguration;
 
     /**
@@ -54,7 +54,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the specified profiling group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -68,7 +68,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * The compute platform of the profiling group.
      * 
      */
-    @OutputExport(name="computePlatform", type=ProfilingGroupComputePlatform.class, parameters={})
+    @Export(name="computePlatform", type=ProfilingGroupComputePlatform.class, parameters={})
     private Output</* @Nullable */ ProfilingGroupComputePlatform> computePlatform;
 
     /**
@@ -82,7 +82,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * The name of the profiling group.
      * 
      */
-    @OutputExport(name="profilingGroupName", type=String.class, parameters={})
+    @Export(name="profilingGroupName", type=String.class, parameters={})
     private Output<String> profilingGroupName;
 
     /**
@@ -96,7 +96,7 @@ public class ProfilingGroup extends io.pulumi.resources.CustomResource {
      * The tags associated with a profiling group.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ProfilingGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={ProfilingGroupTag.class})
     private Output</* @Nullable */ List<ProfilingGroupTag>> tags;
 
     /**

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sso.AssignmentArgs;
 import io.pulumi.awsnative.sso.enums.AssignmentPrincipalType;
 import io.pulumi.awsnative.sso.enums.AssignmentTargetType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The sso instance that the permission set is owned.
      * 
      */
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
@@ -37,7 +37,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The permission set that the assignemt will be assigned
      * 
      */
-    @OutputExport(name="permissionSetArn", type=String.class, parameters={})
+    @Export(name="permissionSetArn", type=String.class, parameters={})
     private Output<String> permissionSetArn;
 
     /**
@@ -51,7 +51,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The assignee's identifier, user id/group id
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
@@ -65,7 +65,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The assignee's type, user/group
      * 
      */
-    @OutputExport(name="principalType", type=AssignmentPrincipalType.class, parameters={})
+    @Export(name="principalType", type=AssignmentPrincipalType.class, parameters={})
     private Output<AssignmentPrincipalType> principalType;
 
     /**
@@ -79,7 +79,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The account id to be provisioned.
      * 
      */
-    @OutputExport(name="targetId", type=String.class, parameters={})
+    @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**
@@ -93,7 +93,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The type of resource to be provsioned to, only aws account now
      * 
      */
-    @OutputExport(name="targetType", type=AssignmentTargetType.class, parameters={})
+    @Export(name="targetType", type=AssignmentTargetType.class, parameters={})
     private Output<AssignmentTargetType> targetType;
 
     /**

@@ -5,14 +5,14 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.EC2FleetInstanceRequirementsRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetPlacement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetFleetLaunchTemplateOverridesRequest {
     private final @Nullable String availabilityZone;
     private final @Nullable EC2FleetInstanceRequirementsRequest instanceRequirements;
@@ -23,16 +23,16 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequest {
     private final @Nullable String subnetId;
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetFleetLaunchTemplateOverridesRequest(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("instanceRequirements") @Nullable EC2FleetInstanceRequirementsRequest instanceRequirements,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("maxPrice") @Nullable String maxPrice,
-        @OutputCustomType.Parameter("placement") @Nullable EC2FleetPlacement placement,
-        @OutputCustomType.Parameter("priority") @Nullable Double priority,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("instanceRequirements") @Nullable EC2FleetInstanceRequirementsRequest instanceRequirements,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("maxPrice") @Nullable String maxPrice,
+        @CustomType.Parameter("placement") @Nullable EC2FleetPlacement placement,
+        @CustomType.Parameter("priority") @Nullable Double priority,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceRequirements = instanceRequirements;
         this.instanceType = instanceType;

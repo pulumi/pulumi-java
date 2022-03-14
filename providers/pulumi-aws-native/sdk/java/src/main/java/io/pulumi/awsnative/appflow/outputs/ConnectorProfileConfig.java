@@ -5,20 +5,20 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileCredentials;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileConfig {
     private final ConnectorProfileCredentials connectorProfileCredentials;
     private final @Nullable ConnectorProfileProperties connectorProfileProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileConfig(
-        @OutputCustomType.Parameter("connectorProfileCredentials") ConnectorProfileCredentials connectorProfileCredentials,
-        @OutputCustomType.Parameter("connectorProfileProperties") @Nullable ConnectorProfileProperties connectorProfileProperties) {
+        @CustomType.Parameter("connectorProfileCredentials") ConnectorProfileCredentials connectorProfileCredentials,
+        @CustomType.Parameter("connectorProfileProperties") @Nullable ConnectorProfileProperties connectorProfileProperties) {
         this.connectorProfileCredentials = connectorProfileCredentials;
         this.connectorProfileProperties = connectorProfileProperties;
     }

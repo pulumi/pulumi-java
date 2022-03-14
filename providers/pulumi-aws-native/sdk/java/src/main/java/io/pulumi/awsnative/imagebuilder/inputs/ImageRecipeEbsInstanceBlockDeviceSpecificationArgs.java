@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * Use to configure delete on termination of the associated device.
      * 
      */
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
@@ -36,7 +36,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * Use to configure device encryption.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -47,7 +47,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * Use to configure device IOPS.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -58,7 +58,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * Use to configure the KMS key to use when encrypting the device.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -69,7 +69,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * The snapshot that defines the device contents.
      * 
      */
-    @InputImport(name="snapshotId")
+    @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
@@ -80,7 +80,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * For GP3 volumes only – The throughput in MiB/s that the volume supports.
      * 
      */
-    @InputImport(name="throughput")
+    @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
@@ -91,7 +91,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * Use to override the device's volume size.
      * 
      */
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
@@ -102,7 +102,7 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecificationArgs extends io
      * Use to override the device's volume type.
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType;
 
     public Output<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> getVolumeType() {

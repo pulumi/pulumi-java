@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class SpotFleetIamInstanceProfileSpecification extends io.pulumi.re
 
     public static final SpotFleetIamInstanceProfileSpecification Empty = new SpotFleetIamInstanceProfileSpecification();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {

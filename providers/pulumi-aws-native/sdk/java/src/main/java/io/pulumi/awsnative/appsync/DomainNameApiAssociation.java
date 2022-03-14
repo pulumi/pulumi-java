@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appsync;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appsync.DomainNameApiAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,19 +17,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:appsync:DomainNameApiAssociation")
 public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="apiAssociationIdentifier", type=String.class, parameters={})
+    @Export(name="apiAssociationIdentifier", type=String.class, parameters={})
     private Output<String> apiAssociationIdentifier;
 
     public Output<String> getApiAssociationIdentifier() {
         return this.apiAssociationIdentifier;
     }
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     public Output<String> getApiId() {
         return this.apiId;
     }
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     public Output<String> getDomainName() {

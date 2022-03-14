@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.awsnative.cloudformation.inputs.StackSetDeploymentTargets;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetParameter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
 
     public static final StackSetStackInstances Empty = new StackSetStackInstances();
 
-    @InputImport(name="deploymentTargets", required=true)
+    @Import(name="deploymentTargets", required=true)
       private final StackSetDeploymentTargets deploymentTargets;
 
     public StackSetDeploymentTargets getDeploymentTargets() {
@@ -32,7 +32,7 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
      * A list of stack set parameters whose values you want to override in the selected stack instances.
      * 
      */
-    @InputImport(name="parameterOverrides")
+    @Import(name="parameterOverrides")
       private final @Nullable List<StackSetParameter> parameterOverrides;
 
     public List<StackSetParameter> getParameterOverrides() {
@@ -43,7 +43,7 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
      * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
      * 
      */
-    @InputImport(name="regions", required=true)
+    @Import(name="regions", required=true)
       private final List<String> regions;
 
     public List<String> getRegions() {

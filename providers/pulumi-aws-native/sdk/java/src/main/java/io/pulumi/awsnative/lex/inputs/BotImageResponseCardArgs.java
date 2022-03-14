@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotButtonArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * A list of buttons that should be displayed on the response card.
      * 
      */
-    @InputImport(name="buttons")
+    @Import(name="buttons")
       private final @Nullable Output<List<BotButtonArgs>> buttons;
 
     public Output<List<BotButtonArgs>> getButtons() {
@@ -35,7 +35,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * The URL of an image to display on the response card.
      * 
      */
-    @InputImport(name="imageUrl")
+    @Import(name="imageUrl")
       private final @Nullable Output<String> imageUrl;
 
     public Output<String> getImageUrl() {
@@ -46,7 +46,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * The subtitle to display on the response card.
      * 
      */
-    @InputImport(name="subtitle")
+    @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
     public Output<String> getSubtitle() {
@@ -57,7 +57,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * The title to display on the response card.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.AccountAuditConfigurationArgs;
 import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditCheckConfigurations;
 import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditNotificationTargetConfigurations;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class AccountAuditConfiguration extends io.pulumi.resources.CustomResourc
      * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -33,13 +33,13 @@ public class AccountAuditConfiguration extends io.pulumi.resources.CustomResourc
     public Output<String> getAccountId() {
         return this.accountId;
     }
-    @OutputExport(name="auditCheckConfigurations", type=AccountAuditConfigurationAuditCheckConfigurations.class, parameters={})
+    @Export(name="auditCheckConfigurations", type=AccountAuditConfigurationAuditCheckConfigurations.class, parameters={})
     private Output<AccountAuditConfigurationAuditCheckConfigurations> auditCheckConfigurations;
 
     public Output<AccountAuditConfigurationAuditCheckConfigurations> getAuditCheckConfigurations() {
         return this.auditCheckConfigurations;
     }
-    @OutputExport(name="auditNotificationTargetConfigurations", type=AccountAuditConfigurationAuditNotificationTargetConfigurations.class, parameters={})
+    @Export(name="auditNotificationTargetConfigurations", type=AccountAuditConfigurationAuditNotificationTargetConfigurations.class, parameters={})
     private Output</* @Nullable */ AccountAuditConfigurationAuditNotificationTargetConfigurations> auditNotificationTargetConfigurations;
 
     public Output</* @Nullable */ AccountAuditConfigurationAuditNotificationTargetConfigurations> getAuditNotificationTargetConfigurations() {
@@ -49,7 +49,7 @@ public class AccountAuditConfiguration extends io.pulumi.resources.CustomResourc
      * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotInputContext {
     /**
      * The name of the context.
@@ -15,8 +15,8 @@ public final class BotInputContext {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private BotInputContext(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private BotInputContext(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

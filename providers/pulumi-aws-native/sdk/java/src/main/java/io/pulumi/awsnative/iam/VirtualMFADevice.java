@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iam.VirtualMFADeviceArgs;
 import io.pulumi.awsnative.iam.outputs.VirtualMFADeviceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,31 +19,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iam:VirtualMFADevice")
 public class VirtualMFADevice extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
     public Output</* @Nullable */ String> getPath() {
         return this.path;
     }
-    @OutputExport(name="serialNumber", type=String.class, parameters={})
+    @Export(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
 
     public Output<String> getSerialNumber() {
         return this.serialNumber;
     }
-    @OutputExport(name="tags", type=List.class, parameters={VirtualMFADeviceTag.class})
+    @Export(name="tags", type=List.class, parameters={VirtualMFADeviceTag.class})
     private Output</* @Nullable */ List<VirtualMFADeviceTag>> tags;
 
     public Output</* @Nullable */ List<VirtualMFADeviceTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="users", type=List.class, parameters={String.class})
+    @Export(name="users", type=List.class, parameters={String.class})
     private Output<List<String>> users;
 
     public Output<List<String>> getUsers() {
         return this.users;
     }
-    @OutputExport(name="virtualMfaDeviceName", type=String.class, parameters={})
+    @Export(name="virtualMfaDeviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualMfaDeviceName;
 
     public Output</* @Nullable */ String> getVirtualMfaDeviceName() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.GatewayCapabilitySummaryArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayPlatformArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * A list of gateway capability summaries that each contain a namespace and status.
      * 
      */
-    @InputImport(name="gatewayCapabilitySummaries")
+    @Import(name="gatewayCapabilitySummaries")
       private final @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
 
     public Output<List<GatewayCapabilitySummaryArgs>> getGatewayCapabilitySummaries() {
@@ -33,7 +33,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * A unique, friendly name for the gateway.
      * 
      */
-    @InputImport(name="gatewayName")
+    @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
     public Output<String> getGatewayName() {
@@ -44,7 +44,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The gateway's platform. You can only specify one platform in a gateway.
      * 
      */
-    @InputImport(name="gatewayPlatform", required=true)
+    @Import(name="gatewayPlatform", required=true)
       private final Output<GatewayPlatformArgs> gatewayPlatform;
 
     public Output<GatewayPlatformArgs> getGatewayPlatform() {
@@ -55,7 +55,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the gateway.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<GatewayTagArgs>> tags;
 
     public Output<List<GatewayTagArgs>> getTags() {

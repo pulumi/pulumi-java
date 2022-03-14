@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.RecipeStep;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRecipeResult {
     /**
      * Description of the recipe
@@ -20,10 +20,10 @@ public final class GetRecipeResult {
     private final @Nullable String description;
     private final @Nullable List<RecipeStep> steps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRecipeResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("steps") @Nullable List<RecipeStep> steps) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("steps") @Nullable List<RecipeStep> steps) {
         this.description = description;
         this.steps = steps;
     }

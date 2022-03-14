@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.inputs.StorageLensAwsOrgArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensBucketsAndRegionsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensDataExportArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,42 +23,42 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
 
     public static final StorageLensConfigurationArgs Empty = new StorageLensConfigurationArgs();
 
-    @InputImport(name="accountLevel", required=true)
+    @Import(name="accountLevel", required=true)
       private final Output<StorageLensAccountLevelArgs> accountLevel;
 
     public Output<StorageLensAccountLevelArgs> getAccountLevel() {
         return this.accountLevel;
     }
 
-    @InputImport(name="awsOrg")
+    @Import(name="awsOrg")
       private final @Nullable Output<StorageLensAwsOrgArgs> awsOrg;
 
     public Output<StorageLensAwsOrgArgs> getAwsOrg() {
         return this.awsOrg == null ? Output.empty() : this.awsOrg;
     }
 
-    @InputImport(name="dataExport")
+    @Import(name="dataExport")
       private final @Nullable Output<StorageLensDataExportArgs> dataExport;
 
     public Output<StorageLensDataExportArgs> getDataExport() {
         return this.dataExport == null ? Output.empty() : this.dataExport;
     }
 
-    @InputImport(name="exclude")
+    @Import(name="exclude")
       private final @Nullable Output<StorageLensBucketsAndRegionsArgs> exclude;
 
     public Output<StorageLensBucketsAndRegionsArgs> getExclude() {
         return this.exclude == null ? Output.empty() : this.exclude;
     }
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
         return this.id;
     }
 
-    @InputImport(name="include")
+    @Import(name="include")
       private final @Nullable Output<StorageLensBucketsAndRegionsArgs> include;
 
     public Output<StorageLensBucketsAndRegionsArgs> getInclude() {
@@ -69,7 +69,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
      * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -80,7 +80,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
      * The ARN for the Amazon S3 Storage Lens configuration.
      * 
      */
-    @InputImport(name="storageLensArn")
+    @Import(name="storageLensArn")
       private final @Nullable Output<String> storageLensArn;
 
     public Output<String> getStorageLensArn() {

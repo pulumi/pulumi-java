@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleConfig;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringExecutionSummary;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * The time at which the schedule was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -36,7 +36,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    @OutputExport(name="endpointName", type=String.class, parameters={})
+    @Export(name="endpointName", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointName;
 
     public Output</* @Nullable */ String> getEndpointName() {
@@ -46,7 +46,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * Contains the reason a monitoring job failed, if it failed.
      * 
      */
-    @OutputExport(name="failureReason", type=String.class, parameters={})
+    @Export(name="failureReason", type=String.class, parameters={})
     private Output</* @Nullable */ String> failureReason;
 
     /**
@@ -60,7 +60,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * A timestamp that indicates the last time the monitoring job was modified.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -74,7 +74,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * Describes metadata on the last execution to run, if there was one.
      * 
      */
-    @OutputExport(name="lastMonitoringExecutionSummary", type=MonitoringScheduleMonitoringExecutionSummary.class, parameters={})
+    @Export(name="lastMonitoringExecutionSummary", type=MonitoringScheduleMonitoringExecutionSummary.class, parameters={})
     private Output</* @Nullable */ MonitoringScheduleMonitoringExecutionSummary> lastMonitoringExecutionSummary;
 
     /**
@@ -88,7 +88,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the monitoring schedule.
      * 
      */
-    @OutputExport(name="monitoringScheduleArn", type=String.class, parameters={})
+    @Export(name="monitoringScheduleArn", type=String.class, parameters={})
     private Output<String> monitoringScheduleArn;
 
     /**
@@ -98,13 +98,13 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
     public Output<String> getMonitoringScheduleArn() {
         return this.monitoringScheduleArn;
     }
-    @OutputExport(name="monitoringScheduleConfig", type=MonitoringScheduleConfig.class, parameters={})
+    @Export(name="monitoringScheduleConfig", type=MonitoringScheduleConfig.class, parameters={})
     private Output<MonitoringScheduleConfig> monitoringScheduleConfig;
 
     public Output<MonitoringScheduleConfig> getMonitoringScheduleConfig() {
         return this.monitoringScheduleConfig;
     }
-    @OutputExport(name="monitoringScheduleName", type=String.class, parameters={})
+    @Export(name="monitoringScheduleName", type=String.class, parameters={})
     private Output<String> monitoringScheduleName;
 
     public Output<String> getMonitoringScheduleName() {
@@ -114,7 +114,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * The status of a schedule job.
      * 
      */
-    @OutputExport(name="monitoringScheduleStatus", type=MonitoringScheduleStatus.class, parameters={})
+    @Export(name="monitoringScheduleStatus", type=MonitoringScheduleStatus.class, parameters={})
     private Output</* @Nullable */ MonitoringScheduleStatus> monitoringScheduleStatus;
 
     /**
@@ -128,7 +128,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={MonitoringScheduleTag.class})
+    @Export(name="tags", type=List.class, parameters={MonitoringScheduleTag.class})
     private Output</* @Nullable */ List<MonitoringScheduleTag>> tags;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaExecutionPar
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaEventSourceArgs;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaLinuxProcessParamsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -21,77 +21,77 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
 
     public static final ComponentVersionLambdaExecutionParametersArgs Empty = new ComponentVersionLambdaExecutionParametersArgs();
 
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Object> environmentVariables;
 
     public Output<Object> getEnvironmentVariables() {
         return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
-    @InputImport(name="eventSources")
+    @Import(name="eventSources")
       private final @Nullable Output<List<ComponentVersionLambdaEventSourceArgs>> eventSources;
 
     public Output<List<ComponentVersionLambdaEventSourceArgs>> getEventSources() {
         return this.eventSources == null ? Output.empty() : this.eventSources;
     }
 
-    @InputImport(name="execArgs")
+    @Import(name="execArgs")
       private final @Nullable Output<List<String>> execArgs;
 
     public Output<List<String>> getExecArgs() {
         return this.execArgs == null ? Output.empty() : this.execArgs;
     }
 
-    @InputImport(name="inputPayloadEncodingType")
+    @Import(name="inputPayloadEncodingType")
       private final @Nullable Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType;
 
     public Output<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> getInputPayloadEncodingType() {
         return this.inputPayloadEncodingType == null ? Output.empty() : this.inputPayloadEncodingType;
     }
 
-    @InputImport(name="linuxProcessParams")
+    @Import(name="linuxProcessParams")
       private final @Nullable Output<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams;
 
     public Output<ComponentVersionLambdaLinuxProcessParamsArgs> getLinuxProcessParams() {
         return this.linuxProcessParams == null ? Output.empty() : this.linuxProcessParams;
     }
 
-    @InputImport(name="maxIdleTimeInSeconds")
+    @Import(name="maxIdleTimeInSeconds")
       private final @Nullable Output<Integer> maxIdleTimeInSeconds;
 
     public Output<Integer> getMaxIdleTimeInSeconds() {
         return this.maxIdleTimeInSeconds == null ? Output.empty() : this.maxIdleTimeInSeconds;
     }
 
-    @InputImport(name="maxInstancesCount")
+    @Import(name="maxInstancesCount")
       private final @Nullable Output<Integer> maxInstancesCount;
 
     public Output<Integer> getMaxInstancesCount() {
         return this.maxInstancesCount == null ? Output.empty() : this.maxInstancesCount;
     }
 
-    @InputImport(name="maxQueueSize")
+    @Import(name="maxQueueSize")
       private final @Nullable Output<Integer> maxQueueSize;
 
     public Output<Integer> getMaxQueueSize() {
         return this.maxQueueSize == null ? Output.empty() : this.maxQueueSize;
     }
 
-    @InputImport(name="pinned")
+    @Import(name="pinned")
       private final @Nullable Output<Boolean> pinned;
 
     public Output<Boolean> getPinned() {
         return this.pinned == null ? Output.empty() : this.pinned;
     }
 
-    @InputImport(name="statusTimeoutInSeconds")
+    @Import(name="statusTimeoutInSeconds")
       private final @Nullable Output<Integer> statusTimeoutInSeconds;
 
     public Output<Integer> getStatusTimeoutInSeconds() {
         return this.statusTimeoutInSeconds == null ? Output.empty() : this.statusTimeoutInSeconds;
     }
 
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {

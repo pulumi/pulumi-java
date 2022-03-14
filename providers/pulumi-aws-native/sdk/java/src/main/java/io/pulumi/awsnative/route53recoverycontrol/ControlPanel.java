@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53recoverycontrol.ControlPanelArgs;
 import io.pulumi.awsnative.route53recoverycontrol.enums.ControlPanelStatus;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.ControlPanelTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * Cluster to associate with the Control Panel
      * 
      */
-    @OutputExport(name="clusterArn", type=String.class, parameters={})
+    @Export(name="clusterArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterArn;
 
     /**
@@ -40,7 +40,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the cluster.
      * 
      */
-    @OutputExport(name="controlPanelArn", type=String.class, parameters={})
+    @Export(name="controlPanelArn", type=String.class, parameters={})
     private Output<String> controlPanelArn;
 
     /**
@@ -54,7 +54,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * A flag that Amazon Route 53 Application Recovery Controller sets to true to designate the default control panel for a cluster. When you create a cluster, Amazon Route 53 Application Recovery Controller creates a control panel, and sets this flag for that control panel. If you create a control panel yourself, this flag is set to false.
      * 
      */
-    @OutputExport(name="defaultControlPanel", type=Boolean.class, parameters={})
+    @Export(name="defaultControlPanel", type=Boolean.class, parameters={})
     private Output<Boolean> defaultControlPanel;
 
     /**
@@ -68,7 +68,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * The name of the control panel. You can use any non-white space character in the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -82,7 +82,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * Count of associated routing controls
      * 
      */
-    @OutputExport(name="routingControlCount", type=Integer.class, parameters={})
+    @Export(name="routingControlCount", type=Integer.class, parameters={})
     private Output<Integer> routingControlCount;
 
     /**
@@ -96,7 +96,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * The deployment status of control panel. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    @OutputExport(name="status", type=ControlPanelStatus.class, parameters={})
+    @Export(name="status", type=ControlPanelStatus.class, parameters={})
     private Output<ControlPanelStatus> status;
 
     /**
@@ -110,7 +110,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ControlPanelTag.class})
+    @Export(name="tags", type=List.class, parameters={ControlPanelTag.class})
     private Output</* @Nullable */ List<ControlPanelTag>> tags;
 
     /**

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.configuration.outputs;
 
 import io.pulumi.awsnative.configuration.outputs.ConformancePackInputParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConformancePackResult {
     /**
      * A list of ConformancePackInputParameter objects.
@@ -29,11 +29,11 @@ public final class GetConformancePackResult {
      */
     private final @Nullable String deliveryS3KeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConformancePackResult(
-        @OutputCustomType.Parameter("conformancePackInputParameters") @Nullable List<ConformancePackInputParameter> conformancePackInputParameters,
-        @OutputCustomType.Parameter("deliveryS3Bucket") @Nullable String deliveryS3Bucket,
-        @OutputCustomType.Parameter("deliveryS3KeyPrefix") @Nullable String deliveryS3KeyPrefix) {
+        @CustomType.Parameter("conformancePackInputParameters") @Nullable List<ConformancePackInputParameter> conformancePackInputParameters,
+        @CustomType.Parameter("deliveryS3Bucket") @Nullable String deliveryS3Bucket,
+        @CustomType.Parameter("deliveryS3KeyPrefix") @Nullable String deliveryS3KeyPrefix) {
         this.conformancePackInputParameters = conformancePackInputParameters;
         this.deliveryS3Bucket = deliveryS3Bucket;
         this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;

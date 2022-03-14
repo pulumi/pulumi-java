@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledActionPauseClusterMessage {
     private final String clusterIdentifier;
 
-    @OutputCustomType.Constructor
-    private ScheduledActionPauseClusterMessage(@OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier) {
+    @CustomType.Constructor
+    private ScheduledActionPauseClusterMessage(@CustomType.Parameter("clusterIdentifier") String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
     }
 

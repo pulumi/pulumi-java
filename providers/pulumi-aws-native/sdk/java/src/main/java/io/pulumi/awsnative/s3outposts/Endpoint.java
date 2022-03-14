@@ -9,7 +9,7 @@ import io.pulumi.awsnative.s3outposts.enums.EndpointAccessType;
 import io.pulumi.awsnative.s3outposts.enums.EndpointStatus;
 import io.pulumi.awsnative.s3outposts.outputs.EndpointNetworkInterface;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
      * 
      */
-    @OutputExport(name="accessType", type=EndpointAccessType.class, parameters={})
+    @Export(name="accessType", type=EndpointAccessType.class, parameters={})
     private Output</* @Nullable */ EndpointAccessType> accessType;
 
     /**
@@ -39,7 +39,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the endpoint.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The VPC CIDR committed by this endpoint.
      * 
      */
-    @OutputExport(name="cidrBlock", type=String.class, parameters={})
+    @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
@@ -67,7 +67,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The time the endpoint was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -81,7 +81,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
      * 
      */
-    @OutputExport(name="customerOwnedIpv4Pool", type=String.class, parameters={})
+    @Export(name="customerOwnedIpv4Pool", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerOwnedIpv4Pool;
 
     /**
@@ -95,7 +95,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The network interfaces of the endpoint.
      * 
      */
-    @OutputExport(name="networkInterfaces", type=List.class, parameters={EndpointNetworkInterface.class})
+    @Export(name="networkInterfaces", type=List.class, parameters={EndpointNetworkInterface.class})
     private Output<List<EndpointNetworkInterface>> networkInterfaces;
 
     /**
@@ -109,7 +109,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The id of the customer outpost on which the bucket resides.
      * 
      */
-    @OutputExport(name="outpostId", type=String.class, parameters={})
+    @Export(name="outpostId", type=String.class, parameters={})
     private Output<String> outpostId;
 
     /**
@@ -123,7 +123,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The ID of the security group to use with the endpoint.
      * 
      */
-    @OutputExport(name="securityGroupId", type=String.class, parameters={})
+    @Export(name="securityGroupId", type=String.class, parameters={})
     private Output<String> securityGroupId;
 
     /**
@@ -133,7 +133,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
     public Output<String> getSecurityGroupId() {
         return this.securityGroupId;
     }
-    @OutputExport(name="status", type=EndpointStatus.class, parameters={})
+    @Export(name="status", type=EndpointStatus.class, parameters={})
     private Output<EndpointStatus> status;
 
     public Output<EndpointStatus> getStatus() {
@@ -143,7 +143,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**

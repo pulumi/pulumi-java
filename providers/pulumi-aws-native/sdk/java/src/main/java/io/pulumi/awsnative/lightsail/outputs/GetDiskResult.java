@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 import io.pulumi.awsnative.lightsail.outputs.DiskAddOn;
 import io.pulumi.awsnative.lightsail.outputs.DiskLocation;
 import io.pulumi.awsnative.lightsail.outputs.DiskTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDiskResult {
     /**
      * An array of objects representing the add-ons to enable for the new instance.
@@ -70,20 +70,20 @@ public final class GetDiskResult {
      */
     private final @Nullable List<DiskTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiskResult(
-        @OutputCustomType.Parameter("addOns") @Nullable List<DiskAddOn> addOns,
-        @OutputCustomType.Parameter("attachedTo") @Nullable String attachedTo,
-        @OutputCustomType.Parameter("attachmentState") @Nullable String attachmentState,
-        @OutputCustomType.Parameter("diskArn") @Nullable String diskArn,
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("isAttached") @Nullable Boolean isAttached,
-        @OutputCustomType.Parameter("location") @Nullable DiskLocation location,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("supportCode") @Nullable String supportCode,
-        @OutputCustomType.Parameter("tags") @Nullable List<DiskTag> tags) {
+        @CustomType.Parameter("addOns") @Nullable List<DiskAddOn> addOns,
+        @CustomType.Parameter("attachedTo") @Nullable String attachedTo,
+        @CustomType.Parameter("attachmentState") @Nullable String attachmentState,
+        @CustomType.Parameter("diskArn") @Nullable String diskArn,
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("isAttached") @Nullable Boolean isAttached,
+        @CustomType.Parameter("location") @Nullable DiskLocation location,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("supportCode") @Nullable String supportCode,
+        @CustomType.Parameter("tags") @Nullable List<DiskTag> tags) {
         this.addOns = addOns;
         this.attachedTo = attachedTo;
         this.attachmentState = attachmentState;

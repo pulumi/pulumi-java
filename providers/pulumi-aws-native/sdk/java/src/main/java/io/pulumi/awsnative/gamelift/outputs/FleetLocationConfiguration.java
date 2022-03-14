@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.outputs.FleetLocationCapacity;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetLocationConfiguration {
     private final String location;
     private final @Nullable FleetLocationCapacity locationCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetLocationConfiguration(
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("locationCapacity") @Nullable FleetLocationCapacity locationCapacity) {
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("locationCapacity") @Nullable FleetLocationCapacity locationCapacity) {
         this.location = location;
         this.locationCapacity = locationCapacity;
     }

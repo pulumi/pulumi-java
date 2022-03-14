@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appintegrations;
 import io.pulumi.awsnative.appintegrations.inputs.EventIntegrationEventFilterArgs;
 import io.pulumi.awsnative.appintegrations.inputs.EventIntegrationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * The event integration description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * The Amazon Eventbridge bus for the event integration.
      * 
      */
-    @InputImport(name="eventBridgeBus", required=true)
+    @Import(name="eventBridgeBus", required=true)
       private final Output<String> eventBridgeBus;
 
     public Output<String> getEventBridgeBus() {
@@ -43,7 +43,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * The EventFilter (source) associated with the event integration.
      * 
      */
-    @InputImport(name="eventFilter", required=true)
+    @Import(name="eventFilter", required=true)
       private final Output<EventIntegrationEventFilterArgs> eventFilter;
 
     public Output<EventIntegrationEventFilterArgs> getEventFilter() {
@@ -54,7 +54,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * The name of the event integration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class EventIntegrationArgs extends io.pulumi.resources.ResourceArgs
      * The tags (keys and values) associated with the event integration.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<EventIntegrationTagArgs>> tags;
 
     public Output<List<EventIntegrationTagArgs>> getTags() {

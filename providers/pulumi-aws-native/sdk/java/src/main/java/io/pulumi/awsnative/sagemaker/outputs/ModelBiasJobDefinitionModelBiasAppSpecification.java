@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelBiasJobDefinitionModelBiasAppSpecification {
     /**
      * The S3 URI to an analysis configuration file
@@ -28,11 +28,11 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecification {
      */
     private final String imageUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelBiasJobDefinitionModelBiasAppSpecification(
-        @OutputCustomType.Parameter("configUri") String configUri,
-        @OutputCustomType.Parameter("environment") @Nullable Object environment,
-        @OutputCustomType.Parameter("imageUri") String imageUri) {
+        @CustomType.Parameter("configUri") String configUri,
+        @CustomType.Parameter("environment") @Nullable Object environment,
+        @CustomType.Parameter("imageUri") String imageUri) {
         this.configUri = configUri;
         this.environment = environment;
         this.imageUri = imageUri;

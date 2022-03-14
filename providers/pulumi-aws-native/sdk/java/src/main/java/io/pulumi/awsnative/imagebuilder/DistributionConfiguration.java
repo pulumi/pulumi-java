@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.imagebuilder.DistributionConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistribution;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * The Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * The description of the distribution configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * The distributions of the distribution configuration.
      * 
      */
-    @OutputExport(name="distributions", type=List.class, parameters={DistributionConfigurationDistribution.class})
+    @Export(name="distributions", type=List.class, parameters={DistributionConfigurationDistribution.class})
     private Output<List<DistributionConfigurationDistribution>> distributions;
 
     /**
@@ -66,7 +66,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * The name of the distribution configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
      * The tags associated with the component.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**

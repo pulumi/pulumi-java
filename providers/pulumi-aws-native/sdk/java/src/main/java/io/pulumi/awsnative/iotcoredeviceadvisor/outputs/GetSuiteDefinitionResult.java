@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotcoredeviceadvisor.outputs;
 
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionConfigurationProperties;
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSuiteDefinitionResult {
     /**
      * The Amazon Resource name for the suite definition.
@@ -36,13 +36,13 @@ public final class GetSuiteDefinitionResult {
      */
     private final @Nullable List<SuiteDefinitionTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSuiteDefinitionResult(
-        @OutputCustomType.Parameter("suiteDefinitionArn") @Nullable String suiteDefinitionArn,
-        @OutputCustomType.Parameter("suiteDefinitionConfiguration") @Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration,
-        @OutputCustomType.Parameter("suiteDefinitionId") @Nullable String suiteDefinitionId,
-        @OutputCustomType.Parameter("suiteDefinitionVersion") @Nullable String suiteDefinitionVersion,
-        @OutputCustomType.Parameter("tags") @Nullable List<SuiteDefinitionTag> tags) {
+        @CustomType.Parameter("suiteDefinitionArn") @Nullable String suiteDefinitionArn,
+        @CustomType.Parameter("suiteDefinitionConfiguration") @Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration,
+        @CustomType.Parameter("suiteDefinitionId") @Nullable String suiteDefinitionId,
+        @CustomType.Parameter("suiteDefinitionVersion") @Nullable String suiteDefinitionVersion,
+        @CustomType.Parameter("tags") @Nullable List<SuiteDefinitionTag> tags) {
         this.suiteDefinitionArn = suiteDefinitionArn;
         this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
         this.suiteDefinitionId = suiteDefinitionId;

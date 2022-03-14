@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class DataSourceWebCrawlerBasicAuthentication extends io.pulumi.res
 
     public static final DataSourceWebCrawlerBasicAuthentication Empty = new DataSourceWebCrawlerBasicAuthentication();
 
-    @InputImport(name="credentials", required=true)
+    @Import(name="credentials", required=true)
       private final String credentials;
 
     public String getCredentials() {
         return this.credentials;
     }
 
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
         return this.host;
     }
 
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
      * Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
      * 
      */
-    @InputImport(name="all")
+    @Import(name="all")
       private final @Nullable Object all;
 
     public Optional<Object> getAll() {
@@ -35,7 +35,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
      * Match only the specified include paths. See also MatchScope in JsonBody.
      * 
      */
-    @InputImport(name="includedPaths")
+    @Import(name="includedPaths")
       private final @Nullable List<String> includedPaths;
 
     public List<String> getIncludedPaths() {

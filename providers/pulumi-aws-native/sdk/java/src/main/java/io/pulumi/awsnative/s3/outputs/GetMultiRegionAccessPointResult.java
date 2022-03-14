@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMultiRegionAccessPointResult {
     /**
      * The alias is a unique identifier to, and is part of the public DNS name for this Multi Region Access Point
@@ -22,10 +22,10 @@ public final class GetMultiRegionAccessPointResult {
      */
     private final @Nullable String createdAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMultiRegionAccessPointResult(
-        @OutputCustomType.Parameter("alias") @Nullable String alias,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt) {
+        @CustomType.Parameter("alias") @Nullable String alias,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt) {
         this.alias = alias;
         this.createdAt = createdAt;
     }

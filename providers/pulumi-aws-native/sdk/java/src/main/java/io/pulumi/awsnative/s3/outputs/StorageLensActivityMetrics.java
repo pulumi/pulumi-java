@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensActivityMetrics {
     /**
      * Specifies whether activity metrics are enabled or disabled.
@@ -17,8 +17,8 @@ public final class StorageLensActivityMetrics {
      */
     private final @Nullable Boolean isEnabled;
 
-    @OutputCustomType.Constructor
-    private StorageLensActivityMetrics(@OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled) {
+    @CustomType.Constructor
+    private StorageLensActivityMetrics(@CustomType.Parameter("isEnabled") @Nullable Boolean isEnabled) {
         this.isEnabled = isEnabled;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAction;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DetectorModelEvent extends io.pulumi.resources.InvokeArgs {
      * The actions to be performed.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable List<DetectorModelAction> actions;
 
     public List<DetectorModelAction> getActions() {
@@ -35,7 +35,7 @@ public final class DetectorModelEvent extends io.pulumi.resources.InvokeArgs {
      * The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable String condition;
 
     public Optional<String> getCondition() {
@@ -46,7 +46,7 @@ public final class DetectorModelEvent extends io.pulumi.resources.InvokeArgs {
      * The name of the event.
      * 
      */
-    @InputImport(name="eventName", required=true)
+    @Import(name="eventName", required=true)
       private final String eventName;
 
     public String getEventName() {

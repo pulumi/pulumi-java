@@ -7,7 +7,7 @@ import io.pulumi.awsnative.datasync.inputs.LocationNFSMountOptionsArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationNFSOnPremConfigArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationNFSTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationNFSArgs Empty = new LocationNFSArgs();
 
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<LocationNFSMountOptionsArgs> mountOptions;
 
     public Output<LocationNFSMountOptionsArgs> getMountOptions() {
         return this.mountOptions == null ? Output.empty() : this.mountOptions;
     }
 
-    @InputImport(name="onPremConfig", required=true)
+    @Import(name="onPremConfig", required=true)
       private final Output<LocationNFSOnPremConfigArgs> onPremConfig;
 
     public Output<LocationNFSOnPremConfigArgs> getOnPremConfig() {
@@ -36,7 +36,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the NFS server. This value is the IP address or DNS name of the NFS server.
      * 
      */
-    @InputImport(name="serverHostname", required=true)
+    @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
     public Output<String> getServerHostname() {
@@ -47,7 +47,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
      * The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
      * 
      */
-    @InputImport(name="subdirectory", required=true)
+    @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -58,7 +58,7 @@ public final class LocationNFSArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LocationNFSTagArgs>> tags;
 
     public Output<List<LocationNFSTagArgs>> getTags() {

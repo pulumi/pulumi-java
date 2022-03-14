@@ -10,7 +10,7 @@ import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionLoRaWANUpdateGatewa
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionTag;
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionUpdateWirelessGatewayTaskCreate;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,7 +27,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * TaskDefinition arn. Returned after successful create.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -41,7 +41,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
      * 
      */
-    @OutputExport(name="autoCreateTasks", type=Boolean.class, parameters={})
+    @Export(name="autoCreateTasks", type=Boolean.class, parameters={})
     private Output<Boolean> autoCreateTasks;
 
     /**
@@ -55,7 +55,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * The list of task definitions.
      * 
      */
-    @OutputExport(name="loRaWANUpdateGatewayTaskEntry", type=TaskDefinitionLoRaWANUpdateGatewayTaskEntry.class, parameters={})
+    @Export(name="loRaWANUpdateGatewayTaskEntry", type=TaskDefinitionLoRaWANUpdateGatewayTaskEntry.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionLoRaWANUpdateGatewayTaskEntry> loRaWANUpdateGatewayTaskEntry;
 
     /**
@@ -69,7 +69,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * The name of the new resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -83,7 +83,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={TaskDefinitionTag.class})
+    @Export(name="tags", type=List.class, parameters={TaskDefinitionTag.class})
     private Output</* @Nullable */ List<TaskDefinitionTag>> tags;
 
     /**
@@ -97,7 +97,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * A filter to list only the wireless gateway task definitions that use this task definition type
      * 
      */
-    @OutputExport(name="taskDefinitionType", type=TaskDefinitionType.class, parameters={})
+    @Export(name="taskDefinitionType", type=TaskDefinitionType.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionType> taskDefinitionType;
 
     /**
@@ -111,7 +111,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * Information about the gateways to update.
      * 
      */
-    @OutputExport(name="update", type=TaskDefinitionUpdateWirelessGatewayTaskCreate.class, parameters={})
+    @Export(name="update", type=TaskDefinitionUpdateWirelessGatewayTaskCreate.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionUpdateWirelessGatewayTaskCreate> update;
 
     /**

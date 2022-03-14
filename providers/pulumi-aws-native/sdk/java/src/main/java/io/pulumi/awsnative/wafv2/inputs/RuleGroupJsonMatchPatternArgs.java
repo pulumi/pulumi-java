@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,14 +24,14 @@ public final class RuleGroupJsonMatchPatternArgs extends io.pulumi.resources.Res
      * Inspect all parts of the web request's JSON body.
      * 
      */
-    @InputImport(name="all")
+    @Import(name="all")
       private final @Nullable Output<Object> all;
 
     public Output<Object> getAll() {
         return this.all == null ? Output.empty() : this.all;
     }
 
-    @InputImport(name="includedPaths")
+    @Import(name="includedPaths")
       private final @Nullable Output<List<String>> includedPaths;
 
     public Output<List<String>> getIncludedPaths() {

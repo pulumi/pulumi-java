@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionClusterConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class DataQualityJobDefinitionMonitoringResourcesArgs extends io.pu
 
     public static final DataQualityJobDefinitionMonitoringResourcesArgs Empty = new DataQualityJobDefinitionMonitoringResourcesArgs();
 
-    @InputImport(name="clusterConfig", required=true)
+    @Import(name="clusterConfig", required=true)
       private final Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Output<DataQualityJobDefinitionClusterConfigArgs> getClusterConfig() {

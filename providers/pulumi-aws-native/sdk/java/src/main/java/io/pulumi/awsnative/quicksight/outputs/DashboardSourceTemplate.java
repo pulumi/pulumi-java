@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DashboardDataSetReference;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DashboardSourceTemplate {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
@@ -22,10 +22,10 @@ public final class DashboardSourceTemplate {
      */
     private final List<DashboardDataSetReference> dataSetReferences;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardSourceTemplate(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("dataSetReferences") List<DashboardDataSetReference> dataSetReferences) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("dataSetReferences") List<DashboardDataSetReference> dataSetReferences) {
         this.arn = arn;
         this.dataSetReferences = dataSetReferences;
     }

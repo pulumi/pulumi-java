@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreCustomerManagedS3Storage {
     private final String bucket;
     private final @Nullable String keyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatastoreCustomerManagedS3Storage(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("keyPrefix") @Nullable String keyPrefix) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("keyPrefix") @Nullable String keyPrefix) {
         this.bucket = bucket;
         this.keyPrefix = keyPrefix;
     }

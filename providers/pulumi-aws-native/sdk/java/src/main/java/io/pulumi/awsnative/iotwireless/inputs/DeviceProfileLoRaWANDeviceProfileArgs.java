@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,98 +16,98 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends io.pulumi.resou
 
     public static final DeviceProfileLoRaWANDeviceProfileArgs Empty = new DeviceProfileLoRaWANDeviceProfileArgs();
 
-    @InputImport(name="classBTimeout")
+    @Import(name="classBTimeout")
       private final @Nullable Output<Integer> classBTimeout;
 
     public Output<Integer> getClassBTimeout() {
         return this.classBTimeout == null ? Output.empty() : this.classBTimeout;
     }
 
-    @InputImport(name="classCTimeout")
+    @Import(name="classCTimeout")
       private final @Nullable Output<Integer> classCTimeout;
 
     public Output<Integer> getClassCTimeout() {
         return this.classCTimeout == null ? Output.empty() : this.classCTimeout;
     }
 
-    @InputImport(name="macVersion")
+    @Import(name="macVersion")
       private final @Nullable Output<String> macVersion;
 
     public Output<String> getMacVersion() {
         return this.macVersion == null ? Output.empty() : this.macVersion;
     }
 
-    @InputImport(name="maxDutyCycle")
+    @Import(name="maxDutyCycle")
       private final @Nullable Output<Integer> maxDutyCycle;
 
     public Output<Integer> getMaxDutyCycle() {
         return this.maxDutyCycle == null ? Output.empty() : this.maxDutyCycle;
     }
 
-    @InputImport(name="maxEirp")
+    @Import(name="maxEirp")
       private final @Nullable Output<Integer> maxEirp;
 
     public Output<Integer> getMaxEirp() {
         return this.maxEirp == null ? Output.empty() : this.maxEirp;
     }
 
-    @InputImport(name="pingSlotDr")
+    @Import(name="pingSlotDr")
       private final @Nullable Output<Integer> pingSlotDr;
 
     public Output<Integer> getPingSlotDr() {
         return this.pingSlotDr == null ? Output.empty() : this.pingSlotDr;
     }
 
-    @InputImport(name="pingSlotFreq")
+    @Import(name="pingSlotFreq")
       private final @Nullable Output<Integer> pingSlotFreq;
 
     public Output<Integer> getPingSlotFreq() {
         return this.pingSlotFreq == null ? Output.empty() : this.pingSlotFreq;
     }
 
-    @InputImport(name="pingSlotPeriod")
+    @Import(name="pingSlotPeriod")
       private final @Nullable Output<Integer> pingSlotPeriod;
 
     public Output<Integer> getPingSlotPeriod() {
         return this.pingSlotPeriod == null ? Output.empty() : this.pingSlotPeriod;
     }
 
-    @InputImport(name="regParamsRevision")
+    @Import(name="regParamsRevision")
       private final @Nullable Output<String> regParamsRevision;
 
     public Output<String> getRegParamsRevision() {
         return this.regParamsRevision == null ? Output.empty() : this.regParamsRevision;
     }
 
-    @InputImport(name="rfRegion")
+    @Import(name="rfRegion")
       private final @Nullable Output<String> rfRegion;
 
     public Output<String> getRfRegion() {
         return this.rfRegion == null ? Output.empty() : this.rfRegion;
     }
 
-    @InputImport(name="supports32BitFCnt")
+    @Import(name="supports32BitFCnt")
       private final @Nullable Output<Boolean> supports32BitFCnt;
 
     public Output<Boolean> getSupports32BitFCnt() {
         return this.supports32BitFCnt == null ? Output.empty() : this.supports32BitFCnt;
     }
 
-    @InputImport(name="supportsClassB")
+    @Import(name="supportsClassB")
       private final @Nullable Output<Boolean> supportsClassB;
 
     public Output<Boolean> getSupportsClassB() {
         return this.supportsClassB == null ? Output.empty() : this.supportsClassB;
     }
 
-    @InputImport(name="supportsClassC")
+    @Import(name="supportsClassC")
       private final @Nullable Output<Boolean> supportsClassC;
 
     public Output<Boolean> getSupportsClassC() {
         return this.supportsClassC == null ? Output.empty() : this.supportsClassC;
     }
 
-    @InputImport(name="supportsJoin")
+    @Import(name="supportsJoin")
       private final @Nullable Output<Boolean> supportsJoin;
 
     public Output<Boolean> getSupportsJoin() {

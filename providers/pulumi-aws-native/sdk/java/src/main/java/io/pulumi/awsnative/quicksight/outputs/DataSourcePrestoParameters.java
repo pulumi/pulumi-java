@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourcePrestoParameters {
     /**
      * <p>Catalog.</p>
@@ -26,11 +26,11 @@ public final class DataSourcePrestoParameters {
      */
     private final Double port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourcePrestoParameters(
-        @OutputCustomType.Parameter("catalog") String catalog,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Double port) {
+        @CustomType.Parameter("catalog") String catalog,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Double port) {
         this.catalog = catalog;
         this.host = host;
         this.port = port;

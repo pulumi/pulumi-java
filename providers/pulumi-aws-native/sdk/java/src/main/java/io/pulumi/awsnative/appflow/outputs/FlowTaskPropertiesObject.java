@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowOperatorPropertiesKeys;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlowTaskPropertiesObject {
     private final FlowOperatorPropertiesKeys key;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowTaskPropertiesObject(
-        @OutputCustomType.Parameter("key") FlowOperatorPropertiesKeys key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") FlowOperatorPropertiesKeys key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

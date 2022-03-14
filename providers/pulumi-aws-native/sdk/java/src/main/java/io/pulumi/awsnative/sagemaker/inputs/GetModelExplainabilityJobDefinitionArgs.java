@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetModelExplainabilityJobDefinitionArgs extends io.pulumi.res
      * The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    @InputImport(name="jobDefinitionArn", required=true)
+    @Import(name="jobDefinitionArn", required=true)
       private final String jobDefinitionArn;
 
     public String getJobDefinitionArn() {

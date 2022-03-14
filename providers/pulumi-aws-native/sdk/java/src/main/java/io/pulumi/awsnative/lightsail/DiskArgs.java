@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.lightsail.inputs.DiskAddOnArgs;
 import io.pulumi.awsnative.lightsail.inputs.DiskTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * An array of objects representing the add-ons to enable for the new instance.
      * 
      */
-    @InputImport(name="addOns")
+    @Import(name="addOns")
       private final @Nullable Output<List<DiskAddOnArgs>> addOns;
 
     public Output<List<DiskAddOnArgs>> getAddOns() {
@@ -33,7 +33,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -44,7 +44,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The names to use for your new Lightsail disk.
      * 
      */
-    @InputImport(name="diskName")
+    @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
     public Output<String> getDiskName() {
@@ -55,7 +55,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * Size of the Lightsail disk
      * 
      */
-    @InputImport(name="sizeInGb", required=true)
+    @Import(name="sizeInGb", required=true)
       private final Output<Integer> sizeInGb;
 
     public Output<Integer> getSizeInGb() {
@@ -66,7 +66,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DiskTagArgs>> tags;
 
     public Output<List<DiskTagArgs>> getTags() {

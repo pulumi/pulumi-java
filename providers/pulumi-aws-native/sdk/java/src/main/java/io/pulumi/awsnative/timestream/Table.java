@@ -9,7 +9,7 @@ import io.pulumi.awsnative.timestream.outputs.MagneticStoreWritePropertiesProper
 import io.pulumi.awsnative.timestream.outputs.RetentionPropertiesProperties;
 import io.pulumi.awsnative.timestream.outputs.TableTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:timestream:Table")
 public class Table extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name for the database which the table to be created belongs to.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -45,7 +45,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The properties that determine whether magnetic store writes are enabled.
      * 
      */
-    @OutputExport(name="magneticStoreWriteProperties", type=MagneticStoreWritePropertiesProperties.class, parameters={})
+    @Export(name="magneticStoreWriteProperties", type=MagneticStoreWritePropertiesProperties.class, parameters={})
     private Output</* @Nullable */ MagneticStoreWritePropertiesProperties> magneticStoreWriteProperties;
 
     /**
@@ -59,7 +59,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The table name exposed as a read-only attribute.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -73,7 +73,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The retention duration of the memory store and the magnetic store.
      * 
      */
-    @OutputExport(name="retentionProperties", type=RetentionPropertiesProperties.class, parameters={})
+    @Export(name="retentionProperties", type=RetentionPropertiesProperties.class, parameters={})
     private Output</* @Nullable */ RetentionPropertiesProperties> retentionProperties;
 
     /**
@@ -87,7 +87,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     /**
@@ -101,7 +101,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={TableTag.class})
+    @Export(name="tags", type=List.class, parameters={TableTag.class})
     private Output</* @Nullable */ List<TableTag>> tags;
 
     /**

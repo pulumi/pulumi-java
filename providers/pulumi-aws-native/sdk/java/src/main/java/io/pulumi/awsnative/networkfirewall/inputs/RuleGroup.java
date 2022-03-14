@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleVariables;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRulesSource;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatefulRuleOptions;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class RuleGroup extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroup Empty = new RuleGroup();
 
-    @InputImport(name="ruleVariables")
+    @Import(name="ruleVariables")
       private final @Nullable RuleGroupRuleVariables ruleVariables;
 
     public Optional<RuleGroupRuleVariables> getRuleVariables() {
         return this.ruleVariables == null ? Optional.empty() : Optional.ofNullable(this.ruleVariables);
     }
 
-    @InputImport(name="rulesSource", required=true)
+    @Import(name="rulesSource", required=true)
       private final RuleGroupRulesSource rulesSource;
 
     public RuleGroupRulesSource getRulesSource() {
         return this.rulesSource;
     }
 
-    @InputImport(name="statefulRuleOptions")
+    @Import(name="statefulRuleOptions")
       private final @Nullable RuleGroupStatefulRuleOptions statefulRuleOptions;
 
     public Optional<RuleGroupStatefulRuleOptions> getStatefulRuleOptions() {

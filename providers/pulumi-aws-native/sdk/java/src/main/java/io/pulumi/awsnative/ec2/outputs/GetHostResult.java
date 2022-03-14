@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHostResult {
     /**
      * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
@@ -27,11 +27,11 @@ public final class GetHostResult {
      */
     private final @Nullable String hostRecovery;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHostResult(
-        @OutputCustomType.Parameter("autoPlacement") @Nullable String autoPlacement,
-        @OutputCustomType.Parameter("hostId") @Nullable String hostId,
-        @OutputCustomType.Parameter("hostRecovery") @Nullable String hostRecovery) {
+        @CustomType.Parameter("autoPlacement") @Nullable String autoPlacement,
+        @CustomType.Parameter("hostId") @Nullable String hostId,
+        @CustomType.Parameter("hostRecovery") @Nullable String hostRecovery) {
         this.autoPlacement = autoPlacement;
         this.hostId = hostId;
         this.hostRecovery = hostRecovery;

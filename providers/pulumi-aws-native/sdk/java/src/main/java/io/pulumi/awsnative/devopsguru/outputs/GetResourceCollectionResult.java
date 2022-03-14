@@ -5,12 +5,12 @@ package io.pulumi.awsnative.devopsguru.outputs;
 
 import io.pulumi.awsnative.devopsguru.enums.ResourceCollectionType;
 import io.pulumi.awsnative.devopsguru.outputs.ResourceCollectionFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceCollectionResult {
     private final @Nullable ResourceCollectionFilter resourceCollectionFilter;
     /**
@@ -19,10 +19,10 @@ public final class GetResourceCollectionResult {
      */
     private final @Nullable ResourceCollectionType resourceCollectionType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceCollectionResult(
-        @OutputCustomType.Parameter("resourceCollectionFilter") @Nullable ResourceCollectionFilter resourceCollectionFilter,
-        @OutputCustomType.Parameter("resourceCollectionType") @Nullable ResourceCollectionType resourceCollectionType) {
+        @CustomType.Parameter("resourceCollectionFilter") @Nullable ResourceCollectionFilter resourceCollectionFilter,
+        @CustomType.Parameter("resourceCollectionType") @Nullable ResourceCollectionType resourceCollectionType) {
         this.resourceCollectionFilter = resourceCollectionFilter;
         this.resourceCollectionType = resourceCollectionType;
     }

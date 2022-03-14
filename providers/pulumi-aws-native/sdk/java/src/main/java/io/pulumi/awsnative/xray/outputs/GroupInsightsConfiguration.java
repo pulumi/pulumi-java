@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.xray.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupInsightsConfiguration {
     /**
      * Set the InsightsEnabled value to true to enable insights or false to disable insights.
@@ -22,10 +22,10 @@ public final class GroupInsightsConfiguration {
      */
     private final @Nullable Boolean notificationsEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupInsightsConfiguration(
-        @OutputCustomType.Parameter("insightsEnabled") @Nullable Boolean insightsEnabled,
-        @OutputCustomType.Parameter("notificationsEnabled") @Nullable Boolean notificationsEnabled) {
+        @CustomType.Parameter("insightsEnabled") @Nullable Boolean insightsEnabled,
+        @CustomType.Parameter("notificationsEnabled") @Nullable Boolean notificationsEnabled) {
         this.insightsEnabled = insightsEnabled;
         this.notificationsEnabled = notificationsEnabled;
     }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudtrail.outputs;
 
 import io.pulumi.awsnative.cloudtrail.enums.TrailEventSelectorReadWriteType;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailDataResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrailEventSelector {
     private final @Nullable List<TrailDataResource> dataResources;
     /**
@@ -32,12 +32,12 @@ public final class TrailEventSelector {
      */
     private final @Nullable TrailEventSelectorReadWriteType readWriteType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrailEventSelector(
-        @OutputCustomType.Parameter("dataResources") @Nullable List<TrailDataResource> dataResources,
-        @OutputCustomType.Parameter("excludeManagementEventSources") @Nullable List<String> excludeManagementEventSources,
-        @OutputCustomType.Parameter("includeManagementEvents") @Nullable Boolean includeManagementEvents,
-        @OutputCustomType.Parameter("readWriteType") @Nullable TrailEventSelectorReadWriteType readWriteType) {
+        @CustomType.Parameter("dataResources") @Nullable List<TrailDataResource> dataResources,
+        @CustomType.Parameter("excludeManagementEventSources") @Nullable List<String> excludeManagementEventSources,
+        @CustomType.Parameter("includeManagementEvents") @Nullable Boolean includeManagementEvents,
+        @CustomType.Parameter("readWriteType") @Nullable TrailEventSelectorReadWriteType readWriteType) {
         this.dataResources = dataResources;
         this.excludeManagementEventSources = excludeManagementEventSources;
         this.includeManagementEvents = includeManagementEvents;

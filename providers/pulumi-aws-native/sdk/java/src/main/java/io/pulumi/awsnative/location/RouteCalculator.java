@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.RouteCalculatorArgs;
 import io.pulumi.awsnative.location.enums.RouteCalculatorPricingPlan;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,49 +18,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:location:RouteCalculator")
 public class RouteCalculator extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="calculatorArn", type=String.class, parameters={})
+    @Export(name="calculatorArn", type=String.class, parameters={})
     private Output<String> calculatorArn;
 
     public Output<String> getCalculatorArn() {
         return this.calculatorArn;
     }
-    @OutputExport(name="calculatorName", type=String.class, parameters={})
+    @Export(name="calculatorName", type=String.class, parameters={})
     private Output<String> calculatorName;
 
     public Output<String> getCalculatorName() {
         return this.calculatorName;
     }
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    @OutputExport(name="dataSource", type=String.class, parameters={})
+    @Export(name="dataSource", type=String.class, parameters={})
     private Output<String> dataSource;
 
     public Output<String> getDataSource() {
         return this.dataSource;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="pricingPlan", type=RouteCalculatorPricingPlan.class, parameters={})
+    @Export(name="pricingPlan", type=RouteCalculatorPricingPlan.class, parameters={})
     private Output</* @Nullable */ RouteCalculatorPricingPlan> pricingPlan;
 
     public Output</* @Nullable */ RouteCalculatorPricingPlan> getPricingPlan() {
         return this.pricingPlan;
     }
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

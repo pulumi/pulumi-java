@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLIPSetForwardedIPConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class WebACLIPSetReferenceStatement extends io.pulumi.resources.Inv
 
     public static final WebACLIPSetReferenceStatement Empty = new WebACLIPSetReferenceStatement();
 
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
-    @InputImport(name="iPSetForwardedIPConfig")
+    @Import(name="iPSetForwardedIPConfig")
       private final @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
 
     public Optional<WebACLIPSetForwardedIPConfiguration> getIPSetForwardedIPConfig() {

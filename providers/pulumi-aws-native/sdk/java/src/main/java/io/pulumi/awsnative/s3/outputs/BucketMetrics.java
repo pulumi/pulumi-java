@@ -5,20 +5,20 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketMetricsStatus;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationTimeValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketMetrics {
     private final @Nullable BucketReplicationTimeValue eventThreshold;
     private final BucketMetricsStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketMetrics(
-        @OutputCustomType.Parameter("eventThreshold") @Nullable BucketReplicationTimeValue eventThreshold,
-        @OutputCustomType.Parameter("status") BucketMetricsStatus status) {
+        @CustomType.Parameter("eventThreshold") @Nullable BucketReplicationTimeValue eventThreshold,
+        @CustomType.Parameter("status") BucketMetricsStatus status) {
         this.eventThreshold = eventThreshold;
         this.status = status;
     }

@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ssm.outputs.DocumentAttachmentsSource;
 import io.pulumi.awsnative.ssm.outputs.DocumentRequires;
 import io.pulumi.awsnative.ssm.outputs.DocumentTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -30,7 +30,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * A list of key and value pairs that describe attachments to a version of a document.
      * 
      */
-    @OutputExport(name="attachments", type=List.class, parameters={DocumentAttachmentsSource.class})
+    @Export(name="attachments", type=List.class, parameters={DocumentAttachmentsSource.class})
     private Output</* @Nullable */ List<DocumentAttachmentsSource>> attachments;
 
     /**
@@ -44,7 +44,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * The content for the Systems Manager document in JSON, YAML or String format.
      * 
      */
-    @OutputExport(name="content", type=Object.class, parameters={})
+    @Export(name="content", type=Object.class, parameters={})
     private Output<Object> content;
 
     /**
@@ -58,7 +58,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * Specify the document format for the request. The document format can be either JSON or YAML. JSON is the default format.
      * 
      */
-    @OutputExport(name="documentFormat", type=DocumentFormat.class, parameters={})
+    @Export(name="documentFormat", type=DocumentFormat.class, parameters={})
     private Output</* @Nullable */ DocumentFormat> documentFormat;
 
     /**
@@ -72,7 +72,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * The type of document to create.
      * 
      */
-    @OutputExport(name="documentType", type=DocumentType.class, parameters={})
+    @Export(name="documentType", type=DocumentType.class, parameters={})
     private Output</* @Nullable */ DocumentType> documentType;
 
     /**
@@ -86,7 +86,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * A name for the Systems Manager document.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -100,7 +100,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * A list of SSM documents required by a document. For example, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document.
      * 
      */
-    @OutputExport(name="requires", type=List.class, parameters={DocumentRequires.class})
+    @Export(name="requires", type=List.class, parameters={DocumentRequires.class})
     private Output</* @Nullable */ List<DocumentRequires>> requires;
 
     /**
@@ -114,7 +114,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DocumentTag.class})
+    @Export(name="tags", type=List.class, parameters={DocumentTag.class})
     private Output</* @Nullable */ List<DocumentTag>> tags;
 
     /**
@@ -128,7 +128,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * Specify a target type to define the kinds of resources the document can run on.
      * 
      */
-    @OutputExport(name="targetType", type=String.class, parameters={})
+    @Export(name="targetType", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetType;
 
     /**
@@ -142,7 +142,7 @@ public class Document extends io.pulumi.resources.CustomResource {
      * An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
      * 
      */
-    @OutputExport(name="versionName", type=String.class, parameters={})
+    @Export(name="versionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionName;
 
     /**

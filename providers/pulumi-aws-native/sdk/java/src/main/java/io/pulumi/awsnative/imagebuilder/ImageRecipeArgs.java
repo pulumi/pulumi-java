@@ -7,7 +7,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeAdditionalInstanceConf
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeInstanceBlockDeviceMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * Specify additional settings and launch scripts for your build instances.
      * 
      */
-    @InputImport(name="additionalInstanceConfiguration")
+    @Import(name="additionalInstanceConfiguration")
       private final @Nullable Output<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
 
     public Output<ImageRecipeAdditionalInstanceConfigurationArgs> getAdditionalInstanceConfiguration() {
@@ -34,7 +34,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The block device mappings to apply when creating images from this recipe.
      * 
      */
-    @InputImport(name="blockDeviceMappings")
+    @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Output<List<ImageRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
@@ -45,7 +45,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The components of the image recipe.
      * 
      */
-    @InputImport(name="components", required=true)
+    @Import(name="components", required=true)
       private final Output<List<ImageRecipeComponentConfigurationArgs>> components;
 
     public Output<List<ImageRecipeComponentConfigurationArgs>> getComponents() {
@@ -56,7 +56,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the image recipe.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the image recipe.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The parent image of the image recipe.
      * 
      */
-    @InputImport(name="parentImage", required=true)
+    @Import(name="parentImage", required=true)
       private final Output<String> parentImage;
 
     public Output<String> getParentImage() {
@@ -89,7 +89,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the image recipe.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
@@ -100,7 +100,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the image recipe.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {
@@ -111,7 +111,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The working directory to be used during build and test workflows.
      * 
      */
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {

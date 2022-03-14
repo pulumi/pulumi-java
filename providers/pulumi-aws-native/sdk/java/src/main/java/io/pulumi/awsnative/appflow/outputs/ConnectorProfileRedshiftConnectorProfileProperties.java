@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileRedshiftConnectorProfileProperties {
     /**
      * The name of the Amazon S3 bucket associated with Redshift.
@@ -32,12 +32,12 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileRedshiftConnectorProfileProperties(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
-        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @CustomType.Parameter("databaseUrl") String databaseUrl,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.databaseUrl = databaseUrl;

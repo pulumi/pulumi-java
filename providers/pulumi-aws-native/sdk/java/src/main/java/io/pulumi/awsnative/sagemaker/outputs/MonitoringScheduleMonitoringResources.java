@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleClusterConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringScheduleMonitoringResources {
     private final MonitoringScheduleClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor
-    private MonitoringScheduleMonitoringResources(@OutputCustomType.Parameter("clusterConfig") MonitoringScheduleClusterConfig clusterConfig) {
+    @CustomType.Constructor
+    private MonitoringScheduleMonitoringResources(@CustomType.Parameter("clusterConfig") MonitoringScheduleClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 

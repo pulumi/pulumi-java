@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionContainerDependency {
     private final @Nullable String condition;
     private final @Nullable String containerName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionContainerDependency(
-        @OutputCustomType.Parameter("condition") @Nullable String condition,
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName) {
+        @CustomType.Parameter("condition") @Nullable String condition,
+        @CustomType.Parameter("containerName") @Nullable String containerName) {
         this.condition = condition;
         this.containerName = containerName;
     }

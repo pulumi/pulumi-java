@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.enums.AuthorizerStatus;
 import io.pulumi.awsnative.iot.inputs.AuthorizerTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -19,49 +19,49 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizerArgs Empty = new AuthorizerArgs();
 
-    @InputImport(name="authorizerFunctionArn", required=true)
+    @Import(name="authorizerFunctionArn", required=true)
       private final Output<String> authorizerFunctionArn;
 
     public Output<String> getAuthorizerFunctionArn() {
         return this.authorizerFunctionArn;
     }
 
-    @InputImport(name="authorizerName")
+    @Import(name="authorizerName")
       private final @Nullable Output<String> authorizerName;
 
     public Output<String> getAuthorizerName() {
         return this.authorizerName == null ? Output.empty() : this.authorizerName;
     }
 
-    @InputImport(name="signingDisabled")
+    @Import(name="signingDisabled")
       private final @Nullable Output<Boolean> signingDisabled;
 
     public Output<Boolean> getSigningDisabled() {
         return this.signingDisabled == null ? Output.empty() : this.signingDisabled;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<AuthorizerStatus> status;
 
     public Output<AuthorizerStatus> getStatus() {
         return this.status == null ? Output.empty() : this.status;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AuthorizerTagArgs>> tags;
 
     public Output<List<AuthorizerTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tokenKeyName")
+    @Import(name="tokenKeyName")
       private final @Nullable Output<String> tokenKeyName;
 
     public Output<String> getTokenKeyName() {
         return this.tokenKeyName == null ? Output.empty() : this.tokenKeyName;
     }
 
-    @InputImport(name="tokenSigningPublicKeys")
+    @Import(name="tokenSigningPublicKeys")
       private final @Nullable Output<Object> tokenSigningPublicKeys;
 
     public Output<Object> getTokenSigningPublicKeys() {

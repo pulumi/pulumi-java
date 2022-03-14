@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetStoredQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStoredQueryArgs Empty = new GetStoredQueryArgs();
 
-    @InputImport(name="queryName", required=true)
+    @Import(name="queryName", required=true)
       private final String queryName;
 
     public String getQueryName() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.DistributionConfigurationTargetContainerRepositoryService;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationTargetContainerRepository {
     /**
      * The repository name of target container repository.
@@ -23,10 +23,10 @@ public final class DistributionConfigurationTargetContainerRepository {
      */
     private final @Nullable DistributionConfigurationTargetContainerRepositoryService service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationTargetContainerRepository(
-        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
-        @OutputCustomType.Parameter("service") @Nullable DistributionConfigurationTargetContainerRepositoryService service) {
+        @CustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @CustomType.Parameter("service") @Nullable DistributionConfigurationTargetContainerRepositoryService service) {
         this.repositoryName = repositoryName;
         this.service = service;
     }

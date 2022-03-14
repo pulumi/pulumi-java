@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageRecipeEbsInstanceBlockDeviceSpecification {
     /**
      * Use to configure delete on termination of the associated device.
@@ -55,16 +55,16 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecification {
      */
     private final @Nullable ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageRecipeEbsInstanceBlockDeviceSpecification(
-        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
-        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
-        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput,
-        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") @Nullable ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType) {
+        @CustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @CustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @CustomType.Parameter("throughput") @Nullable Integer throughput,
+        @CustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @CustomType.Parameter("volumeType") @Nullable ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

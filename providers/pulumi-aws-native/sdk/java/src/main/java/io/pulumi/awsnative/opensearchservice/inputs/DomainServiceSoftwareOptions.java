@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,56 +15,56 @@ public final class DomainServiceSoftwareOptions extends io.pulumi.resources.Invo
 
     public static final DomainServiceSoftwareOptions Empty = new DomainServiceSoftwareOptions();
 
-    @InputImport(name="automatedUpdateDate")
+    @Import(name="automatedUpdateDate")
       private final @Nullable String automatedUpdateDate;
 
     public Optional<String> getAutomatedUpdateDate() {
         return this.automatedUpdateDate == null ? Optional.empty() : Optional.ofNullable(this.automatedUpdateDate);
     }
 
-    @InputImport(name="cancellable")
+    @Import(name="cancellable")
       private final @Nullable Boolean cancellable;
 
     public Optional<Boolean> getCancellable() {
         return this.cancellable == null ? Optional.empty() : Optional.ofNullable(this.cancellable);
     }
 
-    @InputImport(name="currentVersion")
+    @Import(name="currentVersion")
       private final @Nullable String currentVersion;
 
     public Optional<String> getCurrentVersion() {
         return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    @InputImport(name="newVersion")
+    @Import(name="newVersion")
       private final @Nullable String newVersion;
 
     public Optional<String> getNewVersion() {
         return this.newVersion == null ? Optional.empty() : Optional.ofNullable(this.newVersion);
     }
 
-    @InputImport(name="optionalDeployment")
+    @Import(name="optionalDeployment")
       private final @Nullable Boolean optionalDeployment;
 
     public Optional<Boolean> getOptionalDeployment() {
         return this.optionalDeployment == null ? Optional.empty() : Optional.ofNullable(this.optionalDeployment);
     }
 
-    @InputImport(name="updateAvailable")
+    @Import(name="updateAvailable")
       private final @Nullable Boolean updateAvailable;
 
     public Optional<Boolean> getUpdateAvailable() {
         return this.updateAvailable == null ? Optional.empty() : Optional.ofNullable(this.updateAvailable);
     }
 
-    @InputImport(name="updateStatus")
+    @Import(name="updateStatus")
       private final @Nullable String updateStatus;
 
     public Optional<String> getUpdateStatus() {

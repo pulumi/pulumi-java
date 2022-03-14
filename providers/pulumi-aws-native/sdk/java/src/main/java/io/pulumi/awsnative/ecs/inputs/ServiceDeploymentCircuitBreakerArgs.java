@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
 
     public static final ServiceDeploymentCircuitBreakerArgs Empty = new ServiceDeploymentCircuitBreakerArgs();
 
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
         return this.enable;
     }
 
-    @InputImport(name="rollback", required=true)
+    @Import(name="rollback", required=true)
       private final Output<Boolean> rollback;
 
     public Output<Boolean> getRollback() {

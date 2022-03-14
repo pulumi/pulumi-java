@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetMitigationActionArgs extends io.pulumi.resources.InvokeArg
      * A unique identifier for the mitigation action.
      * 
      */
-    @InputImport(name="actionName", required=true)
+    @Import(name="actionName", required=true)
       private final String actionName;
 
     public String getActionName() {

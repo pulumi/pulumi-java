@@ -8,7 +8,7 @@ import io.pulumi.awsnative.forecast.DatasetGroupArgs;
 import io.pulumi.awsnative.forecast.enums.DatasetGroupDomain;
 import io.pulumi.awsnative.forecast.outputs.DatasetGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
      * 
      */
-    @OutputExport(name="datasetArns", type=List.class, parameters={String.class})
+    @Export(name="datasetArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> datasetArns;
 
     /**
@@ -38,7 +38,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the dataset group to delete.
      * 
      */
-    @OutputExport(name="datasetGroupArn", type=String.class, parameters={})
+    @Export(name="datasetGroupArn", type=String.class, parameters={})
     private Output<String> datasetGroupArn;
 
     /**
@@ -52,7 +52,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * A name for the dataset group.
      * 
      */
-    @OutputExport(name="datasetGroupName", type=String.class, parameters={})
+    @Export(name="datasetGroupName", type=String.class, parameters={})
     private Output<String> datasetGroupName;
 
     /**
@@ -66,7 +66,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
      * 
      */
-    @OutputExport(name="domain", type=DatasetGroupDomain.class, parameters={})
+    @Export(name="domain", type=DatasetGroupDomain.class, parameters={})
     private Output<DatasetGroupDomain> domain;
 
     /**
@@ -80,7 +80,7 @@ public class DatasetGroup extends io.pulumi.resources.CustomResource {
      * The tags of Application Insights application.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DatasetGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={DatasetGroupTag.class})
     private Output</* @Nullable */ List<DatasetGroupTag>> tags;
 
     /**

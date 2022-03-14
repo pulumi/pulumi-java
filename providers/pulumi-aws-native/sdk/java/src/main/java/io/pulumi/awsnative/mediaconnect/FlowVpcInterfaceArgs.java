@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediaconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    @InputImport(name="flowArn", required=true)
+    @Import(name="flowArn", required=true)
       private final Output<String> flowArn;
 
     public Output<String> getFlowArn() {
@@ -30,7 +30,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Role Arn MediaConnect can assumes to create ENIs in customer's account.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -52,7 +52,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Security Group IDs to be used on ENI.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -63,7 +63,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Subnet must be in the AZ of the Flow
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

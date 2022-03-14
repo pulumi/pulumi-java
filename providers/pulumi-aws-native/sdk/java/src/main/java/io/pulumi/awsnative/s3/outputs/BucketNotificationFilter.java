@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketS3KeyFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketNotificationFilter {
     private final BucketS3KeyFilter s3Key;
 
-    @OutputCustomType.Constructor
-    private BucketNotificationFilter(@OutputCustomType.Parameter("s3Key") BucketS3KeyFilter s3Key) {
+    @CustomType.Constructor
+    private BucketNotificationFilter(@CustomType.Parameter("s3Key") BucketS3KeyFilter s3Key) {
         this.s3Key = s3Key;
     }
 

@@ -7,24 +7,24 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLAllowAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLBlockAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLCaptchaAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLCountAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLRuleAction {
     private final @Nullable WebACLAllowAction allow;
     private final @Nullable WebACLBlockAction block;
     private final @Nullable WebACLCaptchaAction captcha;
     private final @Nullable WebACLCountAction count;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLRuleAction(
-        @OutputCustomType.Parameter("allow") @Nullable WebACLAllowAction allow,
-        @OutputCustomType.Parameter("block") @Nullable WebACLBlockAction block,
-        @OutputCustomType.Parameter("captcha") @Nullable WebACLCaptchaAction captcha,
-        @OutputCustomType.Parameter("count") @Nullable WebACLCountAction count) {
+        @CustomType.Parameter("allow") @Nullable WebACLAllowAction allow,
+        @CustomType.Parameter("block") @Nullable WebACLBlockAction block,
+        @CustomType.Parameter("captcha") @Nullable WebACLCaptchaAction captcha,
+        @CustomType.Parameter("count") @Nullable WebACLCountAction count) {
         this.allow = allow;
         this.block = block;
         this.captcha = captcha;

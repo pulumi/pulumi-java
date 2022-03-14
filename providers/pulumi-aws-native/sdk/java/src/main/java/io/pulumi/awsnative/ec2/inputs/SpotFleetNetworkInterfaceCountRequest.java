@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class SpotFleetNetworkInterfaceCountRequest extends io.pulumi.resou
 
     public static final SpotFleetNetworkInterfaceCountRequest Empty = new SpotFleetNetworkInterfaceCountRequest();
 
-    @InputImport(name="max")
+    @Import(name="max")
       private final @Nullable Integer max;
 
     public Optional<Integer> getMax() {
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
-    @InputImport(name="min")
+    @Import(name="min")
       private final @Nullable Integer min;
 
     public Optional<Integer> getMin() {

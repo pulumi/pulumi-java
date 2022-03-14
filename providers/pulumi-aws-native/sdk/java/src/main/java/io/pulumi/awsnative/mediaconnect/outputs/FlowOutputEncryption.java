@@ -5,13 +5,13 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionKeyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowOutputEncryption {
     /**
      * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
@@ -34,12 +34,12 @@ public final class FlowOutputEncryption {
      */
     private final String secretArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowOutputEncryption(
-        @OutputCustomType.Parameter("algorithm") @Nullable FlowOutputEncryptionAlgorithm algorithm,
-        @OutputCustomType.Parameter("keyType") @Nullable FlowOutputEncryptionKeyType keyType,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("secretArn") String secretArn) {
+        @CustomType.Parameter("algorithm") @Nullable FlowOutputEncryptionAlgorithm algorithm,
+        @CustomType.Parameter("keyType") @Nullable FlowOutputEncryptionKeyType keyType,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("secretArn") String secretArn) {
         this.algorithm = algorithm;
         this.keyType = keyType;
         this.roleArn = roleArn;

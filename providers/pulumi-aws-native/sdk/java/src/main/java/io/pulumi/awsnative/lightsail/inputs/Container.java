@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.ContainerEnvironmentVariable;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPortInfo;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * The launch command for the container.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable List<String> command;
 
     public List<String> getCommand() {
@@ -36,7 +36,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * The name of the container.
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable String containerName;
 
     public Optional<String> getContainerName() {
@@ -47,7 +47,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * The environment variables of the container.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable List<ContainerEnvironmentVariable> environment;
 
     public List<ContainerEnvironmentVariable> getEnvironment() {
@@ -58,7 +58,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * The name of the image used for the container.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable String image;
 
     public Optional<String> getImage() {
@@ -69,7 +69,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * The open firewall ports of the container.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable List<ContainerPortInfo> ports;
 
     public List<ContainerPortInfo> getPorts() {

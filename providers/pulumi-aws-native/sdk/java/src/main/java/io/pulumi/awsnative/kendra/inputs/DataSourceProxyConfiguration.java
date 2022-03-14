@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class DataSourceProxyConfiguration extends io.pulumi.resources.Invo
 
     public static final DataSourceProxyConfiguration Empty = new DataSourceProxyConfiguration();
 
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable String credentials;
 
     public Optional<String> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
         return this.host;
     }
 
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {

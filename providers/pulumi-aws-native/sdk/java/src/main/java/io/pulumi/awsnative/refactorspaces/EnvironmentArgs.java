@@ -6,7 +6,7 @@ package io.pulumi.awsnative.refactorspaces;
 import io.pulumi.awsnative.refactorspaces.enums.EnvironmentNetworkFabricType;
 import io.pulumi.awsnative.refactorspaces.inputs.EnvironmentTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="networkFabricType")
+    @Import(name="networkFabricType")
       private final @Nullable Output<EnvironmentNetworkFabricType> networkFabricType;
 
     public Output<EnvironmentNetworkFabricType> getNetworkFabricType() {
@@ -42,7 +42,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<EnvironmentTagArgs>> tags;
 
     public Output<List<EnvironmentTagArgs>> getTags() {

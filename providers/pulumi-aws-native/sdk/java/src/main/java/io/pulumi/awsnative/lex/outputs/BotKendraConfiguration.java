@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotKendraConfiguration {
     private final String kendraIndex;
     private final @Nullable String queryFilterString;
@@ -20,11 +20,11 @@ public final class BotKendraConfiguration {
      */
     private final @Nullable Boolean queryFilterStringEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotKendraConfiguration(
-        @OutputCustomType.Parameter("kendraIndex") String kendraIndex,
-        @OutputCustomType.Parameter("queryFilterString") @Nullable String queryFilterString,
-        @OutputCustomType.Parameter("queryFilterStringEnabled") @Nullable Boolean queryFilterStringEnabled) {
+        @CustomType.Parameter("kendraIndex") String kendraIndex,
+        @CustomType.Parameter("queryFilterString") @Nullable String queryFilterString,
+        @CustomType.Parameter("queryFilterStringEnabled") @Nullable Boolean queryFilterStringEnabled) {
         this.kendraIndex = kendraIndex;
         this.queryFilterString = queryFilterString;
         this.queryFilterStringEnabled = queryFilterStringEnabled;

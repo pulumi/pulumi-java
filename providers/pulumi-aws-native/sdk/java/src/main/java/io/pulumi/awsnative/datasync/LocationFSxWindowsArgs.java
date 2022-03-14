@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync;
 
 import io.pulumi.awsnative.datasync.inputs.LocationFSxWindowsTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * The name of the Windows domain that the FSx for Windows server belongs to.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -31,7 +31,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) for the FSx for Windows file system.
      * 
      */
-    @InputImport(name="fsxFilesystemArn", required=true)
+    @Import(name="fsxFilesystemArn", required=true)
       private final Output<String> fsxFilesystemArn;
 
     public Output<String> getFsxFilesystemArn() {
@@ -42,7 +42,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * The password of the user who has the permissions to access files and folders in the FSx for Windows file system.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -53,7 +53,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * The ARNs of the security groups that are to use to configure the FSx for Windows file system.
      * 
      */
-    @InputImport(name="securityGroupArns", required=true)
+    @Import(name="securityGroupArns", required=true)
       private final Output<List<String>> securityGroupArns;
 
     public Output<List<String>> getSecurityGroupArns() {
@@ -64,7 +64,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * A subdirectory in the location's path.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -75,7 +75,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LocationFSxWindowsTagArgs>> tags;
 
     public Output<List<LocationFSxWindowsTagArgs>> getTags() {
@@ -86,7 +86,7 @@ public final class LocationFSxWindowsArgs extends io.pulumi.resources.ResourceAr
      * The user who has the permissions to access files and folders in the FSx for Windows file system.
      * 
      */
-    @InputImport(name="user", required=true)
+    @Import(name="user", required=true)
       private final Output<String> user;
 
     public Output<String> getUser() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * Java agent host port
      * 
      */
-    @InputImport(name="hostPort")
+    @Import(name="hostPort")
       private final @Nullable Output<String> hostPort;
 
     public Output<String> getHostPort() {
@@ -33,7 +33,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * JMX service URL.
      * 
      */
-    @InputImport(name="jMXURL")
+    @Import(name="jMXURL")
       private final @Nullable Output<String> jMXURL;
 
     public Output<String> getJMXURL() {
@@ -44,7 +44,7 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * Prometheus exporter port.
      * 
      */
-    @InputImport(name="prometheusPort")
+    @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;
 
     public Output<String> getPrometheusPort() {

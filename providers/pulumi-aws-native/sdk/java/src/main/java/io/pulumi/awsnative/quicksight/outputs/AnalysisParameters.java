@@ -7,12 +7,12 @@ import io.pulumi.awsnative.quicksight.outputs.AnalysisDateTimeParameter;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisDecimalParameter;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisIntegerParameter;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisStringParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalysisParameters {
     /**
      * <p>Date-time parameters.</p>
@@ -35,12 +35,12 @@ public final class AnalysisParameters {
      */
     private final @Nullable List<AnalysisStringParameter> stringParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalysisParameters(
-        @OutputCustomType.Parameter("dateTimeParameters") @Nullable List<AnalysisDateTimeParameter> dateTimeParameters,
-        @OutputCustomType.Parameter("decimalParameters") @Nullable List<AnalysisDecimalParameter> decimalParameters,
-        @OutputCustomType.Parameter("integerParameters") @Nullable List<AnalysisIntegerParameter> integerParameters,
-        @OutputCustomType.Parameter("stringParameters") @Nullable List<AnalysisStringParameter> stringParameters) {
+        @CustomType.Parameter("dateTimeParameters") @Nullable List<AnalysisDateTimeParameter> dateTimeParameters,
+        @CustomType.Parameter("decimalParameters") @Nullable List<AnalysisDecimalParameter> decimalParameters,
+        @CustomType.Parameter("integerParameters") @Nullable List<AnalysisIntegerParameter> integerParameters,
+        @CustomType.Parameter("stringParameters") @Nullable List<AnalysisStringParameter> stringParameters) {
         this.dateTimeParameters = dateTimeParameters;
         this.decimalParameters = decimalParameters;
         this.integerParameters = integerParameters;

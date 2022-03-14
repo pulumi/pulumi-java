@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionFirelensConfiguration {
     private final @Nullable Object options;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionFirelensConfiguration(
-        @OutputCustomType.Parameter("options") @Nullable Object options,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("options") @Nullable Object options,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.options = options;
         this.type = type;
     }

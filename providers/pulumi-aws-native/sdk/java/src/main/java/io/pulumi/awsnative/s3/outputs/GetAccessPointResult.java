@@ -5,14 +5,14 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.AccessPointNetworkOrigin;
 import io.pulumi.awsnative.s3.outputs.PolicyStatusProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointResult {
     /**
      * The alias of this Access Point. This alias can be used for compatibility purposes with other AWS services and third-party applications.
@@ -36,13 +36,13 @@ public final class GetAccessPointResult {
     private final @Nullable Object policy;
     private final @Nullable PolicyStatusProperties policyStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointResult(
-        @OutputCustomType.Parameter("alias") @Nullable String alias,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("networkOrigin") @Nullable AccessPointNetworkOrigin networkOrigin,
-        @OutputCustomType.Parameter("policy") @Nullable Object policy,
-        @OutputCustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus) {
+        @CustomType.Parameter("alias") @Nullable String alias,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("networkOrigin") @Nullable AccessPointNetworkOrigin networkOrigin,
+        @CustomType.Parameter("policy") @Nullable Object policy,
+        @CustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus) {
         this.alias = alias;
         this.arn = arn;
         this.networkOrigin = networkOrigin;

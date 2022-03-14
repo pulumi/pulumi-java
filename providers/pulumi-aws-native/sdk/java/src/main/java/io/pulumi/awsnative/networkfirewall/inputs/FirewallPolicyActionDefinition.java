@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyPublishMetricAction;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class FirewallPolicyActionDefinition extends io.pulumi.resources.In
 
     public static final FirewallPolicyActionDefinition Empty = new FirewallPolicyActionDefinition();
 
-    @InputImport(name="publishMetricAction")
+    @Import(name="publishMetricAction")
       private final @Nullable FirewallPolicyPublishMetricAction publishMetricAction;
 
     public Optional<FirewallPolicyPublishMetricAction> getPublishMetricAction() {

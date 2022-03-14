@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigTrackingConfigAutotrack;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ConfigTrackingConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigTrackingConfig Empty = new ConfigTrackingConfig();
 
-    @InputImport(name="autotrack")
+    @Import(name="autotrack")
       private final @Nullable ConfigTrackingConfigAutotrack autotrack;
 
     public Optional<ConfigTrackingConfigAutotrack> getAutotrack() {

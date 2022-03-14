@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UsagePlanApiStage {
     /**
      * The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
@@ -28,11 +28,11 @@ public final class UsagePlanApiStage {
      */
     private final @Nullable Object throttle;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UsagePlanApiStage(
-        @OutputCustomType.Parameter("apiId") @Nullable String apiId,
-        @OutputCustomType.Parameter("stage") @Nullable String stage,
-        @OutputCustomType.Parameter("throttle") @Nullable Object throttle) {
+        @CustomType.Parameter("apiId") @Nullable String apiId,
+        @CustomType.Parameter("stage") @Nullable String stage,
+        @CustomType.Parameter("throttle") @Nullable Object throttle) {
         this.apiId = apiId;
         this.stage = stage;
         this.throttle = throttle;

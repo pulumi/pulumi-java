@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateExtendedKeyUsage {
     private final @Nullable String extendedKeyUsageObjectIdentifier;
     private final @Nullable String extendedKeyUsageType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateExtendedKeyUsage(
-        @OutputCustomType.Parameter("extendedKeyUsageObjectIdentifier") @Nullable String extendedKeyUsageObjectIdentifier,
-        @OutputCustomType.Parameter("extendedKeyUsageType") @Nullable String extendedKeyUsageType) {
+        @CustomType.Parameter("extendedKeyUsageObjectIdentifier") @Nullable String extendedKeyUsageObjectIdentifier,
+        @CustomType.Parameter("extendedKeyUsageType") @Nullable String extendedKeyUsageType) {
         this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
         this.extendedKeyUsageType = extendedKeyUsageType;
     }

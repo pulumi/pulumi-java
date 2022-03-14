@@ -5,20 +5,20 @@ package io.pulumi.awsnative.resourcegroups.outputs;
 
 import io.pulumi.awsnative.resourcegroups.enums.GroupResourceQueryType;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupQuery;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupResourceQuery {
     private final @Nullable GroupQuery query;
     private final @Nullable GroupResourceQueryType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupResourceQuery(
-        @OutputCustomType.Parameter("query") @Nullable GroupQuery query,
-        @OutputCustomType.Parameter("type") @Nullable GroupResourceQueryType type) {
+        @CustomType.Parameter("query") @Nullable GroupQuery query,
+        @CustomType.Parameter("type") @Nullable GroupResourceQueryType type) {
         this.query = query;
         this.type = type;
     }

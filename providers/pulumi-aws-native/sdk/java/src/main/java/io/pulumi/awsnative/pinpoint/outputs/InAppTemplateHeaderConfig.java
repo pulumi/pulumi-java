@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateAlignment;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InAppTemplateHeaderConfig {
     private final @Nullable InAppTemplateAlignment alignment;
     private final @Nullable String header;
     private final @Nullable String textColor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InAppTemplateHeaderConfig(
-        @OutputCustomType.Parameter("alignment") @Nullable InAppTemplateAlignment alignment,
-        @OutputCustomType.Parameter("header") @Nullable String header,
-        @OutputCustomType.Parameter("textColor") @Nullable String textColor) {
+        @CustomType.Parameter("alignment") @Nullable InAppTemplateAlignment alignment,
+        @CustomType.Parameter("header") @Nullable String header,
+        @CustomType.Parameter("textColor") @Nullable String textColor) {
         this.alignment = alignment;
         this.header = header;
         this.textColor = textColor;

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.refactorspaces.outputs.ServiceLambdaEndpointInput;
 import io.pulumi.awsnative.refactorspaces.outputs.ServiceTag;
 import io.pulumi.awsnative.refactorspaces.outputs.ServiceUrlEndpointInput;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,49 +22,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:refactorspaces:Service")
 public class Service extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="applicationIdentifier", type=String.class, parameters={})
+    @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
     public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="endpointType", type=ServiceEndpointType.class, parameters={})
+    @Export(name="endpointType", type=ServiceEndpointType.class, parameters={})
     private Output</* @Nullable */ ServiceEndpointType> endpointType;
 
     public Output</* @Nullable */ ServiceEndpointType> getEndpointType() {
         return this.endpointType;
     }
-    @OutputExport(name="environmentIdentifier", type=String.class, parameters={})
+    @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output<String> environmentIdentifier;
 
     public Output<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
-    @OutputExport(name="lambdaEndpoint", type=ServiceLambdaEndpointInput.class, parameters={})
+    @Export(name="lambdaEndpoint", type=ServiceLambdaEndpointInput.class, parameters={})
     private Output</* @Nullable */ ServiceLambdaEndpointInput> lambdaEndpoint;
 
     public Output</* @Nullable */ ServiceLambdaEndpointInput> getLambdaEndpoint() {
         return this.lambdaEndpoint;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="serviceIdentifier", type=String.class, parameters={})
+    @Export(name="serviceIdentifier", type=String.class, parameters={})
     private Output<String> serviceIdentifier;
 
     public Output<String> getServiceIdentifier() {
@@ -74,7 +74,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ServiceTag.class})
+    @Export(name="tags", type=List.class, parameters={ServiceTag.class})
     private Output</* @Nullable */ List<ServiceTag>> tags;
 
     /**
@@ -84,13 +84,13 @@ public class Service extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<ServiceTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="urlEndpoint", type=ServiceUrlEndpointInput.class, parameters={})
+    @Export(name="urlEndpoint", type=ServiceUrlEndpointInput.class, parameters={})
     private Output</* @Nullable */ ServiceUrlEndpointInput> urlEndpoint;
 
     public Output</* @Nullable */ ServiceUrlEndpointInput> getUrlEndpoint() {
         return this.urlEndpoint;
     }
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
     public Output</* @Nullable */ String> getVpcId() {

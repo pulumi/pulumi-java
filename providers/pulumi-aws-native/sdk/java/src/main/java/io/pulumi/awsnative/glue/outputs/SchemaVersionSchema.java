@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SchemaVersionSchema {
     /**
      * Name of the registry to identify where the Schema is located.
@@ -27,11 +27,11 @@ public final class SchemaVersionSchema {
      */
     private final @Nullable String schemaName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchemaVersionSchema(
-        @OutputCustomType.Parameter("registryName") @Nullable String registryName,
-        @OutputCustomType.Parameter("schemaArn") @Nullable String schemaArn,
-        @OutputCustomType.Parameter("schemaName") @Nullable String schemaName) {
+        @CustomType.Parameter("registryName") @Nullable String registryName,
+        @CustomType.Parameter("schemaArn") @Nullable String schemaArn,
+        @CustomType.Parameter("schemaName") @Nullable String schemaName) {
         this.registryName = registryName;
         this.schemaArn = schemaArn;
         this.schemaName = schemaName;

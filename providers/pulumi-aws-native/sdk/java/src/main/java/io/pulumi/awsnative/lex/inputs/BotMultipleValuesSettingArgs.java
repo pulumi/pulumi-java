@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
 
     public static final BotMultipleValuesSettingArgs Empty = new BotMultipleValuesSettingArgs();
 
-    @InputImport(name="allowMultipleValues")
+    @Import(name="allowMultipleValues")
       private final @Nullable Output<Boolean> allowMultipleValues;
 
     public Output<Boolean> getAllowMultipleValues() {

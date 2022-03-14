@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppImageConfigKernelSpec {
     /**
      * The display name of the kernel.
@@ -22,10 +22,10 @@ public final class AppImageConfigKernelSpec {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppImageConfigKernelSpec(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.name = name;
     }

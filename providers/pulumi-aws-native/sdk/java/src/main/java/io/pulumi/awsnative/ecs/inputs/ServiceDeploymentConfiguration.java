@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.ServiceDeploymentCircuitBreaker;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class ServiceDeploymentConfiguration extends io.pulumi.resources.In
 
     public static final ServiceDeploymentConfiguration Empty = new ServiceDeploymentConfiguration();
 
-    @InputImport(name="deploymentCircuitBreaker")
+    @Import(name="deploymentCircuitBreaker")
       private final @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker;
 
     public Optional<ServiceDeploymentCircuitBreaker> getDeploymentCircuitBreaker() {
         return this.deploymentCircuitBreaker == null ? Optional.empty() : Optional.ofNullable(this.deploymentCircuitBreaker);
     }
 
-    @InputImport(name="maximumPercent")
+    @Import(name="maximumPercent")
       private final @Nullable Integer maximumPercent;
 
     public Optional<Integer> getMaximumPercent() {
         return this.maximumPercent == null ? Optional.empty() : Optional.ofNullable(this.maximumPercent);
     }
 
-    @InputImport(name="minimumHealthyPercent")
+    @Import(name="minimumHealthyPercent")
       private final @Nullable Integer minimumHealthyPercent;
 
     public Optional<Integer> getMinimumHealthyPercent() {

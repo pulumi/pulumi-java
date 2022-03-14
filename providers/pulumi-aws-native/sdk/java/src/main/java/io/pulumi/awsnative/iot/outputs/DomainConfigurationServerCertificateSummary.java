@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.DomainConfigurationServerCertificateSummaryServerCertificateStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainConfigurationServerCertificateSummary {
     private final @Nullable String serverCertificateArn;
     private final @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
     private final @Nullable String serverCertificateStatusDetail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainConfigurationServerCertificateSummary(
-        @OutputCustomType.Parameter("serverCertificateArn") @Nullable String serverCertificateArn,
-        @OutputCustomType.Parameter("serverCertificateStatus") @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus,
-        @OutputCustomType.Parameter("serverCertificateStatusDetail") @Nullable String serverCertificateStatusDetail) {
+        @CustomType.Parameter("serverCertificateArn") @Nullable String serverCertificateArn,
+        @CustomType.Parameter("serverCertificateStatus") @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus,
+        @CustomType.Parameter("serverCertificateStatusDetail") @Nullable String serverCertificateStatusDetail) {
         this.serverCertificateArn = serverCertificateArn;
         this.serverCertificateStatus = serverCertificateStatus;
         this.serverCertificateStatusDetail = serverCertificateStatusDetail;

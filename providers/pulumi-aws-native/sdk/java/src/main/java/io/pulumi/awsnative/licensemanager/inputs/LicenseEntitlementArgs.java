@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,42 +16,42 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
 
     public static final LicenseEntitlementArgs Empty = new LicenseEntitlementArgs();
 
-    @InputImport(name="allowCheckIn")
+    @Import(name="allowCheckIn")
       private final @Nullable Output<Boolean> allowCheckIn;
 
     public Output<Boolean> getAllowCheckIn() {
         return this.allowCheckIn == null ? Output.empty() : this.allowCheckIn;
     }
 
-    @InputImport(name="maxCount")
+    @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
     public Output<Integer> getMaxCount() {
         return this.maxCount == null ? Output.empty() : this.maxCount;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="overage")
+    @Import(name="overage")
       private final @Nullable Output<Boolean> overage;
 
     public Output<Boolean> getOverage() {
         return this.overage == null ? Output.empty() : this.overage;
     }
 
-    @InputImport(name="unit", required=true)
+    @Import(name="unit", required=true)
       private final Output<String> unit;
 
     public Output<String> getUnit() {
         return this.unit;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

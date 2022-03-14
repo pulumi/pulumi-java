@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionLegacyCustomOrigin {
     private final String dNSName;
     private final @Nullable Integer hTTPPort;
@@ -19,13 +19,13 @@ public final class DistributionLegacyCustomOrigin {
     private final String originProtocolPolicy;
     private final List<String> originSSLProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionLegacyCustomOrigin(
-        @OutputCustomType.Parameter("dNSName") String dNSName,
-        @OutputCustomType.Parameter("hTTPPort") @Nullable Integer hTTPPort,
-        @OutputCustomType.Parameter("hTTPSPort") @Nullable Integer hTTPSPort,
-        @OutputCustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
-        @OutputCustomType.Parameter("originSSLProtocols") List<String> originSSLProtocols) {
+        @CustomType.Parameter("dNSName") String dNSName,
+        @CustomType.Parameter("hTTPPort") @Nullable Integer hTTPPort,
+        @CustomType.Parameter("hTTPSPort") @Nullable Integer hTTPSPort,
+        @CustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
+        @CustomType.Parameter("originSSLProtocols") List<String> originSSLProtocols) {
         this.dNSName = dNSName;
         this.hTTPPort = hTTPPort;
         this.hTTPSPort = hTTPSPort;

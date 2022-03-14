@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class DataflowEndpointGroupSecurityDetails extends io.pulumi.resour
 
     public static final DataflowEndpointGroupSecurityDetails Empty = new DataflowEndpointGroupSecurityDetails();
 
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
 
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable List<String> subnetIds;
 
     public List<String> getSubnetIds() {

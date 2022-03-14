@@ -5,14 +5,14 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLExcludedRule;
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLManagedRuleGroupStatement {
     private final @Nullable List<WebACLExcludedRule> excludedRules;
     private final String name;
@@ -20,13 +20,13 @@ public final class WebACLManagedRuleGroupStatement {
     private final String vendorName;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLManagedRuleGroupStatement(
-        @OutputCustomType.Parameter("excludedRules") @Nullable List<WebACLExcludedRule> excludedRules,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebACLStatement scopeDownStatement,
-        @OutputCustomType.Parameter("vendorName") String vendorName,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("excludedRules") @Nullable List<WebACLExcludedRule> excludedRules,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scopeDownStatement") @Nullable WebACLStatement scopeDownStatement,
+        @CustomType.Parameter("vendorName") String vendorName,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.excludedRules = excludedRules;
         this.name = name;
         this.scopeDownStatement = scopeDownStatement;

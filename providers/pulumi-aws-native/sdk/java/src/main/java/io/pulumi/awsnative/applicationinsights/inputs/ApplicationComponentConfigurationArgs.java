@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationConfigurationDetailsArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentTypeConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
      * The configuration settings
      * 
      */
-    @InputImport(name="configurationDetails")
+    @Import(name="configurationDetails")
       private final @Nullable Output<ApplicationConfigurationDetailsArgs> configurationDetails;
 
     public Output<ApplicationConfigurationDetailsArgs> getConfigurationDetails() {
@@ -35,7 +35,7 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
      * Sub component configurations of the component.
      * 
      */
-    @InputImport(name="subComponentTypeConfigurations")
+    @Import(name="subComponentTypeConfigurations")
       private final @Nullable Output<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 
     public Output<List<ApplicationSubComponentTypeConfigurationArgs>> getSubComponentTypeConfigurations() {

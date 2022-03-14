@@ -5,21 +5,21 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationPosition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLIPSetForwardedIPConfiguration {
     private final WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior;
     private final String headerName;
     private final WebACLIPSetForwardedIPConfigurationPosition position;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLIPSetForwardedIPConfiguration(
-        @OutputCustomType.Parameter("fallbackBehavior") WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("position") WebACLIPSetForwardedIPConfigurationPosition position) {
+        @CustomType.Parameter("fallbackBehavior") WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("position") WebACLIPSetForwardedIPConfigurationPosition position) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
         this.position = position;

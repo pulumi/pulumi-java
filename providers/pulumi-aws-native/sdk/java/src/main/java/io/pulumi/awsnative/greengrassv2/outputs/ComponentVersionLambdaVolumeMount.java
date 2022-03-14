@@ -4,26 +4,26 @@
 package io.pulumi.awsnative.greengrassv2.outputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaFilesystemPermission;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentVersionLambdaVolumeMount {
     private final @Nullable Boolean addGroupOwner;
     private final @Nullable String destinationPath;
     private final @Nullable ComponentVersionLambdaFilesystemPermission permission;
     private final @Nullable String sourcePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentVersionLambdaVolumeMount(
-        @OutputCustomType.Parameter("addGroupOwner") @Nullable Boolean addGroupOwner,
-        @OutputCustomType.Parameter("destinationPath") @Nullable String destinationPath,
-        @OutputCustomType.Parameter("permission") @Nullable ComponentVersionLambdaFilesystemPermission permission,
-        @OutputCustomType.Parameter("sourcePath") @Nullable String sourcePath) {
+        @CustomType.Parameter("addGroupOwner") @Nullable Boolean addGroupOwner,
+        @CustomType.Parameter("destinationPath") @Nullable String destinationPath,
+        @CustomType.Parameter("permission") @Nullable ComponentVersionLambdaFilesystemPermission permission,
+        @CustomType.Parameter("sourcePath") @Nullable String sourcePath) {
         this.addGroupOwner = addGroupOwner;
         this.destinationPath = destinationPath;
         this.permission = permission;

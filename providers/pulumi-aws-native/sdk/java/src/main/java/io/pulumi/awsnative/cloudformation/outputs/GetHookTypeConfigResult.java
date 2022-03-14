@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHookTypeConfigResult {
     /**
      * The configuration data for the extension, in this account and region.
@@ -29,11 +29,11 @@ public final class GetHookTypeConfigResult {
      */
     private final @Nullable String typeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHookTypeConfigResult(
-        @OutputCustomType.Parameter("configuration") @Nullable String configuration,
-        @OutputCustomType.Parameter("configurationArn") @Nullable String configurationArn,
-        @OutputCustomType.Parameter("typeName") @Nullable String typeName) {
+        @CustomType.Parameter("configuration") @Nullable String configuration,
+        @CustomType.Parameter("configurationArn") @Nullable String configurationArn,
+        @CustomType.Parameter("typeName") @Nullable String typeName) {
         this.configuration = configuration;
         this.configurationArn = configurationArn;
         this.typeName = typeName;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotPromptSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,21 +20,21 @@ public final class BotIntentConfirmationSettingArgs extends io.pulumi.resources.
 
     public static final BotIntentConfirmationSettingArgs Empty = new BotIntentConfirmationSettingArgs();
 
-    @InputImport(name="declinationResponse", required=true)
+    @Import(name="declinationResponse", required=true)
       private final Output<BotResponseSpecificationArgs> declinationResponse;
 
     public Output<BotResponseSpecificationArgs> getDeclinationResponse() {
         return this.declinationResponse;
     }
 
-    @InputImport(name="isActive")
+    @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
     public Output<Boolean> getIsActive() {
         return this.isActive == null ? Output.empty() : this.isActive;
     }
 
-    @InputImport(name="promptSpecification", required=true)
+    @Import(name="promptSpecification", required=true)
       private final Output<BotPromptSpecificationArgs> promptSpecification;
 
     public Output<BotPromptSpecificationArgs> getPromptSpecification() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3objectlambda.inputs;
 
 import io.pulumi.awsnative.s3objectlambda.inputs.AccessPointTransformationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,28 +21,28 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
 
     public static final AccessPointObjectLambdaConfigurationArgs Empty = new AccessPointObjectLambdaConfigurationArgs();
 
-    @InputImport(name="allowedFeatures")
+    @Import(name="allowedFeatures")
       private final @Nullable Output<List<String>> allowedFeatures;
 
     public Output<List<String>> getAllowedFeatures() {
         return this.allowedFeatures == null ? Output.empty() : this.allowedFeatures;
     }
 
-    @InputImport(name="cloudWatchMetricsEnabled")
+    @Import(name="cloudWatchMetricsEnabled")
       private final @Nullable Output<Boolean> cloudWatchMetricsEnabled;
 
     public Output<Boolean> getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled == null ? Output.empty() : this.cloudWatchMetricsEnabled;
     }
 
-    @InputImport(name="supportingAccessPoint", required=true)
+    @Import(name="supportingAccessPoint", required=true)
       private final Output<String> supportingAccessPoint;
 
     public Output<String> getSupportingAccessPoint() {
         return this.supportingAccessPoint;
     }
 
-    @InputImport(name="transformationConfigurations", required=true)
+    @Import(name="transformationConfigurations", required=true)
       private final Output<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations;
 
     public Output<List<AccessPointTransformationConfigurationArgs>> getTransformationConfigurations() {

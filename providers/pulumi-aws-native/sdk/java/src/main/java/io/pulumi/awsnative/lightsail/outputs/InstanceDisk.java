@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceDisk {
     /**
      * Instance attached to the disk.
@@ -49,15 +49,15 @@ public final class InstanceDisk {
      */
     private final @Nullable String sizeInGb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceDisk(
-        @OutputCustomType.Parameter("attachedTo") @Nullable String attachedTo,
-        @OutputCustomType.Parameter("attachmentState") @Nullable String attachmentState,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("iOPS") @Nullable Integer iOPS,
-        @OutputCustomType.Parameter("isSystemDisk") @Nullable Boolean isSystemDisk,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("sizeInGb") @Nullable String sizeInGb) {
+        @CustomType.Parameter("attachedTo") @Nullable String attachedTo,
+        @CustomType.Parameter("attachmentState") @Nullable String attachmentState,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("iOPS") @Nullable Integer iOPS,
+        @CustomType.Parameter("isSystemDisk") @Nullable Boolean isSystemDisk,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("sizeInGb") @Nullable String sizeInGb) {
         this.attachedTo = attachedTo;
         this.attachmentState = attachmentState;
         this.diskName = diskName;

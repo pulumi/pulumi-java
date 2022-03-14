@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryMultiMeasureAttributeMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryMultiMeasureMappings {
     private final List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings;
     private final @Nullable String targetMultiMeasureName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledQueryMultiMeasureMappings(
-        @OutputCustomType.Parameter("multiMeasureAttributeMappings") List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
-        @OutputCustomType.Parameter("targetMultiMeasureName") @Nullable String targetMultiMeasureName) {
+        @CustomType.Parameter("multiMeasureAttributeMappings") List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
+        @CustomType.Parameter("targetMultiMeasureName") @Nullable String targetMultiMeasureName) {
         this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
         this.targetMultiMeasureName = targetMultiMeasureName;
     }

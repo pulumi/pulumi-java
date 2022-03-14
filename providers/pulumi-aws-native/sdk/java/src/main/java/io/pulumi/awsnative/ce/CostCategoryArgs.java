@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ce;
 
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * The default value for the cost category
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
         return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="ruleVersion", required=true)
+    @Import(name="ruleVersion", required=true)
       private final Output<CostCategoryRuleVersion> ruleVersion;
 
     public Output<CostCategoryRuleVersion> getRuleVersion() {
@@ -44,7 +44,7 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * JSON array format of Expression in Billing and Cost Management API
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final Output<String> rules;
 
     public Output<String> getRules() {
@@ -55,7 +55,7 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
      * 
      */
-    @InputImport(name="splitChargeRules")
+    @Import(name="splitChargeRules")
       private final @Nullable Output<String> splitChargeRules;
 
     public Output<String> getSplitChargeRules() {

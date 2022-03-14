@@ -6,7 +6,7 @@ package io.pulumi.awsnative.memorydb;
 import io.pulumi.awsnative.memorydb.inputs.AuthenticationModePropertiesArgs;
 import io.pulumi.awsnative.memorydb.inputs.UserTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Access permissions string used for this user account.
      * 
      */
-    @InputImport(name="accessString", required=true)
+    @Import(name="accessString", required=true)
       private final Output<String> accessString;
 
     public Output<String> getAccessString() {
         return this.accessString;
     }
 
-    @InputImport(name="authenticationMode", required=true)
+    @Import(name="authenticationMode", required=true)
       private final Output<AuthenticationModePropertiesArgs> authenticationMode;
 
     public Output<AuthenticationModePropertiesArgs> getAuthenticationMode() {
@@ -39,7 +39,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this user.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<UserTagArgs>> tags;
 
     public Output<List<UserTagArgs>> getTags() {
@@ -50,7 +50,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the user.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

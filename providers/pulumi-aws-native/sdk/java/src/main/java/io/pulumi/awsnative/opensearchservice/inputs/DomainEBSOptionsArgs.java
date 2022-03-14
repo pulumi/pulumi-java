@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,28 +16,28 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DomainEBSOptionsArgs Empty = new DomainEBSOptionsArgs();
 
-    @InputImport(name="eBSEnabled")
+    @Import(name="eBSEnabled")
       private final @Nullable Output<Boolean> eBSEnabled;
 
     public Output<Boolean> getEBSEnabled() {
         return this.eBSEnabled == null ? Output.empty() : this.eBSEnabled;
     }
 
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
         return this.iops == null ? Output.empty() : this.iops;
     }
 
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
         return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

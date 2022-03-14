@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iam.OIDCProviderArgs;
 import io.pulumi.awsnative.iam.outputs.OIDCProviderTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class OIDCProvider extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the OIDC provider
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -33,25 +33,25 @@ public class OIDCProvider extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="clientIdList", type=List.class, parameters={String.class})
+    @Export(name="clientIdList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clientIdList;
 
     public Output</* @Nullable */ List<String>> getClientIdList() {
         return this.clientIdList;
     }
-    @OutputExport(name="tags", type=List.class, parameters={OIDCProviderTag.class})
+    @Export(name="tags", type=List.class, parameters={OIDCProviderTag.class})
     private Output</* @Nullable */ List<OIDCProviderTag>> tags;
 
     public Output</* @Nullable */ List<OIDCProviderTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="thumbprintList", type=List.class, parameters={String.class})
+    @Export(name="thumbprintList", type=List.class, parameters={String.class})
     private Output<List<String>> thumbprintList;
 
     public Output<List<String>> getThumbprintList() {
         return this.thumbprintList;
     }
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output</* @Nullable */ String> url;
 
     public Output</* @Nullable */ String> getUrl() {

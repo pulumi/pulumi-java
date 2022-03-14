@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionGeoRestriction {
     private final @Nullable List<String> locations;
     private final String restrictionType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionGeoRestriction(
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("restrictionType") String restrictionType) {
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("restrictionType") String restrictionType) {
         this.locations = locations;
         this.restrictionType = restrictionType;
     }

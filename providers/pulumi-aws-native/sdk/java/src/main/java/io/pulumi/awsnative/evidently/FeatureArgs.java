@@ -8,7 +8,7 @@ import io.pulumi.awsnative.evidently.inputs.FeatureEntityOverrideArgs;
 import io.pulumi.awsnative.evidently.inputs.FeatureTagArgs;
 import io.pulumi.awsnative.evidently.inputs.FeatureVariationObjectArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,42 +19,42 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureArgs Empty = new FeatureArgs();
 
-    @InputImport(name="defaultVariation")
+    @Import(name="defaultVariation")
       private final @Nullable Output<String> defaultVariation;
 
     public Output<String> getDefaultVariation() {
         return this.defaultVariation == null ? Output.empty() : this.defaultVariation;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="entityOverrides")
+    @Import(name="entityOverrides")
       private final @Nullable Output<List<FeatureEntityOverrideArgs>> entityOverrides;
 
     public Output<List<FeatureEntityOverrideArgs>> getEntityOverrides() {
         return this.entityOverrides == null ? Output.empty() : this.entityOverrides;
     }
 
-    @InputImport(name="evaluationStrategy")
+    @Import(name="evaluationStrategy")
       private final @Nullable Output<FeatureEvaluationStrategy> evaluationStrategy;
 
     public Output<FeatureEvaluationStrategy> getEvaluationStrategy() {
         return this.evaluationStrategy == null ? Output.empty() : this.evaluationStrategy;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final Output<String> project;
 
     public Output<String> getProject() {
@@ -65,14 +65,14 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FeatureTagArgs>> tags;
 
     public Output<List<FeatureTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="variations", required=true)
+    @Import(name="variations", required=true)
       private final Output<List<FeatureVariationObjectArgs>> variations;
 
     public Output<List<FeatureVariationObjectArgs>> getVariations() {

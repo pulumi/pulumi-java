@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.customerprofiles.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationServiceNowSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor
-    private IntegrationServiceNowSourceProperties(@OutputCustomType.Parameter("object") String object) {
+    @CustomType.Constructor
+    private IntegrationServiceNowSourceProperties(@CustomType.Parameter("object") String object) {
         this.object = object;
     }
 

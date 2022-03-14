@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
      * Amazon Resource Name is a unique name for each resource.
      * 
      */
-    @InputImport(name="licenseArn", required=true)
+    @Import(name="licenseArn", required=true)
       private final String licenseArn;
 
     public String getLicenseArn() {

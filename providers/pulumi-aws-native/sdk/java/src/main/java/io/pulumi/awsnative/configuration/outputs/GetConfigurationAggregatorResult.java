@@ -6,14 +6,14 @@ package io.pulumi.awsnative.configuration.outputs;
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorAccountAggregationSource;
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorOrganizationAggregationSource;
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigurationAggregatorResult {
     private final @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources;
     /**
@@ -28,12 +28,12 @@ public final class GetConfigurationAggregatorResult {
      */
     private final @Nullable List<ConfigurationAggregatorTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigurationAggregatorResult(
-        @OutputCustomType.Parameter("accountAggregationSources") @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources,
-        @OutputCustomType.Parameter("configurationAggregatorArn") @Nullable String configurationAggregatorArn,
-        @OutputCustomType.Parameter("organizationAggregationSource") @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource,
-        @OutputCustomType.Parameter("tags") @Nullable List<ConfigurationAggregatorTag> tags) {
+        @CustomType.Parameter("accountAggregationSources") @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources,
+        @CustomType.Parameter("configurationAggregatorArn") @Nullable String configurationAggregatorArn,
+        @CustomType.Parameter("organizationAggregationSource") @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource,
+        @CustomType.Parameter("tags") @Nullable List<ConfigurationAggregatorTag> tags) {
         this.accountAggregationSources = accountAggregationSources;
         this.configurationAggregatorArn = configurationAggregatorArn;
         this.organizationAggregationSource = organizationAggregationSource;

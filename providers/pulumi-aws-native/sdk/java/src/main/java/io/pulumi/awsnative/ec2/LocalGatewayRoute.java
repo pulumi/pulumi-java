@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.LocalGatewayRouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * The CIDR block used for destination matches.
      * 
      */
-    @OutputExport(name="destinationCidrBlock", type=String.class, parameters={})
+    @Export(name="destinationCidrBlock", type=String.class, parameters={})
     private Output<String> destinationCidrBlock;
 
     /**
@@ -35,7 +35,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * The ID of the local gateway route table.
      * 
      */
-    @OutputExport(name="localGatewayRouteTableId", type=String.class, parameters={})
+    @Export(name="localGatewayRouteTableId", type=String.class, parameters={})
     private Output<String> localGatewayRouteTableId;
 
     /**
@@ -49,7 +49,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * The ID of the virtual interface group.
      * 
      */
-    @OutputExport(name="localGatewayVirtualInterfaceGroupId", type=String.class, parameters={})
+    @Export(name="localGatewayVirtualInterfaceGroupId", type=String.class, parameters={})
     private Output<String> localGatewayVirtualInterfaceGroupId;
 
     /**
@@ -63,7 +63,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * The state of the route.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -77,7 +77,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * The route type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotVersionLocaleDetails;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotVersionLocaleSpecification {
     private final BotVersionLocaleDetails botVersionLocaleDetails;
     private final String localeId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotVersionLocaleSpecification(
-        @OutputCustomType.Parameter("botVersionLocaleDetails") BotVersionLocaleDetails botVersionLocaleDetails,
-        @OutputCustomType.Parameter("localeId") String localeId) {
+        @CustomType.Parameter("botVersionLocaleDetails") BotVersionLocaleDetails botVersionLocaleDetails,
+        @CustomType.Parameter("localeId") String localeId) {
         this.botVersionLocaleDetails = botVersionLocaleDetails;
         this.localeId = localeId;
     }

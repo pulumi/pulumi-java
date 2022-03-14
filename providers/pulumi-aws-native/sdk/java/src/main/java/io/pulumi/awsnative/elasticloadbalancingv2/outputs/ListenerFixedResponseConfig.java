@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerFixedResponseConfig {
     private final @Nullable String contentType;
     private final @Nullable String messageBody;
     private final String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerFixedResponseConfig(
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("messageBody") @Nullable String messageBody,
-        @OutputCustomType.Parameter("statusCode") String statusCode) {
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("messageBody") @Nullable String messageBody,
+        @CustomType.Parameter("statusCode") String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;

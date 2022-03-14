@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TemplateColumnGroupColumnSchema {
     /**
      * <p>The name of the column group's column schema.</p>
@@ -17,8 +17,8 @@ public final class TemplateColumnGroupColumnSchema {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private TemplateColumnGroupColumnSchema(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private TemplateColumnGroupColumnSchema(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

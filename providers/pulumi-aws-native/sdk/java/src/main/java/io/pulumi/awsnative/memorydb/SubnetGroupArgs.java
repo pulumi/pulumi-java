@@ -5,7 +5,7 @@ package io.pulumi.awsnative.memorydb;
 
 import io.pulumi.awsnative.memorydb.inputs.SubnetGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of the subnet group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
      * 
      */
-    @InputImport(name="subnetGroupName")
+    @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
@@ -42,7 +42,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A list of VPC subnet IDs for the subnet group.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -53,7 +53,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this subnet group.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SubnetGroupTagArgs>> tags;
 
     public Output<List<SubnetGroupTagArgs>> getTags() {

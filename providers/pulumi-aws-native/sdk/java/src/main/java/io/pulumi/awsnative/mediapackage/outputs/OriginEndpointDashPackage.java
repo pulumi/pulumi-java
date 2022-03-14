@@ -12,7 +12,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointDashPackageSegmentTe
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointDashPackageUtcTiming;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointDashEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointStreamSelection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointDashPackage {
     /**
      * A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
@@ -86,23 +86,23 @@ public final class OriginEndpointDashPackage {
      */
     private final @Nullable String utcTimingUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointDashPackage(
-        @OutputCustomType.Parameter("adTriggers") @Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers,
-        @OutputCustomType.Parameter("adsOnDeliveryRestrictions") @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
-        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointDashEncryption encryption,
-        @OutputCustomType.Parameter("manifestLayout") @Nullable OriginEndpointDashPackageManifestLayout manifestLayout,
-        @OutputCustomType.Parameter("manifestWindowSeconds") @Nullable Integer manifestWindowSeconds,
-        @OutputCustomType.Parameter("minBufferTimeSeconds") @Nullable Integer minBufferTimeSeconds,
-        @OutputCustomType.Parameter("minUpdatePeriodSeconds") @Nullable Integer minUpdatePeriodSeconds,
-        @OutputCustomType.Parameter("periodTriggers") @Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers,
-        @OutputCustomType.Parameter("profile") @Nullable OriginEndpointDashPackageProfile profile,
-        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
-        @OutputCustomType.Parameter("segmentTemplateFormat") @Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat,
-        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection,
-        @OutputCustomType.Parameter("suggestedPresentationDelaySeconds") @Nullable Integer suggestedPresentationDelaySeconds,
-        @OutputCustomType.Parameter("utcTiming") @Nullable OriginEndpointDashPackageUtcTiming utcTiming,
-        @OutputCustomType.Parameter("utcTimingUri") @Nullable String utcTimingUri) {
+        @CustomType.Parameter("adTriggers") @Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers,
+        @CustomType.Parameter("adsOnDeliveryRestrictions") @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
+        @CustomType.Parameter("encryption") @Nullable OriginEndpointDashEncryption encryption,
+        @CustomType.Parameter("manifestLayout") @Nullable OriginEndpointDashPackageManifestLayout manifestLayout,
+        @CustomType.Parameter("manifestWindowSeconds") @Nullable Integer manifestWindowSeconds,
+        @CustomType.Parameter("minBufferTimeSeconds") @Nullable Integer minBufferTimeSeconds,
+        @CustomType.Parameter("minUpdatePeriodSeconds") @Nullable Integer minUpdatePeriodSeconds,
+        @CustomType.Parameter("periodTriggers") @Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers,
+        @CustomType.Parameter("profile") @Nullable OriginEndpointDashPackageProfile profile,
+        @CustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @CustomType.Parameter("segmentTemplateFormat") @Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat,
+        @CustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection,
+        @CustomType.Parameter("suggestedPresentationDelaySeconds") @Nullable Integer suggestedPresentationDelaySeconds,
+        @CustomType.Parameter("utcTiming") @Nullable OriginEndpointDashPackageUtcTiming utcTiming,
+        @CustomType.Parameter("utcTimingUri") @Nullable String utcTimingUri) {
         this.adTriggers = adTriggers;
         this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
         this.encryption = encryption;

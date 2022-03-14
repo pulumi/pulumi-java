@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.networkfirewall.FirewallPolicyArgs;
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicyTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,37 +19,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:networkfirewall:FirewallPolicy")
 public class FirewallPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="firewallPolicy", type=io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy.class, parameters={})
+    @Export(name="firewallPolicy", type=io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy.class, parameters={})
     private Output<io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy> firewallPolicy;
 
     public Output<io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy> getFirewallPolicy() {
         return this.firewallPolicy;
     }
-    @OutputExport(name="firewallPolicyArn", type=String.class, parameters={})
+    @Export(name="firewallPolicyArn", type=String.class, parameters={})
     private Output<String> firewallPolicyArn;
 
     public Output<String> getFirewallPolicyArn() {
         return this.firewallPolicyArn;
     }
-    @OutputExport(name="firewallPolicyId", type=String.class, parameters={})
+    @Export(name="firewallPolicyId", type=String.class, parameters={})
     private Output<String> firewallPolicyId;
 
     public Output<String> getFirewallPolicyId() {
         return this.firewallPolicyId;
     }
-    @OutputExport(name="firewallPolicyName", type=String.class, parameters={})
+    @Export(name="firewallPolicyName", type=String.class, parameters={})
     private Output<String> firewallPolicyName;
 
     public Output<String> getFirewallPolicyName() {
         return this.firewallPolicyName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={FirewallPolicyTag.class})
+    @Export(name="tags", type=List.class, parameters={FirewallPolicyTag.class})
     private Output</* @Nullable */ List<FirewallPolicyTag>> tags;
 
     public Output</* @Nullable */ List<FirewallPolicyTag>> getTags() {

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.refactorspaces.outputs;
 
 import io.pulumi.awsnative.refactorspaces.outputs.ServiceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     private final @Nullable String arn;
     private final @Nullable String serviceIdentifier;
@@ -21,11 +21,11 @@ public final class GetServiceResult {
      */
     private final @Nullable List<ServiceTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("serviceIdentifier") @Nullable String serviceIdentifier,
-        @OutputCustomType.Parameter("tags") @Nullable List<ServiceTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("serviceIdentifier") @Nullable String serviceIdentifier,
+        @CustomType.Parameter("tags") @Nullable List<ServiceTag> tags) {
         this.arn = arn;
         this.serviceIdentifier = serviceIdentifier;
         this.tags = tags;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ServiceAuthenticationConfiguration extends io.pulumi.resource
      * Access Role Arn
      * 
      */
-    @InputImport(name="accessRoleArn")
+    @Import(name="accessRoleArn")
       private final @Nullable String accessRoleArn;
 
     public Optional<String> getAccessRoleArn() {
@@ -33,7 +33,7 @@ public final class ServiceAuthenticationConfiguration extends io.pulumi.resource
      * Connection Arn
      * 
      */
-    @InputImport(name="connectionArn")
+    @Import(name="connectionArn")
       private final @Nullable String connectionArn;
 
     public Optional<String> getConnectionArn() {

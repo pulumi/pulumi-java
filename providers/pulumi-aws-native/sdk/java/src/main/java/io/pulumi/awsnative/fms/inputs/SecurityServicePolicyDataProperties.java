@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.fms.inputs;
 
 import io.pulumi.awsnative.fms.enums.PolicySecurityServicePolicyDataPropertiesType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class SecurityServicePolicyDataProperties extends io.pulumi.resourc
 
     public static final SecurityServicePolicyDataProperties Empty = new SecurityServicePolicyDataProperties();
 
-    @InputImport(name="managedServiceData")
+    @Import(name="managedServiceData")
       private final @Nullable String managedServiceData;
 
     public Optional<String> getManagedServiceData() {
         return this.managedServiceData == null ? Optional.empty() : Optional.ofNullable(this.managedServiceData);
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final PolicySecurityServicePolicyDataPropertiesType type;
 
     public PolicySecurityServicePolicyDataPropertiesType getType() {

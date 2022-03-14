@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensBucketsAndRegions {
     private final @Nullable List<String> buckets;
     private final @Nullable List<String> regions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageLensBucketsAndRegions(
-        @OutputCustomType.Parameter("buckets") @Nullable List<String> buckets,
-        @OutputCustomType.Parameter("regions") @Nullable List<String> regions) {
+        @CustomType.Parameter("buckets") @Nullable List<String> buckets,
+        @CustomType.Parameter("regions") @Nullable List<String> regions) {
         this.buckets = buckets;
         this.regions = regions;
     }

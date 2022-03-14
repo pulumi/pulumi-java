@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * How to handle logs that satisfy the filter's conditions and requirement.
      * 
      */
-    @InputImport(name="behavior", required=true)
+    @Import(name="behavior", required=true)
       private final Output<LoggingConfigurationFilterBehavior> behavior;
 
     public Output<LoggingConfigurationFilterBehavior> getBehavior() {
@@ -31,7 +31,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * Match conditions for the filter.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final Output<List<LoggingConfigurationConditionArgs>> conditions;
 
     public Output<List<LoggingConfigurationConditionArgs>> getConditions() {
@@ -42,7 +42,7 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
      * 
      */
-    @InputImport(name="requirement", required=true)
+    @Import(name="requirement", required=true)
       private final Output<LoggingConfigurationFilterRequirement> requirement;
 
     public Output<LoggingConfigurationFilterRequirement> getRequirement() {

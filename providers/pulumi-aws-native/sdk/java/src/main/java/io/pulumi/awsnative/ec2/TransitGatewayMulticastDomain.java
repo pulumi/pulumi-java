@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.TransitGatewayMulticastDomainArgs;
 import io.pulumi.awsnative.ec2.outputs.OptionsProperties;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayMulticastDomainTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * The time the transit gateway multicast domain was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -38,7 +38,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * The options for the transit gateway multicast domain.
      * 
      */
-    @OutputExport(name="options", type=OptionsProperties.class, parameters={})
+    @Export(name="options", type=OptionsProperties.class, parameters={})
     private Output</* @Nullable */ OptionsProperties> options;
 
     /**
@@ -52,7 +52,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * The state of the transit gateway multicast domain.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -66,7 +66,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * The tags for the transit gateway multicast domain.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={TransitGatewayMulticastDomainTag.class})
+    @Export(name="tags", type=List.class, parameters={TransitGatewayMulticastDomainTag.class})
     private Output</* @Nullable */ List<TransitGatewayMulticastDomainTag>> tags;
 
     /**
@@ -80,7 +80,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * The ID of the transit gateway.
      * 
      */
-    @OutputExport(name="transitGatewayId", type=String.class, parameters={})
+    @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;
 
     /**
@@ -94,7 +94,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * The Amazon Resource Name (ARN) of the transit gateway multicast domain.
      * 
      */
-    @OutputExport(name="transitGatewayMulticastDomainArn", type=String.class, parameters={})
+    @Export(name="transitGatewayMulticastDomainArn", type=String.class, parameters={})
     private Output<String> transitGatewayMulticastDomainArn;
 
     /**
@@ -108,7 +108,7 @@ public class TransitGatewayMulticastDomain extends io.pulumi.resources.CustomRes
      * The ID of the transit gateway multicast domain.
      * 
      */
-    @OutputExport(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
+    @Export(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
     private Output<String> transitGatewayMulticastDomainId;
 
     /**

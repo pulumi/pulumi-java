@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketCorsRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketCorsConfiguration {
     private final List<BucketCorsRule> corsRules;
 
-    @OutputCustomType.Constructor
-    private BucketCorsConfiguration(@OutputCustomType.Parameter("corsRules") List<BucketCorsRule> corsRules) {
+    @CustomType.Constructor
+    private BucketCorsConfiguration(@CustomType.Parameter("corsRules") List<BucketCorsRule> corsRules) {
         this.corsRules = corsRules;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -16,35 +16,35 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
 
     public static final TaskDefinitionDockerVolumeConfigurationArgs Empty = new TaskDefinitionDockerVolumeConfigurationArgs();
 
-    @InputImport(name="autoprovision")
+    @Import(name="autoprovision")
       private final @Nullable Output<Boolean> autoprovision;
 
     public Output<Boolean> getAutoprovision() {
         return this.autoprovision == null ? Output.empty() : this.autoprovision;
     }
 
-    @InputImport(name="driver")
+    @Import(name="driver")
       private final @Nullable Output<String> driver;
 
     public Output<String> getDriver() {
         return this.driver == null ? Output.empty() : this.driver;
     }
 
-    @InputImport(name="driverOpts")
+    @Import(name="driverOpts")
       private final @Nullable Output<Object> driverOpts;
 
     public Output<Object> getDriverOpts() {
         return this.driverOpts == null ? Output.empty() : this.driverOpts;
     }
 
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Object> labels;
 
     public Output<Object> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {

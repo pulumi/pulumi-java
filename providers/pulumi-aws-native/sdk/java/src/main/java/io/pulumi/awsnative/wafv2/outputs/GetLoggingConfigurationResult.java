@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.LoggingFilterProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLoggingConfigurationResult {
     /**
      * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
@@ -36,12 +36,12 @@ public final class GetLoggingConfigurationResult {
      */
     private final @Nullable List<LoggingConfigurationFieldToMatch> redactedFields;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoggingConfigurationResult(
-        @OutputCustomType.Parameter("logDestinationConfigs") @Nullable List<String> logDestinationConfigs,
-        @OutputCustomType.Parameter("loggingFilter") @Nullable LoggingFilterProperties loggingFilter,
-        @OutputCustomType.Parameter("managedByFirewallManager") @Nullable Boolean managedByFirewallManager,
-        @OutputCustomType.Parameter("redactedFields") @Nullable List<LoggingConfigurationFieldToMatch> redactedFields) {
+        @CustomType.Parameter("logDestinationConfigs") @Nullable List<String> logDestinationConfigs,
+        @CustomType.Parameter("loggingFilter") @Nullable LoggingFilterProperties loggingFilter,
+        @CustomType.Parameter("managedByFirewallManager") @Nullable Boolean managedByFirewallManager,
+        @CustomType.Parameter("redactedFields") @Nullable List<LoggingConfigurationFieldToMatch> redactedFields) {
         this.logDestinationConfigs = logDestinationConfigs;
         this.loggingFilter = loggingFilter;
         this.managedByFirewallManager = managedByFirewallManager;

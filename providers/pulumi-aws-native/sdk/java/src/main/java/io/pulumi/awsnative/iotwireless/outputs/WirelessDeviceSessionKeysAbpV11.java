@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WirelessDeviceSessionKeysAbpV11 {
     private final String appSKey;
     private final String fNwkSIntKey;
     private final String nwkSEncKey;
     private final String sNwkSIntKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WirelessDeviceSessionKeysAbpV11(
-        @OutputCustomType.Parameter("appSKey") String appSKey,
-        @OutputCustomType.Parameter("fNwkSIntKey") String fNwkSIntKey,
-        @OutputCustomType.Parameter("nwkSEncKey") String nwkSEncKey,
-        @OutputCustomType.Parameter("sNwkSIntKey") String sNwkSIntKey) {
+        @CustomType.Parameter("appSKey") String appSKey,
+        @CustomType.Parameter("fNwkSIntKey") String fNwkSIntKey,
+        @CustomType.Parameter("nwkSEncKey") String nwkSEncKey,
+        @CustomType.Parameter("sNwkSIntKey") String sNwkSIntKey) {
         this.appSKey = appSKey;
         this.fNwkSIntKey = fNwkSIntKey;
         this.nwkSEncKey = nwkSEncKey;

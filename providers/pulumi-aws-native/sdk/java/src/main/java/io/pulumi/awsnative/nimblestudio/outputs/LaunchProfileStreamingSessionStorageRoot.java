@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchProfileStreamingSessionStorageRoot {
     /**
      * <p>The folder path in Linux workstations where files are uploaded.</p>
@@ -22,10 +22,10 @@ public final class LaunchProfileStreamingSessionStorageRoot {
      */
     private final @Nullable String windows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchProfileStreamingSessionStorageRoot(
-        @OutputCustomType.Parameter("linux") @Nullable String linux,
-        @OutputCustomType.Parameter("windows") @Nullable String windows) {
+        @CustomType.Parameter("linux") @Nullable String linux,
+        @CustomType.Parameter("windows") @Nullable String windows) {
         this.linux = linux;
         this.windows = windows;
     }

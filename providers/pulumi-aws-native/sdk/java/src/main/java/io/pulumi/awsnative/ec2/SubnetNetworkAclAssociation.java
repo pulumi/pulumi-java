@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.SubnetNetworkAclAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ec2:SubnetNetworkAclAssociation")
 public class SubnetNetworkAclAssociation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="associationId", type=String.class, parameters={})
+    @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
     public Output<String> getAssociationId() {
@@ -27,7 +27,7 @@ public class SubnetNetworkAclAssociation extends io.pulumi.resources.CustomResou
      * The ID of the network ACL
      * 
      */
-    @OutputExport(name="networkAclId", type=String.class, parameters={})
+    @Export(name="networkAclId", type=String.class, parameters={})
     private Output<String> networkAclId;
 
     /**
@@ -41,7 +41,7 @@ public class SubnetNetworkAclAssociation extends io.pulumi.resources.CustomResou
      * The ID of the subnet
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**

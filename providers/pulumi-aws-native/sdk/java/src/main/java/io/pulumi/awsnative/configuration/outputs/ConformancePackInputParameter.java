@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.configuration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConformancePackInputParameter {
     private final String parameterName;
     private final String parameterValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConformancePackInputParameter(
-        @OutputCustomType.Parameter("parameterName") String parameterName,
-        @OutputCustomType.Parameter("parameterValue") String parameterValue) {
+        @CustomType.Parameter("parameterName") String parameterName,
+        @CustomType.Parameter("parameterValue") String parameterValue) {
         this.parameterName = parameterName;
         this.parameterValue = parameterValue;
     }

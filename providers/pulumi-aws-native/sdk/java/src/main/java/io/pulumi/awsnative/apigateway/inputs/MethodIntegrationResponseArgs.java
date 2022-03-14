@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationResponseContentHandling;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * Specifies how to handle request payload content type conversions.
      * 
      */
-    @InputImport(name="contentHandling")
+    @Import(name="contentHandling")
       private final @Nullable Output<MethodIntegrationResponseContentHandling> contentHandling;
 
     public Output<MethodIntegrationResponseContentHandling> getContentHandling() {
@@ -31,7 +31,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * The response parameters from the backend response that API Gateway sends to the method response.
      * 
      */
-    @InputImport(name="responseParameters")
+    @Import(name="responseParameters")
       private final @Nullable Output<Object> responseParameters;
 
     public Output<Object> getResponseParameters() {
@@ -42,7 +42,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * The templates that are used to transform the integration response body. Specify templates as key-value pairs (string-to-string mappings), with a content type as the key and a template as the value.
      * 
      */
-    @InputImport(name="responseTemplates")
+    @Import(name="responseTemplates")
       private final @Nullable Output<Object> responseTemplates;
 
     public Output<Object> getResponseTemplates() {
@@ -53,7 +53,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * A regular expression that specifies which error strings or status codes from the backend map to the integration response.
      * 
      */
-    @InputImport(name="selectionPattern")
+    @Import(name="selectionPattern")
       private final @Nullable Output<String> selectionPattern;
 
     public Output<String> getSelectionPattern() {
@@ -64,7 +64,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
      * The status code that API Gateway uses to map the integration response to a MethodResponse status code.
      * 
      */
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
     public Output<String> getStatusCode() {

@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificatePolicyQualifierInfo;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificatePolicyInformation {
     private final String certPolicyId;
     private final @Nullable List<CertificatePolicyQualifierInfo> policyQualifiers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificatePolicyInformation(
-        @OutputCustomType.Parameter("certPolicyId") String certPolicyId,
-        @OutputCustomType.Parameter("policyQualifiers") @Nullable List<CertificatePolicyQualifierInfo> policyQualifiers) {
+        @CustomType.Parameter("certPolicyId") String certPolicyId,
+        @CustomType.Parameter("policyQualifiers") @Nullable List<CertificatePolicyQualifierInfo> policyQualifiers) {
         this.certPolicyId = certPolicyId;
         this.policyQualifiers = policyQualifiers;
     }

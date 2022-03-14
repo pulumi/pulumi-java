@@ -8,7 +8,7 @@ import io.pulumi.awsnative.evidently.ProjectArgs;
 import io.pulumi.awsnative.evidently.outputs.ProjectDataDeliveryObject;
 import io.pulumi.awsnative.evidently.outputs.ProjectTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,25 +20,25 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:evidently:Project")
 public class Project extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="dataDelivery", type=ProjectDataDeliveryObject.class, parameters={})
+    @Export(name="dataDelivery", type=ProjectDataDeliveryObject.class, parameters={})
     private Output</* @Nullable */ ProjectDataDeliveryObject> dataDelivery;
 
     public Output</* @Nullable */ ProjectDataDeliveryObject> getDataDelivery() {
         return this.dataDelivery;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ProjectTag.class})
+    @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
     /**

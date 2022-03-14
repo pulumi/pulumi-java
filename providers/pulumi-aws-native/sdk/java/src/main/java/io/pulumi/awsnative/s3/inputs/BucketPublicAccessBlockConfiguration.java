@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
      *    Enabling this setting doesn't affect existing policies or ACLs.
      * 
      */
-    @InputImport(name="blockPublicAcls")
+    @Import(name="blockPublicAcls")
       private final @Nullable Boolean blockPublicAcls;
 
     public Optional<Boolean> getBlockPublicAcls() {
@@ -37,7 +37,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
      * Enabling this setting doesn't affect existing bucket policies.
      * 
      */
-    @InputImport(name="blockPublicPolicy")
+    @Import(name="blockPublicPolicy")
       private final @Nullable Boolean blockPublicPolicy;
 
     public Optional<Boolean> getBlockPublicPolicy() {
@@ -49,7 +49,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
      * Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.
      * 
      */
-    @InputImport(name="ignorePublicAcls")
+    @Import(name="ignorePublicAcls")
       private final @Nullable Boolean ignorePublicAcls;
 
     public Optional<Boolean> getIgnorePublicAcls() {
@@ -61,7 +61,7 @@ public final class BucketPublicAccessBlockConfiguration extends io.pulumi.resour
      * Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.
      * 
      */
-    @InputImport(name="restrictPublicBuckets")
+    @Import(name="restrictPublicBuckets")
       private final @Nullable Boolean restrictPublicBuckets;
 
     public Optional<Boolean> getRestrictPublicBuckets() {

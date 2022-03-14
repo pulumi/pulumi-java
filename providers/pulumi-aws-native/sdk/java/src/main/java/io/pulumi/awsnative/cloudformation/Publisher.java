@@ -8,7 +8,7 @@ import io.pulumi.awsnative.cloudformation.PublisherArgs;
 import io.pulumi.awsnative.cloudformation.enums.PublisherIdentityProvider;
 import io.pulumi.awsnative.cloudformation.enums.PublisherStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must accept the terms and conditions in order to publish public extensions to the CloudFormation registry. The terms and conditions can be found at https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf
      * 
      */
-    @OutputExport(name="acceptTermsAndConditions", type=Boolean.class, parameters={})
+    @Export(name="acceptTermsAndConditions", type=Boolean.class, parameters={})
     private Output<Boolean> acceptTermsAndConditions;
 
     /**
@@ -38,7 +38,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource Name (ARN) for your connection to that account.
      * 
      */
-    @OutputExport(name="connectionArn", type=String.class, parameters={})
+    @Export(name="connectionArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionArn;
 
     /**
@@ -52,7 +52,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * The type of account used as the identity provider when registering this publisher with CloudFormation.
      * 
      */
-    @OutputExport(name="identityProvider", type=PublisherIdentityProvider.class, parameters={})
+    @Export(name="identityProvider", type=PublisherIdentityProvider.class, parameters={})
     private Output<PublisherIdentityProvider> identityProvider;
 
     /**
@@ -66,7 +66,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    @OutputExport(name="publisherId", type=String.class, parameters={})
+    @Export(name="publisherId", type=String.class, parameters={})
     private Output<String> publisherId;
 
     /**
@@ -80,7 +80,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * The URL to the publisher's profile with the identity provider.
      * 
      */
-    @OutputExport(name="publisherProfile", type=String.class, parameters={})
+    @Export(name="publisherProfile", type=String.class, parameters={})
     private Output<String> publisherProfile;
 
     /**
@@ -94,7 +94,7 @@ public class Publisher extends io.pulumi.resources.CustomResource {
      * Whether the publisher is verified.
      * 
      */
-    @OutputExport(name="publisherStatus", type=PublisherStatus.class, parameters={})
+    @Export(name="publisherStatus", type=PublisherStatus.class, parameters={})
     private Output<PublisherStatus> publisherStatus;
 
     /**

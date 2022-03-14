@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetTargetResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSetDNSTargetResource {
     /**
      * The domain name that acts as an ingress point to a portion of the customer application.
@@ -34,13 +34,13 @@ public final class ResourceSetDNSTargetResource {
     private final @Nullable String recordType;
     private final @Nullable ResourceSetTargetResource targetResource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceSetDNSTargetResource(
-        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
-        @OutputCustomType.Parameter("hostedZoneArn") @Nullable String hostedZoneArn,
-        @OutputCustomType.Parameter("recordSetId") @Nullable String recordSetId,
-        @OutputCustomType.Parameter("recordType") @Nullable String recordType,
-        @OutputCustomType.Parameter("targetResource") @Nullable ResourceSetTargetResource targetResource) {
+        @CustomType.Parameter("domainName") @Nullable String domainName,
+        @CustomType.Parameter("hostedZoneArn") @Nullable String hostedZoneArn,
+        @CustomType.Parameter("recordSetId") @Nullable String recordSetId,
+        @CustomType.Parameter("recordType") @Nullable String recordType,
+        @CustomType.Parameter("targetResource") @Nullable ResourceSetTargetResource targetResource) {
         this.domainName = domainName;
         this.hostedZoneArn = hostedZoneArn;
         this.recordSetId = recordSetId;

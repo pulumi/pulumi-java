@@ -7,7 +7,7 @@ import io.pulumi.awsnative.events.enums.ConnectionOAuthParametersHttpMethod;
 import io.pulumi.awsnative.events.inputs.ConnectionClientParametersArgs;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,28 +17,28 @@ public final class ConnectionOAuthParametersArgs extends io.pulumi.resources.Res
 
     public static final ConnectionOAuthParametersArgs Empty = new ConnectionOAuthParametersArgs();
 
-    @InputImport(name="authorizationEndpoint", required=true)
+    @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
     public Output<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
-    @InputImport(name="clientParameters", required=true)
+    @Import(name="clientParameters", required=true)
       private final Output<ConnectionClientParametersArgs> clientParameters;
 
     public Output<ConnectionClientParametersArgs> getClientParameters() {
         return this.clientParameters;
     }
 
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final Output<ConnectionOAuthParametersHttpMethod> httpMethod;
 
     public Output<ConnectionOAuthParametersHttpMethod> getHttpMethod() {
         return this.httpMethod;
     }
 
-    @InputImport(name="oAuthHttpParameters")
+    @Import(name="oAuthHttpParameters")
       private final @Nullable Output<ConnectionHttpParametersArgs> oAuthHttpParameters;
 
     public Output<ConnectionHttpParametersArgs> getOAuthHttpParameters() {

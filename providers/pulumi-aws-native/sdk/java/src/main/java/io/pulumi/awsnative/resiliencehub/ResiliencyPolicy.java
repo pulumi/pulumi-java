@@ -10,7 +10,7 @@ import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyTier;
 import io.pulumi.awsnative.resiliencehub.outputs.ResiliencyPolicyPolicyMap;
 import io.pulumi.awsnative.resiliencehub.outputs.ResiliencyPolicyTagMap;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
      * Data Location Constraint of the Policy.
      * 
      */
-    @OutputExport(name="dataLocationConstraint", type=ResiliencyPolicyDataLocationConstraint.class, parameters={})
+    @Export(name="dataLocationConstraint", type=ResiliencyPolicyDataLocationConstraint.class, parameters={})
     private Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
     /**
@@ -35,7 +35,7 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
         return this.dataLocationConstraint;
     }
-    @OutputExport(name="policy", type=ResiliencyPolicyPolicyMap.class, parameters={})
+    @Export(name="policy", type=ResiliencyPolicyPolicyMap.class, parameters={})
     private Output<ResiliencyPolicyPolicyMap> policy;
 
     public Output<ResiliencyPolicyPolicyMap> getPolicy() {
@@ -45,7 +45,7 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
      */
-    @OutputExport(name="policyArn", type=String.class, parameters={})
+    @Export(name="policyArn", type=String.class, parameters={})
     private Output<String> policyArn;
 
     /**
@@ -59,7 +59,7 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
      * Description of Resiliency Policy.
      * 
      */
-    @OutputExport(name="policyDescription", type=String.class, parameters={})
+    @Export(name="policyDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDescription;
 
     /**
@@ -73,7 +73,7 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
      * Name of Resiliency Policy.
      * 
      */
-    @OutputExport(name="policyName", type=String.class, parameters={})
+    @Export(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
 
     /**
@@ -83,7 +83,7 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
     public Output<String> getPolicyName() {
         return this.policyName;
     }
-    @OutputExport(name="tags", type=ResiliencyPolicyTagMap.class, parameters={})
+    @Export(name="tags", type=ResiliencyPolicyTagMap.class, parameters={})
     private Output</* @Nullable */ ResiliencyPolicyTagMap> tags;
 
     public Output</* @Nullable */ ResiliencyPolicyTagMap> getTags() {
@@ -93,7 +93,7 @@ public class ResiliencyPolicy extends io.pulumi.resources.CustomResource {
      * Resiliency Policy Tier.
      * 
      */
-    @OutputExport(name="tier", type=ResiliencyPolicyTier.class, parameters={})
+    @Export(name="tier", type=ResiliencyPolicyTier.class, parameters={})
     private Output<ResiliencyPolicyTier> tier;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeAnalysisTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class NetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.reso
 
     public static final NetworkInsightsAccessScopeAnalysisArgs Empty = new NetworkInsightsAccessScopeAnalysisArgs();
 
-    @InputImport(name="networkInsightsAccessScopeId", required=true)
+    @Import(name="networkInsightsAccessScopeId", required=true)
       private final Output<String> networkInsightsAccessScopeId;
 
     public Output<String> getNetworkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> tags;
 
     public Output<List<NetworkInsightsAccessScopeAnalysisTagArgs>> getTags() {

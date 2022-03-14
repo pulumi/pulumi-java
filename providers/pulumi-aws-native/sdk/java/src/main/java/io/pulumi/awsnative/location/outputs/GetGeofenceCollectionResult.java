@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.location.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGeofenceCollectionResult {
     private final @Nullable String arn;
     private final @Nullable String collectionArn;
@@ -17,13 +17,13 @@ public final class GetGeofenceCollectionResult {
     private final @Nullable String kmsKeyId;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGeofenceCollectionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("collectionArn") @Nullable String collectionArn,
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("collectionArn") @Nullable String collectionArn,
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.collectionArn = collectionArn;
         this.createTime = createTime;

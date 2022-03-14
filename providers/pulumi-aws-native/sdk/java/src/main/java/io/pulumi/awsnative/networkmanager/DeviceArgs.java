@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.networkmanager.inputs.DeviceLocationArgs;
 import io.pulumi.awsnative.networkmanager.inputs.DeviceTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the device.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the global network.
      * 
      */
-    @InputImport(name="globalNetworkId", required=true)
+    @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
     public Output<String> getGlobalNetworkId() {
@@ -43,7 +43,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The site location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<DeviceLocationArgs> location;
 
     public Output<DeviceLocationArgs> getLocation() {
@@ -54,7 +54,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The device model
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Output<String> model;
 
     public Output<String> getModel() {
@@ -65,7 +65,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The device serial number.
      * 
      */
-    @InputImport(name="serialNumber")
+    @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
 
     public Output<String> getSerialNumber() {
@@ -76,7 +76,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The site ID.
      * 
      */
-    @InputImport(name="siteId")
+    @Import(name="siteId")
       private final @Nullable Output<String> siteId;
 
     public Output<String> getSiteId() {
@@ -87,7 +87,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The tags for the device.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DeviceTagArgs>> tags;
 
     public Output<List<DeviceTagArgs>> getTags() {
@@ -98,7 +98,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The device type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -109,7 +109,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The device vendor.
      * 
      */
-    @InputImport(name="vendor")
+    @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
     public Output<String> getVendor() {

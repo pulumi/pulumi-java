@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReadinessCheckTag {
     private final String key;
     private final List<String> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReadinessCheckTag(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") List<String> value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") List<String> value) {
         this.key = key;
         this.value = value;
     }

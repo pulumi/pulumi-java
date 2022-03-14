@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StackSetDeploymentTargets {
     /**
      * AWS accounts that you want to create stack instances in the specified Region(s) for.
@@ -22,10 +22,10 @@ public final class StackSetDeploymentTargets {
      */
     private final @Nullable List<String> organizationalUnitIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackSetDeploymentTargets(
-        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
-        @OutputCustomType.Parameter("organizationalUnitIds") @Nullable List<String> organizationalUnitIds) {
+        @CustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @CustomType.Parameter("organizationalUnitIds") @Nullable List<String> organizationalUnitIds) {
         this.accounts = accounts;
         this.organizationalUnitIds = organizationalUnitIds;
     }

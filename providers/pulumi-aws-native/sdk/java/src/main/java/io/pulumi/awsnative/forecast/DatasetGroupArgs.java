@@ -6,7 +6,7 @@ package io.pulumi.awsnative.forecast;
 import io.pulumi.awsnative.forecast.enums.DatasetGroupDomain;
 import io.pulumi.awsnative.forecast.inputs.DatasetGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
      * 
      */
-    @InputImport(name="datasetArns")
+    @Import(name="datasetArns")
       private final @Nullable Output<List<String>> datasetArns;
 
     public Output<List<String>> getDatasetArns() {
@@ -32,7 +32,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the dataset group.
      * 
      */
-    @InputImport(name="datasetGroupName")
+    @Import(name="datasetGroupName")
       private final @Nullable Output<String> datasetGroupName;
 
     public Output<String> getDatasetGroupName() {
@@ -43,7 +43,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The domain associated with the dataset group. When you add a dataset to a dataset group, this value and the value specified for the Domain parameter of the CreateDataset operation must match.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<DatasetGroupDomain> domain;
 
     public Output<DatasetGroupDomain> getDomain() {
@@ -54,7 +54,7 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of Application Insights application.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DatasetGroupTagArgs>> tags;
 
     public Output<List<DatasetGroupTagArgs>> getTags() {

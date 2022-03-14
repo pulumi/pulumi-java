@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginShield {
     private final @Nullable Boolean enabled;
     private final @Nullable String originShieldRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOriginShield(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("originShieldRegion") @Nullable String originShieldRegion) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("originShieldRegion") @Nullable String originShieldRegion) {
         this.enabled = enabled;
         this.originShieldRegion = originShieldRegion;
     }

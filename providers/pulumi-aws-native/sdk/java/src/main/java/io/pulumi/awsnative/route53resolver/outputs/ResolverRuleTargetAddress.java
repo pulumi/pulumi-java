@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.route53resolver.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResolverRuleTargetAddress {
     /**
      * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
@@ -22,10 +22,10 @@ public final class ResolverRuleTargetAddress {
      */
     private final @Nullable String port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResolverRuleTargetAddress(
-        @OutputCustomType.Parameter("ip") String ip,
-        @OutputCustomType.Parameter("port") @Nullable String port) {
+        @CustomType.Parameter("ip") String ip,
+        @CustomType.Parameter("port") @Nullable String port) {
         this.ip = ip;
         this.port = port;
     }

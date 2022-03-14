@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * The type of encoding of the logs to be monitored.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<ApplicationLogEncoding> encoding;
 
     public Output<ApplicationLogEncoding> getEncoding() {
@@ -34,7 +34,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * The CloudWatch log group name to be associated to the monitored log.
      * 
      */
-    @InputImport(name="logGroupName")
+    @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
@@ -45,7 +45,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * The path of the logs to be monitored.
      * 
      */
-    @InputImport(name="logPath")
+    @Import(name="logPath")
       private final @Nullable Output<String> logPath;
 
     public Output<String> getLogPath() {
@@ -56,7 +56,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * The log type decides the log patterns against which Application Insights analyzes the log.
      * 
      */
-    @InputImport(name="logType", required=true)
+    @Import(name="logType", required=true)
       private final Output<String> logType;
 
     public Output<String> getLogType() {
@@ -67,7 +67,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the log pattern set.
      * 
      */
-    @InputImport(name="patternSet")
+    @Import(name="patternSet")
       private final @Nullable Output<String> patternSet;
 
     public Output<String> getPatternSet() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class ApplicationS3Location extends io.pulumi.resources.InvokeArgs 
 
     public static final ApplicationS3Location Empty = new ApplicationS3Location();
 
-    @InputImport(name="s3Bucket", required=true)
+    @Import(name="s3Bucket", required=true)
       private final String s3Bucket;
 
     public String getS3Bucket() {
         return this.s3Bucket;
     }
 
-    @InputImport(name="s3Key", required=true)
+    @Import(name="s3Key", required=true)
       private final String s3Key;
 
     public String getS3Key() {

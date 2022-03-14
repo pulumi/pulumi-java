@@ -7,14 +7,14 @@ import io.pulumi.awsnative.lex.enums.BotAliasStatus;
 import io.pulumi.awsnative.lex.outputs.BotAliasConversationLogSettings;
 import io.pulumi.awsnative.lex.outputs.BotAliasLocaleSettingsItem;
 import io.pulumi.awsnative.lex.outputs.SentimentAnalysisSettingsProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBotAliasResult {
     private final @Nullable String arn;
     private final @Nullable String botAliasId;
@@ -30,17 +30,17 @@ public final class GetBotAliasResult {
      */
     private final @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBotAliasResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("botAliasId") @Nullable String botAliasId,
-        @OutputCustomType.Parameter("botAliasLocaleSettings") @Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings,
-        @OutputCustomType.Parameter("botAliasName") @Nullable String botAliasName,
-        @OutputCustomType.Parameter("botAliasStatus") @Nullable BotAliasStatus botAliasStatus,
-        @OutputCustomType.Parameter("botVersion") @Nullable String botVersion,
-        @OutputCustomType.Parameter("conversationLogSettings") @Nullable BotAliasConversationLogSettings conversationLogSettings,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("sentimentAnalysisSettings") @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("botAliasId") @Nullable String botAliasId,
+        @CustomType.Parameter("botAliasLocaleSettings") @Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings,
+        @CustomType.Parameter("botAliasName") @Nullable String botAliasName,
+        @CustomType.Parameter("botAliasStatus") @Nullable BotAliasStatus botAliasStatus,
+        @CustomType.Parameter("botVersion") @Nullable String botVersion,
+        @CustomType.Parameter("conversationLogSettings") @Nullable BotAliasConversationLogSettings conversationLogSettings,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("sentimentAnalysisSettings") @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
         this.arn = arn;
         this.botAliasId = botAliasId;
         this.botAliasLocaleSettings = botAliasLocaleSettings;

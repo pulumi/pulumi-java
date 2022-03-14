@@ -21,7 +21,7 @@ import io.pulumi.awsnative.quicksight.inputs.DataSourceSparkParametersArgs;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceSqlServerParametersArgs;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceTeradataParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -36,119 +36,119 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
 
     public static final DataSourceParametersArgs Empty = new DataSourceParametersArgs();
 
-    @InputImport(name="amazonElasticsearchParameters")
+    @Import(name="amazonElasticsearchParameters")
       private final @Nullable Output<DataSourceAmazonElasticsearchParametersArgs> amazonElasticsearchParameters;
 
     public Output<DataSourceAmazonElasticsearchParametersArgs> getAmazonElasticsearchParameters() {
         return this.amazonElasticsearchParameters == null ? Output.empty() : this.amazonElasticsearchParameters;
     }
 
-    @InputImport(name="amazonOpenSearchParameters")
+    @Import(name="amazonOpenSearchParameters")
       private final @Nullable Output<DataSourceAmazonOpenSearchParametersArgs> amazonOpenSearchParameters;
 
     public Output<DataSourceAmazonOpenSearchParametersArgs> getAmazonOpenSearchParameters() {
         return this.amazonOpenSearchParameters == null ? Output.empty() : this.amazonOpenSearchParameters;
     }
 
-    @InputImport(name="athenaParameters")
+    @Import(name="athenaParameters")
       private final @Nullable Output<DataSourceAthenaParametersArgs> athenaParameters;
 
     public Output<DataSourceAthenaParametersArgs> getAthenaParameters() {
         return this.athenaParameters == null ? Output.empty() : this.athenaParameters;
     }
 
-    @InputImport(name="auroraParameters")
+    @Import(name="auroraParameters")
       private final @Nullable Output<DataSourceAuroraParametersArgs> auroraParameters;
 
     public Output<DataSourceAuroraParametersArgs> getAuroraParameters() {
         return this.auroraParameters == null ? Output.empty() : this.auroraParameters;
     }
 
-    @InputImport(name="auroraPostgreSqlParameters")
+    @Import(name="auroraPostgreSqlParameters")
       private final @Nullable Output<DataSourceAuroraPostgreSqlParametersArgs> auroraPostgreSqlParameters;
 
     public Output<DataSourceAuroraPostgreSqlParametersArgs> getAuroraPostgreSqlParameters() {
         return this.auroraPostgreSqlParameters == null ? Output.empty() : this.auroraPostgreSqlParameters;
     }
 
-    @InputImport(name="mariaDbParameters")
+    @Import(name="mariaDbParameters")
       private final @Nullable Output<DataSourceMariaDbParametersArgs> mariaDbParameters;
 
     public Output<DataSourceMariaDbParametersArgs> getMariaDbParameters() {
         return this.mariaDbParameters == null ? Output.empty() : this.mariaDbParameters;
     }
 
-    @InputImport(name="mySqlParameters")
+    @Import(name="mySqlParameters")
       private final @Nullable Output<DataSourceMySqlParametersArgs> mySqlParameters;
 
     public Output<DataSourceMySqlParametersArgs> getMySqlParameters() {
         return this.mySqlParameters == null ? Output.empty() : this.mySqlParameters;
     }
 
-    @InputImport(name="oracleParameters")
+    @Import(name="oracleParameters")
       private final @Nullable Output<DataSourceOracleParametersArgs> oracleParameters;
 
     public Output<DataSourceOracleParametersArgs> getOracleParameters() {
         return this.oracleParameters == null ? Output.empty() : this.oracleParameters;
     }
 
-    @InputImport(name="postgreSqlParameters")
+    @Import(name="postgreSqlParameters")
       private final @Nullable Output<DataSourcePostgreSqlParametersArgs> postgreSqlParameters;
 
     public Output<DataSourcePostgreSqlParametersArgs> getPostgreSqlParameters() {
         return this.postgreSqlParameters == null ? Output.empty() : this.postgreSqlParameters;
     }
 
-    @InputImport(name="prestoParameters")
+    @Import(name="prestoParameters")
       private final @Nullable Output<DataSourcePrestoParametersArgs> prestoParameters;
 
     public Output<DataSourcePrestoParametersArgs> getPrestoParameters() {
         return this.prestoParameters == null ? Output.empty() : this.prestoParameters;
     }
 
-    @InputImport(name="rdsParameters")
+    @Import(name="rdsParameters")
       private final @Nullable Output<DataSourceRdsParametersArgs> rdsParameters;
 
     public Output<DataSourceRdsParametersArgs> getRdsParameters() {
         return this.rdsParameters == null ? Output.empty() : this.rdsParameters;
     }
 
-    @InputImport(name="redshiftParameters")
+    @Import(name="redshiftParameters")
       private final @Nullable Output<DataSourceRedshiftParametersArgs> redshiftParameters;
 
     public Output<DataSourceRedshiftParametersArgs> getRedshiftParameters() {
         return this.redshiftParameters == null ? Output.empty() : this.redshiftParameters;
     }
 
-    @InputImport(name="s3Parameters")
+    @Import(name="s3Parameters")
       private final @Nullable Output<DataSourceS3ParametersArgs> s3Parameters;
 
     public Output<DataSourceS3ParametersArgs> getS3Parameters() {
         return this.s3Parameters == null ? Output.empty() : this.s3Parameters;
     }
 
-    @InputImport(name="snowflakeParameters")
+    @Import(name="snowflakeParameters")
       private final @Nullable Output<DataSourceSnowflakeParametersArgs> snowflakeParameters;
 
     public Output<DataSourceSnowflakeParametersArgs> getSnowflakeParameters() {
         return this.snowflakeParameters == null ? Output.empty() : this.snowflakeParameters;
     }
 
-    @InputImport(name="sparkParameters")
+    @Import(name="sparkParameters")
       private final @Nullable Output<DataSourceSparkParametersArgs> sparkParameters;
 
     public Output<DataSourceSparkParametersArgs> getSparkParameters() {
         return this.sparkParameters == null ? Output.empty() : this.sparkParameters;
     }
 
-    @InputImport(name="sqlServerParameters")
+    @Import(name="sqlServerParameters")
       private final @Nullable Output<DataSourceSqlServerParametersArgs> sqlServerParameters;
 
     public Output<DataSourceSqlServerParametersArgs> getSqlServerParameters() {
         return this.sqlServerParameters == null ? Output.empty() : this.sqlServerParameters;
     }
 
-    @InputImport(name="teradataParameters")
+    @Import(name="teradataParameters")
       private final @Nullable Output<DataSourceTeradataParametersArgs> teradataParameters;
 
     public Output<DataSourceTeradataParametersArgs> getTeradataParameters() {

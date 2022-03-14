@@ -7,24 +7,24 @@ import io.pulumi.awsnative.databrew.outputs.DatasetDataCatalogInputDefinition;
 import io.pulumi.awsnative.databrew.outputs.DatasetDatabaseInputDefinition;
 import io.pulumi.awsnative.databrew.outputs.DatasetMetadata;
 import io.pulumi.awsnative.databrew.outputs.DatasetS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetInput {
     private final @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition;
     private final @Nullable DatasetDatabaseInputDefinition databaseInputDefinition;
     private final @Nullable DatasetMetadata metadata;
     private final @Nullable DatasetS3Location s3InputDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetInput(
-        @OutputCustomType.Parameter("dataCatalogInputDefinition") @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition,
-        @OutputCustomType.Parameter("databaseInputDefinition") @Nullable DatasetDatabaseInputDefinition databaseInputDefinition,
-        @OutputCustomType.Parameter("metadata") @Nullable DatasetMetadata metadata,
-        @OutputCustomType.Parameter("s3InputDefinition") @Nullable DatasetS3Location s3InputDefinition) {
+        @CustomType.Parameter("dataCatalogInputDefinition") @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition,
+        @CustomType.Parameter("databaseInputDefinition") @Nullable DatasetDatabaseInputDefinition databaseInputDefinition,
+        @CustomType.Parameter("metadata") @Nullable DatasetMetadata metadata,
+        @CustomType.Parameter("s3InputDefinition") @Nullable DatasetS3Location s3InputDefinition) {
         this.dataCatalogInputDefinition = dataCatalogInputDefinition;
         this.databaseInputDefinition = databaseInputDefinition;
         this.metadata = metadata;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotcoredeviceadvisor.outputs;
 
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionDeviceUnderTest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SuiteDefinitionConfigurationProperties {
     private final String devicePermissionRoleArn;
     private final @Nullable List<SuiteDefinitionDeviceUnderTest> devices;
@@ -20,13 +20,13 @@ public final class SuiteDefinitionConfigurationProperties {
     private final String rootGroup;
     private final @Nullable String suiteDefinitionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SuiteDefinitionConfigurationProperties(
-        @OutputCustomType.Parameter("devicePermissionRoleArn") String devicePermissionRoleArn,
-        @OutputCustomType.Parameter("devices") @Nullable List<SuiteDefinitionDeviceUnderTest> devices,
-        @OutputCustomType.Parameter("intendedForQualification") @Nullable Boolean intendedForQualification,
-        @OutputCustomType.Parameter("rootGroup") String rootGroup,
-        @OutputCustomType.Parameter("suiteDefinitionName") @Nullable String suiteDefinitionName) {
+        @CustomType.Parameter("devicePermissionRoleArn") String devicePermissionRoleArn,
+        @CustomType.Parameter("devices") @Nullable List<SuiteDefinitionDeviceUnderTest> devices,
+        @CustomType.Parameter("intendedForQualification") @Nullable Boolean intendedForQualification,
+        @CustomType.Parameter("rootGroup") String rootGroup,
+        @CustomType.Parameter("suiteDefinitionName") @Nullable String suiteDefinitionName) {
         this.devicePermissionRoleArn = devicePermissionRoleArn;
         this.devices = devices;
         this.intendedForQualification = intendedForQualification;

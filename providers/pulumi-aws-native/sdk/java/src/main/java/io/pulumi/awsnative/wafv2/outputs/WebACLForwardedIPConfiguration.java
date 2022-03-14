@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLForwardedIPConfigurationFallbackBehavior;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLForwardedIPConfiguration {
     private final WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
     private final String headerName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLForwardedIPConfiguration(
-        @OutputCustomType.Parameter("fallbackBehavior") WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        @OutputCustomType.Parameter("headerName") String headerName) {
+        @CustomType.Parameter("fallbackBehavior") WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @CustomType.Parameter("headerName") String headerName) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
     }

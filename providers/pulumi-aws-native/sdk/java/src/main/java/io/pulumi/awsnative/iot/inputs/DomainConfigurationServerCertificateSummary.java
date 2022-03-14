@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.DomainConfigurationServerCertificateSummaryServerCertificateStatus;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class DomainConfigurationServerCertificateSummary extends io.pulumi
 
     public static final DomainConfigurationServerCertificateSummary Empty = new DomainConfigurationServerCertificateSummary();
 
-    @InputImport(name="serverCertificateArn")
+    @Import(name="serverCertificateArn")
       private final @Nullable String serverCertificateArn;
 
     public Optional<String> getServerCertificateArn() {
         return this.serverCertificateArn == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateArn);
     }
 
-    @InputImport(name="serverCertificateStatus")
+    @Import(name="serverCertificateStatus")
       private final @Nullable DomainConfigurationServerCertificateSummaryServerCertificateStatus serverCertificateStatus;
 
     public Optional<DomainConfigurationServerCertificateSummaryServerCertificateStatus> getServerCertificateStatus() {
         return this.serverCertificateStatus == null ? Optional.empty() : Optional.ofNullable(this.serverCertificateStatus);
     }
 
-    @InputImport(name="serverCertificateStatusDetail")
+    @Import(name="serverCertificateStatusDetail")
       private final @Nullable String serverCertificateStatusDetail;
 
     public Optional<String> getServerCertificateStatusDetail() {

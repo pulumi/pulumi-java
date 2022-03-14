@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.outputs.ReplicationSetReplicationRegion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReplicationSetResult {
     /**
      * The ARN of the ReplicationSet.
@@ -26,11 +26,11 @@ public final class GetReplicationSetResult {
      */
     private final @Nullable List<ReplicationSetReplicationRegion> regions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReplicationSetResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("deletionProtected") @Nullable Boolean deletionProtected,
-        @OutputCustomType.Parameter("regions") @Nullable List<ReplicationSetReplicationRegion> regions) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("deletionProtected") @Nullable Boolean deletionProtected,
+        @CustomType.Parameter("regions") @Nullable List<ReplicationSetReplicationRegion> regions) {
         this.arn = arn;
         this.deletionProtected = deletionProtected;
         this.regions = regions;

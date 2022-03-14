@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class InstanceAutoSnapshotAddOn extends io.pulumi.resources.InvokeA
      * The daily time when an automatic snapshot will be created.
      * 
      */
-    @InputImport(name="snapshotTimeOfDay")
+    @Import(name="snapshotTimeOfDay")
       private final @Nullable String snapshotTimeOfDay;
 
     public Optional<String> getSnapshotTimeOfDay() {

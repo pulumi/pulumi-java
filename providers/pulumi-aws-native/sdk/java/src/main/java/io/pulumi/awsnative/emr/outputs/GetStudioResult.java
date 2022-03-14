@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.emr.outputs;
 
 import io.pulumi.awsnative.emr.outputs.StudioTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStudioResult {
     /**
      * The Amazon Resource Name (ARN) of the EMR Studio.
@@ -64,18 +64,18 @@ public final class GetStudioResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStudioResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("defaultS3Location") @Nullable String defaultS3Location,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("idpAuthUrl") @Nullable String idpAuthUrl,
-        @OutputCustomType.Parameter("idpRelayStateParameterName") @Nullable String idpRelayStateParameterName,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("studioId") @Nullable String studioId,
-        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
-        @OutputCustomType.Parameter("tags") @Nullable List<StudioTag> tags,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("defaultS3Location") @Nullable String defaultS3Location,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("idpAuthUrl") @Nullable String idpAuthUrl,
+        @CustomType.Parameter("idpRelayStateParameterName") @Nullable String idpRelayStateParameterName,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("studioId") @Nullable String studioId,
+        @CustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @CustomType.Parameter("tags") @Nullable List<StudioTag> tags,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.arn = arn;
         this.defaultS3Location = defaultS3Location;
         this.description = description;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.resiliencehub;
 import io.pulumi.awsnative.resiliencehub.inputs.AppResourceMappingArgs;
 import io.pulumi.awsnative.resiliencehub.inputs.AppTagMapArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * A string containing full ResilienceHub app template body.
      * 
      */
-    @InputImport(name="appTemplateBody", required=true)
+    @Import(name="appTemplateBody", required=true)
       private final Output<String> appTemplateBody;
 
     public Output<String> getAppTemplateBody() {
@@ -32,7 +32,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * App description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the app.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
      */
-    @InputImport(name="resiliencyPolicyArn")
+    @Import(name="resiliencyPolicyArn")
       private final @Nullable Output<String> resiliencyPolicyArn;
 
     public Output<String> getResiliencyPolicyArn() {
@@ -65,14 +65,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * An array of ResourceMapping objects.
      * 
      */
-    @InputImport(name="resourceMappings", required=true)
+    @Import(name="resourceMappings", required=true)
       private final Output<List<AppResourceMappingArgs>> resourceMappings;
 
     public Output<List<AppResourceMappingArgs>> getResourceMappings() {
         return this.resourceMappings;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<AppTagMapArgs> tags;
 
     public Output<AppTagMapArgs> getTags() {

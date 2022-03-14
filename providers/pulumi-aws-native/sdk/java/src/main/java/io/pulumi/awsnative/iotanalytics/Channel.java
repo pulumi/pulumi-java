@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.ChannelRetentionPeriod;
 import io.pulumi.awsnative.iotanalytics.outputs.ChannelStorage;
 import io.pulumi.awsnative.iotanalytics.outputs.ChannelTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,25 +23,25 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iotanalytics:Channel")
 public class Channel extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="channelName", type=String.class, parameters={})
+    @Export(name="channelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> channelName;
 
     public Output</* @Nullable */ String> getChannelName() {
         return this.channelName;
     }
-    @OutputExport(name="channelStorage", type=ChannelStorage.class, parameters={})
+    @Export(name="channelStorage", type=ChannelStorage.class, parameters={})
     private Output</* @Nullable */ ChannelStorage> channelStorage;
 
     public Output</* @Nullable */ ChannelStorage> getChannelStorage() {
         return this.channelStorage;
     }
-    @OutputExport(name="retentionPeriod", type=ChannelRetentionPeriod.class, parameters={})
+    @Export(name="retentionPeriod", type=ChannelRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ ChannelRetentionPeriod> retentionPeriod;
 
     public Output</* @Nullable */ ChannelRetentionPeriod> getRetentionPeriod() {
         return this.retentionPeriod;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ChannelTag.class})
+    @Export(name="tags", type=List.class, parameters={ChannelTag.class})
     private Output</* @Nullable */ List<ChannelTag>> tags;
 
     public Output</* @Nullable */ List<ChannelTag>> getTags() {

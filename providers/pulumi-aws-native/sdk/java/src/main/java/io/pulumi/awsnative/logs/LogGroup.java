@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.logs.LogGroupArgs;
 import io.pulumi.awsnative.logs.outputs.LogGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * The CloudWatch log group ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the CMK to use when encrypting log data.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -52,7 +52,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * The name of the log group. If you don't specify a name, AWS CloudFormation generates a unique ID for the log group.
      * 
      */
-    @OutputExport(name="logGroupName", type=String.class, parameters={})
+    @Export(name="logGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> logGroupName;
 
     /**
@@ -66,7 +66,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * The number of days to retain the log events in the specified log group. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653.
      * 
      */
-    @OutputExport(name="retentionInDays", type=Integer.class, parameters={})
+    @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
@@ -80,7 +80,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LogGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={LogGroupTag.class})
     private Output</* @Nullable */ List<LogGroupTag>> tags;
 
     /**

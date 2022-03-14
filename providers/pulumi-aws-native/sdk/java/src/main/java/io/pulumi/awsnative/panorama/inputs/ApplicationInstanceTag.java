@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.panorama.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ApplicationInstanceTag extends io.pulumi.resources.InvokeArgs
      * A string used to identify this tag
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -27,7 +27,7 @@ public final class ApplicationInstanceTag extends io.pulumi.resources.InvokeArgs
      * A string containing the value for the tag
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

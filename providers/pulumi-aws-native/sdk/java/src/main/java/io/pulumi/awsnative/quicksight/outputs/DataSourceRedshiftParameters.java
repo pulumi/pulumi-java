@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceRedshiftParameters {
     /**
      * <p>Cluster ID. This field can be blank if the <code>Host</code> and <code>Port</code> are
@@ -34,12 +34,12 @@ public final class DataSourceRedshiftParameters {
      */
     private final @Nullable Double port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceRedshiftParameters(
-        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("port") @Nullable Double port) {
+        @CustomType.Parameter("clusterId") @Nullable String clusterId,
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("port") @Nullable Double port) {
         this.clusterId = clusterId;
         this.database = database;
         this.host = host;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appstream;
 import io.pulumi.awsnative.appstream.inputs.ApplicationS3LocationArgs;
 import io.pulumi.awsnative.appstream.inputs.ApplicationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,84 +17,84 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
-    @InputImport(name="appBlockArn", required=true)
+    @Import(name="appBlockArn", required=true)
       private final Output<String> appBlockArn;
 
     public Output<String> getAppBlockArn() {
         return this.appBlockArn;
     }
 
-    @InputImport(name="attributesToDelete")
+    @Import(name="attributesToDelete")
       private final @Nullable Output<List<String>> attributesToDelete;
 
     public Output<List<String>> getAttributesToDelete() {
         return this.attributesToDelete == null ? Output.empty() : this.attributesToDelete;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="iconS3Location", required=true)
+    @Import(name="iconS3Location", required=true)
       private final Output<ApplicationS3LocationArgs> iconS3Location;
 
     public Output<ApplicationS3LocationArgs> getIconS3Location() {
         return this.iconS3Location;
     }
 
-    @InputImport(name="instanceFamilies", required=true)
+    @Import(name="instanceFamilies", required=true)
       private final Output<List<String>> instanceFamilies;
 
     public Output<List<String>> getInstanceFamilies() {
         return this.instanceFamilies;
     }
 
-    @InputImport(name="launchParameters")
+    @Import(name="launchParameters")
       private final @Nullable Output<String> launchParameters;
 
     public Output<String> getLaunchParameters() {
         return this.launchParameters == null ? Output.empty() : this.launchParameters;
     }
 
-    @InputImport(name="launchPath", required=true)
+    @Import(name="launchPath", required=true)
       private final Output<String> launchPath;
 
     public Output<String> getLaunchPath() {
         return this.launchPath;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="platforms", required=true)
+    @Import(name="platforms", required=true)
       private final Output<List<String>> platforms;
 
     public Output<List<String>> getPlatforms() {
         return this.platforms;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
     public Output<List<ApplicationTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {

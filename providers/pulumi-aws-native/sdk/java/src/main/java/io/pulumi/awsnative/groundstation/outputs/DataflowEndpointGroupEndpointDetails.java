@@ -5,20 +5,20 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupDataflowEndpoint;
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupSecurityDetails;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataflowEndpointGroupEndpointDetails {
     private final @Nullable DataflowEndpointGroupDataflowEndpoint endpoint;
     private final @Nullable DataflowEndpointGroupSecurityDetails securityDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataflowEndpointGroupEndpointDetails(
-        @OutputCustomType.Parameter("endpoint") @Nullable DataflowEndpointGroupDataflowEndpoint endpoint,
-        @OutputCustomType.Parameter("securityDetails") @Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
+        @CustomType.Parameter("endpoint") @Nullable DataflowEndpointGroupDataflowEndpoint endpoint,
+        @CustomType.Parameter("securityDetails") @Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
         this.endpoint = endpoint;
         this.securityDetails = securityDetails;
     }

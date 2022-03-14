@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmcontacts;
 
 import io.pulumi.awsnative.ssmcontacts.enums.ContactChannelChannelType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The details that SSM Incident Manager uses when trying to engage the contact channel.
      * 
      */
-    @InputImport(name="channelAddress")
+    @Import(name="channelAddress")
       private final @Nullable Output<String> channelAddress;
 
     public Output<String> getChannelAddress() {
@@ -31,7 +31,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The device name. String of 6 to 50 alphabetical, numeric, dash, and underscore characters.
      * 
      */
-    @InputImport(name="channelName")
+    @Import(name="channelName")
       private final @Nullable Output<String> channelName;
 
     public Output<String> getChannelName() {
@@ -42,7 +42,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Device type, which specify notification channel. Currently supported values: “SMS”, “VOICE”, “EMAIL”, “CHATBOT.
      * 
      */
-    @InputImport(name="channelType")
+    @Import(name="channelType")
       private final @Nullable Output<ContactChannelChannelType> channelType;
 
     public Output<ContactChannelChannelType> getChannelType() {
@@ -53,7 +53,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the contact resource
      * 
      */
-    @InputImport(name="contactId")
+    @Import(name="contactId")
       private final @Nullable Output<String> contactId;
 
     public Output<String> getContactId() {
@@ -64,7 +64,7 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
      * If you want to activate the channel at a later time, you can choose to defer activation. SSM Incident Manager can't engage your contact channel until it has been activated.
      * 
      */
-    @InputImport(name="deferActivation")
+    @Import(name="deferActivation")
       private final @Nullable Output<Boolean> deferActivation;
 
     public Output<Boolean> getDeferActivation() {

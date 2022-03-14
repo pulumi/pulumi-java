@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,21 +17,21 @@ public final class DatasetExcelOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetExcelOptions Empty = new DatasetExcelOptions();
 
-    @InputImport(name="headerRow")
+    @Import(name="headerRow")
       private final @Nullable Boolean headerRow;
 
     public Optional<Boolean> getHeaderRow() {
         return this.headerRow == null ? Optional.empty() : Optional.ofNullable(this.headerRow);
     }
 
-    @InputImport(name="sheetIndexes")
+    @Import(name="sheetIndexes")
       private final @Nullable List<Integer> sheetIndexes;
 
     public List<Integer> getSheetIndexes() {
         return this.sheetIndexes == null ? List.of() : this.sheetIndexes;
     }
 
-    @InputImport(name="sheetNames")
+    @Import(name="sheetNames")
       private final @Nullable List<String> sheetNames;
 
     public List<String> getSheetNames() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplify.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppCustomRuleArgs Empty = new AppCustomRuleArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {
         return this.source;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
         return this.status == null ? Output.empty() : this.status;
     }
 
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {

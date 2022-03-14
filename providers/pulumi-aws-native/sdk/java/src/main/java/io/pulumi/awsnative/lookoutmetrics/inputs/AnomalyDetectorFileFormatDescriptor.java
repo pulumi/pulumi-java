@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorCsvFormatDescriptor;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorJsonFormatDescriptor;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class AnomalyDetectorFileFormatDescriptor extends io.pulumi.resourc
 
     public static final AnomalyDetectorFileFormatDescriptor Empty = new AnomalyDetectorFileFormatDescriptor();
 
-    @InputImport(name="csvFormatDescriptor")
+    @Import(name="csvFormatDescriptor")
       private final @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor;
 
     public Optional<AnomalyDetectorCsvFormatDescriptor> getCsvFormatDescriptor() {
         return this.csvFormatDescriptor == null ? Optional.empty() : Optional.ofNullable(this.csvFormatDescriptor);
     }
 
-    @InputImport(name="jsonFormatDescriptor")
+    @Import(name="jsonFormatDescriptor")
       private final @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor;
 
     public Optional<AnomalyDetectorJsonFormatDescriptor> getJsonFormatDescriptor() {

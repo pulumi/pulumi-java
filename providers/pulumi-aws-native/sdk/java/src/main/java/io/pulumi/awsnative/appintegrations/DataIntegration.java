@@ -8,7 +8,7 @@ import io.pulumi.awsnative.appintegrations.DataIntegrationArgs;
 import io.pulumi.awsnative.appintegrations.outputs.DataIntegrationScheduleConfig;
 import io.pulumi.awsnative.appintegrations.outputs.DataIntegrationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the data integration.
      * 
      */
-    @OutputExport(name="dataIntegrationArn", type=String.class, parameters={})
+    @Export(name="dataIntegrationArn", type=String.class, parameters={})
     private Output<String> dataIntegrationArn;
 
     /**
@@ -38,7 +38,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * The data integration description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * The KMS key of the data integration.
      * 
      */
-    @OutputExport(name="kmsKey", type=String.class, parameters={})
+    @Export(name="kmsKey", type=String.class, parameters={})
     private Output<String> kmsKey;
 
     /**
@@ -66,7 +66,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * The name of the data integration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * The name of the data and how often it should be pulled from the source.
      * 
      */
-    @OutputExport(name="scheduleConfig", type=DataIntegrationScheduleConfig.class, parameters={})
+    @Export(name="scheduleConfig", type=DataIntegrationScheduleConfig.class, parameters={})
     private Output<DataIntegrationScheduleConfig> scheduleConfig;
 
     /**
@@ -94,7 +94,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * The URI of the data source.
      * 
      */
-    @OutputExport(name="sourceURI", type=String.class, parameters={})
+    @Export(name="sourceURI", type=String.class, parameters={})
     private Output<String> sourceURI;
 
     /**
@@ -108,7 +108,7 @@ public class DataIntegration extends io.pulumi.resources.CustomResource {
      * The tags (keys and values) associated with the data integration.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DataIntegrationTag.class})
+    @Export(name="tags", type=List.class, parameters={DataIntegrationTag.class})
     private Output</* @Nullable */ List<DataIntegrationTag>> tags;
 
     /**

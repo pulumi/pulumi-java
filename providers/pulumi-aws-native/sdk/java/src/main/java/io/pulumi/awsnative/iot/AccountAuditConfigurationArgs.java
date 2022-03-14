@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditCheckConfigurationsArgs;
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,21 +20,21 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
      * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
         return this.accountId;
     }
 
-    @InputImport(name="auditCheckConfigurations", required=true)
+    @Import(name="auditCheckConfigurations", required=true)
       private final Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations;
 
     public Output<AccountAuditConfigurationAuditCheckConfigurationsArgs> getAuditCheckConfigurations() {
         return this.auditCheckConfigurations;
     }
 
-    @InputImport(name="auditNotificationTargetConfigurations")
+    @Import(name="auditNotificationTargetConfigurations")
       private final @Nullable Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations;
 
     public Output<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> getAuditNotificationTargetConfigurations() {
@@ -45,7 +45,7 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
      * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies, certificates and other items as required when performing an audit.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

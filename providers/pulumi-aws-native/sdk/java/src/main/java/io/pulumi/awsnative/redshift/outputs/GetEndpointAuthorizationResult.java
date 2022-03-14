@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointAuthorizationResult {
     /**
      * Indicates whether all VPCs in the grantee account are allowed access to the cluster.
@@ -60,17 +60,17 @@ public final class GetEndpointAuthorizationResult {
      */
     private final @Nullable List<String> vpcIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointAuthorizationResult(
-        @OutputCustomType.Parameter("allowedAllVPCs") @Nullable Boolean allowedAllVPCs,
-        @OutputCustomType.Parameter("allowedVPCs") @Nullable List<String> allowedVPCs,
-        @OutputCustomType.Parameter("authorizeTime") @Nullable String authorizeTime,
-        @OutputCustomType.Parameter("clusterStatus") @Nullable String clusterStatus,
-        @OutputCustomType.Parameter("endpointCount") @Nullable Integer endpointCount,
-        @OutputCustomType.Parameter("grantee") @Nullable String grantee,
-        @OutputCustomType.Parameter("grantor") @Nullable String grantor,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("vpcIds") @Nullable List<String> vpcIds) {
+        @CustomType.Parameter("allowedAllVPCs") @Nullable Boolean allowedAllVPCs,
+        @CustomType.Parameter("allowedVPCs") @Nullable List<String> allowedVPCs,
+        @CustomType.Parameter("authorizeTime") @Nullable String authorizeTime,
+        @CustomType.Parameter("clusterStatus") @Nullable String clusterStatus,
+        @CustomType.Parameter("endpointCount") @Nullable Integer endpointCount,
+        @CustomType.Parameter("grantee") @Nullable String grantee,
+        @CustomType.Parameter("grantor") @Nullable String grantor,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("vpcIds") @Nullable List<String> vpcIds) {
         this.allowedAllVPCs = allowedAllVPCs;
         this.allowedVPCs = allowedVPCs;
         this.authorizeTime = authorizeTime;

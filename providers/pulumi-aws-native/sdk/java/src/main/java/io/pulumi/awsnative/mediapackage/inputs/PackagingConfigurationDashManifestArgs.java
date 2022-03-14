@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifest
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestProfile;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,14 +26,14 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
      * Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
      * 
      */
-    @InputImport(name="manifestLayout")
+    @Import(name="manifestLayout")
       private final @Nullable Output<PackagingConfigurationDashManifestManifestLayout> manifestLayout;
 
     public Output<PackagingConfigurationDashManifestManifestLayout> getManifestLayout() {
         return this.manifestLayout == null ? Output.empty() : this.manifestLayout;
     }
 
-    @InputImport(name="manifestName")
+    @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
     public Output<String> getManifestName() {
@@ -44,7 +44,7 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
      * Minimum duration (in seconds) that a player will buffer media before starting the presentation.
      * 
      */
-    @InputImport(name="minBufferTimeSeconds")
+    @Import(name="minBufferTimeSeconds")
       private final @Nullable Output<Integer> minBufferTimeSeconds;
 
     public Output<Integer> getMinBufferTimeSeconds() {
@@ -55,14 +55,14 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
      * The Dynamic Adaptive Streaming over HTTP (DASH) profile type. When set to "HBBTV_1_5", HbbTV 1.5 compliant output is enabled.
      * 
      */
-    @InputImport(name="profile")
+    @Import(name="profile")
       private final @Nullable Output<PackagingConfigurationDashManifestProfile> profile;
 
     public Output<PackagingConfigurationDashManifestProfile> getProfile() {
         return this.profile == null ? Output.empty() : this.profile;
     }
 
-    @InputImport(name="streamSelection")
+    @Import(name="streamSelection")
       private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
     public Output<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {

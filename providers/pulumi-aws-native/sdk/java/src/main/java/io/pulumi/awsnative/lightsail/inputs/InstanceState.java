@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InstanceState extends io.pulumi.resources.InvokeArgs {
      * Status code of the Instance.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Integer code;
 
     public Optional<Integer> getCode() {
@@ -34,7 +34,7 @@ public final class InstanceState extends io.pulumi.resources.InvokeArgs {
      * Status code of the Instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

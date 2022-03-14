@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionStatusCodes;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -12,7 +12,7 @@ public final class DistributionOriginGroupFailoverCriteria extends io.pulumi.res
 
     public static final DistributionOriginGroupFailoverCriteria Empty = new DistributionOriginGroupFailoverCriteria();
 
-    @InputImport(name="statusCodes", required=true)
+    @Import(name="statusCodes", required=true)
       private final DistributionStatusCodes statusCodes;
 
     public DistributionStatusCodes getStatusCodes() {

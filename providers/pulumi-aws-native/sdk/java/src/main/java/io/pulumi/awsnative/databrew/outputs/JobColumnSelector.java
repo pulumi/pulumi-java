@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobColumnSelector {
     private final @Nullable String name;
     private final @Nullable String regex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobColumnSelector(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("regex") @Nullable String regex) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("regex") @Nullable String regex) {
         this.name = name;
         this.regex = regex;
     }

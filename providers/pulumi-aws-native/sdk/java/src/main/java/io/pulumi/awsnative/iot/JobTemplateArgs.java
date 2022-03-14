@@ -10,7 +10,7 @@ import io.pulumi.awsnative.iot.inputs.JobTemplateTagArgs;
 import io.pulumi.awsnative.iot.inputs.PresignedUrlConfigPropertiesArgs;
 import io.pulumi.awsnative.iot.inputs.TimeoutConfigPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The criteria that determine when and how a job abort takes place.
      * 
      */
-    @InputImport(name="abortConfig")
+    @Import(name="abortConfig")
       private final @Nullable Output<AbortConfigPropertiesArgs> abortConfig;
 
     public Output<AbortConfigPropertiesArgs> getAbortConfig() {
@@ -36,7 +36,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the Job Template.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The job document. Required if you don't specify a value for documentSource.
      * 
      */
-    @InputImport(name="document")
+    @Import(name="document")
       private final @Nullable Output<String> document;
 
     public Output<String> getDocument() {
@@ -58,7 +58,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * An S3 link to the job document to use in the template. Required if you don't specify a value for document.
      * 
      */
-    @InputImport(name="documentSource")
+    @Import(name="documentSource")
       private final @Nullable Output<String> documentSource;
 
     public Output<String> getDocumentSource() {
@@ -69,14 +69,14 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Optional for copying a JobTemplate from a pre-existing Job configuration.
      * 
      */
-    @InputImport(name="jobArn")
+    @Import(name="jobArn")
       private final @Nullable Output<String> jobArn;
 
     public Output<String> getJobArn() {
         return this.jobArn == null ? Output.empty() : this.jobArn;
     }
 
-    @InputImport(name="jobExecutionsRetryConfig")
+    @Import(name="jobExecutionsRetryConfig")
       private final @Nullable Output<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig;
 
     public Output<JobExecutionsRetryConfigPropertiesArgs> getJobExecutionsRetryConfig() {
@@ -87,14 +87,14 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Allows you to create a staged rollout of a job.
      * 
      */
-    @InputImport(name="jobExecutionsRolloutConfig")
+    @Import(name="jobExecutionsRolloutConfig")
       private final @Nullable Output<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
 
     public Output<JobExecutionsRolloutConfigPropertiesArgs> getJobExecutionsRolloutConfig() {
         return this.jobExecutionsRolloutConfig == null ? Output.empty() : this.jobExecutionsRolloutConfig;
     }
 
-    @InputImport(name="jobTemplateId", required=true)
+    @Import(name="jobTemplateId", required=true)
       private final Output<String> jobTemplateId;
 
     public Output<String> getJobTemplateId() {
@@ -105,7 +105,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for pre-signed S3 URLs.
      * 
      */
-    @InputImport(name="presignedUrlConfig")
+    @Import(name="presignedUrlConfig")
       private final @Nullable Output<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
 
     public Output<PresignedUrlConfigPropertiesArgs> getPresignedUrlConfig() {
@@ -116,7 +116,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that can be used to manage the JobTemplate.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<JobTemplateTagArgs>> tags;
 
     public Output<List<JobTemplateTagArgs>> getTags() {
@@ -127,7 +127,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the amount of time each device has to finish its execution of the job.
      * 
      */
-    @InputImport(name="timeoutConfig")
+    @Import(name="timeoutConfig")
       private final @Nullable Output<TimeoutConfigPropertiesArgs> timeoutConfig;
 
     public Output<TimeoutConfigPropertiesArgs> getTimeoutConfig() {

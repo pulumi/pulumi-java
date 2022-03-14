@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationHANAPrometheusExporter {
     /**
      * A flag which indicates agreeing to install SAP HANA DB client.
@@ -41,13 +41,13 @@ public final class ApplicationHANAPrometheusExporter {
      */
     private final @Nullable String prometheusPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationHANAPrometheusExporter(
-        @OutputCustomType.Parameter("agreeToInstallHANADBClient") Boolean agreeToInstallHANADBClient,
-        @OutputCustomType.Parameter("hANAPort") String hANAPort,
-        @OutputCustomType.Parameter("hANASID") String hANASID,
-        @OutputCustomType.Parameter("hANASecretName") String hANASecretName,
-        @OutputCustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
+        @CustomType.Parameter("agreeToInstallHANADBClient") Boolean agreeToInstallHANADBClient,
+        @CustomType.Parameter("hANAPort") String hANAPort,
+        @CustomType.Parameter("hANASID") String hANASID,
+        @CustomType.Parameter("hANASecretName") String hANASecretName,
+        @CustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
         this.agreeToInstallHANADBClient = agreeToInstallHANADBClient;
         this.hANAPort = hANAPort;
         this.hANASID = hANASID;

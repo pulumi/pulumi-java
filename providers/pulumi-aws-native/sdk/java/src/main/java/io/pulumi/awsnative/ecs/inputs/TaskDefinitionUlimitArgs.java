@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class TaskDefinitionUlimitArgs extends io.pulumi.resources.Resource
 
     public static final TaskDefinitionUlimitArgs Empty = new TaskDefinitionUlimitArgs();
 
-    @InputImport(name="hardLimit", required=true)
+    @Import(name="hardLimit", required=true)
       private final Output<Integer> hardLimit;
 
     public Output<Integer> getHardLimit() {
         return this.hardLimit;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="softLimit", required=true)
+    @Import(name="softLimit", required=true)
       private final Output<Integer> softLimit;
 
     public Output<Integer> getSoftLimit() {

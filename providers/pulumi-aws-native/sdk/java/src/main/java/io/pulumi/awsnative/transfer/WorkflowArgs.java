@@ -6,7 +6,7 @@ package io.pulumi.awsnative.transfer;
 import io.pulumi.awsnative.transfer.inputs.WorkflowStepArgs;
 import io.pulumi.awsnative.transfer.inputs.WorkflowTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * A textual description for the workflow.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
      * 
      */
-    @InputImport(name="onExceptionSteps")
+    @Import(name="onExceptionSteps")
       private final @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps;
 
     public Output<List<WorkflowStepArgs>> getOnExceptionSteps() {
@@ -43,7 +43,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the details for the steps that are in the specified workflow.
      * 
      */
-    @InputImport(name="steps", required=true)
+    @Import(name="steps", required=true)
       private final Output<List<WorkflowStepArgs>> steps;
 
     public Output<List<WorkflowStepArgs>> getSteps() {
@@ -54,7 +54,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<WorkflowTagArgs>> tags;
 
     public Output<List<WorkflowTagArgs>> getTags() {

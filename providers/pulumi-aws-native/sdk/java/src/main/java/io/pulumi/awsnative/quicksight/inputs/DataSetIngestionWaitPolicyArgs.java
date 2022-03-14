@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
      *  Applicable only when DataSetImportMode mode is set to SPICE and WaitForSpiceIngestion is set to true.</p>
      * 
      */
-    @InputImport(name="ingestionWaitTimeInHours")
+    @Import(name="ingestionWaitTimeInHours")
       private final @Nullable Output<Double> ingestionWaitTimeInHours;
 
     public Output<Double> getIngestionWaitTimeInHours() {
@@ -36,7 +36,7 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
      *   Applicable only when DataSetImportMode mode is set to SPICE.</p>
      * 
      */
-    @InputImport(name="waitForSpiceIngestion")
+    @Import(name="waitForSpiceIngestion")
       private final @Nullable Output<Boolean> waitForSpiceIngestion;
 
     public Output<Boolean> getWaitForSpiceIngestion() {

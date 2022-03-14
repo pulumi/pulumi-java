@@ -12,7 +12,7 @@ import io.pulumi.awsnative.panorama.outputs.ApplicationInstanceManifestOverrides
 import io.pulumi.awsnative.panorama.outputs.ApplicationInstanceManifestPayload;
 import io.pulumi.awsnative.panorama.outputs.ApplicationInstanceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,109 +25,109 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:panorama:ApplicationInstance")
 public class ApplicationInstance extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="applicationInstanceId", type=String.class, parameters={})
+    @Export(name="applicationInstanceId", type=String.class, parameters={})
     private Output<String> applicationInstanceId;
 
     public Output<String> getApplicationInstanceId() {
         return this.applicationInstanceId;
     }
-    @OutputExport(name="applicationInstanceIdToReplace", type=String.class, parameters={})
+    @Export(name="applicationInstanceIdToReplace", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationInstanceIdToReplace;
 
     public Output</* @Nullable */ String> getApplicationInstanceIdToReplace() {
         return this.applicationInstanceIdToReplace;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="createdTime", type=Integer.class, parameters={})
+    @Export(name="createdTime", type=Integer.class, parameters={})
     private Output<Integer> createdTime;
 
     public Output<Integer> getCreatedTime() {
         return this.createdTime;
     }
-    @OutputExport(name="defaultRuntimeContextDevice", type=String.class, parameters={})
+    @Export(name="defaultRuntimeContextDevice", type=String.class, parameters={})
     private Output<String> defaultRuntimeContextDevice;
 
     public Output<String> getDefaultRuntimeContextDevice() {
         return this.defaultRuntimeContextDevice;
     }
-    @OutputExport(name="defaultRuntimeContextDeviceName", type=String.class, parameters={})
+    @Export(name="defaultRuntimeContextDeviceName", type=String.class, parameters={})
     private Output<String> defaultRuntimeContextDeviceName;
 
     public Output<String> getDefaultRuntimeContextDeviceName() {
         return this.defaultRuntimeContextDeviceName;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="deviceId", type=String.class, parameters={})
+    @Export(name="deviceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> deviceId;
 
     public Output</* @Nullable */ String> getDeviceId() {
         return this.deviceId;
     }
-    @OutputExport(name="healthStatus", type=ApplicationInstanceHealthStatus.class, parameters={})
+    @Export(name="healthStatus", type=ApplicationInstanceHealthStatus.class, parameters={})
     private Output<ApplicationInstanceHealthStatus> healthStatus;
 
     public Output<ApplicationInstanceHealthStatus> getHealthStatus() {
         return this.healthStatus;
     }
-    @OutputExport(name="lastUpdatedTime", type=Integer.class, parameters={})
+    @Export(name="lastUpdatedTime", type=Integer.class, parameters={})
     private Output<Integer> lastUpdatedTime;
 
     public Output<Integer> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
-    @OutputExport(name="manifestOverridesPayload", type=ApplicationInstanceManifestOverridesPayload.class, parameters={})
+    @Export(name="manifestOverridesPayload", type=ApplicationInstanceManifestOverridesPayload.class, parameters={})
     private Output</* @Nullable */ ApplicationInstanceManifestOverridesPayload> manifestOverridesPayload;
 
     public Output</* @Nullable */ ApplicationInstanceManifestOverridesPayload> getManifestOverridesPayload() {
         return this.manifestOverridesPayload;
     }
-    @OutputExport(name="manifestPayload", type=ApplicationInstanceManifestPayload.class, parameters={})
+    @Export(name="manifestPayload", type=ApplicationInstanceManifestPayload.class, parameters={})
     private Output<ApplicationInstanceManifestPayload> manifestPayload;
 
     public Output<ApplicationInstanceManifestPayload> getManifestPayload() {
         return this.manifestPayload;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="runtimeRoleArn", type=String.class, parameters={})
+    @Export(name="runtimeRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeRoleArn;
 
     public Output</* @Nullable */ String> getRuntimeRoleArn() {
         return this.runtimeRoleArn;
     }
-    @OutputExport(name="status", type=ApplicationInstanceStatus.class, parameters={})
+    @Export(name="status", type=ApplicationInstanceStatus.class, parameters={})
     private Output<ApplicationInstanceStatus> status;
 
     public Output<ApplicationInstanceStatus> getStatus() {
         return this.status;
     }
-    @OutputExport(name="statusDescription", type=String.class, parameters={})
+    @Export(name="statusDescription", type=String.class, parameters={})
     private Output<String> statusDescription;
 
     public Output<String> getStatusDescription() {
         return this.statusDescription;
     }
-    @OutputExport(name="statusFilter", type=ApplicationInstanceStatusFilter.class, parameters={})
+    @Export(name="statusFilter", type=ApplicationInstanceStatusFilter.class, parameters={})
     private Output</* @Nullable */ ApplicationInstanceStatusFilter> statusFilter;
 
     public Output</* @Nullable */ ApplicationInstanceStatusFilter> getStatusFilter() {
         return this.statusFilter;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ApplicationInstanceTag.class})
+    @Export(name="tags", type=List.class, parameters={ApplicationInstanceTag.class})
     private Output</* @Nullable */ List<ApplicationInstanceTag>> tags;
 
     public Output</* @Nullable */ List<ApplicationInstanceTag>> getTags() {

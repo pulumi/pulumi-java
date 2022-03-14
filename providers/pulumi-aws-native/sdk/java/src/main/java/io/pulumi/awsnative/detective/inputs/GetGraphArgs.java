@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.detective.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGraphArgs extends io.pulumi.resources.InvokeArgs {
      * The Detective graph ARN
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {

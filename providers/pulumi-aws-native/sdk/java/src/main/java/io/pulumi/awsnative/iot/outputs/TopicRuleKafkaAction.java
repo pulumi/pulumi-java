@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleKafkaAction {
     private final Object clientProperties;
     private final String destinationArn;
@@ -18,13 +18,13 @@ public final class TopicRuleKafkaAction {
     private final @Nullable String partition;
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleKafkaAction(
-        @OutputCustomType.Parameter("clientProperties") Object clientProperties,
-        @OutputCustomType.Parameter("destinationArn") String destinationArn,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("partition") @Nullable String partition,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("clientProperties") Object clientProperties,
+        @CustomType.Parameter("destinationArn") String destinationArn,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("partition") @Nullable String partition,
+        @CustomType.Parameter("topic") String topic) {
         this.clientProperties = clientProperties;
         this.destinationArn = destinationArn;
         this.key = key;

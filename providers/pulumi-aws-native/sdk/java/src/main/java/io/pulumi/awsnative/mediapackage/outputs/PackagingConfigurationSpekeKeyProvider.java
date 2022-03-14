@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationSpekeKeyProvider {
     private final String roleArn;
     /**
@@ -22,11 +22,11 @@ public final class PackagingConfigurationSpekeKeyProvider {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationSpekeKeyProvider(
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("systemIds") List<String> systemIds,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("systemIds") List<String> systemIds,
+        @CustomType.Parameter("url") String url) {
         this.roleArn = roleArn;
         this.systemIds = systemIds;
         this.url = url;

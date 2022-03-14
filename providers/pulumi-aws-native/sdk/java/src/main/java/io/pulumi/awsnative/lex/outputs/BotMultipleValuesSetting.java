@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotMultipleValuesSetting {
     private final @Nullable Boolean allowMultipleValues;
 
-    @OutputCustomType.Constructor
-    private BotMultipleValuesSetting(@OutputCustomType.Parameter("allowMultipleValues") @Nullable Boolean allowMultipleValues) {
+    @CustomType.Constructor
+    private BotMultipleValuesSetting(@CustomType.Parameter("allowMultipleValues") @Nullable Boolean allowMultipleValues) {
         this.allowMultipleValues = allowMultipleValues;
     }
 

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.inputs.BucketDeleteMarkerReplication;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationDestination;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationRuleFilter;
 import io.pulumi.awsnative.s3.inputs.BucketSourceSelectionCriteria;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,21 +24,21 @@ public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs 
 
     public static final BucketReplicationRule Empty = new BucketReplicationRule();
 
-    @InputImport(name="deleteMarkerReplication")
+    @Import(name="deleteMarkerReplication")
       private final @Nullable BucketDeleteMarkerReplication deleteMarkerReplication;
 
     public Optional<BucketDeleteMarkerReplication> getDeleteMarkerReplication() {
         return this.deleteMarkerReplication == null ? Optional.empty() : Optional.ofNullable(this.deleteMarkerReplication);
     }
 
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final BucketReplicationDestination destination;
 
     public BucketReplicationDestination getDestination() {
         return this.destination;
     }
 
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable BucketReplicationRuleFilter filter;
 
     public Optional<BucketReplicationRuleFilter> getFilter() {
@@ -49,7 +49,7 @@ public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs 
      * A unique identifier for the rule.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -60,21 +60,21 @@ public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs 
      * An object key name prefix that identifies the object or objects to which the rule applies.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
-    @InputImport(name="sourceSelectionCriteria")
+    @Import(name="sourceSelectionCriteria")
       private final @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria;
 
     public Optional<BucketSourceSelectionCriteria> getSourceSelectionCriteria() {
@@ -85,7 +85,7 @@ public final class BucketReplicationRule extends io.pulumi.resources.InvokeArgs 
      * Specifies whether the rule is enabled.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final BucketReplicationRuleStatus status;
 
     public BucketReplicationRuleStatus getStatus() {

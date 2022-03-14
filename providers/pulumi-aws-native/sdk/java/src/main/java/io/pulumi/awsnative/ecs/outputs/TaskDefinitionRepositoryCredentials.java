@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionRepositoryCredentials {
     private final @Nullable String credentialsParameter;
 
-    @OutputCustomType.Constructor
-    private TaskDefinitionRepositoryCredentials(@OutputCustomType.Parameter("credentialsParameter") @Nullable String credentialsParameter) {
+    @CustomType.Constructor
+    private TaskDefinitionRepositoryCredentials(@CustomType.Parameter("credentialsParameter") @Nullable String credentialsParameter) {
         this.credentialsParameter = credentialsParameter;
     }
 

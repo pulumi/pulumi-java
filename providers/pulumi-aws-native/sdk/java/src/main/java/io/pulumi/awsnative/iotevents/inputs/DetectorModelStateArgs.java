@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnEnterArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnExitArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,21 +21,21 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
 
     public static final DetectorModelStateArgs Empty = new DetectorModelStateArgs();
 
-    @InputImport(name="onEnter")
+    @Import(name="onEnter")
       private final @Nullable Output<DetectorModelOnEnterArgs> onEnter;
 
     public Output<DetectorModelOnEnterArgs> getOnEnter() {
         return this.onEnter == null ? Output.empty() : this.onEnter;
     }
 
-    @InputImport(name="onExit")
+    @Import(name="onExit")
       private final @Nullable Output<DetectorModelOnExitArgs> onExit;
 
     public Output<DetectorModelOnExitArgs> getOnExit() {
         return this.onExit == null ? Output.empty() : this.onExit;
     }
 
-    @InputImport(name="onInput")
+    @Import(name="onInput")
       private final @Nullable Output<DetectorModelOnInputArgs> onInput;
 
     public Output<DetectorModelOnInputArgs> getOnInput() {
@@ -46,7 +46,7 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
      * The name of the state.
      * 
      */
-    @InputImport(name="stateName", required=true)
+    @Import(name="stateName", required=true)
       private final Output<String> stateName;
 
     public Output<String> getStateName() {

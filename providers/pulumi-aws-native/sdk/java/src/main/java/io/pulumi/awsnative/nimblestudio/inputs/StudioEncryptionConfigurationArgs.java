@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioEncryptionConfigurationKeyType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +23,14 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
      * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
      * 
      */
-    @InputImport(name="keyArn")
+    @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;
 
     public Output<String> getKeyArn() {
         return this.keyArn == null ? Output.empty() : this.keyArn;
     }
 
-    @InputImport(name="keyType", required=true)
+    @Import(name="keyType", required=true)
       private final Output<StudioEncryptionConfigurationKeyType> keyType;
 
     public Output<StudioEncryptionConfigurationKeyType> getKeyType() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationTargetContainerRepository;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * Tags that are attached to the container distribution configuration.
      * 
      */
-    @InputImport(name="containerTags")
+    @Import(name="containerTags")
       private final @Nullable List<String> containerTags;
 
     public List<String> getContainerTags() {
@@ -35,7 +35,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * The description of the container distribution configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * The destination repository for the container distribution configuration.
      * 
      */
-    @InputImport(name="targetRepository")
+    @Import(name="targetRepository")
       private final @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
 
     public Optional<DistributionConfigurationTargetContainerRepository> getTargetRepository() {

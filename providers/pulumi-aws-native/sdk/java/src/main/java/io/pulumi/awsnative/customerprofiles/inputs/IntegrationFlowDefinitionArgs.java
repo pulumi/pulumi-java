@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.IntegrationSourceFlowConfigAr
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTriggerConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,42 +18,42 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
 
     public static final IntegrationFlowDefinitionArgs Empty = new IntegrationFlowDefinitionArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="flowName", required=true)
+    @Import(name="flowName", required=true)
       private final Output<String> flowName;
 
     public Output<String> getFlowName() {
         return this.flowName;
     }
 
-    @InputImport(name="kmsArn", required=true)
+    @Import(name="kmsArn", required=true)
       private final Output<String> kmsArn;
 
     public Output<String> getKmsArn() {
         return this.kmsArn;
     }
 
-    @InputImport(name="sourceFlowConfig", required=true)
+    @Import(name="sourceFlowConfig", required=true)
       private final Output<IntegrationSourceFlowConfigArgs> sourceFlowConfig;
 
     public Output<IntegrationSourceFlowConfigArgs> getSourceFlowConfig() {
         return this.sourceFlowConfig;
     }
 
-    @InputImport(name="tasks", required=true)
+    @Import(name="tasks", required=true)
       private final Output<List<IntegrationTaskArgs>> tasks;
 
     public Output<List<IntegrationTaskArgs>> getTasks() {
         return this.tasks;
     }
 
-    @InputImport(name="triggerConfig", required=true)
+    @Import(name="triggerConfig", required=true)
       private final Output<IntegrationTriggerConfigArgs> triggerConfig;
 
     public Output<IntegrationTriggerConfigArgs> getTriggerConfig() {

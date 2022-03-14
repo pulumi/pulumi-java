@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPolicyPortal {
     /**
      * The ID of the portal.
@@ -17,8 +17,8 @@ public final class AccessPolicyPortal {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private AccessPolicyPortal(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private AccessPolicyPortal(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

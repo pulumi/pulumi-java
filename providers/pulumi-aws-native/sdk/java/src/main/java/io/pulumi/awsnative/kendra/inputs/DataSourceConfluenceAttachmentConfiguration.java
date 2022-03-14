@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluenceAttachmentToIndexFieldMapping;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class DataSourceConfluenceAttachmentConfiguration extends io.pulumi
 
     public static final DataSourceConfluenceAttachmentConfiguration Empty = new DataSourceConfluenceAttachmentConfiguration();
 
-    @InputImport(name="attachmentFieldMappings")
+    @Import(name="attachmentFieldMappings")
       private final @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
 
     public List<DataSourceConfluenceAttachmentToIndexFieldMapping> getAttachmentFieldMappings() {
         return this.attachmentFieldMappings == null ? List.of() : this.attachmentFieldMappings;
     }
 
-    @InputImport(name="crawlAttachments")
+    @Import(name="crawlAttachments")
       private final @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> getCrawlAttachments() {

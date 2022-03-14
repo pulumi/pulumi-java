@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainConfigurationAuthorizerConfig {
     private final @Nullable Boolean allowAuthorizerOverride;
     private final @Nullable String defaultAuthorizerName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainConfigurationAuthorizerConfig(
-        @OutputCustomType.Parameter("allowAuthorizerOverride") @Nullable Boolean allowAuthorizerOverride,
-        @OutputCustomType.Parameter("defaultAuthorizerName") @Nullable String defaultAuthorizerName) {
+        @CustomType.Parameter("allowAuthorizerOverride") @Nullable Boolean allowAuthorizerOverride,
+        @CustomType.Parameter("defaultAuthorizerName") @Nullable String defaultAuthorizerName) {
         this.allowAuthorizerOverride = allowAuthorizerOverride;
         this.defaultAuthorizerName = defaultAuthorizerName;
     }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomResponseArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class WebACLBlockActionArgs extends io.pulumi.resources.ResourceArg
 
     public static final WebACLBlockActionArgs Empty = new WebACLBlockActionArgs();
 
-    @InputImport(name="customResponse")
+    @Import(name="customResponse")
       private final @Nullable Output<WebACLCustomResponseArgs> customResponse;
 
     public Output<WebACLCustomResponseArgs> getCustomResponse() {

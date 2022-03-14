@@ -16,7 +16,7 @@ import io.pulumi.awsnative.databrew.inputs.JobSampleArgs;
 import io.pulumi.awsnative.databrew.inputs.JobTagArgs;
 import io.pulumi.awsnative.databrew.inputs.JobValidationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,14 +28,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
-    @InputImport(name="dataCatalogOutputs")
+    @Import(name="dataCatalogOutputs")
       private final @Nullable Output<List<JobDataCatalogOutputArgs>> dataCatalogOutputs;
 
     public Output<List<JobDataCatalogOutputArgs>> getDataCatalogOutputs() {
         return this.dataCatalogOutputs == null ? Output.empty() : this.dataCatalogOutputs;
     }
 
-    @InputImport(name="databaseOutputs")
+    @Import(name="databaseOutputs")
       private final @Nullable Output<List<JobDatabaseOutputArgs>> databaseOutputs;
 
     public Output<List<JobDatabaseOutputArgs>> getDatabaseOutputs() {
@@ -46,7 +46,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Dataset name
      * 
      */
-    @InputImport(name="datasetName")
+    @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
@@ -57,7 +57,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption Key Arn
      * 
      */
-    @InputImport(name="encryptionKeyArn")
+    @Import(name="encryptionKeyArn")
       private final @Nullable Output<String> encryptionKeyArn;
 
     public Output<String> getEncryptionKeyArn() {
@@ -68,7 +68,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption mode
      * 
      */
-    @InputImport(name="encryptionMode")
+    @Import(name="encryptionMode")
       private final @Nullable Output<JobEncryptionMode> encryptionMode;
 
     public Output<JobEncryptionMode> getEncryptionMode() {
@@ -79,7 +79,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Job Sample
      * 
      */
-    @InputImport(name="jobSample")
+    @Import(name="jobSample")
       private final @Nullable Output<JobSampleArgs> jobSample;
 
     public Output<JobSampleArgs> getJobSample() {
@@ -90,7 +90,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Log subscription
      * 
      */
-    @InputImport(name="logSubscription")
+    @Import(name="logSubscription")
       private final @Nullable Output<JobLogSubscription> logSubscription;
 
     public Output<JobLogSubscription> getLogSubscription() {
@@ -101,7 +101,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Max capacity
      * 
      */
-    @InputImport(name="maxCapacity")
+    @Import(name="maxCapacity")
       private final @Nullable Output<Integer> maxCapacity;
 
     public Output<Integer> getMaxCapacity() {
@@ -112,7 +112,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Max retries
      * 
      */
-    @InputImport(name="maxRetries")
+    @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
@@ -123,7 +123,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Job name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -134,14 +134,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Output location
      * 
      */
-    @InputImport(name="outputLocation")
+    @Import(name="outputLocation")
       private final @Nullable Output<JobOutputLocationArgs> outputLocation;
 
     public Output<JobOutputLocationArgs> getOutputLocation() {
         return this.outputLocation == null ? Output.empty() : this.outputLocation;
     }
 
-    @InputImport(name="outputs")
+    @Import(name="outputs")
       private final @Nullable Output<List<JobOutputArgs>> outputs;
 
     public Output<List<JobOutputArgs>> getOutputs() {
@@ -152,7 +152,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Profile Job configuration
      * 
      */
-    @InputImport(name="profileConfiguration")
+    @Import(name="profileConfiguration")
       private final @Nullable Output<JobProfileConfigurationArgs> profileConfiguration;
 
     public Output<JobProfileConfigurationArgs> getProfileConfiguration() {
@@ -163,14 +163,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Project name
      * 
      */
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
         return this.projectName == null ? Output.empty() : this.projectName;
     }
 
-    @InputImport(name="recipe")
+    @Import(name="recipe")
       private final @Nullable Output<JobRecipeArgs> recipe;
 
     public Output<JobRecipeArgs> getRecipe() {
@@ -181,14 +181,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Role arn
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<JobTagArgs>> tags;
 
     public Output<List<JobTagArgs>> getTags() {
@@ -199,7 +199,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -210,7 +210,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Job type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<JobType> type;
 
     public Output<JobType> getType() {
@@ -221,7 +221,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Data quality rules configuration
      * 
      */
-    @InputImport(name="validationConfigurations")
+    @Import(name="validationConfigurations")
       private final @Nullable Output<List<JobValidationConfigurationArgs>> validationConfigurations;
 
     public Output<List<JobValidationConfigurationArgs>> getValidationConfigurations() {

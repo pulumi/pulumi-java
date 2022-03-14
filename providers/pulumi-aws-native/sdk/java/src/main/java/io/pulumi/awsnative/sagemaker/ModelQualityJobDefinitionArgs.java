@@ -12,7 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionNetworkConf
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionStoppingConditionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,49 +23,49 @@ public final class ModelQualityJobDefinitionArgs extends io.pulumi.resources.Res
 
     public static final ModelQualityJobDefinitionArgs Empty = new ModelQualityJobDefinitionArgs();
 
-    @InputImport(name="jobDefinitionName")
+    @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
     public Output<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
     }
 
-    @InputImport(name="jobResources", required=true)
+    @Import(name="jobResources", required=true)
       private final Output<ModelQualityJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Output<ModelQualityJobDefinitionMonitoringResourcesArgs> getJobResources() {
         return this.jobResources;
     }
 
-    @InputImport(name="modelQualityAppSpecification", required=true)
+    @Import(name="modelQualityAppSpecification", required=true)
       private final Output<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> modelQualityAppSpecification;
 
     public Output<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> getModelQualityAppSpecification() {
         return this.modelQualityAppSpecification;
     }
 
-    @InputImport(name="modelQualityBaselineConfig")
+    @Import(name="modelQualityBaselineConfig")
       private final @Nullable Output<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> modelQualityBaselineConfig;
 
     public Output<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> getModelQualityBaselineConfig() {
         return this.modelQualityBaselineConfig == null ? Output.empty() : this.modelQualityBaselineConfig;
     }
 
-    @InputImport(name="modelQualityJobInput", required=true)
+    @Import(name="modelQualityJobInput", required=true)
       private final Output<ModelQualityJobDefinitionModelQualityJobInputArgs> modelQualityJobInput;
 
     public Output<ModelQualityJobDefinitionModelQualityJobInputArgs> getModelQualityJobInput() {
         return this.modelQualityJobInput;
     }
 
-    @InputImport(name="modelQualityJobOutputConfig", required=true)
+    @Import(name="modelQualityJobOutputConfig", required=true)
       private final Output<ModelQualityJobDefinitionMonitoringOutputConfigArgs> modelQualityJobOutputConfig;
 
     public Output<ModelQualityJobDefinitionMonitoringOutputConfigArgs> getModelQualityJobOutputConfig() {
         return this.modelQualityJobOutputConfig;
     }
 
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<ModelQualityJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Output<ModelQualityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
@@ -76,14 +76,14 @@ public final class ModelQualityJobDefinitionArgs extends io.pulumi.resources.Res
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stoppingCondition")
+    @Import(name="stoppingCondition")
       private final @Nullable Output<ModelQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Output<ModelQualityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
@@ -94,7 +94,7 @@ public final class ModelQualityJobDefinitionArgs extends io.pulumi.resources.Res
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ModelQualityJobDefinitionTagArgs>> tags;
 
     public Output<List<ModelQualityJobDefinitionTagArgs>> getTags() {

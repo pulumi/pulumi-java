@@ -5,20 +5,20 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileSAPODataConnectorProfileCredentials {
     private final @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials;
     private final @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileCredentials(
-        @OutputCustomType.Parameter("basicAuthCredentials") @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials,
-        @OutputCustomType.Parameter("oAuthCredentials") @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
+        @CustomType.Parameter("basicAuthCredentials") @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials,
+        @CustomType.Parameter("oAuthCredentials") @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
         this.basicAuthCredentials = basicAuthCredentials;
         this.oAuthCredentials = oAuthCredentials;
     }

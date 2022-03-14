@@ -6,13 +6,13 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupAddress;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupPortRange;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupTCPFlagField;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupMatchAttributes {
     private final @Nullable List<RuleGroupPortRange> destinationPorts;
     private final @Nullable List<RuleGroupAddress> destinations;
@@ -21,14 +21,14 @@ public final class RuleGroupMatchAttributes {
     private final @Nullable List<RuleGroupAddress> sources;
     private final @Nullable List<RuleGroupTCPFlagField> tCPFlags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupMatchAttributes(
-        @OutputCustomType.Parameter("destinationPorts") @Nullable List<RuleGroupPortRange> destinationPorts,
-        @OutputCustomType.Parameter("destinations") @Nullable List<RuleGroupAddress> destinations,
-        @OutputCustomType.Parameter("protocols") @Nullable List<Integer> protocols,
-        @OutputCustomType.Parameter("sourcePorts") @Nullable List<RuleGroupPortRange> sourcePorts,
-        @OutputCustomType.Parameter("sources") @Nullable List<RuleGroupAddress> sources,
-        @OutputCustomType.Parameter("tCPFlags") @Nullable List<RuleGroupTCPFlagField> tCPFlags) {
+        @CustomType.Parameter("destinationPorts") @Nullable List<RuleGroupPortRange> destinationPorts,
+        @CustomType.Parameter("destinations") @Nullable List<RuleGroupAddress> destinations,
+        @CustomType.Parameter("protocols") @Nullable List<Integer> protocols,
+        @CustomType.Parameter("sourcePorts") @Nullable List<RuleGroupPortRange> sourcePorts,
+        @CustomType.Parameter("sources") @Nullable List<RuleGroupAddress> sources,
+        @CustomType.Parameter("tCPFlags") @Nullable List<RuleGroupTCPFlagField> tCPFlags) {
         this.destinationPorts = destinationPorts;
         this.destinations = destinations;
         this.protocols = protocols;

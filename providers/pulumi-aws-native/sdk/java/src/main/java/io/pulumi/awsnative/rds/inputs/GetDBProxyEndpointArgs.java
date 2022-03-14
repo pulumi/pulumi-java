@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rds.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDBProxyEndpointArgs extends io.pulumi.resources.InvokeArgs
      * The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
      * 
      */
-    @InputImport(name="dBProxyEndpointName", required=true)
+    @Import(name="dBProxyEndpointName", required=true)
       private final String dBProxyEndpointName;
 
     public String getDBProxyEndpointName() {

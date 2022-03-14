@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCustomerGatewayAssociationArgs extends io.pulumi.resources
      * The Amazon Resource Name (ARN) of the customer gateway.
      * 
      */
-    @InputImport(name="customerGatewayArn", required=true)
+    @Import(name="customerGatewayArn", required=true)
       private final String customerGatewayArn;
 
     public String getCustomerGatewayArn() {
@@ -27,7 +27,7 @@ public final class GetCustomerGatewayAssociationArgs extends io.pulumi.resources
      * The ID of the global network.
      * 
      */
-    @InputImport(name="globalNetworkId", required=true)
+    @Import(name="globalNetworkId", required=true)
       private final String globalNetworkId;
 
     public String getGlobalNetworkId() {

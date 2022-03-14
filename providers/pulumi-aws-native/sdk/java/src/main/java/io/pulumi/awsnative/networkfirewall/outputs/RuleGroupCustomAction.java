@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupActionDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupCustomAction {
     private final RuleGroupActionDefinition actionDefinition;
     private final String actionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupCustomAction(
-        @OutputCustomType.Parameter("actionDefinition") RuleGroupActionDefinition actionDefinition,
-        @OutputCustomType.Parameter("actionName") String actionName) {
+        @CustomType.Parameter("actionDefinition") RuleGroupActionDefinition actionDefinition,
+        @CustomType.Parameter("actionName") String actionName) {
         this.actionDefinition = actionDefinition;
         this.actionName = actionName;
     }

@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetMemoryGiBPerVCpuRequest {
     private final @Nullable Double max;
     private final @Nullable Double min;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetMemoryGiBPerVCpuRequest(
-        @OutputCustomType.Parameter("max") @Nullable Double max,
-        @OutputCustomType.Parameter("min") @Nullable Double min) {
+        @CustomType.Parameter("max") @Nullable Double max,
+        @CustomType.Parameter("min") @Nullable Double min) {
         this.max = max;
         this.min = min;
     }

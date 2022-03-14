@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationScheduledTriggerPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class IntegrationTriggerPropertiesArgs extends io.pulumi.resources.
 
     public static final IntegrationTriggerPropertiesArgs Empty = new IntegrationTriggerPropertiesArgs();
 
-    @InputImport(name="scheduled")
+    @Import(name="scheduled")
       private final @Nullable Output<IntegrationScheduledTriggerPropertiesArgs> scheduled;
 
     public Output<IntegrationScheduledTriggerPropertiesArgs> getScheduled() {

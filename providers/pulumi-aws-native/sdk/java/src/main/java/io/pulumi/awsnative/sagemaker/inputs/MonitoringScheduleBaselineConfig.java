@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleConstraintsResource;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStatisticsResource;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class MonitoringScheduleBaselineConfig extends io.pulumi.resources.
 
     public static final MonitoringScheduleBaselineConfig Empty = new MonitoringScheduleBaselineConfig();
 
-    @InputImport(name="constraintsResource")
+    @Import(name="constraintsResource")
       private final @Nullable MonitoringScheduleConstraintsResource constraintsResource;
 
     public Optional<MonitoringScheduleConstraintsResource> getConstraintsResource() {
         return this.constraintsResource == null ? Optional.empty() : Optional.ofNullable(this.constraintsResource);
     }
 
-    @InputImport(name="statisticsResource")
+    @Import(name="statisticsResource")
       private final @Nullable MonitoringScheduleStatisticsResource statisticsResource;
 
     public Optional<MonitoringScheduleStatisticsResource> getStatisticsResource() {

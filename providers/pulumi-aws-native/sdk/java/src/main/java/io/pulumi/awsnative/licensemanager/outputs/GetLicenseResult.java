@@ -8,14 +8,14 @@ import io.pulumi.awsnative.licensemanager.outputs.LicenseEntitlement;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseIssuerData;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseMetadata;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseValidityDateFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLicenseResult {
     /**
      * Beneficiary of the license.
@@ -58,20 +58,20 @@ public final class GetLicenseResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLicenseResult(
-        @OutputCustomType.Parameter("beneficiary") @Nullable String beneficiary,
-        @OutputCustomType.Parameter("consumptionConfiguration") @Nullable LicenseConsumptionConfiguration consumptionConfiguration,
-        @OutputCustomType.Parameter("entitlements") @Nullable List<LicenseEntitlement> entitlements,
-        @OutputCustomType.Parameter("homeRegion") @Nullable String homeRegion,
-        @OutputCustomType.Parameter("issuer") @Nullable LicenseIssuerData issuer,
-        @OutputCustomType.Parameter("licenseArn") @Nullable String licenseArn,
-        @OutputCustomType.Parameter("licenseMetadata") @Nullable List<LicenseMetadata> licenseMetadata,
-        @OutputCustomType.Parameter("licenseName") @Nullable String licenseName,
-        @OutputCustomType.Parameter("productName") @Nullable String productName,
-        @OutputCustomType.Parameter("productSKU") @Nullable String productSKU,
-        @OutputCustomType.Parameter("validity") @Nullable LicenseValidityDateFormat validity,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("beneficiary") @Nullable String beneficiary,
+        @CustomType.Parameter("consumptionConfiguration") @Nullable LicenseConsumptionConfiguration consumptionConfiguration,
+        @CustomType.Parameter("entitlements") @Nullable List<LicenseEntitlement> entitlements,
+        @CustomType.Parameter("homeRegion") @Nullable String homeRegion,
+        @CustomType.Parameter("issuer") @Nullable LicenseIssuerData issuer,
+        @CustomType.Parameter("licenseArn") @Nullable String licenseArn,
+        @CustomType.Parameter("licenseMetadata") @Nullable List<LicenseMetadata> licenseMetadata,
+        @CustomType.Parameter("licenseName") @Nullable String licenseName,
+        @CustomType.Parameter("productName") @Nullable String productName,
+        @CustomType.Parameter("productSKU") @Nullable String productSKU,
+        @CustomType.Parameter("validity") @Nullable LicenseValidityDateFormat validity,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.beneficiary = beneficiary;
         this.consumptionConfiguration = consumptionConfiguration;
         this.entitlements = entitlements;

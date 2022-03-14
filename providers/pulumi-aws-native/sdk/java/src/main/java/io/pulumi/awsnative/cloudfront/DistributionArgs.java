@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionArgs Empty = new DistributionArgs();
 
-    @InputImport(name="distributionConfig", required=true)
+    @Import(name="distributionConfig", required=true)
       private final Output<DistributionConfigArgs> distributionConfig;
 
     public Output<DistributionConfigArgs> getDistributionConfig() {
         return this.distributionConfig;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DistributionTagArgs>> tags;
 
     public Output<List<DistributionTagArgs>> getTags() {

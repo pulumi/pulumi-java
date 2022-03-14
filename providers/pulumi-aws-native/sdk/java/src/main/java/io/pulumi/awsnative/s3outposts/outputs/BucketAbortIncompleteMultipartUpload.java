@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.s3outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketAbortIncompleteMultipartUpload {
     /**
      * Specifies the number of days after which Amazon S3Outposts aborts an incomplete multipart upload.
@@ -15,8 +15,8 @@ public final class BucketAbortIncompleteMultipartUpload {
      */
     private final Integer daysAfterInitiation;
 
-    @OutputCustomType.Constructor
-    private BucketAbortIncompleteMultipartUpload(@OutputCustomType.Parameter("daysAfterInitiation") Integer daysAfterInitiation) {
+    @CustomType.Constructor
+    private BucketAbortIncompleteMultipartUpload(@CustomType.Parameter("daysAfterInitiation") Integer daysAfterInitiation) {
         this.daysAfterInitiation = daysAfterInitiation;
     }
 

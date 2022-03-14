@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobDatabaseTableOutputOptions {
     private final String tableName;
     private final @Nullable JobS3Location tempDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobDatabaseTableOutputOptions(
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("tempDirectory") @Nullable JobS3Location tempDirectory) {
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("tempDirectory") @Nullable JobS3Location tempDirectory) {
         this.tableName = tableName;
         this.tempDirectory = tempDirectory;
     }

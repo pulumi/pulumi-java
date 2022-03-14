@@ -7,7 +7,7 @@ import io.pulumi.awsnative.evidently.outputs.ExperimentMetricGoalObject;
 import io.pulumi.awsnative.evidently.outputs.ExperimentOnlineAbConfigObject;
 import io.pulumi.awsnative.evidently.outputs.ExperimentTag;
 import io.pulumi.awsnative.evidently.outputs.ExperimentTreatmentObject;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExperimentResult {
     private final @Nullable String arn;
     private final @Nullable String description;
@@ -30,16 +30,16 @@ public final class GetExperimentResult {
     private final @Nullable List<ExperimentTag> tags;
     private final @Nullable List<ExperimentTreatmentObject> treatments;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExperimentResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("metricGoals") @Nullable List<ExperimentMetricGoalObject> metricGoals,
-        @OutputCustomType.Parameter("onlineAbConfig") @Nullable ExperimentOnlineAbConfigObject onlineAbConfig,
-        @OutputCustomType.Parameter("randomizationSalt") @Nullable String randomizationSalt,
-        @OutputCustomType.Parameter("samplingRate") @Nullable Integer samplingRate,
-        @OutputCustomType.Parameter("tags") @Nullable List<ExperimentTag> tags,
-        @OutputCustomType.Parameter("treatments") @Nullable List<ExperimentTreatmentObject> treatments) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("metricGoals") @Nullable List<ExperimentMetricGoalObject> metricGoals,
+        @CustomType.Parameter("onlineAbConfig") @Nullable ExperimentOnlineAbConfigObject onlineAbConfig,
+        @CustomType.Parameter("randomizationSalt") @Nullable String randomizationSalt,
+        @CustomType.Parameter("samplingRate") @Nullable Integer samplingRate,
+        @CustomType.Parameter("tags") @Nullable List<ExperimentTag> tags,
+        @CustomType.Parameter("treatments") @Nullable List<ExperimentTreatmentObject> treatments) {
         this.arn = arn;
         this.description = description;
         this.metricGoals = metricGoals;

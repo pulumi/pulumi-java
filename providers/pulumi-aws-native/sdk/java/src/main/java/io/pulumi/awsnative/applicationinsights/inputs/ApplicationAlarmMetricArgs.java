@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
      * The name of the metric to be monitored for the component.
      * 
      */
-    @InputImport(name="alarmMetricName", required=true)
+    @Import(name="alarmMetricName", required=true)
       private final Output<String> alarmMetricName;
 
     public Output<String> getAlarmMetricName() {

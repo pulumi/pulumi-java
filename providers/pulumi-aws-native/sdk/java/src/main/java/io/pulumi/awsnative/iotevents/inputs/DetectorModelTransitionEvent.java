@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAction;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DetectorModelTransitionEvent extends io.pulumi.resources.Invo
      * The actions to be performed.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable List<DetectorModelAction> actions;
 
     public List<DetectorModelAction> getActions() {
@@ -35,7 +35,7 @@ public final class DetectorModelTransitionEvent extends io.pulumi.resources.Invo
      * A Boolean expression that when `TRUE` causes the `actions` to be performed and the `nextState` to be entered.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final String condition;
 
     public String getCondition() {
@@ -46,7 +46,7 @@ public final class DetectorModelTransitionEvent extends io.pulumi.resources.Invo
      * The name of the event.
      * 
      */
-    @InputImport(name="eventName", required=true)
+    @Import(name="eventName", required=true)
       private final String eventName;
 
     public String getEventName() {
@@ -57,7 +57,7 @@ public final class DetectorModelTransitionEvent extends io.pulumi.resources.Invo
      * The next state to enter.
      * 
      */
-    @InputImport(name="nextState", required=true)
+    @Import(name="nextState", required=true)
       private final String nextState;
 
     public String getNextState() {

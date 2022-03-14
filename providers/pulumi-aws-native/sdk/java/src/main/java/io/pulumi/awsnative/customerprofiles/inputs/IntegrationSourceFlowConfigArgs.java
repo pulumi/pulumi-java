@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.enums.IntegrationConnectorType;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationIncrementalPullConfigArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationSourceConnectorPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,28 +17,28 @@ public final class IntegrationSourceFlowConfigArgs extends io.pulumi.resources.R
 
     public static final IntegrationSourceFlowConfigArgs Empty = new IntegrationSourceFlowConfigArgs();
 
-    @InputImport(name="connectorProfileName")
+    @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
 
     public Output<String> getConnectorProfileName() {
         return this.connectorProfileName == null ? Output.empty() : this.connectorProfileName;
     }
 
-    @InputImport(name="connectorType", required=true)
+    @Import(name="connectorType", required=true)
       private final Output<IntegrationConnectorType> connectorType;
 
     public Output<IntegrationConnectorType> getConnectorType() {
         return this.connectorType;
     }
 
-    @InputImport(name="incrementalPullConfig")
+    @Import(name="incrementalPullConfig")
       private final @Nullable Output<IntegrationIncrementalPullConfigArgs> incrementalPullConfig;
 
     public Output<IntegrationIncrementalPullConfigArgs> getIncrementalPullConfig() {
         return this.incrementalPullConfig == null ? Output.empty() : this.incrementalPullConfig;
     }
 
-    @InputImport(name="sourceConnectorProperties", required=true)
+    @Import(name="sourceConnectorProperties", required=true)
       private final Output<IntegrationSourceConnectorPropertiesArgs> sourceConnectorProperties;
 
     public Output<IntegrationSourceConnectorPropertiesArgs> getSourceConnectorProperties() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.DomainResourceSpecInstanceType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainResourceSpec {
     /**
      * The instance type that the image version runs on.
@@ -28,11 +28,11 @@ public final class DomainResourceSpec {
      */
     private final @Nullable String sageMakerImageVersionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainResourceSpec(
-        @OutputCustomType.Parameter("instanceType") @Nullable DomainResourceSpecInstanceType instanceType,
-        @OutputCustomType.Parameter("sageMakerImageArn") @Nullable String sageMakerImageArn,
-        @OutputCustomType.Parameter("sageMakerImageVersionArn") @Nullable String sageMakerImageVersionArn) {
+        @CustomType.Parameter("instanceType") @Nullable DomainResourceSpecInstanceType instanceType,
+        @CustomType.Parameter("sageMakerImageArn") @Nullable String sageMakerImageArn,
+        @CustomType.Parameter("sageMakerImageVersionArn") @Nullable String sageMakerImageVersionArn) {
         this.instanceType = instanceType;
         this.sageMakerImageArn = sageMakerImageArn;
         this.sageMakerImageVersionArn = sageMakerImageVersionArn;

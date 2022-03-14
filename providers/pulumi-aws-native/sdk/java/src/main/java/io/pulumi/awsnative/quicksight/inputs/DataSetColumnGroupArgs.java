@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DataSetGeoSpatialColumnGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class DataSetColumnGroupArgs extends io.pulumi.resources.ResourceAr
 
     public static final DataSetColumnGroupArgs Empty = new DataSetColumnGroupArgs();
 
-    @InputImport(name="geoSpatialColumnGroup")
+    @Import(name="geoSpatialColumnGroup")
       private final @Nullable Output<DataSetGeoSpatialColumnGroupArgs> geoSpatialColumnGroup;
 
     public Output<DataSetGeoSpatialColumnGroupArgs> getGeoSpatialColumnGroup() {

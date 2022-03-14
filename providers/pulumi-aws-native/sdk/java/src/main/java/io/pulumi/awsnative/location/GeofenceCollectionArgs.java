@@ -5,7 +5,7 @@ package io.pulumi.awsnative.location;
 
 import io.pulumi.awsnative.location.enums.GeofenceCollectionPricingPlan;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,35 +15,35 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
 
     public static final GeofenceCollectionArgs Empty = new GeofenceCollectionArgs();
 
-    @InputImport(name="collectionName", required=true)
+    @Import(name="collectionName", required=true)
       private final Output<String> collectionName;
 
     public Output<String> getCollectionName() {
         return this.collectionName;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
-    @InputImport(name="pricingPlan")
+    @Import(name="pricingPlan")
       private final @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan;
 
     public Output<GeofenceCollectionPricingPlan> getPricingPlan() {
         return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
     }
 
-    @InputImport(name="pricingPlanDataSource")
+    @Import(name="pricingPlanDataSource")
       private final @Nullable Output<String> pricingPlanDataSource;
 
     public Output<String> getPricingPlanDataSource() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.databrew.ScheduleArgs;
 import io.pulumi.awsnative.databrew.outputs.ScheduleTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Schedule cron
      * 
      */
-    @OutputExport(name="cronExpression", type=String.class, parameters={})
+    @Export(name="cronExpression", type=String.class, parameters={})
     private Output<String> cronExpression;
 
     /**
@@ -35,7 +35,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
     public Output<String> getCronExpression() {
         return this.cronExpression;
     }
-    @OutputExport(name="jobNames", type=List.class, parameters={String.class})
+    @Export(name="jobNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> jobNames;
 
     public Output</* @Nullable */ List<String>> getJobNames() {
@@ -45,7 +45,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Schedule Name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -55,7 +55,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ScheduleTag.class})
+    @Export(name="tags", type=List.class, parameters={ScheduleTag.class})
     private Output</* @Nullable */ List<ScheduleTag>> tags;
 
     public Output</* @Nullable */ List<ScheduleTag>> getTags() {

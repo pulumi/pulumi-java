@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelBiasJobDefinitionClusterConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelBiasJobDefinitionMonitoringResources {
     private final ModelBiasJobDefinitionClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor
-    private ModelBiasJobDefinitionMonitoringResources(@OutputCustomType.Parameter("clusterConfig") ModelBiasJobDefinitionClusterConfig clusterConfig) {
+    @CustomType.Constructor
+    private ModelBiasJobDefinitionMonitoringResources(@CustomType.Parameter("clusterConfig") ModelBiasJobDefinitionClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 

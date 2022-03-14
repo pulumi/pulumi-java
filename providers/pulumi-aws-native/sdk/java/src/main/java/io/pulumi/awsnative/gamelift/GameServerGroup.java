@@ -13,7 +13,7 @@ import io.pulumi.awsnative.gamelift.outputs.GameServerGroupInstanceDefinition;
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupLaunchTemplate;
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -30,7 +30,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
      * 
      */
-    @OutputExport(name="autoScalingGroupArn", type=String.class, parameters={})
+    @Export(name="autoScalingGroupArn", type=String.class, parameters={})
     private Output<String> autoScalingGroupArn;
 
     /**
@@ -44,7 +44,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
      * 
      */
-    @OutputExport(name="autoScalingPolicy", type=GameServerGroupAutoScalingPolicy.class, parameters={})
+    @Export(name="autoScalingPolicy", type=GameServerGroupAutoScalingPolicy.class, parameters={})
     private Output</* @Nullable */ GameServerGroupAutoScalingPolicy> autoScalingPolicy;
 
     /**
@@ -58,7 +58,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
      * 
      */
-    @OutputExport(name="balancingStrategy", type=GameServerGroupBalancingStrategy.class, parameters={})
+    @Export(name="balancingStrategy", type=GameServerGroupBalancingStrategy.class, parameters={})
     private Output</* @Nullable */ GameServerGroupBalancingStrategy> balancingStrategy;
 
     /**
@@ -72,7 +72,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * The type of delete to perform.
      * 
      */
-    @OutputExport(name="deleteOption", type=GameServerGroupDeleteOption.class, parameters={})
+    @Export(name="deleteOption", type=GameServerGroupDeleteOption.class, parameters={})
     private Output</* @Nullable */ GameServerGroupDeleteOption> deleteOption;
 
     /**
@@ -86,7 +86,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * A generated unique ID for the game server group.
      * 
      */
-    @OutputExport(name="gameServerGroupArn", type=String.class, parameters={})
+    @Export(name="gameServerGroupArn", type=String.class, parameters={})
     private Output<String> gameServerGroupArn;
 
     /**
@@ -100,7 +100,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * An identifier for the new game server group.
      * 
      */
-    @OutputExport(name="gameServerGroupName", type=String.class, parameters={})
+    @Export(name="gameServerGroupName", type=String.class, parameters={})
     private Output<String> gameServerGroupName;
 
     /**
@@ -114,7 +114,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * A flag that indicates whether instances in the game server group are protected from early termination.
      * 
      */
-    @OutputExport(name="gameServerProtectionPolicy", type=GameServerGroupGameServerProtectionPolicy.class, parameters={})
+    @Export(name="gameServerProtectionPolicy", type=GameServerGroupGameServerProtectionPolicy.class, parameters={})
     private Output</* @Nullable */ GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
 
     /**
@@ -128,7 +128,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * A set of EC2 instance types to use when creating instances in the group.
      * 
      */
-    @OutputExport(name="instanceDefinitions", type=List.class, parameters={GameServerGroupInstanceDefinition.class})
+    @Export(name="instanceDefinitions", type=List.class, parameters={GameServerGroupInstanceDefinition.class})
     private Output<List<GameServerGroupInstanceDefinition>> instanceDefinitions;
 
     /**
@@ -142,7 +142,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
      * 
      */
-    @OutputExport(name="launchTemplate", type=GameServerGroupLaunchTemplate.class, parameters={})
+    @Export(name="launchTemplate", type=GameServerGroupLaunchTemplate.class, parameters={})
     private Output<GameServerGroupLaunchTemplate> launchTemplate;
 
     /**
@@ -156,7 +156,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * The maximum number of instances allowed in the EC2 Auto Scaling group.
      * 
      */
-    @OutputExport(name="maxSize", type=Double.class, parameters={})
+    @Export(name="maxSize", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxSize;
 
     /**
@@ -170,7 +170,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * The minimum number of instances allowed in the EC2 Auto Scaling group.
      * 
      */
-    @OutputExport(name="minSize", type=Double.class, parameters={})
+    @Export(name="minSize", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minSize;
 
     /**
@@ -184,7 +184,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -198,7 +198,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * A list of labels to assign to the new game server group resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={GameServerGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={GameServerGroupTag.class})
     private Output</* @Nullable */ List<GameServerGroupTag>> tags;
 
     /**
@@ -212,7 +212,7 @@ public class GameServerGroup extends io.pulumi.resources.CustomResource {
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
      * 
      */
-    @OutputExport(name="vpcSubnets", type=List.class, parameters={String.class})
+    @Export(name="vpcSubnets", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcSubnets;
 
     /**

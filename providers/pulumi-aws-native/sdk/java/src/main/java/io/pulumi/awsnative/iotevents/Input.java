@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotevents.InputArgs;
 import io.pulumi.awsnative.iotevents.outputs.InputDefinition;
 import io.pulumi.awsnative.iotevents.outputs.InputTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iotevents:Input")
 public class Input extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="inputDefinition", type=InputDefinition.class, parameters={})
+    @Export(name="inputDefinition", type=InputDefinition.class, parameters={})
     private Output<InputDefinition> inputDefinition;
 
     public Output<InputDefinition> getInputDefinition() {
@@ -32,7 +32,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * A brief description of the input.
      * 
      */
-    @OutputExport(name="inputDescription", type=String.class, parameters={})
+    @Export(name="inputDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputDescription;
 
     /**
@@ -46,7 +46,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * The name of the input.
      * 
      */
-    @OutputExport(name="inputName", type=String.class, parameters={})
+    @Export(name="inputName", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputName;
 
     /**
@@ -62,7 +62,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={InputTag.class})
+    @Export(name="tags", type=List.class, parameters={InputTag.class})
     private Output</* @Nullable */ List<InputTag>> tags;
 
     /**

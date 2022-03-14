@@ -8,14 +8,14 @@ import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationRobotSoftwareS
 import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationSimulationSoftwareSuite;
 import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationSourceConfig;
 import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationTags;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSimulationApplicationResult {
     private final @Nullable String arn;
     /**
@@ -50,16 +50,16 @@ public final class GetSimulationApplicationResult {
     private final @Nullable List<SimulationApplicationSourceConfig> sources;
     private final @Nullable SimulationApplicationTags tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSimulationApplicationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("currentRevisionId") @Nullable String currentRevisionId,
-        @OutputCustomType.Parameter("environment") @Nullable String environment,
-        @OutputCustomType.Parameter("renderingEngine") @Nullable SimulationApplicationRenderingEngine renderingEngine,
-        @OutputCustomType.Parameter("robotSoftwareSuite") @Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite,
-        @OutputCustomType.Parameter("simulationSoftwareSuite") @Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite,
-        @OutputCustomType.Parameter("sources") @Nullable List<SimulationApplicationSourceConfig> sources,
-        @OutputCustomType.Parameter("tags") @Nullable SimulationApplicationTags tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("currentRevisionId") @Nullable String currentRevisionId,
+        @CustomType.Parameter("environment") @Nullable String environment,
+        @CustomType.Parameter("renderingEngine") @Nullable SimulationApplicationRenderingEngine renderingEngine,
+        @CustomType.Parameter("robotSoftwareSuite") @Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite,
+        @CustomType.Parameter("simulationSoftwareSuite") @Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite,
+        @CustomType.Parameter("sources") @Nullable List<SimulationApplicationSourceConfig> sources,
+        @CustomType.Parameter("tags") @Nullable SimulationApplicationTags tags) {
         this.arn = arn;
         this.currentRevisionId = currentRevisionId;
         this.environment = environment;

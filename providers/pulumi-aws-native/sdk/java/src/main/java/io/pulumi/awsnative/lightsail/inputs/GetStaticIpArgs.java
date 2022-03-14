@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetStaticIpArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the static IP address.
      * 
      */
-    @InputImport(name="staticIpName", required=true)
+    @Import(name="staticIpName", required=true)
       private final String staticIpName;
 
     public String getStaticIpName() {

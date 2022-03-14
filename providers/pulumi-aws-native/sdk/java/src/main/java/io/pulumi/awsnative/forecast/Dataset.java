@@ -11,7 +11,7 @@ import io.pulumi.awsnative.forecast.outputs.EncryptionConfigProperties;
 import io.pulumi.awsnative.forecast.outputs.SchemaProperties;
 import io.pulumi.awsnative.forecast.outputs.TagsItemProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:forecast:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
      * 
      */
-    @OutputExport(name="dataFrequency", type=String.class, parameters={})
+    @Export(name="dataFrequency", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataFrequency;
 
     /**
@@ -47,7 +47,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * A name for the dataset
      * 
      */
-    @OutputExport(name="datasetName", type=String.class, parameters={})
+    @Export(name="datasetName", type=String.class, parameters={})
     private Output<String> datasetName;
 
     /**
@@ -61,7 +61,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The dataset type
      * 
      */
-    @OutputExport(name="datasetType", type=DatasetType.class, parameters={})
+    @Export(name="datasetType", type=DatasetType.class, parameters={})
     private Output<DatasetType> datasetType;
 
     /**
@@ -75,7 +75,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The domain associated with the dataset
      * 
      */
-    @OutputExport(name="domain", type=DatasetDomain.class, parameters={})
+    @Export(name="domain", type=DatasetDomain.class, parameters={})
     private Output<DatasetDomain> domain;
 
     /**
@@ -85,19 +85,19 @@ public class Dataset extends io.pulumi.resources.CustomResource {
     public Output<DatasetDomain> getDomain() {
         return this.domain;
     }
-    @OutputExport(name="encryptionConfig", type=EncryptionConfigProperties.class, parameters={})
+    @Export(name="encryptionConfig", type=EncryptionConfigProperties.class, parameters={})
     private Output</* @Nullable */ EncryptionConfigProperties> encryptionConfig;
 
     public Output</* @Nullable */ EncryptionConfigProperties> getEncryptionConfig() {
         return this.encryptionConfig;
     }
-    @OutputExport(name="schema", type=SchemaProperties.class, parameters={})
+    @Export(name="schema", type=SchemaProperties.class, parameters={})
     private Output<SchemaProperties> schema;
 
     public Output<SchemaProperties> getSchema() {
         return this.schema;
     }
-    @OutputExport(name="tags", type=List.class, parameters={TagsItemProperties.class})
+    @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
     public Output</* @Nullable */ List<TagsItemProperties>> getTags() {

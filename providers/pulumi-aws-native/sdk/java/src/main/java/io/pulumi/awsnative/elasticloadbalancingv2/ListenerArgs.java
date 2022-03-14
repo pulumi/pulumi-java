@@ -6,7 +6,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerActionArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerCertificateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,49 +18,49 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ListenerArgs Empty = new ListenerArgs();
 
-    @InputImport(name="alpnPolicy")
+    @Import(name="alpnPolicy")
       private final @Nullable Output<List<String>> alpnPolicy;
 
     public Output<List<String>> getAlpnPolicy() {
         return this.alpnPolicy == null ? Output.empty() : this.alpnPolicy;
     }
 
-    @InputImport(name="certificates")
+    @Import(name="certificates")
       private final @Nullable Output<List<ListenerCertificateArgs>> certificates;
 
     public Output<List<ListenerCertificateArgs>> getCertificates() {
         return this.certificates == null ? Output.empty() : this.certificates;
     }
 
-    @InputImport(name="defaultActions", required=true)
+    @Import(name="defaultActions", required=true)
       private final Output<List<ListenerActionArgs>> defaultActions;
 
     public Output<List<ListenerActionArgs>> getDefaultActions() {
         return this.defaultActions;
     }
 
-    @InputImport(name="loadBalancerArn", required=true)
+    @Import(name="loadBalancerArn", required=true)
       private final Output<String> loadBalancerArn;
 
     public Output<String> getLoadBalancerArn() {
         return this.loadBalancerArn;
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
         return this.protocol == null ? Output.empty() : this.protocol;
     }
 
-    @InputImport(name="sslPolicy")
+    @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
     public Output<String> getSslPolicy() {

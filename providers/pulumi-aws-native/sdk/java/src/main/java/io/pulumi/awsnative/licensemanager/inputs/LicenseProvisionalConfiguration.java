@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class LicenseProvisionalConfiguration extends io.pulumi.resources.I
 
     public static final LicenseProvisionalConfiguration Empty = new LicenseProvisionalConfiguration();
 
-    @InputImport(name="maxTimeToLiveInMinutes", required=true)
+    @Import(name="maxTimeToLiveInMinutes", required=true)
       private final Integer maxTimeToLiveInMinutes;
 
     public Integer getMaxTimeToLiveInMinutes() {

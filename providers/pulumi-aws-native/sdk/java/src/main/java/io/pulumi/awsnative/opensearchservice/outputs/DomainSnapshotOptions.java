@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainSnapshotOptions {
     private final @Nullable Integer automatedSnapshotStartHour;
 
-    @OutputCustomType.Constructor
-    private DomainSnapshotOptions(@OutputCustomType.Parameter("automatedSnapshotStartHour") @Nullable Integer automatedSnapshotStartHour) {
+    @CustomType.Constructor
+    private DomainSnapshotOptions(@CustomType.Parameter("automatedSnapshotStartHour") @Nullable Integer automatedSnapshotStartHour) {
         this.automatedSnapshotStartHour = automatedSnapshotStartHour;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountResult {
     /**
      * The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
@@ -22,10 +22,10 @@ public final class GetAccountResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountResult(
-        @OutputCustomType.Parameter("cloudWatchRoleArn") @Nullable String cloudWatchRoleArn,
-        @OutputCustomType.Parameter("id") @Nullable String id) {
+        @CustomType.Parameter("cloudWatchRoleArn") @Nullable String cloudWatchRoleArn,
+        @CustomType.Parameter("id") @Nullable String id) {
         this.cloudWatchRoleArn = cloudWatchRoleArn;
         this.id = id;
     }

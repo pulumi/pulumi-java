@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsPathProtocol;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsPathTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,49 +18,49 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
 
     public static final NetworkInsightsPathArgs Empty = new NetworkInsightsPathArgs();
 
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<String> destination;
 
     public Output<String> getDestination() {
         return this.destination;
     }
 
-    @InputImport(name="destinationIp")
+    @Import(name="destinationIp")
       private final @Nullable Output<String> destinationIp;
 
     public Output<String> getDestinationIp() {
         return this.destinationIp == null ? Output.empty() : this.destinationIp;
     }
 
-    @InputImport(name="destinationPort")
+    @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
     public Output<Integer> getDestinationPort() {
         return this.destinationPort == null ? Output.empty() : this.destinationPort;
     }
 
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<NetworkInsightsPathProtocol> protocol;
 
     public Output<NetworkInsightsPathProtocol> getProtocol() {
         return this.protocol;
     }
 
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {
         return this.source;
     }
 
-    @InputImport(name="sourceIp")
+    @Import(name="sourceIp")
       private final @Nullable Output<String> sourceIp;
 
     public Output<String> getSourceIp() {
         return this.sourceIp == null ? Output.empty() : this.sourceIp;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsPathTagArgs>> tags;
 
     public Output<List<NetworkInsightsPathTagArgs>> getTags() {

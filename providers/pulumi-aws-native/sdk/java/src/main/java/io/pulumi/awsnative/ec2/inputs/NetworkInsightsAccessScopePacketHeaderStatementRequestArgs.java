@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeProtocol;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,49 +16,49 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
 
     public static final NetworkInsightsAccessScopePacketHeaderStatementRequestArgs Empty = new NetworkInsightsAccessScopePacketHeaderStatementRequestArgs();
 
-    @InputImport(name="destinationAddresses")
+    @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
     public Output<List<String>> getDestinationAddresses() {
         return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
     }
 
-    @InputImport(name="destinationPorts")
+    @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
     public Output<List<String>> getDestinationPorts() {
         return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
     }
 
-    @InputImport(name="destinationPrefixLists")
+    @Import(name="destinationPrefixLists")
       private final @Nullable Output<List<String>> destinationPrefixLists;
 
     public Output<List<String>> getDestinationPrefixLists() {
         return this.destinationPrefixLists == null ? Output.empty() : this.destinationPrefixLists;
     }
 
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable Output<List<NetworkInsightsAccessScopeProtocol>> protocols;
 
     public Output<List<NetworkInsightsAccessScopeProtocol>> getProtocols() {
         return this.protocols == null ? Output.empty() : this.protocols;
     }
 
-    @InputImport(name="sourceAddresses")
+    @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
     public Output<List<String>> getSourceAddresses() {
         return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
     }
 
-    @InputImport(name="sourcePorts")
+    @Import(name="sourcePorts")
       private final @Nullable Output<List<String>> sourcePorts;
 
     public Output<List<String>> getSourcePorts() {
         return this.sourcePorts == null ? Output.empty() : this.sourcePorts;
     }
 
-    @InputImport(name="sourcePrefixLists")
+    @Import(name="sourcePrefixLists")
       private final @Nullable Output<List<String>> sourcePrefixLists;
 
     public Output<List<String>> getSourcePrefixLists() {

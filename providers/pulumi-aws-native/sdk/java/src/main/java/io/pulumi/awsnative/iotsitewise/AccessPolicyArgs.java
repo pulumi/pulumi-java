@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIdentityArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The identity for this access policy. Choose either a user or a group but not both.
      * 
      */
-    @InputImport(name="accessPolicyIdentity", required=true)
+    @Import(name="accessPolicyIdentity", required=true)
       private final Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
 
     public Output<AccessPolicyIdentityArgs> getAccessPolicyIdentity() {
@@ -30,7 +30,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
      * 
      */
-    @InputImport(name="accessPolicyPermission", required=true)
+    @Import(name="accessPolicyPermission", required=true)
       private final Output<String> accessPolicyPermission;
 
     public Output<String> getAccessPolicyPermission() {
@@ -41,7 +41,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
      * 
      */
-    @InputImport(name="accessPolicyResource", required=true)
+    @Import(name="accessPolicyResource", required=true)
       private final Output<AccessPolicyResourceArgs> accessPolicyResource;
 
     public Output<AccessPolicyResourceArgs> getAccessPolicyResource() {

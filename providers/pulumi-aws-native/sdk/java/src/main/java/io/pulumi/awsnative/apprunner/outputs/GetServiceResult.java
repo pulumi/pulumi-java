@@ -6,13 +6,13 @@ package io.pulumi.awsnative.apprunner.outputs;
 import io.pulumi.awsnative.apprunner.outputs.ServiceHealthCheckConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceInstanceConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceSourceConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     private final @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration;
     private final @Nullable ServiceInstanceConfiguration instanceConfiguration;
@@ -38,15 +38,15 @@ public final class GetServiceResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("healthCheckConfiguration") @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration,
-        @OutputCustomType.Parameter("instanceConfiguration") @Nullable ServiceInstanceConfiguration instanceConfiguration,
-        @OutputCustomType.Parameter("serviceArn") @Nullable String serviceArn,
-        @OutputCustomType.Parameter("serviceId") @Nullable String serviceId,
-        @OutputCustomType.Parameter("serviceUrl") @Nullable String serviceUrl,
-        @OutputCustomType.Parameter("sourceConfiguration") @Nullable ServiceSourceConfiguration sourceConfiguration,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("healthCheckConfiguration") @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration,
+        @CustomType.Parameter("instanceConfiguration") @Nullable ServiceInstanceConfiguration instanceConfiguration,
+        @CustomType.Parameter("serviceArn") @Nullable String serviceArn,
+        @CustomType.Parameter("serviceId") @Nullable String serviceId,
+        @CustomType.Parameter("serviceUrl") @Nullable String serviceUrl,
+        @CustomType.Parameter("sourceConfiguration") @Nullable ServiceSourceConfiguration sourceConfiguration,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.healthCheckConfiguration = healthCheckConfiguration;
         this.instanceConfiguration = instanceConfiguration;
         this.serviceArn = serviceArn;

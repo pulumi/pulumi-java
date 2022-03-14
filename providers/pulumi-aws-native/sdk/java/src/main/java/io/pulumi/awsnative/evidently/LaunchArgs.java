@@ -8,7 +8,7 @@ import io.pulumi.awsnative.evidently.inputs.LaunchMetricDefinitionObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.LaunchStepConfigArgs;
 import io.pulumi.awsnative.evidently.inputs.LaunchTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,49 +19,49 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LaunchArgs Empty = new LaunchArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="groups", required=true)
+    @Import(name="groups", required=true)
       private final Output<List<LaunchGroupObjectArgs>> groups;
 
     public Output<List<LaunchGroupObjectArgs>> getGroups() {
         return this.groups;
     }
 
-    @InputImport(name="metricMonitors")
+    @Import(name="metricMonitors")
       private final @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
 
     public Output<List<LaunchMetricDefinitionObjectArgs>> getMetricMonitors() {
         return this.metricMonitors == null ? Output.empty() : this.metricMonitors;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final Output<String> project;
 
     public Output<String> getProject() {
         return this.project;
     }
 
-    @InputImport(name="randomizationSalt")
+    @Import(name="randomizationSalt")
       private final @Nullable Output<String> randomizationSalt;
 
     public Output<String> getRandomizationSalt() {
         return this.randomizationSalt == null ? Output.empty() : this.randomizationSalt;
     }
 
-    @InputImport(name="scheduledSplitsConfig", required=true)
+    @Import(name="scheduledSplitsConfig", required=true)
       private final Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
 
     public Output<List<LaunchStepConfigArgs>> getScheduledSplitsConfig() {
@@ -72,7 +72,7 @@ public final class LaunchArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LaunchTagArgs>> tags;
 
     public Output<List<LaunchTagArgs>> getTags() {

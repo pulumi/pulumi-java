@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect.inputs;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionKeyType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
      * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
      * 
      */
-    @InputImport(name="algorithm")
+    @Import(name="algorithm")
       private final @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
 
     public Output<FlowOutputEncryptionAlgorithm> getAlgorithm() {
@@ -35,7 +35,7 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
      * The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
      * 
      */
-    @InputImport(name="keyType")
+    @Import(name="keyType")
       private final @Nullable Output<FlowOutputEncryptionKeyType> keyType;
 
     public Output<FlowOutputEncryptionKeyType> getKeyType() {
@@ -46,7 +46,7 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
      * The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -57,7 +57,7 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
      *  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
      * 
      */
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.xray.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SamplingRule {
     /**
      * Matches attributes derived from the request.
@@ -72,21 +72,21 @@ public final class SamplingRule {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SamplingRule(
-        @OutputCustomType.Parameter("attributes") @Nullable Object attributes,
-        @OutputCustomType.Parameter("fixedRate") @Nullable Double fixedRate,
-        @OutputCustomType.Parameter("hTTPMethod") @Nullable String hTTPMethod,
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("reservoirSize") @Nullable Integer reservoirSize,
-        @OutputCustomType.Parameter("resourceARN") @Nullable String resourceARN,
-        @OutputCustomType.Parameter("ruleARN") @Nullable String ruleARN,
-        @OutputCustomType.Parameter("ruleName") @Nullable String ruleName,
-        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName,
-        @OutputCustomType.Parameter("serviceType") @Nullable String serviceType,
-        @OutputCustomType.Parameter("uRLPath") @Nullable String uRLPath,
-        @OutputCustomType.Parameter("version") @Nullable Integer version) {
+        @CustomType.Parameter("attributes") @Nullable Object attributes,
+        @CustomType.Parameter("fixedRate") @Nullable Double fixedRate,
+        @CustomType.Parameter("hTTPMethod") @Nullable String hTTPMethod,
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("reservoirSize") @Nullable Integer reservoirSize,
+        @CustomType.Parameter("resourceARN") @Nullable String resourceARN,
+        @CustomType.Parameter("ruleARN") @Nullable String ruleARN,
+        @CustomType.Parameter("ruleName") @Nullable String ruleName,
+        @CustomType.Parameter("serviceName") @Nullable String serviceName,
+        @CustomType.Parameter("serviceType") @Nullable String serviceType,
+        @CustomType.Parameter("uRLPath") @Nullable String uRLPath,
+        @CustomType.Parameter("version") @Nullable Integer version) {
         this.attributes = attributes;
         this.fixedRate = fixedRate;
         this.hTTPMethod = hTTPMethod;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.forecast.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +16,14 @@ public final class TagsItemProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final TagsItemProperties Empty = new TagsItemProperties();
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
         return this.key;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

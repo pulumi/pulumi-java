@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.MitigationActionActionParams;
 import io.pulumi.awsnative.iot.outputs.MitigationActionTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMitigationActionResult {
     private final @Nullable MitigationActionActionParams actionParams;
     private final @Nullable String mitigationActionArn;
@@ -24,13 +24,13 @@ public final class GetMitigationActionResult {
      */
     private final @Nullable List<MitigationActionTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMitigationActionResult(
-        @OutputCustomType.Parameter("actionParams") @Nullable MitigationActionActionParams actionParams,
-        @OutputCustomType.Parameter("mitigationActionArn") @Nullable String mitigationActionArn,
-        @OutputCustomType.Parameter("mitigationActionId") @Nullable String mitigationActionId,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<MitigationActionTag> tags) {
+        @CustomType.Parameter("actionParams") @Nullable MitigationActionActionParams actionParams,
+        @CustomType.Parameter("mitigationActionArn") @Nullable String mitigationActionArn,
+        @CustomType.Parameter("mitigationActionId") @Nullable String mitigationActionId,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("tags") @Nullable List<MitigationActionTag> tags) {
         this.actionParams = actionParams;
         this.mitigationActionArn = mitigationActionArn;
         this.mitigationActionId = mitigationActionId;

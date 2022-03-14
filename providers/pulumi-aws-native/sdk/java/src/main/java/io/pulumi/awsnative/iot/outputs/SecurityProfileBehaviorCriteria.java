@@ -7,13 +7,13 @@ import io.pulumi.awsnative.iot.enums.SecurityProfileBehaviorCriteriaComparisonOp
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMachineLearningDetectionConfig;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricValue;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileStatisticalThreshold;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityProfileBehaviorCriteria {
     /**
      * The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
@@ -39,15 +39,15 @@ public final class SecurityProfileBehaviorCriteria {
     private final @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
     private final @Nullable SecurityProfileMetricValue value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityProfileBehaviorCriteria(
-        @OutputCustomType.Parameter("comparisonOperator") @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator,
-        @OutputCustomType.Parameter("consecutiveDatapointsToAlarm") @Nullable Integer consecutiveDatapointsToAlarm,
-        @OutputCustomType.Parameter("consecutiveDatapointsToClear") @Nullable Integer consecutiveDatapointsToClear,
-        @OutputCustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
-        @OutputCustomType.Parameter("mlDetectionConfig") @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig,
-        @OutputCustomType.Parameter("statisticalThreshold") @Nullable SecurityProfileStatisticalThreshold statisticalThreshold,
-        @OutputCustomType.Parameter("value") @Nullable SecurityProfileMetricValue value) {
+        @CustomType.Parameter("comparisonOperator") @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator,
+        @CustomType.Parameter("consecutiveDatapointsToAlarm") @Nullable Integer consecutiveDatapointsToAlarm,
+        @CustomType.Parameter("consecutiveDatapointsToClear") @Nullable Integer consecutiveDatapointsToClear,
+        @CustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
+        @CustomType.Parameter("mlDetectionConfig") @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig,
+        @CustomType.Parameter("statisticalThreshold") @Nullable SecurityProfileStatisticalThreshold statisticalThreshold,
+        @CustomType.Parameter("value") @Nullable SecurityProfileMetricValue value) {
         this.comparisonOperator = comparisonOperator;
         this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
         this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;

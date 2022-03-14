@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeKeyStandardIdentifiersItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectTypeKey {
     /**
      * The reference for the key name of the fields map.
@@ -23,10 +23,10 @@ public final class ObjectTypeKey {
      */
     private final @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectTypeKey(
-        @OutputCustomType.Parameter("fieldNames") @Nullable List<String> fieldNames,
-        @OutputCustomType.Parameter("standardIdentifiers") @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
+        @CustomType.Parameter("fieldNames") @Nullable List<String> fieldNames,
+        @CustomType.Parameter("standardIdentifiers") @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
         this.fieldNames = fieldNames;
         this.standardIdentifiers = standardIdentifiers;
     }

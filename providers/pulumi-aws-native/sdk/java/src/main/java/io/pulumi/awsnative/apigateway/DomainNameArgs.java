@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.inputs.DomainNameEndpointConfigurationArgs
 import io.pulumi.awsnative.apigateway.inputs.DomainNameMutualTlsAuthenticationArgs;
 import io.pulumi.awsnative.apigateway.inputs.DomainNameTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,56 +18,56 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainNameArgs Empty = new DomainNameArgs();
 
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
         return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName == null ? Output.empty() : this.domainName;
     }
 
-    @InputImport(name="endpointConfiguration")
+    @Import(name="endpointConfiguration")
       private final @Nullable Output<DomainNameEndpointConfigurationArgs> endpointConfiguration;
 
     public Output<DomainNameEndpointConfigurationArgs> getEndpointConfiguration() {
         return this.endpointConfiguration == null ? Output.empty() : this.endpointConfiguration;
     }
 
-    @InputImport(name="mutualTlsAuthentication")
+    @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     public Output<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Output.empty() : this.mutualTlsAuthentication;
     }
 
-    @InputImport(name="ownershipVerificationCertificateArn")
+    @Import(name="ownershipVerificationCertificateArn")
       private final @Nullable Output<String> ownershipVerificationCertificateArn;
 
     public Output<String> getOwnershipVerificationCertificateArn() {
         return this.ownershipVerificationCertificateArn == null ? Output.empty() : this.ownershipVerificationCertificateArn;
     }
 
-    @InputImport(name="regionalCertificateArn")
+    @Import(name="regionalCertificateArn")
       private final @Nullable Output<String> regionalCertificateArn;
 
     public Output<String> getRegionalCertificateArn() {
         return this.regionalCertificateArn == null ? Output.empty() : this.regionalCertificateArn;
     }
 
-    @InputImport(name="securityPolicy")
+    @Import(name="securityPolicy")
       private final @Nullable Output<String> securityPolicy;
 
     public Output<String> getSecurityPolicy() {
         return this.securityPolicy == null ? Output.empty() : this.securityPolicy;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DomainNameTagArgs>> tags;
 
     public Output<List<DomainNameTagArgs>> getTags() {

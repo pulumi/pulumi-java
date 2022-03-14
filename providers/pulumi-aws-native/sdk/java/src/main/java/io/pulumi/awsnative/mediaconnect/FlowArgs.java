@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowFailoverConfigArgs;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -31,7 +31,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the flow.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * The source of the flow.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<FlowSourceArgs> source;
 
     public Output<FlowSourceArgs> getSource() {
@@ -53,7 +53,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * The source failover config of the flow.
      * 
      */
-    @InputImport(name="sourceFailoverConfig")
+    @Import(name="sourceFailoverConfig")
       private final @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
 
     public Output<FlowFailoverConfigArgs> getSourceFailoverConfig() {

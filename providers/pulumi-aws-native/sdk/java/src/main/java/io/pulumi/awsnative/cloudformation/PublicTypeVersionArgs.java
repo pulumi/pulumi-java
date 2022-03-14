@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.enums.PublicTypeVersionType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Number (ARN) of the extension.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * A url to the S3 bucket where logs for the testType run will be available
      * 
      */
-    @InputImport(name="logDeliveryBucket")
+    @Import(name="logDeliveryBucket")
       private final @Nullable Output<String> logDeliveryBucket;
 
     public Output<String> getLogDeliveryBucket() {
@@ -41,7 +41,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * The version number of a public third-party extension
      * 
      */
-    @InputImport(name="publicVersionNumber")
+    @Import(name="publicVersionNumber")
       private final @Nullable Output<String> publicVersionNumber;
 
     public Output<String> getPublicVersionNumber() {
@@ -52,7 +52,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * The kind of extension
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<PublicTypeVersionType> type;
 
     public Output<PublicTypeVersionType> getType() {
@@ -65,7 +65,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {

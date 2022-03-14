@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InfrastructureConfigurationS3Logs {
     /**
      * S3BucketName
@@ -22,10 +22,10 @@ public final class InfrastructureConfigurationS3Logs {
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InfrastructureConfigurationS3Logs(
-        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
-        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
+        @CustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @CustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }

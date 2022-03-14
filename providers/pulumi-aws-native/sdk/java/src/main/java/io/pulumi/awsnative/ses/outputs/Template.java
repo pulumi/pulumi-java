@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Template {
     /**
      * The HTML body of the email.
@@ -32,12 +32,12 @@ public final class Template {
      */
     private final @Nullable String textPart;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Template(
-        @OutputCustomType.Parameter("htmlPart") @Nullable String htmlPart,
-        @OutputCustomType.Parameter("subjectPart") String subjectPart,
-        @OutputCustomType.Parameter("templateName") @Nullable String templateName,
-        @OutputCustomType.Parameter("textPart") @Nullable String textPart) {
+        @CustomType.Parameter("htmlPart") @Nullable String htmlPart,
+        @CustomType.Parameter("subjectPart") String subjectPart,
+        @CustomType.Parameter("templateName") @Nullable String templateName,
+        @CustomType.Parameter("textPart") @Nullable String textPart) {
         this.htmlPart = htmlPart;
         this.subjectPart = subjectPart;
         this.templateName = templateName;

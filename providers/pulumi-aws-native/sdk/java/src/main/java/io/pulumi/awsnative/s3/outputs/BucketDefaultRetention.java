@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDefaultRetentionMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketDefaultRetention {
     private final @Nullable Integer days;
     private final @Nullable BucketDefaultRetentionMode mode;
     private final @Nullable Integer years;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketDefaultRetention(
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("mode") @Nullable BucketDefaultRetentionMode mode,
-        @OutputCustomType.Parameter("years") @Nullable Integer years) {
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("mode") @Nullable BucketDefaultRetentionMode mode,
+        @CustomType.Parameter("years") @Nullable Integer years) {
         this.days = days;
         this.mode = mode;
         this.years = years;

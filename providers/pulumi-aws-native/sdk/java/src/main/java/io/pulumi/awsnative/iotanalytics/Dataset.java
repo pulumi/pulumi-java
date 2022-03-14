@@ -13,7 +13,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.DatasetTag;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetTrigger;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetVersioningConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,49 +27,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iotanalytics:Dataset")
 public class Dataset extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="actions", type=List.class, parameters={DatasetAction.class})
+    @Export(name="actions", type=List.class, parameters={DatasetAction.class})
     private Output<List<DatasetAction>> actions;
 
     public Output<List<DatasetAction>> getActions() {
         return this.actions;
     }
-    @OutputExport(name="contentDeliveryRules", type=List.class, parameters={DatasetContentDeliveryRule.class})
+    @Export(name="contentDeliveryRules", type=List.class, parameters={DatasetContentDeliveryRule.class})
     private Output</* @Nullable */ List<DatasetContentDeliveryRule>> contentDeliveryRules;
 
     public Output</* @Nullable */ List<DatasetContentDeliveryRule>> getContentDeliveryRules() {
         return this.contentDeliveryRules;
     }
-    @OutputExport(name="datasetName", type=String.class, parameters={})
+    @Export(name="datasetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datasetName;
 
     public Output</* @Nullable */ String> getDatasetName() {
         return this.datasetName;
     }
-    @OutputExport(name="lateDataRules", type=List.class, parameters={DatasetLateDataRule.class})
+    @Export(name="lateDataRules", type=List.class, parameters={DatasetLateDataRule.class})
     private Output</* @Nullable */ List<DatasetLateDataRule>> lateDataRules;
 
     public Output</* @Nullable */ List<DatasetLateDataRule>> getLateDataRules() {
         return this.lateDataRules;
     }
-    @OutputExport(name="retentionPeriod", type=DatasetRetentionPeriod.class, parameters={})
+    @Export(name="retentionPeriod", type=DatasetRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ DatasetRetentionPeriod> retentionPeriod;
 
     public Output</* @Nullable */ DatasetRetentionPeriod> getRetentionPeriod() {
         return this.retentionPeriod;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DatasetTag.class})
+    @Export(name="tags", type=List.class, parameters={DatasetTag.class})
     private Output</* @Nullable */ List<DatasetTag>> tags;
 
     public Output</* @Nullable */ List<DatasetTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="triggers", type=List.class, parameters={DatasetTrigger.class})
+    @Export(name="triggers", type=List.class, parameters={DatasetTrigger.class})
     private Output</* @Nullable */ List<DatasetTrigger>> triggers;
 
     public Output</* @Nullable */ List<DatasetTrigger>> getTriggers() {
         return this.triggers;
     }
-    @OutputExport(name="versioningConfiguration", type=DatasetVersioningConfiguration.class, parameters={})
+    @Export(name="versioningConfiguration", type=DatasetVersioningConfiguration.class, parameters={})
     private Output</* @Nullable */ DatasetVersioningConfiguration> versioningConfiguration;
 
     public Output</* @Nullable */ DatasetVersioningConfiguration> getVersioningConfiguration() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaDeviceMountArgs;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaVolumeMountArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -18,28 +18,28 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
 
     public static final ComponentVersionLambdaContainerParamsArgs Empty = new ComponentVersionLambdaContainerParamsArgs();
 
-    @InputImport(name="devices")
+    @Import(name="devices")
       private final @Nullable Output<List<ComponentVersionLambdaDeviceMountArgs>> devices;
 
     public Output<List<ComponentVersionLambdaDeviceMountArgs>> getDevices() {
         return this.devices == null ? Output.empty() : this.devices;
     }
 
-    @InputImport(name="memorySizeInKB")
+    @Import(name="memorySizeInKB")
       private final @Nullable Output<Integer> memorySizeInKB;
 
     public Output<Integer> getMemorySizeInKB() {
         return this.memorySizeInKB == null ? Output.empty() : this.memorySizeInKB;
     }
 
-    @InputImport(name="mountROSysfs")
+    @Import(name="mountROSysfs")
       private final @Nullable Output<Boolean> mountROSysfs;
 
     public Output<Boolean> getMountROSysfs() {
         return this.mountROSysfs == null ? Output.empty() : this.mountROSysfs;
     }
 
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes;
 
     public Output<List<ComponentVersionLambdaVolumeMountArgs>> getVolumes() {

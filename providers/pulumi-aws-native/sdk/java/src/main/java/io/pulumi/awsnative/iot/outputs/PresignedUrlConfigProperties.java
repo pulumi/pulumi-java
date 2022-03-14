@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PresignedUrlConfigProperties {
     private final @Nullable Integer expiresInSec;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PresignedUrlConfigProperties(
-        @OutputCustomType.Parameter("expiresInSec") @Nullable Integer expiresInSec,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("expiresInSec") @Nullable Integer expiresInSec,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.expiresInSec = expiresInSec;
         this.roleArn = roleArn;
     }

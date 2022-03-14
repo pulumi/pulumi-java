@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class FlowSAPODataSourceProperties extends io.pulumi.resources.Invo
 
     public static final FlowSAPODataSourceProperties Empty = new FlowSAPODataSourceProperties();
 
-    @InputImport(name="objectPath", required=true)
+    @Import(name="objectPath", required=true)
       private final String objectPath;
 
     public String getObjectPath() {

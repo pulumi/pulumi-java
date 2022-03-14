@@ -6,13 +6,13 @@ package io.pulumi.awsnative.databrew.outputs;
 import io.pulumi.awsnative.databrew.outputs.RecipeParameterMap;
 import io.pulumi.awsnative.databrew.outputs.RecipeParameters;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecipeAction {
     /**
      * Step action operation
@@ -21,10 +21,10 @@ public final class RecipeAction {
     private final String operation;
     private final @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecipeAction(
-        @OutputCustomType.Parameter("operation") String operation,
-        @OutputCustomType.Parameter("parameters") @Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
+        @CustomType.Parameter("operation") String operation,
+        @CustomType.Parameter("parameters") @Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
         this.operation = operation;
         this.parameters = parameters;
     }

@@ -6,14 +6,14 @@ package io.pulumi.awsnative.servicecatalog.outputs;
 import io.pulumi.awsnative.servicecatalog.enums.ServiceActionAcceptLanguage;
 import io.pulumi.awsnative.servicecatalog.enums.ServiceActionDefinitionType;
 import io.pulumi.awsnative.servicecatalog.outputs.ServiceActionDefinitionParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceActionResult {
     private final @Nullable ServiceActionAcceptLanguage acceptLanguage;
     private final @Nullable List<ServiceActionDefinitionParameter> definition;
@@ -22,14 +22,14 @@ public final class GetServiceActionResult {
     private final @Nullable String id;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceActionResult(
-        @OutputCustomType.Parameter("acceptLanguage") @Nullable ServiceActionAcceptLanguage acceptLanguage,
-        @OutputCustomType.Parameter("definition") @Nullable List<ServiceActionDefinitionParameter> definition,
-        @OutputCustomType.Parameter("definitionType") @Nullable ServiceActionDefinitionType definitionType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("acceptLanguage") @Nullable ServiceActionAcceptLanguage acceptLanguage,
+        @CustomType.Parameter("definition") @Nullable List<ServiceActionDefinitionParameter> definition,
+        @CustomType.Parameter("definitionType") @Nullable ServiceActionDefinitionType definitionType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.acceptLanguage = acceptLanguage;
         this.definition = definition;
         this.definitionType = definitionType;

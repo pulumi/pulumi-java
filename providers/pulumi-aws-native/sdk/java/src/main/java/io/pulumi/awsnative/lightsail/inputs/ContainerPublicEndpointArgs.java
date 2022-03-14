@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.ContainerHealthCheckConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * The name of the container for the endpoint.
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -35,7 +35,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * The port of the container to which traffic is forwarded to.
      * 
      */
-    @InputImport(name="containerPort")
+    @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
@@ -46,7 +46,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
      * An object that describes the health check configuration of the container.
      * 
      */
-    @InputImport(name="healthCheckConfig")
+    @Import(name="healthCheckConfig")
       private final @Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig;
 
     public Output<ContainerHealthCheckConfigArgs> getHealthCheckConfig() {

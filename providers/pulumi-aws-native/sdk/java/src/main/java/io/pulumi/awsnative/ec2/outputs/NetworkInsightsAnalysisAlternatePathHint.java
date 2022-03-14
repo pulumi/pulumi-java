@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisAlternatePathHint {
     private final @Nullable String componentArn;
     private final @Nullable String componentId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisAlternatePathHint(
-        @OutputCustomType.Parameter("componentArn") @Nullable String componentArn,
-        @OutputCustomType.Parameter("componentId") @Nullable String componentId) {
+        @CustomType.Parameter("componentArn") @Nullable String componentArn,
+        @CustomType.Parameter("componentId") @Nullable String componentId) {
         this.componentArn = componentArn;
         this.componentId = componentId;
     }

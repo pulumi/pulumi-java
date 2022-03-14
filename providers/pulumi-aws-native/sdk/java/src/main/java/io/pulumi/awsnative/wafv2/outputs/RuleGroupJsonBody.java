@@ -6,22 +6,22 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupBodyParsingFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupJsonMatchScope;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupJsonMatchPattern;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupJsonBody {
     private final @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior;
     private final RuleGroupJsonMatchPattern matchPattern;
     private final RuleGroupJsonMatchScope matchScope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupJsonBody(
-        @OutputCustomType.Parameter("invalidFallbackBehavior") @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior,
-        @OutputCustomType.Parameter("matchPattern") RuleGroupJsonMatchPattern matchPattern,
-        @OutputCustomType.Parameter("matchScope") RuleGroupJsonMatchScope matchScope) {
+        @CustomType.Parameter("invalidFallbackBehavior") @Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior,
+        @CustomType.Parameter("matchPattern") RuleGroupJsonMatchPattern matchPattern,
+        @CustomType.Parameter("matchScope") RuleGroupJsonMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = matchPattern;
         this.matchScope = matchScope;

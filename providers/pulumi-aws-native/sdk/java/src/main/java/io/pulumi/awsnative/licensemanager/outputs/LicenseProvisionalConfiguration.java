@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LicenseProvisionalConfiguration {
     private final Integer maxTimeToLiveInMinutes;
 
-    @OutputCustomType.Constructor
-    private LicenseProvisionalConfiguration(@OutputCustomType.Parameter("maxTimeToLiveInMinutes") Integer maxTimeToLiveInMinutes) {
+    @CustomType.Constructor
+    private LicenseProvisionalConfiguration(@CustomType.Parameter("maxTimeToLiveInMinutes") Integer maxTimeToLiveInMinutes) {
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }
 

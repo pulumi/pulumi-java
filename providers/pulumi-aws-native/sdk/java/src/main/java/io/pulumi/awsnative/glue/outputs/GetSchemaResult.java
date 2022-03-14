@@ -6,14 +6,14 @@ package io.pulumi.awsnative.glue.outputs;
 import io.pulumi.awsnative.glue.enums.SchemaCompatibility;
 import io.pulumi.awsnative.glue.outputs.SchemaTag;
 import io.pulumi.awsnative.glue.outputs.SchemaVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSchemaResult {
     /**
      * Amazon Resource Name for the Schema.
@@ -42,14 +42,14 @@ public final class GetSchemaResult {
      */
     private final @Nullable List<SchemaTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSchemaResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("checkpointVersion") @Nullable SchemaVersion checkpointVersion,
-        @OutputCustomType.Parameter("compatibility") @Nullable SchemaCompatibility compatibility,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("initialSchemaVersionId") @Nullable String initialSchemaVersionId,
-        @OutputCustomType.Parameter("tags") @Nullable List<SchemaTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("checkpointVersion") @Nullable SchemaVersion checkpointVersion,
+        @CustomType.Parameter("compatibility") @Nullable SchemaCompatibility compatibility,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("initialSchemaVersionId") @Nullable String initialSchemaVersionId,
+        @CustomType.Parameter("tags") @Nullable List<SchemaTag> tags) {
         this.arn = arn;
         this.checkpointVersion = checkpointVersion;
         this.compatibility = compatibility;

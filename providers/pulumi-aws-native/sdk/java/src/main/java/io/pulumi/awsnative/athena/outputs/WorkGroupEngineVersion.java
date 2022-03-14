@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.athena.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkGroupEngineVersion {
     private final @Nullable String effectiveEngineVersion;
     private final @Nullable String selectedEngineVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkGroupEngineVersion(
-        @OutputCustomType.Parameter("effectiveEngineVersion") @Nullable String effectiveEngineVersion,
-        @OutputCustomType.Parameter("selectedEngineVersion") @Nullable String selectedEngineVersion) {
+        @CustomType.Parameter("effectiveEngineVersion") @Nullable String effectiveEngineVersion,
+        @CustomType.Parameter("selectedEngineVersion") @Nullable String selectedEngineVersion) {
         this.effectiveEngineVersion = effectiveEngineVersion;
         this.selectedEngineVersion = selectedEngineVersion;
     }

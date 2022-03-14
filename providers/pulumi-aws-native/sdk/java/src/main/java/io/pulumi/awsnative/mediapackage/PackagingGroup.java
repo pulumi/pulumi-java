@@ -9,7 +9,7 @@ import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupAuthorization;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupLogConfiguration;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * The ARN of the PackagingGroup.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * CDN Authorization
      * 
      */
-    @OutputExport(name="authorization", type=PackagingGroupAuthorization.class, parameters={})
+    @Export(name="authorization", type=PackagingGroupAuthorization.class, parameters={})
     private Output</* @Nullable */ PackagingGroupAuthorization> authorization;
 
     /**
@@ -53,7 +53,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * The fully qualified domain name for Assets in the PackagingGroup.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -67,7 +67,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * The configuration parameters for egress access logging.
      * 
      */
-    @OutputExport(name="egressAccessLogs", type=PackagingGroupLogConfiguration.class, parameters={})
+    @Export(name="egressAccessLogs", type=PackagingGroupLogConfiguration.class, parameters={})
     private Output</* @Nullable */ PackagingGroupLogConfiguration> egressAccessLogs;
 
     /**
@@ -81,7 +81,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={PackagingGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={PackagingGroupTag.class})
     private Output</* @Nullable */ List<PackagingGroupTag>> tags;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class DataSetColumnLevelPermissionRule extends io.pulumi.resources.
 
     public static final DataSetColumnLevelPermissionRule Empty = new DataSetColumnLevelPermissionRule();
 
-    @InputImport(name="columnNames")
+    @Import(name="columnNames")
       private final @Nullable List<String> columnNames;
 
     public List<String> getColumnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
     }
 
-    @InputImport(name="principals")
+    @Import(name="principals")
       private final @Nullable List<String> principals;
 
     public List<String> getPrincipals() {

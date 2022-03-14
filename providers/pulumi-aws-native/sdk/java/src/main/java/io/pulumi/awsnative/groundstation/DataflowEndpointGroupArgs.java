@@ -6,7 +6,7 @@ package io.pulumi.awsnative.groundstation;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupEndpointDetailsArgs;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
 
     public static final DataflowEndpointGroupArgs Empty = new DataflowEndpointGroupArgs();
 
-    @InputImport(name="endpointDetails", required=true)
+    @Import(name="endpointDetails", required=true)
       private final Output<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails;
 
     public Output<List<DataflowEndpointGroupEndpointDetailsArgs>> getEndpointDetails() {
         return this.endpointDetails;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DataflowEndpointGroupTagArgs>> tags;
 
     public Output<List<DataflowEndpointGroupTagArgs>> getTags() {

@@ -5,23 +5,23 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupPlanAdvancedBackupSettingResourceType;
 import io.pulumi.awsnative.backup.outputs.BackupPlanBackupRuleResourceType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupPlanResourceType {
     private final @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings;
     private final String backupPlanName;
     private final List<BackupPlanBackupRuleResourceType> backupPlanRule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupPlanResourceType(
-        @OutputCustomType.Parameter("advancedBackupSettings") @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings,
-        @OutputCustomType.Parameter("backupPlanName") String backupPlanName,
-        @OutputCustomType.Parameter("backupPlanRule") List<BackupPlanBackupRuleResourceType> backupPlanRule) {
+        @CustomType.Parameter("advancedBackupSettings") @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings,
+        @CustomType.Parameter("backupPlanName") String backupPlanName,
+        @CustomType.Parameter("backupPlanRule") List<BackupPlanBackupRuleResourceType> backupPlanRule) {
         this.advancedBackupSettings = advancedBackupSettings;
         this.backupPlanName = backupPlanName;
         this.backupPlanRule = backupPlanRule;

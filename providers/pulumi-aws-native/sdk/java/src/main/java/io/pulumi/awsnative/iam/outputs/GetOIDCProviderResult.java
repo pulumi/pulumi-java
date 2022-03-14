@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.OIDCProviderTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOIDCProviderResult {
     /**
      * Amazon Resource Name (ARN) of the OIDC provider
@@ -22,12 +22,12 @@ public final class GetOIDCProviderResult {
     private final @Nullable List<OIDCProviderTag> tags;
     private final @Nullable List<String> thumbprintList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOIDCProviderResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("clientIdList") @Nullable List<String> clientIdList,
-        @OutputCustomType.Parameter("tags") @Nullable List<OIDCProviderTag> tags,
-        @OutputCustomType.Parameter("thumbprintList") @Nullable List<String> thumbprintList) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("clientIdList") @Nullable List<String> clientIdList,
+        @CustomType.Parameter("tags") @Nullable List<OIDCProviderTag> tags,
+        @CustomType.Parameter("thumbprintList") @Nullable List<String> thumbprintList) {
         this.arn = arn;
         this.clientIdList = clientIdList;
         this.tags = tags;

@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MulticastGroupLoRaWAN {
     /**
      * Multicast group LoRaWAN DL Class
@@ -33,12 +33,12 @@ public final class MulticastGroupLoRaWAN {
      */
     private final String rfRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MulticastGroupLoRaWAN(
-        @OutputCustomType.Parameter("dlClass") String dlClass,
-        @OutputCustomType.Parameter("numberOfDevicesInGroup") @Nullable Integer numberOfDevicesInGroup,
-        @OutputCustomType.Parameter("numberOfDevicesRequested") @Nullable Integer numberOfDevicesRequested,
-        @OutputCustomType.Parameter("rfRegion") String rfRegion) {
+        @CustomType.Parameter("dlClass") String dlClass,
+        @CustomType.Parameter("numberOfDevicesInGroup") @Nullable Integer numberOfDevicesInGroup,
+        @CustomType.Parameter("numberOfDevicesRequested") @Nullable Integer numberOfDevicesRequested,
+        @CustomType.Parameter("rfRegion") String rfRegion) {
         this.dlClass = dlClass;
         this.numberOfDevicesInGroup = numberOfDevicesInGroup;
         this.numberOfDevicesRequested = numberOfDevicesRequested;

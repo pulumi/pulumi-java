@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class GlobalTablePointInTimeRecoverySpecification extends io.pulumi
 
     public static final GlobalTablePointInTimeRecoverySpecification Empty = new GlobalTablePointInTimeRecoverySpecification();
 
-    @InputImport(name="pointInTimeRecoveryEnabled")
+    @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Boolean pointInTimeRecoveryEnabled;
 
     public Optional<Boolean> getPointInTimeRecoveryEnabled() {

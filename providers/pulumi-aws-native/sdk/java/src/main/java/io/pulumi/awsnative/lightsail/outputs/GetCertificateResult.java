@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.CertificateTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     private final @Nullable String certificateArn;
     /**
@@ -25,11 +25,11 @@ public final class GetCertificateResult {
      */
     private final @Nullable List<CertificateTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable List<CertificateTag> tags) {
+        @CustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable List<CertificateTag> tags) {
         this.certificateArn = certificateArn;
         this.status = status;
         this.tags = tags;

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketRedirectAllRequestsToProtocol;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketRedirectAllRequestsTo {
     /**
      * Name of the host where requests are redirected.
@@ -23,10 +23,10 @@ public final class BucketRedirectAllRequestsTo {
      */
     private final @Nullable BucketRedirectAllRequestsToProtocol protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketRedirectAllRequestsTo(
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("protocol") @Nullable BucketRedirectAllRequestsToProtocol protocol) {
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("protocol") @Nullable BucketRedirectAllRequestsToProtocol protocol) {
         this.hostName = hostName;
         this.protocol = protocol;
     }

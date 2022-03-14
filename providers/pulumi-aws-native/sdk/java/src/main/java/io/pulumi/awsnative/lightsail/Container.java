@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lightsail.outputs.ContainerPublicDomainName;
 import io.pulumi.awsnative.lightsail.outputs.ContainerServiceDeployment;
 import io.pulumi.awsnative.lightsail.outputs.ContainerTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:lightsail:Container")
 public class Container extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="containerArn", type=String.class, parameters={})
+    @Export(name="containerArn", type=String.class, parameters={})
     private Output<String> containerArn;
 
     public Output<String> getContainerArn() {
@@ -33,7 +33,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Describes a container deployment configuration of an Amazon Lightsail container service.
      * 
      */
-    @OutputExport(name="containerServiceDeployment", type=ContainerServiceDeployment.class, parameters={})
+    @Export(name="containerServiceDeployment", type=ContainerServiceDeployment.class, parameters={})
     private Output</* @Nullable */ ContainerServiceDeployment> containerServiceDeployment;
 
     /**
@@ -47,7 +47,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * A Boolean value to indicate whether the container service is disabled.
      * 
      */
-    @OutputExport(name="isDisabled", type=Boolean.class, parameters={})
+    @Export(name="isDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDisabled;
 
     /**
@@ -61,7 +61,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The power specification for the container service.
      * 
      */
-    @OutputExport(name="power", type=String.class, parameters={})
+    @Export(name="power", type=String.class, parameters={})
     private Output<String> power;
 
     /**
@@ -75,7 +75,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The public domain names to use with the container service, such as example.com and www.example.com.
      * 
      */
-    @OutputExport(name="publicDomainNames", type=List.class, parameters={ContainerPublicDomainName.class})
+    @Export(name="publicDomainNames", type=List.class, parameters={ContainerPublicDomainName.class})
     private Output</* @Nullable */ List<ContainerPublicDomainName>> publicDomainNames;
 
     /**
@@ -89,7 +89,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The scale specification for the container service.
      * 
      */
-    @OutputExport(name="scale", type=Integer.class, parameters={})
+    @Export(name="scale", type=Integer.class, parameters={})
     private Output<Integer> scale;
 
     /**
@@ -103,7 +103,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The name for the container service.
      * 
      */
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
@@ -117,7 +117,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ContainerTag.class})
+    @Export(name="tags", type=List.class, parameters={ContainerTag.class})
     private Output</* @Nullable */ List<ContainerTag>> tags;
 
     /**
@@ -131,7 +131,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The publicly accessible URL of the container service.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

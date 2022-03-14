@@ -7,14 +7,14 @@ import io.pulumi.awsnative.nimblestudio.enums.StudioComponentType;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentInitializationScript;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentScriptParameterKeyValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStudioComponentResult {
     private final @Nullable StudioComponentConfiguration configuration;
     /**
@@ -45,16 +45,16 @@ public final class GetStudioComponentResult {
     private final @Nullable String studioComponentId;
     private final @Nullable StudioComponentType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStudioComponentResult(
-        @OutputCustomType.Parameter("configuration") @Nullable StudioComponentConfiguration configuration,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("ec2SecurityGroupIds") @Nullable List<String> ec2SecurityGroupIds,
-        @OutputCustomType.Parameter("initializationScripts") @Nullable List<StudioComponentInitializationScript> initializationScripts,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("scriptParameters") @Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters,
-        @OutputCustomType.Parameter("studioComponentId") @Nullable String studioComponentId,
-        @OutputCustomType.Parameter("type") @Nullable StudioComponentType type) {
+        @CustomType.Parameter("configuration") @Nullable StudioComponentConfiguration configuration,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("ec2SecurityGroupIds") @Nullable List<String> ec2SecurityGroupIds,
+        @CustomType.Parameter("initializationScripts") @Nullable List<StudioComponentInitializationScript> initializationScripts,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("scriptParameters") @Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters,
+        @CustomType.Parameter("studioComponentId") @Nullable String studioComponentId,
+        @CustomType.Parameter("type") @Nullable StudioComponentType type) {
         this.configuration = configuration;
         this.description = description;
         this.ec2SecurityGroupIds = ec2SecurityGroupIds;

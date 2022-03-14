@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.VPCDHCPOptionsAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class VPCDHCPOptionsAssociation extends io.pulumi.resources.CustomResourc
      * The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
      * 
      */
-    @OutputExport(name="dhcpOptionsId", type=String.class, parameters={})
+    @Export(name="dhcpOptionsId", type=String.class, parameters={})
     private Output<String> dhcpOptionsId;
 
     /**
@@ -35,7 +35,7 @@ public class VPCDHCPOptionsAssociation extends io.pulumi.resources.CustomResourc
      * The ID of the VPC.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.awsnative.inspectorv2.inputs.FilterNumberFilter;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,42 +15,42 @@ public final class FilterPackageFilter extends io.pulumi.resources.InvokeArgs {
 
     public static final FilterPackageFilter Empty = new FilterPackageFilter();
 
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable FilterStringFilter architecture;
 
     public Optional<FilterStringFilter> getArchitecture() {
         return this.architecture == null ? Optional.empty() : Optional.ofNullable(this.architecture);
     }
 
-    @InputImport(name="epoch")
+    @Import(name="epoch")
       private final @Nullable FilterNumberFilter epoch;
 
     public Optional<FilterNumberFilter> getEpoch() {
         return this.epoch == null ? Optional.empty() : Optional.ofNullable(this.epoch);
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable FilterStringFilter name;
 
     public Optional<FilterStringFilter> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    @InputImport(name="release")
+    @Import(name="release")
       private final @Nullable FilterStringFilter release;
 
     public Optional<FilterStringFilter> getRelease() {
         return this.release == null ? Optional.empty() : Optional.ofNullable(this.release);
     }
 
-    @InputImport(name="sourceLayerHash")
+    @Import(name="sourceLayerHash")
       private final @Nullable FilterStringFilter sourceLayerHash;
 
     public Optional<FilterStringFilter> getSourceLayerHash() {
         return this.sourceLayerHash == null ? Optional.empty() : Optional.ofNullable(this.sourceLayerHash);
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable FilterStringFilter version;
 
     public Optional<FilterStringFilter> getVersion() {

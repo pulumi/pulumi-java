@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iam.RoleArgs;
 import io.pulumi.awsnative.iam.outputs.RolePolicy;
 import io.pulumi.awsnative.iam.outputs.RoleTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
@@ -28,7 +28,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the role.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -42,7 +42,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * The trust policy that is associated with this role.
      * 
      */
-    @OutputExport(name="assumeRolePolicyDocument", type=Object.class, parameters={})
+    @Export(name="assumeRolePolicyDocument", type=Object.class, parameters={})
     private Output<Object> assumeRolePolicyDocument;
 
     /**
@@ -56,7 +56,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * A description of the role that you provide.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -70,7 +70,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
      * 
      */
-    @OutputExport(name="managedPolicyArns", type=List.class, parameters={String.class})
+    @Export(name="managedPolicyArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> managedPolicyArns;
 
     /**
@@ -84,7 +84,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
      * 
      */
-    @OutputExport(name="maxSessionDuration", type=Integer.class, parameters={})
+    @Export(name="maxSessionDuration", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSessionDuration;
 
     /**
@@ -98,7 +98,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * The path to the role.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
     /**
@@ -112,7 +112,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * The ARN of the policy used to set the permissions boundary for the role.
      * 
      */
-    @OutputExport(name="permissionsBoundary", type=String.class, parameters={})
+    @Export(name="permissionsBoundary", type=String.class, parameters={})
     private Output</* @Nullable */ String> permissionsBoundary;
 
     /**
@@ -126,7 +126,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Adds or updates an inline policy document that is embedded in the specified IAM role.
      * 
      */
-    @OutputExport(name="policies", type=List.class, parameters={RolePolicy.class})
+    @Export(name="policies", type=List.class, parameters={RolePolicy.class})
     private Output</* @Nullable */ List<RolePolicy>> policies;
 
     /**
@@ -140,7 +140,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * The stable and unique string identifying the role.
      * 
      */
-    @OutputExport(name="roleId", type=String.class, parameters={})
+    @Export(name="roleId", type=String.class, parameters={})
     private Output<String> roleId;
 
     /**
@@ -154,7 +154,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * A name for the IAM role, up to 64 characters in length.
      * 
      */
-    @OutputExport(name="roleName", type=String.class, parameters={})
+    @Export(name="roleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleName;
 
     /**
@@ -168,7 +168,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * A list of tags that are attached to the role.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RoleTag.class})
+    @Export(name="tags", type=List.class, parameters={RoleTag.class})
     private Output</* @Nullable */ List<RoleTag>> tags;
 
     /**

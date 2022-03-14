@@ -9,7 +9,7 @@ import io.pulumi.awsnative.quicksight.inputs.AnalysisResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnalysisArgs Empty = new AnalysisArgs();
 
-    @InputImport(name="analysisId", required=true)
+    @Import(name="analysisId", required=true)
       private final Output<String> analysisId;
 
     public Output<String> getAnalysisId() {
         return this.analysisId;
     }
 
-    @InputImport(name="awsAccountId", required=true)
+    @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -38,7 +38,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * <p>Errors associated with the analysis.</p>
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable Output<List<AnalysisErrorArgs>> errors;
 
     public Output<List<AnalysisErrorArgs>> getErrors() {
@@ -49,14 +49,14 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The descriptive name of the analysis.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<AnalysisParametersArgs> parameters;
 
     public Output<AnalysisParametersArgs> getParameters() {
@@ -72,14 +72,14 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
 
     public Output<List<AnalysisResourcePermissionArgs>> getPermissions() {
         return this.permissions == null ? Output.empty() : this.permissions;
     }
 
-    @InputImport(name="sourceEntity", required=true)
+    @Import(name="sourceEntity", required=true)
       private final Output<AnalysisSourceEntityArgs> sourceEntity;
 
     public Output<AnalysisSourceEntityArgs> getSourceEntity() {
@@ -91,7 +91,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      *             analysis.</p>
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AnalysisTagArgs>> tags;
 
     public Output<List<AnalysisTagArgs>> getTags() {
@@ -102,7 +102,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The ARN of the theme of the analysis.</p>
      * 
      */
-    @InputImport(name="themeArn")
+    @Import(name="themeArn")
       private final @Nullable Output<String> themeArn;
 
     public Output<String> getThemeArn() {

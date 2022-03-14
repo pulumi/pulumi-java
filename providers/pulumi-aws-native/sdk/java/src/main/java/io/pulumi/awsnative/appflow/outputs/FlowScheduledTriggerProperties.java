@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowScheduledTriggerPropertiesDataPullMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowScheduledTriggerProperties {
     private final @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode;
     private final @Nullable Double scheduleEndTime;
@@ -20,14 +20,14 @@ public final class FlowScheduledTriggerProperties {
     private final @Nullable Double scheduleStartTime;
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowScheduledTriggerProperties(
-        @OutputCustomType.Parameter("dataPullMode") @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode,
-        @OutputCustomType.Parameter("scheduleEndTime") @Nullable Double scheduleEndTime,
-        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression,
-        @OutputCustomType.Parameter("scheduleOffset") @Nullable Double scheduleOffset,
-        @OutputCustomType.Parameter("scheduleStartTime") @Nullable Double scheduleStartTime,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("dataPullMode") @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode,
+        @CustomType.Parameter("scheduleEndTime") @Nullable Double scheduleEndTime,
+        @CustomType.Parameter("scheduleExpression") String scheduleExpression,
+        @CustomType.Parameter("scheduleOffset") @Nullable Double scheduleOffset,
+        @CustomType.Parameter("scheduleStartTime") @Nullable Double scheduleStartTime,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.dataPullMode = dataPullMode;
         this.scheduleEndTime = scheduleEndTime;
         this.scheduleExpression = scheduleExpression;

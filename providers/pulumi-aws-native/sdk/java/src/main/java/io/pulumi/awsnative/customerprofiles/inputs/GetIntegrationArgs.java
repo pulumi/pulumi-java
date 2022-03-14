@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.customerprofiles.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetIntegrationArgs extends io.pulumi.resources.InvokeArgs {
      * The unique name of the domain.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {
@@ -27,7 +27,7 @@ public final class GetIntegrationArgs extends io.pulumi.resources.InvokeArgs {
      * The URI of the S3 bucket or any other type of data source.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

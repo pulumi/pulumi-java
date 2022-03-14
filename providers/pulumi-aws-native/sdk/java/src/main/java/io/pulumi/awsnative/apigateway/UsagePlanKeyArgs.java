@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.awsnative.apigateway.enums.UsagePlanKeyKeyType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the usage plan key.
      * 
      */
-    @InputImport(name="keyId", required=true)
+    @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -29,7 +29,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The type of usage plan key. Currently, the only valid key type is API_KEY.
      * 
      */
-    @InputImport(name="keyType", required=true)
+    @Import(name="keyType", required=true)
       private final Output<UsagePlanKeyKeyType> keyType;
 
     public Output<UsagePlanKeyKeyType> getKeyType() {
@@ -40,7 +40,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the usage plan.
      * 
      */
-    @InputImport(name="usagePlanId", required=true)
+    @Import(name="usagePlanId", required=true)
       private final Output<String> usagePlanId;
 
     public Output<String> getUsagePlanId() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ses;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ses.ConfigurationSetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class ConfigurationSet extends io.pulumi.resources.CustomResource {
      * The name of the configuration set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**

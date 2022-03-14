@@ -5,13 +5,13 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigFileSystemConfig;
 import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigKernelSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppImageConfigKernelGatewayImageConfig {
     /**
      * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
@@ -24,10 +24,10 @@ public final class AppImageConfigKernelGatewayImageConfig {
      */
     private final List<AppImageConfigKernelSpec> kernelSpecs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppImageConfigKernelGatewayImageConfig(
-        @OutputCustomType.Parameter("fileSystemConfig") @Nullable AppImageConfigFileSystemConfig fileSystemConfig,
-        @OutputCustomType.Parameter("kernelSpecs") List<AppImageConfigKernelSpec> kernelSpecs) {
+        @CustomType.Parameter("fileSystemConfig") @Nullable AppImageConfigFileSystemConfig fileSystemConfig,
+        @CustomType.Parameter("kernelSpecs") List<AppImageConfigKernelSpec> kernelSpecs) {
         this.fileSystemConfig = fileSystemConfig;
         this.kernelSpecs = kernelSpecs;
     }

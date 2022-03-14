@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
      * Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
      * 
      */
-    @InputImport(name="overrideDynamicGroups")
+    @Import(name="overrideDynamicGroups")
       private final @Nullable Output<Boolean> overrideDynamicGroups;
 
     public Output<Boolean> getOverrideDynamicGroups() {
@@ -35,7 +35,7 @@ public final class MitigationActionAddThingsToThingGroupParamsArgs extends io.pu
      * The list of groups to which you want to add the things that triggered the mitigation action.
      * 
      */
-    @InputImport(name="thingGroupNames", required=true)
+    @Import(name="thingGroupNames", required=true)
       private final Output<List<String>> thingGroupNames;
 
     public Output<List<String>> getThingGroupNames() {

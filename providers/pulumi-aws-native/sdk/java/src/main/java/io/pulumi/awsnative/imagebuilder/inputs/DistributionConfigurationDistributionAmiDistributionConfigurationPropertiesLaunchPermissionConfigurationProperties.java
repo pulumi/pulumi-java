@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The ARN for an Amazon Web Services Organization that you want to share your AMI with.
      * 
      */
-    @InputImport(name="organizationArns")
+    @Import(name="organizationArns")
       private final @Nullable List<String> organizationArns;
 
     public List<String> getOrganizationArns() {
@@ -34,7 +34,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
      * 
      */
-    @InputImport(name="organizationalUnitArns")
+    @Import(name="organizationalUnitArns")
       private final @Nullable List<String> organizationalUnitArns;
 
     public List<String> getOrganizationalUnitArns() {
@@ -45,7 +45,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The name of the group.
      * 
      */
-    @InputImport(name="userGroups")
+    @Import(name="userGroups")
       private final @Nullable List<String> userGroups;
 
     public List<String> getUserGroups() {
@@ -56,7 +56,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The AWS account ID.
      * 
      */
-    @InputImport(name="userIds")
+    @Import(name="userIds")
       private final @Nullable List<String> userIds;
 
     public List<String> getUserIds() {

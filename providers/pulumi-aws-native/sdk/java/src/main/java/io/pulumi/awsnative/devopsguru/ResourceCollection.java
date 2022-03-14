@@ -8,7 +8,7 @@ import io.pulumi.awsnative.devopsguru.ResourceCollectionArgs;
 import io.pulumi.awsnative.devopsguru.enums.ResourceCollectionType;
 import io.pulumi.awsnative.devopsguru.outputs.ResourceCollectionFilter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:devopsguru:ResourceCollection")
 public class ResourceCollection extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="resourceCollectionFilter", type=ResourceCollectionFilter.class, parameters={})
+    @Export(name="resourceCollectionFilter", type=ResourceCollectionFilter.class, parameters={})
     private Output<ResourceCollectionFilter> resourceCollectionFilter;
 
     public Output<ResourceCollectionFilter> getResourceCollectionFilter() {
@@ -30,7 +30,7 @@ public class ResourceCollection extends io.pulumi.resources.CustomResource {
      * The type of ResourceCollection
      * 
      */
-    @OutputExport(name="resourceCollectionType", type=ResourceCollectionType.class, parameters={})
+    @Export(name="resourceCollectionType", type=ResourceCollectionType.class, parameters={})
     private Output<ResourceCollectionType> resourceCollectionType;
 
     /**

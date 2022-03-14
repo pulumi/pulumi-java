@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class PrefixListEntryArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final PrefixListEntryArgs Empty = new PrefixListEntryArgs();
 
-    @InputImport(name="cidr", required=true)
+    @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
     public Output<String> getCidr() {
         return this.cidr;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {

@@ -9,12 +9,12 @@ import io.pulumi.awsnative.iot.outputs.MitigationActionPublishFindingToSnsParams
 import io.pulumi.awsnative.iot.outputs.MitigationActionReplaceDefaultPolicyVersionParams;
 import io.pulumi.awsnative.iot.outputs.MitigationActionUpdateCACertificateParams;
 import io.pulumi.awsnative.iot.outputs.MitigationActionUpdateDeviceCertificateParams;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MitigationActionActionParams {
     private final @Nullable MitigationActionAddThingsToThingGroupParams addThingsToThingGroupParams;
     private final @Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams;
@@ -23,14 +23,14 @@ public final class MitigationActionActionParams {
     private final @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams;
     private final @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MitigationActionActionParams(
-        @OutputCustomType.Parameter("addThingsToThingGroupParams") @Nullable MitigationActionAddThingsToThingGroupParams addThingsToThingGroupParams,
-        @OutputCustomType.Parameter("enableIoTLoggingParams") @Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams,
-        @OutputCustomType.Parameter("publishFindingToSnsParams") @Nullable MitigationActionPublishFindingToSnsParams publishFindingToSnsParams,
-        @OutputCustomType.Parameter("replaceDefaultPolicyVersionParams") @Nullable MitigationActionReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams,
-        @OutputCustomType.Parameter("updateCACertificateParams") @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams,
-        @OutputCustomType.Parameter("updateDeviceCertificateParams") @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams) {
+        @CustomType.Parameter("addThingsToThingGroupParams") @Nullable MitigationActionAddThingsToThingGroupParams addThingsToThingGroupParams,
+        @CustomType.Parameter("enableIoTLoggingParams") @Nullable MitigationActionEnableIoTLoggingParams enableIoTLoggingParams,
+        @CustomType.Parameter("publishFindingToSnsParams") @Nullable MitigationActionPublishFindingToSnsParams publishFindingToSnsParams,
+        @CustomType.Parameter("replaceDefaultPolicyVersionParams") @Nullable MitigationActionReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams,
+        @CustomType.Parameter("updateCACertificateParams") @Nullable MitigationActionUpdateCACertificateParams updateCACertificateParams,
+        @CustomType.Parameter("updateDeviceCertificateParams") @Nullable MitigationActionUpdateDeviceCertificateParams updateDeviceCertificateParams) {
         this.addThingsToThingGroupParams = addThingsToThingGroupParams;
         this.enableIoTLoggingParams = enableIoTLoggingParams;
         this.publishFindingToSnsParams = publishFindingToSnsParams;

@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetTriggeringDataset {
     private final String datasetName;
 
-    @OutputCustomType.Constructor
-    private DatasetTriggeringDataset(@OutputCustomType.Parameter("datasetName") String datasetName) {
+    @CustomType.Constructor
+    private DatasetTriggeringDataset(@CustomType.Parameter("datasetName") String datasetName) {
         this.datasetName = datasetName;
     }
 

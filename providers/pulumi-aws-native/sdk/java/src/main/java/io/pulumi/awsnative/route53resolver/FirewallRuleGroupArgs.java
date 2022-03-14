@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver;
 import io.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupFirewallRuleArgs;
 import io.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * FirewallRules
      * 
      */
-    @InputImport(name="firewallRules")
+    @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleGroupFirewallRuleArgs>> firewallRules;
 
     public Output<List<FirewallRuleGroupFirewallRuleArgs>> getFirewallRules() {
@@ -32,7 +32,7 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * FirewallRuleGroupName
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class FirewallRuleGroupArgs extends io.pulumi.resources.ResourceArg
      * Tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FirewallRuleGroupTagArgs>> tags;
 
     public Output<List<FirewallRuleGroupTagArgs>> getTags() {

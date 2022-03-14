@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * Specifies the valid range of values for the parameter.
      * 
      */
-    @InputImport(name="allowedValues")
+    @Import(name="allowedValues")
       private final @Nullable Output<String> allowedValues;
 
     public Output<String> getAllowedValues() {
@@ -34,7 +34,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * Indicates when parameter updates are applied. Can be immediate or pending-reboot.
      * 
      */
-    @InputImport(name="applyMethod")
+    @Import(name="applyMethod")
       private final @Nullable Output<String> applyMethod;
 
     public Output<String> getApplyMethod() {
@@ -45,7 +45,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * Specifies the engine-specific parameter type.
      * 
      */
-    @InputImport(name="applyType")
+    @Import(name="applyType")
       private final @Nullable Output<String> applyType;
 
     public Output<String> getApplyType() {
@@ -56,7 +56,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * Specifies the valid data type for the parameter.
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
     public Output<String> getDataType() {
@@ -67,7 +67,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * Provides a description of the parameter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * A Boolean value indicating whether the parameter can be modified.
      * 
      */
-    @InputImport(name="isModifiable")
+    @Import(name="isModifiable")
       private final @Nullable Output<Boolean> isModifiable;
 
     public Output<Boolean> getIsModifiable() {
@@ -89,7 +89,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * Specifies the name of the parameter.
      * 
      */
-    @InputImport(name="parameterName")
+    @Import(name="parameterName")
       private final @Nullable Output<String> parameterName;
 
     public Output<String> getParameterName() {
@@ -100,7 +100,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
      * Specifies the value of the parameter.
      * 
      */
-    @InputImport(name="parameterValue")
+    @Import(name="parameterValue")
       private final @Nullable Output<String> parameterValue;
 
     public Output<String> getParameterValue() {

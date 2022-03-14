@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.FlowS3OutputFormatConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class FlowS3DestinationPropertiesArgs extends io.pulumi.resources.R
 
     public static final FlowS3DestinationPropertiesArgs Empty = new FlowS3DestinationPropertiesArgs();
 
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
         return this.bucketName;
     }
 
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
-    @InputImport(name="s3OutputFormatConfig")
+    @Import(name="s3OutputFormatConfig")
       private final @Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig;
 
     public Output<FlowS3OutputFormatConfigArgs> getS3OutputFormatConfig() {

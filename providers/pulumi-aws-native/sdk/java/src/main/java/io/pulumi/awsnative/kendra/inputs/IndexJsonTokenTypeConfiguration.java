@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class IndexJsonTokenTypeConfiguration extends io.pulumi.resources.I
 
     public static final IndexJsonTokenTypeConfiguration Empty = new IndexJsonTokenTypeConfiguration();
 
-    @InputImport(name="groupAttributeField", required=true)
+    @Import(name="groupAttributeField", required=true)
       private final String groupAttributeField;
 
     public String getGroupAttributeField() {
         return this.groupAttributeField;
     }
 
-    @InputImport(name="userNameAttributeField", required=true)
+    @Import(name="userNameAttributeField", required=true)
       private final String userNameAttributeField;
 
     public String getUserNameAttributeField() {

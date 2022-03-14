@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.kinesisvideo.StreamArgs;
 import io.pulumi.awsnative.kinesisvideo.outputs.StreamTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Kinesis Video stream.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The number of hours till which Kinesis Video will retain the data in the stream
      * 
      */
-    @OutputExport(name="dataRetentionInHours", type=Integer.class, parameters={})
+    @Export(name="dataRetentionInHours", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dataRetentionInHours;
 
     /**
@@ -52,7 +52,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The name of the device that is writing to the stream.
      * 
      */
-    @OutputExport(name="deviceName", type=String.class, parameters={})
+    @Export(name="deviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> deviceName;
 
     /**
@@ -66,7 +66,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -80,7 +80,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The media type of the stream. Consumers of the stream can use this information when processing the stream.
      * 
      */
-    @OutputExport(name="mediaType", type=String.class, parameters={})
+    @Export(name="mediaType", type=String.class, parameters={})
     private Output</* @Nullable */ String> mediaType;
 
     /**
@@ -94,7 +94,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The name of the Kinesis Video stream.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs associated with the Kinesis Video Stream.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={StreamTag.class})
+    @Export(name="tags", type=List.class, parameters={StreamTag.class})
     private Output</* @Nullable */ List<StreamTag>> tags;
 
     /**

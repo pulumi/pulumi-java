@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
      * The Amazon Resource Name (ARN) of the ACM certificate with which to associate the IAM role.
      * 
      */
-    @InputImport(name="certificateArn", required=true)
+    @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -28,7 +28,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
      * The Amazon Resource Name (ARN) of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

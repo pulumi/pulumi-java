@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSsmParameterStringResult {
     private final String value;
 
-    @OutputCustomType.Constructor
-    private GetSsmParameterStringResult(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private GetSsmParameterStringResult(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

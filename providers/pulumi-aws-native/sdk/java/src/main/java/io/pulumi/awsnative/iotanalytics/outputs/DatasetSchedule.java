@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetSchedule {
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor
-    private DatasetSchedule(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
+    @CustomType.Constructor
+    private DatasetSchedule(@CustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 

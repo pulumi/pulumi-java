@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.SAMLProviderTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class SAMLProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SAMLProviderArgs Empty = new SAMLProviderArgs();
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="samlMetadataDocument", required=true)
+    @Import(name="samlMetadataDocument", required=true)
       private final Output<String> samlMetadataDocument;
 
     public Output<String> getSamlMetadataDocument() {
         return this.samlMetadataDocument;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SAMLProviderTagArgs>> tags;
 
     public Output<List<SAMLProviderTagArgs>> getTags() {

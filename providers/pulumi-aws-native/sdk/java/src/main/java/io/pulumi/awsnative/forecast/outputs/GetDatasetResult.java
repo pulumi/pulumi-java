@@ -8,14 +8,14 @@ import io.pulumi.awsnative.forecast.enums.DatasetType;
 import io.pulumi.awsnative.forecast.outputs.EncryptionConfigProperties;
 import io.pulumi.awsnative.forecast.outputs.SchemaProperties;
 import io.pulumi.awsnative.forecast.outputs.TagsItemProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatasetResult {
     private final @Nullable String arn;
     /**
@@ -37,15 +37,15 @@ public final class GetDatasetResult {
     private final @Nullable SchemaProperties schema;
     private final @Nullable List<TagsItemProperties> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatasetResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("dataFrequency") @Nullable String dataFrequency,
-        @OutputCustomType.Parameter("datasetType") @Nullable DatasetType datasetType,
-        @OutputCustomType.Parameter("domain") @Nullable DatasetDomain domain,
-        @OutputCustomType.Parameter("encryptionConfig") @Nullable EncryptionConfigProperties encryptionConfig,
-        @OutputCustomType.Parameter("schema") @Nullable SchemaProperties schema,
-        @OutputCustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("dataFrequency") @Nullable String dataFrequency,
+        @CustomType.Parameter("datasetType") @Nullable DatasetType datasetType,
+        @CustomType.Parameter("domain") @Nullable DatasetDomain domain,
+        @CustomType.Parameter("encryptionConfig") @Nullable EncryptionConfigProperties encryptionConfig,
+        @CustomType.Parameter("schema") @Nullable SchemaProperties schema,
+        @CustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
         this.arn = arn;
         this.dataFrequency = dataFrequency;
         this.datasetType = datasetType;

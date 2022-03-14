@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyTimestamp;
 import io.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyVariant;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,21 +16,21 @@ public final class TopicRuleAssetPropertyValue extends io.pulumi.resources.Invok
 
     public static final TopicRuleAssetPropertyValue Empty = new TopicRuleAssetPropertyValue();
 
-    @InputImport(name="quality")
+    @Import(name="quality")
       private final @Nullable String quality;
 
     public Optional<String> getQuality() {
         return this.quality == null ? Optional.empty() : Optional.ofNullable(this.quality);
     }
 
-    @InputImport(name="timestamp", required=true)
+    @Import(name="timestamp", required=true)
       private final TopicRuleAssetPropertyTimestamp timestamp;
 
     public TopicRuleAssetPropertyTimestamp getTimestamp() {
         return this.timestamp;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final TopicRuleAssetPropertyVariant value;
 
     public TopicRuleAssetPropertyVariant getValue() {

@@ -6,14 +6,14 @@ package io.pulumi.awsnative.sagemaker.outputs;
 import io.pulumi.awsnative.sagemaker.outputs.UserProfileJupyterServerAppSettings;
 import io.pulumi.awsnative.sagemaker.outputs.UserProfileKernelGatewayAppSettings;
 import io.pulumi.awsnative.sagemaker.outputs.UserProfileSharingSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserProfileUserSettings {
     /**
      * The user profile Amazon Resource Name (ARN).
@@ -41,13 +41,13 @@ public final class UserProfileUserSettings {
      */
     private final @Nullable UserProfileSharingSettings sharingSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserProfileUserSettings(
-        @OutputCustomType.Parameter("executionRole") @Nullable String executionRole,
-        @OutputCustomType.Parameter("jupyterServerAppSettings") @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings,
-        @OutputCustomType.Parameter("kernelGatewayAppSettings") @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
-        @OutputCustomType.Parameter("sharingSettings") @Nullable UserProfileSharingSettings sharingSettings) {
+        @CustomType.Parameter("executionRole") @Nullable String executionRole,
+        @CustomType.Parameter("jupyterServerAppSettings") @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings,
+        @CustomType.Parameter("kernelGatewayAppSettings") @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @CustomType.Parameter("sharingSettings") @Nullable UserProfileSharingSettings sharingSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;

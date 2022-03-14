@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionMountPoint {
     private final @Nullable String containerPath;
     private final @Nullable Boolean readOnly;
     private final @Nullable String sourceVolume;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionMountPoint(
-        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("sourceVolume") @Nullable String sourceVolume) {
+        @CustomType.Parameter("containerPath") @Nullable String containerPath,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("sourceVolume") @Nullable String sourceVolume) {
         this.containerPath = containerPath;
         this.readOnly = readOnly;
         this.sourceVolume = sourceVolume;

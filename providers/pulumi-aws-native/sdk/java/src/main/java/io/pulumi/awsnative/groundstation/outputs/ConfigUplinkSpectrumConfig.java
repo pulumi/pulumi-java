@@ -5,20 +5,20 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigPolarization;
 import io.pulumi.awsnative.groundstation.outputs.ConfigFrequency;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigUplinkSpectrumConfig {
     private final @Nullable ConfigFrequency centerFrequency;
     private final @Nullable ConfigPolarization polarization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigUplinkSpectrumConfig(
-        @OutputCustomType.Parameter("centerFrequency") @Nullable ConfigFrequency centerFrequency,
-        @OutputCustomType.Parameter("polarization") @Nullable ConfigPolarization polarization) {
+        @CustomType.Parameter("centerFrequency") @Nullable ConfigFrequency centerFrequency,
+        @CustomType.Parameter("polarization") @Nullable ConfigPolarization polarization) {
         this.centerFrequency = centerFrequency;
         this.polarization = polarization;
     }

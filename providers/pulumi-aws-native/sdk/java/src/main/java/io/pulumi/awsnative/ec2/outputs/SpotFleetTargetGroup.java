@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetTargetGroup {
     private final String arn;
 
-    @OutputCustomType.Constructor
-    private SpotFleetTargetGroup(@OutputCustomType.Parameter("arn") String arn) {
+    @CustomType.Constructor
+    private SpotFleetTargetGroup(@CustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 

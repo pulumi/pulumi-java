@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * The Access Key portion of the credentials.
      * 
      */
-    @InputImport(name="accessKeyId", required=true)
+    @Import(name="accessKeyId", required=true)
       private final Output<String> accessKeyId;
 
     public Output<String> getAccessKeyId() {
@@ -28,7 +28,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * The encryption keys used to encrypt data.
      * 
      */
-    @InputImport(name="datakey", required=true)
+    @Import(name="datakey", required=true)
       private final Output<String> datakey;
 
     public Output<String> getDatakey() {
@@ -39,7 +39,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * The secret key used to sign requests.
      * 
      */
-    @InputImport(name="secretAccessKey", required=true)
+    @Import(name="secretAccessKey", required=true)
       private final Output<String> secretAccessKey;
 
     public Output<String> getSecretAccessKey() {
@@ -50,7 +50,7 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
      * The identiﬁer for the user.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

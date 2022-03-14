@@ -6,14 +6,14 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationTaskType;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTaskPropertiesMap;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationTask {
     private final @Nullable IntegrationConnectorOperator connectorOperator;
     private final @Nullable String destinationField;
@@ -21,13 +21,13 @@ public final class IntegrationTask {
     private final @Nullable List<IntegrationTaskPropertiesMap> taskProperties;
     private final IntegrationTaskType taskType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationTask(
-        @OutputCustomType.Parameter("connectorOperator") @Nullable IntegrationConnectorOperator connectorOperator,
-        @OutputCustomType.Parameter("destinationField") @Nullable String destinationField,
-        @OutputCustomType.Parameter("sourceFields") List<String> sourceFields,
-        @OutputCustomType.Parameter("taskProperties") @Nullable List<IntegrationTaskPropertiesMap> taskProperties,
-        @OutputCustomType.Parameter("taskType") IntegrationTaskType taskType) {
+        @CustomType.Parameter("connectorOperator") @Nullable IntegrationConnectorOperator connectorOperator,
+        @CustomType.Parameter("destinationField") @Nullable String destinationField,
+        @CustomType.Parameter("sourceFields") List<String> sourceFields,
+        @CustomType.Parameter("taskProperties") @Nullable List<IntegrationTaskPropertiesMap> taskProperties,
+        @CustomType.Parameter("taskType") IntegrationTaskType taskType) {
         this.connectorOperator = connectorOperator;
         this.destinationField = destinationField;
         this.sourceFields = sourceFields;

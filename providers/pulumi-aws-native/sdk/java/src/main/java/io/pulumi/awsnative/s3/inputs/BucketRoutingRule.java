@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketRedirectRule;
 import io.pulumi.awsnative.s3.inputs.BucketRoutingRuleCondition;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,14 +23,14 @@ public final class BucketRoutingRule extends io.pulumi.resources.InvokeArgs {
      * Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
      * 
      */
-    @InputImport(name="redirectRule", required=true)
+    @Import(name="redirectRule", required=true)
       private final BucketRedirectRule redirectRule;
 
     public BucketRedirectRule getRedirectRule() {
         return this.redirectRule;
     }
 
-    @InputImport(name="routingRuleCondition")
+    @Import(name="routingRuleCondition")
       private final @Nullable BucketRoutingRuleCondition routingRuleCondition;
 
     public Optional<BucketRoutingRuleCondition> getRoutingRuleCondition() {

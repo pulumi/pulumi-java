@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.signer.outputs;
 
 import io.pulumi.awsnative.signer.enums.SigningProfileSignatureValidityPeriodType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SigningProfileSignatureValidityPeriod {
     private final @Nullable SigningProfileSignatureValidityPeriodType type;
     private final @Nullable Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SigningProfileSignatureValidityPeriod(
-        @OutputCustomType.Parameter("type") @Nullable SigningProfileSignatureValidityPeriodType type,
-        @OutputCustomType.Parameter("value") @Nullable Integer value) {
+        @CustomType.Parameter("type") @Nullable SigningProfileSignatureValidityPeriodType type,
+        @CustomType.Parameter("value") @Nullable Integer value) {
         this.type = type;
         this.value = value;
     }

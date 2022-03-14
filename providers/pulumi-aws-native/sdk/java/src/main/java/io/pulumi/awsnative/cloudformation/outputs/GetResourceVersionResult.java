@@ -5,14 +5,14 @@ package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.ResourceVersionProvisioningType;
 import io.pulumi.awsnative.cloudformation.enums.ResourceVersionVisibility;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the type, here the ResourceVersion. This is used to uniquely identify a ResourceVersion resource
@@ -51,14 +51,14 @@ public final class GetResourceVersionResult {
      */
     private final @Nullable ResourceVersionVisibility visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceVersionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
-        @OutputCustomType.Parameter("provisioningType") @Nullable ResourceVersionProvisioningType provisioningType,
-        @OutputCustomType.Parameter("typeArn") @Nullable String typeArn,
-        @OutputCustomType.Parameter("versionId") @Nullable String versionId,
-        @OutputCustomType.Parameter("visibility") @Nullable ResourceVersionVisibility visibility) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
+        @CustomType.Parameter("provisioningType") @Nullable ResourceVersionProvisioningType provisioningType,
+        @CustomType.Parameter("typeArn") @Nullable String typeArn,
+        @CustomType.Parameter("versionId") @Nullable String versionId,
+        @CustomType.Parameter("visibility") @Nullable ResourceVersionVisibility visibility) {
         this.arn = arn;
         this.isDefaultVersion = isDefaultVersion;
         this.provisioningType = provisioningType;

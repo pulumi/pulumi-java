@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticache.inputs;
 
 import io.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupReshardingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * The replication group id of the Global Datastore member.
      * 
      */
-    @InputImport(name="replicationGroupId")
+    @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
 
     public Output<String> getReplicationGroupId() {
@@ -31,7 +31,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * The AWS region of the Global Datastore member.
      * 
      */
-    @InputImport(name="replicationGroupRegion")
+    @Import(name="replicationGroupRegion")
       private final @Nullable Output<String> replicationGroupRegion;
 
     public Output<String> getReplicationGroupRegion() {
@@ -42,7 +42,7 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster.
      * 
      */
-    @InputImport(name="reshardingConfigurations")
+    @Import(name="reshardingConfigurations")
       private final @Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
 
     public Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> getReshardingConfigurations() {

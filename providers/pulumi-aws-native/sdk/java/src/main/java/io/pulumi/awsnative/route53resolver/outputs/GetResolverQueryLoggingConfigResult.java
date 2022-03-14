@@ -5,14 +5,14 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigShareStatus;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverQueryLoggingConfigResult {
     /**
      * Arn
@@ -55,16 +55,16 @@ public final class GetResolverQueryLoggingConfigResult {
      */
     private final @Nullable ResolverQueryLoggingConfigStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResolverQueryLoggingConfigResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("associationCount") @Nullable Integer associationCount,
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
-        @OutputCustomType.Parameter("shareStatus") @Nullable ResolverQueryLoggingConfigShareStatus shareStatus,
-        @OutputCustomType.Parameter("status") @Nullable ResolverQueryLoggingConfigStatus status) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("associationCount") @Nullable Integer associationCount,
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ownerId") @Nullable String ownerId,
+        @CustomType.Parameter("shareStatus") @Nullable ResolverQueryLoggingConfigShareStatus shareStatus,
+        @CustomType.Parameter("status") @Nullable ResolverQueryLoggingConfigStatus status) {
         this.arn = arn;
         this.associationCount = associationCount;
         this.creationTime = creationTime;

@@ -4,20 +4,20 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRulePutAssetPropertyValueEntry;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleIotSiteWiseAction {
     private final List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleIotSiteWiseAction(
-        @OutputCustomType.Parameter("putAssetPropertyValueEntries") List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("putAssetPropertyValueEntries") List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.putAssetPropertyValueEntries = putAssetPropertyValueEntries;
         this.roleArn = roleArn;
     }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +23,14 @@ public final class OriginEndpointDashEncryptionArgs extends io.pulumi.resources.
      * Time (in seconds) between each encryption key rotation.
      * 
      */
-    @InputImport(name="keyRotationIntervalSeconds")
+    @Import(name="keyRotationIntervalSeconds")
       private final @Nullable Output<Integer> keyRotationIntervalSeconds;
 
     public Output<Integer> getKeyRotationIntervalSeconds() {
         return this.keyRotationIntervalSeconds == null ? Output.empty() : this.keyRotationIntervalSeconds;
     }
 
-    @InputImport(name="spekeKeyProvider", required=true)
+    @Import(name="spekeKeyProvider", required=true)
       private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appstream;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appstream.ApplicationFleetAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,13 +17,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:appstream:ApplicationFleetAssociation")
 public class ApplicationFleetAssociation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="applicationArn", type=String.class, parameters={})
+    @Export(name="applicationArn", type=String.class, parameters={})
     private Output<String> applicationArn;
 
     public Output<String> getApplicationArn() {
         return this.applicationArn;
     }
-    @OutputExport(name="fleetName", type=String.class, parameters={})
+    @Export(name="fleetName", type=String.class, parameters={})
     private Output<String> fleetName;
 
     public Output<String> getFleetName() {

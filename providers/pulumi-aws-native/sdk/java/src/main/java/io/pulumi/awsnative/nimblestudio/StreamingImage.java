@@ -8,7 +8,7 @@ import io.pulumi.awsnative.nimblestudio.StreamingImageArgs;
 import io.pulumi.awsnative.nimblestudio.outputs.StreamingImageEncryptionConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StreamingImageTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * <p>A human-readable description of the streaming image.</p>
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -38,7 +38,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * <p>The ID of an EC2 machine image with which to create this streaming image.</p>
      * 
      */
-    @OutputExport(name="ec2ImageId", type=String.class, parameters={})
+    @Export(name="ec2ImageId", type=String.class, parameters={})
     private Output<String> ec2ImageId;
 
     /**
@@ -48,7 +48,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
     public Output<String> getEc2ImageId() {
         return this.ec2ImageId;
     }
-    @OutputExport(name="encryptionConfiguration", type=StreamingImageEncryptionConfiguration.class, parameters={})
+    @Export(name="encryptionConfiguration", type=StreamingImageEncryptionConfiguration.class, parameters={})
     private Output<StreamingImageEncryptionConfiguration> encryptionConfiguration;
 
     public Output<StreamingImageEncryptionConfiguration> getEncryptionConfiguration() {
@@ -58,7 +58,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * <p>The list of EULAs that must be accepted before a Streaming Session can be started using this streaming image.</p>
      * 
      */
-    @OutputExport(name="eulaIds", type=List.class, parameters={String.class})
+    @Export(name="eulaIds", type=List.class, parameters={String.class})
     private Output<List<String>> eulaIds;
 
     /**
@@ -72,7 +72,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * <p>A friendly name for a streaming image resource.</p>
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -86,7 +86,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * <p>The owner of the streaming image, either the studioId that contains the streaming image, or 'amazon' for images that are provided by Amazon Nimble Studio.</p>
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
@@ -100,7 +100,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * <p>The platform of the streaming image, either WINDOWS or LINUX.</p>
      * 
      */
-    @OutputExport(name="platform", type=String.class, parameters={})
+    @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
     /**
@@ -110,7 +110,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
     public Output<String> getPlatform() {
         return this.platform;
     }
-    @OutputExport(name="streamingImageId", type=String.class, parameters={})
+    @Export(name="streamingImageId", type=String.class, parameters={})
     private Output<String> streamingImageId;
 
     public Output<String> getStreamingImageId() {
@@ -120,7 +120,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
      * <p>The studioId. </p>
      * 
      */
-    @OutputExport(name="studioId", type=String.class, parameters={})
+    @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
@@ -130,7 +130,7 @@ public class StreamingImage extends io.pulumi.resources.CustomResource {
     public Output<String> getStudioId() {
         return this.studioId;
     }
-    @OutputExport(name="tags", type=StreamingImageTags.class, parameters={})
+    @Export(name="tags", type=StreamingImageTags.class, parameters={})
     private Output</* @Nullable */ StreamingImageTags> tags;
 
     public Output</* @Nullable */ StreamingImageTags> getTags() {

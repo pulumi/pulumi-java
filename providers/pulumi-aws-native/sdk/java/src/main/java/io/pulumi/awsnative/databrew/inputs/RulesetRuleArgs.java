@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.RulesetColumnSelectorArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetSubstitutionValueArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetThresholdArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,21 +23,21 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesetRuleArgs Empty = new RulesetRuleArgs();
 
-    @InputImport(name="checkExpression", required=true)
+    @Import(name="checkExpression", required=true)
       private final Output<String> checkExpression;
 
     public Output<String> getCheckExpression() {
         return this.checkExpression;
     }
 
-    @InputImport(name="columnSelectors")
+    @Import(name="columnSelectors")
       private final @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors;
 
     public Output<List<RulesetColumnSelectorArgs>> getColumnSelectors() {
         return this.columnSelectors == null ? Output.empty() : this.columnSelectors;
     }
 
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -48,21 +48,21 @@ public final class RulesetRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the rule
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="substitutionMap")
+    @Import(name="substitutionMap")
       private final @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap;
 
     public Output<List<RulesetSubstitutionValueArgs>> getSubstitutionMap() {
         return this.substitutionMap == null ? Output.empty() : this.substitutionMap;
     }
 
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Output<RulesetThresholdArgs> threshold;
 
     public Output<RulesetThresholdArgs> getThreshold() {

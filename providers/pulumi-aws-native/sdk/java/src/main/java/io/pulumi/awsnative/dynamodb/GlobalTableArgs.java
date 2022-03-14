@@ -13,7 +13,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableStreamSpecificationArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableTimeToLiveSpecificationArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableWriteProvisionedThroughputSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,77 +24,77 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalTableArgs Empty = new GlobalTableArgs();
 
-    @InputImport(name="attributeDefinitions", required=true)
+    @Import(name="attributeDefinitions", required=true)
       private final Output<List<GlobalTableAttributeDefinitionArgs>> attributeDefinitions;
 
     public Output<List<GlobalTableAttributeDefinitionArgs>> getAttributeDefinitions() {
         return this.attributeDefinitions;
     }
 
-    @InputImport(name="billingMode")
+    @Import(name="billingMode")
       private final @Nullable Output<String> billingMode;
 
     public Output<String> getBillingMode() {
         return this.billingMode == null ? Output.empty() : this.billingMode;
     }
 
-    @InputImport(name="globalSecondaryIndexes")
+    @Import(name="globalSecondaryIndexes")
       private final @Nullable Output<List<GlobalTableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
     public Output<List<GlobalTableGlobalSecondaryIndexArgs>> getGlobalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? Output.empty() : this.globalSecondaryIndexes;
     }
 
-    @InputImport(name="keySchema", required=true)
+    @Import(name="keySchema", required=true)
       private final Output<List<GlobalTableKeySchemaArgs>> keySchema;
 
     public Output<List<GlobalTableKeySchemaArgs>> getKeySchema() {
         return this.keySchema;
     }
 
-    @InputImport(name="localSecondaryIndexes")
+    @Import(name="localSecondaryIndexes")
       private final @Nullable Output<List<GlobalTableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
     public Output<List<GlobalTableLocalSecondaryIndexArgs>> getLocalSecondaryIndexes() {
         return this.localSecondaryIndexes == null ? Output.empty() : this.localSecondaryIndexes;
     }
 
-    @InputImport(name="replicas", required=true)
+    @Import(name="replicas", required=true)
       private final Output<List<GlobalTableReplicaSpecificationArgs>> replicas;
 
     public Output<List<GlobalTableReplicaSpecificationArgs>> getReplicas() {
         return this.replicas;
     }
 
-    @InputImport(name="sSESpecification")
+    @Import(name="sSESpecification")
       private final @Nullable Output<GlobalTableSSESpecificationArgs> sSESpecification;
 
     public Output<GlobalTableSSESpecificationArgs> getSSESpecification() {
         return this.sSESpecification == null ? Output.empty() : this.sSESpecification;
     }
 
-    @InputImport(name="streamSpecification")
+    @Import(name="streamSpecification")
       private final @Nullable Output<GlobalTableStreamSpecificationArgs> streamSpecification;
 
     public Output<GlobalTableStreamSpecificationArgs> getStreamSpecification() {
         return this.streamSpecification == null ? Output.empty() : this.streamSpecification;
     }
 
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
         return this.tableName == null ? Output.empty() : this.tableName;
     }
 
-    @InputImport(name="timeToLiveSpecification")
+    @Import(name="timeToLiveSpecification")
       private final @Nullable Output<GlobalTableTimeToLiveSpecificationArgs> timeToLiveSpecification;
 
     public Output<GlobalTableTimeToLiveSpecificationArgs> getTimeToLiveSpecification() {
         return this.timeToLiveSpecification == null ? Output.empty() : this.timeToLiveSpecification;
     }
 
-    @InputImport(name="writeProvisionedThroughputSettings")
+    @Import(name="writeProvisionedThroughputSettings")
       private final @Nullable Output<GlobalTableWriteProvisionedThroughputSettingsArgs> writeProvisionedThroughputSettings;
 
     public Output<GlobalTableWriteProvisionedThroughputSettingsArgs> getWriteProvisionedThroughputSettings() {

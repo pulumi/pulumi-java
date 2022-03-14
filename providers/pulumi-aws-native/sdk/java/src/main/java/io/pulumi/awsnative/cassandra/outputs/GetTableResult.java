@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cassandra.outputs.TableBillingMode;
 import io.pulumi.awsnative.cassandra.outputs.TableColumn;
 import io.pulumi.awsnative.cassandra.outputs.TableEncryptionSpecification;
 import io.pulumi.awsnative.cassandra.outputs.TableTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTableResult {
     private final @Nullable TableBillingMode billingMode;
     /**
@@ -40,14 +40,14 @@ public final class GetTableResult {
      */
     private final @Nullable List<TableTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableResult(
-        @OutputCustomType.Parameter("billingMode") @Nullable TableBillingMode billingMode,
-        @OutputCustomType.Parameter("defaultTimeToLive") @Nullable Integer defaultTimeToLive,
-        @OutputCustomType.Parameter("encryptionSpecification") @Nullable TableEncryptionSpecification encryptionSpecification,
-        @OutputCustomType.Parameter("pointInTimeRecoveryEnabled") @Nullable Boolean pointInTimeRecoveryEnabled,
-        @OutputCustomType.Parameter("regularColumns") @Nullable List<TableColumn> regularColumns,
-        @OutputCustomType.Parameter("tags") @Nullable List<TableTag> tags) {
+        @CustomType.Parameter("billingMode") @Nullable TableBillingMode billingMode,
+        @CustomType.Parameter("defaultTimeToLive") @Nullable Integer defaultTimeToLive,
+        @CustomType.Parameter("encryptionSpecification") @Nullable TableEncryptionSpecification encryptionSpecification,
+        @CustomType.Parameter("pointInTimeRecoveryEnabled") @Nullable Boolean pointInTimeRecoveryEnabled,
+        @CustomType.Parameter("regularColumns") @Nullable List<TableColumn> regularColumns,
+        @CustomType.Parameter("tags") @Nullable List<TableTag> tags) {
         this.billingMode = billingMode;
         this.defaultTimeToLive = defaultTimeToLive;
         this.encryptionSpecification = encryptionSpecification;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.ThemeDataColorPalette;
 import io.pulumi.awsnative.quicksight.inputs.ThemeSheetStyle;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTypography;
 import io.pulumi.awsnative.quicksight.inputs.ThemeUIColorPalette;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,28 +22,28 @@ public final class ThemeConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeConfiguration Empty = new ThemeConfiguration();
 
-    @InputImport(name="dataColorPalette")
+    @Import(name="dataColorPalette")
       private final @Nullable ThemeDataColorPalette dataColorPalette;
 
     public Optional<ThemeDataColorPalette> getDataColorPalette() {
         return this.dataColorPalette == null ? Optional.empty() : Optional.ofNullable(this.dataColorPalette);
     }
 
-    @InputImport(name="sheet")
+    @Import(name="sheet")
       private final @Nullable ThemeSheetStyle sheet;
 
     public Optional<ThemeSheetStyle> getSheet() {
         return this.sheet == null ? Optional.empty() : Optional.ofNullable(this.sheet);
     }
 
-    @InputImport(name="typography")
+    @Import(name="typography")
       private final @Nullable ThemeTypography typography;
 
     public Optional<ThemeTypography> getTypography() {
         return this.typography == null ? Optional.empty() : Optional.ofNullable(this.typography);
     }
 
-    @InputImport(name="uIColorPalette")
+    @Import(name="uIColorPalette")
       private final @Nullable ThemeUIColorPalette uIColorPalette;
 
     public Optional<ThemeUIColorPalette> getUIColorPalette() {

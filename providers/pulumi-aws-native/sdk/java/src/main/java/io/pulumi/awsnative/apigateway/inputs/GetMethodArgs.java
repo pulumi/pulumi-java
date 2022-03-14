@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
      * The backend system that the method calls when it receives a request.
      * 
      */
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final String httpMethod;
 
     public String getHttpMethod() {
@@ -27,7 +27,7 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of an API Gateway resource.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {
@@ -38,7 +38,7 @@ public final class GetMethodArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the RestApi resource in which API Gateway creates the method.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {

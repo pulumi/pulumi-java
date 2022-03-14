@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.qldb.outputs;
 
 import io.pulumi.awsnative.qldb.outputs.StreamTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamResult {
     private final @Nullable String arn;
     private final @Nullable String id;
@@ -21,11 +21,11 @@ public final class GetStreamResult {
      */
     private final @Nullable List<StreamTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
         this.arn = arn;
         this.id = id;
         this.tags = tags;

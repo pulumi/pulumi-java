@@ -9,7 +9,7 @@ import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeAdditionalInstanceCon
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeComponentConfiguration;
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeInstanceBlockDeviceMapping;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Specify additional settings and launch scripts for your build instances.
      * 
      */
-    @OutputExport(name="additionalInstanceConfiguration", type=ImageRecipeAdditionalInstanceConfiguration.class, parameters={})
+    @Export(name="additionalInstanceConfiguration", type=ImageRecipeAdditionalInstanceConfiguration.class, parameters={})
     private Output</* @Nullable */ ImageRecipeAdditionalInstanceConfiguration> additionalInstanceConfiguration;
 
     /**
@@ -40,7 +40,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -54,7 +54,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The block device mappings to apply when creating images from this recipe.
      * 
      */
-    @OutputExport(name="blockDeviceMappings", type=List.class, parameters={ImageRecipeInstanceBlockDeviceMapping.class})
+    @Export(name="blockDeviceMappings", type=List.class, parameters={ImageRecipeInstanceBlockDeviceMapping.class})
     private Output</* @Nullable */ List<ImageRecipeInstanceBlockDeviceMapping>> blockDeviceMappings;
 
     /**
@@ -68,7 +68,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The components of the image recipe.
      * 
      */
-    @OutputExport(name="components", type=List.class, parameters={ImageRecipeComponentConfiguration.class})
+    @Export(name="components", type=List.class, parameters={ImageRecipeComponentConfiguration.class})
     private Output<List<ImageRecipeComponentConfiguration>> components;
 
     /**
@@ -82,7 +82,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The description of the image recipe.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -96,7 +96,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The name of the image recipe.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The parent image of the image recipe.
      * 
      */
-    @OutputExport(name="parentImage", type=String.class, parameters={})
+    @Export(name="parentImage", type=String.class, parameters={})
     private Output<String> parentImage;
 
     /**
@@ -124,7 +124,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The tags of the image recipe.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
@@ -138,7 +138,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The version of the image recipe.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
@@ -152,7 +152,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The working directory to be used during build and test workflows.
      * 
      */
-    @OutputExport(name="workingDirectory", type=String.class, parameters={})
+    @Export(name="workingDirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> workingDirectory;
 
     /**

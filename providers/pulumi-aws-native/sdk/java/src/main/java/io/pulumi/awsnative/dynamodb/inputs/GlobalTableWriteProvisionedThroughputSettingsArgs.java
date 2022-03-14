@@ -5,7 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableCapacityAutoScalingSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class GlobalTableWriteProvisionedThroughputSettingsArgs extends io.
 
     public static final GlobalTableWriteProvisionedThroughputSettingsArgs Empty = new GlobalTableWriteProvisionedThroughputSettingsArgs();
 
-    @InputImport(name="writeCapacityAutoScalingSettings")
+    @Import(name="writeCapacityAutoScalingSettings")
       private final @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> writeCapacityAutoScalingSettings;
 
     public Output<GlobalTableCapacityAutoScalingSettingsArgs> getWriteCapacityAutoScalingSettings() {

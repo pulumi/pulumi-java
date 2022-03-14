@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.apprunner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceEncryptionConfiguration {
     /**
      * The KMS Key
@@ -15,8 +15,8 @@ public final class ServiceEncryptionConfiguration {
      */
     private final String kmsKey;
 
-    @OutputCustomType.Constructor
-    private ServiceEncryptionConfiguration(@OutputCustomType.Parameter("kmsKey") String kmsKey) {
+    @CustomType.Constructor
+    private ServiceEncryptionConfiguration(@CustomType.Parameter("kmsKey") String kmsKey) {
         this.kmsKey = kmsKey;
     }
 

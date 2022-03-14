@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetGlueConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
 
     public static final DatasetS3DestinationConfigurationArgs Empty = new DatasetS3DestinationConfigurationArgs();
 
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
         return this.bucket;
     }
 
-    @InputImport(name="glueConfiguration")
+    @Import(name="glueConfiguration")
       private final @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration;
 
     public Output<DatasetGlueConfigurationArgs> getGlueConfiguration() {
         return this.glueConfiguration == null ? Output.empty() : this.glueConfiguration;
     }
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
         return this.key;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rds.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDBProxyTargetGroupArgs extends io.pulumi.resources.InvokeA
      * The Amazon Resource Name (ARN) representing the target group.
      * 
      */
-    @InputImport(name="targetGroupArn", required=true)
+    @Import(name="targetGroupArn", required=true)
       private final String targetGroupArn;
 
     public String getTargetGroupArn() {

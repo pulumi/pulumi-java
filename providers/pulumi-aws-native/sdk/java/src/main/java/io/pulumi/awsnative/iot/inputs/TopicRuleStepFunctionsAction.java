@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class TopicRuleStepFunctionsAction extends io.pulumi.resources.Invo
 
     public static final TopicRuleStepFunctionsAction Empty = new TopicRuleStepFunctionsAction();
 
-    @InputImport(name="executionNamePrefix")
+    @Import(name="executionNamePrefix")
       private final @Nullable String executionNamePrefix;
 
     public Optional<String> getExecutionNamePrefix() {
         return this.executionNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.executionNamePrefix);
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stateMachineName", required=true)
+    @Import(name="stateMachineName", required=true)
       private final String stateMachineName;
 
     public String getStateMachineName() {

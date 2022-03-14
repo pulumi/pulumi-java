@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.configuration.OrganizationConformancePackArgs;
 import io.pulumi.awsnative.configuration.outputs.OrganizationConformancePackConformancePackInputParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * A list of ConformancePackInputParameter objects.
      * 
      */
-    @OutputExport(name="conformancePackInputParameters", type=List.class, parameters={OrganizationConformancePackConformancePackInputParameter.class})
+    @Export(name="conformancePackInputParameters", type=List.class, parameters={OrganizationConformancePackConformancePackInputParameter.class})
     private Output</* @Nullable */ List<OrganizationConformancePackConformancePackInputParameter>> conformancePackInputParameters;
 
     /**
@@ -39,7 +39,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
-    @OutputExport(name="deliveryS3Bucket", type=String.class, parameters={})
+    @Export(name="deliveryS3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3Bucket;
 
     /**
@@ -53,7 +53,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * The prefix for the delivery S3 bucket.
      * 
      */
-    @OutputExport(name="deliveryS3KeyPrefix", type=String.class, parameters={})
+    @Export(name="deliveryS3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3KeyPrefix;
 
     /**
@@ -67,7 +67,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
      * 
      */
-    @OutputExport(name="excludedAccounts", type=List.class, parameters={String.class})
+    @Export(name="excludedAccounts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludedAccounts;
 
     /**
@@ -81,7 +81,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * The name of the organization conformance pack.
      * 
      */
-    @OutputExport(name="organizationConformancePackName", type=String.class, parameters={})
+    @Export(name="organizationConformancePackName", type=String.class, parameters={})
     private Output<String> organizationConformancePackName;
 
     /**
@@ -95,7 +95,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * A string containing full conformance pack template body.
      * 
      */
-    @OutputExport(name="templateBody", type=String.class, parameters={})
+    @Export(name="templateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateBody;
 
     /**
@@ -109,7 +109,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * Location of file containing the template body.
      * 
      */
-    @OutputExport(name="templateS3Uri", type=String.class, parameters={})
+    @Export(name="templateS3Uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateS3Uri;
 
     /**

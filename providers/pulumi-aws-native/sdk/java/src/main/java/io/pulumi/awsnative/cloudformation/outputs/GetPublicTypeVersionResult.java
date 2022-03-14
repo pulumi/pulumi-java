@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPublicTypeVersionResult {
     /**
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
@@ -27,11 +27,11 @@ public final class GetPublicTypeVersionResult {
      */
     private final @Nullable String typeVersionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPublicTypeVersionResult(
-        @OutputCustomType.Parameter("publicTypeArn") @Nullable String publicTypeArn,
-        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
-        @OutputCustomType.Parameter("typeVersionArn") @Nullable String typeVersionArn) {
+        @CustomType.Parameter("publicTypeArn") @Nullable String publicTypeArn,
+        @CustomType.Parameter("publisherId") @Nullable String publisherId,
+        @CustomType.Parameter("typeVersionArn") @Nullable String typeVersionArn) {
         this.publicTypeArn = publicTypeArn;
         this.publisherId = publisherId;
         this.typeVersionArn = typeVersionArn;

@@ -4,20 +4,20 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreTimestampPartition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastorePartition {
     private final @Nullable DatastorePartition partition;
     private final @Nullable DatastoreTimestampPartition timestampPartition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatastorePartition(
-        @OutputCustomType.Parameter("partition") @Nullable DatastorePartition partition,
-        @OutputCustomType.Parameter("timestampPartition") @Nullable DatastoreTimestampPartition timestampPartition) {
+        @CustomType.Parameter("partition") @Nullable DatastorePartition partition,
+        @CustomType.Parameter("timestampPartition") @Nullable DatastoreTimestampPartition timestampPartition) {
         this.partition = partition;
         this.timestampPartition = timestampPartition;
     }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.networkfirewall.enums.RuleGroupStatefulRuleAction;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupHeaderArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleOptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,21 +16,21 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
 
     public static final RuleGroupStatefulRuleArgs Empty = new RuleGroupStatefulRuleArgs();
 
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<RuleGroupStatefulRuleAction> action;
 
     public Output<RuleGroupStatefulRuleAction> getAction() {
         return this.action;
     }
 
-    @InputImport(name="header", required=true)
+    @Import(name="header", required=true)
       private final Output<RuleGroupHeaderArgs> header;
 
     public Output<RuleGroupHeaderArgs> getHeader() {
         return this.header;
     }
 
-    @InputImport(name="ruleOptions", required=true)
+    @Import(name="ruleOptions", required=true)
       private final Output<List<RuleGroupRuleOptionArgs>> ruleOptions;
 
     public Output<List<RuleGroupRuleOptionArgs>> getRuleOptions() {

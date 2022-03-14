@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeoutConfigProperties {
     private final Integer inProgressTimeoutInMinutes;
 
-    @OutputCustomType.Constructor
-    private TimeoutConfigProperties(@OutputCustomType.Parameter("inProgressTimeoutInMinutes") Integer inProgressTimeoutInMinutes) {
+    @CustomType.Constructor
+    private TimeoutConfigProperties(@CustomType.Parameter("inProgressTimeoutInMinutes") Integer inProgressTimeoutInMinutes) {
         this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
     }
 

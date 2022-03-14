@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyCookiesConfigArg
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyHeadersConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,35 +17,35 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
 
     public static final OriginRequestPolicyConfigArgs Empty = new OriginRequestPolicyConfigArgs();
 
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
         return this.comment == null ? Output.empty() : this.comment;
     }
 
-    @InputImport(name="cookiesConfig", required=true)
+    @Import(name="cookiesConfig", required=true)
       private final Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
     public Output<OriginRequestPolicyCookiesConfigArgs> getCookiesConfig() {
         return this.cookiesConfig;
     }
 
-    @InputImport(name="headersConfig", required=true)
+    @Import(name="headersConfig", required=true)
       private final Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
     public Output<OriginRequestPolicyHeadersConfigArgs> getHeadersConfig() {
         return this.headersConfig;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="queryStringsConfig", required=true)
+    @Import(name="queryStringsConfig", required=true)
       private final Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
     public Output<OriginRequestPolicyQueryStringsConfigArgs> getQueryStringsConfig() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.awsnative.transfer.inputs.WorkflowS3InputFileLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
 
     public static final WorkflowInputFileLocationArgs Empty = new WorkflowInputFileLocationArgs();
 
-    @InputImport(name="s3FileLocation")
+    @Import(name="s3FileLocation")
       private final @Nullable Output<WorkflowS3InputFileLocationArgs> s3FileLocation;
 
     public Output<WorkflowS3InputFileLocationArgs> getS3FileLocation() {

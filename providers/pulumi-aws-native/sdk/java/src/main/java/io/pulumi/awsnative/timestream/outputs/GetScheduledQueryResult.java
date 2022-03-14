@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduledQueryResult {
     private final @Nullable String arn;
     /**
@@ -56,18 +56,18 @@ public final class GetScheduledQueryResult {
     private final @Nullable String sQTargetConfiguration;
     private final @Nullable List<ScheduledQueryTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduledQueryResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("sQErrorReportConfiguration") @Nullable String sQErrorReportConfiguration,
-        @OutputCustomType.Parameter("sQKmsKeyId") @Nullable String sQKmsKeyId,
-        @OutputCustomType.Parameter("sQName") @Nullable String sQName,
-        @OutputCustomType.Parameter("sQNotificationConfiguration") @Nullable String sQNotificationConfiguration,
-        @OutputCustomType.Parameter("sQQueryString") @Nullable String sQQueryString,
-        @OutputCustomType.Parameter("sQScheduleConfiguration") @Nullable String sQScheduleConfiguration,
-        @OutputCustomType.Parameter("sQScheduledQueryExecutionRoleArn") @Nullable String sQScheduledQueryExecutionRoleArn,
-        @OutputCustomType.Parameter("sQTargetConfiguration") @Nullable String sQTargetConfiguration,
-        @OutputCustomType.Parameter("tags") @Nullable List<ScheduledQueryTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("sQErrorReportConfiguration") @Nullable String sQErrorReportConfiguration,
+        @CustomType.Parameter("sQKmsKeyId") @Nullable String sQKmsKeyId,
+        @CustomType.Parameter("sQName") @Nullable String sQName,
+        @CustomType.Parameter("sQNotificationConfiguration") @Nullable String sQNotificationConfiguration,
+        @CustomType.Parameter("sQQueryString") @Nullable String sQQueryString,
+        @CustomType.Parameter("sQScheduleConfiguration") @Nullable String sQScheduleConfiguration,
+        @CustomType.Parameter("sQScheduledQueryExecutionRoleArn") @Nullable String sQScheduledQueryExecutionRoleArn,
+        @CustomType.Parameter("sQTargetConfiguration") @Nullable String sQTargetConfiguration,
+        @CustomType.Parameter("tags") @Nullable List<ScheduledQueryTag> tags) {
         this.arn = arn;
         this.sQErrorReportConfiguration = sQErrorReportConfiguration;
         this.sQKmsKeyId = sQKmsKeyId;

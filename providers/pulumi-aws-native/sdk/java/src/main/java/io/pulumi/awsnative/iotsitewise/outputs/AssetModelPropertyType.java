@@ -7,24 +7,24 @@ import io.pulumi.awsnative.iotsitewise.enums.AssetModelTypeName;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelAttribute;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelMetric;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelTransform;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelPropertyType {
     private final @Nullable AssetModelAttribute attribute;
     private final @Nullable AssetModelMetric metric;
     private final @Nullable AssetModelTransform transform;
     private final AssetModelTypeName typeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelPropertyType(
-        @OutputCustomType.Parameter("attribute") @Nullable AssetModelAttribute attribute,
-        @OutputCustomType.Parameter("metric") @Nullable AssetModelMetric metric,
-        @OutputCustomType.Parameter("transform") @Nullable AssetModelTransform transform,
-        @OutputCustomType.Parameter("typeName") AssetModelTypeName typeName) {
+        @CustomType.Parameter("attribute") @Nullable AssetModelAttribute attribute,
+        @CustomType.Parameter("metric") @Nullable AssetModelMetric metric,
+        @CustomType.Parameter("transform") @Nullable AssetModelTransform transform,
+        @CustomType.Parameter("typeName") AssetModelTypeName typeName) {
         this.attribute = attribute;
         this.metric = metric;
         this.transform = transform;

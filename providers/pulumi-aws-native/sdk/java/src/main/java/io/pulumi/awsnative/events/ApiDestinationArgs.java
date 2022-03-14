@@ -5,7 +5,7 @@ package io.pulumi.awsnative.events;
 
 import io.pulumi.awsnative.events.enums.ApiDestinationHttpMethod;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * The arn of the connection.
      * 
      */
-    @InputImport(name="connectionArn", required=true)
+    @Import(name="connectionArn", required=true)
       private final Output<String> connectionArn;
 
     public Output<String> getConnectionArn() {
         return this.connectionArn;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final Output<ApiDestinationHttpMethod> httpMethod;
 
     public Output<ApiDestinationHttpMethod> getHttpMethod() {
@@ -45,14 +45,14 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Url endpoint to invoke.
      * 
      */
-    @InputImport(name="invocationEndpoint", required=true)
+    @Import(name="invocationEndpoint", required=true)
       private final Output<String> invocationEndpoint;
 
     public Output<String> getInvocationEndpoint() {
         return this.invocationEndpoint;
     }
 
-    @InputImport(name="invocationRateLimitPerSecond")
+    @Import(name="invocationRateLimitPerSecond")
       private final @Nullable Output<Integer> invocationRateLimitPerSecond;
 
     public Output<Integer> getInvocationRateLimitPerSecond() {
@@ -63,7 +63,7 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the apiDestination.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

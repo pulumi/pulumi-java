@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * The type of encoding of the logs to be monitored.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable ApplicationLogEncoding encoding;
 
     public Optional<ApplicationLogEncoding> getEncoding() {
@@ -34,7 +34,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * The CloudWatch log group name to be associated to the monitored log.
      * 
      */
-    @InputImport(name="logGroupName")
+    @Import(name="logGroupName")
       private final @Nullable String logGroupName;
 
     public Optional<String> getLogGroupName() {
@@ -45,7 +45,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * The path of the logs to be monitored.
      * 
      */
-    @InputImport(name="logPath")
+    @Import(name="logPath")
       private final @Nullable String logPath;
 
     public Optional<String> getLogPath() {
@@ -56,7 +56,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * The log type decides the log patterns against which Application Insights analyzes the log.
      * 
      */
-    @InputImport(name="logType", required=true)
+    @Import(name="logType", required=true)
       private final String logType;
 
     public String getLogType() {
@@ -67,7 +67,7 @@ public final class ApplicationLog extends io.pulumi.resources.InvokeArgs {
      * The name of the log pattern set.
      * 
      */
-    @InputImport(name="patternSet")
+    @Import(name="patternSet")
       private final @Nullable String patternSet;
 
     public Optional<String> getPatternSet() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConformancePackArgs extends io.pulumi.resources.InvokeArgs
      * Name of the conformance pack which will be assigned as the unique identifier.
      * 
      */
-    @InputImport(name="conformancePackName", required=true)
+    @Import(name="conformancePackName", required=true)
       private final String conformancePackName;
 
     public String getConformancePackName() {

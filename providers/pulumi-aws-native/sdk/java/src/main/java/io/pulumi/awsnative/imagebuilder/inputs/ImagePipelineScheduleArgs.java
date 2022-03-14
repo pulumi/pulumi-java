@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ImagePipelineSchedulePipelineExecutionStartCondition;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ImagePipelineScheduleArgs extends io.pulumi.resources.Resourc
      * The condition configures when the pipeline should trigger a new image build.
      * 
      */
-    @InputImport(name="pipelineExecutionStartCondition")
+    @Import(name="pipelineExecutionStartCondition")
       private final @Nullable Output<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition;
 
     public Output<ImagePipelineSchedulePipelineExecutionStartCondition> getPipelineExecutionStartCondition() {
@@ -34,7 +34,7 @@ public final class ImagePipelineScheduleArgs extends io.pulumi.resources.Resourc
      * The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
      * 
      */
-    @InputImport(name="scheduleExpression")
+    @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.amplify.outputs;
 import io.pulumi.awsnative.amplify.outputs.AppCustomRule;
 import io.pulumi.awsnative.amplify.outputs.AppEnvironmentVariable;
 import io.pulumi.awsnative.amplify.outputs.AppTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppResult {
     private final @Nullable String appId;
     private final @Nullable String appName;
@@ -31,22 +31,22 @@ public final class GetAppResult {
     private final @Nullable String repository;
     private final @Nullable List<AppTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppResult(
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("appName") @Nullable String appName,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
-        @OutputCustomType.Parameter("customHeaders") @Nullable String customHeaders,
-        @OutputCustomType.Parameter("customRules") @Nullable List<AppCustomRule> customRules,
-        @OutputCustomType.Parameter("defaultDomain") @Nullable String defaultDomain,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enableBranchAutoDeletion") @Nullable Boolean enableBranchAutoDeletion,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable List<AppEnvironmentVariable> environmentVariables,
-        @OutputCustomType.Parameter("iAMServiceRole") @Nullable String iAMServiceRole,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("repository") @Nullable String repository,
-        @OutputCustomType.Parameter("tags") @Nullable List<AppTag> tags) {
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("appName") @Nullable String appName,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @CustomType.Parameter("customHeaders") @Nullable String customHeaders,
+        @CustomType.Parameter("customRules") @Nullable List<AppCustomRule> customRules,
+        @CustomType.Parameter("defaultDomain") @Nullable String defaultDomain,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enableBranchAutoDeletion") @Nullable Boolean enableBranchAutoDeletion,
+        @CustomType.Parameter("environmentVariables") @Nullable List<AppEnvironmentVariable> environmentVariables,
+        @CustomType.Parameter("iAMServiceRole") @Nullable String iAMServiceRole,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("repository") @Nullable String repository,
+        @CustomType.Parameter("tags") @Nullable List<AppTag> tags) {
         this.appId = appId;
         this.appName = appName;
         this.arn = arn;

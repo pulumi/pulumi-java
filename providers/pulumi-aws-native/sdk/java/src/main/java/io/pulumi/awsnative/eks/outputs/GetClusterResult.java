@@ -6,14 +6,14 @@ package io.pulumi.awsnative.eks.outputs;
 import io.pulumi.awsnative.eks.outputs.ClusterLogging;
 import io.pulumi.awsnative.eks.outputs.ClusterResourcesVpcConfig;
 import io.pulumi.awsnative.eks.outputs.ClusterTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
@@ -58,18 +58,18 @@ public final class GetClusterResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("certificateAuthorityData") @Nullable String certificateAuthorityData,
-        @OutputCustomType.Parameter("clusterSecurityGroupId") @Nullable String clusterSecurityGroupId,
-        @OutputCustomType.Parameter("encryptionConfigKeyArn") @Nullable String encryptionConfigKeyArn,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("logging") @Nullable ClusterLogging logging,
-        @OutputCustomType.Parameter("openIdConnectIssuerUrl") @Nullable String openIdConnectIssuerUrl,
-        @OutputCustomType.Parameter("resourcesVpcConfig") @Nullable ClusterResourcesVpcConfig resourcesVpcConfig,
-        @OutputCustomType.Parameter("tags") @Nullable List<ClusterTag> tags,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("certificateAuthorityData") @Nullable String certificateAuthorityData,
+        @CustomType.Parameter("clusterSecurityGroupId") @Nullable String clusterSecurityGroupId,
+        @CustomType.Parameter("encryptionConfigKeyArn") @Nullable String encryptionConfigKeyArn,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("logging") @Nullable ClusterLogging logging,
+        @CustomType.Parameter("openIdConnectIssuerUrl") @Nullable String openIdConnectIssuerUrl,
+        @CustomType.Parameter("resourcesVpcConfig") @Nullable ClusterResourcesVpcConfig resourcesVpcConfig,
+        @CustomType.Parameter("tags") @Nullable List<ClusterTag> tags,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.arn = arn;
         this.certificateAuthorityData = certificateAuthorityData;
         this.clusterSecurityGroupId = clusterSecurityGroupId;

@@ -5,12 +5,12 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketReplicaModifications;
 import io.pulumi.awsnative.s3.outputs.BucketSseKmsEncryptedObjects;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketSourceSelectionCriteria {
     /**
      * A filter that you can specify for selection for modifications on replicas.
@@ -23,10 +23,10 @@ public final class BucketSourceSelectionCriteria {
      */
     private final @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketSourceSelectionCriteria(
-        @OutputCustomType.Parameter("replicaModifications") @Nullable BucketReplicaModifications replicaModifications,
-        @OutputCustomType.Parameter("sseKmsEncryptedObjects") @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
+        @CustomType.Parameter("replicaModifications") @Nullable BucketReplicaModifications replicaModifications,
+        @CustomType.Parameter("sseKmsEncryptedObjects") @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
         this.replicaModifications = replicaModifications;
         this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
     }

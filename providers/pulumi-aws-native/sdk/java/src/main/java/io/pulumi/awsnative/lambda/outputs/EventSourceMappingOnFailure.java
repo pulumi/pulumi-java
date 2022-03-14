@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingOnFailure {
     /**
      * The Amazon Resource Name (ARN) of the destination resource.
@@ -17,8 +17,8 @@ public final class EventSourceMappingOnFailure {
      */
     private final @Nullable String destination;
 
-    @OutputCustomType.Constructor
-    private EventSourceMappingOnFailure(@OutputCustomType.Parameter("destination") @Nullable String destination) {
+    @CustomType.Constructor
+    private EventSourceMappingOnFailure(@CustomType.Parameter("destination") @Nullable String destination) {
         this.destination = destination;
     }
 

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryMixedMeasureMappingMeasureValueType;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureAttributeMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,35 +21,35 @@ public final class ScheduledQueryMixedMeasureMappingArgs extends io.pulumi.resou
 
     public static final ScheduledQueryMixedMeasureMappingArgs Empty = new ScheduledQueryMixedMeasureMappingArgs();
 
-    @InputImport(name="measureName")
+    @Import(name="measureName")
       private final @Nullable Output<String> measureName;
 
     public Output<String> getMeasureName() {
         return this.measureName == null ? Output.empty() : this.measureName;
     }
 
-    @InputImport(name="measureValueType", required=true)
+    @Import(name="measureValueType", required=true)
       private final Output<ScheduledQueryMixedMeasureMappingMeasureValueType> measureValueType;
 
     public Output<ScheduledQueryMixedMeasureMappingMeasureValueType> getMeasureValueType() {
         return this.measureValueType;
     }
 
-    @InputImport(name="multiMeasureAttributeMappings")
+    @Import(name="multiMeasureAttributeMappings")
       private final @Nullable Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
 
     public Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> getMultiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings == null ? Output.empty() : this.multiMeasureAttributeMappings;
     }
 
-    @InputImport(name="sourceColumn")
+    @Import(name="sourceColumn")
       private final @Nullable Output<String> sourceColumn;
 
     public Output<String> getSourceColumn() {
         return this.sourceColumn == null ? Output.empty() : this.sourceColumn;
     }
 
-    @InputImport(name="targetMeasureName")
+    @Import(name="targetMeasureName")
       private final @Nullable Output<String> targetMeasureName;
 
     public Output<String> getTargetMeasureName() {

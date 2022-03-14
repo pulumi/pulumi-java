@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.inputs.ChannelTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the channel is authorized.
      * 
      */
-    @InputImport(name="authorized")
+    @Import(name="authorized")
       private final @Nullable Output<Boolean> authorized;
 
     public Output<Boolean> getAuthorized() {
@@ -34,7 +34,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Channel latency mode.
      * 
      */
-    @InputImport(name="latencyMode")
+    @Import(name="latencyMode")
       private final @Nullable Output<ChannelLatencyMode> latencyMode;
 
     public Output<ChannelLatencyMode> getLatencyMode() {
@@ -45,7 +45,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Channel
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
      * 
      */
-    @InputImport(name="recordingConfigurationArn")
+    @Import(name="recordingConfigurationArn")
       private final @Nullable Output<String> recordingConfigurationArn;
 
     public Output<String> getRecordingConfigurationArn() {
@@ -67,7 +67,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
     public Output<List<ChannelTagArgs>> getTags() {
@@ -78,7 +78,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ChannelType> type;
 
     public Output<ChannelType> getType() {

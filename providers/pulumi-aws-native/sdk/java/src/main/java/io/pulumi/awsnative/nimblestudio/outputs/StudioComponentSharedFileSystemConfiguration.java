@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StudioComponentSharedFileSystemConfiguration {
     /**
      * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
@@ -37,13 +37,13 @@ public final class StudioComponentSharedFileSystemConfiguration {
      */
     private final @Nullable String windowsMountDrive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StudioComponentSharedFileSystemConfiguration(
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("fileSystemId") @Nullable String fileSystemId,
-        @OutputCustomType.Parameter("linuxMountPoint") @Nullable String linuxMountPoint,
-        @OutputCustomType.Parameter("shareName") @Nullable String shareName,
-        @OutputCustomType.Parameter("windowsMountDrive") @Nullable String windowsMountDrive) {
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("fileSystemId") @Nullable String fileSystemId,
+        @CustomType.Parameter("linuxMountPoint") @Nullable String linuxMountPoint,
+        @CustomType.Parameter("shareName") @Nullable String shareName,
+        @CustomType.Parameter("windowsMountDrive") @Nullable String windowsMountDrive) {
         this.endpoint = endpoint;
         this.fileSystemId = fileSystemId;
         this.linuxMountPoint = linuxMountPoint;

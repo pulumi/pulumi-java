@@ -6,7 +6,7 @@ package io.pulumi.awsnative.evidently;
 import io.pulumi.awsnative.evidently.inputs.ProjectDataDeliveryObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.ProjectTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
-    @InputImport(name="dataDelivery")
+    @Import(name="dataDelivery")
       private final @Nullable Output<ProjectDataDeliveryObjectArgs> dataDelivery;
 
     public Output<ProjectDataDeliveryObjectArgs> getDataDelivery() {
         return this.dataDelivery == null ? Output.empty() : this.dataDelivery;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
     public Output<List<ProjectTagArgs>> getTags() {

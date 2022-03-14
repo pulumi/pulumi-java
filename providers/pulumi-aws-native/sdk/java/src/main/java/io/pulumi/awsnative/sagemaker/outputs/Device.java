@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Device {
     /**
      * Description of the device
@@ -27,11 +27,11 @@ public final class Device {
      */
     private final @Nullable String iotThingName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Device(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("iotThingName") @Nullable String iotThingName) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("iotThingName") @Nullable String iotThingName) {
         this.description = description;
         this.deviceName = deviceName;
         this.iotThingName = iotThingName;

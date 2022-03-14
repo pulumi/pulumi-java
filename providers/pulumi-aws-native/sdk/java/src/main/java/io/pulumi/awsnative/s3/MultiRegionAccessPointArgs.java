@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3;
 import io.pulumi.awsnative.s3.inputs.MultiRegionAccessPointPublicAccessBlockConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.MultiRegionAccessPointRegionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * The name you want to assign to this Multi Region Access Point.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -32,7 +32,7 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    @InputImport(name="publicAccessBlockConfiguration")
+    @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
     public Output<MultiRegionAccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
@@ -43,7 +43,7 @@ public final class MultiRegionAccessPointArgs extends io.pulumi.resources.Resour
      * The list of buckets that you want to associate this Multi Region Access Point with.
      * 
      */
-    @InputImport(name="regions", required=true)
+    @Import(name="regions", required=true)
       private final Output<List<MultiRegionAccessPointRegionArgs>> regions;
 
     public Output<List<MultiRegionAccessPointRegionArgs>> getRegions() {

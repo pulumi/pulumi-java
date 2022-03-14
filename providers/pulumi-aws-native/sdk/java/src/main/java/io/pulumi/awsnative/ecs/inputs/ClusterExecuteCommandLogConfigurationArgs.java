@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,35 +19,35 @@ public final class ClusterExecuteCommandLogConfigurationArgs extends io.pulumi.r
 
     public static final ClusterExecuteCommandLogConfigurationArgs Empty = new ClusterExecuteCommandLogConfigurationArgs();
 
-    @InputImport(name="cloudWatchEncryptionEnabled")
+    @Import(name="cloudWatchEncryptionEnabled")
       private final @Nullable Output<Boolean> cloudWatchEncryptionEnabled;
 
     public Output<Boolean> getCloudWatchEncryptionEnabled() {
         return this.cloudWatchEncryptionEnabled == null ? Output.empty() : this.cloudWatchEncryptionEnabled;
     }
 
-    @InputImport(name="cloudWatchLogGroupName")
+    @Import(name="cloudWatchLogGroupName")
       private final @Nullable Output<String> cloudWatchLogGroupName;
 
     public Output<String> getCloudWatchLogGroupName() {
         return this.cloudWatchLogGroupName == null ? Output.empty() : this.cloudWatchLogGroupName;
     }
 
-    @InputImport(name="s3BucketName")
+    @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
         return this.s3BucketName == null ? Output.empty() : this.s3BucketName;
     }
 
-    @InputImport(name="s3EncryptionEnabled")
+    @Import(name="s3EncryptionEnabled")
       private final @Nullable Output<Boolean> s3EncryptionEnabled;
 
     public Output<Boolean> getS3EncryptionEnabled() {
         return this.s3EncryptionEnabled == null ? Output.empty() : this.s3EncryptionEnabled;
     }
 
-    @InputImport(name="s3KeyPrefix")
+    @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {

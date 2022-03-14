@@ -10,7 +10,7 @@ import io.pulumi.awsnative.budgets.inputs.BudgetsActionActionThresholdArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionDefinitionArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionSubscriberArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,56 +21,56 @@ public final class BudgetsActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BudgetsActionArgs Empty = new BudgetsActionArgs();
 
-    @InputImport(name="actionThreshold", required=true)
+    @Import(name="actionThreshold", required=true)
       private final Output<BudgetsActionActionThresholdArgs> actionThreshold;
 
     public Output<BudgetsActionActionThresholdArgs> getActionThreshold() {
         return this.actionThreshold;
     }
 
-    @InputImport(name="actionType", required=true)
+    @Import(name="actionType", required=true)
       private final Output<BudgetsActionActionType> actionType;
 
     public Output<BudgetsActionActionType> getActionType() {
         return this.actionType;
     }
 
-    @InputImport(name="approvalModel")
+    @Import(name="approvalModel")
       private final @Nullable Output<BudgetsActionApprovalModel> approvalModel;
 
     public Output<BudgetsActionApprovalModel> getApprovalModel() {
         return this.approvalModel == null ? Output.empty() : this.approvalModel;
     }
 
-    @InputImport(name="budgetName", required=true)
+    @Import(name="budgetName", required=true)
       private final Output<String> budgetName;
 
     public Output<String> getBudgetName() {
         return this.budgetName;
     }
 
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<BudgetsActionDefinitionArgs> definition;
 
     public Output<BudgetsActionDefinitionArgs> getDefinition() {
         return this.definition;
     }
 
-    @InputImport(name="executionRoleArn", required=true)
+    @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
 
-    @InputImport(name="notificationType", required=true)
+    @Import(name="notificationType", required=true)
       private final Output<BudgetsActionNotificationType> notificationType;
 
     public Output<BudgetsActionNotificationType> getNotificationType() {
         return this.notificationType;
     }
 
-    @InputImport(name="subscribers", required=true)
+    @Import(name="subscribers", required=true)
       private final Output<List<BudgetsActionSubscriberArgs>> subscribers;
 
     public Output<List<BudgetsActionSubscriberArgs>> getSubscribers() {

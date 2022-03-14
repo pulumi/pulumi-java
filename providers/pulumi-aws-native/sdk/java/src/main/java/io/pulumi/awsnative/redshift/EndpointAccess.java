@@ -8,7 +8,7 @@ import io.pulumi.awsnative.redshift.EndpointAccessArgs;
 import io.pulumi.awsnative.redshift.outputs.EndpointAccessVpcSecurityGroup;
 import io.pulumi.awsnative.redshift.outputs.VpcEndpointProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * The DNS address of the endpoint.
      * 
      */
-    @OutputExport(name="address", type=String.class, parameters={})
+    @Export(name="address", type=String.class, parameters={})
     private Output<String> address;
 
     /**
@@ -39,7 +39,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
      * 
      */
-    @OutputExport(name="clusterIdentifier", type=String.class, parameters={})
+    @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterIdentifier;
 
     /**
@@ -53,7 +53,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * The time (UTC) that the endpoint was created.
      * 
      */
-    @OutputExport(name="endpointCreateTime", type=String.class, parameters={})
+    @Export(name="endpointCreateTime", type=String.class, parameters={})
     private Output<String> endpointCreateTime;
 
     /**
@@ -67,7 +67,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * The name of the endpoint.
      * 
      */
-    @OutputExport(name="endpointName", type=String.class, parameters={})
+    @Export(name="endpointName", type=String.class, parameters={})
     private Output<String> endpointName;
 
     /**
@@ -81,7 +81,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * The status of the endpoint.
      * 
      */
-    @OutputExport(name="endpointStatus", type=String.class, parameters={})
+    @Export(name="endpointStatus", type=String.class, parameters={})
     private Output<String> endpointStatus;
 
     /**
@@ -95,7 +95,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * The port number on which the cluster accepts incoming connections.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -109,7 +109,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the owner of the cluster.
      * 
      */
-    @OutputExport(name="resourceOwner", type=String.class, parameters={})
+    @Export(name="resourceOwner", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceOwner;
 
     /**
@@ -123,7 +123,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * The subnet group name where Amazon Redshift chooses to deploy the endpoint.
      * 
      */
-    @OutputExport(name="subnetGroupName", type=String.class, parameters={})
+    @Export(name="subnetGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetGroupName;
 
     /**
@@ -137,7 +137,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
      * 
      */
-    @OutputExport(name="vpcEndpoint", type=VpcEndpointProperties.class, parameters={})
+    @Export(name="vpcEndpoint", type=VpcEndpointProperties.class, parameters={})
     private Output<VpcEndpointProperties> vpcEndpoint;
 
     /**
@@ -151,7 +151,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * A list of vpc security group ids to apply to the created endpoint access.
      * 
      */
-    @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSecurityGroupIds;
 
     /**
@@ -165,7 +165,7 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
      * A list of Virtual Private Cloud (VPC) security groups to be associated with the endpoint.
      * 
      */
-    @OutputExport(name="vpcSecurityGroups", type=List.class, parameters={EndpointAccessVpcSecurityGroup.class})
+    @Export(name="vpcSecurityGroups", type=List.class, parameters={EndpointAccessVpcSecurityGroup.class})
     private Output<List<EndpointAccessVpcSecurityGroup>> vpcSecurityGroups;
 
     /**

@@ -5,13 +5,13 @@ package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScriptRunContext;
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StudioComponentInitializationScript {
     /**
      * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
@@ -26,12 +26,12 @@ public final class StudioComponentInitializationScript {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StudioComponentInitializationScript(
-        @OutputCustomType.Parameter("launchProfileProtocolVersion") @Nullable String launchProfileProtocolVersion,
-        @OutputCustomType.Parameter("platform") @Nullable StudioComponentLaunchProfilePlatform platform,
-        @OutputCustomType.Parameter("runContext") @Nullable StudioComponentInitializationScriptRunContext runContext,
-        @OutputCustomType.Parameter("script") @Nullable String script) {
+        @CustomType.Parameter("launchProfileProtocolVersion") @Nullable String launchProfileProtocolVersion,
+        @CustomType.Parameter("platform") @Nullable StudioComponentLaunchProfilePlatform platform,
+        @CustomType.Parameter("runContext") @Nullable StudioComponentInitializationScriptRunContext runContext,
+        @CustomType.Parameter("script") @Nullable String script) {
         this.launchProfileProtocolVersion = launchProfileProtocolVersion;
         this.platform = platform;
         this.runContext = runContext;

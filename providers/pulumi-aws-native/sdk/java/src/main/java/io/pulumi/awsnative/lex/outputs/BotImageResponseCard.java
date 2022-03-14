@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotButton;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotImageResponseCard {
     /**
      * A list of buttons that should be displayed on the response card.
@@ -34,12 +34,12 @@ public final class BotImageResponseCard {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotImageResponseCard(
-        @OutputCustomType.Parameter("buttons") @Nullable List<BotButton> buttons,
-        @OutputCustomType.Parameter("imageUrl") @Nullable String imageUrl,
-        @OutputCustomType.Parameter("subtitle") @Nullable String subtitle,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("buttons") @Nullable List<BotButton> buttons,
+        @CustomType.Parameter("imageUrl") @Nullable String imageUrl,
+        @CustomType.Parameter("subtitle") @Nullable String subtitle,
+        @CustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.imageUrl = imageUrl;
         this.subtitle = subtitle;

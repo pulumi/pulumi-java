@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ManagedExecutionProperties extends io.pulumi.resources.Invoke
 
     public static final ManagedExecutionProperties Empty = new ManagedExecutionProperties();
 
-    @InputImport(name="active")
+    @Import(name="active")
       private final @Nullable Boolean active;
 
     public Optional<Boolean> getActive() {

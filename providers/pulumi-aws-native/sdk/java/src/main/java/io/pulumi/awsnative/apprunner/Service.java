@@ -11,7 +11,7 @@ import io.pulumi.awsnative.apprunner.outputs.ServiceInstanceConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceSourceConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Autoscaling configuration ARN
      * 
      */
-    @OutputExport(name="autoScalingConfigurationArn", type=String.class, parameters={})
+    @Export(name="autoScalingConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoScalingConfigurationArn;
 
     /**
@@ -37,19 +37,19 @@ public class Service extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAutoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn;
     }
-    @OutputExport(name="encryptionConfiguration", type=ServiceEncryptionConfiguration.class, parameters={})
+    @Export(name="encryptionConfiguration", type=ServiceEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceEncryptionConfiguration> encryptionConfiguration;
 
     public Output</* @Nullable */ ServiceEncryptionConfiguration> getEncryptionConfiguration() {
         return this.encryptionConfiguration;
     }
-    @OutputExport(name="healthCheckConfiguration", type=ServiceHealthCheckConfiguration.class, parameters={})
+    @Export(name="healthCheckConfiguration", type=ServiceHealthCheckConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceHealthCheckConfiguration> healthCheckConfiguration;
 
     public Output</* @Nullable */ ServiceHealthCheckConfiguration> getHealthCheckConfiguration() {
         return this.healthCheckConfiguration;
     }
-    @OutputExport(name="instanceConfiguration", type=ServiceInstanceConfiguration.class, parameters={})
+    @Export(name="instanceConfiguration", type=ServiceInstanceConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceInstanceConfiguration> instanceConfiguration;
 
     public Output</* @Nullable */ ServiceInstanceConfiguration> getInstanceConfiguration() {
@@ -59,7 +59,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the AppRunner Service.
      * 
      */
-    @OutputExport(name="serviceArn", type=String.class, parameters={})
+    @Export(name="serviceArn", type=String.class, parameters={})
     private Output<String> serviceArn;
 
     /**
@@ -73,7 +73,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The AppRunner Service Id
      * 
      */
-    @OutputExport(name="serviceId", type=String.class, parameters={})
+    @Export(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
     /**
@@ -87,7 +87,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The AppRunner Service Name.
      * 
      */
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceName;
 
     /**
@@ -101,7 +101,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The Service Url of the AppRunner Service.
      * 
      */
-    @OutputExport(name="serviceUrl", type=String.class, parameters={})
+    @Export(name="serviceUrl", type=String.class, parameters={})
     private Output<String> serviceUrl;
 
     /**
@@ -111,7 +111,7 @@ public class Service extends io.pulumi.resources.CustomResource {
     public Output<String> getServiceUrl() {
         return this.serviceUrl;
     }
-    @OutputExport(name="sourceConfiguration", type=ServiceSourceConfiguration.class, parameters={})
+    @Export(name="sourceConfiguration", type=ServiceSourceConfiguration.class, parameters={})
     private Output<ServiceSourceConfiguration> sourceConfiguration;
 
     public Output<ServiceSourceConfiguration> getSourceConfiguration() {
@@ -121,7 +121,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * AppRunner Service status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -131,7 +131,7 @@ public class Service extends io.pulumi.resources.CustomResource {
     public Output<String> getStatus() {
         return this.status;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ServiceTag.class})
+    @Export(name="tags", type=List.class, parameters={ServiceTag.class})
     private Output</* @Nullable */ List<ServiceTag>> tags;
 
     public Output</* @Nullable */ List<ServiceTag>> getTags() {

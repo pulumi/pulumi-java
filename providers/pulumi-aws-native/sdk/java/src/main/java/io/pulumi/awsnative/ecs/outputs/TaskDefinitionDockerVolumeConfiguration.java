@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionDockerVolumeConfiguration {
     private final @Nullable Boolean autoprovision;
     private final @Nullable String driver;
@@ -19,13 +19,13 @@ public final class TaskDefinitionDockerVolumeConfiguration {
     private final @Nullable Object labels;
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionDockerVolumeConfiguration(
-        @OutputCustomType.Parameter("autoprovision") @Nullable Boolean autoprovision,
-        @OutputCustomType.Parameter("driver") @Nullable String driver,
-        @OutputCustomType.Parameter("driverOpts") @Nullable Object driverOpts,
-        @OutputCustomType.Parameter("labels") @Nullable Object labels,
-        @OutputCustomType.Parameter("scope") @Nullable String scope) {
+        @CustomType.Parameter("autoprovision") @Nullable Boolean autoprovision,
+        @CustomType.Parameter("driver") @Nullable String driver,
+        @CustomType.Parameter("driverOpts") @Nullable Object driverOpts,
+        @CustomType.Parameter("labels") @Nullable Object labels,
+        @CustomType.Parameter("scope") @Nullable String scope) {
         this.autoprovision = autoprovision;
         this.driver = driver;
         this.driverOpts = driverOpts;

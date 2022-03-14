@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigBandwidthUnits;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigFrequencyBandwidth {
     private final @Nullable ConfigBandwidthUnits units;
     private final @Nullable Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigFrequencyBandwidth(
-        @OutputCustomType.Parameter("units") @Nullable ConfigBandwidthUnits units,
-        @OutputCustomType.Parameter("value") @Nullable Double value) {
+        @CustomType.Parameter("units") @Nullable ConfigBandwidthUnits units,
+        @CustomType.Parameter("value") @Nullable Double value) {
         this.units = units;
         this.value = value;
     }

@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.amplifyuibuilder.outputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ThemeValues;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeValue {
     private final @Nullable List<ThemeValues> children;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThemeValue(
-        @OutputCustomType.Parameter("children") @Nullable List<ThemeValues> children,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("children") @Nullable List<ThemeValues> children,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.children = children;
         this.value = value;
     }

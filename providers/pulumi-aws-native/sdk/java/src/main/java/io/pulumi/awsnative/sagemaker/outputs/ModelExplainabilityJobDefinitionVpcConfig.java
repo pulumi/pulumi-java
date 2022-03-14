@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelExplainabilityJobDefinitionVpcConfig {
     /**
      * The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
@@ -21,10 +21,10 @@ public final class ModelExplainabilityJobDefinitionVpcConfig {
      */
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelExplainabilityJobDefinitionVpcConfig(
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnets") List<String> subnets) {
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnets") List<String> subnets) {
         this.securityGroupIds = securityGroupIds;
         this.subnets = subnets;
     }

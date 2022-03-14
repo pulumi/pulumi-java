@@ -11,7 +11,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfig
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRetryOptionsArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,63 +21,63 @@ public final class DeliveryStreamHttpEndpointDestinationConfigurationArgs extend
 
     public static final DeliveryStreamHttpEndpointDestinationConfigurationArgs Empty = new DeliveryStreamHttpEndpointDestinationConfigurationArgs();
 
-    @InputImport(name="bufferingHints")
+    @Import(name="bufferingHints")
       private final @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
 
     public Output<DeliveryStreamBufferingHintsArgs> getBufferingHints() {
         return this.bufferingHints == null ? Output.empty() : this.bufferingHints;
     }
 
-    @InputImport(name="cloudWatchLoggingOptions")
+    @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Output.empty() : this.cloudWatchLoggingOptions;
     }
 
-    @InputImport(name="endpointConfiguration", required=true)
+    @Import(name="endpointConfiguration", required=true)
       private final Output<DeliveryStreamHttpEndpointConfigurationArgs> endpointConfiguration;
 
     public Output<DeliveryStreamHttpEndpointConfigurationArgs> getEndpointConfiguration() {
         return this.endpointConfiguration;
     }
 
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
-    @InputImport(name="requestConfiguration")
+    @Import(name="requestConfiguration")
       private final @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> requestConfiguration;
 
     public Output<DeliveryStreamHttpEndpointRequestConfigurationArgs> getRequestConfiguration() {
         return this.requestConfiguration == null ? Output.empty() : this.requestConfiguration;
     }
 
-    @InputImport(name="retryOptions")
+    @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamRetryOptionsArgs> retryOptions;
 
     public Output<DeliveryStreamRetryOptionsArgs> getRetryOptions() {
         return this.retryOptions == null ? Output.empty() : this.retryOptions;
     }
 
-    @InputImport(name="roleARN")
+    @Import(name="roleARN")
       private final @Nullable Output<String> roleARN;
 
     public Output<String> getRoleARN() {
         return this.roleARN == null ? Output.empty() : this.roleARN;
     }
 
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
     public Output<String> getS3BackupMode() {
         return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
     }
 
-    @InputImport(name="s3Configuration", required=true)
+    @Import(name="s3Configuration", required=true)
       private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {

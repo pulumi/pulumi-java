@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeField;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectTypeFieldMap {
     private final @Nullable String name;
     private final @Nullable ObjectTypeField objectTypeField;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectTypeFieldMap(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("objectTypeField") @Nullable ObjectTypeField objectTypeField) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("objectTypeField") @Nullable ObjectTypeField objectTypeField) {
         this.name = name;
         this.objectTypeField = objectTypeField;
     }

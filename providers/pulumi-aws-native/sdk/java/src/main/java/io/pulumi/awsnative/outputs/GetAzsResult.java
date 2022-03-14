@@ -3,17 +3,17 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAzsResult {
     private final List<String> azs;
 
-    @OutputCustomType.Constructor
-    private GetAzsResult(@OutputCustomType.Parameter("azs") List<String> azs) {
+    @CustomType.Constructor
+    private GetAzsResult(@CustomType.Parameter("azs") List<String> azs) {
         this.azs = azs;
     }
 

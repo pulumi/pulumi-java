@@ -5,20 +5,20 @@ package io.pulumi.awsnative.ssmcontacts.outputs;
 
 import io.pulumi.awsnative.ssmcontacts.outputs.ContactChannelTargetInfo;
 import io.pulumi.awsnative.ssmcontacts.outputs.ContactTargetInfo;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContactTargets {
     private final @Nullable ContactChannelTargetInfo channelTargetInfo;
     private final @Nullable ContactTargetInfo contactTargetInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactTargets(
-        @OutputCustomType.Parameter("channelTargetInfo") @Nullable ContactChannelTargetInfo channelTargetInfo,
-        @OutputCustomType.Parameter("contactTargetInfo") @Nullable ContactTargetInfo contactTargetInfo) {
+        @CustomType.Parameter("channelTargetInfo") @Nullable ContactChannelTargetInfo channelTargetInfo,
+        @CustomType.Parameter("contactTargetInfo") @Nullable ContactTargetInfo contactTargetInfo) {
         this.channelTargetInfo = channelTargetInfo;
         this.contactTargetInfo = contactTargetInfo;
     }

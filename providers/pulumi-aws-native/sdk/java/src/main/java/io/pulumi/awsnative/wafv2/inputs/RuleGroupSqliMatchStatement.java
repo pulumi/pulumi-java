@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatch;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformation;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,14 +18,14 @@ public final class RuleGroupSqliMatchStatement extends io.pulumi.resources.Invok
 
     public static final RuleGroupSqliMatchStatement Empty = new RuleGroupSqliMatchStatement();
 
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final RuleGroupFieldToMatch fieldToMatch;
 
     public RuleGroupFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
-    @InputImport(name="textTransformations", required=true)
+    @Import(name="textTransformations", required=true)
       private final List<RuleGroupTextTransformation> textTransformations;
 
     public List<RuleGroupTextTransformation> getTextTransformations() {

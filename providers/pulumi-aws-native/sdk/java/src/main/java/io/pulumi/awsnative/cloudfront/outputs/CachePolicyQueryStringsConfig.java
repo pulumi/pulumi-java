@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CachePolicyQueryStringsConfig {
     private final String queryStringBehavior;
     private final @Nullable List<String> queryStrings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CachePolicyQueryStringsConfig(
-        @OutputCustomType.Parameter("queryStringBehavior") String queryStringBehavior,
-        @OutputCustomType.Parameter("queryStrings") @Nullable List<String> queryStrings) {
+        @CustomType.Parameter("queryStringBehavior") String queryStringBehavior,
+        @CustomType.Parameter("queryStrings") @Nullable List<String> queryStrings) {
         this.queryStringBehavior = queryStringBehavior;
         this.queryStrings = queryStrings;
     }

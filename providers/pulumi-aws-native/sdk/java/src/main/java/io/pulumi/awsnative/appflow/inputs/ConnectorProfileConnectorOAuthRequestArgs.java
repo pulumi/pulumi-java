@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
      * The code provided by the connector when it has been authenticated via the connected app.
      * 
      */
-    @InputImport(name="authCode")
+    @Import(name="authCode")
       private final @Nullable Output<String> authCode;
 
     public Output<String> getAuthCode() {
@@ -30,7 +30,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
      * granted.
      * 
      */
-    @InputImport(name="redirectUri")
+    @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;
 
     public Output<String> getRedirectUri() {

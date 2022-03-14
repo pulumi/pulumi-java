@@ -5,7 +5,7 @@ package io.pulumi.awsnative.budgets.inputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionActionThresholdType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class BudgetsActionActionThresholdArgs extends io.pulumi.resources.
 
     public static final BudgetsActionActionThresholdArgs Empty = new BudgetsActionActionThresholdArgs();
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<BudgetsActionActionThresholdType> type;
 
     public Output<BudgetsActionActionThresholdType> getType() {
         return this.type;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Double> value;
 
     public Output<Double> getValue() {

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRuleAssetPropertyValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRulePutAssetPropertyValueEntry {
     private final @Nullable String assetId;
     private final @Nullable String entryId;
@@ -19,13 +19,13 @@ public final class TopicRulePutAssetPropertyValueEntry {
     private final @Nullable String propertyId;
     private final List<TopicRuleAssetPropertyValue> propertyValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRulePutAssetPropertyValueEntry(
-        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
-        @OutputCustomType.Parameter("entryId") @Nullable String entryId,
-        @OutputCustomType.Parameter("propertyAlias") @Nullable String propertyAlias,
-        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
-        @OutputCustomType.Parameter("propertyValues") List<TopicRuleAssetPropertyValue> propertyValues) {
+        @CustomType.Parameter("assetId") @Nullable String assetId,
+        @CustomType.Parameter("entryId") @Nullable String entryId,
+        @CustomType.Parameter("propertyAlias") @Nullable String propertyAlias,
+        @CustomType.Parameter("propertyId") @Nullable String propertyId,
+        @CustomType.Parameter("propertyValues") List<TopicRuleAssetPropertyValue> propertyValues) {
         this.assetId = assetId;
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;

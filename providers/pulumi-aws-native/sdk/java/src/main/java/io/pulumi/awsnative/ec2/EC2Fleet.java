@@ -13,7 +13,7 @@ import io.pulumi.awsnative.ec2.outputs.EC2FleetSpotOptionsRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetTagSpecification;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetTargetCapacitySpecificationRequest;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,79 +26,79 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ec2:EC2Fleet")
 public class EC2Fleet extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="context", type=String.class, parameters={})
+    @Export(name="context", type=String.class, parameters={})
     private Output</* @Nullable */ String> context;
 
     public Output</* @Nullable */ String> getContext() {
         return this.context;
     }
-    @OutputExport(name="excessCapacityTerminationPolicy", type=EC2FleetExcessCapacityTerminationPolicy.class, parameters={})
+    @Export(name="excessCapacityTerminationPolicy", type=EC2FleetExcessCapacityTerminationPolicy.class, parameters={})
     private Output</* @Nullable */ EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
 
     public Output</* @Nullable */ EC2FleetExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy;
     }
-    @OutputExport(name="fleetId", type=String.class, parameters={})
+    @Export(name="fleetId", type=String.class, parameters={})
     private Output<String> fleetId;
 
     public Output<String> getFleetId() {
         return this.fleetId;
     }
-    @OutputExport(name="launchTemplateConfigs", type=List.class, parameters={EC2FleetFleetLaunchTemplateConfigRequest.class})
+    @Export(name="launchTemplateConfigs", type=List.class, parameters={EC2FleetFleetLaunchTemplateConfigRequest.class})
     private Output<List<EC2FleetFleetLaunchTemplateConfigRequest>> launchTemplateConfigs;
 
     public Output<List<EC2FleetFleetLaunchTemplateConfigRequest>> getLaunchTemplateConfigs() {
         return this.launchTemplateConfigs;
     }
-    @OutputExport(name="onDemandOptions", type=EC2FleetOnDemandOptionsRequest.class, parameters={})
+    @Export(name="onDemandOptions", type=EC2FleetOnDemandOptionsRequest.class, parameters={})
     private Output</* @Nullable */ EC2FleetOnDemandOptionsRequest> onDemandOptions;
 
     public Output</* @Nullable */ EC2FleetOnDemandOptionsRequest> getOnDemandOptions() {
         return this.onDemandOptions;
     }
-    @OutputExport(name="replaceUnhealthyInstances", type=Boolean.class, parameters={})
+    @Export(name="replaceUnhealthyInstances", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> replaceUnhealthyInstances;
 
     public Output</* @Nullable */ Boolean> getReplaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances;
     }
-    @OutputExport(name="spotOptions", type=EC2FleetSpotOptionsRequest.class, parameters={})
+    @Export(name="spotOptions", type=EC2FleetSpotOptionsRequest.class, parameters={})
     private Output</* @Nullable */ EC2FleetSpotOptionsRequest> spotOptions;
 
     public Output</* @Nullable */ EC2FleetSpotOptionsRequest> getSpotOptions() {
         return this.spotOptions;
     }
-    @OutputExport(name="tagSpecifications", type=List.class, parameters={EC2FleetTagSpecification.class})
+    @Export(name="tagSpecifications", type=List.class, parameters={EC2FleetTagSpecification.class})
     private Output</* @Nullable */ List<EC2FleetTagSpecification>> tagSpecifications;
 
     public Output</* @Nullable */ List<EC2FleetTagSpecification>> getTagSpecifications() {
         return this.tagSpecifications;
     }
-    @OutputExport(name="targetCapacitySpecification", type=EC2FleetTargetCapacitySpecificationRequest.class, parameters={})
+    @Export(name="targetCapacitySpecification", type=EC2FleetTargetCapacitySpecificationRequest.class, parameters={})
     private Output<EC2FleetTargetCapacitySpecificationRequest> targetCapacitySpecification;
 
     public Output<EC2FleetTargetCapacitySpecificationRequest> getTargetCapacitySpecification() {
         return this.targetCapacitySpecification;
     }
-    @OutputExport(name="terminateInstancesWithExpiration", type=Boolean.class, parameters={})
+    @Export(name="terminateInstancesWithExpiration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> terminateInstancesWithExpiration;
 
     public Output</* @Nullable */ Boolean> getTerminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration;
     }
-    @OutputExport(name="type", type=EC2FleetType.class, parameters={})
+    @Export(name="type", type=EC2FleetType.class, parameters={})
     private Output</* @Nullable */ EC2FleetType> type;
 
     public Output</* @Nullable */ EC2FleetType> getType() {
         return this.type;
     }
-    @OutputExport(name="validFrom", type=String.class, parameters={})
+    @Export(name="validFrom", type=String.class, parameters={})
     private Output</* @Nullable */ String> validFrom;
 
     public Output</* @Nullable */ String> getValidFrom() {
         return this.validFrom;
     }
-    @OutputExport(name="validUntil", type=String.class, parameters={})
+    @Export(name="validUntil", type=String.class, parameters={})
     private Output</* @Nullable */ String> validUntil;
 
     public Output</* @Nullable */ String> getValidUntil() {

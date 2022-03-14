@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class FlowEventBridgeDestinationPropertiesArgs extends io.pulumi.re
 
     public static final FlowEventBridgeDestinationPropertiesArgs Empty = new FlowEventBridgeDestinationPropertiesArgs();
 
-    @InputImport(name="errorHandlingConfig")
+    @Import(name="errorHandlingConfig")
       private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
     public Output<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
         return this.errorHandlingConfig == null ? Output.empty() : this.errorHandlingConfig;
     }
 
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final Output<String> object;
 
     public Output<String> getObject() {

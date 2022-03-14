@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.ACLTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetACLResult {
     /**
      * The Amazon Resource Name (ARN) of the acl.
@@ -34,12 +34,12 @@ public final class GetACLResult {
      */
     private final @Nullable List<String> userNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetACLResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable List<ACLTag> tags,
-        @OutputCustomType.Parameter("userNames") @Nullable List<String> userNames) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable List<ACLTag> tags,
+        @CustomType.Parameter("userNames") @Nullable List<String> userNames) {
         this.arn = arn;
         this.status = status;
         this.tags = tags;

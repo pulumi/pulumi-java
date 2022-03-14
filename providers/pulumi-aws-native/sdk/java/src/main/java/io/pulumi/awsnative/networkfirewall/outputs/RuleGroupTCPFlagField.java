@@ -4,20 +4,20 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTCPFlag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupTCPFlagField {
     private final List<RuleGroupTCPFlag> flags;
     private final @Nullable List<RuleGroupTCPFlag> masks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupTCPFlagField(
-        @OutputCustomType.Parameter("flags") List<RuleGroupTCPFlag> flags,
-        @OutputCustomType.Parameter("masks") @Nullable List<RuleGroupTCPFlag> masks) {
+        @CustomType.Parameter("flags") List<RuleGroupTCPFlag> flags,
+        @CustomType.Parameter("masks") @Nullable List<RuleGroupTCPFlag> masks) {
         this.flags = flags;
         this.masks = masks;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplify.outputs;
 
 import io.pulumi.awsnative.amplify.outputs.DomainSubDomainSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     private final @Nullable String arn;
     private final @Nullable List<String> autoSubDomainCreationPatterns;
@@ -23,16 +23,16 @@ public final class GetDomainResult {
     private final @Nullable String statusReason;
     private final @Nullable List<DomainSubDomainSetting> subDomainSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("autoSubDomainCreationPatterns") @Nullable List<String> autoSubDomainCreationPatterns,
-        @OutputCustomType.Parameter("autoSubDomainIAMRole") @Nullable String autoSubDomainIAMRole,
-        @OutputCustomType.Parameter("certificateRecord") @Nullable String certificateRecord,
-        @OutputCustomType.Parameter("domainStatus") @Nullable String domainStatus,
-        @OutputCustomType.Parameter("enableAutoSubDomain") @Nullable Boolean enableAutoSubDomain,
-        @OutputCustomType.Parameter("statusReason") @Nullable String statusReason,
-        @OutputCustomType.Parameter("subDomainSettings") @Nullable List<DomainSubDomainSetting> subDomainSettings) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("autoSubDomainCreationPatterns") @Nullable List<String> autoSubDomainCreationPatterns,
+        @CustomType.Parameter("autoSubDomainIAMRole") @Nullable String autoSubDomainIAMRole,
+        @CustomType.Parameter("certificateRecord") @Nullable String certificateRecord,
+        @CustomType.Parameter("domainStatus") @Nullable String domainStatus,
+        @CustomType.Parameter("enableAutoSubDomain") @Nullable Boolean enableAutoSubDomain,
+        @CustomType.Parameter("statusReason") @Nullable String statusReason,
+        @CustomType.Parameter("subDomainSettings") @Nullable List<DomainSubDomainSetting> subDomainSettings) {
         this.arn = arn;
         this.autoSubDomainCreationPatterns = autoSubDomainCreationPatterns;
         this.autoSubDomainIAMRole = autoSubDomainIAMRole;

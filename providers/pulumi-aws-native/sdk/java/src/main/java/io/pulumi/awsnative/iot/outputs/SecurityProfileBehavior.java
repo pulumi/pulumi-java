@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.SecurityProfileBehaviorCriteria;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricDimension;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityProfileBehavior {
     private final @Nullable SecurityProfileBehaviorCriteria criteria;
     /**
@@ -32,13 +32,13 @@ public final class SecurityProfileBehavior {
      */
     private final @Nullable Boolean suppressAlerts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityProfileBehavior(
-        @OutputCustomType.Parameter("criteria") @Nullable SecurityProfileBehaviorCriteria criteria,
-        @OutputCustomType.Parameter("metric") @Nullable String metric,
-        @OutputCustomType.Parameter("metricDimension") @Nullable SecurityProfileMetricDimension metricDimension,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("suppressAlerts") @Nullable Boolean suppressAlerts) {
+        @CustomType.Parameter("criteria") @Nullable SecurityProfileBehaviorCriteria criteria,
+        @CustomType.Parameter("metric") @Nullable String metric,
+        @CustomType.Parameter("metricDimension") @Nullable SecurityProfileMetricDimension metricDimension,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("suppressAlerts") @Nullable Boolean suppressAlerts) {
         this.criteria = criteria;
         this.metric = metric;
         this.metricDimension = metricDimension;

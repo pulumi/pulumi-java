@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup.inputs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanCopyActionResourceTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceTypeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -20,63 +20,63 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
 
     public static final BackupPlanBackupRuleResourceTypeArgs Empty = new BackupPlanBackupRuleResourceTypeArgs();
 
-    @InputImport(name="completionWindowMinutes")
+    @Import(name="completionWindowMinutes")
       private final @Nullable Output<Double> completionWindowMinutes;
 
     public Output<Double> getCompletionWindowMinutes() {
         return this.completionWindowMinutes == null ? Output.empty() : this.completionWindowMinutes;
     }
 
-    @InputImport(name="copyActions")
+    @Import(name="copyActions")
       private final @Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions;
 
     public Output<List<BackupPlanCopyActionResourceTypeArgs>> getCopyActions() {
         return this.copyActions == null ? Output.empty() : this.copyActions;
     }
 
-    @InputImport(name="enableContinuousBackup")
+    @Import(name="enableContinuousBackup")
       private final @Nullable Output<Boolean> enableContinuousBackup;
 
     public Output<Boolean> getEnableContinuousBackup() {
         return this.enableContinuousBackup == null ? Output.empty() : this.enableContinuousBackup;
     }
 
-    @InputImport(name="lifecycle")
+    @Import(name="lifecycle")
       private final @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
     public Output<BackupPlanLifecycleResourceTypeArgs> getLifecycle() {
         return this.lifecycle == null ? Output.empty() : this.lifecycle;
     }
 
-    @InputImport(name="recoveryPointTags")
+    @Import(name="recoveryPointTags")
       private final @Nullable Output<Object> recoveryPointTags;
 
     public Output<Object> getRecoveryPointTags() {
         return this.recoveryPointTags == null ? Output.empty() : this.recoveryPointTags;
     }
 
-    @InputImport(name="ruleName", required=true)
+    @Import(name="ruleName", required=true)
       private final Output<String> ruleName;
 
     public Output<String> getRuleName() {
         return this.ruleName;
     }
 
-    @InputImport(name="scheduleExpression")
+    @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Output.empty() : this.scheduleExpression;
     }
 
-    @InputImport(name="startWindowMinutes")
+    @Import(name="startWindowMinutes")
       private final @Nullable Output<Double> startWindowMinutes;
 
     public Output<Double> getStartWindowMinutes() {
         return this.startWindowMinutes == null ? Output.empty() : this.startWindowMinutes;
     }
 
-    @InputImport(name="targetBackupVault", required=true)
+    @Import(name="targetBackupVault", required=true)
       private final Output<String> targetBackupVault;
 
     public Output<String> getTargetBackupVault() {

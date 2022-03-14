@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends io.pulum
 
     public static final DataSourceDocumentsMetadataConfigurationArgs Empty = new DataSourceDocumentsMetadataConfigurationArgs();
 
-    @InputImport(name="s3Prefix")
+    @Import(name="s3Prefix")
       private final @Nullable Output<String> s3Prefix;
 
     public Output<String> getS3Prefix() {

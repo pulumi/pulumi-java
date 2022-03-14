@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage;
 import io.pulumi.awsnative.mediapackage.inputs.ChannelLogConfigurationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.ChannelTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * A short text description of the Channel.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration parameters for egress access logging.
      * 
      */
-    @InputImport(name="egressAccessLogs")
+    @Import(name="egressAccessLogs")
       private final @Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs;
 
     public Output<ChannelLogConfigurationArgs> getEgressAccessLogs() {
@@ -43,7 +43,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration parameters for egress access logging.
      * 
      */
-    @InputImport(name="ingressAccessLogs")
+    @Import(name="ingressAccessLogs")
       private final @Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs;
 
     public Output<ChannelLogConfigurationArgs> getIngressAccessLogs() {
@@ -54,7 +54,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
     public Output<List<ChannelTagArgs>> getTags() {

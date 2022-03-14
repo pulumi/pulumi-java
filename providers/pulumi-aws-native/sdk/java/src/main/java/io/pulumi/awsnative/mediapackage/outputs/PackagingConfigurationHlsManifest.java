@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsManifestAdMarkers;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationStreamSelection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationHlsManifest {
     /**
      * This setting controls how ad markers are included in the packaged OriginEndpoint. "NONE" will omit all SCTE-35 ad markers from the output. "PASSTHROUGH" causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. "SCTE35_ENHANCED" generates ad markers and blackout tags based on SCTE-35 messages in the input source.
@@ -38,14 +38,14 @@ public final class PackagingConfigurationHlsManifest {
     private final @Nullable Boolean repeatExtXKey;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationHlsManifest(
-        @OutputCustomType.Parameter("adMarkers") @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers,
-        @OutputCustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
-        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
-        @OutputCustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
-        @OutputCustomType.Parameter("repeatExtXKey") @Nullable Boolean repeatExtXKey,
-        @OutputCustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
+        @CustomType.Parameter("adMarkers") @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers,
+        @CustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
+        @CustomType.Parameter("manifestName") @Nullable String manifestName,
+        @CustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
+        @CustomType.Parameter("repeatExtXKey") @Nullable Boolean repeatExtXKey,
+        @CustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.adMarkers = adMarkers;
         this.includeIframeOnlyStream = includeIframeOnlyStream;
         this.manifestName = manifestName;

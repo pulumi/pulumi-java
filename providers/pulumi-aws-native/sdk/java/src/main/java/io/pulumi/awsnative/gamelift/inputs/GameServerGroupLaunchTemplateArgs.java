@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +18,21 @@ public final class GameServerGroupLaunchTemplateArgs extends io.pulumi.resources
 
     public static final GameServerGroupLaunchTemplateArgs Empty = new GameServerGroupLaunchTemplateArgs();
 
-    @InputImport(name="launchTemplateId")
+    @Import(name="launchTemplateId")
       private final @Nullable Output<String> launchTemplateId;
 
     public Output<String> getLaunchTemplateId() {
         return this.launchTemplateId == null ? Output.empty() : this.launchTemplateId;
     }
 
-    @InputImport(name="launchTemplateName")
+    @Import(name="launchTemplateName")
       private final @Nullable Output<String> launchTemplateName;
 
     public Output<String> getLaunchTemplateName() {
         return this.launchTemplateName == null ? Output.empty() : this.launchTemplateName;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLImmunityTimePropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class WebACLCaptchaConfigArgs extends io.pulumi.resources.ResourceA
 
     public static final WebACLCaptchaConfigArgs Empty = new WebACLCaptchaConfigArgs();
 
-    @InputImport(name="immunityTimeProperty")
+    @Import(name="immunityTimeProperty")
       private final @Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
 
     public Output<WebACLImmunityTimePropertyArgs> getImmunityTimeProperty() {

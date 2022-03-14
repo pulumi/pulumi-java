@@ -6,13 +6,13 @@ package io.pulumi.awsnative.apprunner.outputs;
 import io.pulumi.awsnative.apprunner.outputs.ServiceAuthenticationConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceCodeRepository;
 import io.pulumi.awsnative.apprunner.outputs.ServiceImageRepository;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceConfiguration {
     private final @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
     /**
@@ -23,12 +23,12 @@ public final class ServiceSourceConfiguration {
     private final @Nullable ServiceCodeRepository codeRepository;
     private final @Nullable ServiceImageRepository imageRepository;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceConfiguration(
-        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable ServiceAuthenticationConfiguration authenticationConfiguration,
-        @OutputCustomType.Parameter("autoDeploymentsEnabled") @Nullable Boolean autoDeploymentsEnabled,
-        @OutputCustomType.Parameter("codeRepository") @Nullable ServiceCodeRepository codeRepository,
-        @OutputCustomType.Parameter("imageRepository") @Nullable ServiceImageRepository imageRepository) {
+        @CustomType.Parameter("authenticationConfiguration") @Nullable ServiceAuthenticationConfiguration authenticationConfiguration,
+        @CustomType.Parameter("autoDeploymentsEnabled") @Nullable Boolean autoDeploymentsEnabled,
+        @CustomType.Parameter("codeRepository") @Nullable ServiceCodeRepository codeRepository,
+        @CustomType.Parameter("imageRepository") @Nullable ServiceImageRepository imageRepository) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.autoDeploymentsEnabled = autoDeploymentsEnabled;
         this.codeRepository = codeRepository;

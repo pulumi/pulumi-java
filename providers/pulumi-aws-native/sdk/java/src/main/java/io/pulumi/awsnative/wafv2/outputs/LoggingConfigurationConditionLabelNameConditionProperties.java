@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationConditionLabelNameConditionProperties {
     /**
      * The label name that a log record must contain in order to meet the condition. This must be a fully qualified label name. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix identifies the rule group or web ACL context of the rule that added the label.
@@ -15,8 +15,8 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties {
      */
     private final String labelName;
 
-    @OutputCustomType.Constructor
-    private LoggingConfigurationConditionLabelNameConditionProperties(@OutputCustomType.Parameter("labelName") String labelName) {
+    @CustomType.Constructor
+    private LoggingConfigurationConditionLabelNameConditionProperties(@CustomType.Parameter("labelName") String labelName) {
         this.labelName = labelName;
     }
 

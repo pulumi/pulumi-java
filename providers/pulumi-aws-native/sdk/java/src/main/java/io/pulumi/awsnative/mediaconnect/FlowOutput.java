@@ -9,7 +9,7 @@ import io.pulumi.awsnative.mediaconnect.enums.FlowOutputProtocol;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowOutputEncryption;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowOutputVpcInterfaceAttachment;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The range of IP addresses that should be allowed to initiate output requests to this flow. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
      */
-    @OutputExport(name="cidrAllowList", type=List.class, parameters={String.class})
+    @Export(name="cidrAllowList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cidrAllowList;
 
     /**
@@ -40,7 +40,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * A description of the output.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -54,7 +54,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The address where you want to send the output.
      * 
      */
-    @OutputExport(name="destination", type=String.class, parameters={})
+    @Export(name="destination", type=String.class, parameters={})
     private Output</* @Nullable */ String> destination;
 
     /**
@@ -68,7 +68,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The type of key used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
      * 
      */
-    @OutputExport(name="encryption", type=FlowOutputEncryption.class, parameters={})
+    @Export(name="encryption", type=FlowOutputEncryption.class, parameters={})
     private Output</* @Nullable */ FlowOutputEncryption> encryption;
 
     /**
@@ -82,7 +82,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    @OutputExport(name="flowArn", type=String.class, parameters={})
+    @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
@@ -96,7 +96,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
      */
-    @OutputExport(name="maxLatency", type=Integer.class, parameters={})
+    @Export(name="maxLatency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxLatency;
 
     /**
@@ -110,7 +110,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The minimum latency in milliseconds.
      * 
      */
-    @OutputExport(name="minLatency", type=Integer.class, parameters={})
+    @Export(name="minLatency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minLatency;
 
     /**
@@ -124,7 +124,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The name of the output. This value must be unique within the current flow.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -138,7 +138,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The ARN of the output.
      * 
      */
-    @OutputExport(name="outputArn", type=String.class, parameters={})
+    @Export(name="outputArn", type=String.class, parameters={})
     private Output<String> outputArn;
 
     /**
@@ -152,7 +152,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The port to use when content is distributed to this output.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -166,7 +166,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The protocol that is used by the source or output.
      * 
      */
-    @OutputExport(name="protocol", type=FlowOutputProtocol.class, parameters={})
+    @Export(name="protocol", type=FlowOutputProtocol.class, parameters={})
     private Output<FlowOutputProtocol> protocol;
 
     /**
@@ -180,7 +180,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The remote ID for the Zixi-pull stream.
      * 
      */
-    @OutputExport(name="remoteId", type=String.class, parameters={})
+    @Export(name="remoteId", type=String.class, parameters={})
     private Output</* @Nullable */ String> remoteId;
 
     /**
@@ -194,7 +194,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
      * 
      */
-    @OutputExport(name="smoothingLatency", type=Integer.class, parameters={})
+    @Export(name="smoothingLatency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> smoothingLatency;
 
     /**
@@ -208,7 +208,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
      */
-    @OutputExport(name="streamId", type=String.class, parameters={})
+    @Export(name="streamId", type=String.class, parameters={})
     private Output</* @Nullable */ String> streamId;
 
     /**
@@ -222,7 +222,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * The name of the VPC interface attachment to use for this output.
      * 
      */
-    @OutputExport(name="vpcInterfaceAttachment", type=FlowOutputVpcInterfaceAttachment.class, parameters={})
+    @Export(name="vpcInterfaceAttachment", type=FlowOutputVpcInterfaceAttachment.class, parameters={})
     private Output</* @Nullable */ FlowOutputVpcInterfaceAttachment> vpcInterfaceAttachment;
 
     /**

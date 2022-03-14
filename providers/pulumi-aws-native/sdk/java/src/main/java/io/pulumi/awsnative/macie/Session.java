@@ -8,7 +8,7 @@ import io.pulumi.awsnative.macie.SessionArgs;
 import io.pulumi.awsnative.macie.enums.SessionFindingPublishingFrequency;
 import io.pulumi.awsnative.macie.enums.SessionStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * AWS account ID of customer
      * 
      */
-    @OutputExport(name="awsAccountId", type=String.class, parameters={})
+    @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
     /**
@@ -37,7 +37,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * A enumeration value that specifies how frequently finding updates are published.
      * 
      */
-    @OutputExport(name="findingPublishingFrequency", type=SessionFindingPublishingFrequency.class, parameters={})
+    @Export(name="findingPublishingFrequency", type=SessionFindingPublishingFrequency.class, parameters={})
     private Output</* @Nullable */ SessionFindingPublishingFrequency> findingPublishingFrequency;
 
     /**
@@ -51,7 +51,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * Service role used by Macie
      * 
      */
-    @OutputExport(name="serviceRole", type=String.class, parameters={})
+    @Export(name="serviceRole", type=String.class, parameters={})
     private Output<String> serviceRole;
 
     /**
@@ -65,7 +65,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * A enumeration value that specifies the status of the Macie Session.
      * 
      */
-    @OutputExport(name="status", type=SessionStatus.class, parameters={})
+    @Export(name="status", type=SessionStatus.class, parameters={})
     private Output</* @Nullable */ SessionStatus> status;
 
     /**

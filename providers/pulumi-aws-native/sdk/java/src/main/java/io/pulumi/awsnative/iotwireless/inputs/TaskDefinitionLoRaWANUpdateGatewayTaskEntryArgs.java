@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANGatewayVersionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,14 +14,14 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs extends io.pu
 
     public static final TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs Empty = new TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs();
 
-    @InputImport(name="currentVersion")
+    @Import(name="currentVersion")
       private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion;
 
     public Output<TaskDefinitionLoRaWANGatewayVersionArgs> getCurrentVersion() {
         return this.currentVersion == null ? Output.empty() : this.currentVersion;
     }
 
-    @InputImport(name="updateVersion")
+    @Import(name="updateVersion")
       private final @Nullable Output<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion;
 
     public Output<TaskDefinitionLoRaWANGatewayVersionArgs> getUpdateVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobCsvOutputOptionsArgs extends io.pulumi.resources.ResourceA
 
     public static final JobCsvOutputOptionsArgs Empty = new JobCsvOutputOptionsArgs();
 
-    @InputImport(name="delimiter")
+    @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
     public Output<String> getDelimiter() {

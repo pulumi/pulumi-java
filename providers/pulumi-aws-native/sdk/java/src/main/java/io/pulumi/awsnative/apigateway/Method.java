@@ -9,7 +9,7 @@ import io.pulumi.awsnative.apigateway.enums.MethodAuthorizationType;
 import io.pulumi.awsnative.apigateway.outputs.MethodIntegration;
 import io.pulumi.awsnative.apigateway.outputs.MethodResponse;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -27,7 +27,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * Indicates whether the method requires clients to submit a valid API key.
      * 
      */
-    @OutputExport(name="apiKeyRequired", type=Boolean.class, parameters={})
+    @Export(name="apiKeyRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> apiKeyRequired;
 
     /**
@@ -41,7 +41,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * A list of authorization scopes configured on the method.
      * 
      */
-    @OutputExport(name="authorizationScopes", type=List.class, parameters={String.class})
+    @Export(name="authorizationScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> authorizationScopes;
 
     /**
@@ -55,7 +55,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The method's authorization type.
      * 
      */
-    @OutputExport(name="authorizationType", type=MethodAuthorizationType.class, parameters={})
+    @Export(name="authorizationType", type=MethodAuthorizationType.class, parameters={})
     private Output</* @Nullable */ MethodAuthorizationType> authorizationType;
 
     /**
@@ -69,7 +69,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The identifier of the authorizer to use on this method.
      * 
      */
-    @OutputExport(name="authorizerId", type=String.class, parameters={})
+    @Export(name="authorizerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerId;
 
     /**
@@ -83,7 +83,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The backend system that the method calls when it receives a request.
      * 
      */
-    @OutputExport(name="httpMethod", type=String.class, parameters={})
+    @Export(name="httpMethod", type=String.class, parameters={})
     private Output<String> httpMethod;
 
     /**
@@ -97,7 +97,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The backend system that the method calls when it receives a request.
      * 
      */
-    @OutputExport(name="integration", type=MethodIntegration.class, parameters={})
+    @Export(name="integration", type=MethodIntegration.class, parameters={})
     private Output</* @Nullable */ MethodIntegration> integration;
 
     /**
@@ -111,7 +111,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The responses that can be sent to the client who calls the method.
      * 
      */
-    @OutputExport(name="methodResponses", type=List.class, parameters={MethodResponse.class})
+    @Export(name="methodResponses", type=List.class, parameters={MethodResponse.class})
     private Output</* @Nullable */ List<MethodResponse>> methodResponses;
 
     /**
@@ -125,7 +125,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * A friendly operation name for the method.
      * 
      */
-    @OutputExport(name="operationName", type=String.class, parameters={})
+    @Export(name="operationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> operationName;
 
     /**
@@ -139,7 +139,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
      */
-    @OutputExport(name="requestModels", type=Object.class, parameters={})
+    @Export(name="requestModels", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> requestModels;
 
     /**
@@ -153,7 +153,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
      * 
      */
-    @OutputExport(name="requestParameters", type=Object.class, parameters={})
+    @Export(name="requestParameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> requestParameters;
 
     /**
@@ -167,7 +167,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The ID of the associated request validator.
      * 
      */
-    @OutputExport(name="requestValidatorId", type=String.class, parameters={})
+    @Export(name="requestValidatorId", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestValidatorId;
 
     /**
@@ -181,7 +181,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The ID of an API Gateway resource.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -195,7 +195,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The ID of the RestApi resource in which API Gateway creates the method.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**

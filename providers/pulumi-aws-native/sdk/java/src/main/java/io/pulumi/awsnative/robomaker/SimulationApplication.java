@@ -11,7 +11,7 @@ import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationSimulationSoft
 import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationSourceConfig;
 import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:robomaker:SimulationApplication")
 public class SimulationApplication extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * The current revision id.
      * 
      */
-    @OutputExport(name="currentRevisionId", type=String.class, parameters={})
+    @Export(name="currentRevisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> currentRevisionId;
 
     /**
@@ -49,7 +49,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * The URI of the Docker image for the robot application.
      * 
      */
-    @OutputExport(name="environment", type=String.class, parameters={})
+    @Export(name="environment", type=String.class, parameters={})
     private Output</* @Nullable */ String> environment;
 
     /**
@@ -63,7 +63,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * The name of the simulation application.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -77,7 +77,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * The rendering engine for the simulation application.
      * 
      */
-    @OutputExport(name="renderingEngine", type=SimulationApplicationRenderingEngine.class, parameters={})
+    @Export(name="renderingEngine", type=SimulationApplicationRenderingEngine.class, parameters={})
     private Output</* @Nullable */ SimulationApplicationRenderingEngine> renderingEngine;
 
     /**
@@ -91,7 +91,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * The robot software suite used by the simulation application.
      * 
      */
-    @OutputExport(name="robotSoftwareSuite", type=SimulationApplicationRobotSoftwareSuite.class, parameters={})
+    @Export(name="robotSoftwareSuite", type=SimulationApplicationRobotSoftwareSuite.class, parameters={})
     private Output<SimulationApplicationRobotSoftwareSuite> robotSoftwareSuite;
 
     /**
@@ -105,7 +105,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * The simulation software suite used by the simulation application.
      * 
      */
-    @OutputExport(name="simulationSoftwareSuite", type=SimulationApplicationSimulationSoftwareSuite.class, parameters={})
+    @Export(name="simulationSoftwareSuite", type=SimulationApplicationSimulationSoftwareSuite.class, parameters={})
     private Output<SimulationApplicationSimulationSoftwareSuite> simulationSoftwareSuite;
 
     /**
@@ -119,7 +119,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * The sources of the simulation application.
      * 
      */
-    @OutputExport(name="sources", type=List.class, parameters={SimulationApplicationSourceConfig.class})
+    @Export(name="sources", type=List.class, parameters={SimulationApplicationSourceConfig.class})
     private Output</* @Nullable */ List<SimulationApplicationSourceConfig>> sources;
 
     /**
@@ -129,7 +129,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<SimulationApplicationSourceConfig>> getSources() {
         return this.sources;
     }
-    @OutputExport(name="tags", type=SimulationApplicationTags.class, parameters={})
+    @Export(name="tags", type=SimulationApplicationTags.class, parameters={})
     private Output</* @Nullable */ SimulationApplicationTags> tags;
 
     public Output</* @Nullable */ SimulationApplicationTags> getTags() {

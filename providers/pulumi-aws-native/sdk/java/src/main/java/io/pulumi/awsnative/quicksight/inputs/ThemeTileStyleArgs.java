@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.ThemeBorderStyleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeTileStyleArgs Empty = new ThemeTileStyleArgs();
 
-    @InputImport(name="border")
+    @Import(name="border")
       private final @Nullable Output<ThemeBorderStyleArgs> border;
 
     public Output<ThemeBorderStyleArgs> getBorder() {

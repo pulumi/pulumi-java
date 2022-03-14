@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.outputs;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfaceInstanceIpv6Address;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfacePrivateIpAddressSpecification;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfaceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkInterfaceResult {
     /**
      * A description for the network interface.
@@ -73,19 +73,19 @@ public final class GetNetworkInterfaceResult {
      */
     private final @Nullable List<NetworkInterfaceTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkInterfaceResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("groupSet") @Nullable List<String> groupSet,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
-        @OutputCustomType.Parameter("ipv6Addresses") @Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses,
-        @OutputCustomType.Parameter("primaryPrivateIpAddress") @Nullable String primaryPrivateIpAddress,
-        @OutputCustomType.Parameter("privateIpAddresses") @Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses,
-        @OutputCustomType.Parameter("secondaryPrivateIpAddressCount") @Nullable Integer secondaryPrivateIpAddressCount,
-        @OutputCustomType.Parameter("secondaryPrivateIpAddresses") @Nullable List<String> secondaryPrivateIpAddresses,
-        @OutputCustomType.Parameter("sourceDestCheck") @Nullable Boolean sourceDestCheck,
-        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInterfaceTag> tags) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("groupSet") @Nullable List<String> groupSet,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
+        @CustomType.Parameter("ipv6Addresses") @Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses,
+        @CustomType.Parameter("primaryPrivateIpAddress") @Nullable String primaryPrivateIpAddress,
+        @CustomType.Parameter("privateIpAddresses") @Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses,
+        @CustomType.Parameter("secondaryPrivateIpAddressCount") @Nullable Integer secondaryPrivateIpAddressCount,
+        @CustomType.Parameter("secondaryPrivateIpAddresses") @Nullable List<String> secondaryPrivateIpAddresses,
+        @CustomType.Parameter("sourceDestCheck") @Nullable Boolean sourceDestCheck,
+        @CustomType.Parameter("tags") @Nullable List<NetworkInterfaceTag> tags) {
         this.description = description;
         this.groupSet = groupSet;
         this.id = id;

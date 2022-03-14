@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup;
 
 import io.pulumi.awsnative.backup.inputs.BackupPlanResourceTypeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupPlanArgs Empty = new BackupPlanArgs();
 
-    @InputImport(name="backupPlan", required=true)
+    @Import(name="backupPlan", required=true)
       private final Output<BackupPlanResourceTypeArgs> backupPlan;
 
     public Output<BackupPlanResourceTypeArgs> getBackupPlan() {
         return this.backupPlan;
     }
 
-    @InputImport(name="backupPlanTags")
+    @Import(name="backupPlanTags")
       private final @Nullable Output<Object> backupPlanTags;
 
     public Output<Object> getBackupPlanTags() {

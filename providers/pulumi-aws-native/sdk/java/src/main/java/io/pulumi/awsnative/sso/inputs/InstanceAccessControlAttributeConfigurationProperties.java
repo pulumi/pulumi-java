@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sso.inputs;
 
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttribute;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceAccessControlAttributeConfigurationProperties extends
 
     public static final InstanceAccessControlAttributeConfigurationProperties Empty = new InstanceAccessControlAttributeConfigurationProperties();
 
-    @InputImport(name="accessControlAttributes", required=true)
+    @Import(name="accessControlAttributes", required=true)
       private final List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
 
     public List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> getAccessControlAttributes() {

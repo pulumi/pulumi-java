@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeProtocol;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
     private final @Nullable List<String> destinationAddresses;
     private final @Nullable List<String> destinationPorts;
@@ -20,15 +20,15 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
     private final @Nullable List<String> sourcePorts;
     private final @Nullable List<String> sourcePrefixLists;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAccessScopePacketHeaderStatementRequest(
-        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
-        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
-        @OutputCustomType.Parameter("destinationPrefixLists") @Nullable List<String> destinationPrefixLists,
-        @OutputCustomType.Parameter("protocols") @Nullable List<NetworkInsightsAccessScopeProtocol> protocols,
-        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
-        @OutputCustomType.Parameter("sourcePorts") @Nullable List<String> sourcePorts,
-        @OutputCustomType.Parameter("sourcePrefixLists") @Nullable List<String> sourcePrefixLists) {
+        @CustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @CustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @CustomType.Parameter("destinationPrefixLists") @Nullable List<String> destinationPrefixLists,
+        @CustomType.Parameter("protocols") @Nullable List<NetworkInsightsAccessScopeProtocol> protocols,
+        @CustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @CustomType.Parameter("sourcePorts") @Nullable List<String> sourcePorts,
+        @CustomType.Parameter("sourcePrefixLists") @Nullable List<String> sourcePrefixLists) {
         this.destinationAddresses = destinationAddresses;
         this.destinationPorts = destinationPorts;
         this.destinationPrefixLists = destinationPrefixLists;

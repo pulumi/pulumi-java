@@ -5,18 +5,18 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionEndpointInput;
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionMonitoringGroundTruthS3Input;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelQualityJobDefinitionModelQualityJobInput {
     private final ModelQualityJobDefinitionEndpointInput endpointInput;
     private final ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelQualityJobDefinitionModelQualityJobInput(
-        @OutputCustomType.Parameter("endpointInput") ModelQualityJobDefinitionEndpointInput endpointInput,
-        @OutputCustomType.Parameter("groundTruthS3Input") ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
+        @CustomType.Parameter("endpointInput") ModelQualityJobDefinitionEndpointInput endpointInput,
+        @CustomType.Parameter("groundTruthS3Input") ModelQualityJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
         this.endpointInput = endpointInput;
         this.groundTruthS3Input = groundTruthS3Input;
     }

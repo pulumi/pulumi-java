@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ApiKeyStageKey extends io.pulumi.resources.InvokeArgs {
      * The ID of a RestApi resource that includes the stage with which you want to associate the API key.
      * 
      */
-    @InputImport(name="restApiId")
+    @Import(name="restApiId")
       private final @Nullable String restApiId;
 
     public Optional<String> getRestApiId() {
@@ -29,7 +29,7 @@ public final class ApiKeyStageKey extends io.pulumi.resources.InvokeArgs {
      * The name of the stage with which to associate the API key. The stage must be included in the RestApi resource that you specified in the RestApiId property.
      * 
      */
-    @InputImport(name="stageName")
+    @Import(name="stageName")
       private final @Nullable String stageName;
 
     public Optional<String> getStageName() {

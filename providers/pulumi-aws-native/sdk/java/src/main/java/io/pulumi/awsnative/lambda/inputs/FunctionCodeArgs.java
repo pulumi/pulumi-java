@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * ImageUri.
      * 
      */
-    @InputImport(name="imageUri")
+    @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
     public Output<String> getImageUri() {
@@ -29,7 +29,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
      * 
      */
-    @InputImport(name="s3Bucket")
+    @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
@@ -40,7 +40,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon S3 key of the deployment package.
      * 
      */
-    @InputImport(name="s3Key")
+    @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
     public Output<String> getS3Key() {
@@ -51,7 +51,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * For versioned objects, the version of the deployment package object to use.
      * 
      */
-    @InputImport(name="s3ObjectVersion")
+    @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
     public Output<String> getS3ObjectVersion() {
@@ -62,7 +62,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * The source code of your Lambda function. If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and zips it to create a deployment package..
      * 
      */
-    @InputImport(name="zipFile")
+    @Import(name="zipFile")
       private final @Nullable Output<String> zipFile;
 
     public Output<String> getZipFile() {

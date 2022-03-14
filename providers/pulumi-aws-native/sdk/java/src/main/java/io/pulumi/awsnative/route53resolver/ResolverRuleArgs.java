@@ -7,7 +7,7 @@ import io.pulumi.awsnative.route53resolver.enums.ResolverRuleRuleType;
 import io.pulumi.awsnative.route53resolver.inputs.ResolverRuleTagArgs;
 import io.pulumi.awsnative.route53resolver.inputs.ResolverRuleTargetAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -33,7 +33,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the Resolver rule
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the endpoint that the rule is associated with.
      * 
      */
-    @InputImport(name="resolverEndpointId")
+    @Import(name="resolverEndpointId")
       private final @Nullable Output<String> resolverEndpointId;
 
     public Output<String> getResolverEndpointId() {
@@ -55,7 +55,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * When you want to forward DNS queries for specified domain name to resolvers on your network, specify FORWARD. When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, specify SYSTEM.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final Output<ResolverRuleRuleType> ruleType;
 
     public Output<ResolverRuleRuleType> getRuleType() {
@@ -66,7 +66,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ResolverRuleTagArgs>> tags;
 
     public Output<List<ResolverRuleTagArgs>> getTags() {
@@ -77,7 +77,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
      * 
      */
-    @InputImport(name="targetIps")
+    @Import(name="targetIps")
       private final @Nullable Output<List<ResolverRuleTargetAddressArgs>> targetIps;
 
     public Output<List<ResolverRuleTargetAddressArgs>> getTargetIps() {

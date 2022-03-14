@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeField;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class ObjectTypeFieldMap extends io.pulumi.resources.InvokeArgs {
 
     public static final ObjectTypeFieldMap Empty = new ObjectTypeFieldMap();
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    @InputImport(name="objectTypeField")
+    @Import(name="objectTypeField")
       private final @Nullable ObjectTypeField objectTypeField;
 
     public Optional<ObjectTypeField> getObjectTypeField() {

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskSetAwsVpcConfigurationAssignPublicIp;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskSetAwsVpcConfiguration {
     /**
      * Whether the task's elastic network interface receives a public IP address. The default value is DISABLED.
@@ -29,11 +29,11 @@ public final class TaskSetAwsVpcConfiguration {
      */
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskSetAwsVpcConfiguration(
-        @OutputCustomType.Parameter("assignPublicIp") @Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
-        @OutputCustomType.Parameter("subnets") List<String> subnets) {
+        @CustomType.Parameter("assignPublicIp") @Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @CustomType.Parameter("subnets") List<String> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = subnets;

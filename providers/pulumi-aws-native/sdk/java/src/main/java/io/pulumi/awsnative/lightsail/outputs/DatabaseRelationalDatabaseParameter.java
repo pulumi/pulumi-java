@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseRelationalDatabaseParameter {
     /**
      * Specifies the valid range of values for the parameter.
@@ -53,16 +53,16 @@ public final class DatabaseRelationalDatabaseParameter {
      */
     private final @Nullable String parameterValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseRelationalDatabaseParameter(
-        @OutputCustomType.Parameter("allowedValues") @Nullable String allowedValues,
-        @OutputCustomType.Parameter("applyMethod") @Nullable String applyMethod,
-        @OutputCustomType.Parameter("applyType") @Nullable String applyType,
-        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("isModifiable") @Nullable Boolean isModifiable,
-        @OutputCustomType.Parameter("parameterName") @Nullable String parameterName,
-        @OutputCustomType.Parameter("parameterValue") @Nullable String parameterValue) {
+        @CustomType.Parameter("allowedValues") @Nullable String allowedValues,
+        @CustomType.Parameter("applyMethod") @Nullable String applyMethod,
+        @CustomType.Parameter("applyType") @Nullable String applyType,
+        @CustomType.Parameter("dataType") @Nullable String dataType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("isModifiable") @Nullable Boolean isModifiable,
+        @CustomType.Parameter("parameterName") @Nullable String parameterName,
+        @CustomType.Parameter("parameterValue") @Nullable String parameterValue) {
         this.allowedValues = allowedValues;
         this.applyMethod = applyMethod;
         this.applyType = applyType;

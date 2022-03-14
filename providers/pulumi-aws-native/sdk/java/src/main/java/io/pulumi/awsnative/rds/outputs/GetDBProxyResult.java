@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rds.outputs;
 
 import io.pulumi.awsnative.rds.outputs.DBProxyAuthFormat;
 import io.pulumi.awsnative.rds.outputs.DBProxyTagFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDBProxyResult {
     /**
      * The authorization mechanism that the proxy uses.
@@ -62,17 +62,17 @@ public final class GetDBProxyResult {
      */
     private final @Nullable List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDBProxyResult(
-        @OutputCustomType.Parameter("auth") @Nullable List<DBProxyAuthFormat> auth,
-        @OutputCustomType.Parameter("dBProxyArn") @Nullable String dBProxyArn,
-        @OutputCustomType.Parameter("debugLogging") @Nullable Boolean debugLogging,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("idleClientTimeout") @Nullable Integer idleClientTimeout,
-        @OutputCustomType.Parameter("requireTLS") @Nullable Boolean requireTLS,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<DBProxyTagFormat> tags,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
+        @CustomType.Parameter("auth") @Nullable List<DBProxyAuthFormat> auth,
+        @CustomType.Parameter("dBProxyArn") @Nullable String dBProxyArn,
+        @CustomType.Parameter("debugLogging") @Nullable Boolean debugLogging,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("idleClientTimeout") @Nullable Integer idleClientTimeout,
+        @CustomType.Parameter("requireTLS") @Nullable Boolean requireTLS,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("tags") @Nullable List<DBProxyTagFormat> tags,
+        @CustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
         this.auth = auth;
         this.dBProxyArn = dBProxyArn;
         this.debugLogging = debugLogging;

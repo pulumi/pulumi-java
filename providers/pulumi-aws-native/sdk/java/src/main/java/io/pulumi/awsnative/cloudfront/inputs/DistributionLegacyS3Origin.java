@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class DistributionLegacyS3Origin extends io.pulumi.resources.Invoke
 
     public static final DistributionLegacyS3Origin Empty = new DistributionLegacyS3Origin();
 
-    @InputImport(name="dNSName", required=true)
+    @Import(name="dNSName", required=true)
       private final String dNSName;
 
     public String getDNSName() {
         return this.dNSName;
     }
 
-    @InputImport(name="originAccessIdentity")
+    @Import(name="originAccessIdentity")
       private final @Nullable String originAccessIdentity;
 
     public Optional<String> getOriginAccessIdentity() {

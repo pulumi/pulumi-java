@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RegexPatternSetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegexPatternSetResult {
     /**
      * ARN of the WAF entity.
@@ -31,13 +31,13 @@ public final class GetRegexPatternSetResult {
     private final @Nullable List<String> regularExpressionList;
     private final @Nullable List<RegexPatternSetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegexPatternSetResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("regularExpressionList") @Nullable List<String> regularExpressionList,
-        @OutputCustomType.Parameter("tags") @Nullable List<RegexPatternSetTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("regularExpressionList") @Nullable List<String> regularExpressionList,
+        @CustomType.Parameter("tags") @Nullable List<RegexPatternSetTag> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

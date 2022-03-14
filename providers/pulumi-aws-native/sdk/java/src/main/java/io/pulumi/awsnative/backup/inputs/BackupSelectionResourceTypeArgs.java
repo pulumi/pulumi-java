@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup.inputs;
 import io.pulumi.awsnative.backup.inputs.BackupSelectionConditionResourceTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupSelectionResourceTypeConditionsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,42 +17,42 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
 
     public static final BackupSelectionResourceTypeArgs Empty = new BackupSelectionResourceTypeArgs();
 
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions;
 
     public Output<BackupSelectionResourceTypeConditionsPropertiesArgs> getConditions() {
         return this.conditions == null ? Output.empty() : this.conditions;
     }
 
-    @InputImport(name="iamRoleArn", required=true)
+    @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
         return this.iamRoleArn;
     }
 
-    @InputImport(name="listOfTags")
+    @Import(name="listOfTags")
       private final @Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags;
 
     public Output<List<BackupSelectionConditionResourceTypeArgs>> getListOfTags() {
         return this.listOfTags == null ? Output.empty() : this.listOfTags;
     }
 
-    @InputImport(name="notResources")
+    @Import(name="notResources")
       private final @Nullable Output<List<String>> notResources;
 
     public Output<List<String>> getNotResources() {
         return this.notResources == null ? Output.empty() : this.notResources;
     }
 
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
         return this.resources == null ? Output.empty() : this.resources;
     }
 
-    @InputImport(name="selectionName", required=true)
+    @Import(name="selectionName", required=true)
       private final Output<String> selectionName;
 
     public Output<String> getSelectionName() {

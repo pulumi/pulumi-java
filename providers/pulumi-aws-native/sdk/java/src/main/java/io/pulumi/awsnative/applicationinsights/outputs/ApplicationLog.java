@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationLog {
     /**
      * The type of encoding of the logs to be monitored.
@@ -38,13 +38,13 @@ public final class ApplicationLog {
      */
     private final @Nullable String patternSet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationLog(
-        @OutputCustomType.Parameter("encoding") @Nullable ApplicationLogEncoding encoding,
-        @OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName,
-        @OutputCustomType.Parameter("logPath") @Nullable String logPath,
-        @OutputCustomType.Parameter("logType") String logType,
-        @OutputCustomType.Parameter("patternSet") @Nullable String patternSet) {
+        @CustomType.Parameter("encoding") @Nullable ApplicationLogEncoding encoding,
+        @CustomType.Parameter("logGroupName") @Nullable String logGroupName,
+        @CustomType.Parameter("logPath") @Nullable String logPath,
+        @CustomType.Parameter("logType") String logType,
+        @CustomType.Parameter("patternSet") @Nullable String patternSet) {
         this.encoding = encoding;
         this.logGroupName = logGroupName;
         this.logPath = logPath;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.DomainTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     /**
      * The time of this integration got created
@@ -45,14 +45,14 @@ public final class GetDomainResult {
      */
     private final @Nullable List<DomainTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("deadLetterQueueUrl") @Nullable String deadLetterQueueUrl,
-        @OutputCustomType.Parameter("defaultEncryptionKey") @Nullable String defaultEncryptionKey,
-        @OutputCustomType.Parameter("defaultExpirationDays") @Nullable Integer defaultExpirationDays,
-        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
-        @OutputCustomType.Parameter("tags") @Nullable List<DomainTag> tags) {
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("deadLetterQueueUrl") @Nullable String deadLetterQueueUrl,
+        @CustomType.Parameter("defaultEncryptionKey") @Nullable String defaultEncryptionKey,
+        @CustomType.Parameter("defaultExpirationDays") @Nullable Integer defaultExpirationDays,
+        @CustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @CustomType.Parameter("tags") @Nullable List<DomainTag> tags) {
         this.createdAt = createdAt;
         this.deadLetterQueueUrl = deadLetterQueueUrl;
         this.defaultEncryptionKey = defaultEncryptionKey;

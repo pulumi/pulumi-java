@@ -11,7 +11,7 @@ import io.pulumi.awsnative.cassandra.outputs.TableColumn;
 import io.pulumi.awsnative.cassandra.outputs.TableEncryptionSpecification;
 import io.pulumi.awsnative.cassandra.outputs.TableTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cassandra:Table")
 public class Table extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="billingMode", type=TableBillingMode.class, parameters={})
+    @Export(name="billingMode", type=TableBillingMode.class, parameters={})
     private Output</* @Nullable */ TableBillingMode> billingMode;
 
     public Output</* @Nullable */ TableBillingMode> getBillingMode() {
@@ -37,7 +37,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Clustering key columns of the table
      * 
      */
-    @OutputExport(name="clusteringKeyColumns", type=List.class, parameters={TableClusteringKeyColumn.class})
+    @Export(name="clusteringKeyColumns", type=List.class, parameters={TableClusteringKeyColumn.class})
     private Output</* @Nullable */ List<TableClusteringKeyColumn>> clusteringKeyColumns;
 
     /**
@@ -51,7 +51,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
      * 
      */
-    @OutputExport(name="defaultTimeToLive", type=Integer.class, parameters={})
+    @Export(name="defaultTimeToLive", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultTimeToLive;
 
     /**
@@ -61,7 +61,7 @@ public class Table extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Integer> getDefaultTimeToLive() {
         return this.defaultTimeToLive;
     }
-    @OutputExport(name="encryptionSpecification", type=TableEncryptionSpecification.class, parameters={})
+    @Export(name="encryptionSpecification", type=TableEncryptionSpecification.class, parameters={})
     private Output</* @Nullable */ TableEncryptionSpecification> encryptionSpecification;
 
     public Output</* @Nullable */ TableEncryptionSpecification> getEncryptionSpecification() {
@@ -71,7 +71,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Name for Cassandra keyspace
      * 
      */
-    @OutputExport(name="keyspaceName", type=String.class, parameters={})
+    @Export(name="keyspaceName", type=String.class, parameters={})
     private Output<String> keyspaceName;
 
     /**
@@ -85,7 +85,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Partition key columns of the table
      * 
      */
-    @OutputExport(name="partitionKeyColumns", type=List.class, parameters={TableColumn.class})
+    @Export(name="partitionKeyColumns", type=List.class, parameters={TableColumn.class})
     private Output<List<TableColumn>> partitionKeyColumns;
 
     /**
@@ -99,7 +99,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
      * 
      */
-    @OutputExport(name="pointInTimeRecoveryEnabled", type=Boolean.class, parameters={})
+    @Export(name="pointInTimeRecoveryEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> pointInTimeRecoveryEnabled;
 
     /**
@@ -113,7 +113,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Non-key columns of the table
      * 
      */
-    @OutputExport(name="regularColumns", type=List.class, parameters={TableColumn.class})
+    @Export(name="regularColumns", type=List.class, parameters={TableColumn.class})
     private Output</* @Nullable */ List<TableColumn>> regularColumns;
 
     /**
@@ -127,7 +127,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Name for Cassandra table
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     /**
@@ -141,7 +141,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={TableTag.class})
+    @Export(name="tags", type=List.class, parameters={TableTag.class})
     private Output</* @Nullable */ List<TableTag>> tags;
 
     /**

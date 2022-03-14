@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.FeatureGroupDataCatalogConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.FeatureGroupS3StorageConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class OfflineStoreConfigPropertiesArgs extends io.pulumi.resources.
 
     public static final OfflineStoreConfigPropertiesArgs Empty = new OfflineStoreConfigPropertiesArgs();
 
-    @InputImport(name="dataCatalogConfig")
+    @Import(name="dataCatalogConfig")
       private final @Nullable Output<FeatureGroupDataCatalogConfigArgs> dataCatalogConfig;
 
     public Output<FeatureGroupDataCatalogConfigArgs> getDataCatalogConfig() {
         return this.dataCatalogConfig == null ? Output.empty() : this.dataCatalogConfig;
     }
 
-    @InputImport(name="disableGlueTableCreation")
+    @Import(name="disableGlueTableCreation")
       private final @Nullable Output<Boolean> disableGlueTableCreation;
 
     public Output<Boolean> getDisableGlueTableCreation() {
         return this.disableGlueTableCreation == null ? Output.empty() : this.disableGlueTableCreation;
     }
 
-    @InputImport(name="s3StorageConfig", required=true)
+    @Import(name="s3StorageConfig", required=true)
       private final Output<FeatureGroupS3StorageConfigArgs> s3StorageConfig;
 
     public Output<FeatureGroupS3StorageConfigArgs> getS3StorageConfig() {

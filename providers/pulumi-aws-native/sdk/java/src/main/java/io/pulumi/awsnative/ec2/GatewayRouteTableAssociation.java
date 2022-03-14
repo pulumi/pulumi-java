@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.GatewayRouteTableAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * The route table association ID.
      * 
      */
-    @OutputExport(name="associationId", type=String.class, parameters={})
+    @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
     /**
@@ -35,7 +35,7 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * The ID of the gateway.
      * 
      */
-    @OutputExport(name="gatewayId", type=String.class, parameters={})
+    @Export(name="gatewayId", type=String.class, parameters={})
     private Output<String> gatewayId;
 
     /**
@@ -49,7 +49,7 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * The ID of the route table.
      * 
      */
-    @OutputExport(name="routeTableId", type=String.class, parameters={})
+    @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
     /**

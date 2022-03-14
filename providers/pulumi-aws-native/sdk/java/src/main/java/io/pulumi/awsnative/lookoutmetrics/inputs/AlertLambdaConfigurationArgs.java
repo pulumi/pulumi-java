@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.Reso
      * ARN of a Lambda to send alert notifications to.
      * 
      */
-    @InputImport(name="lambdaArn", required=true)
+    @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
 
     public Output<String> getLambdaArn() {
@@ -32,7 +32,7 @@ public final class AlertLambdaConfigurationArgs extends io.pulumi.resources.Reso
      * ARN of an IAM role that LookoutMetrics should assume to access the Lambda function.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

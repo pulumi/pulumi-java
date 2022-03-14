@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayCapabilitySummary;
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGatewayResult {
     /**
      * A list of gateway capability summaries that each contain a namespace and status.
@@ -35,12 +35,12 @@ public final class GetGatewayResult {
      */
     private final @Nullable List<GatewayTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGatewayResult(
-        @OutputCustomType.Parameter("gatewayCapabilitySummaries") @Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries,
-        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
-        @OutputCustomType.Parameter("gatewayName") @Nullable String gatewayName,
-        @OutputCustomType.Parameter("tags") @Nullable List<GatewayTag> tags) {
+        @CustomType.Parameter("gatewayCapabilitySummaries") @Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries,
+        @CustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @CustomType.Parameter("gatewayName") @Nullable String gatewayName,
+        @CustomType.Parameter("tags") @Nullable List<GatewayTag> tags) {
         this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
         this.gatewayId = gatewayId;
         this.gatewayName = gatewayName;

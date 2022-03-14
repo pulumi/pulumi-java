@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetFirewallPolicyArgs Empty = new GetFirewallPolicyArgs();
 
-    @InputImport(name="firewallPolicyArn", required=true)
+    @Import(name="firewallPolicyArn", required=true)
       private final String firewallPolicyArn;
 
     public String getFirewallPolicyArn() {

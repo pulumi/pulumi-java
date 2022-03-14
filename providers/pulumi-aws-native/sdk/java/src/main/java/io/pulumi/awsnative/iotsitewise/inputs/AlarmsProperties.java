@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AlarmsProperties extends io.pulumi.resources.InvokeArgs {
      * The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
      * 
      */
-    @InputImport(name="alarmRoleArn")
+    @Import(name="alarmRoleArn")
       private final @Nullable String alarmRoleArn;
 
     public Optional<String> getAlarmRoleArn() {
@@ -33,7 +33,7 @@ public final class AlarmsProperties extends io.pulumi.resources.InvokeArgs {
      * The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
      * 
      */
-    @InputImport(name="notificationLambdaArn")
+    @Import(name="notificationLambdaArn")
       private final @Nullable String notificationLambdaArn;
 
     public Optional<String> getNotificationLambdaArn() {

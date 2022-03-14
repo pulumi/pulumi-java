@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
      * The version identifier of the API documentation snapshot.
      * 
      */
-    @InputImport(name="documentationVersion", required=true)
+    @Import(name="documentationVersion", required=true)
       private final String documentationVersion;
 
     public String getDocumentationVersion() {
@@ -27,7 +27,7 @@ public final class GetDocumentationVersionArgs extends io.pulumi.resources.Invok
      * The identifier of the API.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {

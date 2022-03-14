@@ -5,22 +5,22 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.WebACLTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLRegexMatchStatement {
     private final WebACLFieldToMatch fieldToMatch;
     private final String regexString;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLRegexMatchStatement(
-        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("regexString") String regexString,
-        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
+        @CustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @CustomType.Parameter("regexString") String regexString,
+        @CustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.regexString = regexString;
         this.textTransformations = textTransformations;

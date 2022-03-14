@@ -8,7 +8,7 @@ import io.pulumi.awsnative.xray.GroupArgs;
 import io.pulumi.awsnative.xray.outputs.GroupInsightsConfiguration;
 import io.pulumi.awsnative.xray.outputs.TagsItemProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The filter expression defining criteria by which to group traces.
      * 
      */
-    @OutputExport(name="filterExpression", type=String.class, parameters={})
+    @Export(name="filterExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterExpression;
 
     /**
@@ -40,7 +40,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The ARN of the group that was generated on creation.
      * 
      */
-    @OutputExport(name="groupARN", type=String.class, parameters={})
+    @Export(name="groupARN", type=String.class, parameters={})
     private Output<String> groupARN;
 
     /**
@@ -54,7 +54,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The case-sensitive name of the new group. Names must be unique.
      * 
      */
-    @OutputExport(name="groupName", type=String.class, parameters={})
+    @Export(name="groupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> groupName;
 
     /**
@@ -64,13 +64,13 @@ public class Group extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getGroupName() {
         return this.groupName;
     }
-    @OutputExport(name="insightsConfiguration", type=GroupInsightsConfiguration.class, parameters={})
+    @Export(name="insightsConfiguration", type=GroupInsightsConfiguration.class, parameters={})
     private Output</* @Nullable */ GroupInsightsConfiguration> insightsConfiguration;
 
     public Output</* @Nullable */ GroupInsightsConfiguration> getInsightsConfiguration() {
         return this.insightsConfiguration;
     }
-    @OutputExport(name="tags", type=List.class, parameters={TagsItemProperties.class})
+    @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
     public Output</* @Nullable */ List<TagsItemProperties>> getTags() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ivs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
      * Channel ARN is automatically generated on creation and assigned as the unique identifier.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {

@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationSMBMountOptionsVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocationSMBMountOptions {
     /**
      * The specific SMB version that you want DataSync to use to mount your SMB share.
@@ -17,8 +17,8 @@ public final class LocationSMBMountOptions {
      */
     private final @Nullable LocationSMBMountOptionsVersion version;
 
-    @OutputCustomType.Constructor
-    private LocationSMBMountOptions(@OutputCustomType.Parameter("version") @Nullable LocationSMBMountOptionsVersion version) {
+    @CustomType.Constructor
+    private LocationSMBMountOptions(@CustomType.Parameter("version") @Nullable LocationSMBMountOptionsVersion version) {
         this.version = version;
     }
 

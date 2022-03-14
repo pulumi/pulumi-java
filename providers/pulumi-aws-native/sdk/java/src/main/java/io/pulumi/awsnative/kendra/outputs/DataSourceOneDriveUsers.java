@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceS3Path;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceOneDriveUsers {
     private final @Nullable List<String> oneDriveUserList;
     private final @Nullable DataSourceS3Path oneDriveUserS3Path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceOneDriveUsers(
-        @OutputCustomType.Parameter("oneDriveUserList") @Nullable List<String> oneDriveUserList,
-        @OutputCustomType.Parameter("oneDriveUserS3Path") @Nullable DataSourceS3Path oneDriveUserS3Path) {
+        @CustomType.Parameter("oneDriveUserList") @Nullable List<String> oneDriveUserList,
+        @CustomType.Parameter("oneDriveUserS3Path") @Nullable DataSourceS3Path oneDriveUserS3Path) {
         this.oneDriveUserList = oneDriveUserList;
         this.oneDriveUserS3Path = oneDriveUserS3Path;
     }

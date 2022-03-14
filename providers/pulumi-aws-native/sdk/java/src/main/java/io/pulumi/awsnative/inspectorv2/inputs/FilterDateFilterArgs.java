@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class FilterDateFilterArgs extends io.pulumi.resources.ResourceArgs
 
     public static final FilterDateFilterArgs Empty = new FilterDateFilterArgs();
 
-    @InputImport(name="endInclusive")
+    @Import(name="endInclusive")
       private final @Nullable Output<Integer> endInclusive;
 
     public Output<Integer> getEndInclusive() {
         return this.endInclusive == null ? Output.empty() : this.endInclusive;
     }
 
-    @InputImport(name="startInclusive")
+    @Import(name="startInclusive")
       private final @Nullable Output<Integer> startInclusive;
 
     public Output<Integer> getStartInclusive() {

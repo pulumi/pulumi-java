@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateSubject {
     private final @Nullable String commonName;
     private final @Nullable String country;
@@ -26,22 +26,22 @@ public final class CertificateSubject {
     private final @Nullable String surname;
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateSubject(
-        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
-        @OutputCustomType.Parameter("country") @Nullable String country,
-        @OutputCustomType.Parameter("distinguishedNameQualifier") @Nullable String distinguishedNameQualifier,
-        @OutputCustomType.Parameter("generationQualifier") @Nullable String generationQualifier,
-        @OutputCustomType.Parameter("givenName") @Nullable String givenName,
-        @OutputCustomType.Parameter("initials") @Nullable String initials,
-        @OutputCustomType.Parameter("locality") @Nullable String locality,
-        @OutputCustomType.Parameter("organization") @Nullable String organization,
-        @OutputCustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
-        @OutputCustomType.Parameter("pseudonym") @Nullable String pseudonym,
-        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("surname") @Nullable String surname,
-        @OutputCustomType.Parameter("title") @Nullable String title) {
+        @CustomType.Parameter("commonName") @Nullable String commonName,
+        @CustomType.Parameter("country") @Nullable String country,
+        @CustomType.Parameter("distinguishedNameQualifier") @Nullable String distinguishedNameQualifier,
+        @CustomType.Parameter("generationQualifier") @Nullable String generationQualifier,
+        @CustomType.Parameter("givenName") @Nullable String givenName,
+        @CustomType.Parameter("initials") @Nullable String initials,
+        @CustomType.Parameter("locality") @Nullable String locality,
+        @CustomType.Parameter("organization") @Nullable String organization,
+        @CustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
+        @CustomType.Parameter("pseudonym") @Nullable String pseudonym,
+        @CustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("surname") @Nullable String surname,
+        @CustomType.Parameter("title") @Nullable String title) {
         this.commonName = commonName;
         this.country = country;
         this.distinguishedNameQualifier = distinguishedNameQualifier;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class FeatureEntityOverrideArgs extends io.pulumi.resources.Resourc
 
     public static final FeatureEntityOverrideArgs Empty = new FeatureEntityOverrideArgs();
 
-    @InputImport(name="entityId")
+    @Import(name="entityId")
       private final @Nullable Output<String> entityId;
 
     public Output<String> getEntityId() {
         return this.entityId == null ? Output.empty() : this.entityId;
     }
 
-    @InputImport(name="variation")
+    @Import(name="variation")
       private final @Nullable Output<String> variation;
 
     public Output<String> getVariation() {

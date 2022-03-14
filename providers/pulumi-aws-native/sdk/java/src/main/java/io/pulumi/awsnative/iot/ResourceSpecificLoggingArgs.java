@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingLogLevel;
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingTargetType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
      */
-    @InputImport(name="logLevel", required=true)
+    @Import(name="logLevel", required=true)
       private final Output<ResourceSpecificLoggingLogLevel> logLevel;
 
     public Output<ResourceSpecificLoggingLogLevel> getLogLevel() {
@@ -30,7 +30,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * The target name.
      * 
      */
-    @InputImport(name="targetName", required=true)
+    @Import(name="targetName", required=true)
       private final Output<String> targetName;
 
     public Output<String> getTargetName() {
@@ -41,7 +41,7 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * The target type. Value must be THING_GROUP.
      * 
      */
-    @InputImport(name="targetType", required=true)
+    @Import(name="targetType", required=true)
       private final Output<ResourceSpecificLoggingTargetType> targetType;
 
     public Output<ResourceSpecificLoggingTargetType> getTargetType() {

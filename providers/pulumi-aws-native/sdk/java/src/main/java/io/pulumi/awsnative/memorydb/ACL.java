@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.memorydb.ACLArgs;
 import io.pulumi.awsnative.memorydb.outputs.ACLTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * The name of the acl.
      * 
      */
-    @OutputExport(name="aCLName", type=String.class, parameters={})
+    @Export(name="aCLName", type=String.class, parameters={})
     private Output<String> aCLName;
 
     /**
@@ -37,7 +37,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the acl.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * Indicates acl status. Can be "creating", "active", "modifying", "deleting".
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -65,7 +65,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this cluster.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ACLTag.class})
+    @Export(name="tags", type=List.class, parameters={ACLTag.class})
     private Output</* @Nullable */ List<ACLTag>> tags;
 
     /**
@@ -79,7 +79,7 @@ public class ACL extends io.pulumi.resources.CustomResource {
      * List of users associated to this acl.
      * 
      */
-    @OutputExport(name="userNames", type=List.class, parameters={String.class})
+    @Export(name="userNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> userNames;
 
     /**

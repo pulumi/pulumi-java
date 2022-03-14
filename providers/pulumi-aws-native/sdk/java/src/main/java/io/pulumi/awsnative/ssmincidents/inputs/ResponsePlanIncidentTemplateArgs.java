@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanNotificationTargetItemArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * The deduplication string.
      * 
      */
-    @InputImport(name="dedupeString")
+    @Import(name="dedupeString")
       private final @Nullable Output<String> dedupeString;
 
     public Output<String> getDedupeString() {
@@ -36,7 +36,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * The impact value.
      * 
      */
-    @InputImport(name="impact", required=true)
+    @Import(name="impact", required=true)
       private final Output<Integer> impact;
 
     public Output<Integer> getImpact() {
@@ -47,7 +47,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * The list of notification targets.
      * 
      */
-    @InputImport(name="notificationTargets")
+    @Import(name="notificationTargets")
       private final @Nullable Output<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets;
 
     public Output<List<ResponsePlanNotificationTargetItemArgs>> getNotificationTargets() {
@@ -58,7 +58,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * The summary string.
      * 
      */
-    @InputImport(name="summary")
+    @Import(name="summary")
       private final @Nullable Output<String> summary;
 
     public Output<String> getSummary() {
@@ -69,7 +69,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * The title string.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

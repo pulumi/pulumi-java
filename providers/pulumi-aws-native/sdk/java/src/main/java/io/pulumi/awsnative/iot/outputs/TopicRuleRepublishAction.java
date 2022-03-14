@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleRepublishAction {
     private final @Nullable Integer qos;
     private final String roleArn;
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleRepublishAction(
-        @OutputCustomType.Parameter("qos") @Nullable Integer qos,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("qos") @Nullable Integer qos,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("topic") String topic) {
         this.qos = qos;
         this.roleArn = roleArn;
         this.topic = topic;

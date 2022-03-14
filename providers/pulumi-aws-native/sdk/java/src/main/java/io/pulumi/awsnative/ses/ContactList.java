@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ses.ContactListArgs;
 import io.pulumi.awsnative.ses.outputs.ContactListTag;
 import io.pulumi.awsnative.ses.outputs.ContactListTopic;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class ContactList extends io.pulumi.resources.CustomResource {
      * The name of the contact list.
      * 
      */
-    @OutputExport(name="contactListName", type=String.class, parameters={})
+    @Export(name="contactListName", type=String.class, parameters={})
     private Output</* @Nullable */ String> contactListName;
 
     /**
@@ -38,7 +38,7 @@ public class ContactList extends io.pulumi.resources.CustomResource {
      * The description of the contact list.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class ContactList extends io.pulumi.resources.CustomResource {
      * The tags (keys and values) associated with the contact list.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ContactListTag.class})
+    @Export(name="tags", type=List.class, parameters={ContactListTag.class})
     private Output</* @Nullable */ List<ContactListTag>> tags;
 
     /**
@@ -66,7 +66,7 @@ public class ContactList extends io.pulumi.resources.CustomResource {
      * The topics associated with the contact list.
      * 
      */
-    @OutputExport(name="topics", type=List.class, parameters={ContactListTopic.class})
+    @Export(name="topics", type=List.class, parameters={ContactListTopic.class})
     private Output</* @Nullable */ List<ContactListTopic>> topics;
 
     /**

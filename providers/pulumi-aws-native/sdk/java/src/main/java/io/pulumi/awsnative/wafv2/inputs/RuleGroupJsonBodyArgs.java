@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupBodyParsingFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupJsonMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupJsonMatchPatternArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,21 +20,21 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
 
     public static final RuleGroupJsonBodyArgs Empty = new RuleGroupJsonBodyArgs();
 
-    @InputImport(name="invalidFallbackBehavior")
+    @Import(name="invalidFallbackBehavior")
       private final @Nullable Output<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior;
 
     public Output<RuleGroupBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
         return this.invalidFallbackBehavior == null ? Output.empty() : this.invalidFallbackBehavior;
     }
 
-    @InputImport(name="matchPattern", required=true)
+    @Import(name="matchPattern", required=true)
       private final Output<RuleGroupJsonMatchPatternArgs> matchPattern;
 
     public Output<RuleGroupJsonMatchPatternArgs> getMatchPattern() {
         return this.matchPattern;
     }
 
-    @InputImport(name="matchScope", required=true)
+    @Import(name="matchScope", required=true)
       private final Output<RuleGroupJsonMatchScope> matchScope;
 
     public Output<RuleGroupJsonMatchScope> getMatchScope() {

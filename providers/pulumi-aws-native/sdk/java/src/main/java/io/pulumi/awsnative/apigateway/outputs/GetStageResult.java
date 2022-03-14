@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.outputs.StageAccessLogSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageCanarySetting;
 import io.pulumi.awsnative.apigateway.outputs.StageMethodSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStageResult {
     /**
      * Specifies settings for logging access in this stage.
@@ -79,20 +79,20 @@ public final class GetStageResult {
      */
     private final @Nullable Object variables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStageResult(
-        @OutputCustomType.Parameter("accessLogSetting") @Nullable StageAccessLogSetting accessLogSetting,
-        @OutputCustomType.Parameter("cacheClusterEnabled") @Nullable Boolean cacheClusterEnabled,
-        @OutputCustomType.Parameter("cacheClusterSize") @Nullable String cacheClusterSize,
-        @OutputCustomType.Parameter("canarySetting") @Nullable StageCanarySetting canarySetting,
-        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
-        @OutputCustomType.Parameter("deploymentId") @Nullable String deploymentId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("documentationVersion") @Nullable String documentationVersion,
-        @OutputCustomType.Parameter("methodSettings") @Nullable List<StageMethodSetting> methodSettings,
-        @OutputCustomType.Parameter("tags") @Nullable List<StageTag> tags,
-        @OutputCustomType.Parameter("tracingEnabled") @Nullable Boolean tracingEnabled,
-        @OutputCustomType.Parameter("variables") @Nullable Object variables) {
+        @CustomType.Parameter("accessLogSetting") @Nullable StageAccessLogSetting accessLogSetting,
+        @CustomType.Parameter("cacheClusterEnabled") @Nullable Boolean cacheClusterEnabled,
+        @CustomType.Parameter("cacheClusterSize") @Nullable String cacheClusterSize,
+        @CustomType.Parameter("canarySetting") @Nullable StageCanarySetting canarySetting,
+        @CustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @CustomType.Parameter("deploymentId") @Nullable String deploymentId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("documentationVersion") @Nullable String documentationVersion,
+        @CustomType.Parameter("methodSettings") @Nullable List<StageMethodSetting> methodSettings,
+        @CustomType.Parameter("tags") @Nullable List<StageTag> tags,
+        @CustomType.Parameter("tracingEnabled") @Nullable Boolean tracingEnabled,
+        @CustomType.Parameter("variables") @Nullable Object variables) {
         this.accessLogSetting = accessLogSetting;
         this.cacheClusterEnabled = cacheClusterEnabled;
         this.cacheClusterSize = cacheClusterSize;

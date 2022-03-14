@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContactTargetInfo {
     /**
      * The Amazon Resource Name (ARN) of the contact.
@@ -21,10 +21,10 @@ public final class ContactTargetInfo {
      */
     private final Boolean isEssential;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactTargetInfo(
-        @OutputCustomType.Parameter("contactId") String contactId,
-        @OutputCustomType.Parameter("isEssential") Boolean isEssential) {
+        @CustomType.Parameter("contactId") String contactId,
+        @CustomType.Parameter("isEssential") Boolean isEssential) {
         this.contactId = contactId;
         this.isEssential = isEssential;
     }

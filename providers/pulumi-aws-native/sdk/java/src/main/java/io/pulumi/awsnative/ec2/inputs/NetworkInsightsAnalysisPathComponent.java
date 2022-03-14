@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisComponent;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisPacketHeader;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,77 +19,77 @@ public final class NetworkInsightsAnalysisPathComponent extends io.pulumi.resour
 
     public static final NetworkInsightsAnalysisPathComponent Empty = new NetworkInsightsAnalysisPathComponent();
 
-    @InputImport(name="aclRule")
+    @Import(name="aclRule")
       private final @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule;
 
     public Optional<NetworkInsightsAnalysisAnalysisAclRule> getAclRule() {
         return this.aclRule == null ? Optional.empty() : Optional.ofNullable(this.aclRule);
     }
 
-    @InputImport(name="component")
+    @Import(name="component")
       private final @Nullable NetworkInsightsAnalysisAnalysisComponent component;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getComponent() {
         return this.component == null ? Optional.empty() : Optional.ofNullable(this.component);
     }
 
-    @InputImport(name="destinationVpc")
+    @Import(name="destinationVpc")
       private final @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getDestinationVpc() {
         return this.destinationVpc == null ? Optional.empty() : Optional.ofNullable(this.destinationVpc);
     }
 
-    @InputImport(name="inboundHeader")
+    @Import(name="inboundHeader")
       private final @Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader;
 
     public Optional<NetworkInsightsAnalysisAnalysisPacketHeader> getInboundHeader() {
         return this.inboundHeader == null ? Optional.empty() : Optional.ofNullable(this.inboundHeader);
     }
 
-    @InputImport(name="outboundHeader")
+    @Import(name="outboundHeader")
       private final @Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader;
 
     public Optional<NetworkInsightsAnalysisAnalysisPacketHeader> getOutboundHeader() {
         return this.outboundHeader == null ? Optional.empty() : Optional.ofNullable(this.outboundHeader);
     }
 
-    @InputImport(name="routeTableRoute")
+    @Import(name="routeTableRoute")
       private final @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute;
 
     public Optional<NetworkInsightsAnalysisAnalysisRouteTableRoute> getRouteTableRoute() {
         return this.routeTableRoute == null ? Optional.empty() : Optional.ofNullable(this.routeTableRoute);
     }
 
-    @InputImport(name="securityGroupRule")
+    @Import(name="securityGroupRule")
       private final @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule;
 
     public Optional<NetworkInsightsAnalysisAnalysisSecurityGroupRule> getSecurityGroupRule() {
         return this.securityGroupRule == null ? Optional.empty() : Optional.ofNullable(this.securityGroupRule);
     }
 
-    @InputImport(name="sequenceNumber")
+    @Import(name="sequenceNumber")
       private final @Nullable Integer sequenceNumber;
 
     public Optional<Integer> getSequenceNumber() {
         return this.sequenceNumber == null ? Optional.empty() : Optional.ofNullable(this.sequenceNumber);
     }
 
-    @InputImport(name="sourceVpc")
+    @Import(name="sourceVpc")
       private final @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getSourceVpc() {
         return this.sourceVpc == null ? Optional.empty() : Optional.ofNullable(this.sourceVpc);
     }
 
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
-    @InputImport(name="vpc")
+    @Import(name="vpc")
       private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpc() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ThemeGutterStyleArgs extends io.pulumi.resources.ResourceArgs
      *         </p>
      * 
      */
-    @InputImport(name="show")
+    @Import(name="show")
       private final @Nullable Output<Boolean> show;
 
     public Output<Boolean> getShow() {

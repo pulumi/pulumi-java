@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.cloudtrail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrailDataResource {
     /**
      * The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
@@ -22,10 +22,10 @@ public final class TrailDataResource {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrailDataResource(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.type = type;
         this.values = values;
     }

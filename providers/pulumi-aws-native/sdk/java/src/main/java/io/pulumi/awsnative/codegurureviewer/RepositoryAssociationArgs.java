@@ -6,7 +6,7 @@ package io.pulumi.awsnative.codegurureviewer;
 import io.pulumi.awsnative.codegurureviewer.enums.RepositoryAssociationType;
 import io.pulumi.awsnative.codegurureviewer.inputs.RepositoryAssociationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -32,7 +32,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
      * 
      */
-    @InputImport(name="connectionArn")
+    @Import(name="connectionArn")
       private final @Nullable Output<String> connectionArn;
 
     public Output<String> getConnectionArn() {
@@ -43,7 +43,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * Name of the repository to be associated.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -65,7 +65,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * The tags associated with a repository association.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RepositoryAssociationTagArgs>> tags;
 
     public Output<List<RepositoryAssociationTagArgs>> getTags() {
@@ -76,7 +76,7 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
      * The type of repository to be associated.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<RepositoryAssociationType> type;
 
     public Output<RepositoryAssociationType> getType() {

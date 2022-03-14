@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker.inputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationRobotSoftwareSuiteName;
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationRobotSoftwareSuiteVersion;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
      * The name of the robot software suite.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final SimulationApplicationRobotSoftwareSuiteName name;
 
     public SimulationApplicationRobotSoftwareSuiteName getName() {
@@ -34,7 +34,7 @@ public final class SimulationApplicationRobotSoftwareSuite extends io.pulumi.res
      * The version of the robot software suite.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
 
     public Optional<SimulationApplicationRobotSoftwareSuiteVersion> getVersion() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEntitlementArgs Empty = new GetEntitlementArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="stackName", required=true)
+    @Import(name="stackName", required=true)
       private final String stackName;
 
     public String getStackName() {

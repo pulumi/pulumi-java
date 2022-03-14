@@ -7,7 +7,7 @@ import io.pulumi.awsnative.budgets.inputs.BudgetsActionIamActionDefinitionArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionScpActionDefinitionArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionSsmActionDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,21 +16,21 @@ public final class BudgetsActionDefinitionArgs extends io.pulumi.resources.Resou
 
     public static final BudgetsActionDefinitionArgs Empty = new BudgetsActionDefinitionArgs();
 
-    @InputImport(name="iamActionDefinition")
+    @Import(name="iamActionDefinition")
       private final @Nullable Output<BudgetsActionIamActionDefinitionArgs> iamActionDefinition;
 
     public Output<BudgetsActionIamActionDefinitionArgs> getIamActionDefinition() {
         return this.iamActionDefinition == null ? Output.empty() : this.iamActionDefinition;
     }
 
-    @InputImport(name="scpActionDefinition")
+    @Import(name="scpActionDefinition")
       private final @Nullable Output<BudgetsActionScpActionDefinitionArgs> scpActionDefinition;
 
     public Output<BudgetsActionScpActionDefinitionArgs> getScpActionDefinition() {
         return this.scpActionDefinition == null ? Output.empty() : this.scpActionDefinition;
     }
 
-    @InputImport(name="ssmActionDefinition")
+    @Import(name="ssmActionDefinition")
       private final @Nullable Output<BudgetsActionSsmActionDefinitionArgs> ssmActionDefinition;
 
     public Output<BudgetsActionSsmActionDefinitionArgs> getSsmActionDefinition() {

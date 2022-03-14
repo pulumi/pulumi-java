@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLSizeConstraintStatementComparisonOperator;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformation;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -20,28 +20,28 @@ public final class WebACLSizeConstraintStatement extends io.pulumi.resources.Inv
 
     public static final WebACLSizeConstraintStatement Empty = new WebACLSizeConstraintStatement();
 
-    @InputImport(name="comparisonOperator", required=true)
+    @Import(name="comparisonOperator", required=true)
       private final WebACLSizeConstraintStatementComparisonOperator comparisonOperator;
 
     public WebACLSizeConstraintStatementComparisonOperator getComparisonOperator() {
         return this.comparisonOperator;
     }
 
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Double size;
 
     public Double getSize() {
         return this.size;
     }
 
-    @InputImport(name="textTransformations", required=true)
+    @Import(name="textTransformations", required=true)
       private final List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> getTextTransformations() {

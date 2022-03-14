@@ -5,20 +5,20 @@ package io.pulumi.awsnative.amplifyuibuilder.outputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentOverrides;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentVariantValues;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentVariant {
     private final @Nullable ComponentOverrides overrides;
     private final @Nullable ComponentVariantValues variantValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentVariant(
-        @OutputCustomType.Parameter("overrides") @Nullable ComponentOverrides overrides,
-        @OutputCustomType.Parameter("variantValues") @Nullable ComponentVariantValues variantValues) {
+        @CustomType.Parameter("overrides") @Nullable ComponentOverrides overrides,
+        @CustomType.Parameter("variantValues") @Nullable ComponentVariantValues variantValues) {
         this.overrides = overrides;
         this.variantValues = variantValues;
     }

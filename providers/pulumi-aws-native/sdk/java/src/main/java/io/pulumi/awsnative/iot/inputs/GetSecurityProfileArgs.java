@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSecurityProfileArgs extends io.pulumi.resources.InvokeArgs
      * A unique identifier for the security profile.
      * 
      */
-    @InputImport(name="securityProfileName", required=true)
+    @Import(name="securityProfileName", required=true)
       private final String securityProfileName;
 
     public String getSecurityProfileName() {

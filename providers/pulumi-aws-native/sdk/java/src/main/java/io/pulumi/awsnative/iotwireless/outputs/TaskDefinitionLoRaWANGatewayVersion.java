@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionLoRaWANGatewayVersion {
     private final @Nullable String model;
     private final @Nullable String packageVersion;
     private final @Nullable String station;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionLoRaWANGatewayVersion(
-        @OutputCustomType.Parameter("model") @Nullable String model,
-        @OutputCustomType.Parameter("packageVersion") @Nullable String packageVersion,
-        @OutputCustomType.Parameter("station") @Nullable String station) {
+        @CustomType.Parameter("model") @Nullable String model,
+        @CustomType.Parameter("packageVersion") @Nullable String packageVersion,
+        @CustomType.Parameter("station") @Nullable String station) {
         this.model = model;
         this.packageVersion = packageVersion;
         this.station = station;

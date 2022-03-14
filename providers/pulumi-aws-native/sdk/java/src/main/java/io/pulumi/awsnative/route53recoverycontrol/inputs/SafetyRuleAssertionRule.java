@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SafetyRuleAssertionRule extends io.pulumi.resources.InvokeArg
      * The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three AWS Regions.
      * 
      */
-    @InputImport(name="assertedControls", required=true)
+    @Import(name="assertedControls", required=true)
       private final List<String> assertedControls;
 
     public List<String> getAssertedControls() {
@@ -33,7 +33,7 @@ public final class SafetyRuleAssertionRule extends io.pulumi.resources.InvokeArg
      * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
      * 
      */
-    @InputImport(name="waitPeriodMs", required=true)
+    @Import(name="waitPeriodMs", required=true)
       private final Integer waitPeriodMs;
 
     public Integer getWaitPeriodMs() {

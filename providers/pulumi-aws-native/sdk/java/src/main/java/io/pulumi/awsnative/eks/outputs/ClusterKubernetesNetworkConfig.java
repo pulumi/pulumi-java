@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.eks.outputs;
 
 import io.pulumi.awsnative.eks.enums.ClusterKubernetesNetworkConfigIpFamily;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterKubernetesNetworkConfig {
     /**
      * Ipv4 or Ipv6. You can only specify ipv6 for 1.21 and later clusters that use version 1.10.1 or later of the Amazon VPC CNI add-on
@@ -28,11 +28,11 @@ public final class ClusterKubernetesNetworkConfig {
      */
     private final @Nullable String serviceIpv6Cidr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterKubernetesNetworkConfig(
-        @OutputCustomType.Parameter("ipFamily") @Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily,
-        @OutputCustomType.Parameter("serviceIpv4Cidr") @Nullable String serviceIpv4Cidr,
-        @OutputCustomType.Parameter("serviceIpv6Cidr") @Nullable String serviceIpv6Cidr) {
+        @CustomType.Parameter("ipFamily") @Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily,
+        @CustomType.Parameter("serviceIpv4Cidr") @Nullable String serviceIpv4Cidr,
+        @CustomType.Parameter("serviceIpv6Cidr") @Nullable String serviceIpv6Cidr) {
         this.ipFamily = ipFamily;
         this.serviceIpv4Cidr = serviceIpv4Cidr;
         this.serviceIpv6Cidr = serviceIpv6Cidr;

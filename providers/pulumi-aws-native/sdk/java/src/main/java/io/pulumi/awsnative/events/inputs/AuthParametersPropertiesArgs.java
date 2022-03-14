@@ -8,7 +8,7 @@ import io.pulumi.awsnative.events.inputs.ConnectionBasicAuthParametersArgs;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParametersArgs;
 import io.pulumi.awsnative.events.inputs.ConnectionOAuthParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,28 +17,28 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
 
     public static final AuthParametersPropertiesArgs Empty = new AuthParametersPropertiesArgs();
 
-    @InputImport(name="apiKeyAuthParameters")
+    @Import(name="apiKeyAuthParameters")
       private final @Nullable Output<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters;
 
     public Output<ConnectionApiKeyAuthParametersArgs> getApiKeyAuthParameters() {
         return this.apiKeyAuthParameters == null ? Output.empty() : this.apiKeyAuthParameters;
     }
 
-    @InputImport(name="basicAuthParameters")
+    @Import(name="basicAuthParameters")
       private final @Nullable Output<ConnectionBasicAuthParametersArgs> basicAuthParameters;
 
     public Output<ConnectionBasicAuthParametersArgs> getBasicAuthParameters() {
         return this.basicAuthParameters == null ? Output.empty() : this.basicAuthParameters;
     }
 
-    @InputImport(name="invocationHttpParameters")
+    @Import(name="invocationHttpParameters")
       private final @Nullable Output<ConnectionHttpParametersArgs> invocationHttpParameters;
 
     public Output<ConnectionHttpParametersArgs> getInvocationHttpParameters() {
         return this.invocationHttpParameters == null ? Output.empty() : this.invocationHttpParameters;
     }
 
-    @InputImport(name="oAuthParameters")
+    @Import(name="oAuthParameters")
       private final @Nullable Output<ConnectionOAuthParametersArgs> oAuthParameters;
 
     public Output<ConnectionOAuthParametersArgs> getOAuthParameters() {

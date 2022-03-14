@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.redshift;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * The target AWS account ID to grant or revoke access for.
      * 
      */
-    @InputImport(name="account", required=true)
+    @Import(name="account", required=true)
       private final Output<String> account;
 
     public Output<String> getAccount() {
@@ -31,7 +31,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * The cluster identifier.
      * 
      */
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -42,7 +42,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      *  Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
      * 
      */
-    @InputImport(name="force")
+    @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
     public Output<Boolean> getForce() {
@@ -53,7 +53,7 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
      * The virtual private cloud (VPC) identifiers to grant or revoke access to.
      * 
      */
-    @InputImport(name="vpcIds")
+    @Import(name="vpcIds")
       private final @Nullable Output<List<String>> vpcIds;
 
     public Output<List<String>> getVpcIds() {

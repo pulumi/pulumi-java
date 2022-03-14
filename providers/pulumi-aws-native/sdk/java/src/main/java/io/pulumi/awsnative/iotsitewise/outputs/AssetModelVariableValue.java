@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelVariableValue {
     private final @Nullable String hierarchyLogicalId;
     private final String propertyLogicalId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelVariableValue(
-        @OutputCustomType.Parameter("hierarchyLogicalId") @Nullable String hierarchyLogicalId,
-        @OutputCustomType.Parameter("propertyLogicalId") String propertyLogicalId) {
+        @CustomType.Parameter("hierarchyLogicalId") @Nullable String hierarchyLogicalId,
+        @CustomType.Parameter("propertyLogicalId") String propertyLogicalId) {
         this.hierarchyLogicalId = hierarchyLogicalId;
         this.propertyLogicalId = propertyLogicalId;
     }

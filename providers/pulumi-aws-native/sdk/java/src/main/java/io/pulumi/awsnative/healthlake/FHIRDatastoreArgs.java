@@ -8,7 +8,7 @@ import io.pulumi.awsnative.healthlake.inputs.FHIRDatastorePreloadDataConfigArgs;
 import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreSseConfigurationArgs;
 import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,35 +19,35 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FHIRDatastoreArgs Empty = new FHIRDatastoreArgs();
 
-    @InputImport(name="datastoreName")
+    @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
         return this.datastoreName == null ? Output.empty() : this.datastoreName;
     }
 
-    @InputImport(name="datastoreTypeVersion", required=true)
+    @Import(name="datastoreTypeVersion", required=true)
       private final Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion;
 
     public Output<FHIRDatastoreDatastoreTypeVersion> getDatastoreTypeVersion() {
         return this.datastoreTypeVersion;
     }
 
-    @InputImport(name="preloadDataConfig")
+    @Import(name="preloadDataConfig")
       private final @Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig;
 
     public Output<FHIRDatastorePreloadDataConfigArgs> getPreloadDataConfig() {
         return this.preloadDataConfig == null ? Output.empty() : this.preloadDataConfig;
     }
 
-    @InputImport(name="sseConfiguration")
+    @Import(name="sseConfiguration")
       private final @Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration;
 
     public Output<FHIRDatastoreSseConfigurationArgs> getSseConfiguration() {
         return this.sseConfiguration == null ? Output.empty() : this.sseConfiguration;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FHIRDatastoreTagArgs>> tags;
 
     public Output<List<FHIRDatastoreTagArgs>> getTags() {

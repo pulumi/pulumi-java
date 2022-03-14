@@ -6,14 +6,14 @@ package io.pulumi.awsnative.timestream.outputs;
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryDimensionMapping;
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryMixedMeasureMapping;
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryMultiMeasureMappings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryTimestreamConfiguration {
     private final String databaseName;
     private final List<ScheduledQueryDimensionMapping> dimensionMappings;
@@ -23,15 +23,15 @@ public final class ScheduledQueryTimestreamConfiguration {
     private final String tableName;
     private final String timeColumn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledQueryTimestreamConfiguration(
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("dimensionMappings") List<ScheduledQueryDimensionMapping> dimensionMappings,
-        @OutputCustomType.Parameter("measureNameColumn") @Nullable String measureNameColumn,
-        @OutputCustomType.Parameter("mixedMeasureMappings") @Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings,
-        @OutputCustomType.Parameter("multiMeasureMappings") @Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings,
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("timeColumn") String timeColumn) {
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("dimensionMappings") List<ScheduledQueryDimensionMapping> dimensionMappings,
+        @CustomType.Parameter("measureNameColumn") @Nullable String measureNameColumn,
+        @CustomType.Parameter("mixedMeasureMappings") @Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings,
+        @CustomType.Parameter("multiMeasureMappings") @Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings,
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("timeColumn") String timeColumn) {
         this.databaseName = databaseName;
         this.dimensionMappings = dimensionMappings;
         this.measureNameColumn = measureNameColumn;

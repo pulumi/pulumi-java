@@ -7,7 +7,7 @@ import io.pulumi.awsnative.efs.inputs.FileSystemBackupPolicyArgs;
 import io.pulumi.awsnative.efs.inputs.FileSystemElasticFileSystemTagArgs;
 import io.pulumi.awsnative.efs.inputs.FileSystemLifecyclePolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -21,14 +21,14 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileSystemArgs Empty = new FileSystemArgs();
 
-    @InputImport(name="availabilityZoneName")
+    @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
     public Output<String> getAvailabilityZoneName() {
         return this.availabilityZoneName == null ? Output.empty() : this.availabilityZoneName;
     }
 
-    @InputImport(name="backupPolicy")
+    @Import(name="backupPolicy")
       private final @Nullable Output<FileSystemBackupPolicyArgs> backupPolicy;
 
     public Output<FileSystemBackupPolicyArgs> getBackupPolicy() {
@@ -39,63 +39,63 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
      * 
      */
-    @InputImport(name="bypassPolicyLockoutSafetyCheck")
+    @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Output.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
         return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
-    @InputImport(name="fileSystemPolicy")
+    @Import(name="fileSystemPolicy")
       private final @Nullable Output<Object> fileSystemPolicy;
 
     public Output<Object> getFileSystemPolicy() {
         return this.fileSystemPolicy == null ? Output.empty() : this.fileSystemPolicy;
     }
 
-    @InputImport(name="fileSystemTags")
+    @Import(name="fileSystemTags")
       private final @Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags;
 
     public Output<List<FileSystemElasticFileSystemTagArgs>> getFileSystemTags() {
         return this.fileSystemTags == null ? Output.empty() : this.fileSystemTags;
     }
 
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
-    @InputImport(name="lifecyclePolicies")
+    @Import(name="lifecyclePolicies")
       private final @Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies;
 
     public Output<List<FileSystemLifecyclePolicyArgs>> getLifecyclePolicies() {
         return this.lifecyclePolicies == null ? Output.empty() : this.lifecyclePolicies;
     }
 
-    @InputImport(name="performanceMode")
+    @Import(name="performanceMode")
       private final @Nullable Output<String> performanceMode;
 
     public Output<String> getPerformanceMode() {
         return this.performanceMode == null ? Output.empty() : this.performanceMode;
     }
 
-    @InputImport(name="provisionedThroughputInMibps")
+    @Import(name="provisionedThroughputInMibps")
       private final @Nullable Output<Double> provisionedThroughputInMibps;
 
     public Output<Double> getProvisionedThroughputInMibps() {
         return this.provisionedThroughputInMibps == null ? Output.empty() : this.provisionedThroughputInMibps;
     }
 
-    @InputImport(name="throughputMode")
+    @Import(name="throughputMode")
       private final @Nullable Output<String> throughputMode;
 
     public Output<String> getThroughputMode() {

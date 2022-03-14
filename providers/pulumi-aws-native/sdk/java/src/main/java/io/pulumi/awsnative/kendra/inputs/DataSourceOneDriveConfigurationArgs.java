@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceOneDriveUsersArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,49 +18,49 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
 
     public static final DataSourceOneDriveConfigurationArgs Empty = new DataSourceOneDriveConfigurationArgs();
 
-    @InputImport(name="disableLocalGroups")
+    @Import(name="disableLocalGroups")
       private final @Nullable Output<Boolean> disableLocalGroups;
 
     public Output<Boolean> getDisableLocalGroups() {
         return this.disableLocalGroups == null ? Output.empty() : this.disableLocalGroups;
     }
 
-    @InputImport(name="exclusionPatterns")
+    @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
     public Output<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
     }
 
-    @InputImport(name="inclusionPatterns")
+    @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
     public Output<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
     }
 
-    @InputImport(name="oneDriveUsers", required=true)
+    @Import(name="oneDriveUsers", required=true)
       private final Output<DataSourceOneDriveUsersArgs> oneDriveUsers;
 
     public Output<DataSourceOneDriveUsersArgs> getOneDriveUsers() {
         return this.oneDriveUsers;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
-    @InputImport(name="tenantDomain", required=true)
+    @Import(name="tenantDomain", required=true)
       private final Output<String> tenantDomain;
 
     public Output<String> getTenantDomain() {

@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.fms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationChannelResult {
     private final @Nullable String snsRoleName;
     private final @Nullable String snsTopicArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationChannelResult(
-        @OutputCustomType.Parameter("snsRoleName") @Nullable String snsRoleName,
-        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn) {
+        @CustomType.Parameter("snsRoleName") @Nullable String snsRoleName,
+        @CustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn) {
         this.snsRoleName = snsRoleName;
         this.snsTopicArn = snsTopicArn;
     }

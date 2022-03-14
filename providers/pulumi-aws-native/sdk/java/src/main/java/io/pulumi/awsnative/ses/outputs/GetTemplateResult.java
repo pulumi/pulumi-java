@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ses.outputs;
 
 import io.pulumi.awsnative.ses.outputs.Template;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTemplateResult {
     private final @Nullable String id;
     private final @Nullable Template template;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTemplateResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("template") @Nullable Template template) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("template") @Nullable Template template) {
         this.id = id;
         this.template = template;
     }

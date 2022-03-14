@@ -9,7 +9,7 @@ import io.pulumi.awsnative.refactorspaces.enums.ApplicationProxyType;
 import io.pulumi.awsnative.refactorspaces.outputs.ApplicationApiGatewayProxyInput;
 import io.pulumi.awsnative.refactorspaces.outputs.ApplicationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,67 +21,67 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:refactorspaces:Application")
 public class Application extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="apiGatewayId", type=String.class, parameters={})
+    @Export(name="apiGatewayId", type=String.class, parameters={})
     private Output<String> apiGatewayId;
 
     public Output<String> getApiGatewayId() {
         return this.apiGatewayId;
     }
-    @OutputExport(name="apiGatewayProxy", type=ApplicationApiGatewayProxyInput.class, parameters={})
+    @Export(name="apiGatewayProxy", type=ApplicationApiGatewayProxyInput.class, parameters={})
     private Output</* @Nullable */ ApplicationApiGatewayProxyInput> apiGatewayProxy;
 
     public Output</* @Nullable */ ApplicationApiGatewayProxyInput> getApiGatewayProxy() {
         return this.apiGatewayProxy;
     }
-    @OutputExport(name="applicationIdentifier", type=String.class, parameters={})
+    @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
     public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="environmentIdentifier", type=String.class, parameters={})
+    @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentIdentifier;
 
     public Output</* @Nullable */ String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="nlbArn", type=String.class, parameters={})
+    @Export(name="nlbArn", type=String.class, parameters={})
     private Output<String> nlbArn;
 
     public Output<String> getNlbArn() {
         return this.nlbArn;
     }
-    @OutputExport(name="nlbName", type=String.class, parameters={})
+    @Export(name="nlbName", type=String.class, parameters={})
     private Output<String> nlbName;
 
     public Output<String> getNlbName() {
         return this.nlbName;
     }
-    @OutputExport(name="proxyType", type=ApplicationProxyType.class, parameters={})
+    @Export(name="proxyType", type=ApplicationProxyType.class, parameters={})
     private Output</* @Nullable */ ApplicationProxyType> proxyType;
 
     public Output</* @Nullable */ ApplicationProxyType> getProxyType() {
         return this.proxyType;
     }
-    @OutputExport(name="proxyUrl", type=String.class, parameters={})
+    @Export(name="proxyUrl", type=String.class, parameters={})
     private Output<String> proxyUrl;
 
     public Output<String> getProxyUrl() {
         return this.proxyUrl;
     }
-    @OutputExport(name="stageName", type=String.class, parameters={})
+    @Export(name="stageName", type=String.class, parameters={})
     private Output<String> stageName;
 
     public Output<String> getStageName() {
@@ -91,7 +91,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ApplicationTag.class})
+    @Export(name="tags", type=List.class, parameters={ApplicationTag.class})
     private Output</* @Nullable */ List<ApplicationTag>> tags;
 
     /**
@@ -101,13 +101,13 @@ public class Application extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<ApplicationTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
     public Output</* @Nullable */ String> getVpcId() {
         return this.vpcId;
     }
-    @OutputExport(name="vpcLinkId", type=String.class, parameters={})
+    @Export(name="vpcLinkId", type=String.class, parameters={})
     private Output<String> vpcLinkId;
 
     public Output<String> getVpcLinkId() {

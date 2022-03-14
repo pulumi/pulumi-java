@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,35 +12,35 @@ public final class TopicRuleOpenSearchAction extends io.pulumi.resources.InvokeA
 
     public static final TopicRuleOpenSearchAction Empty = new TopicRuleOpenSearchAction();
 
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
     }
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
         return this.id;
     }
 
-    @InputImport(name="index", required=true)
+    @Import(name="index", required=true)
       private final String index;
 
     public String getIndex() {
         return this.index;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

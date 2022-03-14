@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class FlowRedshiftDestinationProperties extends io.pulumi.resources
 
     public static final FlowRedshiftDestinationProperties Empty = new FlowRedshiftDestinationProperties();
 
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable String bucketPrefix;
 
     public Optional<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
     }
 
-    @InputImport(name="errorHandlingConfig")
+    @Import(name="errorHandlingConfig")
       private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
 
     public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
         return this.errorHandlingConfig == null ? Optional.empty() : Optional.ofNullable(this.errorHandlingConfig);
     }
 
-    @InputImport(name="intermediateBucketName", required=true)
+    @Import(name="intermediateBucketName", required=true)
       private final String intermediateBucketName;
 
     public String getIntermediateBucketName() {
         return this.intermediateBucketName;
     }
 
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final String object;
 
     public String getObject() {

@@ -4,10 +4,10 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketVersioningConfigurationStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketVersioningConfiguration {
     /**
      * The versioning state of the bucket.
@@ -15,8 +15,8 @@ public final class BucketVersioningConfiguration {
      */
     private final BucketVersioningConfigurationStatus status;
 
-    @OutputCustomType.Constructor
-    private BucketVersioningConfiguration(@OutputCustomType.Parameter("status") BucketVersioningConfigurationStatus status) {
+    @CustomType.Constructor
+    private BucketVersioningConfiguration(@CustomType.Parameter("status") BucketVersioningConfigurationStatus status) {
         this.status = status;
     }
 

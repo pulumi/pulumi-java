@@ -5,13 +5,13 @@ package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.FunctionConfig;
 import io.pulumi.awsnative.cloudfront.outputs.FunctionMetadata;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionResult {
     private final @Nullable String functionARN;
     private final @Nullable FunctionConfig functionConfig;
@@ -19,13 +19,13 @@ public final class GetFunctionResult {
     private final @Nullable String name;
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFunctionResult(
-        @OutputCustomType.Parameter("functionARN") @Nullable String functionARN,
-        @OutputCustomType.Parameter("functionConfig") @Nullable FunctionConfig functionConfig,
-        @OutputCustomType.Parameter("functionMetadata") @Nullable FunctionMetadata functionMetadata,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("stage") @Nullable String stage) {
+        @CustomType.Parameter("functionARN") @Nullable String functionARN,
+        @CustomType.Parameter("functionConfig") @Nullable FunctionConfig functionConfig,
+        @CustomType.Parameter("functionMetadata") @Nullable FunctionMetadata functionMetadata,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("stage") @Nullable String stage) {
         this.functionARN = functionARN;
         this.functionConfig = functionConfig;
         this.functionMetadata = functionMetadata;

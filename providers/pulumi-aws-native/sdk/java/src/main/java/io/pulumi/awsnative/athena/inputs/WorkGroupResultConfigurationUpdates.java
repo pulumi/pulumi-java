@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,28 +20,28 @@ public final class WorkGroupResultConfigurationUpdates extends io.pulumi.resourc
 
     public static final WorkGroupResultConfigurationUpdates Empty = new WorkGroupResultConfigurationUpdates();
 
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
 
     public Optional<WorkGroupEncryptionConfiguration> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
-    @InputImport(name="outputLocation")
+    @Import(name="outputLocation")
       private final @Nullable String outputLocation;
 
     public Optional<String> getOutputLocation() {
         return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
     }
 
-    @InputImport(name="removeEncryptionConfiguration")
+    @Import(name="removeEncryptionConfiguration")
       private final @Nullable Boolean removeEncryptionConfiguration;
 
     public Optional<Boolean> getRemoveEncryptionConfiguration() {
         return this.removeEncryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.removeEncryptionConfiguration);
     }
 
-    @InputImport(name="removeOutputLocation")
+    @Import(name="removeOutputLocation")
       private final @Nullable Boolean removeOutputLocation;
 
     public Optional<Boolean> getRemoveOutputLocation() {

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseServerSideEncryptionConfig
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseSourceConfigurationArgs;
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,49 +20,49 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KnowledgeBaseArgs Empty = new KnowledgeBaseArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="knowledgeBaseType", required=true)
+    @Import(name="knowledgeBaseType", required=true)
       private final Output<KnowledgeBaseType> knowledgeBaseType;
 
     public Output<KnowledgeBaseType> getKnowledgeBaseType() {
         return this.knowledgeBaseType;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="renderingConfiguration")
+    @Import(name="renderingConfiguration")
       private final @Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
 
     public Output<KnowledgeBaseRenderingConfigurationArgs> getRenderingConfiguration() {
         return this.renderingConfiguration == null ? Output.empty() : this.renderingConfiguration;
     }
 
-    @InputImport(name="serverSideEncryptionConfiguration")
+    @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
     public Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration == null ? Output.empty() : this.serverSideEncryptionConfiguration;
     }
 
-    @InputImport(name="sourceConfiguration")
+    @Import(name="sourceConfiguration")
       private final @Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
 
     public Output<KnowledgeBaseSourceConfigurationArgs> getSourceConfiguration() {
         return this.sourceConfiguration == null ? Output.empty() : this.sourceConfiguration;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<KnowledgeBaseTagArgs>> tags;
 
     public Output<List<KnowledgeBaseTagArgs>> getTags() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayGreengrassV2Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
      * A gateway that runs on AWS IoT Greengrass V1.
      * 
      */
-    @InputImport(name="greengrass")
+    @Import(name="greengrass")
       private final @Nullable Output<GatewayGreengrassArgs> greengrass;
 
     public Output<GatewayGreengrassArgs> getGreengrass() {
@@ -34,7 +34,7 @@ public final class GatewayPlatformArgs extends io.pulumi.resources.ResourceArgs 
      * A gateway that runs on AWS IoT Greengrass V2.
      * 
      */
-    @InputImport(name="greengrassV2")
+    @Import(name="greengrassV2")
       private final @Nullable Output<GatewayGreengrassV2Args> greengrassV2;
 
     public Output<GatewayGreengrassV2Args> getGreengrassV2() {

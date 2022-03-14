@@ -5,7 +5,7 @@ package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.awsnative.synthetics.inputs.CanaryBaseScreenshotArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
      * Canary run id to be used as base reference for visual testing
      * 
      */
-    @InputImport(name="baseCanaryRunId", required=true)
+    @Import(name="baseCanaryRunId", required=true)
       private final Output<String> baseCanaryRunId;
 
     public Output<String> getBaseCanaryRunId() {
@@ -31,7 +31,7 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
      * List of screenshots used as base reference for visual testing
      * 
      */
-    @InputImport(name="baseScreenshots")
+    @Import(name="baseScreenshots")
       private final @Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots;
 
     public Output<List<CanaryBaseScreenshotArgs>> getBaseScreenshots() {

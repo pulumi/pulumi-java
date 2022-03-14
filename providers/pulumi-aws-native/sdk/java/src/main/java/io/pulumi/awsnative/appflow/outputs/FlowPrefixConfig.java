@@ -5,20 +5,20 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowPrefixFormat;
 import io.pulumi.awsnative.appflow.enums.FlowPrefixType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowPrefixConfig {
     private final @Nullable FlowPrefixFormat prefixFormat;
     private final @Nullable FlowPrefixType prefixType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowPrefixConfig(
-        @OutputCustomType.Parameter("prefixFormat") @Nullable FlowPrefixFormat prefixFormat,
-        @OutputCustomType.Parameter("prefixType") @Nullable FlowPrefixType prefixType) {
+        @CustomType.Parameter("prefixFormat") @Nullable FlowPrefixFormat prefixFormat,
+        @CustomType.Parameter("prefixType") @Nullable FlowPrefixType prefixType) {
         this.prefixFormat = prefixFormat;
         this.prefixType = prefixType;
     }

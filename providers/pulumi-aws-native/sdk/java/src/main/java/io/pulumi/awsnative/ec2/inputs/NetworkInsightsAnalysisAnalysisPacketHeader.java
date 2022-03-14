@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader extends io.pulumi
 
     public static final NetworkInsightsAnalysisAnalysisPacketHeader Empty = new NetworkInsightsAnalysisAnalysisPacketHeader();
 
-    @InputImport(name="destinationAddresses")
+    @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
-    @InputImport(name="destinationPortRanges")
+    @Import(name="destinationPortRanges")
       private final @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges;
 
     public List<NetworkInsightsAnalysisPortRange> getDestinationPortRanges() {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
 
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
-    @InputImport(name="sourceAddresses")
+    @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
-    @InputImport(name="sourcePortRanges")
+    @Import(name="sourcePortRanges")
       private final @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges;
 
     public List<NetworkInsightsAnalysisPortRange> getSourcePortRanges() {

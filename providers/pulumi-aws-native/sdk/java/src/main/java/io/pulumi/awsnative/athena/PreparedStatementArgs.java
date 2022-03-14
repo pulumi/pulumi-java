@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * The description of the prepared statement.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * The query string for the prepared statement.
      * 
      */
-    @InputImport(name="queryStatement", required=true)
+    @Import(name="queryStatement", required=true)
       private final Output<String> queryStatement;
 
     public Output<String> getQueryStatement() {
@@ -40,7 +40,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * The name of the prepared statement.
      * 
      */
-    @InputImport(name="statementName", required=true)
+    @Import(name="statementName", required=true)
       private final Output<String> statementName;
 
     public Output<String> getStatementName() {
@@ -51,7 +51,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * The name of the workgroup to which the prepared statement belongs.
      * 
      */
-    @InputImport(name="workGroup", required=true)
+    @Import(name="workGroup", required=true)
       private final Output<String> workGroup;
 
     public Output<String> getWorkGroup() {

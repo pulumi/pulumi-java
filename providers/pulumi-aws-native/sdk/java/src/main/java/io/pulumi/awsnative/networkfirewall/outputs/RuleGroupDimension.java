@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupDimension {
     private final String value;
 
-    @OutputCustomType.Constructor
-    private RuleGroupDimension(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private RuleGroupDimension(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

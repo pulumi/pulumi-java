@@ -5,14 +5,14 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketRedirectAllRequestsTo;
 import io.pulumi.awsnative.s3.outputs.BucketRoutingRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketWebsiteConfiguration {
     /**
      * The name of the error document for the website.
@@ -27,12 +27,12 @@ public final class BucketWebsiteConfiguration {
     private final @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo;
     private final @Nullable List<BucketRoutingRule> routingRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketWebsiteConfiguration(
-        @OutputCustomType.Parameter("errorDocument") @Nullable String errorDocument,
-        @OutputCustomType.Parameter("indexDocument") @Nullable String indexDocument,
-        @OutputCustomType.Parameter("redirectAllRequestsTo") @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo,
-        @OutputCustomType.Parameter("routingRules") @Nullable List<BucketRoutingRule> routingRules) {
+        @CustomType.Parameter("errorDocument") @Nullable String errorDocument,
+        @CustomType.Parameter("indexDocument") @Nullable String indexDocument,
+        @CustomType.Parameter("redirectAllRequestsTo") @Nullable BucketRedirectAllRequestsTo redirectAllRequestsTo,
+        @CustomType.Parameter("routingRules") @Nullable List<BucketRoutingRule> routingRules) {
         this.errorDocument = errorDocument;
         this.indexDocument = indexDocument;
         this.redirectAllRequestsTo = redirectAllRequestsTo;

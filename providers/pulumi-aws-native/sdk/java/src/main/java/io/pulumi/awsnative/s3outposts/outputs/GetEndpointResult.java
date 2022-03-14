@@ -5,14 +5,14 @@ package io.pulumi.awsnative.s3outposts.outputs;
 
 import io.pulumi.awsnative.s3outposts.enums.EndpointStatus;
 import io.pulumi.awsnative.s3outposts.outputs.EndpointNetworkInterface;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointResult {
     /**
      * The Amazon Resource Name (ARN) of the endpoint.
@@ -41,14 +41,14 @@ public final class GetEndpointResult {
     private final @Nullable List<EndpointNetworkInterface> networkInterfaces;
     private final @Nullable EndpointStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<EndpointNetworkInterface> networkInterfaces,
-        @OutputCustomType.Parameter("status") @Nullable EndpointStatus status) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("networkInterfaces") @Nullable List<EndpointNetworkInterface> networkInterfaces,
+        @CustomType.Parameter("status") @Nullable EndpointStatus status) {
         this.arn = arn;
         this.cidrBlock = cidrBlock;
         this.creationTime = creationTime;

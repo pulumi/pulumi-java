@@ -13,12 +13,12 @@ import io.pulumi.awsnative.iotanalytics.outputs.PipelineLambda;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineMath;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineRemoveAttributes;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineSelectAttributes;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineActivity {
     private final @Nullable PipelineAddAttributes addAttributes;
     private final @Nullable PipelineChannel channel;
@@ -31,18 +31,18 @@ public final class PipelineActivity {
     private final @Nullable PipelineRemoveAttributes removeAttributes;
     private final @Nullable PipelineSelectAttributes selectAttributes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineActivity(
-        @OutputCustomType.Parameter("addAttributes") @Nullable PipelineAddAttributes addAttributes,
-        @OutputCustomType.Parameter("channel") @Nullable PipelineChannel channel,
-        @OutputCustomType.Parameter("datastore") @Nullable PipelineDatastore datastore,
-        @OutputCustomType.Parameter("deviceRegistryEnrich") @Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich,
-        @OutputCustomType.Parameter("deviceShadowEnrich") @Nullable PipelineDeviceShadowEnrich deviceShadowEnrich,
-        @OutputCustomType.Parameter("filter") @Nullable PipelineFilter filter,
-        @OutputCustomType.Parameter("lambda") @Nullable PipelineLambda lambda,
-        @OutputCustomType.Parameter("math") @Nullable PipelineMath math,
-        @OutputCustomType.Parameter("removeAttributes") @Nullable PipelineRemoveAttributes removeAttributes,
-        @OutputCustomType.Parameter("selectAttributes") @Nullable PipelineSelectAttributes selectAttributes) {
+        @CustomType.Parameter("addAttributes") @Nullable PipelineAddAttributes addAttributes,
+        @CustomType.Parameter("channel") @Nullable PipelineChannel channel,
+        @CustomType.Parameter("datastore") @Nullable PipelineDatastore datastore,
+        @CustomType.Parameter("deviceRegistryEnrich") @Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich,
+        @CustomType.Parameter("deviceShadowEnrich") @Nullable PipelineDeviceShadowEnrich deviceShadowEnrich,
+        @CustomType.Parameter("filter") @Nullable PipelineFilter filter,
+        @CustomType.Parameter("lambda") @Nullable PipelineLambda lambda,
+        @CustomType.Parameter("math") @Nullable PipelineMath math,
+        @CustomType.Parameter("removeAttributes") @Nullable PipelineRemoveAttributes removeAttributes,
+        @CustomType.Parameter("selectAttributes") @Nullable PipelineSelectAttributes selectAttributes) {
         this.addAttributes = addAttributes;
         this.channel = channel;
         this.datastore = datastore;

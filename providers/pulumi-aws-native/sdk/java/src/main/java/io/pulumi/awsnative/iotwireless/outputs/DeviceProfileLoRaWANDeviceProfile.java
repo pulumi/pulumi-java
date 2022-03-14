@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeviceProfileLoRaWANDeviceProfile {
     private final @Nullable Integer classBTimeout;
     private final @Nullable Integer classCTimeout;
@@ -28,22 +28,22 @@ public final class DeviceProfileLoRaWANDeviceProfile {
     private final @Nullable Boolean supportsClassC;
     private final @Nullable Boolean supportsJoin;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceProfileLoRaWANDeviceProfile(
-        @OutputCustomType.Parameter("classBTimeout") @Nullable Integer classBTimeout,
-        @OutputCustomType.Parameter("classCTimeout") @Nullable Integer classCTimeout,
-        @OutputCustomType.Parameter("macVersion") @Nullable String macVersion,
-        @OutputCustomType.Parameter("maxDutyCycle") @Nullable Integer maxDutyCycle,
-        @OutputCustomType.Parameter("maxEirp") @Nullable Integer maxEirp,
-        @OutputCustomType.Parameter("pingSlotDr") @Nullable Integer pingSlotDr,
-        @OutputCustomType.Parameter("pingSlotFreq") @Nullable Integer pingSlotFreq,
-        @OutputCustomType.Parameter("pingSlotPeriod") @Nullable Integer pingSlotPeriod,
-        @OutputCustomType.Parameter("regParamsRevision") @Nullable String regParamsRevision,
-        @OutputCustomType.Parameter("rfRegion") @Nullable String rfRegion,
-        @OutputCustomType.Parameter("supports32BitFCnt") @Nullable Boolean supports32BitFCnt,
-        @OutputCustomType.Parameter("supportsClassB") @Nullable Boolean supportsClassB,
-        @OutputCustomType.Parameter("supportsClassC") @Nullable Boolean supportsClassC,
-        @OutputCustomType.Parameter("supportsJoin") @Nullable Boolean supportsJoin) {
+        @CustomType.Parameter("classBTimeout") @Nullable Integer classBTimeout,
+        @CustomType.Parameter("classCTimeout") @Nullable Integer classCTimeout,
+        @CustomType.Parameter("macVersion") @Nullable String macVersion,
+        @CustomType.Parameter("maxDutyCycle") @Nullable Integer maxDutyCycle,
+        @CustomType.Parameter("maxEirp") @Nullable Integer maxEirp,
+        @CustomType.Parameter("pingSlotDr") @Nullable Integer pingSlotDr,
+        @CustomType.Parameter("pingSlotFreq") @Nullable Integer pingSlotFreq,
+        @CustomType.Parameter("pingSlotPeriod") @Nullable Integer pingSlotPeriod,
+        @CustomType.Parameter("regParamsRevision") @Nullable String regParamsRevision,
+        @CustomType.Parameter("rfRegion") @Nullable String rfRegion,
+        @CustomType.Parameter("supports32BitFCnt") @Nullable Boolean supports32BitFCnt,
+        @CustomType.Parameter("supportsClassB") @Nullable Boolean supportsClassB,
+        @CustomType.Parameter("supportsClassC") @Nullable Boolean supportsClassC,
+        @CustomType.Parameter("supportsJoin") @Nullable Boolean supportsJoin) {
         this.classBTimeout = classBTimeout;
         this.classCTimeout = classCTimeout;
         this.macVersion = macVersion;

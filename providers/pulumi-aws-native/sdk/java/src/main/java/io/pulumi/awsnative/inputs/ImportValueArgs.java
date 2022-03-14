@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class ImportValueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ImportValueArgs Empty = new ImportValueArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

@@ -5,19 +5,19 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.WebACLTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLSqliMatchStatement {
     private final WebACLFieldToMatch fieldToMatch;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLSqliMatchStatement(
-        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
+        @CustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @CustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

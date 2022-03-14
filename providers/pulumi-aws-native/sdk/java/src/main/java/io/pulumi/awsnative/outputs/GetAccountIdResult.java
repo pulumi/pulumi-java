@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountIdResult {
     private final String accountId;
 
-    @OutputCustomType.Constructor
-    private GetAccountIdResult(@OutputCustomType.Parameter("accountId") String accountId) {
+    @CustomType.Constructor
+    private GetAccountIdResult(@CustomType.Parameter("accountId") String accountId) {
         this.accountId = accountId;
     }
 

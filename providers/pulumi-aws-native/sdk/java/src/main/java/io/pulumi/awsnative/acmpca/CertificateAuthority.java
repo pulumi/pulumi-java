@@ -10,7 +10,7 @@ import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityRevocationConfigur
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthoritySubject;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -42,7 +42,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * The base64 PEM-encoded certificate signing request (CSR) for your certificate authority certificate.
      * 
      */
-    @OutputExport(name="certificateSigningRequest", type=String.class, parameters={})
+    @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output<String> certificateSigningRequest;
 
     /**
@@ -56,7 +56,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
      * 
      */
-    @OutputExport(name="csrExtensions", type=CertificateAuthorityCsrExtensions.class, parameters={})
+    @Export(name="csrExtensions", type=CertificateAuthorityCsrExtensions.class, parameters={})
     private Output</* @Nullable */ CertificateAuthorityCsrExtensions> csrExtensions;
 
     /**
@@ -70,7 +70,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
      * 
      */
-    @OutputExport(name="keyAlgorithm", type=String.class, parameters={})
+    @Export(name="keyAlgorithm", type=String.class, parameters={})
     private Output<String> keyAlgorithm;
 
     /**
@@ -84,7 +84,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
      * 
      */
-    @OutputExport(name="keyStorageSecurityStandard", type=String.class, parameters={})
+    @Export(name="keyStorageSecurityStandard", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyStorageSecurityStandard;
 
     /**
@@ -98,7 +98,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
      * 
      */
-    @OutputExport(name="revocationConfiguration", type=CertificateAuthorityRevocationConfiguration.class, parameters={})
+    @Export(name="revocationConfiguration", type=CertificateAuthorityRevocationConfiguration.class, parameters={})
     private Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> revocationConfiguration;
 
     /**
@@ -112,7 +112,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Algorithm your CA uses to sign certificate requests.
      * 
      */
-    @OutputExport(name="signingAlgorithm", type=String.class, parameters={})
+    @Export(name="signingAlgorithm", type=String.class, parameters={})
     private Output<String> signingAlgorithm;
 
     /**
@@ -126,7 +126,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Structure that contains X.500 distinguished name information for your CA.
      * 
      */
-    @OutputExport(name="subject", type=CertificateAuthoritySubject.class, parameters={})
+    @Export(name="subject", type=CertificateAuthoritySubject.class, parameters={})
     private Output<CertificateAuthoritySubject> subject;
 
     /**
@@ -136,7 +136,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
     public Output<CertificateAuthoritySubject> getSubject() {
         return this.subject;
     }
-    @OutputExport(name="tags", type=List.class, parameters={CertificateAuthorityTag.class})
+    @Export(name="tags", type=List.class, parameters={CertificateAuthorityTag.class})
     private Output</* @Nullable */ List<CertificateAuthorityTag>> tags;
 
     public Output</* @Nullable */ List<CertificateAuthorityTag>> getTags() {
@@ -146,7 +146,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * The type of the certificate authority.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.resourcegroups.inputs.GroupConfigurationItemArgs;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupResourceQueryArgs;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<List<GroupConfigurationItemArgs>> configuration;
 
     public Output<List<GroupConfigurationItemArgs>> getConfiguration() {
@@ -29,7 +29,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the resource group
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,28 +40,28 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="resourceQuery")
+    @Import(name="resourceQuery")
       private final @Nullable Output<GroupResourceQueryArgs> resourceQuery;
 
     public Output<GroupResourceQueryArgs> getResourceQuery() {
         return this.resourceQuery == null ? Output.empty() : this.resourceQuery;
     }
 
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
         return this.resources == null ? Output.empty() : this.resources;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<GroupTagArgs>> tags;
 
     public Output<List<GroupTagArgs>> getTags() {

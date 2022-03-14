@@ -6,7 +6,7 @@ package io.pulumi.awsnative.licensemanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.licensemanager.GrantArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:licensemanager:Grant")
 public class Grant extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="allowedOperations", type=List.class, parameters={String.class})
+    @Export(name="allowedOperations", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedOperations;
 
     public Output</* @Nullable */ List<String>> getAllowedOperations() {
@@ -28,7 +28,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * Arn of the grant.
      * 
      */
-    @OutputExport(name="grantArn", type=String.class, parameters={})
+    @Export(name="grantArn", type=String.class, parameters={})
     private Output<String> grantArn;
 
     /**
@@ -42,7 +42,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * Name for the created Grant.
      * 
      */
-    @OutputExport(name="grantName", type=String.class, parameters={})
+    @Export(name="grantName", type=String.class, parameters={})
     private Output</* @Nullable */ String> grantName;
 
     /**
@@ -56,7 +56,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * Home region for the created grant.
      * 
      */
-    @OutputExport(name="homeRegion", type=String.class, parameters={})
+    @Export(name="homeRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> homeRegion;
 
     /**
@@ -70,7 +70,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * License Arn for the grant.
      * 
      */
-    @OutputExport(name="licenseArn", type=String.class, parameters={})
+    @Export(name="licenseArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseArn;
 
     /**
@@ -80,13 +80,13 @@ public class Grant extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getLicenseArn() {
         return this.licenseArn;
     }
-    @OutputExport(name="principals", type=List.class, parameters={String.class})
+    @Export(name="principals", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> principals;
 
     public Output</* @Nullable */ List<String>> getPrincipals() {
         return this.principals;
     }
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     public Output</* @Nullable */ String> getStatus() {
@@ -96,7 +96,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * The version of the grant.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

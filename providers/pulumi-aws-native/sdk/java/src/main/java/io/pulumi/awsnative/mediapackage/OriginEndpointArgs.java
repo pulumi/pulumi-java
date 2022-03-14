@@ -11,7 +11,7 @@ import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointHlsPackageArgs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointMssPackageArgs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OriginEndpointArgs Empty = new OriginEndpointArgs();
 
-    @InputImport(name="authorization")
+    @Import(name="authorization")
       private final @Nullable Output<OriginEndpointAuthorizationArgs> authorization;
 
     public Output<OriginEndpointAuthorizationArgs> getAuthorization() {
@@ -34,21 +34,21 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the Channel the OriginEndpoint is associated with.
      * 
      */
-    @InputImport(name="channelId", required=true)
+    @Import(name="channelId", required=true)
       private final Output<String> channelId;
 
     public Output<String> getChannelId() {
         return this.channelId;
     }
 
-    @InputImport(name="cmafPackage")
+    @Import(name="cmafPackage")
       private final @Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage;
 
     public Output<OriginEndpointCmafPackageArgs> getCmafPackage() {
         return this.cmafPackage == null ? Output.empty() : this.cmafPackage;
     }
 
-    @InputImport(name="dashPackage")
+    @Import(name="dashPackage")
       private final @Nullable Output<OriginEndpointDashPackageArgs> dashPackage;
 
     public Output<OriginEndpointDashPackageArgs> getDashPackage() {
@@ -59,14 +59,14 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A short text description of the OriginEndpoint.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="hlsPackage")
+    @Import(name="hlsPackage")
       private final @Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage;
 
     public Output<OriginEndpointHlsPackageArgs> getHlsPackage() {
@@ -77,14 +77,14 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A short string appended to the end of the OriginEndpoint URL.
      * 
      */
-    @InputImport(name="manifestName")
+    @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
     public Output<String> getManifestName() {
         return this.manifestName == null ? Output.empty() : this.manifestName;
     }
 
-    @InputImport(name="mssPackage")
+    @Import(name="mssPackage")
       private final @Nullable Output<OriginEndpointMssPackageArgs> mssPackage;
 
     public Output<OriginEndpointMssPackageArgs> getMssPackage() {
@@ -95,7 +95,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Control whether origination of video is allowed for this OriginEndpoint. If set to ALLOW, the OriginEndpoint may by requested, pursuant to any other form of access control. If set to DENY, the OriginEndpoint may not be requested. This can be helpful for Live to VOD harvesting, or for temporarily disabling origination
      * 
      */
-    @InputImport(name="origination")
+    @Import(name="origination")
       private final @Nullable Output<OriginEndpointOrigination> origination;
 
     public Output<OriginEndpointOrigination> getOrigination() {
@@ -106,7 +106,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum duration (seconds) of content to retain for startover playback. If not specified, startover playback will be disabled for the OriginEndpoint.
      * 
      */
-    @InputImport(name="startoverWindowSeconds")
+    @Import(name="startoverWindowSeconds")
       private final @Nullable Output<Integer> startoverWindowSeconds;
 
     public Output<Integer> getStartoverWindowSeconds() {
@@ -117,7 +117,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<OriginEndpointTagArgs>> tags;
 
     public Output<List<OriginEndpointTagArgs>> getTags() {
@@ -128,7 +128,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Amount of delay (seconds) to enforce on the playback of live content. If not specified, there will be no time delay in effect for the OriginEndpoint.
      * 
      */
-    @InputImport(name="timeDelaySeconds")
+    @Import(name="timeDelaySeconds")
       private final @Nullable Output<Integer> timeDelaySeconds;
 
     public Output<Integer> getTimeDelaySeconds() {
@@ -139,7 +139,7 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A list of source IP CIDR blocks that will be allowed to access the OriginEndpoint.
      * 
      */
-    @InputImport(name="whitelist")
+    @Import(name="whitelist")
       private final @Nullable Output<List<String>> whitelist;
 
     public Output<List<String>> getWhitelist() {

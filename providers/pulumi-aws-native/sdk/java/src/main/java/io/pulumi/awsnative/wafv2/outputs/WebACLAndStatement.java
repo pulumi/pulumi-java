@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLAndStatement {
     private final List<WebACLStatement> statements;
 
-    @OutputCustomType.Constructor
-    private WebACLAndStatement(@OutputCustomType.Parameter("statements") List<WebACLStatement> statements) {
+    @CustomType.Constructor
+    private WebACLAndStatement(@CustomType.Parameter("statements") List<WebACLStatement> statements) {
         this.statements = statements;
     }
 

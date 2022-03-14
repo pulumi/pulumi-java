@@ -5,13 +5,13 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupAuthorization;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupLogConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPackagingGroupResult {
     /**
      * The ARN of the PackagingGroup.
@@ -34,12 +34,12 @@ public final class GetPackagingGroupResult {
      */
     private final @Nullable PackagingGroupLogConfiguration egressAccessLogs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPackagingGroupResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("authorization") @Nullable PackagingGroupAuthorization authorization,
-        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
-        @OutputCustomType.Parameter("egressAccessLogs") @Nullable PackagingGroupLogConfiguration egressAccessLogs) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("authorization") @Nullable PackagingGroupAuthorization authorization,
+        @CustomType.Parameter("domainName") @Nullable String domainName,
+        @CustomType.Parameter("egressAccessLogs") @Nullable PackagingGroupLogConfiguration egressAccessLogs) {
         this.arn = arn;
         this.authorization = authorization;
         this.domainName = domainName;

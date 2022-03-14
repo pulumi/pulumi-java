@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionProblemType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelQualityJobDefinitionModelQualityAppSpecification {
     /**
      * An array of arguments for the container used to run the monitoring job.
@@ -46,15 +46,15 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecification {
      */
     private final @Nullable String recordPreprocessorSourceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelQualityJobDefinitionModelQualityAppSpecification(
-        @OutputCustomType.Parameter("containerArguments") @Nullable List<String> containerArguments,
-        @OutputCustomType.Parameter("containerEntrypoint") @Nullable List<String> containerEntrypoint,
-        @OutputCustomType.Parameter("environment") @Nullable Object environment,
-        @OutputCustomType.Parameter("imageUri") String imageUri,
-        @OutputCustomType.Parameter("postAnalyticsProcessorSourceUri") @Nullable String postAnalyticsProcessorSourceUri,
-        @OutputCustomType.Parameter("problemType") ModelQualityJobDefinitionProblemType problemType,
-        @OutputCustomType.Parameter("recordPreprocessorSourceUri") @Nullable String recordPreprocessorSourceUri) {
+        @CustomType.Parameter("containerArguments") @Nullable List<String> containerArguments,
+        @CustomType.Parameter("containerEntrypoint") @Nullable List<String> containerEntrypoint,
+        @CustomType.Parameter("environment") @Nullable Object environment,
+        @CustomType.Parameter("imageUri") String imageUri,
+        @CustomType.Parameter("postAnalyticsProcessorSourceUri") @Nullable String postAnalyticsProcessorSourceUri,
+        @CustomType.Parameter("problemType") ModelQualityJobDefinitionProblemType problemType,
+        @CustomType.Parameter("recordPreprocessorSourceUri") @Nullable String recordPreprocessorSourceUri) {
         this.containerArguments = containerArguments;
         this.containerEntrypoint = containerEntrypoint;
         this.environment = environment;

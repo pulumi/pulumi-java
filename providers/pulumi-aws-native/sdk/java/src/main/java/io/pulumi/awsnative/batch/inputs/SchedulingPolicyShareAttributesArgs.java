@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
 
     public static final SchedulingPolicyShareAttributesArgs Empty = new SchedulingPolicyShareAttributesArgs();
 
-    @InputImport(name="shareIdentifier")
+    @Import(name="shareIdentifier")
       private final @Nullable Output<String> shareIdentifier;
 
     public Output<String> getShareIdentifier() {
         return this.shareIdentifier == null ? Output.empty() : this.shareIdentifier;
     }
 
-    @InputImport(name="weightFactor")
+    @Import(name="weightFactor")
       private final @Nullable Output<Double> weightFactor;
 
     public Output<Double> getWeightFactor() {

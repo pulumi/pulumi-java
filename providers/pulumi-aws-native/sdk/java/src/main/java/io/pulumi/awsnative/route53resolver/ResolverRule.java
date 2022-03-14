@@ -9,7 +9,7 @@ import io.pulumi.awsnative.route53resolver.enums.ResolverRuleRuleType;
 import io.pulumi.awsnative.route53resolver.outputs.ResolverRuleTag;
 import io.pulumi.awsnative.route53resolver.outputs.ResolverRuleTargetAddress;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the resolver rule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -53,7 +53,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * The name for the Resolver rule
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -67,7 +67,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * The ID of the endpoint that the rule is associated with.
      * 
      */
-    @OutputExport(name="resolverEndpointId", type=String.class, parameters={})
+    @Export(name="resolverEndpointId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resolverEndpointId;
 
     /**
@@ -81,7 +81,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * The ID of the endpoint that the rule is associated with.
      * 
      */
-    @OutputExport(name="resolverRuleId", type=String.class, parameters={})
+    @Export(name="resolverRuleId", type=String.class, parameters={})
     private Output<String> resolverRuleId;
 
     /**
@@ -95,7 +95,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * When you want to forward DNS queries for specified domain name to resolvers on your network, specify FORWARD. When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, specify SYSTEM.
      * 
      */
-    @OutputExport(name="ruleType", type=ResolverRuleRuleType.class, parameters={})
+    @Export(name="ruleType", type=ResolverRuleRuleType.class, parameters={})
     private Output<ResolverRuleRuleType> ruleType;
 
     /**
@@ -109,7 +109,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ResolverRuleTag.class})
+    @Export(name="tags", type=List.class, parameters={ResolverRuleTag.class})
     private Output</* @Nullable */ List<ResolverRuleTag>> tags;
 
     /**
@@ -123,7 +123,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to. Typically, these are the IP addresses of DNS resolvers on your network. Specify IPv4 addresses. IPv6 is not supported.
      * 
      */
-    @OutputExport(name="targetIps", type=List.class, parameters={ResolverRuleTargetAddress.class})
+    @Export(name="targetIps", type=List.class, parameters={ResolverRuleTargetAddress.class})
     private Output</* @Nullable */ List<ResolverRuleTargetAddress>> targetIps;
 
     /**

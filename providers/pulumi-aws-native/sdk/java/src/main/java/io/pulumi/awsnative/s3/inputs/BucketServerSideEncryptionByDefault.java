@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketServerSideEncryptionByDefaultSSEAlgorithm;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,14 +23,14 @@ public final class BucketServerSideEncryptionByDefault extends io.pulumi.resourc
      * "KMSMasterKeyID" can only be used when you set the value of SSEAlgorithm as aws:kms.
      * 
      */
-    @InputImport(name="kMSMasterKeyID")
+    @Import(name="kMSMasterKeyID")
       private final @Nullable String kMSMasterKeyID;
 
     public Optional<String> getKMSMasterKeyID() {
         return this.kMSMasterKeyID == null ? Optional.empty() : Optional.ofNullable(this.kMSMasterKeyID);
     }
 
-    @InputImport(name="sSEAlgorithm", required=true)
+    @Import(name="sSEAlgorithm", required=true)
       private final BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm;
 
     public BucketServerSideEncryptionByDefaultSSEAlgorithm getSSEAlgorithm() {

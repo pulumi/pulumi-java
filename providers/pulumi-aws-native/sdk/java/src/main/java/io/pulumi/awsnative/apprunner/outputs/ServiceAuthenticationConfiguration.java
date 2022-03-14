@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.apprunner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAuthenticationConfiguration {
     /**
      * Access Role Arn
@@ -22,10 +22,10 @@ public final class ServiceAuthenticationConfiguration {
      */
     private final @Nullable String connectionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAuthenticationConfiguration(
-        @OutputCustomType.Parameter("accessRoleArn") @Nullable String accessRoleArn,
-        @OutputCustomType.Parameter("connectionArn") @Nullable String connectionArn) {
+        @CustomType.Parameter("accessRoleArn") @Nullable String accessRoleArn,
+        @CustomType.Parameter("connectionArn") @Nullable String connectionArn) {
         this.accessRoleArn = accessRoleArn;
         this.connectionArn = connectionArn;
     }

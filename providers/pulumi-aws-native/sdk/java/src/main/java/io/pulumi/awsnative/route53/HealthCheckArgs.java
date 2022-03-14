@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53;
 import io.pulumi.awsnative.route53.inputs.HealthCheckConfigPropertiesArgs;
 import io.pulumi.awsnative.route53.inputs.HealthCheckTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * A complex type that contains information about the health check.
      * 
      */
-    @InputImport(name="healthCheckConfig", required=true)
+    @Import(name="healthCheckConfig", required=true)
       private final Output<HealthCheckConfigPropertiesArgs> healthCheckConfig;
 
     public Output<HealthCheckConfigPropertiesArgs> getHealthCheckConfig() {
@@ -31,7 +31,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="healthCheckTags")
+    @Import(name="healthCheckTags")
       private final @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
 
     public Output<List<HealthCheckTagArgs>> getHealthCheckTags() {

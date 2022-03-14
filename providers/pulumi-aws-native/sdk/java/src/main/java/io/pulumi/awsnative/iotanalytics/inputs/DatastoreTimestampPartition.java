@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class DatastoreTimestampPartition extends io.pulumi.resources.Invok
 
     public static final DatastoreTimestampPartition Empty = new DatastoreTimestampPartition();
 
-    @InputImport(name="attributeName", required=true)
+    @Import(name="attributeName", required=true)
       private final String attributeName;
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
-    @InputImport(name="timestampFormat")
+    @Import(name="timestampFormat")
       private final @Nullable String timestampFormat;
 
     public Optional<String> getTimestampFormat() {

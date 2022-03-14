@@ -8,7 +8,7 @@ import io.pulumi.awsnative.athena.inputs.WorkGroupConfigurationArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupConfigurationUpdatesArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The workgroup description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The workGroup name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
      * 
      */
-    @InputImport(name="recursiveDeleteOption")
+    @Import(name="recursiveDeleteOption")
       private final @Nullable Output<Boolean> recursiveDeleteOption;
 
     public Output<Boolean> getRecursiveDeleteOption() {
@@ -57,7 +57,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The state of the workgroup: ENABLED or DISABLED.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<WorkGroupState> state;
 
     public Output<WorkGroupState> getState() {
@@ -68,7 +68,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<WorkGroupTagArgs>> tags;
 
     public Output<List<WorkGroupTagArgs>> getTags() {
@@ -79,7 +79,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The workgroup configuration
      * 
      */
-    @InputImport(name="workGroupConfiguration")
+    @Import(name="workGroupConfiguration")
       private final @Nullable Output<WorkGroupConfigurationArgs> workGroupConfiguration;
 
     public Output<WorkGroupConfigurationArgs> getWorkGroupConfiguration() {
@@ -90,7 +90,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The workgroup configuration update object
      * 
      */
-    @InputImport(name="workGroupConfigurationUpdates")
+    @Import(name="workGroupConfigurationUpdates")
       private final @Nullable Output<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
 
     public Output<WorkGroupConfigurationUpdatesArgs> getWorkGroupConfigurationUpdates() {

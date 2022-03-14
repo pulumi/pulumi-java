@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cassandra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,14 +16,14 @@ public final class TableProvisionedThroughput extends io.pulumi.resources.Invoke
 
     public static final TableProvisionedThroughput Empty = new TableProvisionedThroughput();
 
-    @InputImport(name="readCapacityUnits", required=true)
+    @Import(name="readCapacityUnits", required=true)
       private final Integer readCapacityUnits;
 
     public Integer getReadCapacityUnits() {
         return this.readCapacityUnits;
     }
 
-    @InputImport(name="writeCapacityUnits", required=true)
+    @Import(name="writeCapacityUnits", required=true)
       private final Integer writeCapacityUnits;
 
     public Integer getWriteCapacityUnits() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceBlockDeviceMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
      * Defines the block devices to attach for building an instance from this Image Builder AMI.
      * 
      */
-    @InputImport(name="blockDeviceMappings")
+    @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Output<List<ContainerRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
@@ -35,7 +35,7 @@ public final class ContainerRecipeInstanceConfigurationArgs extends io.pulumi.re
      * The AMI ID to use as the base image for a container build and test instance. If not specified, Image Builder will use the appropriate ECS-optimized AMI as a base image.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {

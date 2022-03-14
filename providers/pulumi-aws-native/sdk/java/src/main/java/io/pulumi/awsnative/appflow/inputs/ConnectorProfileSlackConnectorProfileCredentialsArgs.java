@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
      * The credentials used to access protected resources.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
@@ -30,7 +30,7 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
      * The identiﬁer for the desired client.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -41,7 +41,7 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
      * The client secret used by the oauth client to authenticate to the authorization server.
      * 
      */
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -52,7 +52,7 @@ public final class ConnectorProfileSlackConnectorProfileCredentialsArgs extends 
      * The oauth needed to request security tokens from the connector endpoint.
      * 
      */
-    @InputImport(name="connectorOAuthRequest")
+    @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
     public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {

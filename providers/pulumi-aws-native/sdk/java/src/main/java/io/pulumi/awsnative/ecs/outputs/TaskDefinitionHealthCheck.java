@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionHealthCheck {
     /**
      * A string array representing the command that the container runs to determine if it is healthy.
@@ -39,13 +39,13 @@ public final class TaskDefinitionHealthCheck {
      */
     private final @Nullable Integer timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionHealthCheck(
-        @OutputCustomType.Parameter("command") @Nullable List<String> command,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("retries") @Nullable Integer retries,
-        @OutputCustomType.Parameter("startPeriod") @Nullable Integer startPeriod,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout) {
+        @CustomType.Parameter("command") @Nullable List<String> command,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("retries") @Nullable Integer retries,
+        @CustomType.Parameter("startPeriod") @Nullable Integer startPeriod,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout) {
         this.command = command;
         this.interval = interval;
         this.retries = retries;

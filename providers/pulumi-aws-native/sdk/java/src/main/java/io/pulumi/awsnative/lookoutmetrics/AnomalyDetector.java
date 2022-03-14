@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lookoutmetrics.AnomalyDetectorArgs;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorConfig;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorMetricSet;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
      * Configuration options for the AnomalyDetector
      * 
      */
-    @OutputExport(name="anomalyDetectorConfig", type=AnomalyDetectorConfig.class, parameters={})
+    @Export(name="anomalyDetectorConfig", type=AnomalyDetectorConfig.class, parameters={})
     private Output<AnomalyDetectorConfig> anomalyDetectorConfig;
 
     /**
@@ -38,7 +38,7 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
      * A description for the AnomalyDetector.
      * 
      */
-    @OutputExport(name="anomalyDetectorDescription", type=String.class, parameters={})
+    @Export(name="anomalyDetectorDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> anomalyDetectorDescription;
 
     /**
@@ -52,7 +52,7 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
      * Name for the Amazon Lookout for Metrics Anomaly Detector
      * 
      */
-    @OutputExport(name="anomalyDetectorName", type=String.class, parameters={})
+    @Export(name="anomalyDetectorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> anomalyDetectorName;
 
     /**
@@ -62,7 +62,7 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAnomalyDetectorName() {
         return this.anomalyDetectorName;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -72,7 +72,7 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
      * KMS key used to encrypt the AnomalyDetector data
      * 
      */
-    @OutputExport(name="kmsKeyArn", type=String.class, parameters={})
+    @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyArn;
 
     /**
@@ -86,7 +86,7 @@ public class AnomalyDetector extends io.pulumi.resources.CustomResource {
      * List of metric sets for anomaly detection
      * 
      */
-    @OutputExport(name="metricSetList", type=List.class, parameters={AnomalyDetectorMetricSet.class})
+    @Export(name="metricSetList", type=List.class, parameters={AnomalyDetectorMetricSet.class})
     private Output<List<AnomalyDetectorMetricSet>> metricSetList;
 
     /**

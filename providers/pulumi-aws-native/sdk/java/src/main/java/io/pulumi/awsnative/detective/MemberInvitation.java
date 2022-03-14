@@ -6,7 +6,7 @@ package io.pulumi.awsnative.detective;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.detective.MemberInvitationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
      * 
      */
-    @OutputExport(name="disableEmailNotification", type=Boolean.class, parameters={})
+    @Export(name="disableEmailNotification", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableEmailNotification;
 
     /**
@@ -36,7 +36,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * The ARN of the graph to which the member account will be invited
      * 
      */
-    @OutputExport(name="graphArn", type=String.class, parameters={})
+    @Export(name="graphArn", type=String.class, parameters={})
     private Output<String> graphArn;
 
     /**
@@ -50,7 +50,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * The root email address for the account to be invited, for validation. Updating this field has no effect.
      * 
      */
-    @OutputExport(name="memberEmailAddress", type=String.class, parameters={})
+    @Export(name="memberEmailAddress", type=String.class, parameters={})
     private Output<String> memberEmailAddress;
 
     /**
@@ -64,7 +64,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * The AWS account ID to be invited to join the graph as a member
      * 
      */
-    @OutputExport(name="memberId", type=String.class, parameters={})
+    @Export(name="memberId", type=String.class, parameters={})
     private Output<String> memberId;
 
     /**
@@ -78,7 +78,7 @@ public class MemberInvitation extends io.pulumi.resources.CustomResource {
      * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
      * 
      */
-    @OutputExport(name="message", type=String.class, parameters={})
+    @Export(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
     /**

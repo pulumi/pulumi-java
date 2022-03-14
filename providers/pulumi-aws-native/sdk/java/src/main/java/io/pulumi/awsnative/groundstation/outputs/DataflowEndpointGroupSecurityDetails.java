@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataflowEndpointGroupSecurityDetails {
     private final @Nullable String roleArn;
     private final @Nullable List<String> securityGroupIds;
     private final @Nullable List<String> subnetIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataflowEndpointGroupSecurityDetails(
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
         this.roleArn = roleArn;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

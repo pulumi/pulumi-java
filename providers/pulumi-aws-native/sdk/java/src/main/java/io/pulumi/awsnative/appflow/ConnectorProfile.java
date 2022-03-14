@@ -9,7 +9,7 @@ import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectionMode;
 import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectorType;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
      * 
      */
-    @OutputExport(name="connectionMode", type=ConnectorProfileConnectionMode.class, parameters={})
+    @Export(name="connectionMode", type=ConnectorProfileConnectionMode.class, parameters={})
     private Output<ConnectorProfileConnectionMode> connectionMode;
 
     /**
@@ -38,7 +38,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * Unique identifier for connector profile resources
      * 
      */
-    @OutputExport(name="connectorProfileArn", type=String.class, parameters={})
+    @Export(name="connectorProfileArn", type=String.class, parameters={})
     private Output<String> connectorProfileArn;
 
     /**
@@ -52,7 +52,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * Connector specific configurations needed to create connector profile
      * 
      */
-    @OutputExport(name="connectorProfileConfig", type=ConnectorProfileConfig.class, parameters={})
+    @Export(name="connectorProfileConfig", type=ConnectorProfileConfig.class, parameters={})
     private Output</* @Nullable */ ConnectorProfileConfig> connectorProfileConfig;
 
     /**
@@ -66,7 +66,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * The maximum number of items to retrieve in a single batch.
      * 
      */
-    @OutputExport(name="connectorProfileName", type=String.class, parameters={})
+    @Export(name="connectorProfileName", type=String.class, parameters={})
     private Output<String> connectorProfileName;
 
     /**
@@ -80,7 +80,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * List of Saas providers that need connector profile to be created
      * 
      */
-    @OutputExport(name="connectorType", type=ConnectorProfileConnectorType.class, parameters={})
+    @Export(name="connectorType", type=ConnectorProfileConnectorType.class, parameters={})
     private Output<ConnectorProfileConnectorType> connectorType;
 
     /**
@@ -94,7 +94,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * A unique Arn for Connector-Profile resource
      * 
      */
-    @OutputExport(name="credentialsArn", type=String.class, parameters={})
+    @Export(name="credentialsArn", type=String.class, parameters={})
     private Output<String> credentialsArn;
 
     /**
@@ -108,7 +108,7 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    @OutputExport(name="kMSArn", type=String.class, parameters={})
+    @Export(name="kMSArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSArn;
 
     /**

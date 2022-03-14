@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionSecret;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,17 +12,17 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionLogConfiguration {
     private final String logDriver;
     private final @Nullable Object options;
     private final @Nullable List<TaskDefinitionSecret> secretOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionLogConfiguration(
-        @OutputCustomType.Parameter("logDriver") String logDriver,
-        @OutputCustomType.Parameter("options") @Nullable Object options,
-        @OutputCustomType.Parameter("secretOptions") @Nullable List<TaskDefinitionSecret> secretOptions) {
+        @CustomType.Parameter("logDriver") String logDriver,
+        @CustomType.Parameter("options") @Nullable Object options,
+        @CustomType.Parameter("secretOptions") @Nullable List<TaskDefinitionSecret> secretOptions) {
         this.logDriver = logDriver;
         this.options = options;
         this.secretOptions = secretOptions;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.ReadinessCheckArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ReadinessCheckTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the readiness check.
      * 
      */
-    @OutputExport(name="readinessCheckArn", type=String.class, parameters={})
+    @Export(name="readinessCheckArn", type=String.class, parameters={})
     private Output<String> readinessCheckArn;
 
     /**
@@ -37,7 +37,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * Name of the ReadinessCheck to create.
      * 
      */
-    @OutputExport(name="readinessCheckName", type=String.class, parameters={})
+    @Export(name="readinessCheckName", type=String.class, parameters={})
     private Output<String> readinessCheckName;
 
     /**
@@ -51,7 +51,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * The name of the resource set to check.
      * 
      */
-    @OutputExport(name="resourceSetName", type=String.class, parameters={})
+    @Export(name="resourceSetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceSetName;
 
     /**
@@ -65,7 +65,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ReadinessCheckTag.class})
+    @Export(name="tags", type=List.class, parameters={ReadinessCheckTag.class})
     private Output</* @Nullable */ List<ReadinessCheckTag>> tags;
 
     /**

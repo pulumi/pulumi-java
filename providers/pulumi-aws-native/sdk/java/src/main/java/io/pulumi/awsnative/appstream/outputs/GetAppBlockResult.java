@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppBlockResult {
     private final @Nullable String arn;
     private final @Nullable String createdTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppBlockResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime) {
         this.arn = arn;
         this.createdTime = createdTime;
     }

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.synthetics.outputs.CanarySchedule;
 import io.pulumi.awsnative.synthetics.outputs.CanaryTag;
 import io.pulumi.awsnative.synthetics.outputs.CanaryVPCConfig;
 import io.pulumi.awsnative.synthetics.outputs.CanaryVisualReference;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCanaryResult {
     /**
      * Provide artifact configuration
@@ -93,23 +93,23 @@ public final class GetCanaryResult {
      */
     private final @Nullable CanaryVisualReference visualReference;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCanaryResult(
-        @OutputCustomType.Parameter("artifactConfig") @Nullable CanaryArtifactConfig artifactConfig,
-        @OutputCustomType.Parameter("artifactS3Location") @Nullable String artifactS3Location,
-        @OutputCustomType.Parameter("code") @Nullable CanaryCode code,
-        @OutputCustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
-        @OutputCustomType.Parameter("failureRetentionPeriod") @Nullable Integer failureRetentionPeriod,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("runConfig") @Nullable CanaryRunConfig runConfig,
-        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion,
-        @OutputCustomType.Parameter("schedule") @Nullable CanarySchedule schedule,
-        @OutputCustomType.Parameter("startCanaryAfterCreation") @Nullable Boolean startCanaryAfterCreation,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("successRetentionPeriod") @Nullable Integer successRetentionPeriod,
-        @OutputCustomType.Parameter("tags") @Nullable List<CanaryTag> tags,
-        @OutputCustomType.Parameter("vPCConfig") @Nullable CanaryVPCConfig vPCConfig,
-        @OutputCustomType.Parameter("visualReference") @Nullable CanaryVisualReference visualReference) {
+        @CustomType.Parameter("artifactConfig") @Nullable CanaryArtifactConfig artifactConfig,
+        @CustomType.Parameter("artifactS3Location") @Nullable String artifactS3Location,
+        @CustomType.Parameter("code") @Nullable CanaryCode code,
+        @CustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
+        @CustomType.Parameter("failureRetentionPeriod") @Nullable Integer failureRetentionPeriod,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("runConfig") @Nullable CanaryRunConfig runConfig,
+        @CustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion,
+        @CustomType.Parameter("schedule") @Nullable CanarySchedule schedule,
+        @CustomType.Parameter("startCanaryAfterCreation") @Nullable Boolean startCanaryAfterCreation,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("successRetentionPeriod") @Nullable Integer successRetentionPeriod,
+        @CustomType.Parameter("tags") @Nullable List<CanaryTag> tags,
+        @CustomType.Parameter("vPCConfig") @Nullable CanaryVPCConfig vPCConfig,
+        @CustomType.Parameter("visualReference") @Nullable CanaryVisualReference visualReference) {
         this.artifactConfig = artifactConfig;
         this.artifactS3Location = artifactS3Location;
         this.code = code;

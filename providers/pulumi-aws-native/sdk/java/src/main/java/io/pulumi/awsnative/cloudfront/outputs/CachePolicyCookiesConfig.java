@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CachePolicyCookiesConfig {
     private final String cookieBehavior;
     private final @Nullable List<String> cookies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CachePolicyCookiesConfig(
-        @OutputCustomType.Parameter("cookieBehavior") String cookieBehavior,
-        @OutputCustomType.Parameter("cookies") @Nullable List<String> cookies) {
+        @CustomType.Parameter("cookieBehavior") String cookieBehavior,
+        @CustomType.Parameter("cookies") @Nullable List<String> cookies) {
         this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }

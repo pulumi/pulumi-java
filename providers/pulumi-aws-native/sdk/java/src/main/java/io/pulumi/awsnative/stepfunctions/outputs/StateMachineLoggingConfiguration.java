@@ -5,24 +5,24 @@ package io.pulumi.awsnative.stepfunctions.outputs;
 
 import io.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfigurationLevel;
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineLogDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StateMachineLoggingConfiguration {
     private final @Nullable List<StateMachineLogDestination> destinations;
     private final @Nullable Boolean includeExecutionData;
     private final @Nullable StateMachineLoggingConfigurationLevel level;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StateMachineLoggingConfiguration(
-        @OutputCustomType.Parameter("destinations") @Nullable List<StateMachineLogDestination> destinations,
-        @OutputCustomType.Parameter("includeExecutionData") @Nullable Boolean includeExecutionData,
-        @OutputCustomType.Parameter("level") @Nullable StateMachineLoggingConfigurationLevel level) {
+        @CustomType.Parameter("destinations") @Nullable List<StateMachineLogDestination> destinations,
+        @CustomType.Parameter("includeExecutionData") @Nullable Boolean includeExecutionData,
+        @CustomType.Parameter("level") @Nullable StateMachineLoggingConfigurationLevel level) {
         this.destinations = destinations;
         this.includeExecutionData = includeExecutionData;
         this.level = level;

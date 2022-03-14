@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lambda.enums.EventSourceMappingFunctionResponseTypesI
 import io.pulumi.awsnative.lambda.outputs.EventSourceMappingDestinationConfig;
 import io.pulumi.awsnative.lambda.outputs.EventSourceMappingSourceAccessConfiguration;
 import io.pulumi.awsnative.lambda.outputs.FilterCriteriaProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventSourceMappingResult {
     /**
      * The maximum number of items to retrieve in a single batch.
@@ -105,25 +105,25 @@ public final class GetEventSourceMappingResult {
      */
     private final @Nullable Integer tumblingWindowInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventSourceMappingResult(
-        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
-        @OutputCustomType.Parameter("bisectBatchOnFunctionError") @Nullable Boolean bisectBatchOnFunctionError,
-        @OutputCustomType.Parameter("destinationConfig") @Nullable EventSourceMappingDestinationConfig destinationConfig,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("filterCriteria") @Nullable FilterCriteriaProperties filterCriteria,
-        @OutputCustomType.Parameter("functionName") @Nullable String functionName,
-        @OutputCustomType.Parameter("functionResponseTypes") @Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("maximumBatchingWindowInSeconds") @Nullable Integer maximumBatchingWindowInSeconds,
-        @OutputCustomType.Parameter("maximumRecordAgeInSeconds") @Nullable Integer maximumRecordAgeInSeconds,
-        @OutputCustomType.Parameter("maximumRetryAttempts") @Nullable Integer maximumRetryAttempts,
-        @OutputCustomType.Parameter("parallelizationFactor") @Nullable Integer parallelizationFactor,
-        @OutputCustomType.Parameter("queues") @Nullable List<String> queues,
-        @OutputCustomType.Parameter("sourceAccessConfigurations") @Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations,
-        @OutputCustomType.Parameter("startingPositionTimestamp") @Nullable Double startingPositionTimestamp,
-        @OutputCustomType.Parameter("topics") @Nullable List<String> topics,
-        @OutputCustomType.Parameter("tumblingWindowInSeconds") @Nullable Integer tumblingWindowInSeconds) {
+        @CustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @CustomType.Parameter("bisectBatchOnFunctionError") @Nullable Boolean bisectBatchOnFunctionError,
+        @CustomType.Parameter("destinationConfig") @Nullable EventSourceMappingDestinationConfig destinationConfig,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("filterCriteria") @Nullable FilterCriteriaProperties filterCriteria,
+        @CustomType.Parameter("functionName") @Nullable String functionName,
+        @CustomType.Parameter("functionResponseTypes") @Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("maximumBatchingWindowInSeconds") @Nullable Integer maximumBatchingWindowInSeconds,
+        @CustomType.Parameter("maximumRecordAgeInSeconds") @Nullable Integer maximumRecordAgeInSeconds,
+        @CustomType.Parameter("maximumRetryAttempts") @Nullable Integer maximumRetryAttempts,
+        @CustomType.Parameter("parallelizationFactor") @Nullable Integer parallelizationFactor,
+        @CustomType.Parameter("queues") @Nullable List<String> queues,
+        @CustomType.Parameter("sourceAccessConfigurations") @Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations,
+        @CustomType.Parameter("startingPositionTimestamp") @Nullable Double startingPositionTimestamp,
+        @CustomType.Parameter("topics") @Nullable List<String> topics,
+        @CustomType.Parameter("tumblingWindowInSeconds") @Nullable Integer tumblingWindowInSeconds) {
         this.batchSize = batchSize;
         this.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
         this.destinationConfig = destinationConfig;

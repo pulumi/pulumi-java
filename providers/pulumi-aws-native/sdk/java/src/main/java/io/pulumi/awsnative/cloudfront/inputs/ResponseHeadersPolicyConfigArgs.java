@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCorsConfigArgs
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,35 +17,35 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
 
     public static final ResponseHeadersPolicyConfigArgs Empty = new ResponseHeadersPolicyConfigArgs();
 
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
         return this.comment == null ? Output.empty() : this.comment;
     }
 
-    @InputImport(name="corsConfig")
+    @Import(name="corsConfig")
       private final @Nullable Output<ResponseHeadersPolicyCorsConfigArgs> corsConfig;
 
     public Output<ResponseHeadersPolicyCorsConfigArgs> getCorsConfig() {
         return this.corsConfig == null ? Output.empty() : this.corsConfig;
     }
 
-    @InputImport(name="customHeadersConfig")
+    @Import(name="customHeadersConfig")
       private final @Nullable Output<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig;
 
     public Output<ResponseHeadersPolicyCustomHeadersConfigArgs> getCustomHeadersConfig() {
         return this.customHeadersConfig == null ? Output.empty() : this.customHeadersConfig;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="securityHeadersConfig")
+    @Import(name="securityHeadersConfig")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig;
 
     public Output<ResponseHeadersPolicySecurityHeadersConfigArgs> getSecurityHeadersConfig() {

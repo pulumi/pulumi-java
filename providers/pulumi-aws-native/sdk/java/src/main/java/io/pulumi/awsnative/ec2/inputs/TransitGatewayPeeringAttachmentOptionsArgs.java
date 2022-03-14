@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
      * Whether to enable dynamic routing. (enable/disable)
      * 
      */
-    @InputImport(name="dynamicRouting")
+    @Import(name="dynamicRouting")
       private final @Nullable Output<String> dynamicRouting;
 
     public Output<String> getDynamicRouting() {

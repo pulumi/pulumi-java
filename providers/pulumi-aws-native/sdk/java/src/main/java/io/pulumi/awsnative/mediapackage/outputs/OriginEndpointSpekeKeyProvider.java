@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointSpekeKeyProvider {
     /**
      * An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
@@ -38,13 +38,13 @@ public final class OriginEndpointSpekeKeyProvider {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointSpekeKeyProvider(
-        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("systemIds") List<String> systemIds,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("systemIds") List<String> systemIds,
+        @CustomType.Parameter("url") String url) {
         this.certificateArn = certificateArn;
         this.resourceId = resourceId;
         this.roleArn = roleArn;

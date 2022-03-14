@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.EC2FleetCapacityReservationOptionsRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,42 +17,42 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
 
     public static final EC2FleetOnDemandOptionsRequestArgs Empty = new EC2FleetOnDemandOptionsRequestArgs();
 
-    @InputImport(name="allocationStrategy")
+    @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {
         return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
     }
 
-    @InputImport(name="capacityReservationOptions")
+    @Import(name="capacityReservationOptions")
       private final @Nullable Output<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions;
 
     public Output<EC2FleetCapacityReservationOptionsRequestArgs> getCapacityReservationOptions() {
         return this.capacityReservationOptions == null ? Output.empty() : this.capacityReservationOptions;
     }
 
-    @InputImport(name="maxTotalPrice")
+    @Import(name="maxTotalPrice")
       private final @Nullable Output<String> maxTotalPrice;
 
     public Output<String> getMaxTotalPrice() {
         return this.maxTotalPrice == null ? Output.empty() : this.maxTotalPrice;
     }
 
-    @InputImport(name="minTargetCapacity")
+    @Import(name="minTargetCapacity")
       private final @Nullable Output<Integer> minTargetCapacity;
 
     public Output<Integer> getMinTargetCapacity() {
         return this.minTargetCapacity == null ? Output.empty() : this.minTargetCapacity;
     }
 
-    @InputImport(name="singleAvailabilityZone")
+    @Import(name="singleAvailabilityZone")
       private final @Nullable Output<Boolean> singleAvailabilityZone;
 
     public Output<Boolean> getSingleAvailabilityZone() {
         return this.singleAvailabilityZone == null ? Output.empty() : this.singleAvailabilityZone;
     }
 
-    @InputImport(name="singleInstanceType")
+    @Import(name="singleInstanceType")
       private final @Nullable Output<Boolean> singleInstanceType;
 
     public Output<Boolean> getSingleInstanceType() {

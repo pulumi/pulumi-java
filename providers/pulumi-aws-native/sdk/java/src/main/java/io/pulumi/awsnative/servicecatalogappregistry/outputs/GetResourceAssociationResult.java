@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
 import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceAssociationResult {
     /**
      * The name or the Id of the Application.
@@ -31,14 +31,14 @@ public final class GetResourceAssociationResult {
      */
     private final @Nullable ResourceAssociationResourceType resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceAssociationResult(
-        @OutputCustomType.Parameter("application") @Nullable String application,
-        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("resource") @Nullable String resource,
-        @OutputCustomType.Parameter("resourceArn") @Nullable String resourceArn,
-        @OutputCustomType.Parameter("resourceType") @Nullable ResourceAssociationResourceType resourceType) {
+        @CustomType.Parameter("application") @Nullable String application,
+        @CustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("resource") @Nullable String resource,
+        @CustomType.Parameter("resourceArn") @Nullable String resourceArn,
+        @CustomType.Parameter("resourceType") @Nullable ResourceAssociationResourceType resourceType) {
         this.application = application;
         this.applicationArn = applicationArn;
         this.id = id;

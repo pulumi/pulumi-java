@@ -5,7 +5,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupTargetTrackingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
 
     public static final GameServerGroupAutoScalingPolicyArgs Empty = new GameServerGroupAutoScalingPolicyArgs();
 
-    @InputImport(name="estimatedInstanceWarmup")
+    @Import(name="estimatedInstanceWarmup")
       private final @Nullable Output<Double> estimatedInstanceWarmup;
 
     public Output<Double> getEstimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup == null ? Output.empty() : this.estimatedInstanceWarmup;
     }
 
-    @InputImport(name="targetTrackingConfiguration", required=true)
+    @Import(name="targetTrackingConfiguration", required=true)
       private final Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
     public Output<GameServerGroupTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {

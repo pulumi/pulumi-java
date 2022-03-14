@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker;
 
 import io.pulumi.awsnative.robomaker.inputs.FleetTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the fleet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<FleetTagsArgs> tags;
 
     public Output<FleetTagsArgs> getTags() {

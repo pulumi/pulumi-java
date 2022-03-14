@@ -6,7 +6,7 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.connect.enums.ContactFlowModuleState;
 import io.pulumi.awsnative.connect.inputs.ContactFlowModuleTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
      * The content of the contact flow module in JSON format.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -32,7 +32,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
      * The description of the contact flow module.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
      * The identifier of the Amazon Connect instance (ARN).
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -54,7 +54,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
      * The name of the contact flow module.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
      * The state of the contact flow module.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<ContactFlowModuleState> state;
 
     public Output<ContactFlowModuleState> getState() {
@@ -76,7 +76,7 @@ public final class ContactFlowModuleArgs extends io.pulumi.resources.ResourceArg
      * One or more tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ContactFlowModuleTagArgs>> tags;
 
     public Output<List<ContactFlowModuleTagArgs>> getTags() {

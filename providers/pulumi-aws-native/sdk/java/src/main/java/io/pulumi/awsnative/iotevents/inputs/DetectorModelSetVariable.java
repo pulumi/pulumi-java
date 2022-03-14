@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DetectorModelSetVariable extends io.pulumi.resources.InvokeAr
      * The new value of the variable.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {
@@ -31,7 +31,7 @@ public final class DetectorModelSetVariable extends io.pulumi.resources.InvokeAr
      * The name of the variable.
      * 
      */
-    @InputImport(name="variableName", required=true)
+    @Import(name="variableName", required=true)
       private final String variableName;
 
     public String getVariableName() {

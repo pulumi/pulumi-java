@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureEntityOverride {
     private final @Nullable String entityId;
     private final @Nullable String variation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureEntityOverride(
-        @OutputCustomType.Parameter("entityId") @Nullable String entityId,
-        @OutputCustomType.Parameter("variation") @Nullable String variation) {
+        @CustomType.Parameter("entityId") @Nullable String entityId,
+        @CustomType.Parameter("variation") @Nullable String variation) {
         this.entityId = entityId;
         this.variation = variation;
     }

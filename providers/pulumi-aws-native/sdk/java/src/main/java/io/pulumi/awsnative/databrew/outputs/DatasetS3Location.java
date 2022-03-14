@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetS3Location {
     private final String bucket;
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetS3Location(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("key") @Nullable String key) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("key") @Nullable String key) {
         this.bucket = bucket;
         this.key = key;
     }

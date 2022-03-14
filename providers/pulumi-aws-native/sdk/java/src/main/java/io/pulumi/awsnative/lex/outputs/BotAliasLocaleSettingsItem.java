@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasLocaleSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasLocaleSettingsItem {
     private final BotAliasLocaleSettings botAliasLocaleSetting;
     /**
@@ -17,10 +17,10 @@ public final class BotAliasLocaleSettingsItem {
      */
     private final String localeId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAliasLocaleSettingsItem(
-        @OutputCustomType.Parameter("botAliasLocaleSetting") BotAliasLocaleSettings botAliasLocaleSetting,
-        @OutputCustomType.Parameter("localeId") String localeId) {
+        @CustomType.Parameter("botAliasLocaleSetting") BotAliasLocaleSettings botAliasLocaleSetting,
+        @CustomType.Parameter("localeId") String localeId) {
         this.botAliasLocaleSetting = botAliasLocaleSetting;
         this.localeId = localeId;
     }

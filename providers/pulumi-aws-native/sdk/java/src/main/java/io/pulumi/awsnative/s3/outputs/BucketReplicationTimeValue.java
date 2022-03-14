@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationTimeValue {
     private final Integer minutes;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationTimeValue(@OutputCustomType.Parameter("minutes") Integer minutes) {
+    @CustomType.Constructor
+    private BucketReplicationTimeValue(@CustomType.Parameter("minutes") Integer minutes) {
         this.minutes = minutes;
     }
 

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.refactorspaces.outputs;
 
 import io.pulumi.awsnative.refactorspaces.outputs.RouteTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteResult {
     private final @Nullable String arn;
     private final @Nullable String pathResourceToId;
@@ -22,12 +22,12 @@ public final class GetRouteResult {
      */
     private final @Nullable List<RouteTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("pathResourceToId") @Nullable String pathResourceToId,
-        @OutputCustomType.Parameter("routeIdentifier") @Nullable String routeIdentifier,
-        @OutputCustomType.Parameter("tags") @Nullable List<RouteTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("pathResourceToId") @Nullable String pathResourceToId,
+        @CustomType.Parameter("routeIdentifier") @Nullable String routeIdentifier,
+        @CustomType.Parameter("tags") @Nullable List<RouteTag> tags) {
         this.arn = arn;
         this.pathResourceToId = pathResourceToId;
         this.routeIdentifier = routeIdentifier;

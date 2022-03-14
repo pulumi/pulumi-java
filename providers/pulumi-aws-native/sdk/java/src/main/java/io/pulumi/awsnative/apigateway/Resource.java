@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.ResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * The parent resource's identifier.
      * 
      */
-    @OutputExport(name="parentId", type=String.class, parameters={})
+    @Export(name="parentId", type=String.class, parameters={})
     private Output<String> parentId;
 
     /**
@@ -35,7 +35,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * The last path segment for this resource.
      * 
      */
-    @OutputExport(name="pathPart", type=String.class, parameters={})
+    @Export(name="pathPart", type=String.class, parameters={})
     private Output<String> pathPart;
 
     /**
@@ -49,7 +49,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * A unique primary identifier for a Resource
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -63,7 +63,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * The ID of the RestApi resource in which you want to create this resource..
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**

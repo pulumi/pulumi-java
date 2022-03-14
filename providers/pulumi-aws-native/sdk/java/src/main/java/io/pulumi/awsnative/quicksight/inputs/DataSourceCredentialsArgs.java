@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DataSourceCredentialPairArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,14 +27,14 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
      *             <code>DataSourceCredentials</code> structure.</p>
      * 
      */
-    @InputImport(name="copySourceArn")
+    @Import(name="copySourceArn")
       private final @Nullable Output<String> copySourceArn;
 
     public Output<String> getCopySourceArn() {
         return this.copySourceArn == null ? Output.empty() : this.copySourceArn;
     }
 
-    @InputImport(name="credentialPair")
+    @Import(name="credentialPair")
       private final @Nullable Output<DataSourceCredentialPairArgs> credentialPair;
 
     public Output<DataSourceCredentialPairArgs> getCredentialPair() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.efs.inputs.AccessPointPosixUserArgs;
 import io.pulumi.awsnative.efs.inputs.AccessPointRootDirectoryArgs;
 import io.pulumi.awsnative.efs.inputs.AccessPointTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPointArgs Empty = new AccessPointArgs();
 
-    @InputImport(name="accessPointTags")
+    @Import(name="accessPointTags")
       private final @Nullable Output<List<AccessPointTagArgs>> accessPointTags;
 
     public Output<List<AccessPointTagArgs>> getAccessPointTags() {
@@ -29,7 +29,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * (optional) A string of up to 64 ASCII characters that Amazon EFS uses to ensure idempotent creation.
      * 
      */
-    @InputImport(name="clientToken")
+    @Import(name="clientToken")
       private final @Nullable Output<String> clientToken;
 
     public Output<String> getClientToken() {
@@ -40,7 +40,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the EFS file system that the access point provides access to.
      * 
      */
-    @InputImport(name="fileSystemId", required=true)
+    @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -51,7 +51,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The operating system user and group applied to all file system requests made using the access point.
      * 
      */
-    @InputImport(name="posixUser")
+    @Import(name="posixUser")
       private final @Nullable Output<AccessPointPosixUserArgs> posixUser;
 
     public Output<AccessPointPosixUserArgs> getPosixUser() {
@@ -62,7 +62,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the directory on the Amazon EFS file system that the access point exposes as the root directory of your file system to NFS clients using the access point. The clients using the access point can only access the root directory and below. If the RootDirectory>Path specified does not exist, EFS creates it and applies the CreationInfo settings when a client connects to an access point. When specifying a RootDirectory, you need to provide the Path, and the CreationInfo is optional.
      * 
      */
-    @InputImport(name="rootDirectory")
+    @Import(name="rootDirectory")
       private final @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
 
     public Output<AccessPointRootDirectoryArgs> getRootDirectory() {

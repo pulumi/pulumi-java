@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiKeyStageKey {
     /**
      * The ID of a RestApi resource that includes the stage with which you want to associate the API key.
@@ -22,10 +22,10 @@ public final class ApiKeyStageKey {
      */
     private final @Nullable String stageName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiKeyStageKey(
-        @OutputCustomType.Parameter("restApiId") @Nullable String restApiId,
-        @OutputCustomType.Parameter("stageName") @Nullable String stageName) {
+        @CustomType.Parameter("restApiId") @Nullable String restApiId,
+        @CustomType.Parameter("stageName") @Nullable String stageName) {
         this.restApiId = restApiId;
         this.stageName = stageName;
     }

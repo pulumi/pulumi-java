@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.detective;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
      * 
      */
-    @InputImport(name="disableEmailNotification")
+    @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
     public Output<Boolean> getDisableEmailNotification() {
@@ -30,7 +30,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * The ARN of the graph to which the member account will be invited
      * 
      */
-    @InputImport(name="graphArn", required=true)
+    @Import(name="graphArn", required=true)
       private final Output<String> graphArn;
 
     public Output<String> getGraphArn() {
@@ -41,7 +41,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * The root email address for the account to be invited, for validation. Updating this field has no effect.
      * 
      */
-    @InputImport(name="memberEmailAddress", required=true)
+    @Import(name="memberEmailAddress", required=true)
       private final Output<String> memberEmailAddress;
 
     public Output<String> getMemberEmailAddress() {
@@ -52,7 +52,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * The AWS account ID to be invited to join the graph as a member
      * 
      */
-    @InputImport(name="memberId", required=true)
+    @Import(name="memberId", required=true)
       private final Output<String> memberId;
 
     public Output<String> getMemberId() {
@@ -63,7 +63,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * A message to be included in the email invitation sent to the invited account. Updating this field has no effect.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {

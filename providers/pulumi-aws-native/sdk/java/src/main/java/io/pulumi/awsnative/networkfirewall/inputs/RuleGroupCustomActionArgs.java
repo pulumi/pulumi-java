@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupActionDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
 
     public static final RuleGroupCustomActionArgs Empty = new RuleGroupCustomActionArgs();
 
-    @InputImport(name="actionDefinition", required=true)
+    @Import(name="actionDefinition", required=true)
       private final Output<RuleGroupActionDefinitionArgs> actionDefinition;
 
     public Output<RuleGroupActionDefinitionArgs> getActionDefinition() {
         return this.actionDefinition;
     }
 
-    @InputImport(name="actionName", required=true)
+    @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
     public Output<String> getActionName() {

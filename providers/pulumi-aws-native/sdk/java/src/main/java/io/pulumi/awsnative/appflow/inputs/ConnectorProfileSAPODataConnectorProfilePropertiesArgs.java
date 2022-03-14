@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileOAuthPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,49 +16,49 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
 
     public static final ConnectorProfileSAPODataConnectorProfilePropertiesArgs Empty = new ConnectorProfileSAPODataConnectorProfilePropertiesArgs();
 
-    @InputImport(name="applicationHostUrl")
+    @Import(name="applicationHostUrl")
       private final @Nullable Output<String> applicationHostUrl;
 
     public Output<String> getApplicationHostUrl() {
         return this.applicationHostUrl == null ? Output.empty() : this.applicationHostUrl;
     }
 
-    @InputImport(name="applicationServicePath")
+    @Import(name="applicationServicePath")
       private final @Nullable Output<String> applicationServicePath;
 
     public Output<String> getApplicationServicePath() {
         return this.applicationServicePath == null ? Output.empty() : this.applicationServicePath;
     }
 
-    @InputImport(name="clientNumber")
+    @Import(name="clientNumber")
       private final @Nullable Output<String> clientNumber;
 
     public Output<String> getClientNumber() {
         return this.clientNumber == null ? Output.empty() : this.clientNumber;
     }
 
-    @InputImport(name="logonLanguage")
+    @Import(name="logonLanguage")
       private final @Nullable Output<String> logonLanguage;
 
     public Output<String> getLogonLanguage() {
         return this.logonLanguage == null ? Output.empty() : this.logonLanguage;
     }
 
-    @InputImport(name="oAuthProperties")
+    @Import(name="oAuthProperties")
       private final @Nullable Output<ConnectorProfileOAuthPropertiesArgs> oAuthProperties;
 
     public Output<ConnectorProfileOAuthPropertiesArgs> getOAuthProperties() {
         return this.oAuthProperties == null ? Output.empty() : this.oAuthProperties;
     }
 
-    @InputImport(name="portNumber")
+    @Import(name="portNumber")
       private final @Nullable Output<Integer> portNumber;
 
     public Output<Integer> getPortNumber() {
         return this.portNumber == null ? Output.empty() : this.portNumber;
     }
 
-    @InputImport(name="privateLinkServiceName")
+    @Import(name="privateLinkServiceName")
       private final @Nullable Output<String> privateLinkServiceName;
 
     public Output<String> getPrivateLinkServiceName() {

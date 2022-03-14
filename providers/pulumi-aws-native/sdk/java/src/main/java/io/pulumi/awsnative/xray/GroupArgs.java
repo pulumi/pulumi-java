@@ -6,7 +6,7 @@ package io.pulumi.awsnative.xray;
 import io.pulumi.awsnative.xray.inputs.GroupInsightsConfigurationArgs;
 import io.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The filter expression defining criteria by which to group traces.
      * 
      */
-    @InputImport(name="filterExpression")
+    @Import(name="filterExpression")
       private final @Nullable Output<String> filterExpression;
 
     public Output<String> getFilterExpression() {
@@ -32,21 +32,21 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The case-sensitive name of the new group. Names must be unique.
      * 
      */
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
         return this.groupName == null ? Output.empty() : this.groupName;
     }
 
-    @InputImport(name="insightsConfiguration")
+    @Import(name="insightsConfiguration")
       private final @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
 
     public Output<GroupInsightsConfigurationArgs> getInsightsConfiguration() {
         return this.insightsConfiguration == null ? Output.empty() : this.insightsConfiguration;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
     public Output<List<TagsItemPropertiesArgs>> getTags() {

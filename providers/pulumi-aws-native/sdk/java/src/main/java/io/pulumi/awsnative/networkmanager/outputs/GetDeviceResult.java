@@ -5,14 +5,14 @@ package io.pulumi.awsnative.networkmanager.outputs;
 
 import io.pulumi.awsnative.networkmanager.outputs.DeviceLocation;
 import io.pulumi.awsnative.networkmanager.outputs.DeviceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDeviceResult {
     /**
      * The description of the device.
@@ -65,18 +65,18 @@ public final class GetDeviceResult {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeviceResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("deviceArn") @Nullable String deviceArn,
-        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
-        @OutputCustomType.Parameter("location") @Nullable DeviceLocation location,
-        @OutputCustomType.Parameter("model") @Nullable String model,
-        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
-        @OutputCustomType.Parameter("siteId") @Nullable String siteId,
-        @OutputCustomType.Parameter("tags") @Nullable List<DeviceTag> tags,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("deviceArn") @Nullable String deviceArn,
+        @CustomType.Parameter("deviceId") @Nullable String deviceId,
+        @CustomType.Parameter("location") @Nullable DeviceLocation location,
+        @CustomType.Parameter("model") @Nullable String model,
+        @CustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @CustomType.Parameter("siteId") @Nullable String siteId,
+        @CustomType.Parameter("tags") @Nullable List<DeviceTag> tags,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("vendor") @Nullable String vendor) {
         this.description = description;
         this.deviceArn = deviceArn;
         this.deviceId = deviceId;

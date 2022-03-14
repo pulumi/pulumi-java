@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisvideo.outputs;
 
 import io.pulumi.awsnative.kinesisvideo.enums.SignalingChannelType;
 import io.pulumi.awsnative.kinesisvideo.outputs.SignalingChannelTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSignalingChannelResult {
     /**
      * The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
@@ -36,12 +36,12 @@ public final class GetSignalingChannelResult {
      */
     private final @Nullable SignalingChannelType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSignalingChannelResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("messageTtlSeconds") @Nullable Integer messageTtlSeconds,
-        @OutputCustomType.Parameter("tags") @Nullable List<SignalingChannelTag> tags,
-        @OutputCustomType.Parameter("type") @Nullable SignalingChannelType type) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("messageTtlSeconds") @Nullable Integer messageTtlSeconds,
+        @CustomType.Parameter("tags") @Nullable List<SignalingChannelTag> tags,
+        @CustomType.Parameter("type") @Nullable SignalingChannelType type) {
         this.arn = arn;
         this.messageTtlSeconds = messageTtlSeconds;
         this.tags = tags;

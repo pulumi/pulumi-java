@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureGroupOnlineStoreSecurityConfig {
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor
-    private FeatureGroupOnlineStoreSecurityConfig(@OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
+    @CustomType.Constructor
+    private FeatureGroupOnlineStoreSecurityConfig(@CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 

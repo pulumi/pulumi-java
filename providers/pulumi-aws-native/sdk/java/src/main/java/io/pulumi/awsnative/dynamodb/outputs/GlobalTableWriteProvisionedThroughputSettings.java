@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.dynamodb.outputs;
 
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableCapacityAutoScalingSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableWriteProvisionedThroughputSettings {
     private final @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings;
 
-    @OutputCustomType.Constructor
-    private GlobalTableWriteProvisionedThroughputSettings(@OutputCustomType.Parameter("writeCapacityAutoScalingSettings") @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings) {
+    @CustomType.Constructor
+    private GlobalTableWriteProvisionedThroughputSettings(@CustomType.Parameter("writeCapacityAutoScalingSettings") @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings) {
         this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
     }
 

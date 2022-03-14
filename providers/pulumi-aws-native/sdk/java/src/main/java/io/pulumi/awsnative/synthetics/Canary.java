@@ -13,7 +13,7 @@ import io.pulumi.awsnative.synthetics.outputs.CanaryTag;
 import io.pulumi.awsnative.synthetics.outputs.CanaryVPCConfig;
 import io.pulumi.awsnative.synthetics.outputs.CanaryVisualReference;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -33,7 +33,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Provide artifact configuration
      * 
      */
-    @OutputExport(name="artifactConfig", type=CanaryArtifactConfig.class, parameters={})
+    @Export(name="artifactConfig", type=CanaryArtifactConfig.class, parameters={})
     private Output</* @Nullable */ CanaryArtifactConfig> artifactConfig;
 
     /**
@@ -47,7 +47,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Provide the s3 bucket output location for test results
      * 
      */
-    @OutputExport(name="artifactS3Location", type=String.class, parameters={})
+    @Export(name="artifactS3Location", type=String.class, parameters={})
     private Output<String> artifactS3Location;
 
     /**
@@ -61,7 +61,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Provide the canary script source
      * 
      */
-    @OutputExport(name="code", type=CanaryCode.class, parameters={})
+    @Export(name="code", type=CanaryCode.class, parameters={})
     private Output<CanaryCode> code;
 
     /**
@@ -75,7 +75,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Lambda Execution role used to run your canaries
      * 
      */
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output<String> executionRoleArn;
 
     /**
@@ -89,7 +89,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Retention period of failed canary runs represented in number of days
      * 
      */
-    @OutputExport(name="failureRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="failureRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> failureRetentionPeriod;
 
     /**
@@ -103,7 +103,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Name of the canary.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -117,7 +117,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Provide canary run configuration
      * 
      */
-    @OutputExport(name="runConfig", type=CanaryRunConfig.class, parameters={})
+    @Export(name="runConfig", type=CanaryRunConfig.class, parameters={})
     private Output</* @Nullable */ CanaryRunConfig> runConfig;
 
     /**
@@ -131,7 +131,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Runtime version of Synthetics Library
      * 
      */
-    @OutputExport(name="runtimeVersion", type=String.class, parameters={})
+    @Export(name="runtimeVersion", type=String.class, parameters={})
     private Output<String> runtimeVersion;
 
     /**
@@ -145,7 +145,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Frequency to run your canaries
      * 
      */
-    @OutputExport(name="schedule", type=CanarySchedule.class, parameters={})
+    @Export(name="schedule", type=CanarySchedule.class, parameters={})
     private Output<CanarySchedule> schedule;
 
     /**
@@ -159,7 +159,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Runs canary if set to True. Default is False
      * 
      */
-    @OutputExport(name="startCanaryAfterCreation", type=Boolean.class, parameters={})
+    @Export(name="startCanaryAfterCreation", type=Boolean.class, parameters={})
     private Output<Boolean> startCanaryAfterCreation;
 
     /**
@@ -173,7 +173,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * State of the canary
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -187,7 +187,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Retention period of successful canary runs represented in number of days
      * 
      */
-    @OutputExport(name="successRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="successRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> successRetentionPeriod;
 
     /**
@@ -197,7 +197,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Integer> getSuccessRetentionPeriod() {
         return this.successRetentionPeriod;
     }
-    @OutputExport(name="tags", type=List.class, parameters={CanaryTag.class})
+    @Export(name="tags", type=List.class, parameters={CanaryTag.class})
     private Output</* @Nullable */ List<CanaryTag>> tags;
 
     public Output</* @Nullable */ List<CanaryTag>> getTags() {
@@ -207,7 +207,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Provide VPC Configuration if enabled.
      * 
      */
-    @OutputExport(name="vPCConfig", type=CanaryVPCConfig.class, parameters={})
+    @Export(name="vPCConfig", type=CanaryVPCConfig.class, parameters={})
     private Output</* @Nullable */ CanaryVPCConfig> vPCConfig;
 
     /**
@@ -221,7 +221,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Visual reference configuration for visual testing
      * 
      */
-    @OutputExport(name="visualReference", type=CanaryVisualReference.class, parameters={})
+    @Export(name="visualReference", type=CanaryVisualReference.class, parameters={})
     private Output</* @Nullable */ CanaryVisualReference> visualReference;
 
     /**

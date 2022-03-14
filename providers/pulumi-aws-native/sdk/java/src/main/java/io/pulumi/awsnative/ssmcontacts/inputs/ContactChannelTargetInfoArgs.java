@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) of the contact channel.
      * 
      */
-    @InputImport(name="channelId", required=true)
+    @Import(name="channelId", required=true)
       private final Output<String> channelId;
 
     public Output<String> getChannelId() {
@@ -33,7 +33,7 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
      * The number of minutes to wait to retry sending engagement in the case the engagement initially fails.
      * 
      */
-    @InputImport(name="retryIntervalInMinutes", required=true)
+    @Import(name="retryIntervalInMinutes", required=true)
       private final Output<Integer> retryIntervalInMinutes;
 
     public Output<Integer> getRetryIntervalInMinutes() {

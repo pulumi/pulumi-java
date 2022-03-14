@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticache;
 
 import io.pulumi.awsnative.elasticache.enums.UserEngine;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Access permissions string used for this user account.
      * 
      */
-    @InputImport(name="accessString")
+    @Import(name="accessString")
       private final @Nullable Output<String> accessString;
 
     public Output<String> getAccessString() {
@@ -32,7 +32,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Must be redis.
      * 
      */
-    @InputImport(name="engine", required=true)
+    @Import(name="engine", required=true)
       private final Output<UserEngine> engine;
 
     public Output<UserEngine> getEngine() {
@@ -43,7 +43,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates a password is not required for this user account.
      * 
      */
-    @InputImport(name="noPasswordRequired")
+    @Import(name="noPasswordRequired")
       private final @Nullable Output<Boolean> noPasswordRequired;
 
     public Output<Boolean> getNoPasswordRequired() {
@@ -54,7 +54,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Passwords used for this user account. You can create up to two passwords for each user.
      * 
      */
-    @InputImport(name="passwords")
+    @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
 
     public Output<List<String>> getPasswords() {
@@ -65,7 +65,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the user.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {
@@ -76,7 +76,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The username of the user.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

@@ -5,20 +5,20 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetSchedule;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetTriggeringDataset;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetTrigger {
     private final @Nullable DatasetSchedule schedule;
     private final @Nullable DatasetTriggeringDataset triggeringDataset;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetTrigger(
-        @OutputCustomType.Parameter("schedule") @Nullable DatasetSchedule schedule,
-        @OutputCustomType.Parameter("triggeringDataset") @Nullable DatasetTriggeringDataset triggeringDataset) {
+        @CustomType.Parameter("schedule") @Nullable DatasetSchedule schedule,
+        @CustomType.Parameter("triggeringDataset") @Nullable DatasetTriggeringDataset triggeringDataset) {
         this.schedule = schedule;
         this.triggeringDataset = triggeringDataset;
     }

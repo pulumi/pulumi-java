@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryMultiMeasureAttributeMappingMeasureValueType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryMultiMeasureAttributeMapping {
     private final ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType;
     private final String sourceColumn;
     private final @Nullable String targetMultiMeasureAttributeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledQueryMultiMeasureAttributeMapping(
-        @OutputCustomType.Parameter("measureValueType") ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType,
-        @OutputCustomType.Parameter("sourceColumn") String sourceColumn,
-        @OutputCustomType.Parameter("targetMultiMeasureAttributeName") @Nullable String targetMultiMeasureAttributeName) {
+        @CustomType.Parameter("measureValueType") ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType,
+        @CustomType.Parameter("sourceColumn") String sourceColumn,
+        @CustomType.Parameter("targetMultiMeasureAttributeName") @Nullable String targetMultiMeasureAttributeName) {
         this.measureValueType = measureValueType;
         this.sourceColumn = sourceColumn;
         this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;

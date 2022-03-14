@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.ClusterExecuteCommandLogConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class ClusterExecuteCommandConfigurationArgs extends io.pulumi.reso
 
     public static final ClusterExecuteCommandConfigurationArgs Empty = new ClusterExecuteCommandConfigurationArgs();
 
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
-    @InputImport(name="logConfiguration")
+    @Import(name="logConfiguration")
       private final @Nullable Output<ClusterExecuteCommandLogConfigurationArgs> logConfiguration;
 
     public Output<ClusterExecuteCommandLogConfigurationArgs> getLogConfiguration() {
         return this.logConfiguration == null ? Output.empty() : this.logConfiguration;
     }
 
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<String> logging;
 
     public Output<String> getLogging() {

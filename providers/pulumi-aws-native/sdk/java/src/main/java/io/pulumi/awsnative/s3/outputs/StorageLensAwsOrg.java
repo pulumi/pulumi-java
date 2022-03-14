@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensAwsOrg {
     private final String arn;
 
-    @OutputCustomType.Constructor
-    private StorageLensAwsOrg(@OutputCustomType.Parameter("arn") String arn) {
+    @CustomType.Constructor
+    private StorageLensAwsOrg(@CustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 

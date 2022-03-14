@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final BotMessageGroupArgs Empty = new BotMessageGroupArgs();
 
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final Output<BotMessageArgs> message;
 
     public Output<BotMessageArgs> getMessage() {
@@ -30,7 +30,7 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
      * Message variations to send to the user.
      * 
      */
-    @InputImport(name="variations")
+    @Import(name="variations")
       private final @Nullable Output<List<BotMessageArgs>> variations;
 
     public Output<List<BotMessageArgs>> getVariations() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationMutationProtection;
 import io.pulumi.awsnative.route53resolver.inputs.FirewallRuleGroupAssociationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * FirewallRuleGroupId
      * 
      */
-    @InputImport(name="firewallRuleGroupId", required=true)
+    @Import(name="firewallRuleGroupId", required=true)
       private final Output<String> firewallRuleGroupId;
 
     public Output<String> getFirewallRuleGroupId() {
@@ -33,7 +33,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * MutationProtectionStatus
      * 
      */
-    @InputImport(name="mutationProtection")
+    @Import(name="mutationProtection")
       private final @Nullable Output<FirewallRuleGroupAssociationMutationProtection> mutationProtection;
 
     public Output<FirewallRuleGroupAssociationMutationProtection> getMutationProtection() {
@@ -44,7 +44,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * FirewallRuleGroupAssociationName
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * Priority
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -66,7 +66,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * Tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FirewallRuleGroupAssociationTagArgs>> tags;
 
     public Output<List<FirewallRuleGroupAssociationTagArgs>> getTags() {
@@ -77,7 +77,7 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
      * VpcId
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

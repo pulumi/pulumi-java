@@ -6,7 +6,7 @@ package io.pulumi.awsnative;
 import io.pulumi.awsnative.ExtensionResourceArgs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class ExtensionResource extends io.pulumi.resources.CustomResource {
      * Dictionary of the extension resource attributes.
      * 
      */
-    @OutputExport(name="outputs", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="outputs", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> outputs;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HostedZoneQueryLoggingConfig {
     /**
      * The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.
@@ -15,8 +15,8 @@ public final class HostedZoneQueryLoggingConfig {
      */
     private final String cloudWatchLogsLogGroupArn;
 
-    @OutputCustomType.Constructor
-    private HostedZoneQueryLoggingConfig(@OutputCustomType.Parameter("cloudWatchLogsLogGroupArn") String cloudWatchLogsLogGroupArn) {
+    @CustomType.Constructor
+    private HostedZoneQueryLoggingConfig(@CustomType.Parameter("cloudWatchLogsLogGroupArn") String cloudWatchLogsLogGroupArn) {
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
     }
 

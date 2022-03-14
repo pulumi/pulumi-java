@@ -16,12 +16,12 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupRegexPatternSetReferenceStatem
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupSizeConstraintStatement;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupSqliMatchStatement;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupXssMatchStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupStatement {
     private final @Nullable RuleGroupAndStatement andStatement;
     private final @Nullable RuleGroupByteMatchStatement byteMatchStatement;
@@ -37,21 +37,21 @@ public final class RuleGroupStatement {
     private final @Nullable RuleGroupSqliMatchStatement sqliMatchStatement;
     private final @Nullable RuleGroupXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupStatement(
-        @OutputCustomType.Parameter("andStatement") @Nullable RuleGroupAndStatement andStatement,
-        @OutputCustomType.Parameter("byteMatchStatement") @Nullable RuleGroupByteMatchStatement byteMatchStatement,
-        @OutputCustomType.Parameter("geoMatchStatement") @Nullable RuleGroupGeoMatchStatement geoMatchStatement,
-        @OutputCustomType.Parameter("iPSetReferenceStatement") @Nullable RuleGroupIPSetReferenceStatement iPSetReferenceStatement,
-        @OutputCustomType.Parameter("labelMatchStatement") @Nullable RuleGroupLabelMatchStatement labelMatchStatement,
-        @OutputCustomType.Parameter("notStatement") @Nullable RuleGroupNotStatement notStatement,
-        @OutputCustomType.Parameter("orStatement") @Nullable RuleGroupOrStatement orStatement,
-        @OutputCustomType.Parameter("rateBasedStatement") @Nullable RuleGroupRateBasedStatement rateBasedStatement,
-        @OutputCustomType.Parameter("regexMatchStatement") @Nullable RuleGroupRegexMatchStatement regexMatchStatement,
-        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable RuleGroupRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable RuleGroupSizeConstraintStatement sizeConstraintStatement,
-        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable RuleGroupSqliMatchStatement sqliMatchStatement,
-        @OutputCustomType.Parameter("xssMatchStatement") @Nullable RuleGroupXssMatchStatement xssMatchStatement) {
+        @CustomType.Parameter("andStatement") @Nullable RuleGroupAndStatement andStatement,
+        @CustomType.Parameter("byteMatchStatement") @Nullable RuleGroupByteMatchStatement byteMatchStatement,
+        @CustomType.Parameter("geoMatchStatement") @Nullable RuleGroupGeoMatchStatement geoMatchStatement,
+        @CustomType.Parameter("iPSetReferenceStatement") @Nullable RuleGroupIPSetReferenceStatement iPSetReferenceStatement,
+        @CustomType.Parameter("labelMatchStatement") @Nullable RuleGroupLabelMatchStatement labelMatchStatement,
+        @CustomType.Parameter("notStatement") @Nullable RuleGroupNotStatement notStatement,
+        @CustomType.Parameter("orStatement") @Nullable RuleGroupOrStatement orStatement,
+        @CustomType.Parameter("rateBasedStatement") @Nullable RuleGroupRateBasedStatement rateBasedStatement,
+        @CustomType.Parameter("regexMatchStatement") @Nullable RuleGroupRegexMatchStatement regexMatchStatement,
+        @CustomType.Parameter("regexPatternSetReferenceStatement") @Nullable RuleGroupRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @CustomType.Parameter("sizeConstraintStatement") @Nullable RuleGroupSizeConstraintStatement sizeConstraintStatement,
+        @CustomType.Parameter("sqliMatchStatement") @Nullable RuleGroupSqliMatchStatement sqliMatchStatement,
+        @CustomType.Parameter("xssMatchStatement") @Nullable RuleGroupXssMatchStatement xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.location.enums.TrackerPositionFiltering;
 import io.pulumi.awsnative.location.enums.TrackerPricingPlan;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,42 +16,42 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrackerArgs Empty = new TrackerArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
-    @InputImport(name="positionFiltering")
+    @Import(name="positionFiltering")
       private final @Nullable Output<TrackerPositionFiltering> positionFiltering;
 
     public Output<TrackerPositionFiltering> getPositionFiltering() {
         return this.positionFiltering == null ? Output.empty() : this.positionFiltering;
     }
 
-    @InputImport(name="pricingPlan")
+    @Import(name="pricingPlan")
       private final @Nullable Output<TrackerPricingPlan> pricingPlan;
 
     public Output<TrackerPricingPlan> getPricingPlan() {
         return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
     }
 
-    @InputImport(name="pricingPlanDataSource")
+    @Import(name="pricingPlanDataSource")
       private final @Nullable Output<String> pricingPlanDataSource;
 
     public Output<String> getPricingPlanDataSource() {
         return this.pricingPlanDataSource == null ? Output.empty() : this.pricingPlanDataSource;
     }
 
-    @InputImport(name="trackerName")
+    @Import(name="trackerName")
       private final @Nullable Output<String> trackerName;
 
     public Output<String> getTrackerName() {

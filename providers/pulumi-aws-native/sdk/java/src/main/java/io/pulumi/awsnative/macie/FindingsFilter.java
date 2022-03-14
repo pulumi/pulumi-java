@@ -9,7 +9,7 @@ import io.pulumi.awsnative.macie.enums.FindingsFilterFindingFilterAction;
 import io.pulumi.awsnative.macie.outputs.FindingsFilterFindingCriteria;
 import io.pulumi.awsnative.macie.outputs.FindingsFilterListItem;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * Findings filter action.
      * 
      */
-    @OutputExport(name="action", type=FindingsFilterFindingFilterAction.class, parameters={})
+    @Export(name="action", type=FindingsFilterFindingFilterAction.class, parameters={})
     private Output</* @Nullable */ FindingsFilterFindingFilterAction> action;
 
     /**
@@ -40,7 +40,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * Findings filter ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -54,7 +54,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * Findings filter description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -68,7 +68,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * Findings filter criteria.
      * 
      */
-    @OutputExport(name="findingCriteria", type=FindingsFilterFindingCriteria.class, parameters={})
+    @Export(name="findingCriteria", type=FindingsFilterFindingCriteria.class, parameters={})
     private Output<FindingsFilterFindingCriteria> findingCriteria;
 
     /**
@@ -82,7 +82,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * Findings filters list.
      * 
      */
-    @OutputExport(name="findingsFilterListItems", type=List.class, parameters={FindingsFilterListItem.class})
+    @Export(name="findingsFilterListItems", type=List.class, parameters={FindingsFilterListItem.class})
     private Output<List<FindingsFilterListItem>> findingsFilterListItems;
 
     /**
@@ -96,7 +96,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * Findings filter name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * Findings filter position.
      * 
      */
-    @OutputExport(name="position", type=Integer.class, parameters={})
+    @Export(name="position", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> position;
 
     /**

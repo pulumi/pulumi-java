@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamProcessorType;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessorParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
 
     public static final DeliveryStreamProcessorArgs Empty = new DeliveryStreamProcessorArgs();
 
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<DeliveryStreamProcessorParameterArgs>> parameters;
 
     public Output<List<DeliveryStreamProcessorParameterArgs>> getParameters() {
         return this.parameters == null ? Output.empty() : this.parameters;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<DeliveryStreamProcessorType> type;
 
     public Output<DeliveryStreamProcessorType> getType() {

@@ -5,14 +5,14 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.outputs.ResolverRuleTag;
 import io.pulumi.awsnative.route53resolver.outputs.ResolverRuleTargetAddress;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverRuleResult {
     /**
      * The Amazon Resource Name (ARN) of the resolver rule.
@@ -45,14 +45,14 @@ public final class GetResolverRuleResult {
      */
     private final @Nullable List<ResolverRuleTargetAddress> targetIps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResolverRuleResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
-        @OutputCustomType.Parameter("resolverRuleId") @Nullable String resolverRuleId,
-        @OutputCustomType.Parameter("tags") @Nullable List<ResolverRuleTag> tags,
-        @OutputCustomType.Parameter("targetIps") @Nullable List<ResolverRuleTargetAddress> targetIps) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
+        @CustomType.Parameter("resolverRuleId") @Nullable String resolverRuleId,
+        @CustomType.Parameter("tags") @Nullable List<ResolverRuleTag> tags,
+        @CustomType.Parameter("targetIps") @Nullable List<ResolverRuleTargetAddress> targetIps) {
         this.arn = arn;
         this.name = name;
         this.resolverEndpointId = resolverEndpointId;

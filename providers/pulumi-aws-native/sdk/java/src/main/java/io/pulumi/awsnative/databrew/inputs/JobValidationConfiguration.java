@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.JobValidationMode;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,14 +23,14 @@ public final class JobValidationConfiguration extends io.pulumi.resources.Invoke
      * Arn of the Ruleset
      * 
      */
-    @InputImport(name="rulesetArn", required=true)
+    @Import(name="rulesetArn", required=true)
       private final String rulesetArn;
 
     public String getRulesetArn() {
         return this.rulesetArn;
     }
 
-    @InputImport(name="validationMode")
+    @Import(name="validationMode")
       private final @Nullable JobValidationMode validationMode;
 
     public Optional<JobValidationMode> getValidationMode() {

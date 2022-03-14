@@ -7,14 +7,14 @@ import io.pulumi.awsnative.xray.outputs.SamplingRule;
 import io.pulumi.awsnative.xray.outputs.SamplingRuleRecord;
 import io.pulumi.awsnative.xray.outputs.SamplingRuleUpdate;
 import io.pulumi.awsnative.xray.outputs.TagsItemProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSamplingRuleResult {
     private final @Nullable String ruleARN;
     private final @Nullable String ruleName;
@@ -23,14 +23,14 @@ public final class GetSamplingRuleResult {
     private final @Nullable SamplingRuleUpdate samplingRuleUpdate;
     private final @Nullable List<TagsItemProperties> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSamplingRuleResult(
-        @OutputCustomType.Parameter("ruleARN") @Nullable String ruleARN,
-        @OutputCustomType.Parameter("ruleName") @Nullable String ruleName,
-        @OutputCustomType.Parameter("samplingRule") @Nullable SamplingRule samplingRule,
-        @OutputCustomType.Parameter("samplingRuleRecord") @Nullable SamplingRuleRecord samplingRuleRecord,
-        @OutputCustomType.Parameter("samplingRuleUpdate") @Nullable SamplingRuleUpdate samplingRuleUpdate,
-        @OutputCustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
+        @CustomType.Parameter("ruleARN") @Nullable String ruleARN,
+        @CustomType.Parameter("ruleName") @Nullable String ruleName,
+        @CustomType.Parameter("samplingRule") @Nullable SamplingRule samplingRule,
+        @CustomType.Parameter("samplingRuleRecord") @Nullable SamplingRuleRecord samplingRuleRecord,
+        @CustomType.Parameter("samplingRuleUpdate") @Nullable SamplingRuleUpdate samplingRuleUpdate,
+        @CustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
         this.ruleARN = ruleARN;
         this.ruleName = ruleName;
         this.samplingRule = samplingRule;

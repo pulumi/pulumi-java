@@ -5,21 +5,21 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetFleetLaunchTemplateSpecification;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetLaunchTemplateOverrides;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetLaunchTemplateConfig {
     private final @Nullable SpotFleetFleetLaunchTemplateSpecification launchTemplateSpecification;
     private final @Nullable List<SpotFleetLaunchTemplateOverrides> overrides;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetLaunchTemplateConfig(
-        @OutputCustomType.Parameter("launchTemplateSpecification") @Nullable SpotFleetFleetLaunchTemplateSpecification launchTemplateSpecification,
-        @OutputCustomType.Parameter("overrides") @Nullable List<SpotFleetLaunchTemplateOverrides> overrides) {
+        @CustomType.Parameter("launchTemplateSpecification") @Nullable SpotFleetFleetLaunchTemplateSpecification launchTemplateSpecification,
+        @CustomType.Parameter("overrides") @Nullable List<SpotFleetLaunchTemplateOverrides> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }

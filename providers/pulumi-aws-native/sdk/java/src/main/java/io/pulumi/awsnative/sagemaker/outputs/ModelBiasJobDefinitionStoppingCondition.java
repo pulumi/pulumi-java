@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelBiasJobDefinitionStoppingCondition {
     /**
      * The maximum runtime allowed in seconds.
@@ -15,8 +15,8 @@ public final class ModelBiasJobDefinitionStoppingCondition {
      */
     private final Integer maxRuntimeInSeconds;
 
-    @OutputCustomType.Constructor
-    private ModelBiasJobDefinitionStoppingCondition(@OutputCustomType.Parameter("maxRuntimeInSeconds") Integer maxRuntimeInSeconds) {
+    @CustomType.Constructor
+    private ModelBiasJobDefinitionStoppingCondition(@CustomType.Parameter("maxRuntimeInSeconds") Integer maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
     }
 

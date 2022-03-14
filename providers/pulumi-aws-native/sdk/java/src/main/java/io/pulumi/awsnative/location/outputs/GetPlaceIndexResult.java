@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.location.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPlaceIndexResult {
     private final @Nullable String arn;
     private final @Nullable String createTime;
     private final @Nullable String indexArn;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPlaceIndexResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("indexArn") @Nullable String indexArn,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("indexArn") @Nullable String indexArn,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.createTime = createTime;
         this.indexArn = indexArn;

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.lambda.outputs;
 
 import io.pulumi.awsnative.lambda.enums.EventSourceMappingSourceAccessConfigurationType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingSourceAccessConfiguration {
     /**
      * The type of source access configuration.
@@ -23,10 +23,10 @@ public final class EventSourceMappingSourceAccessConfiguration {
      */
     private final @Nullable String uRI;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventSourceMappingSourceAccessConfiguration(
-        @OutputCustomType.Parameter("type") @Nullable EventSourceMappingSourceAccessConfigurationType type,
-        @OutputCustomType.Parameter("uRI") @Nullable String uRI) {
+        @CustomType.Parameter("type") @Nullable EventSourceMappingSourceAccessConfigurationType type,
+        @CustomType.Parameter("uRI") @Nullable String uRI) {
         this.type = type;
         this.uRI = uRI;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class NetworkInsightsAnalysisPortRange extends io.pulumi.resources.
 
     public static final NetworkInsightsAnalysisPortRange Empty = new NetworkInsightsAnalysisPortRange();
 
-    @InputImport(name="from")
+    @Import(name="from")
       private final @Nullable Integer from;
 
     public Optional<Integer> getFrom() {
         return this.from == null ? Optional.empty() : Optional.ofNullable(this.from);
     }
 
-    @InputImport(name="to")
+    @Import(name="to")
       private final @Nullable Integer to;
 
     public Optional<Integer> getTo() {

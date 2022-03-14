@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.AppResourceSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppResult {
     /**
      * The Amazon Resource Name (ARN) of the app.
@@ -23,10 +23,10 @@ public final class GetAppResult {
      */
     private final @Nullable AppResourceSpec resourceSpec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppResult(
-        @OutputCustomType.Parameter("appArn") @Nullable String appArn,
-        @OutputCustomType.Parameter("resourceSpec") @Nullable AppResourceSpec resourceSpec) {
+        @CustomType.Parameter("appArn") @Nullable String appArn,
+        @CustomType.Parameter("resourceSpec") @Nullable AppResourceSpec resourceSpec) {
         this.appArn = appArn;
         this.resourceSpec = resourceSpec;
     }

@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.mwaa.outputs;
 
 import io.pulumi.awsnative.mwaa.outputs.EnvironmentModuleLoggingConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentLoggingConfiguration {
     private final @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs;
     private final @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs;
@@ -17,13 +17,13 @@ public final class EnvironmentLoggingConfiguration {
     private final @Nullable EnvironmentModuleLoggingConfiguration webserverLogs;
     private final @Nullable EnvironmentModuleLoggingConfiguration workerLogs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentLoggingConfiguration(
-        @OutputCustomType.Parameter("dagProcessingLogs") @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs,
-        @OutputCustomType.Parameter("schedulerLogs") @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs,
-        @OutputCustomType.Parameter("taskLogs") @Nullable EnvironmentModuleLoggingConfiguration taskLogs,
-        @OutputCustomType.Parameter("webserverLogs") @Nullable EnvironmentModuleLoggingConfiguration webserverLogs,
-        @OutputCustomType.Parameter("workerLogs") @Nullable EnvironmentModuleLoggingConfiguration workerLogs) {
+        @CustomType.Parameter("dagProcessingLogs") @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs,
+        @CustomType.Parameter("schedulerLogs") @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs,
+        @CustomType.Parameter("taskLogs") @Nullable EnvironmentModuleLoggingConfiguration taskLogs,
+        @CustomType.Parameter("webserverLogs") @Nullable EnvironmentModuleLoggingConfiguration webserverLogs,
+        @CustomType.Parameter("workerLogs") @Nullable EnvironmentModuleLoggingConfiguration workerLogs) {
         this.dagProcessingLogs = dagProcessingLogs;
         this.schedulerLogs = schedulerLogs;
         this.taskLogs = taskLogs;

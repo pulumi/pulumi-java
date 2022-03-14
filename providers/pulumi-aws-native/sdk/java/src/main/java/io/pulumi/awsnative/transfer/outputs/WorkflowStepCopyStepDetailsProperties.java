@@ -5,13 +5,13 @@ package io.pulumi.awsnative.transfer.outputs;
 
 import io.pulumi.awsnative.transfer.enums.WorkflowStepCopyStepDetailsPropertiesOverwriteExisting;
 import io.pulumi.awsnative.transfer.outputs.WorkflowInputFileLocation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowStepCopyStepDetailsProperties {
     private final @Nullable WorkflowInputFileLocation destinationFileLocation;
     /**
@@ -25,11 +25,11 @@ public final class WorkflowStepCopyStepDetailsProperties {
      */
     private final @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowStepCopyStepDetailsProperties(
-        @OutputCustomType.Parameter("destinationFileLocation") @Nullable WorkflowInputFileLocation destinationFileLocation,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("overwriteExisting") @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
+        @CustomType.Parameter("destinationFileLocation") @Nullable WorkflowInputFileLocation destinationFileLocation,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("overwriteExisting") @Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
         this.destinationFileLocation = destinationFileLocation;
         this.name = name;
         this.overwriteExisting = overwriteExisting;

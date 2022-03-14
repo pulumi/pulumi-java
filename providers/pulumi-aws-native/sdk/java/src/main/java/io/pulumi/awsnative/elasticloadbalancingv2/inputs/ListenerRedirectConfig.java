@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,42 +14,42 @@ public final class ListenerRedirectConfig extends io.pulumi.resources.InvokeArgs
 
     public static final ListenerRedirectConfig Empty = new ListenerRedirectConfig();
 
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable String host;
 
     public Optional<String> getHost() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable String port;
 
     public Optional<String> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable String query;
 
     public Optional<String> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final String statusCode;
 
     public String getStatusCode() {

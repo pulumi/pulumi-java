@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupPlanResourceType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupPlanResult {
     private final @Nullable BackupPlanResourceType backupPlan;
     private final @Nullable String backupPlanArn;
@@ -19,13 +19,13 @@ public final class GetBackupPlanResult {
     private final @Nullable Object backupPlanTags;
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupPlanResult(
-        @OutputCustomType.Parameter("backupPlan") @Nullable BackupPlanResourceType backupPlan,
-        @OutputCustomType.Parameter("backupPlanArn") @Nullable String backupPlanArn,
-        @OutputCustomType.Parameter("backupPlanId") @Nullable String backupPlanId,
-        @OutputCustomType.Parameter("backupPlanTags") @Nullable Object backupPlanTags,
-        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
+        @CustomType.Parameter("backupPlan") @Nullable BackupPlanResourceType backupPlan,
+        @CustomType.Parameter("backupPlanArn") @Nullable String backupPlanArn,
+        @CustomType.Parameter("backupPlanId") @Nullable String backupPlanId,
+        @CustomType.Parameter("backupPlanTags") @Nullable Object backupPlanTags,
+        @CustomType.Parameter("versionId") @Nullable String versionId) {
         this.backupPlan = backupPlan;
         this.backupPlanArn = backupPlanArn;
         this.backupPlanId = backupPlanId;

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.glue.inputs.SchemaRegistryArgs;
 import io.pulumi.awsnative.glue.inputs.SchemaTagArgs;
 import io.pulumi.awsnative.glue.inputs.SchemaVersionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaArgs Empty = new SchemaArgs();
 
-    @InputImport(name="checkpointVersion")
+    @Import(name="checkpointVersion")
       private final @Nullable Output<SchemaVersionArgs> checkpointVersion;
 
     public Output<SchemaVersionArgs> getCheckpointVersion() {
@@ -31,7 +31,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Compatibility setting for the schema.
      * 
      */
-    @InputImport(name="compatibility", required=true)
+    @Import(name="compatibility", required=true)
       private final Output<SchemaCompatibility> compatibility;
 
     public Output<SchemaCompatibility> getCompatibility() {
@@ -42,7 +42,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
      * 
      */
-    @InputImport(name="dataFormat", required=true)
+    @Import(name="dataFormat", required=true)
       private final Output<SchemaDataFormat> dataFormat;
 
     public Output<SchemaDataFormat> getDataFormat() {
@@ -53,7 +53,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the schema. If description is not provided, there will not be any default value for this.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,14 +64,14 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the schema.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="registry")
+    @Import(name="registry")
       private final @Nullable Output<SchemaRegistryArgs> registry;
 
     public Output<SchemaRegistryArgs> getRegistry() {
@@ -82,7 +82,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Definition for the initial schema version in plain-text.
      * 
      */
-    @InputImport(name="schemaDefinition", required=true)
+    @Import(name="schemaDefinition", required=true)
       private final Output<String> schemaDefinition;
 
     public Output<String> getSchemaDefinition() {
@@ -93,7 +93,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * List of tags to tag the schema
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SchemaTagArgs>> tags;
 
     public Output<List<SchemaTagArgs>> getTags() {

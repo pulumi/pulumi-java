@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.glue.RegistryArgs;
 import io.pulumi.awsnative.glue.outputs.RegistryTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name for the created Registry.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * A description of the registry. If description is not provided, there will not be any default value for this.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * List of tags to tag the Registry
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RegistryTag.class})
+    @Export(name="tags", type=List.class, parameters={RegistryTag.class})
     private Output</* @Nullable */ List<RegistryTag>> tags;
 
     /**

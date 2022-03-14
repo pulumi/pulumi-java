@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.auditmanager.outputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentReportDestinationType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentReportsDestination {
     private final @Nullable String destination;
     private final @Nullable AssessmentReportDestinationType destinationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssessmentReportsDestination(
-        @OutputCustomType.Parameter("destination") @Nullable String destination,
-        @OutputCustomType.Parameter("destinationType") @Nullable AssessmentReportDestinationType destinationType) {
+        @CustomType.Parameter("destination") @Nullable String destination,
+        @CustomType.Parameter("destinationType") @Nullable AssessmentReportDestinationType destinationType) {
         this.destination = destination;
         this.destinationType = destinationType;
     }

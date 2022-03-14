@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.VPCEConfigurationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVPCEConfigurationResult {
     private final @Nullable String arn;
     private final @Nullable String serviceDnsName;
@@ -20,14 +20,14 @@ public final class GetVPCEConfigurationResult {
     private final @Nullable String vpceConfigurationName;
     private final @Nullable String vpceServiceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVPCEConfigurationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("serviceDnsName") @Nullable String serviceDnsName,
-        @OutputCustomType.Parameter("tags") @Nullable List<VPCEConfigurationTag> tags,
-        @OutputCustomType.Parameter("vpceConfigurationDescription") @Nullable String vpceConfigurationDescription,
-        @OutputCustomType.Parameter("vpceConfigurationName") @Nullable String vpceConfigurationName,
-        @OutputCustomType.Parameter("vpceServiceName") @Nullable String vpceServiceName) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("serviceDnsName") @Nullable String serviceDnsName,
+        @CustomType.Parameter("tags") @Nullable List<VPCEConfigurationTag> tags,
+        @CustomType.Parameter("vpceConfigurationDescription") @Nullable String vpceConfigurationDescription,
+        @CustomType.Parameter("vpceConfigurationName") @Nullable String vpceConfigurationName,
+        @CustomType.Parameter("vpceServiceName") @Nullable String vpceServiceName) {
         this.arn = arn;
         this.serviceDnsName = serviceDnsName;
         this.tags = tags;

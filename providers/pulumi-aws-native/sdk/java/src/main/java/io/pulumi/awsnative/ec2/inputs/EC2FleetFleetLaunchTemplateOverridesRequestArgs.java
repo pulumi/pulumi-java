@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetInstanceRequirementsRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetPlacementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,56 +17,56 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
 
     public static final EC2FleetFleetLaunchTemplateOverridesRequestArgs Empty = new EC2FleetFleetLaunchTemplateOverridesRequestArgs();
 
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
-    @InputImport(name="instanceRequirements")
+    @Import(name="instanceRequirements")
       private final @Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements;
 
     public Output<EC2FleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
         return this.instanceRequirements == null ? Output.empty() : this.instanceRequirements;
     }
 
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
         return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
-    @InputImport(name="maxPrice")
+    @Import(name="maxPrice")
       private final @Nullable Output<String> maxPrice;
 
     public Output<String> getMaxPrice() {
         return this.maxPrice == null ? Output.empty() : this.maxPrice;
     }
 
-    @InputImport(name="placement")
+    @Import(name="placement")
       private final @Nullable Output<EC2FleetPlacementArgs> placement;
 
     public Output<EC2FleetPlacementArgs> getPlacement() {
         return this.placement == null ? Output.empty() : this.placement;
     }
 
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Double> priority;
 
     public Output<Double> getPriority() {
         return this.priority == null ? Output.empty() : this.priority;
     }
 
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
         return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
-    @InputImport(name="weightedCapacity")
+    @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
     public Output<Double> getWeightedCapacity() {

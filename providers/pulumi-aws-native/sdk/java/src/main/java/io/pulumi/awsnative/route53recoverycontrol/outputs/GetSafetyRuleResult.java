@@ -6,13 +6,13 @@ package io.pulumi.awsnative.route53recoverycontrol.outputs;
 import io.pulumi.awsnative.route53recoverycontrol.enums.SafetyRuleStatus;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleAssertionRule;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleGatingRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSafetyRuleResult {
     private final @Nullable SafetyRuleAssertionRule assertionRule;
     private final @Nullable SafetyRuleGatingRule gatingRule;
@@ -28,13 +28,13 @@ public final class GetSafetyRuleResult {
      */
     private final @Nullable SafetyRuleStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSafetyRuleResult(
-        @OutputCustomType.Parameter("assertionRule") @Nullable SafetyRuleAssertionRule assertionRule,
-        @OutputCustomType.Parameter("gatingRule") @Nullable SafetyRuleGatingRule gatingRule,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("safetyRuleArn") @Nullable String safetyRuleArn,
-        @OutputCustomType.Parameter("status") @Nullable SafetyRuleStatus status) {
+        @CustomType.Parameter("assertionRule") @Nullable SafetyRuleAssertionRule assertionRule,
+        @CustomType.Parameter("gatingRule") @Nullable SafetyRuleGatingRule gatingRule,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("safetyRuleArn") @Nullable String safetyRuleArn,
+        @CustomType.Parameter("status") @Nullable SafetyRuleStatus status) {
         this.assertionRule = assertionRule;
         this.gatingRule = gatingRule;
         this.name = name;

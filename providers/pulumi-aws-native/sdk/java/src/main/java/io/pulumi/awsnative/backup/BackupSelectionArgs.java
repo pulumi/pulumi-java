@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup;
 
 import io.pulumi.awsnative.backup.inputs.BackupSelectionResourceTypeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final BackupSelectionArgs Empty = new BackupSelectionArgs();
 
-    @InputImport(name="backupPlanId", required=true)
+    @Import(name="backupPlanId", required=true)
       private final Output<String> backupPlanId;
 
     public Output<String> getBackupPlanId() {
         return this.backupPlanId;
     }
 
-    @InputImport(name="backupSelection", required=true)
+    @Import(name="backupSelection", required=true)
       private final Output<BackupSelectionResourceTypeArgs> backupSelection;
 
     public Output<BackupSelectionResourceTypeArgs> getBackupSelection() {

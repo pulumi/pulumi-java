@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProvisionedCapacity {
     /**
      * Specifies how many MSK Connect Units (MCU) are allocated to the connector.
@@ -22,10 +22,10 @@ public final class ConnectorProvisionedCapacity {
      */
     private final Integer workerCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProvisionedCapacity(
-        @OutputCustomType.Parameter("mcuCount") @Nullable Integer mcuCount,
-        @OutputCustomType.Parameter("workerCount") Integer workerCount) {
+        @CustomType.Parameter("mcuCount") @Nullable Integer mcuCount,
+        @CustomType.Parameter("workerCount") Integer workerCount) {
         this.mcuCount = mcuCount;
         this.workerCount = workerCount;
     }

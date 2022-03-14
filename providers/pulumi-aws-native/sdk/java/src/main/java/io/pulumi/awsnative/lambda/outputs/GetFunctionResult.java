@@ -12,7 +12,7 @@ import io.pulumi.awsnative.lambda.outputs.FunctionImageConfig;
 import io.pulumi.awsnative.lambda.outputs.FunctionTag;
 import io.pulumi.awsnative.lambda.outputs.FunctionTracingConfig;
 import io.pulumi.awsnative.lambda.outputs.FunctionVpcConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionResult {
     private final @Nullable List<FunctionArchitecturesItem> architectures;
     /**
@@ -119,28 +119,28 @@ public final class GetFunctionResult {
      */
     private final @Nullable FunctionVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFunctionResult(
-        @OutputCustomType.Parameter("architectures") @Nullable List<FunctionArchitecturesItem> architectures,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("codeSigningConfigArn") @Nullable String codeSigningConfigArn,
-        @OutputCustomType.Parameter("deadLetterConfig") @Nullable FunctionDeadLetterConfig deadLetterConfig,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("environment") @Nullable FunctionEnvironment environment,
-        @OutputCustomType.Parameter("fileSystemConfigs") @Nullable List<FunctionFileSystemConfig> fileSystemConfigs,
-        @OutputCustomType.Parameter("handler") @Nullable String handler,
-        @OutputCustomType.Parameter("imageConfig") @Nullable FunctionImageConfig imageConfig,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("layers") @Nullable List<String> layers,
-        @OutputCustomType.Parameter("memorySize") @Nullable Integer memorySize,
-        @OutputCustomType.Parameter("packageType") @Nullable FunctionPackageType packageType,
-        @OutputCustomType.Parameter("reservedConcurrentExecutions") @Nullable Integer reservedConcurrentExecutions,
-        @OutputCustomType.Parameter("role") @Nullable String role,
-        @OutputCustomType.Parameter("runtime") @Nullable String runtime,
-        @OutputCustomType.Parameter("tags") @Nullable List<FunctionTag> tags,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("tracingConfig") @Nullable FunctionTracingConfig tracingConfig,
-        @OutputCustomType.Parameter("vpcConfig") @Nullable FunctionVpcConfig vpcConfig) {
+        @CustomType.Parameter("architectures") @Nullable List<FunctionArchitecturesItem> architectures,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("codeSigningConfigArn") @Nullable String codeSigningConfigArn,
+        @CustomType.Parameter("deadLetterConfig") @Nullable FunctionDeadLetterConfig deadLetterConfig,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("environment") @Nullable FunctionEnvironment environment,
+        @CustomType.Parameter("fileSystemConfigs") @Nullable List<FunctionFileSystemConfig> fileSystemConfigs,
+        @CustomType.Parameter("handler") @Nullable String handler,
+        @CustomType.Parameter("imageConfig") @Nullable FunctionImageConfig imageConfig,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("layers") @Nullable List<String> layers,
+        @CustomType.Parameter("memorySize") @Nullable Integer memorySize,
+        @CustomType.Parameter("packageType") @Nullable FunctionPackageType packageType,
+        @CustomType.Parameter("reservedConcurrentExecutions") @Nullable Integer reservedConcurrentExecutions,
+        @CustomType.Parameter("role") @Nullable String role,
+        @CustomType.Parameter("runtime") @Nullable String runtime,
+        @CustomType.Parameter("tags") @Nullable List<FunctionTag> tags,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("tracingConfig") @Nullable FunctionTracingConfig tracingConfig,
+        @CustomType.Parameter("vpcConfig") @Nullable FunctionVpcConfig vpcConfig) {
         this.architectures = architectures;
         this.arn = arn;
         this.codeSigningConfigArn = codeSigningConfigArn;

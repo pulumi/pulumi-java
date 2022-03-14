@@ -6,22 +6,22 @@ package io.pulumi.awsnative.kafkaconnect.outputs;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorCloudWatchLogsLogDelivery;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorFirehoseLogDelivery;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorS3LogDelivery;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorWorkerLogDelivery {
     private final @Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs;
     private final @Nullable ConnectorFirehoseLogDelivery firehose;
     private final @Nullable ConnectorS3LogDelivery s3;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorWorkerLogDelivery(
-        @OutputCustomType.Parameter("cloudWatchLogs") @Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs,
-        @OutputCustomType.Parameter("firehose") @Nullable ConnectorFirehoseLogDelivery firehose,
-        @OutputCustomType.Parameter("s3") @Nullable ConnectorS3LogDelivery s3) {
+        @CustomType.Parameter("cloudWatchLogs") @Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs,
+        @CustomType.Parameter("firehose") @Nullable ConnectorFirehoseLogDelivery firehose,
+        @CustomType.Parameter("s3") @Nullable ConnectorS3LogDelivery s3) {
         this.cloudWatchLogs = cloudWatchLogs;
         this.firehose = firehose;
         this.s3 = s3;

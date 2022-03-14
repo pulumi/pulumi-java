@@ -5,20 +5,20 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobColumnSelector;
 import io.pulumi.awsnative.databrew.outputs.JobStatisticsConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobColumnStatisticsConfiguration {
     private final @Nullable List<JobColumnSelector> selectors;
     private final JobStatisticsConfiguration statistics;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobColumnStatisticsConfiguration(
-        @OutputCustomType.Parameter("selectors") @Nullable List<JobColumnSelector> selectors,
-        @OutputCustomType.Parameter("statistics") JobStatisticsConfiguration statistics) {
+        @CustomType.Parameter("selectors") @Nullable List<JobColumnSelector> selectors,
+        @CustomType.Parameter("statistics") JobStatisticsConfiguration statistics) {
         this.selectors = selectors;
         this.statistics = statistics;
     }

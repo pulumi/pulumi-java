@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.HookTypeConfigArgs;
 import io.pulumi.awsnative.cloudformation.enums.HookTypeConfigConfigurationAlias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * The configuration data for the extension, in this account and region.
      * 
      */
-    @OutputExport(name="configuration", type=String.class, parameters={})
+    @Export(name="configuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> configuration;
 
     /**
@@ -36,7 +36,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * An alias by which to refer to this extension configuration data.
      * 
      */
-    @OutputExport(name="configurationAlias", type=HookTypeConfigConfigurationAlias.class, parameters={})
+    @Export(name="configurationAlias", type=HookTypeConfigConfigurationAlias.class, parameters={})
     private Output</* @Nullable */ HookTypeConfigConfigurationAlias> configurationAlias;
 
     /**
@@ -50,7 +50,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the configuration data, in this account and region.
      * 
      */
-    @OutputExport(name="configurationArn", type=String.class, parameters={})
+    @Export(name="configurationArn", type=String.class, parameters={})
     private Output<String> configurationArn;
 
     /**
@@ -64,7 +64,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    @OutputExport(name="typeArn", type=String.class, parameters={})
+    @Export(name="typeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeArn;
 
     /**
@@ -80,7 +80,7 @@ public class HookTypeConfig extends io.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    @OutputExport(name="typeName", type=String.class, parameters={})
+    @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
     /**

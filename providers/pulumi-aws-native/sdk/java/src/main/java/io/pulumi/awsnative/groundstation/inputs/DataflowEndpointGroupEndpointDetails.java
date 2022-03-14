@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupDataflowEndpoint;
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSecurityDetails;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class DataflowEndpointGroupEndpointDetails extends io.pulumi.resour
 
     public static final DataflowEndpointGroupEndpointDetails Empty = new DataflowEndpointGroupEndpointDetails();
 
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable DataflowEndpointGroupDataflowEndpoint endpoint;
 
     public Optional<DataflowEndpointGroupDataflowEndpoint> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
     }
 
-    @InputImport(name="securityDetails")
+    @Import(name="securityDetails")
       private final @Nullable DataflowEndpointGroupSecurityDetails securityDetails;
 
     public Optional<DataflowEndpointGroupSecurityDetails> getSecurityDetails() {

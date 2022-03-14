@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
 
     public static final SuiteDefinitionDeviceUnderTestArgs Empty = new SuiteDefinitionDeviceUnderTestArgs();
 
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
         return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
-    @InputImport(name="thingArn")
+    @Import(name="thingArn")
       private final @Nullable Output<String> thingArn;
 
     public Output<String> getThingArn() {

@@ -12,7 +12,7 @@ import io.pulumi.awsnative.ec2.outputs.SpotFleetLaunchSpecification;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetLaunchTemplateConfig;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetLoadBalancersConfig;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetSpotMaintenanceStrategies;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetRequestConfigData {
     private final @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy;
     private final @Nullable String context;
@@ -46,30 +46,30 @@ public final class SpotFleetRequestConfigData {
     private final @Nullable String validFrom;
     private final @Nullable String validUntil;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetRequestConfigData(
-        @OutputCustomType.Parameter("allocationStrategy") @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy,
-        @OutputCustomType.Parameter("context") @Nullable String context,
-        @OutputCustomType.Parameter("excessCapacityTerminationPolicy") @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
-        @OutputCustomType.Parameter("iamFleetRole") String iamFleetRole,
-        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior,
-        @OutputCustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
-        @OutputCustomType.Parameter("launchSpecifications") @Nullable List<SpotFleetLaunchSpecification> launchSpecifications,
-        @OutputCustomType.Parameter("launchTemplateConfigs") @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs,
-        @OutputCustomType.Parameter("loadBalancersConfig") @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig,
-        @OutputCustomType.Parameter("onDemandAllocationStrategy") @Nullable String onDemandAllocationStrategy,
-        @OutputCustomType.Parameter("onDemandMaxTotalPrice") @Nullable String onDemandMaxTotalPrice,
-        @OutputCustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
-        @OutputCustomType.Parameter("replaceUnhealthyInstances") @Nullable Boolean replaceUnhealthyInstances,
-        @OutputCustomType.Parameter("spotMaintenanceStrategies") @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies,
-        @OutputCustomType.Parameter("spotMaxTotalPrice") @Nullable String spotMaxTotalPrice,
-        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
-        @OutputCustomType.Parameter("targetCapacity") Integer targetCapacity,
-        @OutputCustomType.Parameter("targetCapacityUnitType") @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType,
-        @OutputCustomType.Parameter("terminateInstancesWithExpiration") @Nullable Boolean terminateInstancesWithExpiration,
-        @OutputCustomType.Parameter("type") @Nullable SpotFleetRequestConfigDataType type,
-        @OutputCustomType.Parameter("validFrom") @Nullable String validFrom,
-        @OutputCustomType.Parameter("validUntil") @Nullable String validUntil) {
+        @CustomType.Parameter("allocationStrategy") @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy,
+        @CustomType.Parameter("context") @Nullable String context,
+        @CustomType.Parameter("excessCapacityTerminationPolicy") @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
+        @CustomType.Parameter("iamFleetRole") String iamFleetRole,
+        @CustomType.Parameter("instanceInterruptionBehavior") @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior,
+        @CustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
+        @CustomType.Parameter("launchSpecifications") @Nullable List<SpotFleetLaunchSpecification> launchSpecifications,
+        @CustomType.Parameter("launchTemplateConfigs") @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs,
+        @CustomType.Parameter("loadBalancersConfig") @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig,
+        @CustomType.Parameter("onDemandAllocationStrategy") @Nullable String onDemandAllocationStrategy,
+        @CustomType.Parameter("onDemandMaxTotalPrice") @Nullable String onDemandMaxTotalPrice,
+        @CustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
+        @CustomType.Parameter("replaceUnhealthyInstances") @Nullable Boolean replaceUnhealthyInstances,
+        @CustomType.Parameter("spotMaintenanceStrategies") @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies,
+        @CustomType.Parameter("spotMaxTotalPrice") @Nullable String spotMaxTotalPrice,
+        @CustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @CustomType.Parameter("targetCapacity") Integer targetCapacity,
+        @CustomType.Parameter("targetCapacityUnitType") @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType,
+        @CustomType.Parameter("terminateInstancesWithExpiration") @Nullable Boolean terminateInstancesWithExpiration,
+        @CustomType.Parameter("type") @Nullable SpotFleetRequestConfigDataType type,
+        @CustomType.Parameter("validFrom") @Nullable String validFrom,
+        @CustomType.Parameter("validUntil") @Nullable String validUntil) {
         this.allocationStrategy = allocationStrategy;
         this.context = context;
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;

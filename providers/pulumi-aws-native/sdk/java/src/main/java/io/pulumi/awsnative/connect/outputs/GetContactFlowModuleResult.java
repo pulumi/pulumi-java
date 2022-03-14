@@ -6,14 +6,14 @@ package io.pulumi.awsnative.connect.outputs;
 import io.pulumi.awsnative.connect.enums.ContactFlowModuleState;
 import io.pulumi.awsnative.connect.enums.ContactFlowModuleStatus;
 import io.pulumi.awsnative.connect.outputs.ContactFlowModuleTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContactFlowModuleResult {
     /**
      * The identifier of the contact flow module (ARN).
@@ -56,16 +56,16 @@ public final class GetContactFlowModuleResult {
      */
     private final @Nullable List<ContactFlowModuleTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactFlowModuleResult(
-        @OutputCustomType.Parameter("contactFlowModuleArn") @Nullable String contactFlowModuleArn,
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("state") @Nullable ContactFlowModuleState state,
-        @OutputCustomType.Parameter("status") @Nullable ContactFlowModuleStatus status,
-        @OutputCustomType.Parameter("tags") @Nullable List<ContactFlowModuleTag> tags) {
+        @CustomType.Parameter("contactFlowModuleArn") @Nullable String contactFlowModuleArn,
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("state") @Nullable ContactFlowModuleState state,
+        @CustomType.Parameter("status") @Nullable ContactFlowModuleStatus status,
+        @CustomType.Parameter("tags") @Nullable List<ContactFlowModuleTag> tags) {
         this.contactFlowModuleArn = contactFlowModuleArn;
         this.content = content;
         this.description = description;

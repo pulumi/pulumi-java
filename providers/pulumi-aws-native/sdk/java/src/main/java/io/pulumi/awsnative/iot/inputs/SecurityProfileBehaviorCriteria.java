@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.enums.SecurityProfileBehaviorCriteriaComparisonOp
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMachineLearningDetectionConfig;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricValue;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileStatisticalThreshold;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
      * The operator that relates the thing measured (metric) to the criteria (containing a value or statisticalThreshold).
      * 
      */
-    @InputImport(name="comparisonOperator")
+    @Import(name="comparisonOperator")
       private final @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator;
 
     public Optional<SecurityProfileBehaviorCriteriaComparisonOperator> getComparisonOperator() {
@@ -37,7 +37,7 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
      * If a device is in violation of the behavior for the specified number of consecutive datapoints, an alarm occurs. If not specified, the default is 1.
      * 
      */
-    @InputImport(name="consecutiveDatapointsToAlarm")
+    @Import(name="consecutiveDatapointsToAlarm")
       private final @Nullable Integer consecutiveDatapointsToAlarm;
 
     public Optional<Integer> getConsecutiveDatapointsToAlarm() {
@@ -48,7 +48,7 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
      * If an alarm has occurred and the offending device is no longer in violation of the behavior for the specified number of consecutive datapoints, the alarm is cleared. If not specified, the default is 1.
      * 
      */
-    @InputImport(name="consecutiveDatapointsToClear")
+    @Import(name="consecutiveDatapointsToClear")
       private final @Nullable Integer consecutiveDatapointsToClear;
 
     public Optional<Integer> getConsecutiveDatapointsToClear() {
@@ -59,28 +59,28 @@ public final class SecurityProfileBehaviorCriteria extends io.pulumi.resources.I
      * Use this to specify the time duration over which the behavior is evaluated.
      * 
      */
-    @InputImport(name="durationSeconds")
+    @Import(name="durationSeconds")
       private final @Nullable Integer durationSeconds;
 
     public Optional<Integer> getDurationSeconds() {
         return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
     }
 
-    @InputImport(name="mlDetectionConfig")
+    @Import(name="mlDetectionConfig")
       private final @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig;
 
     public Optional<SecurityProfileMachineLearningDetectionConfig> getMlDetectionConfig() {
         return this.mlDetectionConfig == null ? Optional.empty() : Optional.ofNullable(this.mlDetectionConfig);
     }
 
-    @InputImport(name="statisticalThreshold")
+    @Import(name="statisticalThreshold")
       private final @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
 
     public Optional<SecurityProfileStatisticalThreshold> getStatisticalThreshold() {
         return this.statisticalThreshold == null ? Optional.empty() : Optional.ofNullable(this.statisticalThreshold);
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable SecurityProfileMetricValue value;
 
     public Optional<SecurityProfileMetricValue> getValue() {

@@ -6,14 +6,14 @@ package io.pulumi.awsnative.appflow.outputs;
 import io.pulumi.awsnative.appflow.enums.FlowTaskType;
 import io.pulumi.awsnative.appflow.outputs.FlowConnectorOperator;
 import io.pulumi.awsnative.appflow.outputs.FlowTaskPropertiesObject;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowTask {
     /**
      * Operation to be performed on provided source fields
@@ -41,13 +41,13 @@ public final class FlowTask {
      */
     private final FlowTaskType taskType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowTask(
-        @OutputCustomType.Parameter("connectorOperator") @Nullable FlowConnectorOperator connectorOperator,
-        @OutputCustomType.Parameter("destinationField") @Nullable String destinationField,
-        @OutputCustomType.Parameter("sourceFields") List<String> sourceFields,
-        @OutputCustomType.Parameter("taskProperties") @Nullable List<FlowTaskPropertiesObject> taskProperties,
-        @OutputCustomType.Parameter("taskType") FlowTaskType taskType) {
+        @CustomType.Parameter("connectorOperator") @Nullable FlowConnectorOperator connectorOperator,
+        @CustomType.Parameter("destinationField") @Nullable String destinationField,
+        @CustomType.Parameter("sourceFields") List<String> sourceFields,
+        @CustomType.Parameter("taskProperties") @Nullable List<FlowTaskPropertiesObject> taskProperties,
+        @CustomType.Parameter("taskType") FlowTaskType taskType) {
         this.connectorOperator = connectorOperator;
         this.destinationField = destinationField;
         this.sourceFields = sourceFields;

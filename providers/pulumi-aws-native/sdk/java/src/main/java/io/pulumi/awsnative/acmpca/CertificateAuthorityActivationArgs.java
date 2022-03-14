@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
      * Certificate Authority certificate that will be installed in the Certificate Authority.
      * 
      */
-    @InputImport(name="certificate", required=true)
+    @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -29,7 +29,7 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
      * Arn of the Certificate Authority.
      * 
      */
-    @InputImport(name="certificateAuthorityArn", required=true)
+    @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
 
     public Output<String> getCertificateAuthorityArn() {
@@ -40,7 +40,7 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
      * Certificate chain for the Certificate Authority certificate.
      * 
      */
-    @InputImport(name="certificateChain")
+    @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
@@ -51,7 +51,7 @@ public final class CertificateAuthorityActivationArgs extends io.pulumi.resource
      * The status of the Certificate Authority.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

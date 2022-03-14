@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.ModelBiasJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelBiasJobDefinitionEndpointInputS3InputMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,14 +25,14 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * Monitoring end time offset, e.g. PT0H
      * 
      */
-    @InputImport(name="endTimeOffset")
+    @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
 
     public Output<String> getEndTimeOffset() {
         return this.endTimeOffset == null ? Output.empty() : this.endTimeOffset;
     }
 
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -43,7 +43,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * JSONpath to locate features in JSONlines dataset
      * 
      */
-    @InputImport(name="featuresAttribute")
+    @Import(name="featuresAttribute")
       private final @Nullable Output<String> featuresAttribute;
 
     public Output<String> getFeaturesAttribute() {
@@ -54,7 +54,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * Index or JSONpath to locate predicted label(s)
      * 
      */
-    @InputImport(name="inferenceAttribute")
+    @Import(name="inferenceAttribute")
       private final @Nullable Output<String> inferenceAttribute;
 
     public Output<String> getInferenceAttribute() {
@@ -65,7 +65,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * Path to the filesystem where the endpoint data is available to the container.
      * 
      */
-    @InputImport(name="localPath", required=true)
+    @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
     public Output<String> getLocalPath() {
@@ -76,14 +76,14 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * Index or JSONpath to locate probabilities
      * 
      */
-    @InputImport(name="probabilityAttribute")
+    @Import(name="probabilityAttribute")
       private final @Nullable Output<String> probabilityAttribute;
 
     public Output<String> getProbabilityAttribute() {
         return this.probabilityAttribute == null ? Output.empty() : this.probabilityAttribute;
     }
 
-    @InputImport(name="probabilityThresholdAttribute")
+    @Import(name="probabilityThresholdAttribute")
       private final @Nullable Output<Double> probabilityThresholdAttribute;
 
     public Output<Double> getProbabilityThresholdAttribute() {
@@ -94,7 +94,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
      * 
      */
-    @InputImport(name="s3DataDistributionType")
+    @Import(name="s3DataDistributionType")
       private final @Nullable Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
     public Output<ModelBiasJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
@@ -105,7 +105,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
      * 
      */
-    @InputImport(name="s3InputMode")
+    @Import(name="s3InputMode")
       private final @Nullable Output<ModelBiasJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
     public Output<ModelBiasJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
@@ -116,7 +116,7 @@ public final class ModelBiasJobDefinitionEndpointInputArgs extends io.pulumi.res
      * Monitoring start time offset, e.g. -PT1H
      * 
      */
-    @InputImport(name="startTimeOffset")
+    @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
     public Output<String> getStartTimeOffset() {

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluencePageToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfluencePageConfiguration {
     private final @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings;
 
-    @OutputCustomType.Constructor
-    private DataSourceConfluencePageConfiguration(@OutputCustomType.Parameter("pageFieldMappings") @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
+    @CustomType.Constructor
+    private DataSourceConfluencePageConfiguration(@CustomType.Parameter("pageFieldMappings") @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
         this.pageFieldMappings = pageFieldMappings;
     }
 

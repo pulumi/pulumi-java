@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetJsonOptions {
     private final @Nullable Boolean multiLine;
 
-    @OutputCustomType.Constructor
-    private DatasetJsonOptions(@OutputCustomType.Parameter("multiLine") @Nullable Boolean multiLine) {
+    @CustomType.Constructor
+    private DatasetJsonOptions(@CustomType.Parameter("multiLine") @Nullable Boolean multiLine) {
         this.multiLine = multiLine;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceRequirementsRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,42 +16,42 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends io.pulumi.resour
 
     public static final SpotFleetLaunchTemplateOverridesArgs Empty = new SpotFleetLaunchTemplateOverridesArgs();
 
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
-    @InputImport(name="instanceRequirements")
+    @Import(name="instanceRequirements")
       private final @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
 
     public Output<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
         return this.instanceRequirements == null ? Output.empty() : this.instanceRequirements;
     }
 
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
         return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
     public Output<String> getSpotPrice() {
         return this.spotPrice == null ? Output.empty() : this.spotPrice;
     }
 
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
         return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
-    @InputImport(name="weightedCapacity")
+    @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
     public Output<Double> getWeightedCapacity() {

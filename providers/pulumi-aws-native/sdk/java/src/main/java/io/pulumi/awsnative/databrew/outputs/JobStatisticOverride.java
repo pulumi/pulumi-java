@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobParameterMap;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatisticOverride {
     private final JobParameterMap parameters;
     private final String statistic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatisticOverride(
-        @OutputCustomType.Parameter("parameters") JobParameterMap parameters,
-        @OutputCustomType.Parameter("statistic") String statistic) {
+        @CustomType.Parameter("parameters") JobParameterMap parameters,
+        @CustomType.Parameter("statistic") String statistic) {
         this.parameters = parameters;
         this.statistic = statistic;
     }

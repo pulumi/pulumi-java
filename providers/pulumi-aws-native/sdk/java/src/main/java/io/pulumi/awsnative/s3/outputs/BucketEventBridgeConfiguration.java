@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketEventBridgeConfiguration {
     /**
      * Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
@@ -15,8 +15,8 @@ public final class BucketEventBridgeConfiguration {
      */
     private final Boolean eventBridgeEnabled;
 
-    @OutputCustomType.Constructor
-    private BucketEventBridgeConfiguration(@OutputCustomType.Parameter("eventBridgeEnabled") Boolean eventBridgeEnabled) {
+    @CustomType.Constructor
+    private BucketEventBridgeConfiguration(@CustomType.Parameter("eventBridgeEnabled") Boolean eventBridgeEnabled) {
         this.eventBridgeEnabled = eventBridgeEnabled;
     }
 

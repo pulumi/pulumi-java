@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionCookiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,28 +17,28 @@ public final class DistributionForwardedValuesArgs extends io.pulumi.resources.R
 
     public static final DistributionForwardedValuesArgs Empty = new DistributionForwardedValuesArgs();
 
-    @InputImport(name="cookies")
+    @Import(name="cookies")
       private final @Nullable Output<DistributionCookiesArgs> cookies;
 
     public Output<DistributionCookiesArgs> getCookies() {
         return this.cookies == null ? Output.empty() : this.cookies;
     }
 
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
     public Output<List<String>> getHeaders() {
         return this.headers == null ? Output.empty() : this.headers;
     }
 
-    @InputImport(name="queryString", required=true)
+    @Import(name="queryString", required=true)
       private final Output<Boolean> queryString;
 
     public Output<Boolean> getQueryString() {
         return this.queryString;
     }
 
-    @InputImport(name="queryStringCacheKeys")
+    @Import(name="queryStringCacheKeys")
       private final @Nullable Output<List<String>> queryStringCacheKeys;
 
     public Output<List<String>> getQueryStringCacheKeys() {

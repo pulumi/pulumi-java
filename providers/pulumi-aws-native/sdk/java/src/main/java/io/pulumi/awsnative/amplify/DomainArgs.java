@@ -5,7 +5,7 @@ package io.pulumi.awsnative.amplify;
 
 import io.pulumi.awsnative.amplify.inputs.DomainSubDomainSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,42 +17,42 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
         return this.appId;
     }
 
-    @InputImport(name="autoSubDomainCreationPatterns")
+    @Import(name="autoSubDomainCreationPatterns")
       private final @Nullable Output<List<String>> autoSubDomainCreationPatterns;
 
     public Output<List<String>> getAutoSubDomainCreationPatterns() {
         return this.autoSubDomainCreationPatterns == null ? Output.empty() : this.autoSubDomainCreationPatterns;
     }
 
-    @InputImport(name="autoSubDomainIAMRole")
+    @Import(name="autoSubDomainIAMRole")
       private final @Nullable Output<String> autoSubDomainIAMRole;
 
     public Output<String> getAutoSubDomainIAMRole() {
         return this.autoSubDomainIAMRole == null ? Output.empty() : this.autoSubDomainIAMRole;
     }
 
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName == null ? Output.empty() : this.domainName;
     }
 
-    @InputImport(name="enableAutoSubDomain")
+    @Import(name="enableAutoSubDomain")
       private final @Nullable Output<Boolean> enableAutoSubDomain;
 
     public Output<Boolean> getEnableAutoSubDomain() {
         return this.enableAutoSubDomain == null ? Output.empty() : this.enableAutoSubDomain;
     }
 
-    @InputImport(name="subDomainSettings", required=true)
+    @Import(name="subDomainSettings", required=true)
       private final Output<List<DomainSubDomainSettingArgs>> subDomainSettings;
 
     public Output<List<DomainSubDomainSettingArgs>> getSubDomainSettings() {

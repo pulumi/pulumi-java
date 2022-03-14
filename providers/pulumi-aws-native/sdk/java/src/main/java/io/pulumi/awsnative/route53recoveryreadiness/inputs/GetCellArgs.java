@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCellArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the cell to create.
      * 
      */
-    @InputImport(name="cellName", required=true)
+    @Import(name="cellName", required=true)
       private final String cellName;
 
     public String getCellName() {

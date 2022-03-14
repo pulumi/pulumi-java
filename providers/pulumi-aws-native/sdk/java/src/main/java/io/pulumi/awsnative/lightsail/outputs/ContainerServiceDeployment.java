@@ -5,13 +5,13 @@ package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.Container;
 import io.pulumi.awsnative.lightsail.outputs.ContainerPublicEndpoint;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerServiceDeployment {
     /**
      * An object that describes the configuration for the containers of the deployment.
@@ -24,10 +24,10 @@ public final class ContainerServiceDeployment {
      */
     private final @Nullable ContainerPublicEndpoint publicEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerServiceDeployment(
-        @OutputCustomType.Parameter("containers") @Nullable List<Container> containers,
-        @OutputCustomType.Parameter("publicEndpoint") @Nullable ContainerPublicEndpoint publicEndpoint) {
+        @CustomType.Parameter("containers") @Nullable List<Container> containers,
+        @CustomType.Parameter("publicEndpoint") @Nullable ContainerPublicEndpoint publicEndpoint) {
         this.containers = containers;
         this.publicEndpoint = publicEndpoint;
     }

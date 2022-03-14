@@ -6,23 +6,23 @@ package io.pulumi.awsnative.databrew.outputs;
 import io.pulumi.awsnative.databrew.outputs.DatasetFilesLimit;
 import io.pulumi.awsnative.databrew.outputs.DatasetFilterExpression;
 import io.pulumi.awsnative.databrew.outputs.DatasetPathParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetPathOptions {
     private final @Nullable DatasetFilesLimit filesLimit;
     private final @Nullable DatasetFilterExpression lastModifiedDateCondition;
     private final @Nullable List<DatasetPathParameter> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetPathOptions(
-        @OutputCustomType.Parameter("filesLimit") @Nullable DatasetFilesLimit filesLimit,
-        @OutputCustomType.Parameter("lastModifiedDateCondition") @Nullable DatasetFilterExpression lastModifiedDateCondition,
-        @OutputCustomType.Parameter("parameters") @Nullable List<DatasetPathParameter> parameters) {
+        @CustomType.Parameter("filesLimit") @Nullable DatasetFilesLimit filesLimit,
+        @CustomType.Parameter("lastModifiedDateCondition") @Nullable DatasetFilterExpression lastModifiedDateCondition,
+        @CustomType.Parameter("parameters") @Nullable List<DatasetPathParameter> parameters) {
         this.filesLimit = filesLimit;
         this.lastModifiedDateCondition = lastModifiedDateCondition;
         this.parameters = parameters;

@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.wisdom.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KnowledgeBaseAppIntegrationsConfiguration {
     private final String appIntegrationArn;
     private final List<String> objectFields;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KnowledgeBaseAppIntegrationsConfiguration(
-        @OutputCustomType.Parameter("appIntegrationArn") String appIntegrationArn,
-        @OutputCustomType.Parameter("objectFields") List<String> objectFields) {
+        @CustomType.Parameter("appIntegrationArn") String appIntegrationArn,
+        @CustomType.Parameter("objectFields") List<String> objectFields) {
         this.appIntegrationArn = appIntegrationArn;
         this.objectFields = objectFields;
     }

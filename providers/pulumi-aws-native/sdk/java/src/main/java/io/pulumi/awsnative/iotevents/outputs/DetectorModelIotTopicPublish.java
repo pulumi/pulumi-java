@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelIotTopicPublish {
     /**
      * The MQTT topic of the message. You can use a string expression that includes variables (`$variable.<variable-name>`) and input values (`$input.<input-name>.<path-to-datum>`) as the topic string.
@@ -19,10 +19,10 @@ public final class DetectorModelIotTopicPublish {
     private final String mqttTopic;
     private final @Nullable DetectorModelPayload payload;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelIotTopicPublish(
-        @OutputCustomType.Parameter("mqttTopic") String mqttTopic,
-        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload) {
+        @CustomType.Parameter("mqttTopic") String mqttTopic,
+        @CustomType.Parameter("payload") @Nullable DetectorModelPayload payload) {
         this.mqttTopic = mqttTopic;
         this.payload = payload;
     }

@@ -4,10 +4,10 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketReplicaModificationsStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicaModifications {
     /**
      * Specifies whether Amazon S3 replicates modifications on replicas.
@@ -15,8 +15,8 @@ public final class BucketReplicaModifications {
      */
     private final BucketReplicaModificationsStatus status;
 
-    @OutputCustomType.Constructor
-    private BucketReplicaModifications(@OutputCustomType.Parameter("status") BucketReplicaModificationsStatus status) {
+    @CustomType.Constructor
+    private BucketReplicaModifications(@CustomType.Parameter("status") BucketReplicaModificationsStatus status) {
         this.status = status;
     }
 

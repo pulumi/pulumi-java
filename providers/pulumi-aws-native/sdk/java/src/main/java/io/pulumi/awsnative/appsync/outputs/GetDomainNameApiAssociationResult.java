@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainNameApiAssociationResult {
     private final @Nullable String apiAssociationIdentifier;
     private final @Nullable String apiId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainNameApiAssociationResult(
-        @OutputCustomType.Parameter("apiAssociationIdentifier") @Nullable String apiAssociationIdentifier,
-        @OutputCustomType.Parameter("apiId") @Nullable String apiId) {
+        @CustomType.Parameter("apiAssociationIdentifier") @Nullable String apiAssociationIdentifier,
+        @CustomType.Parameter("apiId") @Nullable String apiId) {
         this.apiAssociationIdentifier = apiAssociationIdentifier;
         this.apiId = apiId;
     }

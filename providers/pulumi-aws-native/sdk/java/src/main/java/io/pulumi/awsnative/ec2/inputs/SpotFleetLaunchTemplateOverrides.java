@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceRequirementsRequest;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,42 +16,42 @@ public final class SpotFleetLaunchTemplateOverrides extends io.pulumi.resources.
 
     public static final SpotFleetLaunchTemplateOverrides Empty = new SpotFleetLaunchTemplateOverrides();
 
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
-    @InputImport(name="instanceRequirements")
+    @Import(name="instanceRequirements")
       private final @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
 
     public Optional<SpotFleetInstanceRequirementsRequest> getInstanceRequirements() {
         return this.instanceRequirements == null ? Optional.empty() : Optional.ofNullable(this.instanceRequirements);
     }
 
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable String spotPrice;
 
     public Optional<String> getSpotPrice() {
         return this.spotPrice == null ? Optional.empty() : Optional.ofNullable(this.spotPrice);
     }
 
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
-    @InputImport(name="weightedCapacity")
+    @Import(name="weightedCapacity")
       private final @Nullable Double weightedCapacity;
 
     public Optional<Double> getWeightedCapacity() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
 
     public static final TaskDefinitionRepositoryCredentialsArgs Empty = new TaskDefinitionRepositoryCredentialsArgs();
 
-    @InputImport(name="credentialsParameter")
+    @Import(name="credentialsParameter")
       private final @Nullable Output<String> credentialsParameter;
 
     public Output<String> getCredentialsParameter() {

@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetCsvOptions {
     private final @Nullable String delimiter;
     private final @Nullable Boolean headerRow;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetCsvOptions(
-        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
-        @OutputCustomType.Parameter("headerRow") @Nullable Boolean headerRow) {
+        @CustomType.Parameter("delimiter") @Nullable String delimiter,
+        @CustomType.Parameter("headerRow") @Nullable Boolean headerRow) {
         this.delimiter = delimiter;
         this.headerRow = headerRow;
     }

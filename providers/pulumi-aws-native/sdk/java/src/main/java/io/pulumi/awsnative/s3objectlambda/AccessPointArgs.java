@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3objectlambda;
 
 import io.pulumi.awsnative.s3objectlambda.inputs.AccessPointObjectLambdaConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The name you want to assign to this Object lambda Access Point.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
      * 
      */
-    @InputImport(name="objectLambdaConfiguration", required=true)
+    @Import(name="objectLambdaConfiguration", required=true)
       private final Output<AccessPointObjectLambdaConfigurationArgs> objectLambdaConfiguration;
 
     public Output<AccessPointObjectLambdaConfigurationArgs> getObjectLambdaConfiguration() {

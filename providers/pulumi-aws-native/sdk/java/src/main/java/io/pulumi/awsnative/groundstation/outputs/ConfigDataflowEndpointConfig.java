@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigDataflowEndpointConfig {
     private final @Nullable String dataflowEndpointName;
     private final @Nullable String dataflowEndpointRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigDataflowEndpointConfig(
-        @OutputCustomType.Parameter("dataflowEndpointName") @Nullable String dataflowEndpointName,
-        @OutputCustomType.Parameter("dataflowEndpointRegion") @Nullable String dataflowEndpointRegion) {
+        @CustomType.Parameter("dataflowEndpointName") @Nullable String dataflowEndpointName,
+        @CustomType.Parameter("dataflowEndpointRegion") @Nullable String dataflowEndpointRegion) {
         this.dataflowEndpointName = dataflowEndpointName;
         this.dataflowEndpointRegion = dataflowEndpointRegion;
     }

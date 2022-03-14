@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.RegexPatternSetArgs;
 import io.pulumi.awsnative.wafv2.enums.RegexPatternSetScope;
 import io.pulumi.awsnative.wafv2.outputs.RegexPatternSetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * ARN of the WAF entity.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * Description of the entity.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * Name of the RegexPatternSet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -62,7 +62,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="regularExpressionList", type=List.class, parameters={String.class})
+    @Export(name="regularExpressionList", type=List.class, parameters={String.class})
     private Output<List<String>> regularExpressionList;
 
     public Output<List<String>> getRegularExpressionList() {
@@ -72,7 +72,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
      * 
      */
-    @OutputExport(name="scope", type=RegexPatternSetScope.class, parameters={})
+    @Export(name="scope", type=RegexPatternSetScope.class, parameters={})
     private Output<RegexPatternSetScope> scope;
 
     /**
@@ -82,7 +82,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
     public Output<RegexPatternSetScope> getScope() {
         return this.scope;
     }
-    @OutputExport(name="tags", type=List.class, parameters={RegexPatternSetTag.class})
+    @Export(name="tags", type=List.class, parameters={RegexPatternSetTag.class})
     private Output</* @Nullable */ List<RegexPatternSetTag>> tags;
 
     public Output</* @Nullable */ List<RegexPatternSetTag>> getTags() {

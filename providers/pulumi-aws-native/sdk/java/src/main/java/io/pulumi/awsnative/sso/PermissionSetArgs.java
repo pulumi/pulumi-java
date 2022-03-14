@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sso;
 
 import io.pulumi.awsnative.sso.inputs.PermissionSetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * The permission set description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * The inline policy to put in permission set.
      * 
      */
-    @InputImport(name="inlinePolicy")
+    @Import(name="inlinePolicy")
       private final @Nullable Output<Object> inlinePolicy;
 
     public Output<Object> getInlinePolicy() {
@@ -43,14 +43,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * The sso instance arn that the permission set is owned.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
-    @InputImport(name="managedPolicies")
+    @Import(name="managedPolicies")
       private final @Nullable Output<List<String>> managedPolicies;
 
     public Output<List<String>> getManagedPolicies() {
@@ -61,7 +61,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name you want to assign to this permission set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * The relay state URL that redirect links to any service in the AWS Management Console.
      * 
      */
-    @InputImport(name="relayStateType")
+    @Import(name="relayStateType")
       private final @Nullable Output<String> relayStateType;
 
     public Output<String> getRelayStateType() {
@@ -83,14 +83,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
      * The length of time that a user can be signed in to an AWS account.
      * 
      */
-    @InputImport(name="sessionDuration")
+    @Import(name="sessionDuration")
       private final @Nullable Output<String> sessionDuration;
 
     public Output<String> getSessionDuration() {
         return this.sessionDuration == null ? Output.empty() : this.sessionDuration;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<PermissionSetTagArgs>> tags;
 
     public Output<List<PermissionSetTagArgs>> getTags() {

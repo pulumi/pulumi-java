@@ -9,7 +9,7 @@ import io.pulumi.awsnative.amplify.inputs.AppCustomRuleArgs;
 import io.pulumi.awsnative.amplify.inputs.AppEnvironmentVariableArgs;
 import io.pulumi.awsnative.amplify.inputs.AppTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,98 +21,98 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppArgs Empty = new AppArgs();
 
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
         return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
-    @InputImport(name="autoBranchCreationConfig")
+    @Import(name="autoBranchCreationConfig")
       private final @Nullable Output<AppAutoBranchCreationConfigArgs> autoBranchCreationConfig;
 
     public Output<AppAutoBranchCreationConfigArgs> getAutoBranchCreationConfig() {
         return this.autoBranchCreationConfig == null ? Output.empty() : this.autoBranchCreationConfig;
     }
 
-    @InputImport(name="basicAuthConfig")
+    @Import(name="basicAuthConfig")
       private final @Nullable Output<AppBasicAuthConfigArgs> basicAuthConfig;
 
     public Output<AppBasicAuthConfigArgs> getBasicAuthConfig() {
         return this.basicAuthConfig == null ? Output.empty() : this.basicAuthConfig;
     }
 
-    @InputImport(name="buildSpec")
+    @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
     public Output<String> getBuildSpec() {
         return this.buildSpec == null ? Output.empty() : this.buildSpec;
     }
 
-    @InputImport(name="customHeaders")
+    @Import(name="customHeaders")
       private final @Nullable Output<String> customHeaders;
 
     public Output<String> getCustomHeaders() {
         return this.customHeaders == null ? Output.empty() : this.customHeaders;
     }
 
-    @InputImport(name="customRules")
+    @Import(name="customRules")
       private final @Nullable Output<List<AppCustomRuleArgs>> customRules;
 
     public Output<List<AppCustomRuleArgs>> getCustomRules() {
         return this.customRules == null ? Output.empty() : this.customRules;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="enableBranchAutoDeletion")
+    @Import(name="enableBranchAutoDeletion")
       private final @Nullable Output<Boolean> enableBranchAutoDeletion;
 
     public Output<Boolean> getEnableBranchAutoDeletion() {
         return this.enableBranchAutoDeletion == null ? Output.empty() : this.enableBranchAutoDeletion;
     }
 
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<List<AppEnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<AppEnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
-    @InputImport(name="iAMServiceRole")
+    @Import(name="iAMServiceRole")
       private final @Nullable Output<String> iAMServiceRole;
 
     public Output<String> getIAMServiceRole() {
         return this.iAMServiceRole == null ? Output.empty() : this.iAMServiceRole;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="oauthToken")
+    @Import(name="oauthToken")
       private final @Nullable Output<String> oauthToken;
 
     public Output<String> getOauthToken() {
         return this.oauthToken == null ? Output.empty() : this.oauthToken;
     }
 
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {
         return this.repository == null ? Output.empty() : this.repository;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AppTagArgs>> tags;
 
     public Output<List<AppTagArgs>> getTags() {

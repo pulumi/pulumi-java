@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.athena.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNamedQueryResult {
     /**
      * The unique ID of the query.
@@ -17,8 +17,8 @@ public final class GetNamedQueryResult {
      */
     private final @Nullable String namedQueryId;
 
-    @OutputCustomType.Constructor
-    private GetNamedQueryResult(@OutputCustomType.Parameter("namedQueryId") @Nullable String namedQueryId) {
+    @CustomType.Constructor
+    private GetNamedQueryResult(@CustomType.Parameter("namedQueryId") @Nullable String namedQueryId) {
         this.namedQueryId = namedQueryId;
     }
 

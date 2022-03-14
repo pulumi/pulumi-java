@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeFont {
     private final @Nullable String fontFamily;
 
-    @OutputCustomType.Constructor
-    private ThemeFont(@OutputCustomType.Parameter("fontFamily") @Nullable String fontFamily) {
+    @CustomType.Constructor
+    private ThemeFont(@CustomType.Parameter("fontFamily") @Nullable String fontFamily) {
         this.fontFamily = fontFamily;
     }
 

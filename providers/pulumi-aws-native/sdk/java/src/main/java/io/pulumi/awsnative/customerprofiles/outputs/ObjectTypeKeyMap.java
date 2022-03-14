@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeKey;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectTypeKeyMap {
     private final @Nullable String name;
     private final @Nullable List<ObjectTypeKey> objectTypeKeyList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectTypeKeyMap(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("objectTypeKeyList") @Nullable List<ObjectTypeKey> objectTypeKeyList) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("objectTypeKeyList") @Nullable List<ObjectTypeKey> objectTypeKeyList) {
         this.name = name;
         this.objectTypeKeyList = objectTypeKeyList;
     }

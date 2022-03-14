@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,17 +12,17 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetExcelOptions {
     private final @Nullable Boolean headerRow;
     private final @Nullable List<Integer> sheetIndexes;
     private final @Nullable List<String> sheetNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetExcelOptions(
-        @OutputCustomType.Parameter("headerRow") @Nullable Boolean headerRow,
-        @OutputCustomType.Parameter("sheetIndexes") @Nullable List<Integer> sheetIndexes,
-        @OutputCustomType.Parameter("sheetNames") @Nullable List<String> sheetNames) {
+        @CustomType.Parameter("headerRow") @Nullable Boolean headerRow,
+        @CustomType.Parameter("sheetIndexes") @Nullable List<Integer> sheetIndexes,
+        @CustomType.Parameter("sheetNames") @Nullable List<String> sheetNames) {
         this.headerRow = headerRow;
         this.sheetIndexes = sheetIndexes;
         this.sheetNames = sheetNames;

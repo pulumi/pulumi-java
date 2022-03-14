@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) of the custom plugin to use.
      * 
      */
-    @InputImport(name="customPluginArn", required=true)
+    @Import(name="customPluginArn", required=true)
       private final Output<String> customPluginArn;
 
     public Output<String> getCustomPluginArn() {
@@ -33,7 +33,7 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
      * The revision of the custom plugin to use.
      * 
      */
-    @InputImport(name="revision", required=true)
+    @Import(name="revision", required=true)
       private final Output<Integer> revision;
 
     public Output<Integer> getRevision() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetFaqArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFaqArgs Empty = new GetFaqArgs();
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -23,7 +23,7 @@ public final class GetFaqArgs extends io.pulumi.resources.InvokeArgs {
      * Index ID
      * 
      */
-    @InputImport(name="indexId", required=true)
+    @Import(name="indexId", required=true)
       private final String indexId;
 
     public String getIndexId() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
      * Specifies the S3 bucket that contains the file being copied.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -33,7 +33,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
      * The name assigned to the file when it was created in S3. You use the object key to retrieve the object.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {

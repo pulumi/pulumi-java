@@ -5,21 +5,21 @@ package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.CapacityProviderAutoScalingGroupProvider;
 import io.pulumi.awsnative.ecs.outputs.CapacityProviderTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCapacityProviderResult {
     private final @Nullable CapacityProviderAutoScalingGroupProvider autoScalingGroupProvider;
     private final @Nullable List<CapacityProviderTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCapacityProviderResult(
-        @OutputCustomType.Parameter("autoScalingGroupProvider") @Nullable CapacityProviderAutoScalingGroupProvider autoScalingGroupProvider,
-        @OutputCustomType.Parameter("tags") @Nullable List<CapacityProviderTag> tags) {
+        @CustomType.Parameter("autoScalingGroupProvider") @Nullable CapacityProviderAutoScalingGroupProvider autoScalingGroupProvider,
+        @CustomType.Parameter("tags") @Nullable List<CapacityProviderTag> tags) {
         this.autoScalingGroupProvider = autoScalingGroupProvider;
         this.tags = tags;
     }

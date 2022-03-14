@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketServerSideEncryptionByDefault;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketServerSideEncryptionRule {
     /**
      * Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using KMS (SSE-KMS) for new objects in the bucket. Existing objects are not affected. Setting the BucketKeyEnabled element to true causes Amazon S3 to use an S3 Bucket Key. By default, S3 Bucket Key is not enabled.
@@ -19,10 +19,10 @@ public final class BucketServerSideEncryptionRule {
     private final @Nullable Boolean bucketKeyEnabled;
     private final @Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketServerSideEncryptionRule(
-        @OutputCustomType.Parameter("bucketKeyEnabled") @Nullable Boolean bucketKeyEnabled,
-        @OutputCustomType.Parameter("serverSideEncryptionByDefault") @Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault) {
+        @CustomType.Parameter("bucketKeyEnabled") @Nullable Boolean bucketKeyEnabled,
+        @CustomType.Parameter("serverSideEncryptionByDefault") @Nullable BucketServerSideEncryptionByDefault serverSideEncryptionByDefault) {
         this.bucketKeyEnabled = bucketKeyEnabled;
         this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
     }

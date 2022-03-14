@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kms;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.kms.AliasArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
      * 
      */
-    @OutputExport(name="aliasName", type=String.class, parameters={})
+    @Export(name="aliasName", type=String.class, parameters={})
     private Output<String> aliasName;
 
     /**
@@ -35,7 +35,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Identifies the CMK to which the alias refers. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. You cannot specify another alias. For help finding the key ID and ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
      * 
      */
-    @OutputExport(name="targetKeyId", type=String.class, parameters={})
+    @Export(name="targetKeyId", type=String.class, parameters={})
     private Output<String> targetKeyId;
 
     /**

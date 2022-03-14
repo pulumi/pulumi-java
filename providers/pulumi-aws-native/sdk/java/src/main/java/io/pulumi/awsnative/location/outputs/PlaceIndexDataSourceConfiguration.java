@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.location.outputs;
 
 import io.pulumi.awsnative.location.enums.PlaceIndexIntendedUse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlaceIndexDataSourceConfiguration {
     private final @Nullable PlaceIndexIntendedUse intendedUse;
 
-    @OutputCustomType.Constructor
-    private PlaceIndexDataSourceConfiguration(@OutputCustomType.Parameter("intendedUse") @Nullable PlaceIndexIntendedUse intendedUse) {
+    @CustomType.Constructor
+    private PlaceIndexDataSourceConfiguration(@CustomType.Parameter("intendedUse") @Nullable PlaceIndexIntendedUse intendedUse) {
         this.intendedUse = intendedUse;
     }
 

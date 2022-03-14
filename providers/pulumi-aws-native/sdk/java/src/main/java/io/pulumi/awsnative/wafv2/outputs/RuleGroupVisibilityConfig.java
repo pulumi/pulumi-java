@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupVisibilityConfig {
     private final Boolean cloudWatchMetricsEnabled;
     private final String metricName;
     private final Boolean sampledRequestsEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupVisibilityConfig(
-        @OutputCustomType.Parameter("cloudWatchMetricsEnabled") Boolean cloudWatchMetricsEnabled,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("sampledRequestsEnabled") Boolean sampledRequestsEnabled) {
+        @CustomType.Parameter("cloudWatchMetricsEnabled") Boolean cloudWatchMetricsEnabled,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("sampledRequestsEnabled") Boolean sampledRequestsEnabled) {
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         this.metricName = metricName;
         this.sampledRequestsEnabled = sampledRequestsEnabled;

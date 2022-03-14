@@ -7,7 +7,7 @@ import io.pulumi.awsnative.datasync.enums.LocationHDFSAuthenticationType;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSNameNode;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSQopConfiguration;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationHDFSResult {
     /**
      * ARN(s) of the agent(s) to use for an HDFS location.
@@ -74,20 +74,20 @@ public final class GetLocationHDFSResult {
      */
     private final @Nullable List<LocationHDFSTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationHDFSResult(
-        @OutputCustomType.Parameter("agentArns") @Nullable List<String> agentArns,
-        @OutputCustomType.Parameter("authenticationType") @Nullable LocationHDFSAuthenticationType authenticationType,
-        @OutputCustomType.Parameter("blockSize") @Nullable Integer blockSize,
-        @OutputCustomType.Parameter("kerberosPrincipal") @Nullable String kerberosPrincipal,
-        @OutputCustomType.Parameter("kmsKeyProviderUri") @Nullable String kmsKeyProviderUri,
-        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
-        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
-        @OutputCustomType.Parameter("nameNodes") @Nullable List<LocationHDFSNameNode> nameNodes,
-        @OutputCustomType.Parameter("qopConfiguration") @Nullable LocationHDFSQopConfiguration qopConfiguration,
-        @OutputCustomType.Parameter("replicationFactor") @Nullable Integer replicationFactor,
-        @OutputCustomType.Parameter("simpleUser") @Nullable String simpleUser,
-        @OutputCustomType.Parameter("tags") @Nullable List<LocationHDFSTag> tags) {
+        @CustomType.Parameter("agentArns") @Nullable List<String> agentArns,
+        @CustomType.Parameter("authenticationType") @Nullable LocationHDFSAuthenticationType authenticationType,
+        @CustomType.Parameter("blockSize") @Nullable Integer blockSize,
+        @CustomType.Parameter("kerberosPrincipal") @Nullable String kerberosPrincipal,
+        @CustomType.Parameter("kmsKeyProviderUri") @Nullable String kmsKeyProviderUri,
+        @CustomType.Parameter("locationArn") @Nullable String locationArn,
+        @CustomType.Parameter("locationUri") @Nullable String locationUri,
+        @CustomType.Parameter("nameNodes") @Nullable List<LocationHDFSNameNode> nameNodes,
+        @CustomType.Parameter("qopConfiguration") @Nullable LocationHDFSQopConfiguration qopConfiguration,
+        @CustomType.Parameter("replicationFactor") @Nullable Integer replicationFactor,
+        @CustomType.Parameter("simpleUser") @Nullable String simpleUser,
+        @CustomType.Parameter("tags") @Nullable List<LocationHDFSTag> tags) {
         this.agentArns = agentArns;
         this.authenticationType = authenticationType;
         this.blockSize = blockSize;

@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionVolumeFrom {
     private final @Nullable Boolean readOnly;
     private final @Nullable String sourceContainer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionVolumeFrom(
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("sourceContainer") @Nullable String sourceContainer) {
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("sourceContainer") @Nullable String sourceContainer) {
         this.readOnly = readOnly;
         this.sourceContainer = sourceContainer;
     }

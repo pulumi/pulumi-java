@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverDNSSECConfigValidationStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverDNSSECConfigResult {
     /**
      * Id
@@ -28,11 +28,11 @@ public final class GetResolverDNSSECConfigResult {
      */
     private final @Nullable ResolverDNSSECConfigValidationStatus validationStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResolverDNSSECConfigResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
-        @OutputCustomType.Parameter("validationStatus") @Nullable ResolverDNSSECConfigValidationStatus validationStatus) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ownerId") @Nullable String ownerId,
+        @CustomType.Parameter("validationStatus") @Nullable ResolverDNSSECConfigValidationStatus validationStatus) {
         this.id = id;
         this.ownerId = ownerId;
         this.validationStatus = validationStatus;

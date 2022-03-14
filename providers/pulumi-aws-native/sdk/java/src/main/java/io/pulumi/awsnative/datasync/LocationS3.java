@@ -9,7 +9,7 @@ import io.pulumi.awsnative.datasync.enums.LocationS3S3StorageClass;
 import io.pulumi.awsnative.datasync.outputs.LocationS3S3Config;
 import io.pulumi.awsnative.datasync.outputs.LocationS3Tag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
      * 
      */
-    @OutputExport(name="locationArn", type=String.class, parameters={})
+    @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
@@ -41,7 +41,7 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
      * The URL of the S3 location that was described.
      * 
      */
-    @OutputExport(name="locationUri", type=String.class, parameters={})
+    @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
@@ -55,7 +55,7 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket.
      * 
      */
-    @OutputExport(name="s3BucketArn", type=String.class, parameters={})
+    @Export(name="s3BucketArn", type=String.class, parameters={})
     private Output<String> s3BucketArn;
 
     /**
@@ -65,7 +65,7 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
     public Output<String> getS3BucketArn() {
         return this.s3BucketArn;
     }
-    @OutputExport(name="s3Config", type=LocationS3S3Config.class, parameters={})
+    @Export(name="s3Config", type=LocationS3S3Config.class, parameters={})
     private Output<LocationS3S3Config> s3Config;
 
     public Output<LocationS3S3Config> getS3Config() {
@@ -75,7 +75,7 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
      * The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
      * 
      */
-    @OutputExport(name="s3StorageClass", type=LocationS3S3StorageClass.class, parameters={})
+    @Export(name="s3StorageClass", type=LocationS3S3StorageClass.class, parameters={})
     private Output</* @Nullable */ LocationS3S3StorageClass> s3StorageClass;
 
     /**
@@ -89,7 +89,7 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
      * A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
@@ -103,7 +103,7 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LocationS3Tag.class})
+    @Export(name="tags", type=List.class, parameters={LocationS3Tag.class})
     private Output</* @Nullable */ List<LocationS3Tag>> tags;
 
     /**

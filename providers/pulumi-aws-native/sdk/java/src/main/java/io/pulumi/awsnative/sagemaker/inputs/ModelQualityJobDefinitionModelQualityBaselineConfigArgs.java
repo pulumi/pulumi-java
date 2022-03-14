@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionConstraintsResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfigArgs exten
 
     public static final ModelQualityJobDefinitionModelQualityBaselineConfigArgs Empty = new ModelQualityJobDefinitionModelQualityBaselineConfigArgs();
 
-    @InputImport(name="baseliningJobName")
+    @Import(name="baseliningJobName")
       private final @Nullable Output<String> baseliningJobName;
 
     public Output<String> getBaseliningJobName() {
         return this.baseliningJobName == null ? Output.empty() : this.baseliningJobName;
     }
 
-    @InputImport(name="constraintsResource")
+    @Import(name="constraintsResource")
       private final @Nullable Output<ModelQualityJobDefinitionConstraintsResourceArgs> constraintsResource;
 
     public Output<ModelQualityJobDefinitionConstraintsResourceArgs> getConstraintsResource() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class DataSourceOracleParameters extends io.pulumi.resources.Invoke
 
     public static final DataSourceOracleParameters Empty = new DataSourceOracleParameters();
 
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final String database;
 
     public String getDatabase() {
         return this.database;
     }
 
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
         return this.host;
     }
 
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Double port;
 
     public Double getPort() {

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.apigateway.outputs.StageCanarySetting;
 import io.pulumi.awsnative.apigateway.outputs.StageMethodSetting;
 import io.pulumi.awsnative.apigateway.outputs.StageTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -28,7 +28,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Specifies settings for logging access in this stage.
      * 
      */
-    @OutputExport(name="accessLogSetting", type=StageAccessLogSetting.class, parameters={})
+    @Export(name="accessLogSetting", type=StageAccessLogSetting.class, parameters={})
     private Output</* @Nullable */ StageAccessLogSetting> accessLogSetting;
 
     /**
@@ -42,7 +42,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Indicates whether cache clustering is enabled for the stage.
      * 
      */
-    @OutputExport(name="cacheClusterEnabled", type=Boolean.class, parameters={})
+    @Export(name="cacheClusterEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cacheClusterEnabled;
 
     /**
@@ -56,7 +56,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The stage's cache cluster size.
      * 
      */
-    @OutputExport(name="cacheClusterSize", type=String.class, parameters={})
+    @Export(name="cacheClusterSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> cacheClusterSize;
 
     /**
@@ -70,7 +70,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Specifies settings for the canary deployment in this stage.
      * 
      */
-    @OutputExport(name="canarySetting", type=StageCanarySetting.class, parameters={})
+    @Export(name="canarySetting", type=StageCanarySetting.class, parameters={})
     private Output</* @Nullable */ StageCanarySetting> canarySetting;
 
     /**
@@ -84,7 +84,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
      * 
      */
-    @OutputExport(name="clientCertificateId", type=String.class, parameters={})
+    @Export(name="clientCertificateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientCertificateId;
 
     /**
@@ -98,7 +98,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
      * 
      */
-    @OutputExport(name="deploymentId", type=String.class, parameters={})
+    @Export(name="deploymentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> deploymentId;
 
     /**
@@ -112,7 +112,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * A description of the stage.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -126,7 +126,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The version ID of the API documentation snapshot.
      * 
      */
-    @OutputExport(name="documentationVersion", type=String.class, parameters={})
+    @Export(name="documentationVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentationVersion;
 
     /**
@@ -140,7 +140,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Settings for all methods in the stage.
      * 
      */
-    @OutputExport(name="methodSettings", type=List.class, parameters={StageMethodSetting.class})
+    @Export(name="methodSettings", type=List.class, parameters={StageMethodSetting.class})
     private Output</* @Nullable */ List<StageMethodSetting>> methodSettings;
 
     /**
@@ -154,7 +154,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The ID of the RestApi resource that you're deploying with this stage.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
@@ -168,7 +168,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
      * 
      */
-    @OutputExport(name="stageName", type=String.class, parameters={})
+    @Export(name="stageName", type=String.class, parameters={})
     private Output</* @Nullable */ String> stageName;
 
     /**
@@ -182,7 +182,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * An array of arbitrary tags (key-value pairs) to associate with the stage.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={StageTag.class})
+    @Export(name="tags", type=List.class, parameters={StageTag.class})
     private Output</* @Nullable */ List<StageTag>> tags;
 
     /**
@@ -196,7 +196,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Specifies whether active X-Ray tracing is enabled for this stage.
      * 
      */
-    @OutputExport(name="tracingEnabled", type=Boolean.class, parameters={})
+    @Export(name="tracingEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> tracingEnabled;
 
     /**
@@ -210,7 +210,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
      * 
      */
-    @OutputExport(name="variables", type=Object.class, parameters={})
+    @Export(name="variables", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> variables;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,84 +17,84 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransitGatewayArgs Empty = new TransitGatewayArgs();
 
-    @InputImport(name="amazonSideAsn")
+    @Import(name="amazonSideAsn")
       private final @Nullable Output<Integer> amazonSideAsn;
 
     public Output<Integer> getAmazonSideAsn() {
         return this.amazonSideAsn == null ? Output.empty() : this.amazonSideAsn;
     }
 
-    @InputImport(name="associationDefaultRouteTableId")
+    @Import(name="associationDefaultRouteTableId")
       private final @Nullable Output<String> associationDefaultRouteTableId;
 
     public Output<String> getAssociationDefaultRouteTableId() {
         return this.associationDefaultRouteTableId == null ? Output.empty() : this.associationDefaultRouteTableId;
     }
 
-    @InputImport(name="autoAcceptSharedAttachments")
+    @Import(name="autoAcceptSharedAttachments")
       private final @Nullable Output<String> autoAcceptSharedAttachments;
 
     public Output<String> getAutoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments == null ? Output.empty() : this.autoAcceptSharedAttachments;
     }
 
-    @InputImport(name="defaultRouteTableAssociation")
+    @Import(name="defaultRouteTableAssociation")
       private final @Nullable Output<String> defaultRouteTableAssociation;
 
     public Output<String> getDefaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation == null ? Output.empty() : this.defaultRouteTableAssociation;
     }
 
-    @InputImport(name="defaultRouteTablePropagation")
+    @Import(name="defaultRouteTablePropagation")
       private final @Nullable Output<String> defaultRouteTablePropagation;
 
     public Output<String> getDefaultRouteTablePropagation() {
         return this.defaultRouteTablePropagation == null ? Output.empty() : this.defaultRouteTablePropagation;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="dnsSupport")
+    @Import(name="dnsSupport")
       private final @Nullable Output<String> dnsSupport;
 
     public Output<String> getDnsSupport() {
         return this.dnsSupport == null ? Output.empty() : this.dnsSupport;
     }
 
-    @InputImport(name="multicastSupport")
+    @Import(name="multicastSupport")
       private final @Nullable Output<String> multicastSupport;
 
     public Output<String> getMulticastSupport() {
         return this.multicastSupport == null ? Output.empty() : this.multicastSupport;
     }
 
-    @InputImport(name="propagationDefaultRouteTableId")
+    @Import(name="propagationDefaultRouteTableId")
       private final @Nullable Output<String> propagationDefaultRouteTableId;
 
     public Output<String> getPropagationDefaultRouteTableId() {
         return this.propagationDefaultRouteTableId == null ? Output.empty() : this.propagationDefaultRouteTableId;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayTagArgs>> tags;
 
     public Output<List<TransitGatewayTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="transitGatewayCidrBlocks")
+    @Import(name="transitGatewayCidrBlocks")
       private final @Nullable Output<List<String>> transitGatewayCidrBlocks;
 
     public Output<List<String>> getTransitGatewayCidrBlocks() {
         return this.transitGatewayCidrBlocks == null ? Output.empty() : this.transitGatewayCidrBlocks;
     }
 
-    @InputImport(name="vpnEcmpSupport")
+    @Import(name="vpnEcmpSupport")
       private final @Nullable Output<String> vpnEcmpSupport;
 
     public Output<String> getVpnEcmpSupport() {

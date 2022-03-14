@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetResourceArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource set to create.
      * 
      */
-    @InputImport(name="resourceSetName")
+    @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
     public Output<String> getResourceSetName() {
@@ -34,7 +34,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
      * 
      */
-    @InputImport(name="resourceSetType", required=true)
+    @Import(name="resourceSetType", required=true)
       private final Output<String> resourceSetType;
 
     public Output<String> getResourceSetType() {
@@ -45,7 +45,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * A list of resource objects in the resource set.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final Output<List<ResourceSetResourceArgs>> resources;
 
     public Output<List<ResourceSetResourceArgs>> getResources() {
@@ -56,7 +56,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * A tag to associate with the parameters for a resource set.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ResourceSetTagArgs>> tags;
 
     public Output<List<ResourceSetTagArgs>> getTags() {

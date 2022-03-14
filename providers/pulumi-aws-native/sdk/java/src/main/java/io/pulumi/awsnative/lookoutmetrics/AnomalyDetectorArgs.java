@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorConfigArgs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * Configuration options for the AnomalyDetector
      * 
      */
-    @InputImport(name="anomalyDetectorConfig", required=true)
+    @Import(name="anomalyDetectorConfig", required=true)
       private final Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
 
     public Output<AnomalyDetectorConfigArgs> getAnomalyDetectorConfig() {
@@ -32,7 +32,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * A description for the AnomalyDetector.
      * 
      */
-    @InputImport(name="anomalyDetectorDescription")
+    @Import(name="anomalyDetectorDescription")
       private final @Nullable Output<String> anomalyDetectorDescription;
 
     public Output<String> getAnomalyDetectorDescription() {
@@ -43,7 +43,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * Name for the Amazon Lookout for Metrics Anomaly Detector
      * 
      */
-    @InputImport(name="anomalyDetectorName")
+    @Import(name="anomalyDetectorName")
       private final @Nullable Output<String> anomalyDetectorName;
 
     public Output<String> getAnomalyDetectorName() {
@@ -54,7 +54,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * KMS key used to encrypt the AnomalyDetector data
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -65,7 +65,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * List of metric sets for anomaly detection
      * 
      */
-    @InputImport(name="metricSetList", required=true)
+    @Import(name="metricSetList", required=true)
       private final Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;
 
     public Output<List<AnomalyDetectorMetricSetArgs>> getMetricSetList() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.RealtimeLogConfigEndPoint;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -12,19 +12,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRealtimeLogConfigResult {
     private final @Nullable String arn;
     private final @Nullable List<RealtimeLogConfigEndPoint> endPoints;
     private final @Nullable List<String> fields;
     private final @Nullable Double samplingRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRealtimeLogConfigResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("endPoints") @Nullable List<RealtimeLogConfigEndPoint> endPoints,
-        @OutputCustomType.Parameter("fields") @Nullable List<String> fields,
-        @OutputCustomType.Parameter("samplingRate") @Nullable Double samplingRate) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("endPoints") @Nullable List<RealtimeLogConfigEndPoint> endPoints,
+        @CustomType.Parameter("fields") @Nullable List<String> fields,
+        @CustomType.Parameter("samplingRate") @Nullable Double samplingRate) {
         this.arn = arn;
         this.endPoints = endPoints;
         this.fields = fields;

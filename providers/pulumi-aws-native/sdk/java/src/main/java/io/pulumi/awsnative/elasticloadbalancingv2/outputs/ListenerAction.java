@@ -8,14 +8,14 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerAuthenticateOi
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerFixedResponseConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerForwardConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRedirectConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerAction {
     private final @Nullable ListenerAuthenticateCognitoConfig authenticateCognitoConfig;
     private final @Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig;
@@ -26,16 +26,16 @@ public final class ListenerAction {
     private final @Nullable String targetGroupArn;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerAction(
-        @OutputCustomType.Parameter("authenticateCognitoConfig") @Nullable ListenerAuthenticateCognitoConfig authenticateCognitoConfig,
-        @OutputCustomType.Parameter("authenticateOidcConfig") @Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig,
-        @OutputCustomType.Parameter("fixedResponseConfig") @Nullable ListenerFixedResponseConfig fixedResponseConfig,
-        @OutputCustomType.Parameter("forwardConfig") @Nullable ListenerForwardConfig forwardConfig,
-        @OutputCustomType.Parameter("order") @Nullable Integer order,
-        @OutputCustomType.Parameter("redirectConfig") @Nullable ListenerRedirectConfig redirectConfig,
-        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authenticateCognitoConfig") @Nullable ListenerAuthenticateCognitoConfig authenticateCognitoConfig,
+        @CustomType.Parameter("authenticateOidcConfig") @Nullable ListenerAuthenticateOidcConfig authenticateOidcConfig,
+        @CustomType.Parameter("fixedResponseConfig") @Nullable ListenerFixedResponseConfig fixedResponseConfig,
+        @CustomType.Parameter("forwardConfig") @Nullable ListenerForwardConfig forwardConfig,
+        @CustomType.Parameter("order") @Nullable Integer order,
+        @CustomType.Parameter("redirectConfig") @Nullable ListenerRedirectConfig redirectConfig,
+        @CustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @CustomType.Parameter("type") String type) {
         this.authenticateCognitoConfig = authenticateCognitoConfig;
         this.authenticateOidcConfig = authenticateOidcConfig;
         this.fixedResponseConfig = fixedResponseConfig;

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleFixedRespon
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleForwardConfigArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleRedirectConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,56 +20,56 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
 
     public static final ListenerRuleActionArgs Empty = new ListenerRuleActionArgs();
 
-    @InputImport(name="authenticateCognitoConfig")
+    @Import(name="authenticateCognitoConfig")
       private final @Nullable Output<ListenerRuleAuthenticateCognitoConfigArgs> authenticateCognitoConfig;
 
     public Output<ListenerRuleAuthenticateCognitoConfigArgs> getAuthenticateCognitoConfig() {
         return this.authenticateCognitoConfig == null ? Output.empty() : this.authenticateCognitoConfig;
     }
 
-    @InputImport(name="authenticateOidcConfig")
+    @Import(name="authenticateOidcConfig")
       private final @Nullable Output<ListenerRuleAuthenticateOidcConfigArgs> authenticateOidcConfig;
 
     public Output<ListenerRuleAuthenticateOidcConfigArgs> getAuthenticateOidcConfig() {
         return this.authenticateOidcConfig == null ? Output.empty() : this.authenticateOidcConfig;
     }
 
-    @InputImport(name="fixedResponseConfig")
+    @Import(name="fixedResponseConfig")
       private final @Nullable Output<ListenerRuleFixedResponseConfigArgs> fixedResponseConfig;
 
     public Output<ListenerRuleFixedResponseConfigArgs> getFixedResponseConfig() {
         return this.fixedResponseConfig == null ? Output.empty() : this.fixedResponseConfig;
     }
 
-    @InputImport(name="forwardConfig")
+    @Import(name="forwardConfig")
       private final @Nullable Output<ListenerRuleForwardConfigArgs> forwardConfig;
 
     public Output<ListenerRuleForwardConfigArgs> getForwardConfig() {
         return this.forwardConfig == null ? Output.empty() : this.forwardConfig;
     }
 
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<Integer> order;
 
     public Output<Integer> getOrder() {
         return this.order == null ? Output.empty() : this.order;
     }
 
-    @InputImport(name="redirectConfig")
+    @Import(name="redirectConfig")
       private final @Nullable Output<ListenerRuleRedirectConfigArgs> redirectConfig;
 
     public Output<ListenerRuleRedirectConfigArgs> getRedirectConfig() {
         return this.redirectConfig == null ? Output.empty() : this.redirectConfig;
     }
 
-    @InputImport(name="targetGroupArn")
+    @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

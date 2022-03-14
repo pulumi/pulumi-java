@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotsitewise.AccessPolicyArgs;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyIdentity;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyResource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The ARN of the access policy.
      * 
      */
-    @OutputExport(name="accessPolicyArn", type=String.class, parameters={})
+    @Export(name="accessPolicyArn", type=String.class, parameters={})
     private Output<String> accessPolicyArn;
 
     /**
@@ -37,7 +37,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The ID of the access policy.
      * 
      */
-    @OutputExport(name="accessPolicyId", type=String.class, parameters={})
+    @Export(name="accessPolicyId", type=String.class, parameters={})
     private Output<String> accessPolicyId;
 
     /**
@@ -51,7 +51,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The identity for this access policy. Choose either a user or a group but not both.
      * 
      */
-    @OutputExport(name="accessPolicyIdentity", type=AccessPolicyIdentity.class, parameters={})
+    @Export(name="accessPolicyIdentity", type=AccessPolicyIdentity.class, parameters={})
     private Output<AccessPolicyIdentity> accessPolicyIdentity;
 
     /**
@@ -65,7 +65,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The permission level for this access policy. Valid values are ADMINISTRATOR or VIEWER.
      * 
      */
-    @OutputExport(name="accessPolicyPermission", type=String.class, parameters={})
+    @Export(name="accessPolicyPermission", type=String.class, parameters={})
     private Output<String> accessPolicyPermission;
 
     /**
@@ -79,7 +79,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
      * 
      */
-    @OutputExport(name="accessPolicyResource", type=AccessPolicyResource.class, parameters={})
+    @Export(name="accessPolicyResource", type=AccessPolicyResource.class, parameters={})
     private Output<AccessPolicyResource> accessPolicyResource;
 
     /**

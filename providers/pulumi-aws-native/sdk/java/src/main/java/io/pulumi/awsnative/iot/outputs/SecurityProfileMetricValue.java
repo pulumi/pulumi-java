@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityProfileMetricValue {
     /**
      * If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
@@ -45,14 +45,14 @@ public final class SecurityProfileMetricValue {
      */
     private final @Nullable List<String> strings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityProfileMetricValue(
-        @OutputCustomType.Parameter("cidrs") @Nullable List<String> cidrs,
-        @OutputCustomType.Parameter("count") @Nullable String count,
-        @OutputCustomType.Parameter("number") @Nullable Double number,
-        @OutputCustomType.Parameter("numbers") @Nullable List<Double> numbers,
-        @OutputCustomType.Parameter("ports") @Nullable List<Integer> ports,
-        @OutputCustomType.Parameter("strings") @Nullable List<String> strings) {
+        @CustomType.Parameter("cidrs") @Nullable List<String> cidrs,
+        @CustomType.Parameter("count") @Nullable String count,
+        @CustomType.Parameter("number") @Nullable Double number,
+        @CustomType.Parameter("numbers") @Nullable List<Double> numbers,
+        @CustomType.Parameter("ports") @Nullable List<Integer> ports,
+        @CustomType.Parameter("strings") @Nullable List<String> strings) {
         this.cidrs = cidrs;
         this.count = count;
         this.number = number;

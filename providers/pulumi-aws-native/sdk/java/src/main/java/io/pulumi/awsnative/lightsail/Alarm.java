@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lightsail.AlarmArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:lightsail:Alarm")
 public class Alarm extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="alarmArn", type=String.class, parameters={})
+    @Export(name="alarmArn", type=String.class, parameters={})
     private Output<String> alarmArn;
 
     public Output<String> getAlarmArn() {
@@ -31,7 +31,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
      * 
      */
-    @OutputExport(name="alarmName", type=String.class, parameters={})
+    @Export(name="alarmName", type=String.class, parameters={})
     private Output<String> alarmName;
 
     /**
@@ -45,7 +45,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
      * 
      */
-    @OutputExport(name="comparisonOperator", type=String.class, parameters={})
+    @Export(name="comparisonOperator", type=String.class, parameters={})
     private Output<String> comparisonOperator;
 
     /**
@@ -59,7 +59,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
      * 
      */
-    @OutputExport(name="contactProtocols", type=List.class, parameters={String.class})
+    @Export(name="contactProtocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> contactProtocols;
 
     /**
@@ -73,7 +73,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
      * 
      */
-    @OutputExport(name="datapointsToAlarm", type=Integer.class, parameters={})
+    @Export(name="datapointsToAlarm", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> datapointsToAlarm;
 
     /**
@@ -87,7 +87,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
      * 
      */
-    @OutputExport(name="evaluationPeriods", type=Integer.class, parameters={})
+    @Export(name="evaluationPeriods", type=Integer.class, parameters={})
     private Output<Integer> evaluationPeriods;
 
     /**
@@ -101,7 +101,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The name of the metric to associate with the alarm.
      * 
      */
-    @OutputExport(name="metricName", type=String.class, parameters={})
+    @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
@@ -115,7 +115,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The validation status of the SSL/TLS certificate.
      * 
      */
-    @OutputExport(name="monitoredResourceName", type=String.class, parameters={})
+    @Export(name="monitoredResourceName", type=String.class, parameters={})
     private Output<String> monitoredResourceName;
 
     /**
@@ -129,7 +129,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
      * 
      */
-    @OutputExport(name="notificationEnabled", type=Boolean.class, parameters={})
+    @Export(name="notificationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> notificationEnabled;
 
     /**
@@ -143,7 +143,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The alarm states that trigger a notification.
      * 
      */
-    @OutputExport(name="notificationTriggers", type=List.class, parameters={String.class})
+    @Export(name="notificationTriggers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notificationTriggers;
 
     /**
@@ -157,7 +157,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The current state of the alarm.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -171,7 +171,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * The value against which the specified statistic is compared.
      * 
      */
-    @OutputExport(name="threshold", type=Double.class, parameters={})
+    @Export(name="threshold", type=Double.class, parameters={})
     private Output<Double> threshold;
 
     /**
@@ -185,7 +185,7 @@ public class Alarm extends io.pulumi.resources.CustomResource {
      * Sets how this alarm will handle missing data points.
      * 
      */
-    @OutputExport(name="treatMissingData", type=String.class, parameters={})
+    @Export(name="treatMissingData", type=String.class, parameters={})
     private Output</* @Nullable */ String> treatMissingData;
 
     /**

@@ -6,26 +6,26 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupRulesSourceList;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupStatefulRule;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupStatelessRulesAndCustomActions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRulesSource {
     private final @Nullable RuleGroupRulesSourceList rulesSourceList;
     private final @Nullable String rulesString;
     private final @Nullable List<RuleGroupStatefulRule> statefulRules;
     private final @Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRulesSource(
-        @OutputCustomType.Parameter("rulesSourceList") @Nullable RuleGroupRulesSourceList rulesSourceList,
-        @OutputCustomType.Parameter("rulesString") @Nullable String rulesString,
-        @OutputCustomType.Parameter("statefulRules") @Nullable List<RuleGroupStatefulRule> statefulRules,
-        @OutputCustomType.Parameter("statelessRulesAndCustomActions") @Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
+        @CustomType.Parameter("rulesSourceList") @Nullable RuleGroupRulesSourceList rulesSourceList,
+        @CustomType.Parameter("rulesString") @Nullable String rulesString,
+        @CustomType.Parameter("statefulRules") @Nullable List<RuleGroupStatefulRule> statefulRules,
+        @CustomType.Parameter("statelessRulesAndCustomActions") @Nullable RuleGroupStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
         this.rulesSourceList = rulesSourceList;
         this.rulesString = rulesString;
         this.statefulRules = statefulRules;

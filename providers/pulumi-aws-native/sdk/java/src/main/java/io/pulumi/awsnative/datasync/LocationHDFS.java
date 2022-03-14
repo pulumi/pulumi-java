@@ -10,7 +10,7 @@ import io.pulumi.awsnative.datasync.outputs.LocationHDFSNameNode;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSQopConfiguration;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * ARN(s) of the agent(s) to use for an HDFS location.
      * 
      */
-    @OutputExport(name="agentArns", type=List.class, parameters={String.class})
+    @Export(name="agentArns", type=List.class, parameters={String.class})
     private Output<List<String>> agentArns;
 
     /**
@@ -41,7 +41,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The authentication mode used to determine identity of user.
      * 
      */
-    @OutputExport(name="authenticationType", type=LocationHDFSAuthenticationType.class, parameters={})
+    @Export(name="authenticationType", type=LocationHDFSAuthenticationType.class, parameters={})
     private Output<LocationHDFSAuthenticationType> authenticationType;
 
     /**
@@ -55,7 +55,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
      * 
      */
-    @OutputExport(name="blockSize", type=Integer.class, parameters={})
+    @Export(name="blockSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> blockSize;
 
     /**
@@ -69,7 +69,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The Base64 string representation of the Keytab file.
      * 
      */
-    @OutputExport(name="kerberosKeytab", type=String.class, parameters={})
+    @Export(name="kerberosKeytab", type=String.class, parameters={})
     private Output</* @Nullable */ String> kerberosKeytab;
 
     /**
@@ -83,7 +83,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
      * 
      */
-    @OutputExport(name="kerberosKrb5Conf", type=String.class, parameters={})
+    @Export(name="kerberosKrb5Conf", type=String.class, parameters={})
     private Output</* @Nullable */ String> kerberosKrb5Conf;
 
     /**
@@ -97,7 +97,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The unique identity, or principal, to which Kerberos can assign tickets.
      * 
      */
-    @OutputExport(name="kerberosPrincipal", type=String.class, parameters={})
+    @Export(name="kerberosPrincipal", type=String.class, parameters={})
     private Output</* @Nullable */ String> kerberosPrincipal;
 
     /**
@@ -111,7 +111,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
      * 
      */
-    @OutputExport(name="kmsKeyProviderUri", type=String.class, parameters={})
+    @Export(name="kmsKeyProviderUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyProviderUri;
 
     /**
@@ -125,7 +125,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the HDFS location.
      * 
      */
-    @OutputExport(name="locationArn", type=String.class, parameters={})
+    @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
@@ -139,7 +139,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The URL of the HDFS location that was described.
      * 
      */
-    @OutputExport(name="locationUri", type=String.class, parameters={})
+    @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
@@ -153,7 +153,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * An array of Name Node(s) of the HDFS location.
      * 
      */
-    @OutputExport(name="nameNodes", type=List.class, parameters={LocationHDFSNameNode.class})
+    @Export(name="nameNodes", type=List.class, parameters={LocationHDFSNameNode.class})
     private Output<List<LocationHDFSNameNode>> nameNodes;
 
     /**
@@ -163,7 +163,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
     public Output<List<LocationHDFSNameNode>> getNameNodes() {
         return this.nameNodes;
     }
-    @OutputExport(name="qopConfiguration", type=LocationHDFSQopConfiguration.class, parameters={})
+    @Export(name="qopConfiguration", type=LocationHDFSQopConfiguration.class, parameters={})
     private Output</* @Nullable */ LocationHDFSQopConfiguration> qopConfiguration;
 
     public Output</* @Nullable */ LocationHDFSQopConfiguration> getQopConfiguration() {
@@ -173,7 +173,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * Number of copies of each block that exists inside the HDFS cluster.
      * 
      */
-    @OutputExport(name="replicationFactor", type=Integer.class, parameters={})
+    @Export(name="replicationFactor", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> replicationFactor;
 
     /**
@@ -187,7 +187,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The user name that has read and write permissions on the specified HDFS cluster.
      * 
      */
-    @OutputExport(name="simpleUser", type=String.class, parameters={})
+    @Export(name="simpleUser", type=String.class, parameters={})
     private Output</* @Nullable */ String> simpleUser;
 
     /**
@@ -201,7 +201,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
@@ -215,7 +215,7 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LocationHDFSTag.class})
+    @Export(name="tags", type=List.class, parameters={LocationHDFSTag.class})
     private Output</* @Nullable */ List<LocationHDFSTag>> tags;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionEndpointInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
 
     public static final ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs Empty = new ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs();
 
-    @InputImport(name="endpointInput", required=true)
+    @Import(name="endpointInput", required=true)
       private final Output<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Output<ModelExplainabilityJobDefinitionEndpointInputArgs> getEndpointInput() {

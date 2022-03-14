@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.refactorspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceLambdaEndpointInput {
     private final String arn;
 
-    @OutputCustomType.Constructor
-    private ServiceLambdaEndpointInput(@OutputCustomType.Parameter("arn") String arn) {
+    @CustomType.Constructor
+    private ServiceLambdaEndpointInput(@CustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 

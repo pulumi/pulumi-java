@@ -7,7 +7,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentActiveDirectoryCon
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentComputeFarmConfiguration;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentLicenseServiceConfiguration;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentSharedFileSystemConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,28 +21,28 @@ public final class StudioComponentConfiguration extends io.pulumi.resources.Invo
 
     public static final StudioComponentConfiguration Empty = new StudioComponentConfiguration();
 
-    @InputImport(name="activeDirectoryConfiguration")
+    @Import(name="activeDirectoryConfiguration")
       private final @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration;
 
     public Optional<StudioComponentActiveDirectoryConfiguration> getActiveDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryConfiguration);
     }
 
-    @InputImport(name="computeFarmConfiguration")
+    @Import(name="computeFarmConfiguration")
       private final @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration;
 
     public Optional<StudioComponentComputeFarmConfiguration> getComputeFarmConfiguration() {
         return this.computeFarmConfiguration == null ? Optional.empty() : Optional.ofNullable(this.computeFarmConfiguration);
     }
 
-    @InputImport(name="licenseServiceConfiguration")
+    @Import(name="licenseServiceConfiguration")
       private final @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
 
     public Optional<StudioComponentLicenseServiceConfiguration> getLicenseServiceConfiguration() {
         return this.licenseServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.licenseServiceConfiguration);
     }
 
-    @InputImport(name="sharedFileSystemConfiguration")
+    @Import(name="sharedFileSystemConfiguration")
       private final @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
 
     public Optional<StudioComponentSharedFileSystemConfiguration> getSharedFileSystemConfiguration() {

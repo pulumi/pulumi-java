@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.emrcontainers.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualClusterEksInfo {
     private final String namespace;
 
-    @OutputCustomType.Constructor
-    private VirtualClusterEksInfo(@OutputCustomType.Parameter("namespace") String namespace) {
+    @CustomType.Constructor
+    private VirtualClusterEksInfo(@CustomType.Parameter("namespace") String namespace) {
         this.namespace = namespace;
     }
 

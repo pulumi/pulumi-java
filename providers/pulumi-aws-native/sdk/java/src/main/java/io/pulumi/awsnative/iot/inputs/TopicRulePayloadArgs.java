@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,42 +17,42 @@ public final class TopicRulePayloadArgs extends io.pulumi.resources.ResourceArgs
 
     public static final TopicRulePayloadArgs Empty = new TopicRulePayloadArgs();
 
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<TopicRuleActionArgs>> actions;
 
     public Output<List<TopicRuleActionArgs>> getActions() {
         return this.actions;
     }
 
-    @InputImport(name="awsIotSqlVersion")
+    @Import(name="awsIotSqlVersion")
       private final @Nullable Output<String> awsIotSqlVersion;
 
     public Output<String> getAwsIotSqlVersion() {
         return this.awsIotSqlVersion == null ? Output.empty() : this.awsIotSqlVersion;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="errorAction")
+    @Import(name="errorAction")
       private final @Nullable Output<TopicRuleActionArgs> errorAction;
 
     public Output<TopicRuleActionArgs> getErrorAction() {
         return this.errorAction == null ? Output.empty() : this.errorAction;
     }
 
-    @InputImport(name="ruleDisabled")
+    @Import(name="ruleDisabled")
       private final @Nullable Output<Boolean> ruleDisabled;
 
     public Output<Boolean> getRuleDisabled() {
         return this.ruleDisabled == null ? Output.empty() : this.ruleDisabled;
     }
 
-    @InputImport(name="sql", required=true)
+    @Import(name="sql", required=true)
       private final Output<String> sql;
 
     public Output<String> getSql() {

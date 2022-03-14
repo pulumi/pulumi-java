@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.qldb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class StreamKinesisConfigurationArgs extends io.pulumi.resources.Re
 
     public static final StreamKinesisConfigurationArgs Empty = new StreamKinesisConfigurationArgs();
 
-    @InputImport(name="aggregationEnabled")
+    @Import(name="aggregationEnabled")
       private final @Nullable Output<Boolean> aggregationEnabled;
 
     public Output<Boolean> getAggregationEnabled() {
         return this.aggregationEnabled == null ? Output.empty() : this.aggregationEnabled;
     }
 
-    @InputImport(name="streamArn")
+    @Import(name="streamArn")
       private final @Nullable Output<String> streamArn;
 
     public Output<String> getStreamArn() {

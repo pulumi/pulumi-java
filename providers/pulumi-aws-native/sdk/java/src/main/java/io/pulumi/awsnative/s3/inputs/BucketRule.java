@@ -9,7 +9,7 @@ import io.pulumi.awsnative.s3.inputs.BucketNoncurrentVersionExpiration;
 import io.pulumi.awsnative.s3.inputs.BucketNoncurrentVersionTransition;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilter;
 import io.pulumi.awsnative.s3.inputs.BucketTransition;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,112 +27,112 @@ public final class BucketRule extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketRule Empty = new BucketRule();
 
-    @InputImport(name="abortIncompleteMultipartUpload")
+    @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload;
 
     public Optional<BucketAbortIncompleteMultipartUpload> getAbortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Optional.empty() : Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
 
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable String expirationDate;
 
     public Optional<String> getExpirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
     }
 
-    @InputImport(name="expirationInDays")
+    @Import(name="expirationInDays")
       private final @Nullable Integer expirationInDays;
 
     public Optional<Integer> getExpirationInDays() {
         return this.expirationInDays == null ? Optional.empty() : Optional.ofNullable(this.expirationInDays);
     }
 
-    @InputImport(name="expiredObjectDeleteMarker")
+    @Import(name="expiredObjectDeleteMarker")
       private final @Nullable Boolean expiredObjectDeleteMarker;
 
     public Optional<Boolean> getExpiredObjectDeleteMarker() {
         return this.expiredObjectDeleteMarker == null ? Optional.empty() : Optional.ofNullable(this.expiredObjectDeleteMarker);
     }
 
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    @InputImport(name="noncurrentVersionExpiration")
+    @Import(name="noncurrentVersionExpiration")
       private final @Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration;
 
     public Optional<BucketNoncurrentVersionExpiration> getNoncurrentVersionExpiration() {
         return this.noncurrentVersionExpiration == null ? Optional.empty() : Optional.ofNullable(this.noncurrentVersionExpiration);
     }
 
-    @InputImport(name="noncurrentVersionExpirationInDays")
+    @Import(name="noncurrentVersionExpirationInDays")
       private final @Nullable Integer noncurrentVersionExpirationInDays;
 
     public Optional<Integer> getNoncurrentVersionExpirationInDays() {
         return this.noncurrentVersionExpirationInDays == null ? Optional.empty() : Optional.ofNullable(this.noncurrentVersionExpirationInDays);
     }
 
-    @InputImport(name="noncurrentVersionTransition")
+    @Import(name="noncurrentVersionTransition")
       private final @Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition;
 
     public Optional<BucketNoncurrentVersionTransition> getNoncurrentVersionTransition() {
         return this.noncurrentVersionTransition == null ? Optional.empty() : Optional.ofNullable(this.noncurrentVersionTransition);
     }
 
-    @InputImport(name="noncurrentVersionTransitions")
+    @Import(name="noncurrentVersionTransitions")
       private final @Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions;
 
     public List<BucketNoncurrentVersionTransition> getNoncurrentVersionTransitions() {
         return this.noncurrentVersionTransitions == null ? List.of() : this.noncurrentVersionTransitions;
     }
 
-    @InputImport(name="objectSizeGreaterThan")
+    @Import(name="objectSizeGreaterThan")
       private final @Nullable String objectSizeGreaterThan;
 
     public Optional<String> getObjectSizeGreaterThan() {
         return this.objectSizeGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.objectSizeGreaterThan);
     }
 
-    @InputImport(name="objectSizeLessThan")
+    @Import(name="objectSizeLessThan")
       private final @Nullable String objectSizeLessThan;
 
     public Optional<String> getObjectSizeLessThan() {
         return this.objectSizeLessThan == null ? Optional.empty() : Optional.ofNullable(this.objectSizeLessThan);
     }
 
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final BucketRuleStatus status;
 
     public BucketRuleStatus getStatus() {
         return this.status;
     }
 
-    @InputImport(name="tagFilters")
+    @Import(name="tagFilters")
       private final @Nullable List<BucketTagFilter> tagFilters;
 
     public List<BucketTagFilter> getTagFilters() {
         return this.tagFilters == null ? List.of() : this.tagFilters;
     }
 
-    @InputImport(name="transition")
+    @Import(name="transition")
       private final @Nullable BucketTransition transition;
 
     public Optional<BucketTransition> getTransition() {
         return this.transition == null ? Optional.empty() : Optional.ofNullable(this.transition);
     }
 
-    @InputImport(name="transitions")
+    @Import(name="transitions")
       private final @Nullable List<BucketTransition> transitions;
 
     public List<BucketTransition> getTransitions() {

@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateColumnSchema;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TemplateDataSetSchema {
     /**
      * <p>A structure containing the list of column schemas.</p>
@@ -17,8 +17,8 @@ public final class TemplateDataSetSchema {
      */
     private final @Nullable List<TemplateColumnSchema> columnSchemaList;
 
-    @OutputCustomType.Constructor
-    private TemplateDataSetSchema(@OutputCustomType.Parameter("columnSchemaList") @Nullable List<TemplateColumnSchema> columnSchemaList) {
+    @CustomType.Constructor
+    private TemplateDataSetSchema(@CustomType.Parameter("columnSchemaList") @Nullable List<TemplateColumnSchema> columnSchemaList) {
         this.columnSchemaList = columnSchemaList;
     }
 

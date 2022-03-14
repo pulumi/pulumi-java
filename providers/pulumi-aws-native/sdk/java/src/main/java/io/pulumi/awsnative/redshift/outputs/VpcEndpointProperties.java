@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.redshift.outputs;
 
 import io.pulumi.awsnative.redshift.outputs.EndpointAccessNetworkInterface;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpcEndpointProperties {
     /**
      * One or more network interfaces of the endpoint. Also known as an interface endpoint.
@@ -29,11 +29,11 @@ public final class VpcEndpointProperties {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpcEndpointProperties(
-        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<EndpointAccessNetworkInterface> networkInterfaces,
-        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("networkInterfaces") @Nullable List<EndpointAccessNetworkInterface> networkInterfaces,
+        @CustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.networkInterfaces = networkInterfaces;
         this.vpcEndpointId = vpcEndpointId;
         this.vpcId = vpcId;

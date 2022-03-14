@@ -11,7 +11,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatasetTagArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetTriggerArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetVersioningConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,56 +22,56 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetArgs Empty = new DatasetArgs();
 
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<DatasetActionArgs>> actions;
 
     public Output<List<DatasetActionArgs>> getActions() {
         return this.actions;
     }
 
-    @InputImport(name="contentDeliveryRules")
+    @Import(name="contentDeliveryRules")
       private final @Nullable Output<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules;
 
     public Output<List<DatasetContentDeliveryRuleArgs>> getContentDeliveryRules() {
         return this.contentDeliveryRules == null ? Output.empty() : this.contentDeliveryRules;
     }
 
-    @InputImport(name="datasetName")
+    @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
         return this.datasetName == null ? Output.empty() : this.datasetName;
     }
 
-    @InputImport(name="lateDataRules")
+    @Import(name="lateDataRules")
       private final @Nullable Output<List<DatasetLateDataRuleArgs>> lateDataRules;
 
     public Output<List<DatasetLateDataRuleArgs>> getLateDataRules() {
         return this.lateDataRules == null ? Output.empty() : this.lateDataRules;
     }
 
-    @InputImport(name="retentionPeriod")
+    @Import(name="retentionPeriod")
       private final @Nullable Output<DatasetRetentionPeriodArgs> retentionPeriod;
 
     public Output<DatasetRetentionPeriodArgs> getRetentionPeriod() {
         return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DatasetTagArgs>> tags;
 
     public Output<List<DatasetTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<List<DatasetTriggerArgs>> triggers;
 
     public Output<List<DatasetTriggerArgs>> getTriggers() {
         return this.triggers == null ? Output.empty() : this.triggers;
     }
 
-    @InputImport(name="versioningConfiguration")
+    @Import(name="versioningConfiguration")
       private final @Nullable Output<DatasetVersioningConfigurationArgs> versioningConfiguration;
 
     public Output<DatasetVersioningConfigurationArgs> getVersioningConfiguration() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelSetVariable {
     /**
      * The new value of the variable.
@@ -20,10 +20,10 @@ public final class DetectorModelSetVariable {
      */
     private final String variableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelSetVariable(
-        @OutputCustomType.Parameter("value") String value,
-        @OutputCustomType.Parameter("variableName") String variableName) {
+        @CustomType.Parameter("value") String value,
+        @CustomType.Parameter("variableName") String variableName) {
         this.value = value;
         this.variableName = variableName;
     }

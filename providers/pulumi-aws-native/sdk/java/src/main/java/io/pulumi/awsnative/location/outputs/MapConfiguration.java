@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.location.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MapConfiguration {
     private final String style;
 
-    @OutputCustomType.Constructor
-    private MapConfiguration(@OutputCustomType.Parameter("style") String style) {
+    @CustomType.Constructor
+    private MapConfiguration(@CustomType.Parameter("style") String style) {
         this.style = style;
     }
 

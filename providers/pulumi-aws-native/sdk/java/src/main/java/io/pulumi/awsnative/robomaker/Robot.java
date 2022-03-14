@@ -8,7 +8,7 @@ import io.pulumi.awsnative.robomaker.RobotArgs;
 import io.pulumi.awsnative.robomaker.enums.RobotArchitecture;
 import io.pulumi.awsnative.robomaker.outputs.RobotTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * The target architecture of the robot.
      * 
      */
-    @OutputExport(name="architecture", type=RobotArchitecture.class, parameters={})
+    @Export(name="architecture", type=RobotArchitecture.class, parameters={})
     private Output<RobotArchitecture> architecture;
 
     /**
@@ -33,7 +33,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
     public Output<RobotArchitecture> getArchitecture() {
         return this.architecture;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the fleet.
      * 
      */
-    @OutputExport(name="fleet", type=String.class, parameters={})
+    @Export(name="fleet", type=String.class, parameters={})
     private Output</* @Nullable */ String> fleet;
 
     /**
@@ -57,7 +57,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * The Greengrass group id.
      * 
      */
-    @OutputExport(name="greengrassGroupId", type=String.class, parameters={})
+    @Export(name="greengrassGroupId", type=String.class, parameters={})
     private Output<String> greengrassGroupId;
 
     /**
@@ -71,7 +71,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * The name for the robot.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -81,7 +81,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=RobotTags.class, parameters={})
+    @Export(name="tags", type=RobotTags.class, parameters={})
     private Output</* @Nullable */ RobotTags> tags;
 
     public Output</* @Nullable */ RobotTags> getTags() {

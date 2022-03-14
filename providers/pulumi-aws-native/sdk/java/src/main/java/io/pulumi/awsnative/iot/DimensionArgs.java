@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.enums.DimensionType;
 import io.pulumi.awsnative.iot.inputs.DimensionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * A unique identifier for the dimension.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -32,7 +32,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the value or list of values for the dimension.
      * 
      */
-    @InputImport(name="stringValues", required=true)
+    @Import(name="stringValues", required=true)
       private final Output<List<String>> stringValues;
 
     public Output<List<String>> getStringValues() {
@@ -43,7 +43,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that can be used to manage the dimension.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DimensionTagArgs>> tags;
 
     public Output<List<DimensionTagArgs>> getTags() {
@@ -54,7 +54,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of the dimension.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<DimensionType> type;
 
     public Output<DimensionType> getType() {

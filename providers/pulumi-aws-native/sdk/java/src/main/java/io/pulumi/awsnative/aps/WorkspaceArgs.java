@@ -5,7 +5,7 @@ package io.pulumi.awsnative.aps;
 
 import io.pulumi.awsnative.aps.inputs.WorkspaceTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The AMP Workspace alert manager definition data
      * 
      */
-    @InputImport(name="alertManagerDefinition")
+    @Import(name="alertManagerDefinition")
       private final @Nullable Output<String> alertManagerDefinition;
 
     public Output<String> getAlertManagerDefinition() {
@@ -31,7 +31,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * AMP Workspace alias.
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -42,7 +42,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<WorkspaceTagArgs>> tags;
 
     public Output<List<WorkspaceTagArgs>> getTags() {

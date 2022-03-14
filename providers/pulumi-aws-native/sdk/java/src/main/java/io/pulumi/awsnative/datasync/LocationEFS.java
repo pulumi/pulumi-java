@@ -8,7 +8,7 @@ import io.pulumi.awsnative.datasync.LocationEFSArgs;
 import io.pulumi.awsnative.datasync.outputs.LocationEFSEc2Config;
 import io.pulumi.awsnative.datasync.outputs.LocationEFSTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:datasync:LocationEFS")
 public class LocationEFS extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="ec2Config", type=LocationEFSEc2Config.class, parameters={})
+    @Export(name="ec2Config", type=LocationEFSEc2Config.class, parameters={})
     private Output<LocationEFSEc2Config> ec2Config;
 
     public Output<LocationEFSEc2Config> getEc2Config() {
@@ -32,7 +32,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the Amazon EFS file system.
      * 
      */
-    @OutputExport(name="efsFilesystemArn", type=String.class, parameters={})
+    @Export(name="efsFilesystemArn", type=String.class, parameters={})
     private Output<String> efsFilesystemArn;
 
     /**
@@ -46,7 +46,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
      * 
      */
-    @OutputExport(name="locationArn", type=String.class, parameters={})
+    @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
@@ -60,7 +60,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * The URL of the EFS location that was described.
      * 
      */
-    @OutputExport(name="locationUri", type=String.class, parameters={})
+    @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
@@ -74,7 +74,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
@@ -88,7 +88,7 @@ public class LocationEFS extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LocationEFSTag.class})
+    @Export(name="tags", type=List.class, parameters={LocationEFSTag.class})
     private Output</* @Nullable */ List<LocationEFSTag>> tags;
 
     /**

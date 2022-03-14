@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesis.inputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamModeDetailsStreamMode;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class StreamModeDetails extends io.pulumi.resources.InvokeArgs {
      * The mode of the stream
      * 
      */
-    @InputImport(name="streamMode", required=true)
+    @Import(name="streamMode", required=true)
       private final StreamModeDetailsStreamMode streamMode;
 
     public StreamModeDetailsStreamMode getStreamMode() {

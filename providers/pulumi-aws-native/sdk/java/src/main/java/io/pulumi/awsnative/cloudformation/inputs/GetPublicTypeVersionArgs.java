@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPublicTypeVersionArgs extends io.pulumi.resources.InvokeAr
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
      * 
      */
-    @InputImport(name="publicTypeArn", required=true)
+    @Import(name="publicTypeArn", required=true)
       private final String publicTypeArn;
 
     public String getPublicTypeArn() {

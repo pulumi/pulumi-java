@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureAttributeMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
 
     public static final ScheduledQueryMultiMeasureMappingsArgs Empty = new ScheduledQueryMultiMeasureMappingsArgs();
 
-    @InputImport(name="multiMeasureAttributeMappings", required=true)
+    @Import(name="multiMeasureAttributeMappings", required=true)
       private final Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
 
     public Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> getMultiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings;
     }
 
-    @InputImport(name="targetMultiMeasureName")
+    @Import(name="targetMultiMeasureName")
       private final @Nullable Output<String> targetMultiMeasureName;
 
     public Output<String> getTargetMultiMeasureName() {

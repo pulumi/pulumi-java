@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstancePort {
     /**
      * Access Direction for Protocol of the Instance(inbound/outbound).
@@ -52,18 +52,18 @@ public final class InstancePort {
      */
     private final @Nullable Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstancePort(
-        @OutputCustomType.Parameter("accessDirection") @Nullable String accessDirection,
-        @OutputCustomType.Parameter("accessFrom") @Nullable String accessFrom,
-        @OutputCustomType.Parameter("accessType") @Nullable String accessType,
-        @OutputCustomType.Parameter("cidrListAliases") @Nullable List<String> cidrListAliases,
-        @OutputCustomType.Parameter("cidrs") @Nullable List<String> cidrs,
-        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
-        @OutputCustomType.Parameter("fromPort") @Nullable Integer fromPort,
-        @OutputCustomType.Parameter("ipv6Cidrs") @Nullable List<String> ipv6Cidrs,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("toPort") @Nullable Integer toPort) {
+        @CustomType.Parameter("accessDirection") @Nullable String accessDirection,
+        @CustomType.Parameter("accessFrom") @Nullable String accessFrom,
+        @CustomType.Parameter("accessType") @Nullable String accessType,
+        @CustomType.Parameter("cidrListAliases") @Nullable List<String> cidrListAliases,
+        @CustomType.Parameter("cidrs") @Nullable List<String> cidrs,
+        @CustomType.Parameter("commonName") @Nullable String commonName,
+        @CustomType.Parameter("fromPort") @Nullable Integer fromPort,
+        @CustomType.Parameter("ipv6Cidrs") @Nullable List<String> ipv6Cidrs,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("toPort") @Nullable Integer toPort) {
         this.accessDirection = accessDirection;
         this.accessFrom = accessFrom;
         this.accessType = accessType;

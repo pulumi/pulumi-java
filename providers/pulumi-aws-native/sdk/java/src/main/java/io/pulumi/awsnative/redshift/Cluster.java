@@ -9,7 +9,7 @@ import io.pulumi.awsnative.redshift.outputs.ClusterEndpoint;
 import io.pulumi.awsnative.redshift.outputs.ClusterLoggingProperties;
 import io.pulumi.awsnative.redshift.outputs.ClusterTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
      * 
      */
-    @OutputExport(name="allowVersionUpgrade", type=Boolean.class, parameters={})
+    @Export(name="allowVersionUpgrade", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVersionUpgrade;
 
     /**
@@ -45,7 +45,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * auto - Amazon Redshift determines whether to use AQUA.
      * 
      */
-    @OutputExport(name="aquaConfigurationStatus", type=String.class, parameters={})
+    @Export(name="aquaConfigurationStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> aquaConfigurationStatus;
 
     /**
@@ -63,7 +63,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Default value is 1
      * 
      */
-    @OutputExport(name="automatedSnapshotRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="automatedSnapshotRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> automatedSnapshotRetentionPeriod;
 
     /**
@@ -77,7 +77,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. Default: A random, system-chosen Availability Zone in the region that is specified by the endpoint
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
@@ -91,7 +91,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
      * 
      */
-    @OutputExport(name="availabilityZoneRelocation", type=Boolean.class, parameters={})
+    @Export(name="availabilityZoneRelocation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> availabilityZoneRelocation;
 
     /**
@@ -105,7 +105,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The availability zone relocation status of the cluster
      * 
      */
-    @OutputExport(name="availabilityZoneRelocationStatus", type=String.class, parameters={})
+    @Export(name="availabilityZoneRelocationStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZoneRelocationStatus;
 
     /**
@@ -119,7 +119,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to false , the resize type is elastic.
      * 
      */
-    @OutputExport(name="classic", type=Boolean.class, parameters={})
+    @Export(name="classic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> classic;
 
     /**
@@ -133,7 +133,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
      * 
      */
-    @OutputExport(name="clusterIdentifier", type=String.class, parameters={})
+    @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterIdentifier;
 
     /**
@@ -147,7 +147,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the parameter group to be associated with this cluster.
      * 
      */
-    @OutputExport(name="clusterParameterGroupName", type=String.class, parameters={})
+    @Export(name="clusterParameterGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterParameterGroupName;
 
     /**
@@ -161,7 +161,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A list of security groups to be associated with this cluster.
      * 
      */
-    @OutputExport(name="clusterSecurityGroups", type=List.class, parameters={String.class})
+    @Export(name="clusterSecurityGroups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clusterSecurityGroups;
 
     /**
@@ -175,7 +175,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of a cluster subnet group to be associated with this cluster.
      * 
      */
-    @OutputExport(name="clusterSubnetGroupName", type=String.class, parameters={})
+    @Export(name="clusterSubnetGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterSubnetGroupName;
 
     /**
@@ -189,7 +189,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of the cluster. When cluster type is specified as single-node, the NumberOfNodes parameter is not required and if multi-node, the NumberOfNodes parameter is required
      * 
      */
-    @OutputExport(name="clusterType", type=String.class, parameters={})
+    @Export(name="clusterType", type=String.class, parameters={})
     private Output<String> clusterType;
 
     /**
@@ -203,7 +203,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The version of the Amazon Redshift engine software that you want to deploy on the cluster.The version selected runs on all the nodes in the cluster.
      * 
      */
-    @OutputExport(name="clusterVersion", type=String.class, parameters={})
+    @Export(name="clusterVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterVersion;
 
     /**
@@ -217,7 +217,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the first database to be created when the cluster is created. To create additional databases after the cluster is created, connect to the cluster with a SQL client and use SQL commands to create a database.
      * 
      */
-    @OutputExport(name="dBName", type=String.class, parameters={})
+    @Export(name="dBName", type=String.class, parameters={})
     private Output<String> dBName;
 
     /**
@@ -231,7 +231,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A boolean indicating whether to enable the deferred maintenance window.
      * 
      */
-    @OutputExport(name="deferMaintenance", type=Boolean.class, parameters={})
+    @Export(name="deferMaintenance", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deferMaintenance;
 
     /**
@@ -245,7 +245,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
      * 
      */
-    @OutputExport(name="deferMaintenanceDuration", type=Integer.class, parameters={})
+    @Export(name="deferMaintenanceDuration", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> deferMaintenanceDuration;
 
     /**
@@ -259,7 +259,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
      * 
      */
-    @OutputExport(name="deferMaintenanceEndTime", type=String.class, parameters={})
+    @Export(name="deferMaintenanceEndTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> deferMaintenanceEndTime;
 
     /**
@@ -273,7 +273,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A unique identifier for the deferred maintenance window.
      * 
      */
-    @OutputExport(name="deferMaintenanceIdentifier", type=String.class, parameters={})
+    @Export(name="deferMaintenanceIdentifier", type=String.class, parameters={})
     private Output<String> deferMaintenanceIdentifier;
 
     /**
@@ -287,7 +287,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A timestamp indicating the start time for the deferred maintenance window.
      * 
      */
-    @OutputExport(name="deferMaintenanceStartTime", type=String.class, parameters={})
+    @Export(name="deferMaintenanceStartTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> deferMaintenanceStartTime;
 
     /**
@@ -301,7 +301,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The destination AWS Region that you want to copy snapshots to. Constraints: Must be the name of a valid AWS Region. For more information, see Regions and Endpoints in the Amazon Web Services [https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region] General Reference
      * 
      */
-    @OutputExport(name="destinationRegion", type=String.class, parameters={})
+    @Export(name="destinationRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationRegion;
 
     /**
@@ -315,7 +315,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Elastic IP (EIP) address for the cluster.
      * 
      */
-    @OutputExport(name="elasticIp", type=String.class, parameters={})
+    @Export(name="elasticIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> elasticIp;
 
     /**
@@ -329,7 +329,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * If true, the data in the cluster is encrypted at rest.
      * 
      */
-    @OutputExport(name="encrypted", type=Boolean.class, parameters={})
+    @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> encrypted;
 
     /**
@@ -339,7 +339,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getEncrypted() {
         return this.encrypted;
     }
-    @OutputExport(name="endpoint", type=ClusterEndpoint.class, parameters={})
+    @Export(name="endpoint", type=ClusterEndpoint.class, parameters={})
     private Output</* @Nullable */ ClusterEndpoint> endpoint;
 
     public Output</* @Nullable */ ClusterEndpoint> getEndpoint() {
@@ -353,7 +353,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Default: false
      * 
      */
-    @OutputExport(name="enhancedVpcRouting", type=Boolean.class, parameters={})
+    @Export(name="enhancedVpcRouting", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enhancedVpcRouting;
 
     /**
@@ -371,7 +371,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM
      * 
      */
-    @OutputExport(name="hsmClientCertificateIdentifier", type=String.class, parameters={})
+    @Export(name="hsmClientCertificateIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> hsmClientCertificateIdentifier;
 
     /**
@@ -385,7 +385,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
      * 
      */
-    @OutputExport(name="hsmConfigurationIdentifier", type=String.class, parameters={})
+    @Export(name="hsmConfigurationIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> hsmConfigurationIdentifier;
 
     /**
@@ -399,7 +399,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A list of AWS Identity and Access Management (IAM) roles that can be used by the cluster to access other AWS services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to 10 IAM roles in a single request
      * 
      */
-    @OutputExport(name="iamRoles", type=List.class, parameters={String.class})
+    @Export(name="iamRoles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> iamRoles;
 
     /**
@@ -413,7 +413,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The AWS Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -423,7 +423,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
-    @OutputExport(name="loggingProperties", type=ClusterLoggingProperties.class, parameters={})
+    @Export(name="loggingProperties", type=ClusterLoggingProperties.class, parameters={})
     private Output</* @Nullable */ ClusterLoggingProperties> loggingProperties;
 
     public Output</* @Nullable */ ClusterLoggingProperties> getLoggingProperties() {
@@ -433,7 +433,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the PendingModifiedValues for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
      * 
      */
-    @OutputExport(name="maintenanceTrackName", type=String.class, parameters={})
+    @Export(name="maintenanceTrackName", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceTrackName;
 
     /**
@@ -449,7 +449,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The value must be either -1 or an integer between 1 and 3,653.
      * 
      */
-    @OutputExport(name="manualSnapshotRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="manualSnapshotRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> manualSnapshotRetentionPeriod;
 
     /**
@@ -465,7 +465,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The password associated with the master user account for the cluster that is being created. Password must be between 8 and 64 characters in length, should have at least one uppercase letter.Must contain at least one lowercase letter.Must contain one number.Can be any printable ASCII character.
      * 
      */
-    @OutputExport(name="masterUserPassword", type=String.class, parameters={})
+    @Export(name="masterUserPassword", type=String.class, parameters={})
     private Output<String> masterUserPassword;
 
     /**
@@ -479,7 +479,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The user name associated with the master user account for the cluster that is being created. The user name can't be PUBLIC and first character must be a letter.
      * 
      */
-    @OutputExport(name="masterUsername", type=String.class, parameters={})
+    @Export(name="masterUsername", type=String.class, parameters={})
     private Output<String> masterUsername;
 
     /**
@@ -493,7 +493,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The node type to be provisioned for the cluster.Valid Values: ds2.xlarge | ds2.8xlarge | dc1.large | dc1.8xlarge | dc2.large | dc2.8xlarge | ra3.4xlarge | ra3.16xlarge
      * 
      */
-    @OutputExport(name="nodeType", type=String.class, parameters={})
+    @Export(name="nodeType", type=String.class, parameters={})
     private Output<String> nodeType;
 
     /**
@@ -507,7 +507,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node.
      * 
      */
-    @OutputExport(name="numberOfNodes", type=Integer.class, parameters={})
+    @Export(name="numberOfNodes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfNodes;
 
     /**
@@ -517,7 +517,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Integer> getNumberOfNodes() {
         return this.numberOfNodes;
     }
-    @OutputExport(name="ownerAccount", type=String.class, parameters={})
+    @Export(name="ownerAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerAccount;
 
     public Output</* @Nullable */ String> getOwnerAccount() {
@@ -527,7 +527,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The port number on which the cluster accepts incoming connections. The cluster is accessible only via the JDBC and ODBC connection strings
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -541,7 +541,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The weekly time range (in UTC) during which automated cluster maintenance can occur.
      * 
      */
-    @OutputExport(name="preferredMaintenanceWindow", type=String.class, parameters={})
+    @Export(name="preferredMaintenanceWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredMaintenanceWindow;
 
     /**
@@ -555,7 +555,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * If true, the cluster can be accessed from a public network.
      * 
      */
-    @OutputExport(name="publiclyAccessible", type=Boolean.class, parameters={})
+    @Export(name="publiclyAccessible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publiclyAccessible;
 
     /**
@@ -569,7 +569,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Redshift operation to be performed. Resource Action supports pause-cluster, resume-cluster APIs
      * 
      */
-    @OutputExport(name="resourceAction", type=String.class, parameters={})
+    @Export(name="resourceAction", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceAction;
 
     /**
@@ -583,7 +583,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The identifier of the database revision. You can retrieve this value from the response to the DescribeClusterDbRevisions request.
      * 
      */
-    @OutputExport(name="revisionTarget", type=String.class, parameters={})
+    @Export(name="revisionTarget", type=String.class, parameters={})
     private Output</* @Nullable */ String> revisionTarget;
 
     /**
@@ -597,7 +597,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A boolean indicating if we want to rotate Encryption Keys.
      * 
      */
-    @OutputExport(name="rotateEncryptionKey", type=Boolean.class, parameters={})
+    @Export(name="rotateEncryptionKey", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rotateEncryptionKey;
 
     /**
@@ -611,7 +611,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the cluster the source snapshot was created from. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
      * 
      */
-    @OutputExport(name="snapshotClusterIdentifier", type=String.class, parameters={})
+    @Export(name="snapshotClusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotClusterIdentifier;
 
     /**
@@ -625,7 +625,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
      * 
      */
-    @OutputExport(name="snapshotCopyGrantName", type=String.class, parameters={})
+    @Export(name="snapshotCopyGrantName", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotCopyGrantName;
 
     /**
@@ -639,7 +639,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
      * 
      */
-    @OutputExport(name="snapshotCopyManual", type=Boolean.class, parameters={})
+    @Export(name="snapshotCopyManual", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> snapshotCopyManual;
 
     /**
@@ -657,7 +657,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      *  Constraints: Must be at least 1 and no more than 35.
      * 
      */
-    @OutputExport(name="snapshotCopyRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="snapshotCopyRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> snapshotCopyRetentionPeriod;
 
     /**
@@ -675,7 +675,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive.
      * 
      */
-    @OutputExport(name="snapshotIdentifier", type=String.class, parameters={})
+    @Export(name="snapshotIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotIdentifier;
 
     /**
@@ -689,7 +689,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The list of tags for the cluster parameter group.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ClusterTag.class})
+    @Export(name="tags", type=List.class, parameters={ClusterTag.class})
     private Output</* @Nullable */ List<ClusterTag>> tags;
 
     /**
@@ -703,7 +703,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
      * 
      */
-    @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcSecurityGroupIds;
 
     /**

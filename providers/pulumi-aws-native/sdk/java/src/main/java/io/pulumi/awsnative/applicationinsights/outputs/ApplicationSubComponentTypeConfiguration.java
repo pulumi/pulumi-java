@@ -5,10 +5,10 @@ package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationSubComponentTypeConfigurationSubComponentType;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationSubComponentConfigurationDetails;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationSubComponentTypeConfiguration {
     /**
      * The configuration settings of sub components.
@@ -21,10 +21,10 @@ public final class ApplicationSubComponentTypeConfiguration {
      */
     private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationSubComponentTypeConfiguration(
-        @OutputCustomType.Parameter("subComponentConfigurationDetails") ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails,
-        @OutputCustomType.Parameter("subComponentType") ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
+        @CustomType.Parameter("subComponentConfigurationDetails") ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails,
+        @CustomType.Parameter("subComponentType") ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
         this.subComponentConfigurationDetails = subComponentConfigurationDetails;
         this.subComponentType = subComponentType;
     }

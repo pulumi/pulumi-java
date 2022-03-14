@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,28 +13,28 @@ public final class WirelessDeviceSessionKeysAbpV11Args extends io.pulumi.resourc
 
     public static final WirelessDeviceSessionKeysAbpV11Args Empty = new WirelessDeviceSessionKeysAbpV11Args();
 
-    @InputImport(name="appSKey", required=true)
+    @Import(name="appSKey", required=true)
       private final Output<String> appSKey;
 
     public Output<String> getAppSKey() {
         return this.appSKey;
     }
 
-    @InputImport(name="fNwkSIntKey", required=true)
+    @Import(name="fNwkSIntKey", required=true)
       private final Output<String> fNwkSIntKey;
 
     public Output<String> getFNwkSIntKey() {
         return this.fNwkSIntKey;
     }
 
-    @InputImport(name="nwkSEncKey", required=true)
+    @Import(name="nwkSEncKey", required=true)
       private final Output<String> nwkSEncKey;
 
     public Output<String> getNwkSEncKey() {
         return this.nwkSEncKey;
     }
 
-    @InputImport(name="sNwkSIntKey", required=true)
+    @Import(name="sNwkSIntKey", required=true)
       private final Output<String> sNwkSIntKey;
 
     public Output<String> getSNwkSIntKey() {

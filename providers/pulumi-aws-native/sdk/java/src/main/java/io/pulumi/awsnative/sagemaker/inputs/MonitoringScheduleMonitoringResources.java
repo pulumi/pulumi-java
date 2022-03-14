@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleClusterConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class MonitoringScheduleMonitoringResources extends io.pulumi.resou
 
     public static final MonitoringScheduleMonitoringResources Empty = new MonitoringScheduleMonitoringResources();
 
-    @InputImport(name="clusterConfig", required=true)
+    @Import(name="clusterConfig", required=true)
       private final MonitoringScheduleClusterConfig clusterConfig;
 
     public MonitoringScheduleClusterConfig getClusterConfig() {

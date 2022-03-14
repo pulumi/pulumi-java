@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * The identifier of the Amazon Connect instance.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -29,7 +29,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * The name of the user hierarchy group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) for the parent user hierarchy group.
      * 
      */
-    @InputImport(name="parentGroupArn")
+    @Import(name="parentGroupArn")
       private final @Nullable Output<String> parentGroupArn;
 
     public Output<String> getParentGroupArn() {

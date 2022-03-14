@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationStreamSelection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationMssManifest {
     private final @Nullable String manifestName;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationMssManifest(
-        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
-        @OutputCustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
+        @CustomType.Parameter("manifestName") @Nullable String manifestName,
+        @CustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.manifestName = manifestName;
         this.streamSelection = streamSelection;
     }

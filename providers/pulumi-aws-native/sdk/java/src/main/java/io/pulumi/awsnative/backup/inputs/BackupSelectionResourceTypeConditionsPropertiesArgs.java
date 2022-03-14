@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.BackupSelectionConditionParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class BackupSelectionResourceTypeConditionsPropertiesArgs extends i
 
     public static final BackupSelectionResourceTypeConditionsPropertiesArgs Empty = new BackupSelectionResourceTypeConditionsPropertiesArgs();
 
-    @InputImport(name="stringEquals")
+    @Import(name="stringEquals")
       private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringEquals;
 
     public Output<List<BackupSelectionConditionParameterArgs>> getStringEquals() {
         return this.stringEquals == null ? Output.empty() : this.stringEquals;
     }
 
-    @InputImport(name="stringLike")
+    @Import(name="stringLike")
       private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringLike;
 
     public Output<List<BackupSelectionConditionParameterArgs>> getStringLike() {
         return this.stringLike == null ? Output.empty() : this.stringLike;
     }
 
-    @InputImport(name="stringNotEquals")
+    @Import(name="stringNotEquals")
       private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotEquals;
 
     public Output<List<BackupSelectionConditionParameterArgs>> getStringNotEquals() {
         return this.stringNotEquals == null ? Output.empty() : this.stringNotEquals;
     }
 
-    @InputImport(name="stringNotLike")
+    @Import(name="stringNotLike")
       private final @Nullable Output<List<BackupSelectionConditionParameterArgs>> stringNotLike;
 
     public Output<List<BackupSelectionConditionParameterArgs>> getStringNotLike() {

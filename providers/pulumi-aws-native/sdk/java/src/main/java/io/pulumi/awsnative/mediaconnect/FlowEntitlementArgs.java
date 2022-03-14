@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEntitlementStatus;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowEntitlementEncryptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
      * 
      */
-    @InputImport(name="dataTransferSubscriberFeePercent")
+    @Import(name="dataTransferSubscriberFeePercent")
       private final @Nullable Output<Integer> dataTransferSubscriberFeePercent;
 
     public Output<Integer> getDataTransferSubscriberFeePercent() {
@@ -33,7 +33,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * A description of the entitlement.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * The type of encryption that will be used on the output that is associated with this entitlement.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<FlowEntitlementEncryptionArgs> encryption;
 
     public Output<FlowEntitlementEncryptionArgs> getEncryption() {
@@ -55,7 +55,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      *  An indication of whether the entitlement is enabled.
      * 
      */
-    @InputImport(name="entitlementStatus")
+    @Import(name="entitlementStatus")
       private final @Nullable Output<FlowEntitlementEntitlementStatus> entitlementStatus;
 
     public Output<FlowEntitlementEntitlementStatus> getEntitlementStatus() {
@@ -66,7 +66,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * The ARN of the flow.
      * 
      */
-    @InputImport(name="flowArn", required=true)
+    @Import(name="flowArn", required=true)
       private final Output<String> flowArn;
 
     public Output<String> getFlowArn() {
@@ -77,7 +77,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the entitlement.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -88,7 +88,7 @@ public final class FlowEntitlementArgs extends io.pulumi.resources.ResourceArgs 
      * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
      * 
      */
-    @InputImport(name="subscribers", required=true)
+    @Import(name="subscribers", required=true)
       private final Output<List<String>> subscribers;
 
     public Output<List<String>> getSubscribers() {

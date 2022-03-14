@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.redshift;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
      * 
      */
-    @InputImport(name="clusterIdentifier")
+    @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -30,7 +30,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the endpoint.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -41,7 +41,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID of the owner of the cluster.
      * 
      */
-    @InputImport(name="resourceOwner")
+    @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
     public Output<String> getResourceOwner() {
@@ -52,7 +52,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * The subnet group name where Amazon Redshift chooses to deploy the endpoint.
      * 
      */
-    @InputImport(name="subnetGroupName")
+    @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
@@ -63,7 +63,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * A list of vpc security group ids to apply to the created endpoint access.
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds", required=true)
+    @Import(name="vpcSecurityGroupIds", required=true)
       private final Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {

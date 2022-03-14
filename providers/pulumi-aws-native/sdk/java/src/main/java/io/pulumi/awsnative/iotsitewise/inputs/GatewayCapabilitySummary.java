@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,14 +18,14 @@ public final class GatewayCapabilitySummary extends io.pulumi.resources.InvokeAr
 
     public static final GatewayCapabilitySummary Empty = new GatewayCapabilitySummary();
 
-    @InputImport(name="capabilityConfiguration")
+    @Import(name="capabilityConfiguration")
       private final @Nullable String capabilityConfiguration;
 
     public Optional<String> getCapabilityConfiguration() {
         return this.capabilityConfiguration == null ? Optional.empty() : Optional.ofNullable(this.capabilityConfiguration);
     }
 
-    @InputImport(name="capabilityNamespace", required=true)
+    @Import(name="capabilityNamespace", required=true)
       private final String capabilityNamespace;
 
     public String getCapabilityNamespace() {

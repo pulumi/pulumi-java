@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMountTargetResult {
     private final @Nullable String id;
     private final @Nullable List<String> securityGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMountTargetResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups) {
         this.id = id;
         this.securityGroups = securityGroups;
     }

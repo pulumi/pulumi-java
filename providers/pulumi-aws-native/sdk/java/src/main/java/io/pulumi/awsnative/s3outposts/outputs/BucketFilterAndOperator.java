@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.s3outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketFilterAndOperator {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketFilterAndOperator() {
     }
 

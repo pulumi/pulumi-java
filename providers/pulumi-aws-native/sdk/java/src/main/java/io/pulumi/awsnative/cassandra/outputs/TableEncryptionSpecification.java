@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.cassandra.outputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableEncryptionType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableEncryptionSpecification {
     private final TableEncryptionType encryptionType;
     private final @Nullable String kmsKeyIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableEncryptionSpecification(
-        @OutputCustomType.Parameter("encryptionType") TableEncryptionType encryptionType,
-        @OutputCustomType.Parameter("kmsKeyIdentifier") @Nullable String kmsKeyIdentifier) {
+        @CustomType.Parameter("encryptionType") TableEncryptionType encryptionType,
+        @CustomType.Parameter("kmsKeyIdentifier") @Nullable String kmsKeyIdentifier) {
         this.encryptionType = encryptionType;
         this.kmsKeyIdentifier = kmsKeyIdentifier;
     }

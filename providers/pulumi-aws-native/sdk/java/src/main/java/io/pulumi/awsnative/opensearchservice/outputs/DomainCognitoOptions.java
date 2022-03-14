@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainCognitoOptions {
     private final @Nullable Boolean enabled;
     private final @Nullable String identityPoolId;
     private final @Nullable String roleArn;
     private final @Nullable String userPoolId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainCognitoOptions(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("identityPoolId") @Nullable String identityPoolId,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("userPoolId") @Nullable String userPoolId) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("identityPoolId") @Nullable String identityPoolId,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("userPoolId") @Nullable String userPoolId) {
         this.enabled = enabled;
         this.identityPoolId = identityPoolId;
         this.roleArn = roleArn;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
      * A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
      * 
      */
-    @InputImport(name="allowPublicOverrides")
+    @Import(name="allowPublicOverrides")
       private final @Nullable Output<Boolean> allowPublicOverrides;
 
     public Output<Boolean> getAllowPublicOverrides() {
@@ -34,7 +34,7 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
      * Specifies the anonymous access to all objects in a bucket.
      * 
      */
-    @InputImport(name="getObject")
+    @Import(name="getObject")
       private final @Nullable Output<String> getObject;
 
     public Output<String> getGetObject() {

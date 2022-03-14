@@ -5,13 +5,13 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceEncryptionKeyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowSourceEncryption {
     /**
      * The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
@@ -59,17 +59,17 @@ public final class FlowSourceEncryption {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowSourceEncryption(
-        @OutputCustomType.Parameter("algorithm") FlowSourceEncryptionAlgorithm algorithm,
-        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
-        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
-        @OutputCustomType.Parameter("keyType") @Nullable FlowSourceEncryptionKeyType keyType,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("algorithm") FlowSourceEncryptionAlgorithm algorithm,
+        @CustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @CustomType.Parameter("deviceId") @Nullable String deviceId,
+        @CustomType.Parameter("keyType") @Nullable FlowSourceEncryptionKeyType keyType,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("secretArn") @Nullable String secretArn,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.algorithm = algorithm;
         this.constantInitializationVector = constantInitializationVector;
         this.deviceId = deviceId;

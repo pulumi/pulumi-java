@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class RuleGroupPortRange extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupPortRange Empty = new RuleGroupPortRange();
 
-    @InputImport(name="fromPort", required=true)
+    @Import(name="fromPort", required=true)
       private final Integer fromPort;
 
     public Integer getFromPort() {
         return this.fromPort;
     }
 
-    @InputImport(name="toPort", required=true)
+    @Import(name="toPort", required=true)
       private final Integer toPort;
 
     public Integer getToPort() {

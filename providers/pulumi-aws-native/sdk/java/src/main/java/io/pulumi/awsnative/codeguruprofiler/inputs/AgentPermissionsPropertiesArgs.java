@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codeguruprofiler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AgentPermissionsPropertiesArgs extends io.pulumi.resources.Re
      * The principals for the agent permissions.
      * 
      */
-    @InputImport(name="principals", required=true)
+    @Import(name="principals", required=true)
       private final Output<List<String>> principals;
 
     public Output<List<String>> getPrincipals() {

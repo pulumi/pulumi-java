@@ -5,13 +5,13 @@ package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.PublisherIdentityProvider;
 import io.pulumi.awsnative.cloudformation.enums.PublisherStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPublisherResult {
     /**
      * The type of account used as the identity provider when registering this publisher with CloudFormation.
@@ -34,12 +34,12 @@ public final class GetPublisherResult {
      */
     private final @Nullable PublisherStatus publisherStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPublisherResult(
-        @OutputCustomType.Parameter("identityProvider") @Nullable PublisherIdentityProvider identityProvider,
-        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
-        @OutputCustomType.Parameter("publisherProfile") @Nullable String publisherProfile,
-        @OutputCustomType.Parameter("publisherStatus") @Nullable PublisherStatus publisherStatus) {
+        @CustomType.Parameter("identityProvider") @Nullable PublisherIdentityProvider identityProvider,
+        @CustomType.Parameter("publisherId") @Nullable String publisherId,
+        @CustomType.Parameter("publisherProfile") @Nullable String publisherProfile,
+        @CustomType.Parameter("publisherStatus") @Nullable PublisherStatus publisherStatus) {
         this.identityProvider = identityProvider;
         this.publisherId = publisherId;
         this.publisherProfile = publisherProfile;

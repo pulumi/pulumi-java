@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
      * A string used to identify this tag
      * 
      */
-    @InputImport(name="cloudWatchLogGroupArn", required=true)
+    @Import(name="cloudWatchLogGroupArn", required=true)
       private final Output<String> cloudWatchLogGroupArn;
 
     public Output<String> getCloudWatchLogGroupArn() {
@@ -28,7 +28,7 @@ public final class BotAliasCloudWatchLogGroupLogDestinationArgs extends io.pulum
      * A string containing the value for the tag
      * 
      */
-    @InputImport(name="logPrefix", required=true)
+    @Import(name="logPrefix", required=true)
       private final Output<String> logPrefix;
 
     public Output<String> getLogPrefix() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53resolver.FirewallDomainListArgs;
 import io.pulumi.awsnative.route53resolver.enums.FirewallDomainListStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallDomainListTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * Arn
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * Rfc3339TimeString
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -53,7 +53,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * The id of the creator request.
      * 
      */
-    @OutputExport(name="creatorRequestId", type=String.class, parameters={})
+    @Export(name="creatorRequestId", type=String.class, parameters={})
     private Output<String> creatorRequestId;
 
     /**
@@ -67,7 +67,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * Count
      * 
      */
-    @OutputExport(name="domainCount", type=Integer.class, parameters={})
+    @Export(name="domainCount", type=Integer.class, parameters={})
     private Output<Integer> domainCount;
 
     /**
@@ -81,7 +81,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * S3 URL to import domains from.
      * 
      */
-    @OutputExport(name="domainFileUrl", type=String.class, parameters={})
+    @Export(name="domainFileUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainFileUrl;
 
     /**
@@ -91,7 +91,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getDomainFileUrl() {
         return this.domainFileUrl;
     }
-    @OutputExport(name="domains", type=List.class, parameters={String.class})
+    @Export(name="domains", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> domains;
 
     public Output</* @Nullable */ List<String>> getDomains() {
@@ -101,7 +101,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * ServicePrincipal
      * 
      */
-    @OutputExport(name="managedOwnerName", type=String.class, parameters={})
+    @Export(name="managedOwnerName", type=String.class, parameters={})
     private Output<String> managedOwnerName;
 
     /**
@@ -115,7 +115,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * Rfc3339TimeString
      * 
      */
-    @OutputExport(name="modificationTime", type=String.class, parameters={})
+    @Export(name="modificationTime", type=String.class, parameters={})
     private Output<String> modificationTime;
 
     /**
@@ -129,7 +129,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * FirewallDomainListName
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -143,7 +143,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * ResolverFirewallDomainList, possible values are COMPLETE, DELETING, UPDATING, COMPLETE_IMPORT_FAILED, IMPORTING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
      */
-    @OutputExport(name="status", type=FirewallDomainListStatus.class, parameters={})
+    @Export(name="status", type=FirewallDomainListStatus.class, parameters={})
     private Output<FirewallDomainListStatus> status;
 
     /**
@@ -157,7 +157,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * FirewallDomainListAssociationStatus
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -171,7 +171,7 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
      * Tags
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={FirewallDomainListTag.class})
+    @Export(name="tags", type=List.class, parameters={FirewallDomainListTag.class})
     private Output</* @Nullable */ List<FirewallDomainListTag>> tags;
 
     /**

@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.ServiceDeploymentCircuitBreaker;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceDeploymentConfiguration {
     private final @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker;
     private final @Nullable Integer maximumPercent;
     private final @Nullable Integer minimumHealthyPercent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceDeploymentConfiguration(
-        @OutputCustomType.Parameter("deploymentCircuitBreaker") @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker,
-        @OutputCustomType.Parameter("maximumPercent") @Nullable Integer maximumPercent,
-        @OutputCustomType.Parameter("minimumHealthyPercent") @Nullable Integer minimumHealthyPercent) {
+        @CustomType.Parameter("deploymentCircuitBreaker") @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker,
+        @CustomType.Parameter("maximumPercent") @Nullable Integer maximumPercent,
+        @CustomType.Parameter("minimumHealthyPercent") @Nullable Integer minimumHealthyPercent) {
         this.deploymentCircuitBreaker = deploymentCircuitBreaker;
         this.maximumPercent = maximumPercent;
         this.minimumHealthyPercent = minimumHealthyPercent;

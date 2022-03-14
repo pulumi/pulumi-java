@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.accessanalyzer.outputs;
 
 import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyzerArchiveRule {
     private final List<AnalyzerFilter> filter;
     /**
@@ -18,10 +18,10 @@ public final class AnalyzerArchiveRule {
      */
     private final String ruleName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyzerArchiveRule(
-        @OutputCustomType.Parameter("filter") List<AnalyzerFilter> filter,
-        @OutputCustomType.Parameter("ruleName") String ruleName) {
+        @CustomType.Parameter("filter") List<AnalyzerFilter> filter,
+        @CustomType.Parameter("ruleName") String ruleName) {
         this.filter = filter;
         this.ruleName = ruleName;
     }

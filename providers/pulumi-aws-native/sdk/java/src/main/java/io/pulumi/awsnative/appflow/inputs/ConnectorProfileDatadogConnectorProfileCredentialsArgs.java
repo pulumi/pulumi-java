@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
      * 
      */
-    @InputImport(name="apiKey", required=true)
+    @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
     public Output<String> getApiKey() {
@@ -28,7 +28,7 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
      * Application keys, in conjunction with your API key, give you full access to Datadog’s programmatic API. Application keys are associated with the user account that created them. The application key is used to log all requests made to the API.
      * 
      */
-    @InputImport(name="applicationKey", required=true)
+    @Import(name="applicationKey", required=true)
       private final Output<String> applicationKey;
 
     public Output<String> getApplicationKey() {

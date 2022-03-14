@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.CustomMetricTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomMetricResult {
     /**
      * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
@@ -29,11 +29,11 @@ public final class GetCustomMetricResult {
      */
     private final @Nullable List<CustomMetricTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomMetricResult(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("metricArn") @Nullable String metricArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<CustomMetricTag> tags) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("metricArn") @Nullable String metricArn,
+        @CustomType.Parameter("tags") @Nullable List<CustomMetricTag> tags) {
         this.displayName = displayName;
         this.metricArn = metricArn;
         this.tags = tags;

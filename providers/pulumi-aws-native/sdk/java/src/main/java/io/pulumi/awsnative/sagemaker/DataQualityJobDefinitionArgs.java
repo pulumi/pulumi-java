@@ -12,7 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionNetworkConfi
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionStoppingConditionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,49 +23,49 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
 
     public static final DataQualityJobDefinitionArgs Empty = new DataQualityJobDefinitionArgs();
 
-    @InputImport(name="dataQualityAppSpecification", required=true)
+    @Import(name="dataQualityAppSpecification", required=true)
       private final Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> dataQualityAppSpecification;
 
     public Output<DataQualityJobDefinitionDataQualityAppSpecificationArgs> getDataQualityAppSpecification() {
         return this.dataQualityAppSpecification;
     }
 
-    @InputImport(name="dataQualityBaselineConfig")
+    @Import(name="dataQualityBaselineConfig")
       private final @Nullable Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig;
 
     public Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> getDataQualityBaselineConfig() {
         return this.dataQualityBaselineConfig == null ? Output.empty() : this.dataQualityBaselineConfig;
     }
 
-    @InputImport(name="dataQualityJobInput", required=true)
+    @Import(name="dataQualityJobInput", required=true)
       private final Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput;
 
     public Output<DataQualityJobDefinitionDataQualityJobInputArgs> getDataQualityJobInput() {
         return this.dataQualityJobInput;
     }
 
-    @InputImport(name="dataQualityJobOutputConfig", required=true)
+    @Import(name="dataQualityJobOutputConfig", required=true)
       private final Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> dataQualityJobOutputConfig;
 
     public Output<DataQualityJobDefinitionMonitoringOutputConfigArgs> getDataQualityJobOutputConfig() {
         return this.dataQualityJobOutputConfig;
     }
 
-    @InputImport(name="jobDefinitionName")
+    @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
     public Output<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
     }
 
-    @InputImport(name="jobResources", required=true)
+    @Import(name="jobResources", required=true)
       private final Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Output<DataQualityJobDefinitionMonitoringResourcesArgs> getJobResources() {
         return this.jobResources;
     }
 
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Output<DataQualityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
@@ -76,14 +76,14 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stoppingCondition")
+    @Import(name="stoppingCondition")
       private final @Nullable Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Output<DataQualityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
@@ -94,7 +94,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags;
 
     public Output<List<DataQualityJobDefinitionTagArgs>> getTags() {

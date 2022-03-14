@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketNotificationFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketTopicConfiguration {
     /**
      * The Amazon S3 bucket event about which to send notifications.
@@ -28,11 +28,11 @@ public final class BucketTopicConfiguration {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketTopicConfiguration(
-        @OutputCustomType.Parameter("event") String event,
-        @OutputCustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("event") String event,
+        @CustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
+        @CustomType.Parameter("topic") String topic) {
         this.event = event;
         this.filter = filter;
         this.topic = topic;

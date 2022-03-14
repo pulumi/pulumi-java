@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAssetArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the asset
      * 
      */
-    @InputImport(name="assetId", required=true)
+    @Import(name="assetId", required=true)
       private final String assetId;
 
     public String getAssetId() {

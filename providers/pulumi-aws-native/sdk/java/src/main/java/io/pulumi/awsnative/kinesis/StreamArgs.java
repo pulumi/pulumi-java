@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kinesis.inputs.StreamEncryptionArgs;
 import io.pulumi.awsnative.kinesis.inputs.StreamModeDetailsArgs;
 import io.pulumi.awsnative.kinesis.inputs.StreamTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kinesis stream.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The number of hours for the data records that are stored in shards to remain accessible.
      * 
      */
-    @InputImport(name="retentionPeriodHours")
+    @Import(name="retentionPeriodHours")
       private final @Nullable Output<Integer> retentionPeriodHours;
 
     public Output<Integer> getRetentionPeriodHours() {
@@ -45,7 +45,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
      * 
      */
-    @InputImport(name="shardCount")
+    @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
     public Output<Integer> getShardCount() {
@@ -56,7 +56,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
      * 
      */
-    @InputImport(name="streamEncryption")
+    @Import(name="streamEncryption")
       private final @Nullable Output<StreamEncryptionArgs> streamEncryption;
 
     public Output<StreamEncryptionArgs> getStreamEncryption() {
@@ -67,7 +67,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The mode in which the stream is running.
      * 
      */
-    @InputImport(name="streamModeDetails")
+    @Import(name="streamModeDetails")
       private final @Nullable Output<StreamModeDetailsArgs> streamModeDetails;
 
     public Output<StreamModeDetailsArgs> getStreamModeDetails() {
@@ -78,7 +78,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
     public Output<List<StreamTagArgs>> getTags() {

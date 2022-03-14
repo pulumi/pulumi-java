@@ -5,14 +5,14 @@ package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.enums.RecordingConfigurationState;
 import io.pulumi.awsnative.ivs.outputs.RecordingConfigurationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRecordingConfigurationResult {
     /**
      * Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
@@ -30,11 +30,11 @@ public final class GetRecordingConfigurationResult {
      */
     private final @Nullable List<RecordingConfigurationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRecordingConfigurationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("state") @Nullable RecordingConfigurationState state,
-        @OutputCustomType.Parameter("tags") @Nullable List<RecordingConfigurationTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("state") @Nullable RecordingConfigurationState state,
+        @CustomType.Parameter("tags") @Nullable List<RecordingConfigurationTag> tags) {
         this.arn = arn;
         this.state = state;
         this.tags = tags;

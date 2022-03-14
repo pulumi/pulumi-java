@@ -9,14 +9,14 @@ import io.pulumi.awsnative.dynamodb.outputs.GlobalTableReadProvisionedThroughput
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableReplicaGlobalSecondaryIndexSpecification;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableReplicaSSESpecification;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableReplicaSpecification {
     private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
     private final @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes;
@@ -26,15 +26,15 @@ public final class GlobalTableReplicaSpecification {
     private final @Nullable GlobalTableReplicaSSESpecification sSESpecification;
     private final @Nullable List<GlobalTableTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableReplicaSpecification(
-        @OutputCustomType.Parameter("contributorInsightsSpecification") @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
-        @OutputCustomType.Parameter("globalSecondaryIndexes") @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes,
-        @OutputCustomType.Parameter("pointInTimeRecoverySpecification") @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification,
-        @OutputCustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("sSESpecification") @Nullable GlobalTableReplicaSSESpecification sSESpecification,
-        @OutputCustomType.Parameter("tags") @Nullable List<GlobalTableTag> tags) {
+        @CustomType.Parameter("contributorInsightsSpecification") @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
+        @CustomType.Parameter("globalSecondaryIndexes") @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes,
+        @CustomType.Parameter("pointInTimeRecoverySpecification") @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification,
+        @CustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("sSESpecification") @Nullable GlobalTableReplicaSSESpecification sSESpecification,
+        @CustomType.Parameter("tags") @Nullable List<GlobalTableTag> tags) {
         this.contributorInsightsSpecification = contributorInsightsSpecification;
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;

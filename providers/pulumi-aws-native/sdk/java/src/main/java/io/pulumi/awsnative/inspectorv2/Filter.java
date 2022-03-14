@@ -8,7 +8,7 @@ import io.pulumi.awsnative.inspectorv2.FilterArgs;
 import io.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterCriteria;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * Findings filter ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * Findings filter description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * Findings filter action.
      * 
      */
-    @OutputExport(name="filterAction", type=FilterAction.class, parameters={})
+    @Export(name="filterAction", type=FilterAction.class, parameters={})
     private Output<FilterAction> filterAction;
 
     /**
@@ -65,7 +65,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * Findings filter criteria.
      * 
      */
-    @OutputExport(name="filterCriteria", type=FilterCriteria.class, parameters={})
+    @Export(name="filterCriteria", type=FilterCriteria.class, parameters={})
     private Output<FilterCriteria> filterCriteria;
 
     /**
@@ -79,7 +79,7 @@ public class Filter extends io.pulumi.resources.CustomResource {
      * Findings filter name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

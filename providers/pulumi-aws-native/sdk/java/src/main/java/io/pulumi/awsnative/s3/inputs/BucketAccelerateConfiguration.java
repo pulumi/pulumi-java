@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketAccelerateConfigurationAccelerationStatus;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class BucketAccelerateConfiguration extends io.pulumi.resources.Inv
      * Configures the transfer acceleration state for an Amazon S3 bucket.
      * 
      */
-    @InputImport(name="accelerationStatus", required=true)
+    @Import(name="accelerationStatus", required=true)
       private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 
     public BucketAccelerateConfigurationAccelerationStatus getAccelerationStatus() {

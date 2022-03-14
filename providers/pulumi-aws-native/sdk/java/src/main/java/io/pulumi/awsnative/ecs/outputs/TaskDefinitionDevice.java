@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionDevice {
     private final @Nullable String containerPath;
     private final @Nullable String hostPath;
     private final @Nullable List<String> permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionDevice(
-        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
-        @OutputCustomType.Parameter("hostPath") @Nullable String hostPath,
-        @OutputCustomType.Parameter("permissions") @Nullable List<String> permissions) {
+        @CustomType.Parameter("containerPath") @Nullable String containerPath,
+        @CustomType.Parameter("hostPath") @Nullable String hostPath,
+        @CustomType.Parameter("permissions") @Nullable List<String> permissions) {
         this.containerPath = containerPath;
         this.hostPath = hostPath;
         this.permissions = permissions;

@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleDynamoDBAction {
     private final String hashKeyField;
     private final @Nullable String hashKeyType;
@@ -21,17 +21,17 @@ public final class TopicRuleDynamoDBAction {
     private final String roleArn;
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleDynamoDBAction(
-        @OutputCustomType.Parameter("hashKeyField") String hashKeyField,
-        @OutputCustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
-        @OutputCustomType.Parameter("hashKeyValue") String hashKeyValue,
-        @OutputCustomType.Parameter("payloadField") @Nullable String payloadField,
-        @OutputCustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
-        @OutputCustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
-        @OutputCustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("hashKeyField") String hashKeyField,
+        @CustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
+        @CustomType.Parameter("hashKeyValue") String hashKeyValue,
+        @CustomType.Parameter("payloadField") @Nullable String payloadField,
+        @CustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
+        @CustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
+        @CustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("tableName") String tableName) {
         this.hashKeyField = hashKeyField;
         this.hashKeyType = hashKeyType;
         this.hashKeyValue = hashKeyValue;

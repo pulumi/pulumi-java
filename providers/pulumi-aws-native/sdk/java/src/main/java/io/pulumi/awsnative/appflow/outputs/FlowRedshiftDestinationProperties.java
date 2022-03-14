@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.FlowErrorHandlingConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowRedshiftDestinationProperties {
     private final @Nullable String bucketPrefix;
     private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
     private final String intermediateBucketName;
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowRedshiftDestinationProperties(
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
-        @OutputCustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        @OutputCustomType.Parameter("intermediateBucketName") String intermediateBucketName,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @CustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
+        @CustomType.Parameter("intermediateBucketName") String intermediateBucketName,
+        @CustomType.Parameter("object") String object) {
         this.bucketPrefix = bucketPrefix;
         this.errorHandlingConfig = errorHandlingConfig;
         this.intermediateBucketName = intermediateBucketName;

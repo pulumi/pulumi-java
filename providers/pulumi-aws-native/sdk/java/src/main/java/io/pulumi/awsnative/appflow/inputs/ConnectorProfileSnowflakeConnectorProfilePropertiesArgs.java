@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * The name of the account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * The name of the Amazon S3 bucket associated with Snowﬂake.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -40,7 +40,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * The bucket prefix that refers to the Amazon S3 bucket associated with Snowﬂake.
      * 
      */
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
@@ -51,7 +51,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * The Snowﬂake Private Link service name to be used for private data transfers.
      * 
      */
-    @InputImport(name="privateLinkServiceName")
+    @Import(name="privateLinkServiceName")
       private final @Nullable Output<String> privateLinkServiceName;
 
     public Output<String> getPrivateLinkServiceName() {
@@ -62,7 +62,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * The region of the Snowﬂake account.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -74,7 +74,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * Snowﬂake account. This is written in the following format: < Database>< Schema><Stage Name>.
      * 
      */
-    @InputImport(name="stage", required=true)
+    @Import(name="stage", required=true)
       private final Output<String> stage;
 
     public Output<String> getStage() {
@@ -85,7 +85,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * The name of the Snowﬂake warehouse.
      * 
      */
-    @InputImport(name="warehouse", required=true)
+    @Import(name="warehouse", required=true)
       private final Output<String> warehouse;
 
     public Output<String> getWarehouse() {

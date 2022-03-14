@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.DestinationArgs;
 import io.pulumi.awsnative.iotwireless.enums.DestinationExpressionType;
 import io.pulumi.awsnative.iotwireless.outputs.DestinationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * Destination arn. Returned after successful create.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * Destination description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * Destination expression
      * 
      */
-    @OutputExport(name="expression", type=String.class, parameters={})
+    @Export(name="expression", type=String.class, parameters={})
     private Output<String> expression;
 
     /**
@@ -66,7 +66,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * Must be RuleName
      * 
      */
-    @OutputExport(name="expressionType", type=DestinationExpressionType.class, parameters={})
+    @Export(name="expressionType", type=DestinationExpressionType.class, parameters={})
     private Output<DestinationExpressionType> expressionType;
 
     /**
@@ -80,7 +80,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * Unique name of destination
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * AWS role ARN that grants access
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -108,7 +108,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DestinationTag.class})
+    @Export(name="tags", type=List.class, parameters={DestinationTag.class})
     private Output</* @Nullable */ List<DestinationTag>> tags;
 
     /**

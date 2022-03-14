@@ -8,7 +8,7 @@ import io.pulumi.awsnative.panorama.PackageArgs;
 import io.pulumi.awsnative.panorama.outputs.PackageStorageLocation;
 import io.pulumi.awsnative.panorama.outputs.PackageTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,37 +21,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:panorama:Package")
 public class Package extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="createdTime", type=Integer.class, parameters={})
+    @Export(name="createdTime", type=Integer.class, parameters={})
     private Output<Integer> createdTime;
 
     public Output<Integer> getCreatedTime() {
         return this.createdTime;
     }
-    @OutputExport(name="packageId", type=String.class, parameters={})
+    @Export(name="packageId", type=String.class, parameters={})
     private Output<String> packageId;
 
     public Output<String> getPackageId() {
         return this.packageId;
     }
-    @OutputExport(name="packageName", type=String.class, parameters={})
+    @Export(name="packageName", type=String.class, parameters={})
     private Output<String> packageName;
 
     public Output<String> getPackageName() {
         return this.packageName;
     }
-    @OutputExport(name="storageLocation", type=PackageStorageLocation.class, parameters={})
+    @Export(name="storageLocation", type=PackageStorageLocation.class, parameters={})
     private Output<PackageStorageLocation> storageLocation;
 
     public Output<PackageStorageLocation> getStorageLocation() {
         return this.storageLocation;
     }
-    @OutputExport(name="tags", type=List.class, parameters={PackageTag.class})
+    @Export(name="tags", type=List.class, parameters={PackageTag.class})
     private Output</* @Nullable */ List<PackageTag>> tags;
 
     public Output</* @Nullable */ List<PackageTag>> getTags() {

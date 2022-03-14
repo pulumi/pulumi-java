@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.WirelessGatewayLoRaWANGateway;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessGatewayTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWirelessGatewayResult {
     /**
      * Arn for Wireless Gateway. Returned upon successful create.
@@ -60,17 +60,17 @@ public final class GetWirelessGatewayResult {
      */
     private final @Nullable String thingName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWirelessGatewayResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("lastUplinkReceivedAt") @Nullable String lastUplinkReceivedAt,
-        @OutputCustomType.Parameter("loRaWAN") @Nullable WirelessGatewayLoRaWANGateway loRaWAN,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<WirelessGatewayTag> tags,
-        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn,
-        @OutputCustomType.Parameter("thingName") @Nullable String thingName) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("lastUplinkReceivedAt") @Nullable String lastUplinkReceivedAt,
+        @CustomType.Parameter("loRaWAN") @Nullable WirelessGatewayLoRaWANGateway loRaWAN,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<WirelessGatewayTag> tags,
+        @CustomType.Parameter("thingArn") @Nullable String thingArn,
+        @CustomType.Parameter("thingName") @Nullable String thingName) {
         this.arn = arn;
         this.description = description;
         this.id = id;

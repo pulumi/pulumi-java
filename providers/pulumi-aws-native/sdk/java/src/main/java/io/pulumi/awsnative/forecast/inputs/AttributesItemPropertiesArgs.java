@@ -5,7 +5,7 @@ package io.pulumi.awsnative.forecast.inputs;
 
 import io.pulumi.awsnative.forecast.enums.DatasetAttributesItemPropertiesAttributeType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
      * Name of the dataset field
      * 
      */
-    @InputImport(name="attributeName")
+    @Import(name="attributeName")
       private final @Nullable Output<String> attributeName;
 
     public Output<String> getAttributeName() {
@@ -30,7 +30,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
      * Data type of the field
      * 
      */
-    @InputImport(name="attributeType")
+    @Import(name="attributeType")
       private final @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
     public Output<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {

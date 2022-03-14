@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.AppImageConfigArgs;
 import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigKernelGatewayImageConfig;
 import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the AppImageConfig.
      * 
      */
-    @OutputExport(name="appImageConfigArn", type=String.class, parameters={})
+    @Export(name="appImageConfigArn", type=String.class, parameters={})
     private Output<String> appImageConfigArn;
 
     /**
@@ -38,7 +38,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * The Name of the AppImageConfig.
      * 
      */
-    @OutputExport(name="appImageConfigName", type=String.class, parameters={})
+    @Export(name="appImageConfigName", type=String.class, parameters={})
     private Output<String> appImageConfigName;
 
     /**
@@ -52,7 +52,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * The KernelGatewayImageConfig.
      * 
      */
-    @OutputExport(name="kernelGatewayImageConfig", type=AppImageConfigKernelGatewayImageConfig.class, parameters={})
+    @Export(name="kernelGatewayImageConfig", type=AppImageConfigKernelGatewayImageConfig.class, parameters={})
     private Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig;
 
     /**
@@ -66,7 +66,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * A list of tags to apply to the AppImageConfig.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AppImageConfigTag.class})
+    @Export(name="tags", type=List.class, parameters={AppImageConfigTag.class})
     private Output</* @Nullable */ List<AppImageConfigTag>> tags;
 
     /**

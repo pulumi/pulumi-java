@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleSigV4AuthorizationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class TopicRuleHttpAuthorizationArgs extends io.pulumi.resources.Re
 
     public static final TopicRuleHttpAuthorizationArgs Empty = new TopicRuleHttpAuthorizationArgs();
 
-    @InputImport(name="sigv4")
+    @Import(name="sigv4")
       private final @Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4;
 
     public Output<TopicRuleSigV4AuthorizationArgs> getSigv4() {

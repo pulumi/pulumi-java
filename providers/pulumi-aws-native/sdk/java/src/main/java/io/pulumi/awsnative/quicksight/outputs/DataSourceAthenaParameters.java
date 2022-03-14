@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceAthenaParameters {
     /**
      * <p>The workgroup that Amazon Athena uses.</p>
@@ -17,8 +17,8 @@ public final class DataSourceAthenaParameters {
      */
     private final @Nullable String workGroup;
 
-    @OutputCustomType.Constructor
-    private DataSourceAthenaParameters(@OutputCustomType.Parameter("workGroup") @Nullable String workGroup) {
+    @CustomType.Constructor
+    private DataSourceAthenaParameters(@CustomType.Parameter("workGroup") @Nullable String workGroup) {
         this.workGroup = workGroup;
     }
 

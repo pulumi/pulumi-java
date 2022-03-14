@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocationHDFSNameNode {
     /**
      * The DNS name or IP address of the Name Node in the customer's on premises HDFS cluster.
@@ -21,10 +21,10 @@ public final class LocationHDFSNameNode {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocationHDFSNameNode(
-        @OutputCustomType.Parameter("hostname") String hostname,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("hostname") String hostname,
+        @CustomType.Parameter("port") Integer port) {
         this.hostname = hostname;
         this.port = port;
     }

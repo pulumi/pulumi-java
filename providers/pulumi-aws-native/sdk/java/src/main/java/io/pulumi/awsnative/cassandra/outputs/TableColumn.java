@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.cassandra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableColumn {
     private final String columnName;
     private final String columnType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableColumn(
-        @OutputCustomType.Parameter("columnName") String columnName,
-        @OutputCustomType.Parameter("columnType") String columnType) {
+        @CustomType.Parameter("columnName") String columnName,
+        @CustomType.Parameter("columnType") String columnType) {
         this.columnName = columnName;
         this.columnType = columnType;
     }

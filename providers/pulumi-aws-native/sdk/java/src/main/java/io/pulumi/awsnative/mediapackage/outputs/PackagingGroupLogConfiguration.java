@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingGroupLogConfiguration {
     /**
      * Sets a custom AWS CloudWatch log group name for egress logs. If a log group name isn't specified, the default name is used: /aws/MediaPackage/VodEgressAccessLogs.
@@ -17,8 +17,8 @@ public final class PackagingGroupLogConfiguration {
      */
     private final @Nullable String logGroupName;
 
-    @OutputCustomType.Constructor
-    private PackagingGroupLogConfiguration(@OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName) {
+    @CustomType.Constructor
+    private PackagingGroupLogConfiguration(@CustomType.Parameter("logGroupName") @Nullable String logGroupName) {
         this.logGroupName = logGroupName;
     }
 

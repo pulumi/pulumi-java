@@ -5,14 +5,14 @@ package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DashboardResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.DashboardTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDashboardResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
@@ -45,13 +45,13 @@ public final class GetDashboardResult {
      */
     private final @Nullable List<DashboardTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDashboardResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("lastPublishedTime") @Nullable String lastPublishedTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("permissions") @Nullable List<DashboardResourcePermission> permissions,
-        @OutputCustomType.Parameter("tags") @Nullable List<DashboardTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("lastPublishedTime") @Nullable String lastPublishedTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("permissions") @Nullable List<DashboardResourcePermission> permissions,
+        @CustomType.Parameter("tags") @Nullable List<DashboardTag> tags) {
         this.arn = arn;
         this.lastPublishedTime = lastPublishedTime;
         this.name = name;

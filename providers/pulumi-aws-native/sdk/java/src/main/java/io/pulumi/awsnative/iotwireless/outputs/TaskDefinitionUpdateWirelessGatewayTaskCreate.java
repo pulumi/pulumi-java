@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionLoRaWANUpdateGatewayTaskCreate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionUpdateWirelessGatewayTaskCreate {
     private final @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN;
     private final @Nullable String updateDataRole;
     private final @Nullable String updateDataSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionUpdateWirelessGatewayTaskCreate(
-        @OutputCustomType.Parameter("loRaWAN") @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN,
-        @OutputCustomType.Parameter("updateDataRole") @Nullable String updateDataRole,
-        @OutputCustomType.Parameter("updateDataSource") @Nullable String updateDataSource) {
+        @CustomType.Parameter("loRaWAN") @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN,
+        @CustomType.Parameter("updateDataRole") @Nullable String updateDataRole,
+        @CustomType.Parameter("updateDataSource") @Nullable String updateDataSource) {
         this.loRaWAN = loRaWAN;
         this.updateDataRole = updateDataRole;
         this.updateDataSource = updateDataSource;

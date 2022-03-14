@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorVpcArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,14 +22,14 @@ public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.R
      * The bootstrap servers string of the Apache Kafka cluster.
      * 
      */
-    @InputImport(name="bootstrapServers", required=true)
+    @Import(name="bootstrapServers", required=true)
       private final Output<String> bootstrapServers;
 
     public Output<String> getBootstrapServers() {
         return this.bootstrapServers;
     }
 
-    @InputImport(name="vpc", required=true)
+    @Import(name="vpc", required=true)
       private final Output<ConnectorVpcArgs> vpc;
 
     public Output<ConnectorVpcArgs> getVpc() {

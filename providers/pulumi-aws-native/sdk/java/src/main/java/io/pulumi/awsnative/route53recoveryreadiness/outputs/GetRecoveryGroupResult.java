@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.RecoveryGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRecoveryGroupResult {
     /**
      * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
@@ -29,11 +29,11 @@ public final class GetRecoveryGroupResult {
      */
     private final @Nullable List<RecoveryGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRecoveryGroupResult(
-        @OutputCustomType.Parameter("cells") @Nullable List<String> cells,
-        @OutputCustomType.Parameter("recoveryGroupArn") @Nullable String recoveryGroupArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<RecoveryGroupTag> tags) {
+        @CustomType.Parameter("cells") @Nullable List<String> cells,
+        @CustomType.Parameter("recoveryGroupArn") @Nullable String recoveryGroupArn,
+        @CustomType.Parameter("tags") @Nullable List<RecoveryGroupTag> tags) {
         this.cells = cells;
         this.recoveryGroupArn = recoveryGroupArn;
         this.tags = tags;

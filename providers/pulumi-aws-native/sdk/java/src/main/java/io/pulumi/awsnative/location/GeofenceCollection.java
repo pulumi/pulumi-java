@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.GeofenceCollectionArgs;
 import io.pulumi.awsnative.location.enums.GeofenceCollectionPricingPlan;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,55 +18,55 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:location:GeofenceCollection")
 public class GeofenceCollection extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="collectionArn", type=String.class, parameters={})
+    @Export(name="collectionArn", type=String.class, parameters={})
     private Output<String> collectionArn;
 
     public Output<String> getCollectionArn() {
         return this.collectionArn;
     }
-    @OutputExport(name="collectionName", type=String.class, parameters={})
+    @Export(name="collectionName", type=String.class, parameters={})
     private Output<String> collectionName;
 
     public Output<String> getCollectionName() {
         return this.collectionName;
     }
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
-    @OutputExport(name="pricingPlan", type=GeofenceCollectionPricingPlan.class, parameters={})
+    @Export(name="pricingPlan", type=GeofenceCollectionPricingPlan.class, parameters={})
     private Output</* @Nullable */ GeofenceCollectionPricingPlan> pricingPlan;
 
     public Output</* @Nullable */ GeofenceCollectionPricingPlan> getPricingPlan() {
         return this.pricingPlan;
     }
-    @OutputExport(name="pricingPlanDataSource", type=String.class, parameters={})
+    @Export(name="pricingPlanDataSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> pricingPlanDataSource;
 
     public Output</* @Nullable */ String> getPricingPlanDataSource() {
         return this.pricingPlanDataSource;
     }
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

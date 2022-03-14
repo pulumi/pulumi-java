@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.inspectorv2.outputs;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterStringComparison;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilterStringFilter {
     private final FilterStringComparison comparison;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterStringFilter(
-        @OutputCustomType.Parameter("comparison") FilterStringComparison comparison,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("comparison") FilterStringComparison comparison,
+        @CustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.value = value;
     }

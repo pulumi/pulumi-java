@@ -5,20 +5,20 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreJsonConfiguration;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreParquetConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreFileFormatConfiguration {
     private final @Nullable DatastoreJsonConfiguration jsonConfiguration;
     private final @Nullable DatastoreParquetConfiguration parquetConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatastoreFileFormatConfiguration(
-        @OutputCustomType.Parameter("jsonConfiguration") @Nullable DatastoreJsonConfiguration jsonConfiguration,
-        @OutputCustomType.Parameter("parquetConfiguration") @Nullable DatastoreParquetConfiguration parquetConfiguration) {
+        @CustomType.Parameter("jsonConfiguration") @Nullable DatastoreJsonConfiguration jsonConfiguration,
+        @CustomType.Parameter("parquetConfiguration") @Nullable DatastoreParquetConfiguration parquetConfiguration) {
         this.jsonConfiguration = jsonConfiguration;
         this.parquetConfiguration = parquetConfiguration;
     }

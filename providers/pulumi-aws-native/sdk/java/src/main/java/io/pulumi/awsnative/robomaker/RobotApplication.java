@@ -9,7 +9,7 @@ import io.pulumi.awsnative.robomaker.outputs.RobotApplicationRobotSoftwareSuite;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationSourceConfig;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:robomaker:RobotApplication")
 public class RobotApplication extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
      * The revision ID of robot application.
      * 
      */
-    @OutputExport(name="currentRevisionId", type=String.class, parameters={})
+    @Export(name="currentRevisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> currentRevisionId;
 
     /**
@@ -47,7 +47,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
      * The URI of the Docker image for the robot application.
      * 
      */
-    @OutputExport(name="environment", type=String.class, parameters={})
+    @Export(name="environment", type=String.class, parameters={})
     private Output</* @Nullable */ String> environment;
 
     /**
@@ -61,7 +61,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
      * The name of the robot application.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -71,7 +71,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="robotSoftwareSuite", type=RobotApplicationRobotSoftwareSuite.class, parameters={})
+    @Export(name="robotSoftwareSuite", type=RobotApplicationRobotSoftwareSuite.class, parameters={})
     private Output<RobotApplicationRobotSoftwareSuite> robotSoftwareSuite;
 
     public Output<RobotApplicationRobotSoftwareSuite> getRobotSoftwareSuite() {
@@ -81,7 +81,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
      * The sources of the robot application.
      * 
      */
-    @OutputExport(name="sources", type=List.class, parameters={RobotApplicationSourceConfig.class})
+    @Export(name="sources", type=List.class, parameters={RobotApplicationSourceConfig.class})
     private Output</* @Nullable */ List<RobotApplicationSourceConfig>> sources;
 
     /**
@@ -91,7 +91,7 @@ public class RobotApplication extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<RobotApplicationSourceConfig>> getSources() {
         return this.sources;
     }
-    @OutputExport(name="tags", type=RobotApplicationTags.class, parameters={})
+    @Export(name="tags", type=RobotApplicationTags.class, parameters={})
     private Output</* @Nullable */ RobotApplicationTags> tags;
 
     public Output</* @Nullable */ RobotApplicationTags> getTags() {

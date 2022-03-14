@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.enums.TopicRuleDestinationStatus;
 import io.pulumi.awsnative.iot.inputs.TopicRuleDestinationHttpUrlDestinationSummaryArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleDestinationVpcDestinationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * HTTP URL destination properties.
      * 
      */
-    @InputImport(name="httpUrlProperties")
+    @Import(name="httpUrlProperties")
       private final @Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
 
     public Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> getHttpUrlProperties() {
@@ -31,7 +31,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * The status of the TopicRuleDestination.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<TopicRuleDestinationStatus> status;
 
     public Output<TopicRuleDestinationStatus> getStatus() {
@@ -42,7 +42,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * VPC destination properties.
      * 
      */
-    @InputImport(name="vpcProperties")
+    @Import(name="vpcProperties")
       private final @Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
 
     public Output<TopicRuleDestinationVpcDestinationPropertiesArgs> getVpcProperties() {

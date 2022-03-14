@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationStreamSelectionStreamOrder;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationStreamSelection {
     /**
      * The maximum video bitrate (bps) to include in output.
@@ -28,11 +28,11 @@ public final class PackagingConfigurationStreamSelection {
      */
     private final @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationStreamSelection(
-        @OutputCustomType.Parameter("maxVideoBitsPerSecond") @Nullable Integer maxVideoBitsPerSecond,
-        @OutputCustomType.Parameter("minVideoBitsPerSecond") @Nullable Integer minVideoBitsPerSecond,
-        @OutputCustomType.Parameter("streamOrder") @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
+        @CustomType.Parameter("maxVideoBitsPerSecond") @Nullable Integer maxVideoBitsPerSecond,
+        @CustomType.Parameter("minVideoBitsPerSecond") @Nullable Integer minVideoBitsPerSecond,
+        @CustomType.Parameter("streamOrder") @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
         this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
         this.minVideoBitsPerSecond = minVideoBitsPerSecond;
         this.streamOrder = streamOrder;

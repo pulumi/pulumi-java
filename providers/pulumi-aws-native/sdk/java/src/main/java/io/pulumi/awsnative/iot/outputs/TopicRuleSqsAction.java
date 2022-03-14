@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleSqsAction {
     private final String queueUrl;
     private final String roleArn;
     private final @Nullable Boolean useBase64;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleSqsAction(
-        @OutputCustomType.Parameter("queueUrl") String queueUrl,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("useBase64") @Nullable Boolean useBase64) {
+        @CustomType.Parameter("queueUrl") String queueUrl,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("useBase64") @Nullable Boolean useBase64) {
         this.queueUrl = queueUrl;
         this.roleArn = roleArn;
         this.useBase64 = useBase64;

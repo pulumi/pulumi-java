@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iot.outputs.SecurityProfileBehavior;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricToRetain;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public class SecurityProfile extends io.pulumi.resources.CustomResource {
      * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
      * 
      */
-    @OutputExport(name="additionalMetricsToRetainV2", type=List.class, parameters={SecurityProfileMetricToRetain.class})
+    @Export(name="additionalMetricsToRetainV2", type=List.class, parameters={SecurityProfileMetricToRetain.class})
     private Output</* @Nullable */ List<SecurityProfileMetricToRetain>> additionalMetricsToRetainV2;
 
     /**
@@ -42,7 +42,7 @@ public class SecurityProfile extends io.pulumi.resources.CustomResource {
      * Specifies the destinations to which alerts are sent.
      * 
      */
-    @OutputExport(name="alertTargets", type=Object.class, parameters={})
+    @Export(name="alertTargets", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> alertTargets;
 
     /**
@@ -56,7 +56,7 @@ public class SecurityProfile extends io.pulumi.resources.CustomResource {
      * Specifies the behaviors that, when violated by a device (thing), cause an alert.
      * 
      */
-    @OutputExport(name="behaviors", type=List.class, parameters={SecurityProfileBehavior.class})
+    @Export(name="behaviors", type=List.class, parameters={SecurityProfileBehavior.class})
     private Output</* @Nullable */ List<SecurityProfileBehavior>> behaviors;
 
     /**
@@ -70,7 +70,7 @@ public class SecurityProfile extends io.pulumi.resources.CustomResource {
      * The ARN (Amazon resource name) of the created security profile.
      * 
      */
-    @OutputExport(name="securityProfileArn", type=String.class, parameters={})
+    @Export(name="securityProfileArn", type=String.class, parameters={})
     private Output<String> securityProfileArn;
 
     /**
@@ -84,7 +84,7 @@ public class SecurityProfile extends io.pulumi.resources.CustomResource {
      * A description of the security profile.
      * 
      */
-    @OutputExport(name="securityProfileDescription", type=String.class, parameters={})
+    @Export(name="securityProfileDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityProfileDescription;
 
     /**
@@ -98,7 +98,7 @@ public class SecurityProfile extends io.pulumi.resources.CustomResource {
      * A unique identifier for the security profile.
      * 
      */
-    @OutputExport(name="securityProfileName", type=String.class, parameters={})
+    @Export(name="securityProfileName", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityProfileName;
 
     /**
@@ -112,7 +112,7 @@ public class SecurityProfile extends io.pulumi.resources.CustomResource {
      * Metadata that can be used to manage the security profile.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={SecurityProfileTag.class})
+    @Export(name="tags", type=List.class, parameters={SecurityProfileTag.class})
     private Output</* @Nullable */ List<SecurityProfileTag>> tags;
 
     /**
@@ -126,7 +126,7 @@ public class SecurityProfile extends io.pulumi.resources.CustomResource {
      * A set of target ARNs that the security profile is attached to.
      * 
      */
-    @OutputExport(name="targetArns", type=List.class, parameters={String.class})
+    @Export(name="targetArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetArns;
 
     /**

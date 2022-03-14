@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class FlowInforNexusSourcePropertiesArgs extends io.pulumi.resource
 
     public static final FlowInforNexusSourcePropertiesArgs Empty = new FlowInforNexusSourcePropertiesArgs();
 
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final Output<String> object;
 
     public Output<String> getObject() {

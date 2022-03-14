@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasCodeHookSpecification;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class BotAliasLocaleSettings extends io.pulumi.resources.InvokeArgs
 
     public static final BotAliasLocaleSettings Empty = new BotAliasLocaleSettings();
 
-    @InputImport(name="codeHookSpecification")
+    @Import(name="codeHookSpecification")
       private final @Nullable BotAliasCodeHookSpecification codeHookSpecification;
 
     public Optional<BotAliasCodeHookSpecification> getCodeHookSpecification() {
@@ -30,7 +30,7 @@ public final class BotAliasLocaleSettings extends io.pulumi.resources.InvokeArgs
      * Whether the Lambda code hook is enabled
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {

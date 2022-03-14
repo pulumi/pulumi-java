@@ -6,7 +6,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingClipboardMode;
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingInstanceType;
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfigurationSessionStorage;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
 
     public static final LaunchProfileStreamConfiguration Empty = new LaunchProfileStreamConfiguration();
 
-    @InputImport(name="clipboardMode", required=true)
+    @Import(name="clipboardMode", required=true)
       private final LaunchProfileStreamingClipboardMode clipboardMode;
 
     public LaunchProfileStreamingClipboardMode getClipboardMode() {
@@ -35,7 +35,7 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
      *             with this launch profile.</p>
      * 
      */
-    @InputImport(name="ec2InstanceTypes", required=true)
+    @Import(name="ec2InstanceTypes", required=true)
       private final List<LaunchProfileStreamingInstanceType> ec2InstanceTypes;
 
     public List<LaunchProfileStreamingInstanceType> getEc2InstanceTypes() {
@@ -49,7 +49,7 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
      *             time is 30 days.</p>
      * 
      */
-    @InputImport(name="maxSessionLengthInMinutes")
+    @Import(name="maxSessionLengthInMinutes")
       private final @Nullable Double maxSessionLengthInMinutes;
 
     public Optional<Double> getMaxSessionLengthInMinutes() {
@@ -69,14 +69,14 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
      *             automatically be stopped by AWS (instead of terminated).</p>
      * 
      */
-    @InputImport(name="maxStoppedSessionLengthInMinutes")
+    @Import(name="maxStoppedSessionLengthInMinutes")
       private final @Nullable Double maxStoppedSessionLengthInMinutes;
 
     public Optional<Double> getMaxStoppedSessionLengthInMinutes() {
         return this.maxStoppedSessionLengthInMinutes == null ? Optional.empty() : Optional.ofNullable(this.maxStoppedSessionLengthInMinutes);
     }
 
-    @InputImport(name="sessionStorage")
+    @Import(name="sessionStorage")
       private final @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage;
 
     public Optional<LaunchProfileStreamConfigurationSessionStorage> getSessionStorage() {
@@ -88,7 +88,7 @@ public final class LaunchProfileStreamConfiguration extends io.pulumi.resources.
      *             with this launch profile.</p>
      * 
      */
-    @InputImport(name="streamingImageIds", required=true)
+    @Import(name="streamingImageIds", required=true)
       private final List<String> streamingImageIds;
 
     public List<String> getStreamingImageIds() {

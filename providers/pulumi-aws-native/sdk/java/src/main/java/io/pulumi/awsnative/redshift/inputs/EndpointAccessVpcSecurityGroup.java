@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
      * The status of the VPC security group.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -33,7 +33,7 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
      * The identifier of the VPC security group.
      * 
      */
-    @InputImport(name="vpcSecurityGroupId")
+    @Import(name="vpcSecurityGroupId")
       private final @Nullable String vpcSecurityGroupId;
 
     public Optional<String> getVpcSecurityGroupId() {

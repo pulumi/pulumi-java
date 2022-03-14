@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.ecr.outputs;
 
 import io.pulumi.awsnative.ecr.enums.ReplicationConfigurationFilterType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationConfigurationRepositoryFilter {
     private final String filter;
     private final ReplicationConfigurationFilterType filterType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationConfigurationRepositoryFilter(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("filterType") ReplicationConfigurationFilterType filterType) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("filterType") ReplicationConfigurationFilterType filterType) {
         this.filter = filter;
         this.filterType = filterType;
     }

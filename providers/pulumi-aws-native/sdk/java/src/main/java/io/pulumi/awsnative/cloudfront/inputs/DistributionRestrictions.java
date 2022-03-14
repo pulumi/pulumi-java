@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionGeoRestriction;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -12,7 +12,7 @@ public final class DistributionRestrictions extends io.pulumi.resources.InvokeAr
 
     public static final DistributionRestrictions Empty = new DistributionRestrictions();
 
-    @InputImport(name="geoRestriction", required=true)
+    @Import(name="geoRestriction", required=true)
       private final DistributionGeoRestriction geoRestriction;
 
     public DistributionGeoRestriction getGeoRestriction() {

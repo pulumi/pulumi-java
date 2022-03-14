@@ -3,17 +3,17 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CidrResult {
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor
-    private CidrResult(@OutputCustomType.Parameter("subnets") List<String> subnets) {
+    @CustomType.Constructor
+    private CidrResult(@CustomType.Parameter("subnets") List<String> subnets) {
         this.subnets = subnets;
     }
 

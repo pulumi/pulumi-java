@@ -5,22 +5,22 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupGeneratedRulesType;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTargetType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRulesSourceList {
     private final RuleGroupGeneratedRulesType generatedRulesType;
     private final List<RuleGroupTargetType> targetTypes;
     private final List<String> targets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRulesSourceList(
-        @OutputCustomType.Parameter("generatedRulesType") RuleGroupGeneratedRulesType generatedRulesType,
-        @OutputCustomType.Parameter("targetTypes") List<RuleGroupTargetType> targetTypes,
-        @OutputCustomType.Parameter("targets") List<String> targets) {
+        @CustomType.Parameter("generatedRulesType") RuleGroupGeneratedRulesType generatedRulesType,
+        @CustomType.Parameter("targetTypes") List<RuleGroupTargetType> targetTypes,
+        @CustomType.Parameter("targets") List<String> targets) {
         this.generatedRulesType = generatedRulesType;
         this.targetTypes = targetTypes;
         this.targets = targets;

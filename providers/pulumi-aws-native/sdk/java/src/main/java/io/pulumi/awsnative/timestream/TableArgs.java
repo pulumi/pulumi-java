@@ -7,7 +7,7 @@ import io.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropert
 import io.pulumi.awsnative.timestream.inputs.RetentionPropertiesPropertiesArgs;
 import io.pulumi.awsnative.timestream.inputs.TableTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the database which the table to be created belongs to.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -33,7 +33,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that determine whether magnetic store writes are enabled.
      * 
      */
-    @InputImport(name="magneticStoreWriteProperties")
+    @Import(name="magneticStoreWriteProperties")
       private final @Nullable Output<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties;
 
     public Output<MagneticStoreWritePropertiesPropertiesArgs> getMagneticStoreWriteProperties() {
@@ -44,7 +44,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The retention duration of the memory store and the magnetic store.
      * 
      */
-    @InputImport(name="retentionProperties")
+    @Import(name="retentionProperties")
       private final @Nullable Output<RetentionPropertiesPropertiesArgs> retentionProperties;
 
     public Output<RetentionPropertiesPropertiesArgs> getRetentionProperties() {
@@ -55,7 +55,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the table. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
@@ -66,7 +66,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TableTagArgs>> tags;
 
     public Output<List<TableTagArgs>> getTags() {

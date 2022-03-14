@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.iotwireless.enums.DestinationExpressionType;
 import io.pulumi.awsnative.iotwireless.inputs.DestinationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Destination description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Destination expression
      * 
      */
-    @InputImport(name="expression", required=true)
+    @Import(name="expression", required=true)
       private final Output<String> expression;
 
     public Output<String> getExpression() {
@@ -43,7 +43,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Must be RuleName
      * 
      */
-    @InputImport(name="expressionType", required=true)
+    @Import(name="expressionType", required=true)
       private final Output<DestinationExpressionType> expressionType;
 
     public Output<DestinationExpressionType> getExpressionType() {
@@ -54,7 +54,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of destination
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * AWS role ARN that grants access
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -76,7 +76,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DestinationTagArgs>> tags;
 
     public Output<List<DestinationTagArgs>> getTags() {

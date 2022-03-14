@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,63 +14,63 @@ public final class TopicRuleDynamoDBActionArgs extends io.pulumi.resources.Resou
 
     public static final TopicRuleDynamoDBActionArgs Empty = new TopicRuleDynamoDBActionArgs();
 
-    @InputImport(name="hashKeyField", required=true)
+    @Import(name="hashKeyField", required=true)
       private final Output<String> hashKeyField;
 
     public Output<String> getHashKeyField() {
         return this.hashKeyField;
     }
 
-    @InputImport(name="hashKeyType")
+    @Import(name="hashKeyType")
       private final @Nullable Output<String> hashKeyType;
 
     public Output<String> getHashKeyType() {
         return this.hashKeyType == null ? Output.empty() : this.hashKeyType;
     }
 
-    @InputImport(name="hashKeyValue", required=true)
+    @Import(name="hashKeyValue", required=true)
       private final Output<String> hashKeyValue;
 
     public Output<String> getHashKeyValue() {
         return this.hashKeyValue;
     }
 
-    @InputImport(name="payloadField")
+    @Import(name="payloadField")
       private final @Nullable Output<String> payloadField;
 
     public Output<String> getPayloadField() {
         return this.payloadField == null ? Output.empty() : this.payloadField;
     }
 
-    @InputImport(name="rangeKeyField")
+    @Import(name="rangeKeyField")
       private final @Nullable Output<String> rangeKeyField;
 
     public Output<String> getRangeKeyField() {
         return this.rangeKeyField == null ? Output.empty() : this.rangeKeyField;
     }
 
-    @InputImport(name="rangeKeyType")
+    @Import(name="rangeKeyType")
       private final @Nullable Output<String> rangeKeyType;
 
     public Output<String> getRangeKeyType() {
         return this.rangeKeyType == null ? Output.empty() : this.rangeKeyType;
     }
 
-    @InputImport(name="rangeKeyValue")
+    @Import(name="rangeKeyValue")
       private final @Nullable Output<String> rangeKeyValue;
 
     public Output<String> getRangeKeyValue() {
         return this.rangeKeyValue == null ? Output.empty() : this.rangeKeyValue;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

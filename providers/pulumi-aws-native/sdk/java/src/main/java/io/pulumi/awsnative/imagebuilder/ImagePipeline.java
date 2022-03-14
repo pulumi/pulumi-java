@@ -9,7 +9,7 @@ import io.pulumi.awsnative.imagebuilder.enums.ImagePipelineStatus;
 import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineImageTestsConfiguration;
 import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineSchedule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -26,7 +26,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the image pipeline.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
      */
-    @OutputExport(name="containerRecipeArn", type=String.class, parameters={})
+    @Export(name="containerRecipeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerRecipeArn;
 
     /**
@@ -54,7 +54,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The description of the image pipeline.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -68,7 +68,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
      * 
      */
-    @OutputExport(name="distributionConfigurationArn", type=String.class, parameters={})
+    @Export(name="distributionConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> distributionConfigurationArn;
 
     /**
@@ -82,7 +82,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * Collects additional information about the image being created, including the operating system (OS) version and package list.
      * 
      */
-    @OutputExport(name="enhancedImageMetadataEnabled", type=Boolean.class, parameters={})
+    @Export(name="enhancedImageMetadataEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled;
 
     /**
@@ -96,7 +96,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
      */
-    @OutputExport(name="imageRecipeArn", type=String.class, parameters={})
+    @Export(name="imageRecipeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageRecipeArn;
 
     /**
@@ -110,7 +110,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The image tests configuration of the image pipeline.
      * 
      */
-    @OutputExport(name="imageTestsConfiguration", type=ImagePipelineImageTestsConfiguration.class, parameters={})
+    @Export(name="imageTestsConfiguration", type=ImagePipelineImageTestsConfiguration.class, parameters={})
     private Output</* @Nullable */ ImagePipelineImageTestsConfiguration> imageTestsConfiguration;
 
     /**
@@ -124,7 +124,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
      * 
      */
-    @OutputExport(name="infrastructureConfigurationArn", type=String.class, parameters={})
+    @Export(name="infrastructureConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> infrastructureConfigurationArn;
 
     /**
@@ -138,7 +138,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The name of the image pipeline.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -152,7 +152,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The schedule of the image pipeline.
      * 
      */
-    @OutputExport(name="schedule", type=ImagePipelineSchedule.class, parameters={})
+    @Export(name="schedule", type=ImagePipelineSchedule.class, parameters={})
     private Output</* @Nullable */ ImagePipelineSchedule> schedule;
 
     /**
@@ -166,7 +166,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The status of the image pipeline.
      * 
      */
-    @OutputExport(name="status", type=ImagePipelineStatus.class, parameters={})
+    @Export(name="status", type=ImagePipelineStatus.class, parameters={})
     private Output</* @Nullable */ ImagePipelineStatus> status;
 
     /**
@@ -180,7 +180,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * The tags of this image pipeline.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**

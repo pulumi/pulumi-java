@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotMessageGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotResponseSpecification {
     /**
      * Indicates whether the user can interrupt a speech prompt from the bot.
@@ -20,10 +20,10 @@ public final class BotResponseSpecification {
     private final @Nullable Boolean allowInterrupt;
     private final List<BotMessageGroup> messageGroupsList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotResponseSpecification(
-        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
-        @OutputCustomType.Parameter("messageGroupsList") List<BotMessageGroup> messageGroupsList) {
+        @CustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @CustomType.Parameter("messageGroupsList") List<BotMessageGroup> messageGroupsList) {
         this.allowInterrupt = allowInterrupt;
         this.messageGroupsList = messageGroupsList;
     }

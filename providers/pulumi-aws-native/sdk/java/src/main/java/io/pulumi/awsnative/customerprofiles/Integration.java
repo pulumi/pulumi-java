@@ -9,7 +9,7 @@ import io.pulumi.awsnative.customerprofiles.outputs.IntegrationFlowDefinition;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationObjectTypeMapping;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * The time of this integration got created
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -41,7 +41,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * The unique name of the domain.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -51,7 +51,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
     public Output<String> getDomainName() {
         return this.domainName;
     }
-    @OutputExport(name="flowDefinition", type=IntegrationFlowDefinition.class, parameters={})
+    @Export(name="flowDefinition", type=IntegrationFlowDefinition.class, parameters={})
     private Output</* @Nullable */ IntegrationFlowDefinition> flowDefinition;
 
     public Output</* @Nullable */ IntegrationFlowDefinition> getFlowDefinition() {
@@ -61,7 +61,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * The time of this integration got last updated at
      * 
      */
-    @OutputExport(name="lastUpdatedAt", type=String.class, parameters={})
+    @Export(name="lastUpdatedAt", type=String.class, parameters={})
     private Output<String> lastUpdatedAt;
 
     /**
@@ -75,7 +75,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * The name of the ObjectType defined for the 3rd party data in Profile Service
      * 
      */
-    @OutputExport(name="objectTypeName", type=String.class, parameters={})
+    @Export(name="objectTypeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectTypeName;
 
     /**
@@ -89,7 +89,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * The mapping between 3rd party event types and ObjectType names
      * 
      */
-    @OutputExport(name="objectTypeNames", type=List.class, parameters={IntegrationObjectTypeMapping.class})
+    @Export(name="objectTypeNames", type=List.class, parameters={IntegrationObjectTypeMapping.class})
     private Output</* @Nullable */ List<IntegrationObjectTypeMapping>> objectTypeNames;
 
     /**
@@ -103,7 +103,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * The tags (keys and values) associated with the integration
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={IntegrationTag.class})
+    @Export(name="tags", type=List.class, parameters={IntegrationTag.class})
     private Output</* @Nullable */ List<IntegrationTag>> tags;
 
     /**
@@ -117,7 +117,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * The URI of the S3 bucket or any other type of data source.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**

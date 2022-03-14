@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
      * The Secret Access Key portion of the credentials.
      * 
      */
-    @InputImport(name="apiSecretKey", required=true)
+    @Import(name="apiSecretKey", required=true)
       private final Output<String> apiSecretKey;
 
     public Output<String> getApiSecretKey() {

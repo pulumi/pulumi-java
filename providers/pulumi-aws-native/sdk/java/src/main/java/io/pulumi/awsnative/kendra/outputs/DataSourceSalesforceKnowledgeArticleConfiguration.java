@@ -6,23 +6,23 @@ package io.pulumi.awsnative.kendra.outputs;
 import io.pulumi.awsnative.kendra.enums.DataSourceSalesforceKnowledgeArticleState;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceSalesforceKnowledgeArticleConfiguration {
     private final @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations;
     private final List<DataSourceSalesforceKnowledgeArticleState> includedStates;
     private final @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceSalesforceKnowledgeArticleConfiguration(
-        @OutputCustomType.Parameter("customKnowledgeArticleTypeConfigurations") @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations,
-        @OutputCustomType.Parameter("includedStates") List<DataSourceSalesforceKnowledgeArticleState> includedStates,
-        @OutputCustomType.Parameter("standardKnowledgeArticleTypeConfiguration") @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration) {
+        @CustomType.Parameter("customKnowledgeArticleTypeConfigurations") @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations,
+        @CustomType.Parameter("includedStates") List<DataSourceSalesforceKnowledgeArticleState> includedStates,
+        @CustomType.Parameter("standardKnowledgeArticleTypeConfiguration") @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration) {
         this.customKnowledgeArticleTypeConfigurations = customKnowledgeArticleTypeConfigurations;
         this.includedStates = includedStates;
         this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;

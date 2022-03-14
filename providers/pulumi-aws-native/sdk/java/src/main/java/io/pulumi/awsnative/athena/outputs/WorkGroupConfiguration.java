@@ -5,14 +5,14 @@ package io.pulumi.awsnative.athena.outputs;
 
 import io.pulumi.awsnative.athena.outputs.WorkGroupEngineVersion;
 import io.pulumi.awsnative.athena.outputs.WorkGroupResultConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkGroupConfiguration {
     private final @Nullable Integer bytesScannedCutoffPerQuery;
     private final @Nullable Boolean enforceWorkGroupConfiguration;
@@ -21,14 +21,14 @@ public final class WorkGroupConfiguration {
     private final @Nullable Boolean requesterPaysEnabled;
     private final @Nullable WorkGroupResultConfiguration resultConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkGroupConfiguration(
-        @OutputCustomType.Parameter("bytesScannedCutoffPerQuery") @Nullable Integer bytesScannedCutoffPerQuery,
-        @OutputCustomType.Parameter("enforceWorkGroupConfiguration") @Nullable Boolean enforceWorkGroupConfiguration,
-        @OutputCustomType.Parameter("engineVersion") @Nullable WorkGroupEngineVersion engineVersion,
-        @OutputCustomType.Parameter("publishCloudWatchMetricsEnabled") @Nullable Boolean publishCloudWatchMetricsEnabled,
-        @OutputCustomType.Parameter("requesterPaysEnabled") @Nullable Boolean requesterPaysEnabled,
-        @OutputCustomType.Parameter("resultConfiguration") @Nullable WorkGroupResultConfiguration resultConfiguration) {
+        @CustomType.Parameter("bytesScannedCutoffPerQuery") @Nullable Integer bytesScannedCutoffPerQuery,
+        @CustomType.Parameter("enforceWorkGroupConfiguration") @Nullable Boolean enforceWorkGroupConfiguration,
+        @CustomType.Parameter("engineVersion") @Nullable WorkGroupEngineVersion engineVersion,
+        @CustomType.Parameter("publishCloudWatchMetricsEnabled") @Nullable Boolean publishCloudWatchMetricsEnabled,
+        @CustomType.Parameter("requesterPaysEnabled") @Nullable Boolean requesterPaysEnabled,
+        @CustomType.Parameter("resultConfiguration") @Nullable WorkGroupResultConfiguration resultConfiguration) {
         this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
         this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
         this.engineVersion = engineVersion;

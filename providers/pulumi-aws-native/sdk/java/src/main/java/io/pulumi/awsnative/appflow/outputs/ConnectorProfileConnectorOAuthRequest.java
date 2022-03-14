@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileConnectorOAuthRequest {
     /**
      * The code provided by the connector when it has been authenticated via the connected app.
@@ -23,10 +23,10 @@ public final class ConnectorProfileConnectorOAuthRequest {
      */
     private final @Nullable String redirectUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileConnectorOAuthRequest(
-        @OutputCustomType.Parameter("authCode") @Nullable String authCode,
-        @OutputCustomType.Parameter("redirectUri") @Nullable String redirectUri) {
+        @CustomType.Parameter("authCode") @Nullable String authCode,
+        @CustomType.Parameter("redirectUri") @Nullable String redirectUri) {
         this.authCode = authCode;
         this.redirectUri = redirectUri;
     }

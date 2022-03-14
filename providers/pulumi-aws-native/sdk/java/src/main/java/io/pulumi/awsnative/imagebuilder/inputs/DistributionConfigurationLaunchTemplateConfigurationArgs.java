@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * The account ID that this configuration applies to.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -34,7 +34,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * Identifies the EC2 launch template to use.
      * 
      */
-    @InputImport(name="launchTemplateId")
+    @Import(name="launchTemplateId")
       private final @Nullable Output<String> launchTemplateId;
 
     public Output<String> getLaunchTemplateId() {
@@ -45,7 +45,7 @@ public final class DistributionConfigurationLaunchTemplateConfigurationArgs exte
      * Set the specified EC2 launch template as the default launch template for the specified account.
      * 
      */
-    @InputImport(name="setDefaultVersion")
+    @Import(name="setDefaultVersion")
       private final @Nullable Output<Boolean> setDefaultVersion;
 
     public Output<Boolean> getSetDefaultVersion() {

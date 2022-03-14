@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.TransitGatewayConnectArgs;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayConnectOptions;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayConnectTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * The creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -38,7 +38,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * The Connect attachment options.
      * 
      */
-    @OutputExport(name="options", type=TransitGatewayConnectOptions.class, parameters={})
+    @Export(name="options", type=TransitGatewayConnectOptions.class, parameters={})
     private Output<TransitGatewayConnectOptions> options;
 
     /**
@@ -52,7 +52,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * The state of the attachment.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -66,7 +66,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * The tags for the attachment.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={TransitGatewayConnectTag.class})
+    @Export(name="tags", type=List.class, parameters={TransitGatewayConnectTag.class})
     private Output</* @Nullable */ List<TransitGatewayConnectTag>> tags;
 
     /**
@@ -80,7 +80,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * The ID of the Connect attachment.
      * 
      */
-    @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
+    @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
     /**
@@ -94,7 +94,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * The ID of the transit gateway.
      * 
      */
-    @OutputExport(name="transitGatewayId", type=String.class, parameters={})
+    @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;
 
     /**
@@ -108,7 +108,7 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
      * The ID of the attachment from which the Connect attachment was created.
      * 
      */
-    @OutputExport(name="transportTransitGatewayAttachmentId", type=String.class, parameters={})
+    @Export(name="transportTransitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transportTransitGatewayAttachmentId;
 
     /**

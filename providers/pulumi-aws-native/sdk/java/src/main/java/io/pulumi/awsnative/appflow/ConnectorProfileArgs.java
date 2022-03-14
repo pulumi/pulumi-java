@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectionMode;
 import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectorType;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
      * 
      */
-    @InputImport(name="connectionMode", required=true)
+    @Import(name="connectionMode", required=true)
       private final Output<ConnectorProfileConnectionMode> connectionMode;
 
     public Output<ConnectorProfileConnectionMode> getConnectionMode() {
@@ -32,7 +32,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * Connector specific configurations needed to create connector profile
      * 
      */
-    @InputImport(name="connectorProfileConfig")
+    @Import(name="connectorProfileConfig")
       private final @Nullable Output<ConnectorProfileConfigArgs> connectorProfileConfig;
 
     public Output<ConnectorProfileConfigArgs> getConnectorProfileConfig() {
@@ -43,7 +43,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * The maximum number of items to retrieve in a single batch.
      * 
      */
-    @InputImport(name="connectorProfileName")
+    @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
 
     public Output<String> getConnectorProfileName() {
@@ -54,7 +54,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * List of Saas providers that need connector profile to be created
      * 
      */
-    @InputImport(name="connectorType", required=true)
+    @Import(name="connectorType", required=true)
       private final Output<ConnectorProfileConnectorType> connectorType;
 
     public Output<ConnectorProfileConnectorType> getConnectorType() {
@@ -65,7 +65,7 @@ public final class ConnectorProfileArgs extends io.pulumi.resources.ResourceArgs
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    @InputImport(name="kMSArn")
+    @Import(name="kMSArn")
       private final @Nullable Output<String> kMSArn;
 
     public Output<String> getKMSArn() {

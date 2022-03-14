@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationCmafEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
 
     public static final PackagingConfigurationCmafPackageArgs Empty = new PackagingConfigurationCmafPackageArgs();
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<PackagingConfigurationCmafEncryptionArgs> encryption;
 
     public Output<PackagingConfigurationCmafEncryptionArgs> getEncryption() {
@@ -33,7 +33,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
      * A list of HLS manifest configurations.
      * 
      */
-    @InputImport(name="hlsManifests", required=true)
+    @Import(name="hlsManifests", required=true)
       private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
     public Output<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
@@ -44,14 +44,14 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
      * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
      * 
      */
-    @InputImport(name="includeEncoderConfigurationInSegments")
+    @Import(name="includeEncoderConfigurationInSegments")
       private final @Nullable Output<Boolean> includeEncoderConfigurationInSegments;
 
     public Output<Boolean> getIncludeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Output.empty() : this.includeEncoderConfigurationInSegments;
     }
 
-    @InputImport(name="segmentDurationSeconds")
+    @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
     public Output<Integer> getSegmentDurationSeconds() {

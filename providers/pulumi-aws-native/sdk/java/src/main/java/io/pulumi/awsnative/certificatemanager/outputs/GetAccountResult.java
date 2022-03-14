@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.certificatemanager.outputs;
 
 import io.pulumi.awsnative.certificatemanager.outputs.AccountExpiryEventsConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountResult {
     private final @Nullable String accountId;
     private final @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountResult(
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("expiryEventsConfiguration") @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("expiryEventsConfiguration") @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
         this.accountId = accountId;
         this.expiryEventsConfiguration = expiryEventsConfiguration;
     }

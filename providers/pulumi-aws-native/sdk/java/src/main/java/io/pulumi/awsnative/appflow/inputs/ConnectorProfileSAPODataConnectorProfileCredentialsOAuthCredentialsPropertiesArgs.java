@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,35 +15,35 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
 
     public static final ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs Empty = new ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs();
 
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
         return this.accessToken == null ? Output.empty() : this.accessToken;
     }
 
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
         return this.clientId == null ? Output.empty() : this.clientId;
     }
 
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
         return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
-    @InputImport(name="connectorOAuthRequest")
+    @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
     public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
         return this.connectorOAuthRequest == null ? Output.empty() : this.connectorOAuthRequest;
     }
 
-    @InputImport(name="refreshToken")
+    @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
     public Output<String> getRefreshToken() {

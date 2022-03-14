@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class TopicRuleRepublishActionArgs extends io.pulumi.resources.Reso
 
     public static final TopicRuleRepublishActionArgs Empty = new TopicRuleRepublishActionArgs();
 
-    @InputImport(name="qos")
+    @Import(name="qos")
       private final @Nullable Output<Integer> qos;
 
     public Output<Integer> getQos() {
         return this.qos == null ? Output.empty() : this.qos;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

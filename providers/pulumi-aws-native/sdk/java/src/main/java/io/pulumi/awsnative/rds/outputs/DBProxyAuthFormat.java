@@ -5,13 +5,13 @@ package io.pulumi.awsnative.rds.outputs;
 
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatAuthScheme;
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatIAMAuth;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DBProxyAuthFormat {
     /**
      * The type of authentication that the proxy uses for connections from the proxy to the underlying database.
@@ -39,13 +39,13 @@ public final class DBProxyAuthFormat {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DBProxyAuthFormat(
-        @OutputCustomType.Parameter("authScheme") @Nullable DBProxyAuthFormatAuthScheme authScheme,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("iAMAuth") @Nullable DBProxyAuthFormatIAMAuth iAMAuth,
-        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("authScheme") @Nullable DBProxyAuthFormatAuthScheme authScheme,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("iAMAuth") @Nullable DBProxyAuthFormatIAMAuth iAMAuth,
+        @CustomType.Parameter("secretArn") @Nullable String secretArn,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.authScheme = authScheme;
         this.description = description;
         this.iAMAuth = iAMAuth;

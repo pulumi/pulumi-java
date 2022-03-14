@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DetectorModelSnsArgs Empty = new DetectorModelSnsArgs();
 
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
     public Output<DetectorModelPayloadArgs> getPayload() {
@@ -30,7 +30,7 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
      * The ARN of the Amazon SNS target where the message is sent.
      * 
      */
-    @InputImport(name="targetArn", required=true)
+    @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
     public Output<String> getTargetArn() {

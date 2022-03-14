@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationSubComponentTypeConfigurationSubComponentType;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentConfigurationDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
      * The configuration settings of sub components.
      * 
      */
-    @InputImport(name="subComponentConfigurationDetails", required=true)
+    @Import(name="subComponentConfigurationDetails", required=true)
       private final Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
 
     public Output<ApplicationSubComponentConfigurationDetailsArgs> getSubComponentConfigurationDetails() {
@@ -33,7 +33,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
      * The sub component type.
      * 
      */
-    @InputImport(name="subComponentType", required=true)
+    @Import(name="subComponentType", required=true)
       private final Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
 
     public Output<ApplicationSubComponentTypeConfigurationSubComponentType> getSubComponentType() {

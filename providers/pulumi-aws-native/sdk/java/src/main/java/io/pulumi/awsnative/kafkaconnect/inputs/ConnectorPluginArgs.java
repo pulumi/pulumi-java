@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorCustomPluginArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ConnectorPluginArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ConnectorPluginArgs Empty = new ConnectorPluginArgs();
 
-    @InputImport(name="customPlugin", required=true)
+    @Import(name="customPlugin", required=true)
       private final Output<ConnectorCustomPluginArgs> customPlugin;
 
     public Output<ConnectorCustomPluginArgs> getCustomPlugin() {

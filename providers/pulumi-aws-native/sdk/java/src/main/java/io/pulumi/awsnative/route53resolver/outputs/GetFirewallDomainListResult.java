@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.FirewallDomainListStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallDomainListTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallDomainListResult {
     /**
      * Arn
@@ -66,18 +66,18 @@ public final class GetFirewallDomainListResult {
      */
     private final @Nullable List<FirewallDomainListTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallDomainListResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
-        @OutputCustomType.Parameter("domainCount") @Nullable Integer domainCount,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("managedOwnerName") @Nullable String managedOwnerName,
-        @OutputCustomType.Parameter("modificationTime") @Nullable String modificationTime,
-        @OutputCustomType.Parameter("status") @Nullable FirewallDomainListStatus status,
-        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
-        @OutputCustomType.Parameter("tags") @Nullable List<FirewallDomainListTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @CustomType.Parameter("domainCount") @Nullable Integer domainCount,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("managedOwnerName") @Nullable String managedOwnerName,
+        @CustomType.Parameter("modificationTime") @Nullable String modificationTime,
+        @CustomType.Parameter("status") @Nullable FirewallDomainListStatus status,
+        @CustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @CustomType.Parameter("tags") @Nullable List<FirewallDomainListTag> tags) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.creatorRequestId = creatorRequestId;

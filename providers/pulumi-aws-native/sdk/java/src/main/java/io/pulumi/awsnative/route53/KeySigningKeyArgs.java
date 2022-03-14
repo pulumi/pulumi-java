@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53;
 
 import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The unique string (ID) used to identify a hosted zone.
      * 
      */
-    @InputImport(name="hostedZoneId", required=true)
+    @Import(name="hostedZoneId", required=true)
       private final Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -30,7 +30,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
      * 
      */
-    @InputImport(name="keyManagementServiceArn", required=true)
+    @Import(name="keyManagementServiceArn", required=true)
       private final Output<String> keyManagementServiceArn;
 
     public Output<String> getKeyManagementServiceArn() {
@@ -41,7 +41,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<KeySigningKeyStatus> status;
 
     public Output<KeySigningKeyStatus> getStatus() {

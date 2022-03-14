@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class CanaryS3Encryption extends io.pulumi.resources.InvokeArgs {
      * Encryption mode for encrypting artifacts when uploading to S3. Valid values: SSE_S3 and SSE_KMS.
      * 
      */
-    @InputImport(name="encryptionMode")
+    @Import(name="encryptionMode")
       private final @Nullable String encryptionMode;
 
     public Optional<String> getEncryptionMode() {
@@ -29,7 +29,7 @@ public final class CanaryS3Encryption extends io.pulumi.resources.InvokeArgs {
      * KMS key Arn for encrypting artifacts when uploading to S3. You must specify KMS key Arn for SSE_KMS encryption mode only.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable String kmsKeyArn;
 
     public Optional<String> getKmsKeyArn() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitGatewayMulticastGroupSourceResult {
     /**
      * Indicates that the resource is a transit gateway multicast group member.
@@ -53,16 +53,16 @@ public final class GetTransitGatewayMulticastGroupSourceResult {
      */
     private final @Nullable String transitGatewayAttachmentId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitGatewayMulticastGroupSourceResult(
-        @OutputCustomType.Parameter("groupMember") @Nullable Boolean groupMember,
-        @OutputCustomType.Parameter("groupSource") @Nullable Boolean groupSource,
-        @OutputCustomType.Parameter("memberType") @Nullable String memberType,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId) {
+        @CustomType.Parameter("groupMember") @Nullable Boolean groupMember,
+        @CustomType.Parameter("groupSource") @Nullable Boolean groupSource,
+        @CustomType.Parameter("memberType") @Nullable String memberType,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("sourceType") @Nullable String sourceType,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId) {
         this.groupMember = groupMember;
         this.groupSource = groupSource;
         this.memberType = memberType;

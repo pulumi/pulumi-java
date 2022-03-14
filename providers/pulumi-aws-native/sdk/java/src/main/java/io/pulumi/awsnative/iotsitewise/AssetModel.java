@@ -10,7 +10,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.AssetModelHierarchy;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelProperty;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * The ARN of the asset model, which has the following format.
      * 
      */
-    @OutputExport(name="assetModelArn", type=String.class, parameters={})
+    @Export(name="assetModelArn", type=String.class, parameters={})
     private Output<String> assetModelArn;
 
     /**
@@ -40,7 +40,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
      * 
      */
-    @OutputExport(name="assetModelCompositeModels", type=List.class, parameters={AssetModelCompositeModel.class})
+    @Export(name="assetModelCompositeModels", type=List.class, parameters={AssetModelCompositeModel.class})
     private Output</* @Nullable */ List<AssetModelCompositeModel>> assetModelCompositeModels;
 
     /**
@@ -54,7 +54,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * A description for the asset model.
      * 
      */
-    @OutputExport(name="assetModelDescription", type=String.class, parameters={})
+    @Export(name="assetModelDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> assetModelDescription;
 
     /**
@@ -68,7 +68,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
      * 
      */
-    @OutputExport(name="assetModelHierarchies", type=List.class, parameters={AssetModelHierarchy.class})
+    @Export(name="assetModelHierarchies", type=List.class, parameters={AssetModelHierarchy.class})
     private Output</* @Nullable */ List<AssetModelHierarchy>> assetModelHierarchies;
 
     /**
@@ -82,7 +82,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * The ID of the asset model.
      * 
      */
-    @OutputExport(name="assetModelId", type=String.class, parameters={})
+    @Export(name="assetModelId", type=String.class, parameters={})
     private Output<String> assetModelId;
 
     /**
@@ -96,7 +96,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * A unique, friendly name for the asset model.
      * 
      */
-    @OutputExport(name="assetModelName", type=String.class, parameters={})
+    @Export(name="assetModelName", type=String.class, parameters={})
     private Output<String> assetModelName;
 
     /**
@@ -110,7 +110,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
      */
-    @OutputExport(name="assetModelProperties", type=List.class, parameters={AssetModelProperty.class})
+    @Export(name="assetModelProperties", type=List.class, parameters={AssetModelProperty.class})
     private Output</* @Nullable */ List<AssetModelProperty>> assetModelProperties;
 
     /**
@@ -124,7 +124,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AssetModelTag.class})
+    @Export(name="tags", type=List.class, parameters={AssetModelTag.class})
     private Output</* @Nullable */ List<AssetModelTag>> tags;
 
     /**

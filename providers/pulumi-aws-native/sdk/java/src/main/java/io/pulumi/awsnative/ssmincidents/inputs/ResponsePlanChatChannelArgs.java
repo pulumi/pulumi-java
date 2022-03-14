@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
 
     public static final ResponsePlanChatChannelArgs Empty = new ResponsePlanChatChannelArgs();
 
-    @InputImport(name="chatbotSns")
+    @Import(name="chatbotSns")
       private final @Nullable Output<List<String>> chatbotSns;
 
     public Output<List<String>> getChatbotSns() {

@@ -16,7 +16,7 @@ import io.pulumi.awsnative.appflow.inputs.ConnectorProfileSnowflakeConnectorProf
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileVeevaConnectorProfilePropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileZendeskConnectorProfilePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -29,84 +29,84 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
 
     public static final ConnectorProfilePropertiesArgs Empty = new ConnectorProfilePropertiesArgs();
 
-    @InputImport(name="datadog")
+    @Import(name="datadog")
       private final @Nullable Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog;
 
     public Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> getDatadog() {
         return this.datadog == null ? Output.empty() : this.datadog;
     }
 
-    @InputImport(name="dynatrace")
+    @Import(name="dynatrace")
       private final @Nullable Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace;
 
     public Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> getDynatrace() {
         return this.dynatrace == null ? Output.empty() : this.dynatrace;
     }
 
-    @InputImport(name="inforNexus")
+    @Import(name="inforNexus")
       private final @Nullable Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus;
 
     public Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> getInforNexus() {
         return this.inforNexus == null ? Output.empty() : this.inforNexus;
     }
 
-    @InputImport(name="marketo")
+    @Import(name="marketo")
       private final @Nullable Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo;
 
     public Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> getMarketo() {
         return this.marketo == null ? Output.empty() : this.marketo;
     }
 
-    @InputImport(name="redshift")
+    @Import(name="redshift")
       private final @Nullable Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift;
 
     public Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> getRedshift() {
         return this.redshift == null ? Output.empty() : this.redshift;
     }
 
-    @InputImport(name="sAPOData")
+    @Import(name="sAPOData")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData;
 
     public Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> getSAPOData() {
         return this.sAPOData == null ? Output.empty() : this.sAPOData;
     }
 
-    @InputImport(name="salesforce")
+    @Import(name="salesforce")
       private final @Nullable Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce;
 
     public Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> getSalesforce() {
         return this.salesforce == null ? Output.empty() : this.salesforce;
     }
 
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow;
 
     public Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> getServiceNow() {
         return this.serviceNow == null ? Output.empty() : this.serviceNow;
     }
 
-    @InputImport(name="slack")
+    @Import(name="slack")
       private final @Nullable Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack;
 
     public Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> getSlack() {
         return this.slack == null ? Output.empty() : this.slack;
     }
 
-    @InputImport(name="snowflake")
+    @Import(name="snowflake")
       private final @Nullable Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake;
 
     public Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> getSnowflake() {
         return this.snowflake == null ? Output.empty() : this.snowflake;
     }
 
-    @InputImport(name="veeva")
+    @Import(name="veeva")
       private final @Nullable Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva;
 
     public Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> getVeeva() {
         return this.veeva == null ? Output.empty() : this.veeva;
     }
 
-    @InputImport(name="zendesk")
+    @Import(name="zendesk")
       private final @Nullable Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk;
 
     public Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> getZendesk() {

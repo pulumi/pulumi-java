@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MonitoringScheduleScheduleConfig extends io.pulumi.resources.
      * A cron expression that describes details about the monitoring schedule.
      * 
      */
-    @InputImport(name="scheduleExpression", required=true)
+    @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;
 
     public String getScheduleExpression() {

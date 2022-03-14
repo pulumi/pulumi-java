@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLOverrideAction {
     /**
      * Count traffic towards application.
@@ -22,10 +22,10 @@ public final class WebACLOverrideAction {
      */
     private final @Nullable Object none;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLOverrideAction(
-        @OutputCustomType.Parameter("count") @Nullable Object count,
-        @OutputCustomType.Parameter("none") @Nullable Object none) {
+        @CustomType.Parameter("count") @Nullable Object count,
+        @CustomType.Parameter("none") @Nullable Object none) {
         this.count = count;
         this.none = none;
     }

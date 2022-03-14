@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sqs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
      * URL of the source queue.
      * 
      */
-    @InputImport(name="queueUrl", required=true)
+    @Import(name="queueUrl", required=true)
       private final String queueUrl;
 
     public String getQueueUrl() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iam.SAMLProviderArgs;
 import io.pulumi.awsnative.iam.outputs.SAMLProviderTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class SAMLProvider extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the SAML provider
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -33,19 +33,19 @@ public class SAMLProvider extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="samlMetadataDocument", type=String.class, parameters={})
+    @Export(name="samlMetadataDocument", type=String.class, parameters={})
     private Output<String> samlMetadataDocument;
 
     public Output<String> getSamlMetadataDocument() {
         return this.samlMetadataDocument;
     }
-    @OutputExport(name="tags", type=List.class, parameters={SAMLProviderTag.class})
+    @Export(name="tags", type=List.class, parameters={SAMLProviderTag.class})
     private Output</* @Nullable */ List<SAMLProviderTag>> tags;
 
     public Output</* @Nullable */ List<SAMLProviderTag>> getTags() {

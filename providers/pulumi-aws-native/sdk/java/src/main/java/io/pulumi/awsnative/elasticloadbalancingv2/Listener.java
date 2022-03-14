@@ -8,7 +8,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.ListenerArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerCertificate;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,49 +21,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:elasticloadbalancingv2:Listener")
 public class Listener extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="alpnPolicy", type=List.class, parameters={String.class})
+    @Export(name="alpnPolicy", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> alpnPolicy;
 
     public Output</* @Nullable */ List<String>> getAlpnPolicy() {
         return this.alpnPolicy;
     }
-    @OutputExport(name="certificates", type=List.class, parameters={ListenerCertificate.class})
+    @Export(name="certificates", type=List.class, parameters={ListenerCertificate.class})
     private Output</* @Nullable */ List<ListenerCertificate>> certificates;
 
     public Output</* @Nullable */ List<ListenerCertificate>> getCertificates() {
         return this.certificates;
     }
-    @OutputExport(name="defaultActions", type=List.class, parameters={ListenerAction.class})
+    @Export(name="defaultActions", type=List.class, parameters={ListenerAction.class})
     private Output<List<ListenerAction>> defaultActions;
 
     public Output<List<ListenerAction>> getDefaultActions() {
         return this.defaultActions;
     }
-    @OutputExport(name="listenerArn", type=String.class, parameters={})
+    @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     public Output<String> getListenerArn() {
         return this.listenerArn;
     }
-    @OutputExport(name="loadBalancerArn", type=String.class, parameters={})
+    @Export(name="loadBalancerArn", type=String.class, parameters={})
     private Output<String> loadBalancerArn;
 
     public Output<String> getLoadBalancerArn() {
         return this.loadBalancerArn;
     }
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     public Output</* @Nullable */ Integer> getPort() {
         return this.port;
     }
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
     public Output</* @Nullable */ String> getProtocol() {
         return this.protocol;
     }
-    @OutputExport(name="sslPolicy", type=String.class, parameters={})
+    @Export(name="sslPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslPolicy;
 
     public Output</* @Nullable */ String> getSslPolicy() {

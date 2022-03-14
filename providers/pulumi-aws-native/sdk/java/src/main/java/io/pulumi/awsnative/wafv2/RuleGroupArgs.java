@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTagArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupVisibilityConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,28 +21,28 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupArgs Empty = new RuleGroupArgs();
 
-    @InputImport(name="capacity", required=true)
+    @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
         return this.capacity;
     }
 
-    @InputImport(name="customResponseBodies")
+    @Import(name="customResponseBodies")
       private final @Nullable Output<RuleGroupCustomResponseBodiesArgs> customResponseBodies;
 
     public Output<RuleGroupCustomResponseBodiesArgs> getCustomResponseBodies() {
         return this.customResponseBodies == null ? Output.empty() : this.customResponseBodies;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,28 +53,28 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of Rules.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<RuleGroupRuleArgs>> rules;
 
     public Output<List<RuleGroupRuleArgs>> getRules() {
         return this.rules == null ? Output.empty() : this.rules;
     }
 
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<RuleGroupScope> scope;
 
     public Output<RuleGroupScope> getScope() {
         return this.scope;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RuleGroupTagArgs>> tags;
 
     public Output<List<RuleGroupTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="visibilityConfig", required=true)
+    @Import(name="visibilityConfig", required=true)
       private final Output<RuleGroupVisibilityConfigArgs> visibilityConfig;
 
     public Output<RuleGroupVisibilityConfigArgs> getVisibilityConfig() {

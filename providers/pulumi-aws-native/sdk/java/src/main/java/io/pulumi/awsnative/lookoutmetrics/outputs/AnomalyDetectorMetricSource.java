@@ -8,12 +8,12 @@ import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorCloudwatchConfi
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorRDSSourceConfig;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorRedshiftSourceConfig;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorS3SourceConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorMetricSource {
     private final @Nullable AnomalyDetectorAppFlowConfig appFlowConfig;
     private final @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig;
@@ -21,13 +21,13 @@ public final class AnomalyDetectorMetricSource {
     private final @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig;
     private final @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorMetricSource(
-        @OutputCustomType.Parameter("appFlowConfig") @Nullable AnomalyDetectorAppFlowConfig appFlowConfig,
-        @OutputCustomType.Parameter("cloudwatchConfig") @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig,
-        @OutputCustomType.Parameter("rDSSourceConfig") @Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig,
-        @OutputCustomType.Parameter("redshiftSourceConfig") @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig,
-        @OutputCustomType.Parameter("s3SourceConfig") @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
+        @CustomType.Parameter("appFlowConfig") @Nullable AnomalyDetectorAppFlowConfig appFlowConfig,
+        @CustomType.Parameter("cloudwatchConfig") @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig,
+        @CustomType.Parameter("rDSSourceConfig") @Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig,
+        @CustomType.Parameter("redshiftSourceConfig") @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig,
+        @CustomType.Parameter("s3SourceConfig") @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
         this.appFlowConfig = appFlowConfig;
         this.cloudwatchConfig = cloudwatchConfig;
         this.rDSSourceConfig = rDSSourceConfig;

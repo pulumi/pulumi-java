@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileOAuthProperties {
     private final @Nullable String authCodeUrl;
     private final @Nullable List<String> oAuthScopes;
     private final @Nullable String tokenUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileOAuthProperties(
-        @OutputCustomType.Parameter("authCodeUrl") @Nullable String authCodeUrl,
-        @OutputCustomType.Parameter("oAuthScopes") @Nullable List<String> oAuthScopes,
-        @OutputCustomType.Parameter("tokenUrl") @Nullable String tokenUrl) {
+        @CustomType.Parameter("authCodeUrl") @Nullable String authCodeUrl,
+        @CustomType.Parameter("oAuthScopes") @Nullable List<String> oAuthScopes,
+        @CustomType.Parameter("tokenUrl") @Nullable String tokenUrl) {
         this.authCodeUrl = authCodeUrl;
         this.oAuthScopes = oAuthScopes;
         this.tokenUrl = tokenUrl;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupCustomAction;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatelessRule;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,14 +16,14 @@ public final class RuleGroupStatelessRulesAndCustomActions extends io.pulumi.res
 
     public static final RuleGroupStatelessRulesAndCustomActions Empty = new RuleGroupStatelessRulesAndCustomActions();
 
-    @InputImport(name="customActions")
+    @Import(name="customActions")
       private final @Nullable List<RuleGroupCustomAction> customActions;
 
     public List<RuleGroupCustomAction> getCustomActions() {
         return this.customActions == null ? List.of() : this.customActions;
     }
 
-    @InputImport(name="statelessRules", required=true)
+    @Import(name="statelessRules", required=true)
       private final List<RuleGroupStatelessRule> statelessRules;
 
     public List<RuleGroupStatelessRule> getStatelessRules() {

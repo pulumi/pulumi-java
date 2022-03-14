@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.backup.BackupPlanArgs;
 import io.pulumi.awsnative.backup.outputs.BackupPlanResourceType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -19,31 +19,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:backup:BackupPlan")
 public class BackupPlan extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="backupPlan", type=BackupPlanResourceType.class, parameters={})
+    @Export(name="backupPlan", type=BackupPlanResourceType.class, parameters={})
     private Output<BackupPlanResourceType> backupPlan;
 
     public Output<BackupPlanResourceType> getBackupPlan() {
         return this.backupPlan;
     }
-    @OutputExport(name="backupPlanArn", type=String.class, parameters={})
+    @Export(name="backupPlanArn", type=String.class, parameters={})
     private Output<String> backupPlanArn;
 
     public Output<String> getBackupPlanArn() {
         return this.backupPlanArn;
     }
-    @OutputExport(name="backupPlanId", type=String.class, parameters={})
+    @Export(name="backupPlanId", type=String.class, parameters={})
     private Output<String> backupPlanId;
 
     public Output<String> getBackupPlanId() {
         return this.backupPlanId;
     }
-    @OutputExport(name="backupPlanTags", type=Object.class, parameters={})
+    @Export(name="backupPlanTags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> backupPlanTags;
 
     public Output</* @Nullable */ Object> getBackupPlanTags() {
         return this.backupPlanTags;
     }
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     public Output<String> getVersionId() {

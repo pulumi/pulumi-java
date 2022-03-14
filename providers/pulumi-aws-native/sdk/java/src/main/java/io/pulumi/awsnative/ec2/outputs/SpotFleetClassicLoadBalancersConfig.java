@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetClassicLoadBalancer;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetClassicLoadBalancersConfig {
     private final List<SpotFleetClassicLoadBalancer> classicLoadBalancers;
 
-    @OutputCustomType.Constructor
-    private SpotFleetClassicLoadBalancersConfig(@OutputCustomType.Parameter("classicLoadBalancers") List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
+    @CustomType.Constructor
+    private SpotFleetClassicLoadBalancersConfig(@CustomType.Parameter("classicLoadBalancers") List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
         this.classicLoadBalancers = classicLoadBalancers;
     }
 

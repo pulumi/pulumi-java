@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.wafv2.WebACLAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,13 +17,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:wafv2:WebACLAssociation")
 public class WebACLAssociation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
         return this.resourceArn;
     }
-    @OutputExport(name="webACLArn", type=String.class, parameters={})
+    @Export(name="webACLArn", type=String.class, parameters={})
     private Output<String> webACLArn;
 
     public Output<String> getWebACLArn() {

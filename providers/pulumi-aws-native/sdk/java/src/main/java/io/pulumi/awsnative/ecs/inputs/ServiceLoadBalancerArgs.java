@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
 
     public static final ServiceLoadBalancerArgs Empty = new ServiceLoadBalancerArgs();
 
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
         return this.containerName == null ? Output.empty() : this.containerName;
     }
 
-    @InputImport(name="containerPort")
+    @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
         return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
-    @InputImport(name="loadBalancerName")
+    @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
     public Output<String> getLoadBalancerName() {
         return this.loadBalancerName == null ? Output.empty() : this.loadBalancerName;
     }
 
-    @InputImport(name="targetGroupArn")
+    @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {

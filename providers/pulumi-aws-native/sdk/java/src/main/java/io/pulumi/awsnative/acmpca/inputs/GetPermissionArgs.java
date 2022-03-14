@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPermissionArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
      * 
      */
-    @InputImport(name="certificateAuthorityArn", required=true)
+    @Import(name="certificateAuthorityArn", required=true)
       private final String certificateAuthorityArn;
 
     public String getCertificateAuthorityArn() {
@@ -27,7 +27,7 @@ public final class GetPermissionArgs extends io.pulumi.resources.InvokeArgs {
      * The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
      * 
      */
-    @InputImport(name="principal", required=true)
+    @Import(name="principal", required=true)
       private final String principal;
 
     public String getPrincipal() {

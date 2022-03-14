@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
 
     public static final ConnectorProfileSAPODataConnectorProfileCredentialsArgs Empty = new ConnectorProfileSAPODataConnectorProfileCredentialsArgs();
 
-    @InputImport(name="basicAuthCredentials")
+    @Import(name="basicAuthCredentials")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials;
 
     public Output<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> getBasicAuthCredentials() {
         return this.basicAuthCredentials == null ? Output.empty() : this.basicAuthCredentials;
     }
 
-    @InputImport(name="oAuthCredentials")
+    @Import(name="oAuthCredentials")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials;
 
     public Output<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> getOAuthCredentials() {

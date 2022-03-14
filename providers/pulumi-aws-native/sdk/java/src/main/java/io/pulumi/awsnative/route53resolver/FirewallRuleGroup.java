@@ -10,7 +10,7 @@ import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupFirewallRule;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * Arn
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -41,7 +41,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * Rfc3339TimeString
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -55,7 +55,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * The id of the creator request.
      * 
      */
-    @OutputExport(name="creatorRequestId", type=String.class, parameters={})
+    @Export(name="creatorRequestId", type=String.class, parameters={})
     private Output<String> creatorRequestId;
 
     /**
@@ -69,7 +69,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * FirewallRules
      * 
      */
-    @OutputExport(name="firewallRules", type=List.class, parameters={FirewallRuleGroupFirewallRule.class})
+    @Export(name="firewallRules", type=List.class, parameters={FirewallRuleGroupFirewallRule.class})
     private Output</* @Nullable */ List<FirewallRuleGroupFirewallRule>> firewallRules;
 
     /**
@@ -83,7 +83,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * Rfc3339TimeString
      * 
      */
-    @OutputExport(name="modificationTime", type=String.class, parameters={})
+    @Export(name="modificationTime", type=String.class, parameters={})
     private Output<String> modificationTime;
 
     /**
@@ -97,7 +97,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * FirewallRuleGroupName
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -111,7 +111,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * AccountId
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -125,7 +125,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * Count
      * 
      */
-    @OutputExport(name="ruleCount", type=Integer.class, parameters={})
+    @Export(name="ruleCount", type=Integer.class, parameters={})
     private Output<Integer> ruleCount;
 
     /**
@@ -139,7 +139,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
      * 
      */
-    @OutputExport(name="shareStatus", type=FirewallRuleGroupShareStatus.class, parameters={})
+    @Export(name="shareStatus", type=FirewallRuleGroupShareStatus.class, parameters={})
     private Output<FirewallRuleGroupShareStatus> shareStatus;
 
     /**
@@ -153,7 +153,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
      */
-    @OutputExport(name="status", type=FirewallRuleGroupStatus.class, parameters={})
+    @Export(name="status", type=FirewallRuleGroupStatus.class, parameters={})
     private Output<FirewallRuleGroupStatus> status;
 
     /**
@@ -167,7 +167,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * FirewallRuleGroupStatus
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -181,7 +181,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * Tags
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={FirewallRuleGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={FirewallRuleGroupTag.class})
     private Output</* @Nullable */ List<FirewallRuleGroupTag>> tags;
 
     /**

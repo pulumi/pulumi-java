@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelAttribute {
     private final @Nullable String defaultValue;
 
-    @OutputCustomType.Constructor
-    private AssetModelAttribute(@OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue) {
+    @CustomType.Constructor
+    private AssetModelAttribute(@CustomType.Parameter("defaultValue") @Nullable String defaultValue) {
         this.defaultValue = defaultValue;
     }
 

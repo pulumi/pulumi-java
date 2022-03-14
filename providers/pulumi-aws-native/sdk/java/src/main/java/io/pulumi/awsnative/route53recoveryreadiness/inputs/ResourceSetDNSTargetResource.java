@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTargetResource;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
      * The domain name that acts as an ingress point to a portion of the customer application.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable String domainName;
 
     public Optional<String> getDomainName() {
@@ -34,7 +34,7 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
      * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
      * 
      */
-    @InputImport(name="hostedZoneArn")
+    @Import(name="hostedZoneArn")
       private final @Nullable String hostedZoneArn;
 
     public Optional<String> getHostedZoneArn() {
@@ -45,7 +45,7 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
      * The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
      * 
      */
-    @InputImport(name="recordSetId")
+    @Import(name="recordSetId")
       private final @Nullable String recordSetId;
 
     public Optional<String> getRecordSetId() {
@@ -56,14 +56,14 @@ public final class ResourceSetDNSTargetResource extends io.pulumi.resources.Invo
      * The type of DNS record of the target resource.
      * 
      */
-    @InputImport(name="recordType")
+    @Import(name="recordType")
       private final @Nullable String recordType;
 
     public Optional<String> getRecordType() {
         return this.recordType == null ? Optional.empty() : Optional.ofNullable(this.recordType);
     }
 
-    @InputImport(name="targetResource")
+    @Import(name="targetResource")
       private final @Nullable ResourceSetTargetResource targetResource;
 
     public Optional<ResourceSetTargetResource> getTargetResource() {

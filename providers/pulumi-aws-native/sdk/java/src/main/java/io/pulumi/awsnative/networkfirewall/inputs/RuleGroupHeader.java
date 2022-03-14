@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderDirection;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderProtocol;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,42 +14,42 @@ public final class RuleGroupHeader extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupHeader Empty = new RuleGroupHeader();
 
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final String destination;
 
     public String getDestination() {
         return this.destination;
     }
 
-    @InputImport(name="destinationPort", required=true)
+    @Import(name="destinationPort", required=true)
       private final String destinationPort;
 
     public String getDestinationPort() {
         return this.destinationPort;
     }
 
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final RuleGroupHeaderDirection direction;
 
     public RuleGroupHeaderDirection getDirection() {
         return this.direction;
     }
 
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final RuleGroupHeaderProtocol protocol;
 
     public RuleGroupHeaderProtocol getProtocol() {
         return this.protocol;
     }
 
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
         return this.source;
     }
 
-    @InputImport(name="sourcePort", required=true)
+    @Import(name="sourcePort", required=true)
       private final String sourcePort;
 
     public String getSourcePort() {

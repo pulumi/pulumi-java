@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.EnclaveCertificateIamRoleAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * The Amazon Resource Name (ARN) of the ACM certificate with which to associate the IAM role.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     /**
@@ -37,7 +37,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * The name of the Amazon S3 bucket to which the certificate was uploaded.
      * 
      */
-    @OutputExport(name="certificateS3BucketName", type=String.class, parameters={})
+    @Export(name="certificateS3BucketName", type=String.class, parameters={})
     private Output<String> certificateS3BucketName;
 
     /**
@@ -51,7 +51,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored.
      * 
      */
-    @OutputExport(name="certificateS3ObjectKey", type=String.class, parameters={})
+    @Export(name="certificateS3ObjectKey", type=String.class, parameters={})
     private Output<String> certificateS3ObjectKey;
 
     /**
@@ -65,7 +65,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * The ID of the AWS KMS CMK used to encrypt the private key of the certificate.
      * 
      */
-    @OutputExport(name="encryptionKmsKeyId", type=String.class, parameters={})
+    @Export(name="encryptionKmsKeyId", type=String.class, parameters={})
     private Output<String> encryptionKmsKeyId;
 
     /**
@@ -79,7 +79,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * The Amazon Resource Name (ARN) of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**

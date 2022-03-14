@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImageVersionResult {
     private final @Nullable String containerImage;
     private final @Nullable String imageArn;
     private final @Nullable String imageVersionArn;
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageVersionResult(
-        @OutputCustomType.Parameter("containerImage") @Nullable String containerImage,
-        @OutputCustomType.Parameter("imageArn") @Nullable String imageArn,
-        @OutputCustomType.Parameter("imageVersionArn") @Nullable String imageVersionArn,
-        @OutputCustomType.Parameter("version") @Nullable Integer version) {
+        @CustomType.Parameter("containerImage") @Nullable String containerImage,
+        @CustomType.Parameter("imageArn") @Nullable String imageArn,
+        @CustomType.Parameter("imageVersionArn") @Nullable String imageVersionArn,
+        @CustomType.Parameter("version") @Nullable Integer version) {
         this.containerImage = containerImage;
         this.imageArn = imageArn;
         this.imageVersionArn = imageVersionArn;

@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MultiRegionAccessPointRegion {
     private final String bucket;
 
-    @OutputCustomType.Constructor
-    private MultiRegionAccessPointRegion(@OutputCustomType.Parameter("bucket") String bucket) {
+    @CustomType.Constructor
+    private MultiRegionAccessPointRegion(@CustomType.Parameter("bucket") String bucket) {
         this.bucket = bucket;
     }
 

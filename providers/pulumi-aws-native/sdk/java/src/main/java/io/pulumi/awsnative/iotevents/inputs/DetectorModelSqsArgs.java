@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DetectorModelSqsArgs Empty = new DetectorModelSqsArgs();
 
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
     public Output<DetectorModelPayloadArgs> getPayload() {
@@ -27,7 +27,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
      * The URL of the SQS queue where the data is written.
      * 
      */
-    @InputImport(name="queueUrl", required=true)
+    @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
     public Output<String> getQueueUrl() {
@@ -38,7 +38,7 @@ public final class DetectorModelSqsArgs extends io.pulumi.resources.ResourceArgs
      * Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
      * 
      */
-    @InputImport(name="useBase64")
+    @Import(name="useBase64")
       private final @Nullable Output<Boolean> useBase64;
 
     public Output<Boolean> getUseBase64() {

@@ -6,25 +6,25 @@ package io.pulumi.awsnative.ecs.outputs;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionDockerVolumeConfiguration;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionEFSVolumeConfiguration;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionHostVolumeProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionVolume {
     private final @Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration;
     private final @Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration;
     private final @Nullable TaskDefinitionHostVolumeProperties host;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionVolume(
-        @OutputCustomType.Parameter("dockerVolumeConfiguration") @Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration,
-        @OutputCustomType.Parameter("eFSVolumeConfiguration") @Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration,
-        @OutputCustomType.Parameter("host") @Nullable TaskDefinitionHostVolumeProperties host,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("dockerVolumeConfiguration") @Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration,
+        @CustomType.Parameter("eFSVolumeConfiguration") @Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration,
+        @CustomType.Parameter("host") @Nullable TaskDefinitionHostVolumeProperties host,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         this.eFSVolumeConfiguration = eFSVolumeConfiguration;
         this.host = host;

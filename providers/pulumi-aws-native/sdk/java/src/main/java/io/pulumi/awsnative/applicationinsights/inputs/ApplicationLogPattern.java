@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
      * The log pattern.
      * 
      */
-    @InputImport(name="pattern", required=true)
+    @Import(name="pattern", required=true)
       private final String pattern;
 
     public String getPattern() {
@@ -32,7 +32,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
      * The name of the log pattern.
      * 
      */
-    @InputImport(name="patternName", required=true)
+    @Import(name="patternName", required=true)
       private final String patternName;
 
     public String getPatternName() {
@@ -43,7 +43,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
      * Rank of the log pattern.
      * 
      */
-    @InputImport(name="rank", required=true)
+    @Import(name="rank", required=true)
       private final Integer rank;
 
     public Integer getRank() {

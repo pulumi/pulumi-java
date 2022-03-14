@@ -7,7 +7,7 @@ import io.pulumi.awsnative.robomaker.inputs.RobotApplicationRobotSoftwareSuiteAr
 import io.pulumi.awsnative.robomaker.inputs.RobotApplicationSourceConfigArgs;
 import io.pulumi.awsnative.robomaker.inputs.RobotApplicationTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * The revision ID of robot application.
      * 
      */
-    @InputImport(name="currentRevisionId")
+    @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
 
     public Output<String> getCurrentRevisionId() {
@@ -33,7 +33,7 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * The URI of the Docker image for the robot application.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<String> environment;
 
     public Output<String> getEnvironment() {
@@ -44,14 +44,14 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * The name of the robot application.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="robotSoftwareSuite", required=true)
+    @Import(name="robotSoftwareSuite", required=true)
       private final Output<RobotApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
     public Output<RobotApplicationRobotSoftwareSuiteArgs> getRobotSoftwareSuite() {
@@ -62,14 +62,14 @@ public final class RobotApplicationArgs extends io.pulumi.resources.ResourceArgs
      * The sources of the robot application.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<RobotApplicationSourceConfigArgs>> sources;
 
     public Output<List<RobotApplicationSourceConfigArgs>> getSources() {
         return this.sources == null ? Output.empty() : this.sources;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<RobotApplicationTagsArgs> tags;
 
     public Output<RobotApplicationTagsArgs> getTags() {

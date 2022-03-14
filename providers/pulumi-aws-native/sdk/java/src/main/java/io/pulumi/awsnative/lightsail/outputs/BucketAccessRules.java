@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketAccessRules {
     /**
      * A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
@@ -23,10 +23,10 @@ public final class BucketAccessRules {
      */
     private final @Nullable String getObject;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketAccessRules(
-        @OutputCustomType.Parameter("allowPublicOverrides") @Nullable Boolean allowPublicOverrides,
-        @OutputCustomType.Parameter("getObject") @Nullable String getObject) {
+        @CustomType.Parameter("allowPublicOverrides") @Nullable Boolean allowPublicOverrides,
+        @CustomType.Parameter("getObject") @Nullable String getObject) {
         this.allowPublicOverrides = allowPublicOverrides;
         this.getObject = getObject;
     }

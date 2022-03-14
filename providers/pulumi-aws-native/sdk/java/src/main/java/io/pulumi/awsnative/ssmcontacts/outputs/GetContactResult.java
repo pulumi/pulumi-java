@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContactResult {
     /**
      * The Amazon Resource Name (ARN) of the contact.
@@ -22,10 +22,10 @@ public final class GetContactResult {
      */
     private final @Nullable String displayName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("displayName") @Nullable String displayName) {
         this.arn = arn;
         this.displayName = displayName;
     }

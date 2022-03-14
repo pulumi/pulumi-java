@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatastoreArgs Empty = new GetDatastoreArgs();
 
-    @InputImport(name="datastoreName", required=true)
+    @Import(name="datastoreName", required=true)
       private final String datastoreName;
 
     public String getDatastoreName() {

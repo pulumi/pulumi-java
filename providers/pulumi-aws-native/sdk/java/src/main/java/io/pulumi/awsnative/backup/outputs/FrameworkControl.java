@@ -5,14 +5,14 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.FrameworkControlControlScopeProperties;
 import io.pulumi.awsnative.backup.outputs.FrameworkControlInputParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FrameworkControl {
     /**
      * A list of ParameterName and ParameterValue pairs.
@@ -30,11 +30,11 @@ public final class FrameworkControl {
      */
     private final @Nullable FrameworkControlControlScopeProperties controlScope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FrameworkControl(
-        @OutputCustomType.Parameter("controlInputParameters") @Nullable List<FrameworkControlInputParameter> controlInputParameters,
-        @OutputCustomType.Parameter("controlName") String controlName,
-        @OutputCustomType.Parameter("controlScope") @Nullable FrameworkControlControlScopeProperties controlScope) {
+        @CustomType.Parameter("controlInputParameters") @Nullable List<FrameworkControlInputParameter> controlInputParameters,
+        @CustomType.Parameter("controlName") String controlName,
+        @CustomType.Parameter("controlScope") @Nullable FrameworkControlControlScopeProperties controlScope) {
         this.controlInputParameters = controlInputParameters;
         this.controlName = controlName;
         this.controlScope = controlScope;

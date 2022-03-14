@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class FunctionDeadLetterConfig extends io.pulumi.resources.InvokeAr
      * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
      * 
      */
-    @InputImport(name="targetArn")
+    @Import(name="targetArn")
       private final @Nullable String targetArn;
 
     public Optional<String> getTargetArn() {

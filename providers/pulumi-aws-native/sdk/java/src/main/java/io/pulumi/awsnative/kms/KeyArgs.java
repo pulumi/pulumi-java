@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kms.enums.KeySpec;
 import io.pulumi.awsnative.kms.enums.KeyUsage;
 import io.pulumi.awsnative.kms.inputs.KeyTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -25,7 +25,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
      * 
      */
-    @InputImport(name="enableKeyRotation")
+    @Import(name="enableKeyRotation")
       private final @Nullable Output<Boolean> enableKeyRotation;
 
     public Output<Boolean> getEnableKeyRotation() {
@@ -47,7 +47,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -58,7 +58,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
      * 
      */
-    @InputImport(name="keyPolicy", required=true)
+    @Import(name="keyPolicy", required=true)
       private final Output<Object> keyPolicy;
 
     public Output<Object> getKeyPolicy() {
@@ -69,7 +69,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can't change the KeySpec value after the CMK is created.
      * 
      */
-    @InputImport(name="keySpec")
+    @Import(name="keySpec")
       private final @Nullable Output<KeySpec> keySpec;
 
     public Output<KeySpec> getKeySpec() {
@@ -80,7 +80,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can't change the KeyUsage value after the CMK is created.
      * 
      */
-    @InputImport(name="keyUsage")
+    @Import(name="keyUsage")
       private final @Nullable Output<KeyUsage> keyUsage;
 
     public Output<KeyUsage> getKeyUsage() {
@@ -91,7 +91,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the CMK should be Multi-Region. You can't change the MultiRegion value after the CMK is created.
      * 
      */
-    @InputImport(name="multiRegion")
+    @Import(name="multiRegion")
       private final @Nullable Output<Boolean> multiRegion;
 
     public Output<Boolean> getMultiRegion() {
@@ -102,7 +102,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
-    @InputImport(name="pendingWindowInDays")
+    @Import(name="pendingWindowInDays")
       private final @Nullable Output<Integer> pendingWindowInDays;
 
     public Output<Integer> getPendingWindowInDays() {
@@ -113,7 +113,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<KeyTagArgs>> tags;
 
     public Output<List<KeyTagArgs>> getTags() {

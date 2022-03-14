@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetGeoSpatialCountryCode;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class DataSetGeoSpatialColumnGroup extends io.pulumi.resources.Invo
      * <p>Columns in this hierarchy.</p>
      * 
      */
-    @InputImport(name="columns", required=true)
+    @Import(name="columns", required=true)
       private final List<String> columns;
 
     public List<String> getColumns() {
         return this.columns;
     }
 
-    @InputImport(name="countryCode")
+    @Import(name="countryCode")
       private final @Nullable DataSetGeoSpatialCountryCode countryCode;
 
     public Optional<DataSetGeoSpatialCountryCode> getCountryCode() {
@@ -42,7 +42,7 @@ public final class DataSetGeoSpatialColumnGroup extends io.pulumi.resources.Invo
      * <p>A display name for the hierarchy.</p>
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

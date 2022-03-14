@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.UserProfileResourceSpecInstanceType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
      * The instance type that the image version runs on.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<UserProfileResourceSpecInstanceType> instanceType;
 
     public Output<UserProfileResourceSpecInstanceType> getInstanceType() {
@@ -30,7 +30,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
      * The ARN of the SageMaker image that the image version belongs to.
      * 
      */
-    @InputImport(name="sageMakerImageArn")
+    @Import(name="sageMakerImageArn")
       private final @Nullable Output<String> sageMakerImageArn;
 
     public Output<String> getSageMakerImageArn() {
@@ -41,7 +41,7 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
      * The ARN of the image version created on the instance.
      * 
      */
-    @InputImport(name="sageMakerImageVersionArn")
+    @Import(name="sageMakerImageVersionArn")
       private final @Nullable Output<String> sageMakerImageVersionArn;
 
     public Output<String> getSageMakerImageVersionArn() {

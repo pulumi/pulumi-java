@@ -5,14 +5,14 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicy;
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicyTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallPolicyResult {
     private final @Nullable String description;
     private final @Nullable FirewallPolicy firewallPolicy;
@@ -20,13 +20,13 @@ public final class GetFirewallPolicyResult {
     private final @Nullable String firewallPolicyId;
     private final @Nullable List<FirewallPolicyTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallPolicyResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("firewallPolicy") @Nullable FirewallPolicy firewallPolicy,
-        @OutputCustomType.Parameter("firewallPolicyArn") @Nullable String firewallPolicyArn,
-        @OutputCustomType.Parameter("firewallPolicyId") @Nullable String firewallPolicyId,
-        @OutputCustomType.Parameter("tags") @Nullable List<FirewallPolicyTag> tags) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("firewallPolicy") @Nullable FirewallPolicy firewallPolicy,
+        @CustomType.Parameter("firewallPolicyArn") @Nullable String firewallPolicyArn,
+        @CustomType.Parameter("firewallPolicyId") @Nullable String firewallPolicyId,
+        @CustomType.Parameter("tags") @Nullable List<FirewallPolicyTag> tags) {
         this.description = description;
         this.firewallPolicy = firewallPolicy;
         this.firewallPolicyArn = firewallPolicyArn;

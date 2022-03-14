@@ -7,14 +7,14 @@ import io.pulumi.awsnative.ecs.outputs.ClusterCapacityProviderStrategyItem;
 import io.pulumi.awsnative.ecs.outputs.ClusterConfiguration;
 import io.pulumi.awsnative.ecs.outputs.ClusterSettings;
 import io.pulumi.awsnative.ecs.outputs.ClusterTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS cluster, such as arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster.
@@ -27,14 +27,14 @@ public final class GetClusterResult {
     private final @Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy;
     private final @Nullable List<ClusterTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("capacityProviders") @Nullable List<String> capacityProviders,
-        @OutputCustomType.Parameter("clusterSettings") @Nullable List<ClusterSettings> clusterSettings,
-        @OutputCustomType.Parameter("configuration") @Nullable ClusterConfiguration configuration,
-        @OutputCustomType.Parameter("defaultCapacityProviderStrategy") @Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy,
-        @OutputCustomType.Parameter("tags") @Nullable List<ClusterTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("capacityProviders") @Nullable List<String> capacityProviders,
+        @CustomType.Parameter("clusterSettings") @Nullable List<ClusterSettings> clusterSettings,
+        @CustomType.Parameter("configuration") @Nullable ClusterConfiguration configuration,
+        @CustomType.Parameter("defaultCapacityProviderStrategy") @Nullable List<ClusterCapacityProviderStrategyItem> defaultCapacityProviderStrategy,
+        @CustomType.Parameter("tags") @Nullable List<ClusterTag> tags) {
         this.arn = arn;
         this.capacityProviders = capacityProviders;
         this.clusterSettings = clusterSettings;

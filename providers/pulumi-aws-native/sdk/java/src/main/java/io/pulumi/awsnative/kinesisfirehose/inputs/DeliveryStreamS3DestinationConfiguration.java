@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamS3DestinationConf
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamBufferingHints;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamCloudWatchLoggingOptions;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamEncryptionConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,56 +18,56 @@ public final class DeliveryStreamS3DestinationConfiguration extends io.pulumi.re
 
     public static final DeliveryStreamS3DestinationConfiguration Empty = new DeliveryStreamS3DestinationConfiguration();
 
-    @InputImport(name="bucketARN", required=true)
+    @Import(name="bucketARN", required=true)
       private final String bucketARN;
 
     public String getBucketARN() {
         return this.bucketARN;
     }
 
-    @InputImport(name="bufferingHints")
+    @Import(name="bufferingHints")
       private final @Nullable DeliveryStreamBufferingHints bufferingHints;
 
     public Optional<DeliveryStreamBufferingHints> getBufferingHints() {
         return this.bufferingHints == null ? Optional.empty() : Optional.ofNullable(this.bufferingHints);
     }
 
-    @InputImport(name="cloudWatchLoggingOptions")
+    @Import(name="cloudWatchLoggingOptions")
       private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
 
     public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
-    @InputImport(name="compressionFormat")
+    @Import(name="compressionFormat")
       private final @Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat;
 
     public Optional<DeliveryStreamS3DestinationConfigurationCompressionFormat> getCompressionFormat() {
         return this.compressionFormat == null ? Optional.empty() : Optional.ofNullable(this.compressionFormat);
     }
 
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration;
 
     public Optional<DeliveryStreamEncryptionConfiguration> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
-    @InputImport(name="errorOutputPrefix")
+    @Import(name="errorOutputPrefix")
       private final @Nullable String errorOutputPrefix;
 
     public Optional<String> getErrorOutputPrefix() {
         return this.errorOutputPrefix == null ? Optional.empty() : Optional.ofNullable(this.errorOutputPrefix);
     }
 
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
-    @InputImport(name="roleARN", required=true)
+    @Import(name="roleARN", required=true)
       private final String roleARN;
 
     public String getRoleARN() {

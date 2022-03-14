@@ -7,13 +7,13 @@ import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceAbpV10x;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceAbpV11;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceOtaaV10x;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceOtaaV11;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WirelessDeviceLoRaWANDevice {
     private final @Nullable WirelessDeviceAbpV10x abpV10x;
     private final @Nullable WirelessDeviceAbpV11 abpV11;
@@ -23,15 +23,15 @@ public final class WirelessDeviceLoRaWANDevice {
     private final @Nullable WirelessDeviceOtaaV11 otaaV11;
     private final @Nullable String serviceProfileId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WirelessDeviceLoRaWANDevice(
-        @OutputCustomType.Parameter("abpV10x") @Nullable WirelessDeviceAbpV10x abpV10x,
-        @OutputCustomType.Parameter("abpV11") @Nullable WirelessDeviceAbpV11 abpV11,
-        @OutputCustomType.Parameter("devEui") @Nullable String devEui,
-        @OutputCustomType.Parameter("deviceProfileId") @Nullable String deviceProfileId,
-        @OutputCustomType.Parameter("otaaV10x") @Nullable WirelessDeviceOtaaV10x otaaV10x,
-        @OutputCustomType.Parameter("otaaV11") @Nullable WirelessDeviceOtaaV11 otaaV11,
-        @OutputCustomType.Parameter("serviceProfileId") @Nullable String serviceProfileId) {
+        @CustomType.Parameter("abpV10x") @Nullable WirelessDeviceAbpV10x abpV10x,
+        @CustomType.Parameter("abpV11") @Nullable WirelessDeviceAbpV11 abpV11,
+        @CustomType.Parameter("devEui") @Nullable String devEui,
+        @CustomType.Parameter("deviceProfileId") @Nullable String deviceProfileId,
+        @CustomType.Parameter("otaaV10x") @Nullable WirelessDeviceOtaaV10x otaaV10x,
+        @CustomType.Parameter("otaaV11") @Nullable WirelessDeviceOtaaV11 otaaV11,
+        @CustomType.Parameter("serviceProfileId") @Nullable String serviceProfileId) {
         this.abpV10x = abpV10x;
         this.abpV11 = abpV11;
         this.devEui = devEui;

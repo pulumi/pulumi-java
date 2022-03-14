@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryCode {
     private final String handler;
     private final @Nullable String s3Bucket;
@@ -17,13 +17,13 @@ public final class CanaryCode {
     private final @Nullable String s3ObjectVersion;
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanaryCode(
-        @OutputCustomType.Parameter("handler") String handler,
-        @OutputCustomType.Parameter("s3Bucket") @Nullable String s3Bucket,
-        @OutputCustomType.Parameter("s3Key") @Nullable String s3Key,
-        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion,
-        @OutputCustomType.Parameter("script") @Nullable String script) {
+        @CustomType.Parameter("handler") String handler,
+        @CustomType.Parameter("s3Bucket") @Nullable String s3Bucket,
+        @CustomType.Parameter("s3Key") @Nullable String s3Key,
+        @CustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion,
+        @CustomType.Parameter("script") @Nullable String script) {
         this.handler = handler;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceConfluencePageConfigurationAr
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluenceSpaceConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,70 +21,70 @@ public final class DataSourceConfluenceConfigurationArgs extends io.pulumi.resou
 
     public static final DataSourceConfluenceConfigurationArgs Empty = new DataSourceConfluenceConfigurationArgs();
 
-    @InputImport(name="attachmentConfiguration")
+    @Import(name="attachmentConfiguration")
       private final @Nullable Output<DataSourceConfluenceAttachmentConfigurationArgs> attachmentConfiguration;
 
     public Output<DataSourceConfluenceAttachmentConfigurationArgs> getAttachmentConfiguration() {
         return this.attachmentConfiguration == null ? Output.empty() : this.attachmentConfiguration;
     }
 
-    @InputImport(name="blogConfiguration")
+    @Import(name="blogConfiguration")
       private final @Nullable Output<DataSourceConfluenceBlogConfigurationArgs> blogConfiguration;
 
     public Output<DataSourceConfluenceBlogConfigurationArgs> getBlogConfiguration() {
         return this.blogConfiguration == null ? Output.empty() : this.blogConfiguration;
     }
 
-    @InputImport(name="exclusionPatterns")
+    @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
     public Output<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
     }
 
-    @InputImport(name="inclusionPatterns")
+    @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
     public Output<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
     }
 
-    @InputImport(name="pageConfiguration")
+    @Import(name="pageConfiguration")
       private final @Nullable Output<DataSourceConfluencePageConfigurationArgs> pageConfiguration;
 
     public Output<DataSourceConfluencePageConfigurationArgs> getPageConfiguration() {
         return this.pageConfiguration == null ? Output.empty() : this.pageConfiguration;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
-    @InputImport(name="serverUrl", required=true)
+    @Import(name="serverUrl", required=true)
       private final Output<String> serverUrl;
 
     public Output<String> getServerUrl() {
         return this.serverUrl;
     }
 
-    @InputImport(name="spaceConfiguration")
+    @Import(name="spaceConfiguration")
       private final @Nullable Output<DataSourceConfluenceSpaceConfigurationArgs> spaceConfiguration;
 
     public Output<DataSourceConfluenceSpaceConfigurationArgs> getSpaceConfiguration() {
         return this.spaceConfiguration == null ? Output.empty() : this.spaceConfiguration;
     }
 
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<DataSourceConfluenceVersion> version;
 
     public Output<DataSourceConfluenceVersion> getVersion() {
         return this.version;
     }
 
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
     public Output<DataSourceVpcConfigurationArgs> getVpcConfiguration() {

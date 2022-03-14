@@ -5,13 +5,13 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.outputs.FlowFailoverConfig;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowSource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFlowResult {
     /**
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
@@ -34,12 +34,12 @@ public final class GetFlowResult {
      */
     private final @Nullable FlowFailoverConfig sourceFailoverConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFlowResult(
-        @OutputCustomType.Parameter("flowArn") @Nullable String flowArn,
-        @OutputCustomType.Parameter("flowAvailabilityZone") @Nullable String flowAvailabilityZone,
-        @OutputCustomType.Parameter("source") @Nullable FlowSource source,
-        @OutputCustomType.Parameter("sourceFailoverConfig") @Nullable FlowFailoverConfig sourceFailoverConfig) {
+        @CustomType.Parameter("flowArn") @Nullable String flowArn,
+        @CustomType.Parameter("flowAvailabilityZone") @Nullable String flowAvailabilityZone,
+        @CustomType.Parameter("source") @Nullable FlowSource source,
+        @CustomType.Parameter("sourceFailoverConfig") @Nullable FlowFailoverConfig sourceFailoverConfig) {
         this.flowArn = flowArn;
         this.flowAvailabilityZone = flowAvailabilityZone;
         this.source = source;

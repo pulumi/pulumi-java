@@ -5,20 +5,20 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasAudioLogSetting;
 import io.pulumi.awsnative.lex.outputs.BotAliasTextLogSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasConversationLogSettings {
     private final @Nullable List<BotAliasAudioLogSetting> audioLogSettings;
     private final @Nullable List<BotAliasTextLogSetting> textLogSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAliasConversationLogSettings(
-        @OutputCustomType.Parameter("audioLogSettings") @Nullable List<BotAliasAudioLogSetting> audioLogSettings,
-        @OutputCustomType.Parameter("textLogSettings") @Nullable List<BotAliasTextLogSetting> textLogSettings) {
+        @CustomType.Parameter("audioLogSettings") @Nullable List<BotAliasAudioLogSetting> audioLogSettings,
+        @CustomType.Parameter("textLogSettings") @Nullable List<BotAliasTextLogSetting> textLogSettings) {
         this.audioLogSettings = audioLogSettings;
         this.textLogSettings = textLogSettings;
     }

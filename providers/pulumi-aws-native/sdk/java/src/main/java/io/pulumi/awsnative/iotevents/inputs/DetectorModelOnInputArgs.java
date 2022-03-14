@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelTransitionEventArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
      * Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
      * 
      */
-    @InputImport(name="events")
+    @Import(name="events")
       private final @Nullable Output<List<DetectorModelEventArgs>> events;
 
     public Output<List<DetectorModelEventArgs>> getEvents() {
@@ -35,7 +35,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
      * Specifies the `actions` performed, and the next `state` entered, when a `condition` evaluates to `TRUE`.
      * 
      */
-    @InputImport(name="transitionEvents")
+    @Import(name="transitionEvents")
       private final @Nullable Output<List<DetectorModelTransitionEventArgs>> transitionEvents;
 
     public Output<List<DetectorModelTransitionEventArgs>> getTransitionEvents() {

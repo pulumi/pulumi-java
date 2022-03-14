@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyGroupConfig {
     private final @Nullable String comment;
     private final List<String> items;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyGroupConfig(
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("items") List<String> items,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("items") List<String> items,
+        @CustomType.Parameter("name") String name) {
         this.comment = comment;
         this.items = items;
         this.name = name;

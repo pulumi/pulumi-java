@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatastoreRetentionPeriodArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,42 +20,42 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatastoreArgs Empty = new DatastoreArgs();
 
-    @InputImport(name="datastoreName")
+    @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
         return this.datastoreName == null ? Output.empty() : this.datastoreName;
     }
 
-    @InputImport(name="datastorePartitions")
+    @Import(name="datastorePartitions")
       private final @Nullable Output<DatastorePartitionsArgs> datastorePartitions;
 
     public Output<DatastorePartitionsArgs> getDatastorePartitions() {
         return this.datastorePartitions == null ? Output.empty() : this.datastorePartitions;
     }
 
-    @InputImport(name="datastoreStorage")
+    @Import(name="datastoreStorage")
       private final @Nullable Output<DatastoreStorageArgs> datastoreStorage;
 
     public Output<DatastoreStorageArgs> getDatastoreStorage() {
         return this.datastoreStorage == null ? Output.empty() : this.datastoreStorage;
     }
 
-    @InputImport(name="fileFormatConfiguration")
+    @Import(name="fileFormatConfiguration")
       private final @Nullable Output<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
 
     public Output<DatastoreFileFormatConfigurationArgs> getFileFormatConfiguration() {
         return this.fileFormatConfiguration == null ? Output.empty() : this.fileFormatConfiguration;
     }
 
-    @InputImport(name="retentionPeriod")
+    @Import(name="retentionPeriod")
       private final @Nullable Output<DatastoreRetentionPeriodArgs> retentionPeriod;
 
     public Output<DatastoreRetentionPeriodArgs> getRetentionPeriod() {
         return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DatastoreTagArgs>> tags;
 
     public Output<List<DatastoreTagArgs>> getTags() {

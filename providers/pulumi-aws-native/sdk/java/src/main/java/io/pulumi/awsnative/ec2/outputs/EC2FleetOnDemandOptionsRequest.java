@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.EC2FleetCapacityReservationOptionsRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetOnDemandOptionsRequest {
     private final @Nullable String allocationStrategy;
     private final @Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions;
@@ -21,14 +21,14 @@ public final class EC2FleetOnDemandOptionsRequest {
     private final @Nullable Boolean singleAvailabilityZone;
     private final @Nullable Boolean singleInstanceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetOnDemandOptionsRequest(
-        @OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
-        @OutputCustomType.Parameter("capacityReservationOptions") @Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions,
-        @OutputCustomType.Parameter("maxTotalPrice") @Nullable String maxTotalPrice,
-        @OutputCustomType.Parameter("minTargetCapacity") @Nullable Integer minTargetCapacity,
-        @OutputCustomType.Parameter("singleAvailabilityZone") @Nullable Boolean singleAvailabilityZone,
-        @OutputCustomType.Parameter("singleInstanceType") @Nullable Boolean singleInstanceType) {
+        @CustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
+        @CustomType.Parameter("capacityReservationOptions") @Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions,
+        @CustomType.Parameter("maxTotalPrice") @Nullable String maxTotalPrice,
+        @CustomType.Parameter("minTargetCapacity") @Nullable Integer minTargetCapacity,
+        @CustomType.Parameter("singleAvailabilityZone") @Nullable Boolean singleAvailabilityZone,
+        @CustomType.Parameter("singleInstanceType") @Nullable Boolean singleInstanceType) {
         this.allocationStrategy = allocationStrategy;
         this.capacityReservationOptions = capacityReservationOptions;
         this.maxTotalPrice = maxTotalPrice;

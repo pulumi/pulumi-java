@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetSpotPlacementTenancy;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class SpotFleetSpotPlacement extends io.pulumi.resources.InvokeArgs
 
     public static final SpotFleetSpotPlacement Empty = new SpotFleetSpotPlacement();
 
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
     }
 
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable String groupName;
 
     public Optional<String> getGroupName() {
         return this.groupName == null ? Optional.empty() : Optional.ofNullable(this.groupName);
     }
 
-    @InputImport(name="tenancy")
+    @Import(name="tenancy")
       private final @Nullable SpotFleetSpotPlacementTenancy tenancy;
 
     public Optional<SpotFleetSpotPlacementTenancy> getTenancy() {

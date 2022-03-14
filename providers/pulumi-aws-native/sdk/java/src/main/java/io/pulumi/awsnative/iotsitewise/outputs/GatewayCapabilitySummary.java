@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayCapabilitySummary {
     private final @Nullable String capabilityConfiguration;
     private final String capabilityNamespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayCapabilitySummary(
-        @OutputCustomType.Parameter("capabilityConfiguration") @Nullable String capabilityConfiguration,
-        @OutputCustomType.Parameter("capabilityNamespace") String capabilityNamespace) {
+        @CustomType.Parameter("capabilityConfiguration") @Nullable String capabilityConfiguration,
+        @CustomType.Parameter("capabilityNamespace") String capabilityNamespace) {
         this.capabilityConfiguration = capabilityConfiguration;
         this.capabilityNamespace = capabilityNamespace;
     }

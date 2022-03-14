@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserHierarchyGroupArgs extends io.pulumi.resources.InvokeA
      * The Amazon Resource Name (ARN) for the user hierarchy group.
      * 
      */
-    @InputImport(name="userHierarchyGroupArn", required=true)
+    @Import(name="userHierarchyGroupArn", required=true)
       private final String userHierarchyGroupArn;
 
     public String getUserHierarchyGroupArn() {

@@ -5,26 +5,26 @@ package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.DistributionConfig;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDistributionResult {
     private final @Nullable DistributionConfig distributionConfig;
     private final @Nullable String domainName;
     private final @Nullable String id;
     private final @Nullable List<DistributionTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDistributionResult(
-        @OutputCustomType.Parameter("distributionConfig") @Nullable DistributionConfig distributionConfig,
-        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("tags") @Nullable List<DistributionTag> tags) {
+        @CustomType.Parameter("distributionConfig") @Nullable DistributionConfig distributionConfig,
+        @CustomType.Parameter("domainName") @Nullable String domainName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("tags") @Nullable List<DistributionTag> tags) {
         this.distributionConfig = distributionConfig;
         this.domainName = domainName;
         this.id = id;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.configuration;
 
 import io.pulumi.awsnative.configuration.inputs.OrganizationConformancePackConformancePackInputParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * A list of ConformancePackInputParameter objects.
      * 
      */
-    @InputImport(name="conformancePackInputParameters")
+    @Import(name="conformancePackInputParameters")
       private final @Nullable Output<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters;
 
     public Output<List<OrganizationConformancePackConformancePackInputParameterArgs>> getConformancePackInputParameters() {
@@ -31,7 +31,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
-    @InputImport(name="deliveryS3Bucket")
+    @Import(name="deliveryS3Bucket")
       private final @Nullable Output<String> deliveryS3Bucket;
 
     public Output<String> getDeliveryS3Bucket() {
@@ -42,7 +42,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * The prefix for the delivery S3 bucket.
      * 
      */
-    @InputImport(name="deliveryS3KeyPrefix")
+    @Import(name="deliveryS3KeyPrefix")
       private final @Nullable Output<String> deliveryS3KeyPrefix;
 
     public Output<String> getDeliveryS3KeyPrefix() {
@@ -53,7 +53,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * A list of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack.
      * 
      */
-    @InputImport(name="excludedAccounts")
+    @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
 
     public Output<List<String>> getExcludedAccounts() {
@@ -64,7 +64,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * The name of the organization conformance pack.
      * 
      */
-    @InputImport(name="organizationConformancePackName")
+    @Import(name="organizationConformancePackName")
       private final @Nullable Output<String> organizationConformancePackName;
 
     public Output<String> getOrganizationConformancePackName() {
@@ -75,7 +75,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * A string containing full conformance pack template body.
      * 
      */
-    @InputImport(name="templateBody")
+    @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
     public Output<String> getTemplateBody() {
@@ -86,7 +86,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * Location of file containing the template body.
      * 
      */
-    @InputImport(name="templateS3Uri")
+    @Import(name="templateS3Uri")
       private final @Nullable Output<String> templateS3Uri;
 
     public Output<String> getTemplateS3Uri() {

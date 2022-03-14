@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,133 +16,133 @@ public final class ServiceProfileLoRaWANServiceProfileArgs extends io.pulumi.res
 
     public static final ServiceProfileLoRaWANServiceProfileArgs Empty = new ServiceProfileLoRaWANServiceProfileArgs();
 
-    @InputImport(name="addGwMetadata")
+    @Import(name="addGwMetadata")
       private final @Nullable Output<Boolean> addGwMetadata;
 
     public Output<Boolean> getAddGwMetadata() {
         return this.addGwMetadata == null ? Output.empty() : this.addGwMetadata;
     }
 
-    @InputImport(name="channelMask")
+    @Import(name="channelMask")
       private final @Nullable Output<String> channelMask;
 
     public Output<String> getChannelMask() {
         return this.channelMask == null ? Output.empty() : this.channelMask;
     }
 
-    @InputImport(name="devStatusReqFreq")
+    @Import(name="devStatusReqFreq")
       private final @Nullable Output<Integer> devStatusReqFreq;
 
     public Output<Integer> getDevStatusReqFreq() {
         return this.devStatusReqFreq == null ? Output.empty() : this.devStatusReqFreq;
     }
 
-    @InputImport(name="dlBucketSize")
+    @Import(name="dlBucketSize")
       private final @Nullable Output<Integer> dlBucketSize;
 
     public Output<Integer> getDlBucketSize() {
         return this.dlBucketSize == null ? Output.empty() : this.dlBucketSize;
     }
 
-    @InputImport(name="dlRate")
+    @Import(name="dlRate")
       private final @Nullable Output<Integer> dlRate;
 
     public Output<Integer> getDlRate() {
         return this.dlRate == null ? Output.empty() : this.dlRate;
     }
 
-    @InputImport(name="dlRatePolicy")
+    @Import(name="dlRatePolicy")
       private final @Nullable Output<String> dlRatePolicy;
 
     public Output<String> getDlRatePolicy() {
         return this.dlRatePolicy == null ? Output.empty() : this.dlRatePolicy;
     }
 
-    @InputImport(name="drMax")
+    @Import(name="drMax")
       private final @Nullable Output<Integer> drMax;
 
     public Output<Integer> getDrMax() {
         return this.drMax == null ? Output.empty() : this.drMax;
     }
 
-    @InputImport(name="drMin")
+    @Import(name="drMin")
       private final @Nullable Output<Integer> drMin;
 
     public Output<Integer> getDrMin() {
         return this.drMin == null ? Output.empty() : this.drMin;
     }
 
-    @InputImport(name="hrAllowed")
+    @Import(name="hrAllowed")
       private final @Nullable Output<Boolean> hrAllowed;
 
     public Output<Boolean> getHrAllowed() {
         return this.hrAllowed == null ? Output.empty() : this.hrAllowed;
     }
 
-    @InputImport(name="minGwDiversity")
+    @Import(name="minGwDiversity")
       private final @Nullable Output<Integer> minGwDiversity;
 
     public Output<Integer> getMinGwDiversity() {
         return this.minGwDiversity == null ? Output.empty() : this.minGwDiversity;
     }
 
-    @InputImport(name="nwkGeoLoc")
+    @Import(name="nwkGeoLoc")
       private final @Nullable Output<Boolean> nwkGeoLoc;
 
     public Output<Boolean> getNwkGeoLoc() {
         return this.nwkGeoLoc == null ? Output.empty() : this.nwkGeoLoc;
     }
 
-    @InputImport(name="prAllowed")
+    @Import(name="prAllowed")
       private final @Nullable Output<Boolean> prAllowed;
 
     public Output<Boolean> getPrAllowed() {
         return this.prAllowed == null ? Output.empty() : this.prAllowed;
     }
 
-    @InputImport(name="raAllowed")
+    @Import(name="raAllowed")
       private final @Nullable Output<Boolean> raAllowed;
 
     public Output<Boolean> getRaAllowed() {
         return this.raAllowed == null ? Output.empty() : this.raAllowed;
     }
 
-    @InputImport(name="reportDevStatusBattery")
+    @Import(name="reportDevStatusBattery")
       private final @Nullable Output<Boolean> reportDevStatusBattery;
 
     public Output<Boolean> getReportDevStatusBattery() {
         return this.reportDevStatusBattery == null ? Output.empty() : this.reportDevStatusBattery;
     }
 
-    @InputImport(name="reportDevStatusMargin")
+    @Import(name="reportDevStatusMargin")
       private final @Nullable Output<Boolean> reportDevStatusMargin;
 
     public Output<Boolean> getReportDevStatusMargin() {
         return this.reportDevStatusMargin == null ? Output.empty() : this.reportDevStatusMargin;
     }
 
-    @InputImport(name="targetPer")
+    @Import(name="targetPer")
       private final @Nullable Output<Integer> targetPer;
 
     public Output<Integer> getTargetPer() {
         return this.targetPer == null ? Output.empty() : this.targetPer;
     }
 
-    @InputImport(name="ulBucketSize")
+    @Import(name="ulBucketSize")
       private final @Nullable Output<Integer> ulBucketSize;
 
     public Output<Integer> getUlBucketSize() {
         return this.ulBucketSize == null ? Output.empty() : this.ulBucketSize;
     }
 
-    @InputImport(name="ulRate")
+    @Import(name="ulRate")
       private final @Nullable Output<Integer> ulRate;
 
     public Output<Integer> getUlRate() {
         return this.ulRate == null ? Output.empty() : this.ulRate;
     }
 
-    @InputImport(name="ulRatePolicy")
+    @Import(name="ulRatePolicy")
       private final @Nullable Output<String> ulRatePolicy;
 
     public Output<String> getUlRatePolicy() {

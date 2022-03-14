@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoverycontrol;
 
 import io.pulumi.awsnative.route53recoverycontrol.inputs.ControlPanelTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * Cluster to associate with the Control Panel
      * 
      */
-    @InputImport(name="clusterArn")
+    @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
     public Output<String> getClusterArn() {
@@ -31,7 +31,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the control panel. You can use any non-white space character in the name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ControlPanelTagArgs>> tags;
 
     public Output<List<ControlPanelTagArgs>> getTags() {

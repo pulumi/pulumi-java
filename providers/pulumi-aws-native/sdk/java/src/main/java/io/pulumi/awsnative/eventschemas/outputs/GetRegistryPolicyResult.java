@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.eventschemas.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistryPolicyResult {
     private final @Nullable String id;
     private final @Nullable Object policy;
     private final @Nullable String registryName;
     private final @Nullable String revisionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistryPolicyResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("policy") @Nullable Object policy,
-        @OutputCustomType.Parameter("registryName") @Nullable String registryName,
-        @OutputCustomType.Parameter("revisionId") @Nullable String revisionId) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("policy") @Nullable Object policy,
+        @CustomType.Parameter("registryName") @Nullable String registryName,
+        @CustomType.Parameter("revisionId") @Nullable String revisionId) {
         this.id = id;
         this.policy = policy;
         this.registryName = registryName;

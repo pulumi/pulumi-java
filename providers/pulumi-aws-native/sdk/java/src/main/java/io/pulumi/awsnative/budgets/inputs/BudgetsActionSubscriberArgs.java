@@ -5,7 +5,7 @@ package io.pulumi.awsnative.budgets.inputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionSubscriberType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class BudgetsActionSubscriberArgs extends io.pulumi.resources.Resou
 
     public static final BudgetsActionSubscriberArgs Empty = new BudgetsActionSubscriberArgs();
 
-    @InputImport(name="address", required=true)
+    @Import(name="address", required=true)
       private final Output<String> address;
 
     public Output<String> getAddress() {
         return this.address;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<BudgetsActionSubscriberType> type;
 
     public Output<BudgetsActionSubscriberType> getType() {

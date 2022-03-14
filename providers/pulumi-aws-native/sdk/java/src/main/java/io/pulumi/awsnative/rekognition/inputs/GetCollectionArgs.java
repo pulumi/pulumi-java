@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rekognition.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetCollectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCollectionArgs Empty = new GetCollectionArgs();
 
-    @InputImport(name="collectionId", required=true)
+    @Import(name="collectionId", required=true)
       private final String collectionId;
 
     public String getCollectionId() {

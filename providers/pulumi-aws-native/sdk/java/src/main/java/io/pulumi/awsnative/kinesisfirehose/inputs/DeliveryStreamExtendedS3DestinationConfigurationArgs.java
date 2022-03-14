@@ -13,7 +13,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamEncryptionConfig
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfigurationArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,91 +23,91 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
 
     public static final DeliveryStreamExtendedS3DestinationConfigurationArgs Empty = new DeliveryStreamExtendedS3DestinationConfigurationArgs();
 
-    @InputImport(name="bucketARN", required=true)
+    @Import(name="bucketARN", required=true)
       private final Output<String> bucketARN;
 
     public Output<String> getBucketARN() {
         return this.bucketARN;
     }
 
-    @InputImport(name="bufferingHints")
+    @Import(name="bufferingHints")
       private final @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
 
     public Output<DeliveryStreamBufferingHintsArgs> getBufferingHints() {
         return this.bufferingHints == null ? Output.empty() : this.bufferingHints;
     }
 
-    @InputImport(name="cloudWatchLoggingOptions")
+    @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Output.empty() : this.cloudWatchLoggingOptions;
     }
 
-    @InputImport(name="compressionFormat")
+    @Import(name="compressionFormat")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> compressionFormat;
 
     public Output<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> getCompressionFormat() {
         return this.compressionFormat == null ? Output.empty() : this.compressionFormat;
     }
 
-    @InputImport(name="dataFormatConversionConfiguration")
+    @Import(name="dataFormatConversionConfiguration")
       private final @Nullable Output<DeliveryStreamDataFormatConversionConfigurationArgs> dataFormatConversionConfiguration;
 
     public Output<DeliveryStreamDataFormatConversionConfigurationArgs> getDataFormatConversionConfiguration() {
         return this.dataFormatConversionConfiguration == null ? Output.empty() : this.dataFormatConversionConfiguration;
     }
 
-    @InputImport(name="dynamicPartitioningConfiguration")
+    @Import(name="dynamicPartitioningConfiguration")
       private final @Nullable Output<DeliveryStreamDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration;
 
     public Output<DeliveryStreamDynamicPartitioningConfigurationArgs> getDynamicPartitioningConfiguration() {
         return this.dynamicPartitioningConfiguration == null ? Output.empty() : this.dynamicPartitioningConfiguration;
     }
 
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<DeliveryStreamEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
-    @InputImport(name="errorOutputPrefix")
+    @Import(name="errorOutputPrefix")
       private final @Nullable Output<String> errorOutputPrefix;
 
     public Output<String> getErrorOutputPrefix() {
         return this.errorOutputPrefix == null ? Output.empty() : this.errorOutputPrefix;
     }
 
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
         return this.prefix == null ? Output.empty() : this.prefix;
     }
 
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
-    @InputImport(name="roleARN", required=true)
+    @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
     public Output<String> getRoleARN() {
         return this.roleARN;
     }
 
-    @InputImport(name="s3BackupConfiguration")
+    @Import(name="s3BackupConfiguration")
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
         return this.s3BackupConfiguration == null ? Output.empty() : this.s3BackupConfiguration;
     }
 
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> s3BackupMode;
 
     public Output<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> getS3BackupMode() {

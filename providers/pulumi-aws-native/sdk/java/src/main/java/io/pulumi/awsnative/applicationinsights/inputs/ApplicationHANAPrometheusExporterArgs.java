@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * A flag which indicates agreeing to install SAP HANA DB client.
      * 
      */
-    @InputImport(name="agreeToInstallHANADBClient", required=true)
+    @Import(name="agreeToInstallHANADBClient", required=true)
       private final Output<Boolean> agreeToInstallHANADBClient;
 
     public Output<Boolean> getAgreeToInstallHANADBClient() {
@@ -34,7 +34,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * The HANA DB port.
      * 
      */
-    @InputImport(name="hANAPort", required=true)
+    @Import(name="hANAPort", required=true)
       private final Output<String> hANAPort;
 
     public Output<String> getHANAPort() {
@@ -45,7 +45,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * HANA DB SID.
      * 
      */
-    @InputImport(name="hANASID", required=true)
+    @Import(name="hANASID", required=true)
       private final Output<String> hANASID;
 
     public Output<String> getHANASID() {
@@ -59,7 +59,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * }.
      * 
      */
-    @InputImport(name="hANASecretName", required=true)
+    @Import(name="hANASecretName", required=true)
       private final Output<String> hANASecretName;
 
     public Output<String> getHANASecretName() {
@@ -70,7 +70,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
      * Prometheus exporter port.
      * 
      */
-    @InputImport(name="prometheusPort")
+    @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;
 
     public Output<String> getPrometheusPort() {

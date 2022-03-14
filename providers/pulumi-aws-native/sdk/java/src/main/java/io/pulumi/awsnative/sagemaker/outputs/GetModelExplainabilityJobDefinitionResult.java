@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetModelExplainabilityJobDefinitionResult {
     /**
      * The time at which the job definition was created.
@@ -22,10 +22,10 @@ public final class GetModelExplainabilityJobDefinitionResult {
      */
     private final @Nullable String jobDefinitionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetModelExplainabilityJobDefinitionResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("jobDefinitionArn") @Nullable String jobDefinitionArn) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("jobDefinitionArn") @Nullable String jobDefinitionArn) {
         this.creationTime = creationTime;
         this.jobDefinitionArn = jobDefinitionArn;
     }

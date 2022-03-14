@@ -6,7 +6,7 @@ package io.pulumi.awsnative.glue;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.glue.SchemaVersionMetadataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class SchemaVersionMetadata extends io.pulumi.resources.CustomResource {
      * Metadata key
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
@@ -35,7 +35,7 @@ public class SchemaVersionMetadata extends io.pulumi.resources.CustomResource {
      * Represents the version ID associated with the schema version.
      * 
      */
-    @OutputExport(name="schemaVersionId", type=String.class, parameters={})
+    @Export(name="schemaVersionId", type=String.class, parameters={})
     private Output<String> schemaVersionId;
 
     /**
@@ -49,7 +49,7 @@ public class SchemaVersionMetadata extends io.pulumi.resources.CustomResource {
      * Metadata value
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

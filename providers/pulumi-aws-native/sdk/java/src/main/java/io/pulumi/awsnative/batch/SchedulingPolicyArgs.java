@@ -5,7 +5,7 @@ package io.pulumi.awsnative.batch;
 
 import io.pulumi.awsnative.batch.inputs.SchedulingPolicyFairsharePolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     public static final SchedulingPolicyArgs Empty = new SchedulingPolicyArgs();
 
-    @InputImport(name="fairsharePolicy")
+    @Import(name="fairsharePolicy")
       private final @Nullable Output<SchedulingPolicyFairsharePolicyArgs> fairsharePolicy;
 
     public Output<SchedulingPolicyFairsharePolicyArgs> getFairsharePolicy() {
@@ -27,7 +27,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Name of Scheduling Policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -38,7 +38,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * A key-value pair to associate with a resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {

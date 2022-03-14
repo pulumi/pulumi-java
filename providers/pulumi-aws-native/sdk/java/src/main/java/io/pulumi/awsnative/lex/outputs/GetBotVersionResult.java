@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBotVersionResult {
     private final @Nullable String botVersion;
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBotVersionResult(
-        @OutputCustomType.Parameter("botVersion") @Nullable String botVersion,
-        @OutputCustomType.Parameter("description") @Nullable String description) {
+        @CustomType.Parameter("botVersion") @Nullable String botVersion,
+        @CustomType.Parameter("description") @Nullable String description) {
         this.botVersion = botVersion;
         this.description = description;
     }

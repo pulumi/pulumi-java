@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FunctionVpcConfig extends io.pulumi.resources.InvokeArgs {
      * A list of VPC security groups IDs.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
@@ -34,7 +34,7 @@ public final class FunctionVpcConfig extends io.pulumi.resources.InvokeArgs {
      * A list of VPC subnet IDs.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable List<String> subnetIds;
 
     public List<String> getSubnetIds() {

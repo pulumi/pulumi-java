@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
      * The revision of the worker configuration to use.
      * 
      */
-    @InputImport(name="revision", required=true)
+    @Import(name="revision", required=true)
       private final Output<Integer> revision;
 
     public Output<Integer> getRevision() {
@@ -33,7 +33,7 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
      * The Amazon Resource Name (ARN) of the worker configuration to use.
      * 
      */
-    @InputImport(name="workerConfigurationArn", required=true)
+    @Import(name="workerConfigurationArn", required=true)
       private final Output<String> workerConfigurationArn;
 
     public Output<String> getWorkerConfigurationArn() {

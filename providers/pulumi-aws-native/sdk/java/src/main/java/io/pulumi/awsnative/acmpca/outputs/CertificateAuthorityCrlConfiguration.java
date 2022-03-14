@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityCrlConfiguration {
     private final @Nullable String customCname;
     private final @Nullable Boolean enabled;
@@ -19,13 +19,13 @@ public final class CertificateAuthorityCrlConfiguration {
     private final @Nullable String s3BucketName;
     private final @Nullable String s3ObjectAcl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityCrlConfiguration(
-        @OutputCustomType.Parameter("customCname") @Nullable String customCname,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
-        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
-        @OutputCustomType.Parameter("s3ObjectAcl") @Nullable String s3ObjectAcl) {
+        @CustomType.Parameter("customCname") @Nullable String customCname,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
+        @CustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @CustomType.Parameter("s3ObjectAcl") @Nullable String s3ObjectAcl) {
         this.customCname = customCname;
         this.enabled = enabled;
         this.expirationInDays = expirationInDays;

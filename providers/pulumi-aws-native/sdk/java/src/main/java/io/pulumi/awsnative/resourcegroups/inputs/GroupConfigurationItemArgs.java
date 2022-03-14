@@ -5,7 +5,7 @@ package io.pulumi.awsnative.resourcegroups.inputs;
 
 import io.pulumi.awsnative.resourcegroups.inputs.GroupConfigurationParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
 
     public static final GroupConfigurationItemArgs Empty = new GroupConfigurationItemArgs();
 
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<GroupConfigurationParameterArgs>> parameters;
 
     public Output<List<GroupConfigurationParameterArgs>> getParameters() {
         return this.parameters == null ? Output.empty() : this.parameters;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

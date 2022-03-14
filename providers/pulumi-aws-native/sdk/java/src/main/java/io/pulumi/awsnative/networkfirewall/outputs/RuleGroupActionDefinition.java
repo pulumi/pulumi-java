@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupPublishMetricAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupActionDefinition {
     private final @Nullable RuleGroupPublishMetricAction publishMetricAction;
 
-    @OutputCustomType.Constructor
-    private RuleGroupActionDefinition(@OutputCustomType.Parameter("publishMetricAction") @Nullable RuleGroupPublishMetricAction publishMetricAction) {
+    @CustomType.Constructor
+    private RuleGroupActionDefinition(@CustomType.Parameter("publishMetricAction") @Nullable RuleGroupPublishMetricAction publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
     }
 

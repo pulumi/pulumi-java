@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRuleTimestreamDimension;
 import io.pulumi.awsnative.iot.outputs.TopicRuleTimestreamTimestamp;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleTimestreamAction {
     private final @Nullable Boolean batchMode;
     private final String databaseName;
@@ -22,14 +22,14 @@ public final class TopicRuleTimestreamAction {
     private final String tableName;
     private final @Nullable TopicRuleTimestreamTimestamp timestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleTimestreamAction(
-        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("dimensions") List<TopicRuleTimestreamDimension> dimensions,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("timestamp") @Nullable TopicRuleTimestreamTimestamp timestamp) {
+        @CustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("dimensions") List<TopicRuleTimestreamDimension> dimensions,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("timestamp") @Nullable TopicRuleTimestreamTimestamp timestamp) {
         this.batchMode = batchMode;
         this.databaseName = databaseName;
         this.dimensions = dimensions;

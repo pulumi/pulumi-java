@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.IndexKeyLocation;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,49 +15,49 @@ public final class IndexJwtTokenTypeConfiguration extends io.pulumi.resources.In
 
     public static final IndexJwtTokenTypeConfiguration Empty = new IndexJwtTokenTypeConfiguration();
 
-    @InputImport(name="claimRegex")
+    @Import(name="claimRegex")
       private final @Nullable String claimRegex;
 
     public Optional<String> getClaimRegex() {
         return this.claimRegex == null ? Optional.empty() : Optional.ofNullable(this.claimRegex);
     }
 
-    @InputImport(name="groupAttributeField")
+    @Import(name="groupAttributeField")
       private final @Nullable String groupAttributeField;
 
     public Optional<String> getGroupAttributeField() {
         return this.groupAttributeField == null ? Optional.empty() : Optional.ofNullable(this.groupAttributeField);
     }
 
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable String issuer;
 
     public Optional<String> getIssuer() {
         return this.issuer == null ? Optional.empty() : Optional.ofNullable(this.issuer);
     }
 
-    @InputImport(name="keyLocation", required=true)
+    @Import(name="keyLocation", required=true)
       private final IndexKeyLocation keyLocation;
 
     public IndexKeyLocation getKeyLocation() {
         return this.keyLocation;
     }
 
-    @InputImport(name="secretManagerArn")
+    @Import(name="secretManagerArn")
       private final @Nullable String secretManagerArn;
 
     public Optional<String> getSecretManagerArn() {
         return this.secretManagerArn == null ? Optional.empty() : Optional.ofNullable(this.secretManagerArn);
     }
 
-    @InputImport(name="uRL")
+    @Import(name="uRL")
       private final @Nullable String uRL;
 
     public Optional<String> getURL() {
         return this.uRL == null ? Optional.empty() : Optional.ofNullable(this.uRL);
     }
 
-    @InputImport(name="userNameAttributeField")
+    @Import(name="userNameAttributeField")
       private final @Nullable String userNameAttributeField;
 
     public Optional<String> getUserNameAttributeField() {

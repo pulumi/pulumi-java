@@ -10,7 +10,7 @@ import io.pulumi.awsnative.route53.outputs.HostedZoneQueryLoggingConfig;
 import io.pulumi.awsnative.route53.outputs.HostedZoneTag;
 import io.pulumi.awsnative.route53.outputs.HostedZoneVPC;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:route53:HostedZone")
 public class HostedZone extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="hostedZoneConfig", type=HostedZoneConfig.class, parameters={})
+    @Export(name="hostedZoneConfig", type=HostedZoneConfig.class, parameters={})
     private Output</* @Nullable */ HostedZoneConfig> hostedZoneConfig;
 
     public Output</* @Nullable */ HostedZoneConfig> getHostedZoneConfig() {
@@ -34,7 +34,7 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
      * 
      */
-    @OutputExport(name="hostedZoneTags", type=List.class, parameters={HostedZoneTag.class})
+    @Export(name="hostedZoneTags", type=List.class, parameters={HostedZoneTag.class})
     private Output</* @Nullable */ List<HostedZoneTag>> hostedZoneTags;
 
     /**
@@ -52,7 +52,7 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * If you're creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -64,13 +64,13 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="nameServers", type=List.class, parameters={String.class})
+    @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
     public Output<List<String>> getNameServers() {
         return this.nameServers;
     }
-    @OutputExport(name="queryLoggingConfig", type=HostedZoneQueryLoggingConfig.class, parameters={})
+    @Export(name="queryLoggingConfig", type=HostedZoneQueryLoggingConfig.class, parameters={})
     private Output</* @Nullable */ HostedZoneQueryLoggingConfig> queryLoggingConfig;
 
     public Output</* @Nullable */ HostedZoneQueryLoggingConfig> getQueryLoggingConfig() {
@@ -80,7 +80,7 @@ public class HostedZone extends io.pulumi.resources.CustomResource {
      * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
      * 
      */
-    @OutputExport(name="vPCs", type=List.class, parameters={HostedZoneVPC.class})
+    @Export(name="vPCs", type=List.class, parameters={HostedZoneVPC.class})
     private Output</* @Nullable */ List<HostedZoneVPC>> vPCs;
 
     /**

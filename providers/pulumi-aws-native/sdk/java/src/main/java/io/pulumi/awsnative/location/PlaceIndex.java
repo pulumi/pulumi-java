@@ -8,7 +8,7 @@ import io.pulumi.awsnative.location.PlaceIndexArgs;
 import io.pulumi.awsnative.location.enums.PlaceIndexPricingPlan;
 import io.pulumi.awsnative.location.outputs.PlaceIndexDataSourceConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -19,55 +19,55 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:location:PlaceIndex")
 public class PlaceIndex extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    @OutputExport(name="dataSource", type=String.class, parameters={})
+    @Export(name="dataSource", type=String.class, parameters={})
     private Output<String> dataSource;
 
     public Output<String> getDataSource() {
         return this.dataSource;
     }
-    @OutputExport(name="dataSourceConfiguration", type=PlaceIndexDataSourceConfiguration.class, parameters={})
+    @Export(name="dataSourceConfiguration", type=PlaceIndexDataSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ PlaceIndexDataSourceConfiguration> dataSourceConfiguration;
 
     public Output</* @Nullable */ PlaceIndexDataSourceConfiguration> getDataSourceConfiguration() {
         return this.dataSourceConfiguration;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="indexArn", type=String.class, parameters={})
+    @Export(name="indexArn", type=String.class, parameters={})
     private Output<String> indexArn;
 
     public Output<String> getIndexArn() {
         return this.indexArn;
     }
-    @OutputExport(name="indexName", type=String.class, parameters={})
+    @Export(name="indexName", type=String.class, parameters={})
     private Output<String> indexName;
 
     public Output<String> getIndexName() {
         return this.indexName;
     }
-    @OutputExport(name="pricingPlan", type=PlaceIndexPricingPlan.class, parameters={})
+    @Export(name="pricingPlan", type=PlaceIndexPricingPlan.class, parameters={})
     private Output</* @Nullable */ PlaceIndexPricingPlan> pricingPlan;
 
     public Output</* @Nullable */ PlaceIndexPricingPlan> getPricingPlan() {
         return this.pricingPlan;
     }
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

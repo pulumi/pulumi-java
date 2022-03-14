@@ -5,23 +5,23 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.ConfigEirp;
 import io.pulumi.awsnative.groundstation.outputs.ConfigUplinkSpectrumConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigAntennaUplinkConfig {
     private final @Nullable ConfigUplinkSpectrumConfig spectrumConfig;
     private final @Nullable ConfigEirp targetEirp;
     private final @Nullable Boolean transmitDisabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigAntennaUplinkConfig(
-        @OutputCustomType.Parameter("spectrumConfig") @Nullable ConfigUplinkSpectrumConfig spectrumConfig,
-        @OutputCustomType.Parameter("targetEirp") @Nullable ConfigEirp targetEirp,
-        @OutputCustomType.Parameter("transmitDisabled") @Nullable Boolean transmitDisabled) {
+        @CustomType.Parameter("spectrumConfig") @Nullable ConfigUplinkSpectrumConfig spectrumConfig,
+        @CustomType.Parameter("targetEirp") @Nullable ConfigEirp targetEirp,
+        @CustomType.Parameter("transmitDisabled") @Nullable Boolean transmitDisabled) {
         this.spectrumConfig = spectrumConfig;
         this.targetEirp = targetEirp;
         this.transmitDisabled = transmitDisabled;

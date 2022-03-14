@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionKernelCapabilities {
     private final @Nullable List<String> add;
     private final @Nullable List<String> drop;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionKernelCapabilities(
-        @OutputCustomType.Parameter("add") @Nullable List<String> add,
-        @OutputCustomType.Parameter("drop") @Nullable List<String> drop) {
+        @CustomType.Parameter("add") @Nullable List<String> add,
+        @CustomType.Parameter("drop") @Nullable List<String> drop) {
         this.add = add;
         this.drop = drop;
     }

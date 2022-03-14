@@ -6,7 +6,7 @@ package io.pulumi.awsnative.macie;
 import io.pulumi.awsnative.macie.enums.SessionFindingPublishingFrequency;
 import io.pulumi.awsnative.macie.enums.SessionStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * A enumeration value that specifies how frequently finding updates are published.
      * 
      */
-    @InputImport(name="findingPublishingFrequency")
+    @Import(name="findingPublishingFrequency")
       private final @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
 
     public Output<SessionFindingPublishingFrequency> getFindingPublishingFrequency() {
@@ -30,7 +30,7 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * A enumeration value that specifies the status of the Macie Session.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<SessionStatus> status;
 
     public Output<SessionStatus> getStatus() {

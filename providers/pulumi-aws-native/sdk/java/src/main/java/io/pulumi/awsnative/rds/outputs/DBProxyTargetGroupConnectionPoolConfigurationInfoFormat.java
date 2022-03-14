@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat {
     /**
      * The number of seconds for a proxy to wait for a connection to become available in the connection pool.
@@ -39,13 +39,13 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat {
      */
     private final @Nullable List<String> sessionPinningFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DBProxyTargetGroupConnectionPoolConfigurationInfoFormat(
-        @OutputCustomType.Parameter("connectionBorrowTimeout") @Nullable Integer connectionBorrowTimeout,
-        @OutputCustomType.Parameter("initQuery") @Nullable String initQuery,
-        @OutputCustomType.Parameter("maxConnectionsPercent") @Nullable Integer maxConnectionsPercent,
-        @OutputCustomType.Parameter("maxIdleConnectionsPercent") @Nullable Integer maxIdleConnectionsPercent,
-        @OutputCustomType.Parameter("sessionPinningFilters") @Nullable List<String> sessionPinningFilters) {
+        @CustomType.Parameter("connectionBorrowTimeout") @Nullable Integer connectionBorrowTimeout,
+        @CustomType.Parameter("initQuery") @Nullable String initQuery,
+        @CustomType.Parameter("maxConnectionsPercent") @Nullable Integer maxConnectionsPercent,
+        @CustomType.Parameter("maxIdleConnectionsPercent") @Nullable Integer maxIdleConnectionsPercent,
+        @CustomType.Parameter("sessionPinningFilters") @Nullable List<String> sessionPinningFilters) {
         this.connectionBorrowTimeout = connectionBorrowTimeout;
         this.initQuery = initQuery;
         this.maxConnectionsPercent = maxConnectionsPercent;

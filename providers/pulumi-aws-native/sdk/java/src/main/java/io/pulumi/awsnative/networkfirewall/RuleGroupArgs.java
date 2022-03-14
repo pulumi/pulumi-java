@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTypeEnum;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupArgs Empty = new RuleGroupArgs();
 
-    @InputImport(name="capacity", required=true)
+    @Import(name="capacity", required=true)
       private final Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
         return this.capacity;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="ruleGroup")
+    @Import(name="ruleGroup")
       private final @Nullable Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
 
     public Output<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> getRuleGroup() {
         return this.ruleGroup == null ? Output.empty() : this.ruleGroup;
     }
 
-    @InputImport(name="ruleGroupName")
+    @Import(name="ruleGroupName")
       private final @Nullable Output<String> ruleGroupName;
 
     public Output<String> getRuleGroupName() {
         return this.ruleGroupName == null ? Output.empty() : this.ruleGroupName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RuleGroupTagArgs>> tags;
 
     public Output<List<RuleGroupTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<RuleGroupTypeEnum> type;
 
     public Output<RuleGroupTypeEnum> getType() {

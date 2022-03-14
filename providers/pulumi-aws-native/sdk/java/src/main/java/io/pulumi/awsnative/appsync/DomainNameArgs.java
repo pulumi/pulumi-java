@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appsync;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainNameArgs Empty = new DomainNameArgs();
 
-    @InputImport(name="certificateArn", required=true)
+    @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
         return this.certificateArn;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {

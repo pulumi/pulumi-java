@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLOrStatement {
     private final List<WebACLStatement> statements;
 
-    @OutputCustomType.Constructor
-    private WebACLOrStatement(@OutputCustomType.Parameter("statements") List<WebACLStatement> statements) {
+    @CustomType.Constructor
+    private WebACLOrStatement(@CustomType.Parameter("statements") List<WebACLStatement> statements) {
         this.statements = statements;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class AppBlockS3LocationArgs extends io.pulumi.resources.ResourceAr
 
     public static final AppBlockS3LocationArgs Empty = new AppBlockS3LocationArgs();
 
-    @InputImport(name="s3Bucket", required=true)
+    @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
         return this.s3Bucket;
     }
 
-    @InputImport(name="s3Key", required=true)
+    @Import(name="s3Key", required=true)
       private final Output<String> s3Key;
 
     public Output<String> getS3Key() {

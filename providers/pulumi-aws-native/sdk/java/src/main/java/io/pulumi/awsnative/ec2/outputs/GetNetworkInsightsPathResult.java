@@ -4,26 +4,26 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsPathTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkInsightsPathResult {
     private final @Nullable String createdDate;
     private final @Nullable String networkInsightsPathArn;
     private final @Nullable String networkInsightsPathId;
     private final @Nullable List<NetworkInsightsPathTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkInsightsPathResult(
-        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
-        @OutputCustomType.Parameter("networkInsightsPathArn") @Nullable String networkInsightsPathArn,
-        @OutputCustomType.Parameter("networkInsightsPathId") @Nullable String networkInsightsPathId,
-        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsPathTag> tags) {
+        @CustomType.Parameter("createdDate") @Nullable String createdDate,
+        @CustomType.Parameter("networkInsightsPathArn") @Nullable String networkInsightsPathArn,
+        @CustomType.Parameter("networkInsightsPathId") @Nullable String networkInsightsPathId,
+        @CustomType.Parameter("tags") @Nullable List<NetworkInsightsPathTag> tags) {
         this.createdDate = createdDate;
         this.networkInsightsPathArn = networkInsightsPathArn;
         this.networkInsightsPathId = networkInsightsPathId;

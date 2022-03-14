@@ -6,14 +6,14 @@ package io.pulumi.awsnative.s3.outputs;
 import io.pulumi.awsnative.s3.enums.BucketIntelligentTieringConfigurationStatus;
 import io.pulumi.awsnative.s3.outputs.BucketTagFilter;
 import io.pulumi.awsnative.s3.outputs.BucketTiering;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketIntelligentTieringConfiguration {
     /**
      * The ID used to identify the S3 Intelligent-Tiering configuration.
@@ -41,13 +41,13 @@ public final class BucketIntelligentTieringConfiguration {
      */
     private final List<BucketTiering> tierings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketIntelligentTieringConfiguration(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("status") BucketIntelligentTieringConfigurationStatus status,
-        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters,
-        @OutputCustomType.Parameter("tierings") List<BucketTiering> tierings) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("status") BucketIntelligentTieringConfigurationStatus status,
+        @CustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters,
+        @CustomType.Parameter("tierings") List<BucketTiering> tierings) {
         this.id = id;
         this.prefix = prefix;
         this.status = status;

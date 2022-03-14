@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cassandra.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class TableColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableColumnArgs Empty = new TableColumnArgs();
 
-    @InputImport(name="columnName", required=true)
+    @Import(name="columnName", required=true)
       private final Output<String> columnName;
 
     public Output<String> getColumnName() {
         return this.columnName;
     }
 
-    @InputImport(name="columnType", required=true)
+    @Import(name="columnType", required=true)
       private final Output<String> columnType;
 
     public Output<String> getColumnType() {

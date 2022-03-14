@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.DatabaseTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseResult {
     /**
      * When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
@@ -46,15 +46,15 @@ public final class GetDatabaseResult {
      */
     private final @Nullable List<DatabaseTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseResult(
-        @OutputCustomType.Parameter("backupRetention") @Nullable Boolean backupRetention,
-        @OutputCustomType.Parameter("caCertificateIdentifier") @Nullable String caCertificateIdentifier,
-        @OutputCustomType.Parameter("databaseArn") @Nullable String databaseArn,
-        @OutputCustomType.Parameter("preferredBackupWindow") @Nullable String preferredBackupWindow,
-        @OutputCustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
-        @OutputCustomType.Parameter("publiclyAccessible") @Nullable Boolean publiclyAccessible,
-        @OutputCustomType.Parameter("tags") @Nullable List<DatabaseTag> tags) {
+        @CustomType.Parameter("backupRetention") @Nullable Boolean backupRetention,
+        @CustomType.Parameter("caCertificateIdentifier") @Nullable String caCertificateIdentifier,
+        @CustomType.Parameter("databaseArn") @Nullable String databaseArn,
+        @CustomType.Parameter("preferredBackupWindow") @Nullable String preferredBackupWindow,
+        @CustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
+        @CustomType.Parameter("publiclyAccessible") @Nullable Boolean publiclyAccessible,
+        @CustomType.Parameter("tags") @Nullable List<DatabaseTag> tags) {
         this.backupRetention = backupRetention;
         this.caCertificateIdentifier = caCertificateIdentifier;
         this.databaseArn = databaseArn;

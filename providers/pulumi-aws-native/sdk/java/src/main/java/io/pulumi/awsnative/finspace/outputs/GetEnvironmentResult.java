@@ -6,13 +6,13 @@ package io.pulumi.awsnative.finspace.outputs;
 import io.pulumi.awsnative.finspace.enums.EnvironmentFederationMode;
 import io.pulumi.awsnative.finspace.enums.EnvironmentStatus;
 import io.pulumi.awsnative.finspace.outputs.EnvironmentFederationParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     /**
      * AWS account ID associated with the Environment
@@ -66,19 +66,19 @@ public final class GetEnvironmentResult {
      */
     private final @Nullable EnvironmentStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
-        @OutputCustomType.Parameter("dedicatedServiceAccountId") @Nullable String dedicatedServiceAccountId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("environmentArn") @Nullable String environmentArn,
-        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
-        @OutputCustomType.Parameter("environmentUrl") @Nullable String environmentUrl,
-        @OutputCustomType.Parameter("federationMode") @Nullable EnvironmentFederationMode federationMode,
-        @OutputCustomType.Parameter("federationParameters") @Nullable EnvironmentFederationParameters federationParameters,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sageMakerStudioDomainUrl") @Nullable String sageMakerStudioDomainUrl,
-        @OutputCustomType.Parameter("status") @Nullable EnvironmentStatus status) {
+        @CustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @CustomType.Parameter("dedicatedServiceAccountId") @Nullable String dedicatedServiceAccountId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("environmentArn") @Nullable String environmentArn,
+        @CustomType.Parameter("environmentId") @Nullable String environmentId,
+        @CustomType.Parameter("environmentUrl") @Nullable String environmentUrl,
+        @CustomType.Parameter("federationMode") @Nullable EnvironmentFederationMode federationMode,
+        @CustomType.Parameter("federationParameters") @Nullable EnvironmentFederationParameters federationParameters,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sageMakerStudioDomainUrl") @Nullable String sageMakerStudioDomainUrl,
+        @CustomType.Parameter("status") @Nullable EnvironmentStatus status) {
         this.awsAccountId = awsAccountId;
         this.dedicatedServiceAccountId = dedicatedServiceAccountId;
         this.description = description;

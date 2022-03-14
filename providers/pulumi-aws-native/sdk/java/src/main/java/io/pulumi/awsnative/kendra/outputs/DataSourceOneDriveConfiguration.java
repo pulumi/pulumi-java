@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceOneDriveUsers;
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceOneDriveConfiguration {
     private final @Nullable Boolean disableLocalGroups;
     private final @Nullable List<String> exclusionPatterns;
@@ -23,15 +23,15 @@ public final class DataSourceOneDriveConfiguration {
     private final String secretArn;
     private final String tenantDomain;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceOneDriveConfiguration(
-        @OutputCustomType.Parameter("disableLocalGroups") @Nullable Boolean disableLocalGroups,
-        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
-        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
-        @OutputCustomType.Parameter("oneDriveUsers") DataSourceOneDriveUsers oneDriveUsers,
-        @OutputCustomType.Parameter("secretArn") String secretArn,
-        @OutputCustomType.Parameter("tenantDomain") String tenantDomain) {
+        @CustomType.Parameter("disableLocalGroups") @Nullable Boolean disableLocalGroups,
+        @CustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @CustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @CustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @CustomType.Parameter("oneDriveUsers") DataSourceOneDriveUsers oneDriveUsers,
+        @CustomType.Parameter("secretArn") String secretArn,
+        @CustomType.Parameter("tenantDomain") String tenantDomain) {
         this.disableLocalGroups = disableLocalGroups;
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;

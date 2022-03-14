@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.customerprofiles.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationZendeskSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor
-    private IntegrationZendeskSourceProperties(@OutputCustomType.Parameter("object") String object) {
+    @CustomType.Constructor
+    private IntegrationZendeskSourceProperties(@CustomType.Parameter("object") String object) {
         this.object = object;
     }
 

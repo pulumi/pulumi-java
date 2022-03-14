@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FunctionConfig {
     private final String comment;
     private final String runtime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionConfig(
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("runtime") String runtime) {
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("runtime") String runtime) {
         this.comment = comment;
         this.runtime = runtime;
     }

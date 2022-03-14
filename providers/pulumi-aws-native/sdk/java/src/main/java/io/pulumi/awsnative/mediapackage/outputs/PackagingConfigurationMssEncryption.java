@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationSpekeKeyProvider;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationMssEncryption {
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor
-    private PackagingConfigurationMssEncryption(@OutputCustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+    @CustomType.Constructor
+    private PackagingConfigurationMssEncryption(@CustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 

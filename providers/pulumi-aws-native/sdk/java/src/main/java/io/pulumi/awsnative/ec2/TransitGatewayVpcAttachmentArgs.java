@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.OptionsPropertiesArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayVpcAttachmentTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
 
     public static final TransitGatewayVpcAttachmentArgs Empty = new TransitGatewayVpcAttachmentArgs();
 
-    @InputImport(name="addSubnetIds")
+    @Import(name="addSubnetIds")
       private final @Nullable Output<List<String>> addSubnetIds;
 
     public Output<List<String>> getAddSubnetIds() {
@@ -28,42 +28,42 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
      * The options for the transit gateway vpc attachment.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<OptionsPropertiesArgs> options;
 
     public Output<OptionsPropertiesArgs> getOptions() {
         return this.options == null ? Output.empty() : this.options;
     }
 
-    @InputImport(name="removeSubnetIds")
+    @Import(name="removeSubnetIds")
       private final @Nullable Output<List<String>> removeSubnetIds;
 
     public Output<List<String>> getRemoveSubnetIds() {
         return this.removeSubnetIds == null ? Output.empty() : this.removeSubnetIds;
     }
 
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayVpcAttachmentTagArgs>> tags;
 
     public Output<List<TransitGatewayVpcAttachmentTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="transitGatewayId")
+    @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Output.empty() : this.transitGatewayId;
     }
 
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

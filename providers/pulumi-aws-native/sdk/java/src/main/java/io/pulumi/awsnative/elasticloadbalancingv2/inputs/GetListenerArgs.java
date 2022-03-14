@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetListenerArgs Empty = new GetListenerArgs();
 
-    @InputImport(name="listenerArn", required=true)
+    @Import(name="listenerArn", required=true)
       private final String listenerArn;
 
     public String getListenerArn() {

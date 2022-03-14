@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelSqs {
     private final @Nullable DetectorModelPayload payload;
     /**
@@ -25,11 +25,11 @@ public final class DetectorModelSqs {
      */
     private final @Nullable Boolean useBase64;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelSqs(
-        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
-        @OutputCustomType.Parameter("queueUrl") String queueUrl,
-        @OutputCustomType.Parameter("useBase64") @Nullable Boolean useBase64) {
+        @CustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @CustomType.Parameter("queueUrl") String queueUrl,
+        @CustomType.Parameter("useBase64") @Nullable Boolean useBase64) {
         this.payload = payload;
         this.queueUrl = queueUrl;
         this.useBase64 = useBase64;

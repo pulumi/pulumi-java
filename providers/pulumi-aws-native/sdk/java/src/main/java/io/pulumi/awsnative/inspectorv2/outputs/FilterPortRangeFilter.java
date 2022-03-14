@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.inspectorv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FilterPortRangeFilter {
     private final @Nullable Integer beginInclusive;
     private final @Nullable Integer endInclusive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterPortRangeFilter(
-        @OutputCustomType.Parameter("beginInclusive") @Nullable Integer beginInclusive,
-        @OutputCustomType.Parameter("endInclusive") @Nullable Integer endInclusive) {
+        @CustomType.Parameter("beginInclusive") @Nullable Integer beginInclusive,
+        @CustomType.Parameter("endInclusive") @Nullable Integer endInclusive) {
         this.beginInclusive = beginInclusive;
         this.endInclusive = endInclusive;
     }

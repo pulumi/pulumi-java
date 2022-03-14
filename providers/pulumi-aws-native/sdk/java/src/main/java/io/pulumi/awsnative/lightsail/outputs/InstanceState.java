@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceState {
     /**
      * Status code of the Instance.
@@ -23,10 +23,10 @@ public final class InstanceState {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceState(
-        @OutputCustomType.Parameter("code") @Nullable Integer code,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("code") @Nullable Integer code,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.code = code;
         this.name = name;
     }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +23,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * The time at which the monitoring job was created.
      * 
      */
-    @InputImport(name="creationTime", required=true)
+    @Import(name="creationTime", required=true)
       private final Output<String> creationTime;
 
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
 
-    @InputImport(name="endpointName")
+    @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -41,7 +41,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * Contains the reason a monitoring job failed, if it failed.
      * 
      */
-    @InputImport(name="failureReason")
+    @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
     public Output<String> getFailureReason() {
@@ -52,7 +52,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * A timestamp that indicates the last time the monitoring job was modified.
      * 
      */
-    @InputImport(name="lastModifiedTime", required=true)
+    @Import(name="lastModifiedTime", required=true)
       private final Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {
@@ -63,14 +63,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * The status of the monitoring job.
      * 
      */
-    @InputImport(name="monitoringExecutionStatus", required=true)
+    @Import(name="monitoringExecutionStatus", required=true)
       private final Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
 
     public Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> getMonitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
 
-    @InputImport(name="monitoringScheduleName", required=true)
+    @Import(name="monitoringScheduleName", required=true)
       private final Output<String> monitoringScheduleName;
 
     public Output<String> getMonitoringScheduleName() {
@@ -81,7 +81,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * The Amazon Resource Name (ARN) of the monitoring job.
      * 
      */
-    @InputImport(name="processingJobArn")
+    @Import(name="processingJobArn")
       private final @Nullable Output<String> processingJobArn;
 
     public Output<String> getProcessingJobArn() {
@@ -92,7 +92,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * The time the monitoring job was scheduled.
      * 
      */
-    @InputImport(name="scheduledTime", required=true)
+    @Import(name="scheduledTime", required=true)
       private final Output<String> scheduledTime;
 
     public Output<String> getScheduledTime() {

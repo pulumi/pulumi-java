@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupForwardedIPConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class RuleGroupGeoMatchStatement extends io.pulumi.resources.Invoke
 
     public static final RuleGroupGeoMatchStatement Empty = new RuleGroupGeoMatchStatement();
 
-    @InputImport(name="countryCodes")
+    @Import(name="countryCodes")
       private final @Nullable List<String> countryCodes;
 
     public List<String> getCountryCodes() {
         return this.countryCodes == null ? List.of() : this.countryCodes;
     }
 
-    @InputImport(name="forwardedIPConfig")
+    @Import(name="forwardedIPConfig")
       private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
 
     public Optional<RuleGroupForwardedIPConfiguration> getForwardedIPConfig() {

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamDeserializer;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamInputFormatConfiguration {
     private final @Nullable DeliveryStreamDeserializer deserializer;
 
-    @OutputCustomType.Constructor
-    private DeliveryStreamInputFormatConfiguration(@OutputCustomType.Parameter("deserializer") @Nullable DeliveryStreamDeserializer deserializer) {
+    @CustomType.Constructor
+    private DeliveryStreamInputFormatConfiguration(@CustomType.Parameter("deserializer") @Nullable DeliveryStreamDeserializer deserializer) {
         this.deserializer = deserializer;
     }
 

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.enums.ThemeResourceStatus;
 import io.pulumi.awsnative.quicksight.inputs.ThemeConfiguration;
 import io.pulumi.awsnative.quicksight.inputs.ThemeError;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -39,14 +39,14 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
      *             themes initially inherit from a default QuickSight theme.</p>
      * 
      */
-    @InputImport(name="baseThemeId")
+    @Import(name="baseThemeId")
       private final @Nullable String baseThemeId;
 
     public Optional<String> getBaseThemeId() {
         return this.baseThemeId == null ? Optional.empty() : Optional.ofNullable(this.baseThemeId);
     }
 
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable ThemeConfiguration configuration;
 
     public Optional<ThemeConfiguration> getConfiguration() {
@@ -57,7 +57,7 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
      * <p>The date and time that this theme version was created.</p>
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
@@ -68,7 +68,7 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
      * <p>The description of the theme.</p>
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -79,14 +79,14 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
      * <p>Errors associated with the theme.</p>
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable List<ThemeError> errors;
 
     public List<ThemeError> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable ThemeResourceStatus status;
 
     public Optional<ThemeResourceStatus> getStatus() {
@@ -97,7 +97,7 @@ public final class ThemeVersion extends io.pulumi.resources.InvokeArgs {
      * <p>The version number of the theme.</p>
      * 
      */
-    @InputImport(name="versionNumber")
+    @Import(name="versionNumber")
       private final @Nullable Double versionNumber;
 
     public Optional<Double> getVersionNumber() {

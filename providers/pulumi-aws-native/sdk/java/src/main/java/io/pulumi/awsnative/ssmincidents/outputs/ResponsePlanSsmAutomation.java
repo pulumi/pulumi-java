@@ -5,14 +5,14 @@ package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAccount;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanSsmParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponsePlanSsmAutomation {
     /**
      * The document name to use when starting the SSM automation document.
@@ -40,13 +40,13 @@ public final class ResponsePlanSsmAutomation {
      */
     private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponsePlanSsmAutomation(
-        @OutputCustomType.Parameter("documentName") String documentName,
-        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ResponsePlanSsmParameter> parameters,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("targetAccount") @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
+        @CustomType.Parameter("documentName") String documentName,
+        @CustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @CustomType.Parameter("parameters") @Nullable List<ResponsePlanSsmParameter> parameters,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("targetAccount") @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
         this.documentName = documentName;
         this.documentVersion = documentVersion;
         this.parameters = parameters;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.certificatemanager.AccountArgs;
 import io.pulumi.awsnative.certificatemanager.outputs.AccountExpiryEventsConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,13 +18,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:certificatemanager:Account")
 public class Account extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     public Output<String> getAccountId() {
         return this.accountId;
     }
-    @OutputExport(name="expiryEventsConfiguration", type=AccountExpiryEventsConfiguration.class, parameters={})
+    @Export(name="expiryEventsConfiguration", type=AccountExpiryEventsConfiguration.class, parameters={})
     private Output<AccountExpiryEventsConfiguration> expiryEventsConfiguration;
 
     public Output<AccountExpiryEventsConfiguration> getExpiryEventsConfiguration() {

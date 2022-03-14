@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lookoutmetrics.AlertArgs;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AlertAction;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * The action to be taken by the alert when an anomaly is detected.
      * 
      */
-    @OutputExport(name="action", type=AlertAction.class, parameters={})
+    @Export(name="action", type=AlertAction.class, parameters={})
     private Output<AlertAction> action;
 
     /**
@@ -37,7 +37,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * A description for the alert.
      * 
      */
-    @OutputExport(name="alertDescription", type=String.class, parameters={})
+    @Export(name="alertDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertDescription;
 
     /**
@@ -51,7 +51,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * The name of the alert. If not provided, a name is generated automatically.
      * 
      */
-    @OutputExport(name="alertName", type=String.class, parameters={})
+    @Export(name="alertName", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertName;
 
     /**
@@ -65,7 +65,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
      * 
      */
-    @OutputExport(name="alertSensitivityThreshold", type=Integer.class, parameters={})
+    @Export(name="alertSensitivityThreshold", type=Integer.class, parameters={})
     private Output<Integer> alertSensitivityThreshold;
 
     /**
@@ -79,7 +79,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * The Amazon resource name (ARN) of the Anomaly Detector to alert.
      * 
      */
-    @OutputExport(name="anomalyDetectorArn", type=String.class, parameters={})
+    @Export(name="anomalyDetectorArn", type=String.class, parameters={})
     private Output<String> anomalyDetectorArn;
 
     /**
@@ -93,7 +93,7 @@ public class Alert extends io.pulumi.resources.CustomResource {
      * ARN assigned to the alert.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**

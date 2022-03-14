@@ -5,7 +5,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssessmentRoleArgs Empty = new AssessmentRoleArgs();
 
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
-    @InputImport(name="roleType")
+    @Import(name="roleType")
       private final @Nullable Output<AssessmentRoleType> roleType;
 
     public Output<AssessmentRoleType> getRoleType() {

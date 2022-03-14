@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WebACLOverrideAction extends io.pulumi.resources.InvokeArgs {
      * Count traffic towards application.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Object count;
 
     public Optional<Object> getCount() {
@@ -33,7 +33,7 @@ public final class WebACLOverrideAction extends io.pulumi.resources.InvokeArgs {
      * Keep the RuleGroup or ManagedRuleGroup behavior as is.
      * 
      */
-    @InputImport(name="none")
+    @Import(name="none")
       private final @Nullable Object none;
 
     public Optional<Object> getNone() {

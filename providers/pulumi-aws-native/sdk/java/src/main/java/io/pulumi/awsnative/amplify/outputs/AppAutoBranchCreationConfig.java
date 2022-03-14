@@ -6,7 +6,7 @@ package io.pulumi.awsnative.amplify.outputs;
 import io.pulumi.awsnative.amplify.enums.AppAutoBranchCreationConfigStage;
 import io.pulumi.awsnative.amplify.outputs.AppBasicAuthConfig;
 import io.pulumi.awsnative.amplify.outputs.AppEnvironmentVariable;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppAutoBranchCreationConfig {
     private final @Nullable List<String> autoBranchCreationPatterns;
     private final @Nullable AppBasicAuthConfig basicAuthConfig;
@@ -27,18 +27,18 @@ public final class AppAutoBranchCreationConfig {
     private final @Nullable String pullRequestEnvironmentName;
     private final @Nullable AppAutoBranchCreationConfigStage stage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppAutoBranchCreationConfig(
-        @OutputCustomType.Parameter("autoBranchCreationPatterns") @Nullable List<String> autoBranchCreationPatterns,
-        @OutputCustomType.Parameter("basicAuthConfig") @Nullable AppBasicAuthConfig basicAuthConfig,
-        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
-        @OutputCustomType.Parameter("enableAutoBranchCreation") @Nullable Boolean enableAutoBranchCreation,
-        @OutputCustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
-        @OutputCustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
-        @OutputCustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable List<AppEnvironmentVariable> environmentVariables,
-        @OutputCustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
-        @OutputCustomType.Parameter("stage") @Nullable AppAutoBranchCreationConfigStage stage) {
+        @CustomType.Parameter("autoBranchCreationPatterns") @Nullable List<String> autoBranchCreationPatterns,
+        @CustomType.Parameter("basicAuthConfig") @Nullable AppBasicAuthConfig basicAuthConfig,
+        @CustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @CustomType.Parameter("enableAutoBranchCreation") @Nullable Boolean enableAutoBranchCreation,
+        @CustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
+        @CustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
+        @CustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
+        @CustomType.Parameter("environmentVariables") @Nullable List<AppEnvironmentVariable> environmentVariables,
+        @CustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
+        @CustomType.Parameter("stage") @Nullable AppAutoBranchCreationConfigStage stage) {
         this.autoBranchCreationPatterns = autoBranchCreationPatterns;
         this.basicAuthConfig = basicAuthConfig;
         this.buildSpec = buildSpec;

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceQueryIdentifiersEnclosingOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceSqlConfiguration {
     private final @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption;
 
-    @OutputCustomType.Constructor
-    private DataSourceSqlConfiguration(@OutputCustomType.Parameter("queryIdentifiersEnclosingOption") @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
+    @CustomType.Constructor
+    private DataSourceSqlConfiguration(@CustomType.Parameter("queryIdentifiersEnclosingOption") @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
         this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
     }
 

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.HookVersionVisibility;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHookVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the type, here the HookVersion. This is used to uniquely identify a HookVersion resource
@@ -45,13 +45,13 @@ public final class GetHookVersionResult {
      */
     private final @Nullable HookVersionVisibility visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHookVersionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
-        @OutputCustomType.Parameter("typeArn") @Nullable String typeArn,
-        @OutputCustomType.Parameter("versionId") @Nullable String versionId,
-        @OutputCustomType.Parameter("visibility") @Nullable HookVersionVisibility visibility) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
+        @CustomType.Parameter("typeArn") @Nullable String typeArn,
+        @CustomType.Parameter("versionId") @Nullable String versionId,
+        @CustomType.Parameter("visibility") @Nullable HookVersionVisibility visibility) {
         this.arn = arn;
         this.isDefaultVersion = isDefaultVersion;
         this.typeArn = typeArn;

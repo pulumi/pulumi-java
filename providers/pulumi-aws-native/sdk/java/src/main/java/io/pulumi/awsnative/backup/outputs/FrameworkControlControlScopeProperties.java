@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.FrameworkTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FrameworkControlControlScopeProperties {
     /**
      * The ID of the only AWS resource that you want your control scope to contain.
@@ -28,11 +28,11 @@ public final class FrameworkControlControlScopeProperties {
      */
     private final @Nullable List<FrameworkTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FrameworkControlControlScopeProperties(
-        @OutputCustomType.Parameter("complianceResourceIds") @Nullable List<String> complianceResourceIds,
-        @OutputCustomType.Parameter("complianceResourceTypes") @Nullable List<String> complianceResourceTypes,
-        @OutputCustomType.Parameter("tags") @Nullable List<FrameworkTag> tags) {
+        @CustomType.Parameter("complianceResourceIds") @Nullable List<String> complianceResourceIds,
+        @CustomType.Parameter("complianceResourceTypes") @Nullable List<String> complianceResourceTypes,
+        @CustomType.Parameter("tags") @Nullable List<FrameworkTag> tags) {
         this.complianceResourceIds = complianceResourceIds;
         this.complianceResourceTypes = complianceResourceTypes;
         this.tags = tags;

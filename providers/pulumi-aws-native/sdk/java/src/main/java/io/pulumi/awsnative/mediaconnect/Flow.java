@@ -8,7 +8,7 @@ import io.pulumi.awsnative.mediaconnect.FlowArgs;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowFailoverConfig;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowSource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
@@ -37,7 +37,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    @OutputExport(name="flowArn", type=String.class, parameters={})
+    @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
@@ -51,7 +51,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.(ReadOnly)
      * 
      */
-    @OutputExport(name="flowAvailabilityZone", type=String.class, parameters={})
+    @Export(name="flowAvailabilityZone", type=String.class, parameters={})
     private Output<String> flowAvailabilityZone;
 
     /**
@@ -65,7 +65,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * The name of the flow.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * The source of the flow.
      * 
      */
-    @OutputExport(name="source", type=FlowSource.class, parameters={})
+    @Export(name="source", type=FlowSource.class, parameters={})
     private Output<FlowSource> source;
 
     /**
@@ -93,7 +93,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * The source failover config of the flow.
      * 
      */
-    @OutputExport(name="sourceFailoverConfig", type=FlowFailoverConfig.class, parameters={})
+    @Export(name="sourceFailoverConfig", type=FlowFailoverConfig.class, parameters={})
     private Output</* @Nullable */ FlowFailoverConfig> sourceFailoverConfig;
 
     /**

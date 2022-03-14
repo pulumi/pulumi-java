@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetStackSetArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the stack set that you're creating.
      * 
      */
-    @InputImport(name="stackSetId", required=true)
+    @Import(name="stackSetId", required=true)
       private final String stackSetId;
 
     public String getStackSetId() {

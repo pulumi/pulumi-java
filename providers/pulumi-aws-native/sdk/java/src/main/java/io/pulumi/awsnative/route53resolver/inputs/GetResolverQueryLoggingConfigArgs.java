@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53resolver.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetResolverQueryLoggingConfigArgs extends io.pulumi.resources
      * ResourceId
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

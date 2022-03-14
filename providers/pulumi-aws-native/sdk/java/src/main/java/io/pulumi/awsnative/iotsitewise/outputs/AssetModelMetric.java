@@ -5,12 +5,12 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelExpressionVariable;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelMetricWindow;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelMetric {
     /**
      * The mathematical expression that defines the metric aggregation function. You can specify up to 10 functions per expression.
@@ -28,11 +28,11 @@ public final class AssetModelMetric {
      */
     private final AssetModelMetricWindow window;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelMetric(
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("variables") List<AssetModelExpressionVariable> variables,
-        @OutputCustomType.Parameter("window") AssetModelMetricWindow window) {
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("variables") List<AssetModelExpressionVariable> variables,
+        @CustomType.Parameter("window") AssetModelMetricWindow window) {
         this.expression = expression;
         this.variables = variables;
         this.window = window;

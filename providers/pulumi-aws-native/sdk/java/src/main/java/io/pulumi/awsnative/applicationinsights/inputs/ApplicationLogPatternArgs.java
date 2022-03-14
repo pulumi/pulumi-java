@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * The log pattern.
      * 
      */
-    @InputImport(name="pattern", required=true)
+    @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
     public Output<String> getPattern() {
@@ -33,7 +33,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * The name of the log pattern.
      * 
      */
-    @InputImport(name="patternName", required=true)
+    @Import(name="patternName", required=true)
       private final Output<String> patternName;
 
     public Output<String> getPatternName() {
@@ -44,7 +44,7 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * Rank of the log pattern.
      * 
      */
-    @InputImport(name="rank", required=true)
+    @Import(name="rank", required=true)
       private final Output<Integer> rank;
 
     public Output<Integer> getRank() {

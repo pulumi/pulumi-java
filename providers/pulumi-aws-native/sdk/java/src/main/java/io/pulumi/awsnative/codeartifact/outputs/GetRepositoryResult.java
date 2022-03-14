@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codeartifact.outputs;
 
 import io.pulumi.awsnative.codeartifact.outputs.RepositoryTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRepositoryResult {
     /**
      * The ARN of the repository.
@@ -50,15 +50,15 @@ public final class GetRepositoryResult {
      */
     private final @Nullable List<String> upstreams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepositoryResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("externalConnections") @Nullable List<String> externalConnections,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("permissionsPolicyDocument") @Nullable Object permissionsPolicyDocument,
-        @OutputCustomType.Parameter("tags") @Nullable List<RepositoryTag> tags,
-        @OutputCustomType.Parameter("upstreams") @Nullable List<String> upstreams) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("externalConnections") @Nullable List<String> externalConnections,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("permissionsPolicyDocument") @Nullable Object permissionsPolicyDocument,
+        @CustomType.Parameter("tags") @Nullable List<RepositoryTag> tags,
+        @CustomType.Parameter("upstreams") @Nullable List<String> upstreams) {
         this.arn = arn;
         this.description = description;
         this.externalConnections = externalConnections;

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.evidently.outputs;
 
 import io.pulumi.awsnative.evidently.enums.ExperimentMetricGoalObjectDesiredChange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExperimentMetricGoalObject {
     private final ExperimentMetricGoalObjectDesiredChange desiredChange;
     /**
@@ -31,14 +31,14 @@ public final class ExperimentMetricGoalObject {
      */
     private final String valueKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExperimentMetricGoalObject(
-        @OutputCustomType.Parameter("desiredChange") ExperimentMetricGoalObjectDesiredChange desiredChange,
-        @OutputCustomType.Parameter("entityIdKey") String entityIdKey,
-        @OutputCustomType.Parameter("eventPattern") String eventPattern,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("unitLabel") @Nullable String unitLabel,
-        @OutputCustomType.Parameter("valueKey") String valueKey) {
+        @CustomType.Parameter("desiredChange") ExperimentMetricGoalObjectDesiredChange desiredChange,
+        @CustomType.Parameter("entityIdKey") String entityIdKey,
+        @CustomType.Parameter("eventPattern") String eventPattern,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("unitLabel") @Nullable String unitLabel,
+        @CustomType.Parameter("valueKey") String valueKey) {
         this.desiredChange = desiredChange;
         this.entityIdKey = entityIdKey;
         this.eventPattern = eventPattern;

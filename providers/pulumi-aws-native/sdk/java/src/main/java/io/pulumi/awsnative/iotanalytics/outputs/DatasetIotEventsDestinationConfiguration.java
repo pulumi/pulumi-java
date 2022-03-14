@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetIotEventsDestinationConfiguration {
     private final String inputName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetIotEventsDestinationConfiguration(
-        @OutputCustomType.Parameter("inputName") String inputName,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("inputName") String inputName,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.inputName = inputName;
         this.roleArn = roleArn;
     }

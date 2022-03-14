@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the flow.
      * 
      */
-    @InputImport(name="flowName", required=true)
+    @Import(name="flowName", required=true)
       private final String flowName;
 
     public String getFlowName() {

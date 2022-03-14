@@ -7,7 +7,7 @@ import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRulesSourceListArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatefulRuleArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatelessRulesAndCustomActionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class RuleGroupRulesSourceArgs extends io.pulumi.resources.Resource
 
     public static final RuleGroupRulesSourceArgs Empty = new RuleGroupRulesSourceArgs();
 
-    @InputImport(name="rulesSourceList")
+    @Import(name="rulesSourceList")
       private final @Nullable Output<RuleGroupRulesSourceListArgs> rulesSourceList;
 
     public Output<RuleGroupRulesSourceListArgs> getRulesSourceList() {
         return this.rulesSourceList == null ? Output.empty() : this.rulesSourceList;
     }
 
-    @InputImport(name="rulesString")
+    @Import(name="rulesString")
       private final @Nullable Output<String> rulesString;
 
     public Output<String> getRulesString() {
         return this.rulesString == null ? Output.empty() : this.rulesString;
     }
 
-    @InputImport(name="statefulRules")
+    @Import(name="statefulRules")
       private final @Nullable Output<List<RuleGroupStatefulRuleArgs>> statefulRules;
 
     public Output<List<RuleGroupStatefulRuleArgs>> getStatefulRules() {
         return this.statefulRules == null ? Output.empty() : this.statefulRules;
     }
 
-    @InputImport(name="statelessRulesAndCustomActions")
+    @Import(name="statelessRulesAndCustomActions")
       private final @Nullable Output<RuleGroupStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
 
     public Output<RuleGroupStatelessRulesAndCustomActionsArgs> getStatelessRulesAndCustomActions() {

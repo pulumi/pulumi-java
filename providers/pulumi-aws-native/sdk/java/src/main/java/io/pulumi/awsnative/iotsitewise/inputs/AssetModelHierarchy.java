@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AssetModelHierarchy extends io.pulumi.resources.InvokeArgs {
      * The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
      * 
      */
-    @InputImport(name="childAssetModelId", required=true)
+    @Import(name="childAssetModelId", required=true)
       private final String childAssetModelId;
 
     public String getChildAssetModelId() {
@@ -31,7 +31,7 @@ public final class AssetModelHierarchy extends io.pulumi.resources.InvokeArgs {
      * Customer provided ID for hierarchy.
      * 
      */
-    @InputImport(name="logicalId", required=true)
+    @Import(name="logicalId", required=true)
       private final String logicalId;
 
     public String getLogicalId() {
@@ -42,7 +42,7 @@ public final class AssetModelHierarchy extends io.pulumi.resources.InvokeArgs {
      * The name of the asset model hierarchy.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

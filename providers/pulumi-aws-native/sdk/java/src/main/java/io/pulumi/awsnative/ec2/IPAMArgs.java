@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.IPAMIpamOperatingRegionArgs;
 import io.pulumi.awsnative.ec2.inputs.IPAMTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPAMArgs Empty = new IPAMArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -28,7 +28,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
      * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
      * 
      */
-    @InputImport(name="operatingRegions")
+    @Import(name="operatingRegions")
       private final @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
 
     public Output<List<IPAMIpamOperatingRegionArgs>> getOperatingRegions() {
@@ -39,7 +39,7 @@ public final class IPAMArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<IPAMTagArgs>> tags;
 
     public Output<List<IPAMTagArgs>> getTags() {

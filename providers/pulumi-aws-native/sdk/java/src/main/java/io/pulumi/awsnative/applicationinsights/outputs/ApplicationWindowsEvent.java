@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationEventLevel;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationWindowsEvent {
     /**
      * The levels of event to log.
@@ -34,12 +34,12 @@ public final class ApplicationWindowsEvent {
      */
     private final @Nullable String patternSet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationWindowsEvent(
-        @OutputCustomType.Parameter("eventLevels") List<ApplicationEventLevel> eventLevels,
-        @OutputCustomType.Parameter("eventName") String eventName,
-        @OutputCustomType.Parameter("logGroupName") String logGroupName,
-        @OutputCustomType.Parameter("patternSet") @Nullable String patternSet) {
+        @CustomType.Parameter("eventLevels") List<ApplicationEventLevel> eventLevels,
+        @CustomType.Parameter("eventName") String eventName,
+        @CustomType.Parameter("logGroupName") String logGroupName,
+        @CustomType.Parameter("patternSet") @Nullable String patternSet) {
         this.eventLevels = eventLevels;
         this.eventName = eventName;
         this.logGroupName = logGroupName;

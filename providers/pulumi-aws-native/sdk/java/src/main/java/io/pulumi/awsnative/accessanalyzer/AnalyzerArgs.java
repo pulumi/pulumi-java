@@ -6,7 +6,7 @@ package io.pulumi.awsnative.accessanalyzer;
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerArchiveRuleArgs;
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * Analyzer name
      * 
      */
-    @InputImport(name="analyzerName")
+    @Import(name="analyzerName")
       private final @Nullable Output<String> analyzerName;
 
     public Output<String> getAnalyzerName() {
         return this.analyzerName == null ? Output.empty() : this.analyzerName;
     }
 
-    @InputImport(name="archiveRules")
+    @Import(name="archiveRules")
       private final @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules;
 
     public Output<List<AnalyzerArchiveRuleArgs>> getArchiveRules() {
@@ -39,7 +39,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AnalyzerTagArgs>> tags;
 
     public Output<List<AnalyzerTagArgs>> getTags() {
@@ -50,7 +50,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the analyzer, must be ACCOUNT or ORGANIZATION
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

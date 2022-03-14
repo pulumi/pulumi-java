@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.amplify.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BranchBasicAuthConfig {
     private final @Nullable Boolean enableBasicAuth;
     private final String password;
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BranchBasicAuthConfig(
-        @OutputCustomType.Parameter("enableBasicAuth") @Nullable Boolean enableBasicAuth,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("enableBasicAuth") @Nullable Boolean enableBasicAuth,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.enableBasicAuth = enableBasicAuth;
         this.password = password;
         this.username = username;

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iotevents.enums.DetectorModelEvaluationMethod;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelDefinition;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iotevents:DetectorModel")
 public class DetectorModel extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="detectorModelDefinition", type=DetectorModelDefinition.class, parameters={})
+    @Export(name="detectorModelDefinition", type=DetectorModelDefinition.class, parameters={})
     private Output<DetectorModelDefinition> detectorModelDefinition;
 
     public Output<DetectorModelDefinition> getDetectorModelDefinition() {
@@ -31,7 +31,7 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * A brief description of the detector model.
      * 
      */
-    @OutputExport(name="detectorModelDescription", type=String.class, parameters={})
+    @Export(name="detectorModelDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> detectorModelDescription;
 
     /**
@@ -45,7 +45,7 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * The name of the detector model.
      * 
      */
-    @OutputExport(name="detectorModelName", type=String.class, parameters={})
+    @Export(name="detectorModelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> detectorModelName;
 
     /**
@@ -59,7 +59,7 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * Information about the order in which events are evaluated and how actions are executed.
      * 
      */
-    @OutputExport(name="evaluationMethod", type=DetectorModelEvaluationMethod.class, parameters={})
+    @Export(name="evaluationMethod", type=DetectorModelEvaluationMethod.class, parameters={})
     private Output</* @Nullable */ DetectorModelEvaluationMethod> evaluationMethod;
 
     /**
@@ -75,7 +75,7 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * This parameter uses a JSON-path expression to select the attribute-value pair in the message payload that is used for identification. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute-value.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output</* @Nullable */ String> key;
 
     /**
@@ -91,7 +91,7 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * The ARN of the role that grants permission to AWS IoT Events to perform its operations.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -107,7 +107,7 @@ public class DetectorModel extends io.pulumi.resources.CustomResource {
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DetectorModelTag.class})
+    @Export(name="tags", type=List.class, parameters={DetectorModelTag.class})
     private Output</* @Nullable */ List<DetectorModelTag>> tags;
 
     /**

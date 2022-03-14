@@ -8,7 +8,7 @@ import io.pulumi.awsnative.datasync.AgentArgs;
 import io.pulumi.awsnative.datasync.enums.AgentEndpointType;
 import io.pulumi.awsnative.datasync.outputs.AgentTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Activation key of the Agent.
      * 
      */
-    @OutputExport(name="activationKey", type=String.class, parameters={})
+    @Export(name="activationKey", type=String.class, parameters={})
     private Output<String> activationKey;
 
     /**
@@ -40,7 +40,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The DataSync Agent ARN.
      * 
      */
-    @OutputExport(name="agentArn", type=String.class, parameters={})
+    @Export(name="agentArn", type=String.class, parameters={})
     private Output<String> agentArn;
 
     /**
@@ -54,7 +54,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The name configured for the agent. Text reference used to identify the agent in the console.
      * 
      */
-    @OutputExport(name="agentName", type=String.class, parameters={})
+    @Export(name="agentName", type=String.class, parameters={})
     private Output</* @Nullable */ String> agentName;
 
     /**
@@ -68,7 +68,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The service endpoints that the agent will connect to.
      * 
      */
-    @OutputExport(name="endpointType", type=AgentEndpointType.class, parameters={})
+    @Export(name="endpointType", type=AgentEndpointType.class, parameters={})
     private Output<AgentEndpointType> endpointType;
 
     /**
@@ -82,7 +82,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The ARNs of the security group used to protect your data transfer task subnets.
      * 
      */
-    @OutputExport(name="securityGroupArns", type=List.class, parameters={String.class})
+    @Export(name="securityGroupArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupArns;
 
     /**
@@ -96,7 +96,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
      * 
      */
-    @OutputExport(name="subnetArns", type=List.class, parameters={String.class})
+    @Export(name="subnetArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetArns;
 
     /**
@@ -110,7 +110,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AgentTag.class})
+    @Export(name="tags", type=List.class, parameters={AgentTag.class})
     private Output</* @Nullable */ List<AgentTag>> tags;
 
     /**
@@ -124,7 +124,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The ID of the VPC endpoint that the agent has access to.
      * 
      */
-    @OutputExport(name="vpcEndpointId", type=String.class, parameters={})
+    @Export(name="vpcEndpointId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcEndpointId;
 
     /**

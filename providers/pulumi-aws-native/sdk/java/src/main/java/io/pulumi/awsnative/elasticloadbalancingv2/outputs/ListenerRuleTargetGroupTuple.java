@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleTargetGroupTuple {
     private final @Nullable String targetGroupArn;
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleTargetGroupTuple(
-        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.targetGroupArn = targetGroupArn;
         this.weight = weight;
     }

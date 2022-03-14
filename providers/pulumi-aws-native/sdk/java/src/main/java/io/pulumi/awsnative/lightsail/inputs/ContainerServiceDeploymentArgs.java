@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPublicEndpointArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
      * An object that describes the configuration for the containers of the deployment.
      * 
      */
-    @InputImport(name="containers")
+    @Import(name="containers")
       private final @Nullable Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
@@ -35,7 +35,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
      * An object that describes the endpoint of the deployment.
      * 
      */
-    @InputImport(name="publicEndpoint")
+    @Import(name="publicEndpoint")
       private final @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
 
     public Output<ContainerPublicEndpointArgs> getPublicEndpoint() {

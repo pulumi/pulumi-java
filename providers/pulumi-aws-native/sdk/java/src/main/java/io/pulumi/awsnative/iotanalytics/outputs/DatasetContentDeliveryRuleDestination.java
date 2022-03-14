@@ -5,20 +5,20 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetIotEventsDestinationConfiguration;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetS3DestinationConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetContentDeliveryRuleDestination {
     private final @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration;
     private final @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetContentDeliveryRuleDestination(
-        @OutputCustomType.Parameter("iotEventsDestinationConfiguration") @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration,
-        @OutputCustomType.Parameter("s3DestinationConfiguration") @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
+        @CustomType.Parameter("iotEventsDestinationConfiguration") @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration,
+        @CustomType.Parameter("s3DestinationConfiguration") @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
         this.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
         this.s3DestinationConfiguration = s3DestinationConfiguration;
     }

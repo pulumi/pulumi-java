@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
 
     public static final DistributionLambdaFunctionAssociationArgs Empty = new DistributionLambdaFunctionAssociationArgs();
 
-    @InputImport(name="eventType")
+    @Import(name="eventType")
       private final @Nullable Output<String> eventType;
 
     public Output<String> getEventType() {
         return this.eventType == null ? Output.empty() : this.eventType;
     }
 
-    @InputImport(name="includeBody")
+    @Import(name="includeBody")
       private final @Nullable Output<Boolean> includeBody;
 
     public Output<Boolean> getIncludeBody() {
         return this.includeBody == null ? Output.empty() : this.includeBody;
     }
 
-    @InputImport(name="lambdaFunctionARN")
+    @Import(name="lambdaFunctionARN")
       private final @Nullable Output<String> lambdaFunctionARN;
 
     public Output<String> getLambdaFunctionARN() {

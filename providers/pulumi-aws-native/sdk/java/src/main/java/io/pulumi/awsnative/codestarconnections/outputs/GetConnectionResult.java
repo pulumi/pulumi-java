@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.codestarconnections.outputs;
 
 import io.pulumi.awsnative.codestarconnections.outputs.ConnectionTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionResult {
     /**
      * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
@@ -34,12 +34,12 @@ public final class GetConnectionResult {
      */
     private final @Nullable List<ConnectionTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionResult(
-        @OutputCustomType.Parameter("connectionArn") @Nullable String connectionArn,
-        @OutputCustomType.Parameter("connectionStatus") @Nullable String connectionStatus,
-        @OutputCustomType.Parameter("ownerAccountId") @Nullable String ownerAccountId,
-        @OutputCustomType.Parameter("tags") @Nullable List<ConnectionTag> tags) {
+        @CustomType.Parameter("connectionArn") @Nullable String connectionArn,
+        @CustomType.Parameter("connectionStatus") @Nullable String connectionStatus,
+        @CustomType.Parameter("ownerAccountId") @Nullable String ownerAccountId,
+        @CustomType.Parameter("tags") @Nullable List<ConnectionTag> tags) {
         this.connectionArn = connectionArn;
         this.connectionStatus = connectionStatus;
         this.ownerAccountId = ownerAccountId;

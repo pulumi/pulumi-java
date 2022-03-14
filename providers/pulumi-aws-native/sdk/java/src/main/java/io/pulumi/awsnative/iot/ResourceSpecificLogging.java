@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.ResourceSpecificLoggingArgs;
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingLogLevel;
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingTargetType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * The log level for a specific target. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
      */
-    @OutputExport(name="logLevel", type=ResourceSpecificLoggingLogLevel.class, parameters={})
+    @Export(name="logLevel", type=ResourceSpecificLoggingLogLevel.class, parameters={})
     private Output<ResourceSpecificLoggingLogLevel> logLevel;
 
     /**
@@ -37,7 +37,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * Unique Id for a Target (TargetType:TargetName), this will be internally built to serve as primary identifier for a log target.
      * 
      */
-    @OutputExport(name="targetId", type=String.class, parameters={})
+    @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**
@@ -51,7 +51,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * The target name.
      * 
      */
-    @OutputExport(name="targetName", type=String.class, parameters={})
+    @Export(name="targetName", type=String.class, parameters={})
     private Output<String> targetName;
 
     /**
@@ -65,7 +65,7 @@ public class ResourceSpecificLogging extends io.pulumi.resources.CustomResource 
      * The target type. Value must be THING_GROUP.
      * 
      */
-    @OutputExport(name="targetType", type=ResourceSpecificLoggingTargetType.class, parameters={})
+    @Export(name="targetType", type=ResourceSpecificLoggingTargetType.class, parameters={})
     private Output<ResourceSpecificLoggingTargetType> targetType;
 
     /**

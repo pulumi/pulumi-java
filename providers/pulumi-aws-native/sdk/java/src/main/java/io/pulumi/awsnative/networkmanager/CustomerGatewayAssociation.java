@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.networkmanager.CustomerGatewayAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * The Amazon Resource Name (ARN) of the customer gateway.
      * 
      */
-    @OutputExport(name="customerGatewayArn", type=String.class, parameters={})
+    @Export(name="customerGatewayArn", type=String.class, parameters={})
     private Output<String> customerGatewayArn;
 
     /**
@@ -35,7 +35,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * The ID of the device
      * 
      */
-    @OutputExport(name="deviceId", type=String.class, parameters={})
+    @Export(name="deviceId", type=String.class, parameters={})
     private Output<String> deviceId;
 
     /**
@@ -49,7 +49,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * The ID of the global network.
      * 
      */
-    @OutputExport(name="globalNetworkId", type=String.class, parameters={})
+    @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
@@ -63,7 +63,7 @@ public class CustomerGatewayAssociation extends io.pulumi.resources.CustomResour
      * The ID of the link
      * 
      */
-    @OutputExport(name="linkId", type=String.class, parameters={})
+    @Export(name="linkId", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkId;
 
     /**

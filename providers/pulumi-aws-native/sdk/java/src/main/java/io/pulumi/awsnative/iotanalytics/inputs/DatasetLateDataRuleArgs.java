@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetLateDataRuleConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
 
     public static final DatasetLateDataRuleArgs Empty = new DatasetLateDataRuleArgs();
 
-    @InputImport(name="ruleConfiguration", required=true)
+    @Import(name="ruleConfiguration", required=true)
       private final Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
 
     public Output<DatasetLateDataRuleConfigurationArgs> getRuleConfiguration() {
         return this.ruleConfiguration;
     }
 
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {

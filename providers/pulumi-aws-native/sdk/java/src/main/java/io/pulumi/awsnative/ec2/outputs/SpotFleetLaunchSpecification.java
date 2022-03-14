@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ec2.outputs.SpotFleetInstanceRequirementsRequest;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetMonitoring;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetSpotPlacement;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTagSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetLaunchSpecification {
     private final @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings;
     private final @Nullable Boolean ebsOptimized;
@@ -41,26 +41,26 @@ public final class SpotFleetLaunchSpecification {
     private final @Nullable String userData;
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetLaunchSpecification(
-        @OutputCustomType.Parameter("blockDeviceMappings") @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings,
-        @OutputCustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
-        @OutputCustomType.Parameter("iamInstanceProfile") @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile,
-        @OutputCustomType.Parameter("imageId") String imageId,
-        @OutputCustomType.Parameter("instanceRequirements") @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("kernelId") @Nullable String kernelId,
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("monitoring") @Nullable SpotFleetMonitoring monitoring,
-        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces,
-        @OutputCustomType.Parameter("placement") @Nullable SpotFleetSpotPlacement placement,
-        @OutputCustomType.Parameter("ramdiskId") @Nullable String ramdiskId,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<SpotFleetGroupIdentifier> securityGroups,
-        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("tagSpecifications") @Nullable List<SpotFleetTagSpecification> tagSpecifications,
-        @OutputCustomType.Parameter("userData") @Nullable String userData,
-        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
+        @CustomType.Parameter("blockDeviceMappings") @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings,
+        @CustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
+        @CustomType.Parameter("iamInstanceProfile") @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile,
+        @CustomType.Parameter("imageId") String imageId,
+        @CustomType.Parameter("instanceRequirements") @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("kernelId") @Nullable String kernelId,
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("monitoring") @Nullable SpotFleetMonitoring monitoring,
+        @CustomType.Parameter("networkInterfaces") @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces,
+        @CustomType.Parameter("placement") @Nullable SpotFleetSpotPlacement placement,
+        @CustomType.Parameter("ramdiskId") @Nullable String ramdiskId,
+        @CustomType.Parameter("securityGroups") @Nullable List<SpotFleetGroupIdentifier> securityGroups,
+        @CustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("tagSpecifications") @Nullable List<SpotFleetTagSpecification> tagSpecifications,
+        @CustomType.Parameter("userData") @Nullable String userData,
+        @CustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.ebsOptimized = ebsOptimized;
         this.iamInstanceProfile = iamInstanceProfile;

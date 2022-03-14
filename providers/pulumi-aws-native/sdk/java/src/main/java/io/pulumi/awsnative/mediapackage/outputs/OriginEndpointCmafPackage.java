@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointCmafEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointHlsManifest;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointStreamSelection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointCmafPackage {
     private final @Nullable OriginEndpointCmafEncryption encryption;
     /**
@@ -34,13 +34,13 @@ public final class OriginEndpointCmafPackage {
     private final @Nullable String segmentPrefix;
     private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointCmafPackage(
-        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointCmafEncryption encryption,
-        @OutputCustomType.Parameter("hlsManifests") @Nullable List<OriginEndpointHlsManifest> hlsManifests,
-        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
-        @OutputCustomType.Parameter("segmentPrefix") @Nullable String segmentPrefix,
-        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection) {
+        @CustomType.Parameter("encryption") @Nullable OriginEndpointCmafEncryption encryption,
+        @CustomType.Parameter("hlsManifests") @Nullable List<OriginEndpointHlsManifest> hlsManifests,
+        @CustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @CustomType.Parameter("segmentPrefix") @Nullable String segmentPrefix,
+        @CustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection) {
         this.encryption = encryption;
         this.hlsManifests = hlsManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;

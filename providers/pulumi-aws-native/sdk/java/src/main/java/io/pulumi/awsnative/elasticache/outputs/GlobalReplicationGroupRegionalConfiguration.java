@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.elasticache.outputs;
 
 import io.pulumi.awsnative.elasticache.outputs.GlobalReplicationGroupReshardingConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalReplicationGroupRegionalConfiguration {
     /**
      * The replication group id of the Global Datastore member.
@@ -29,11 +29,11 @@ public final class GlobalReplicationGroupRegionalConfiguration {
      */
     private final @Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalReplicationGroupRegionalConfiguration(
-        @OutputCustomType.Parameter("replicationGroupId") @Nullable String replicationGroupId,
-        @OutputCustomType.Parameter("replicationGroupRegion") @Nullable String replicationGroupRegion,
-        @OutputCustomType.Parameter("reshardingConfigurations") @Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations) {
+        @CustomType.Parameter("replicationGroupId") @Nullable String replicationGroupId,
+        @CustomType.Parameter("replicationGroupRegion") @Nullable String replicationGroupRegion,
+        @CustomType.Parameter("reshardingConfigurations") @Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations) {
         this.replicationGroupId = replicationGroupId;
         this.replicationGroupRegion = replicationGroupRegion;
         this.reshardingConfigurations = reshardingConfigurations;

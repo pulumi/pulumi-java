@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileSalesforceConnectorProfileProperties {
     /**
      * The location of the Salesforce resource
@@ -19,10 +19,10 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
     private final @Nullable String instanceUrl;
     private final @Nullable Boolean isSandboxEnvironment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileSalesforceConnectorProfileProperties(
-        @OutputCustomType.Parameter("instanceUrl") @Nullable String instanceUrl,
-        @OutputCustomType.Parameter("isSandboxEnvironment") @Nullable Boolean isSandboxEnvironment) {
+        @CustomType.Parameter("instanceUrl") @Nullable String instanceUrl,
+        @CustomType.Parameter("isSandboxEnvironment") @Nullable Boolean isSandboxEnvironment) {
         this.instanceUrl = instanceUrl;
         this.isSandboxEnvironment = isSandboxEnvironment;
     }

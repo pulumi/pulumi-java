@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.LocalGatewayRouteTableVPCAssociationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
      * The ID of the local gateway route table.
      * 
      */
-    @InputImport(name="localGatewayRouteTableId", required=true)
+    @Import(name="localGatewayRouteTableId", required=true)
       private final Output<String> localGatewayRouteTableId;
 
     public Output<String> getLocalGatewayRouteTableId() {
@@ -31,7 +31,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
      * The tags for the association.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
 
     public Output<List<LocalGatewayRouteTableVPCAssociationTagArgs>> getTags() {
@@ -42,7 +42,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
      * The ID of the VPC.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

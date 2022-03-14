@@ -8,7 +8,7 @@ import io.pulumi.awsnative.accessanalyzer.AnalyzerArgs;
 import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerArchiveRule;
 import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * Analyzer name
      * 
      */
-    @OutputExport(name="analyzerName", type=String.class, parameters={})
+    @Export(name="analyzerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> analyzerName;
 
     /**
@@ -36,7 +36,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAnalyzerName() {
         return this.analyzerName;
     }
-    @OutputExport(name="archiveRules", type=List.class, parameters={AnalyzerArchiveRule.class})
+    @Export(name="archiveRules", type=List.class, parameters={AnalyzerArchiveRule.class})
     private Output</* @Nullable */ List<AnalyzerArchiveRule>> archiveRules;
 
     public Output</* @Nullable */ List<AnalyzerArchiveRule>> getArchiveRules() {
@@ -46,7 +46,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the analyzer
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -60,7 +60,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AnalyzerTag.class})
+    @Export(name="tags", type=List.class, parameters={AnalyzerTag.class})
     private Output</* @Nullable */ List<AnalyzerTag>> tags;
 
     /**
@@ -74,7 +74,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * The type of the analyzer, must be ACCOUNT or ORGANIZATION
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

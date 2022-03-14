@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.StackSetRegionConcurrencyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StackSetOperationPreferences {
     private final @Nullable Integer failureToleranceCount;
     private final @Nullable Integer failureTolerancePercentage;
@@ -21,14 +21,14 @@ public final class StackSetOperationPreferences {
     private final @Nullable StackSetRegionConcurrencyType regionConcurrencyType;
     private final @Nullable List<String> regionOrder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackSetOperationPreferences(
-        @OutputCustomType.Parameter("failureToleranceCount") @Nullable Integer failureToleranceCount,
-        @OutputCustomType.Parameter("failureTolerancePercentage") @Nullable Integer failureTolerancePercentage,
-        @OutputCustomType.Parameter("maxConcurrentCount") @Nullable Integer maxConcurrentCount,
-        @OutputCustomType.Parameter("maxConcurrentPercentage") @Nullable Integer maxConcurrentPercentage,
-        @OutputCustomType.Parameter("regionConcurrencyType") @Nullable StackSetRegionConcurrencyType regionConcurrencyType,
-        @OutputCustomType.Parameter("regionOrder") @Nullable List<String> regionOrder) {
+        @CustomType.Parameter("failureToleranceCount") @Nullable Integer failureToleranceCount,
+        @CustomType.Parameter("failureTolerancePercentage") @Nullable Integer failureTolerancePercentage,
+        @CustomType.Parameter("maxConcurrentCount") @Nullable Integer maxConcurrentCount,
+        @CustomType.Parameter("maxConcurrentPercentage") @Nullable Integer maxConcurrentPercentage,
+        @CustomType.Parameter("regionConcurrencyType") @Nullable StackSetRegionConcurrencyType regionConcurrencyType,
+        @CustomType.Parameter("regionOrder") @Nullable List<String> regionOrder) {
         this.failureToleranceCount = failureToleranceCount;
         this.failureTolerancePercentage = failureTolerancePercentage;
         this.maxConcurrentCount = maxConcurrentCount;

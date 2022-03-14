@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.inputs.StageCanarySettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.StageMethodSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.StageTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies settings for logging access in this stage.
      * 
      */
-    @InputImport(name="accessLogSetting")
+    @Import(name="accessLogSetting")
       private final @Nullable Output<StageAccessLogSettingArgs> accessLogSetting;
 
     public Output<StageAccessLogSettingArgs> getAccessLogSetting() {
@@ -36,7 +36,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether cache clustering is enabled for the stage.
      * 
      */
-    @InputImport(name="cacheClusterEnabled")
+    @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
     public Output<Boolean> getCacheClusterEnabled() {
@@ -47,7 +47,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The stage's cache cluster size.
      * 
      */
-    @InputImport(name="cacheClusterSize")
+    @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
 
     public Output<String> getCacheClusterSize() {
@@ -58,7 +58,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies settings for the canary deployment in this stage.
      * 
      */
-    @InputImport(name="canarySetting")
+    @Import(name="canarySetting")
       private final @Nullable Output<StageCanarySettingArgs> canarySetting;
 
     public Output<StageCanarySettingArgs> getCanarySetting() {
@@ -69,7 +69,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage.
      * 
      */
-    @InputImport(name="clientCertificateId")
+    @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
@@ -80,7 +80,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the deployment that the stage is associated with. This parameter is required to create a stage.
      * 
      */
-    @InputImport(name="deploymentId")
+    @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
     public Output<String> getDeploymentId() {
@@ -91,7 +91,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the stage.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -102,7 +102,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The version ID of the API documentation snapshot.
      * 
      */
-    @InputImport(name="documentationVersion")
+    @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
 
     public Output<String> getDocumentationVersion() {
@@ -113,7 +113,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for all methods in the stage.
      * 
      */
-    @InputImport(name="methodSettings")
+    @Import(name="methodSettings")
       private final @Nullable Output<List<StageMethodSettingArgs>> methodSettings;
 
     public Output<List<StageMethodSettingArgs>> getMethodSettings() {
@@ -124,7 +124,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the RestApi resource that you're deploying with this stage.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
     public Output<String> getRestApiId() {
@@ -135,7 +135,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier (URI).
      * 
      */
-    @InputImport(name="stageName")
+    @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {
@@ -146,7 +146,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * An array of arbitrary tags (key-value pairs) to associate with the stage.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StageTagArgs>> tags;
 
     public Output<List<StageTagArgs>> getTags() {
@@ -157,7 +157,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether active X-Ray tracing is enabled for this stage.
      * 
      */
-    @InputImport(name="tracingEnabled")
+    @Import(name="tracingEnabled")
       private final @Nullable Output<Boolean> tracingEnabled;
 
     public Output<Boolean> getTracingEnabled() {
@@ -168,7 +168,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * A map (string-to-string map) that defines the stage variables, where the variable name is the key and the variable value is the value.
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Object> variables;
 
     public Output<Object> getVariables() {

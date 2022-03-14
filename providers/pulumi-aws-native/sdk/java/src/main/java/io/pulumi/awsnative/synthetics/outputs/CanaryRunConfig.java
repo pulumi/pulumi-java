@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryRunConfig {
     /**
      * Enable active tracing if set to true
@@ -34,12 +34,12 @@ public final class CanaryRunConfig {
      */
     private final @Nullable Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanaryRunConfig(
-        @OutputCustomType.Parameter("activeTracing") @Nullable Boolean activeTracing,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable Object environmentVariables,
-        @OutputCustomType.Parameter("memoryInMB") @Nullable Integer memoryInMB,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
+        @CustomType.Parameter("activeTracing") @Nullable Boolean activeTracing,
+        @CustomType.Parameter("environmentVariables") @Nullable Object environmentVariables,
+        @CustomType.Parameter("memoryInMB") @Nullable Integer memoryInMB,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
         this.activeTracing = activeTracing;
         this.environmentVariables = environmentVariables;
         this.memoryInMB = memoryInMB;

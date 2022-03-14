@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,49 +16,49 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
 
     public static final DataSourceGoogleDriveConfigurationArgs Empty = new DataSourceGoogleDriveConfigurationArgs();
 
-    @InputImport(name="excludeMimeTypes")
+    @Import(name="excludeMimeTypes")
       private final @Nullable Output<List<String>> excludeMimeTypes;
 
     public Output<List<String>> getExcludeMimeTypes() {
         return this.excludeMimeTypes == null ? Output.empty() : this.excludeMimeTypes;
     }
 
-    @InputImport(name="excludeSharedDrives")
+    @Import(name="excludeSharedDrives")
       private final @Nullable Output<List<String>> excludeSharedDrives;
 
     public Output<List<String>> getExcludeSharedDrives() {
         return this.excludeSharedDrives == null ? Output.empty() : this.excludeSharedDrives;
     }
 
-    @InputImport(name="excludeUserAccounts")
+    @Import(name="excludeUserAccounts")
       private final @Nullable Output<List<String>> excludeUserAccounts;
 
     public Output<List<String>> getExcludeUserAccounts() {
         return this.excludeUserAccounts == null ? Output.empty() : this.excludeUserAccounts;
     }
 
-    @InputImport(name="exclusionPatterns")
+    @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
     public Output<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
     }
 
-    @InputImport(name="inclusionPatterns")
+    @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
     public Output<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {

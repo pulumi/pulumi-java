@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sso;
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs;
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
 
     public static final InstanceAccessControlAttributeConfigurationArgs Empty = new InstanceAccessControlAttributeConfigurationArgs();
 
-    @InputImport(name="accessControlAttributes")
+    @Import(name="accessControlAttributes")
       private final @Nullable Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
     public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> getAccessControlAttributes() {
@@ -28,7 +28,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
      * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
      * 
      */
-    @InputImport(name="instanceAccessControlAttributeConfiguration")
+    @Import(name="instanceAccessControlAttributeConfiguration")
       private final @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
 
     public Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> getInstanceAccessControlAttributeConfiguration() {
@@ -39,7 +39,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
      * The ARN of the AWS SSO instance under which the operation will be executed.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {

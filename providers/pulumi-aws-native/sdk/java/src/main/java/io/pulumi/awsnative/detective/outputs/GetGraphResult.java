@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.detective.outputs;
 
 import io.pulumi.awsnative.detective.outputs.GraphTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGraphResult {
     /**
      * The Detective graph ARN
@@ -20,10 +20,10 @@ public final class GetGraphResult {
     private final @Nullable String arn;
     private final @Nullable List<GraphTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGraphResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<GraphTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<GraphTag> tags) {
         this.arn = arn;
         this.tags = tags;
     }

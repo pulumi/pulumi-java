@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
      * The content of the payload. You can use a string expression that includes quoted strings (`'<string>'`), variables (`$variable.<variable-name>`), input values (`$input.<input-name>.<path-to-datum>`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
      * 
      */
-    @InputImport(name="contentExpression", required=true)
+    @Import(name="contentExpression", required=true)
       private final Output<String> contentExpression;
 
     public Output<String> getContentExpression() {
@@ -34,7 +34,7 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
      * The value of the payload type can be either `STRING` or `JSON`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

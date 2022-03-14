@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codestarnotifications.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
 
     public static final NotificationRuleTargetArgs Empty = new NotificationRuleTargetArgs();
 
-    @InputImport(name="targetAddress", required=true)
+    @Import(name="targetAddress", required=true)
       private final Output<String> targetAddress;
 
     public Output<String> getTargetAddress() {
         return this.targetAddress;
     }
 
-    @InputImport(name="targetType", required=true)
+    @Import(name="targetType", required=true)
       private final Output<String> targetType;
 
     public Output<String> getTargetType() {

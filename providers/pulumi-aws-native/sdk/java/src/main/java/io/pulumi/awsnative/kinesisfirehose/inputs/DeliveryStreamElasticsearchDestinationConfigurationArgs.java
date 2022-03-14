@@ -12,7 +12,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfig
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamVpcConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,91 +22,91 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
 
     public static final DeliveryStreamElasticsearchDestinationConfigurationArgs Empty = new DeliveryStreamElasticsearchDestinationConfigurationArgs();
 
-    @InputImport(name="bufferingHints")
+    @Import(name="bufferingHints")
       private final @Nullable Output<DeliveryStreamElasticsearchBufferingHintsArgs> bufferingHints;
 
     public Output<DeliveryStreamElasticsearchBufferingHintsArgs> getBufferingHints() {
         return this.bufferingHints == null ? Output.empty() : this.bufferingHints;
     }
 
-    @InputImport(name="cloudWatchLoggingOptions")
+    @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Output.empty() : this.cloudWatchLoggingOptions;
     }
 
-    @InputImport(name="clusterEndpoint")
+    @Import(name="clusterEndpoint")
       private final @Nullable Output<String> clusterEndpoint;
 
     public Output<String> getClusterEndpoint() {
         return this.clusterEndpoint == null ? Output.empty() : this.clusterEndpoint;
     }
 
-    @InputImport(name="domainARN")
+    @Import(name="domainARN")
       private final @Nullable Output<String> domainARN;
 
     public Output<String> getDomainARN() {
         return this.domainARN == null ? Output.empty() : this.domainARN;
     }
 
-    @InputImport(name="indexName", required=true)
+    @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
     public Output<String> getIndexName() {
         return this.indexName;
     }
 
-    @InputImport(name="indexRotationPeriod")
+    @Import(name="indexRotationPeriod")
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> indexRotationPeriod;
 
     public Output<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> getIndexRotationPeriod() {
         return this.indexRotationPeriod == null ? Output.empty() : this.indexRotationPeriod;
     }
 
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
-    @InputImport(name="retryOptions")
+    @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamElasticsearchRetryOptionsArgs> retryOptions;
 
     public Output<DeliveryStreamElasticsearchRetryOptionsArgs> getRetryOptions() {
         return this.retryOptions == null ? Output.empty() : this.retryOptions;
     }
 
-    @InputImport(name="roleARN", required=true)
+    @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
     public Output<String> getRoleARN() {
         return this.roleARN;
     }
 
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> s3BackupMode;
 
     public Output<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> getS3BackupMode() {
         return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
     }
 
-    @InputImport(name="s3Configuration", required=true)
+    @Import(name="s3Configuration", required=true)
       private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
         return this.s3Configuration;
     }
 
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
         return this.typeName == null ? Output.empty() : this.typeName;
     }
 
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable Output<DeliveryStreamVpcConfigurationArgs> vpcConfiguration;
 
     public Output<DeliveryStreamVpcConfigurationArgs> getVpcConfiguration() {

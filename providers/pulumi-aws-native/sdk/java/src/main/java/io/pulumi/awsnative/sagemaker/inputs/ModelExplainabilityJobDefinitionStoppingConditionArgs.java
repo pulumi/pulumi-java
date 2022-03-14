@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ModelExplainabilityJobDefinitionStoppingConditionArgs extends
      * The maximum runtime allowed in seconds.
      * 
      */
-    @InputImport(name="maxRuntimeInSeconds", required=true)
+    @Import(name="maxRuntimeInSeconds", required=true)
       private final Output<Integer> maxRuntimeInSeconds;
 
     public Output<Integer> getMaxRuntimeInSeconds() {

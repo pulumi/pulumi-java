@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IndexCapacityUnitsConfiguration {
     private final Integer queryCapacityUnits;
     private final Integer storageCapacityUnits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexCapacityUnitsConfiguration(
-        @OutputCustomType.Parameter("queryCapacityUnits") Integer queryCapacityUnits,
-        @OutputCustomType.Parameter("storageCapacityUnits") Integer storageCapacityUnits) {
+        @CustomType.Parameter("queryCapacityUnits") Integer queryCapacityUnits,
+        @CustomType.Parameter("storageCapacityUnits") Integer storageCapacityUnits) {
         this.queryCapacityUnits = queryCapacityUnits;
         this.storageCapacityUnits = storageCapacityUnits;
     }

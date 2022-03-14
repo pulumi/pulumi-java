@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobS3TableOutputOptions {
     private final JobS3Location location;
 
-    @OutputCustomType.Constructor
-    private JobS3TableOutputOptions(@OutputCustomType.Parameter("location") JobS3Location location) {
+    @CustomType.Constructor
+    private JobS3TableOutputOptions(@CustomType.Parameter("location") JobS3Location location) {
         this.location = location;
     }
 

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lambda.CodeSigningConfigArgs;
 import io.pulumi.awsnative.lambda.outputs.CodeSigningConfigAllowedPublishers;
 import io.pulumi.awsnative.lambda.outputs.CodeSigningConfigCodeSigningPolicies;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
      * 
      */
-    @OutputExport(name="allowedPublishers", type=CodeSigningConfigAllowedPublishers.class, parameters={})
+    @Export(name="allowedPublishers", type=CodeSigningConfigAllowedPublishers.class, parameters={})
     private Output<CodeSigningConfigAllowedPublishers> allowedPublishers;
 
     /**
@@ -37,7 +37,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * A unique Arn for CodeSigningConfig resource
      * 
      */
-    @OutputExport(name="codeSigningConfigArn", type=String.class, parameters={})
+    @Export(name="codeSigningConfigArn", type=String.class, parameters={})
     private Output<String> codeSigningConfigArn;
 
     /**
@@ -51,7 +51,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * A unique identifier for CodeSigningConfig resource
      * 
      */
-    @OutputExport(name="codeSigningConfigId", type=String.class, parameters={})
+    @Export(name="codeSigningConfigId", type=String.class, parameters={})
     private Output<String> codeSigningConfigId;
 
     /**
@@ -65,7 +65,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * Policies to control how to act if a signature is invalid
      * 
      */
-    @OutputExport(name="codeSigningPolicies", type=CodeSigningConfigCodeSigningPolicies.class, parameters={})
+    @Export(name="codeSigningPolicies", type=CodeSigningConfigCodeSigningPolicies.class, parameters={})
     private Output</* @Nullable */ CodeSigningConfigCodeSigningPolicies> codeSigningPolicies;
 
     /**
@@ -79,7 +79,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * A description of the CodeSigningConfig
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**

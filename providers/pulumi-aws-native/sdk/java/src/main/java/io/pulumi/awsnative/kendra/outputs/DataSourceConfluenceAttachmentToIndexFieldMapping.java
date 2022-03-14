@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceConfluenceAttachmentFieldName;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfluenceAttachmentToIndexFieldMapping {
     private final DataSourceConfluenceAttachmentFieldName dataSourceFieldName;
     private final @Nullable String dateFieldFormat;
     private final String indexFieldName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceConfluenceAttachmentToIndexFieldMapping(
-        @OutputCustomType.Parameter("dataSourceFieldName") DataSourceConfluenceAttachmentFieldName dataSourceFieldName,
-        @OutputCustomType.Parameter("dateFieldFormat") @Nullable String dateFieldFormat,
-        @OutputCustomType.Parameter("indexFieldName") String indexFieldName) {
+        @CustomType.Parameter("dataSourceFieldName") DataSourceConfluenceAttachmentFieldName dataSourceFieldName,
+        @CustomType.Parameter("dateFieldFormat") @Nullable String dateFieldFormat,
+        @CustomType.Parameter("indexFieldName") String indexFieldName) {
         this.dataSourceFieldName = dataSourceFieldName;
         this.dateFieldFormat = dateFieldFormat;
         this.indexFieldName = indexFieldName;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardUIState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
 
     public static final DashboardSheetControlsOptionArgs Empty = new DashboardSheetControlsOptionArgs();
 
-    @InputImport(name="visibilityState")
+    @Import(name="visibilityState")
       private final @Nullable Output<DashboardUIState> visibilityState;
 
     public Output<DashboardUIState> getVisibilityState() {

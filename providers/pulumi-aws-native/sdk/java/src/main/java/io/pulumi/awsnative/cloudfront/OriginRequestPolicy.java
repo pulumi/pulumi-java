@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.OriginRequestPolicyArgs;
 import io.pulumi.awsnative.cloudfront.outputs.OriginRequestPolicyConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,13 +18,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudfront:OriginRequestPolicy")
 public class OriginRequestPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    @OutputExport(name="originRequestPolicyConfig", type=OriginRequestPolicyConfig.class, parameters={})
+    @Export(name="originRequestPolicyConfig", type=OriginRequestPolicyConfig.class, parameters={})
     private Output<OriginRequestPolicyConfig> originRequestPolicyConfig;
 
     public Output<OriginRequestPolicyConfig> getOriginRequestPolicyConfig() {

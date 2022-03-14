@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionMetadata {
     private final @Nullable String functionARN;
 
-    @OutputCustomType.Constructor
-    private FunctionMetadata(@OutputCustomType.Parameter("functionARN") @Nullable String functionARN) {
+    @CustomType.Constructor
+    private FunctionMetadata(@CustomType.Parameter("functionARN") @Nullable String functionARN) {
         this.functionARN = functionARN;
     }
 

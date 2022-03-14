@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,42 +16,42 @@ public final class DeliveryStreamParquetSerDe extends io.pulumi.resources.Invoke
 
     public static final DeliveryStreamParquetSerDe Empty = new DeliveryStreamParquetSerDe();
 
-    @InputImport(name="blockSizeBytes")
+    @Import(name="blockSizeBytes")
       private final @Nullable Integer blockSizeBytes;
 
     public Optional<Integer> getBlockSizeBytes() {
         return this.blockSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.blockSizeBytes);
     }
 
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable String compression;
 
     public Optional<String> getCompression() {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
     }
 
-    @InputImport(name="enableDictionaryCompression")
+    @Import(name="enableDictionaryCompression")
       private final @Nullable Boolean enableDictionaryCompression;
 
     public Optional<Boolean> getEnableDictionaryCompression() {
         return this.enableDictionaryCompression == null ? Optional.empty() : Optional.ofNullable(this.enableDictionaryCompression);
     }
 
-    @InputImport(name="maxPaddingBytes")
+    @Import(name="maxPaddingBytes")
       private final @Nullable Integer maxPaddingBytes;
 
     public Optional<Integer> getMaxPaddingBytes() {
         return this.maxPaddingBytes == null ? Optional.empty() : Optional.ofNullable(this.maxPaddingBytes);
     }
 
-    @InputImport(name="pageSizeBytes")
+    @Import(name="pageSizeBytes")
       private final @Nullable Integer pageSizeBytes;
 
     public Optional<Integer> getPageSizeBytes() {
         return this.pageSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.pageSizeBytes);
     }
 
-    @InputImport(name="writerVersion")
+    @Import(name="writerVersion")
       private final @Nullable String writerVersion;
 
     public Optional<String> getWriterVersion() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDestinationFormat;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * The account ID that owns the destination S3 bucket.
      * 
      */
-    @InputImport(name="bucketAccountId")
+    @Import(name="bucketAccountId")
       private final @Nullable Output<String> bucketAccountId;
 
     public Output<String> getBucketAccountId() {
@@ -34,7 +34,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Name (ARN) of the bucket to which data is exported.
      * 
      */
-    @InputImport(name="bucketArn", required=true)
+    @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
@@ -45,7 +45,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * Specifies the file format used when exporting data to Amazon S3.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<BucketDestinationFormat> format;
 
     public Output<BucketDestinationFormat> getFormat() {
@@ -56,7 +56,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
      * The prefix to use when exporting data. The prefix is prepended to all results.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.ProjectTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,19 +12,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     private final @Nullable String arn;
     private final @Nullable Integer defaultJobTimeoutMinutes;
     private final @Nullable String name;
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("defaultJobTimeoutMinutes") @Nullable Integer defaultJobTimeoutMinutes,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("defaultJobTimeoutMinutes") @Nullable Integer defaultJobTimeoutMinutes,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.arn = arn;
         this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
         this.name = name;

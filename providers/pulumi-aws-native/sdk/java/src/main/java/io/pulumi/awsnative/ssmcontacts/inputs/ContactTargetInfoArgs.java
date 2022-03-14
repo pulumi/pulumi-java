@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Name (ARN) of the contact.
      * 
      */
-    @InputImport(name="contactId", required=true)
+    @Import(name="contactId", required=true)
       private final Output<String> contactId;
 
     public Output<String> getContactId() {
@@ -33,7 +33,7 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
      * A Boolean value determining if the contact's acknowledgement stops the progress of stages in the plan.
      * 
      */
-    @InputImport(name="isEssential", required=true)
+    @Import(name="isEssential", required=true)
       private final Output<Boolean> isEssential;
 
     public Output<Boolean> getIsEssential() {

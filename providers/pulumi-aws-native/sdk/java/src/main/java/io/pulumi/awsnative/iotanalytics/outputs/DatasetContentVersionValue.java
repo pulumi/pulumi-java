@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetContentVersionValue {
     private final String datasetName;
 
-    @OutputCustomType.Constructor
-    private DatasetContentVersionValue(@OutputCustomType.Parameter("datasetName") String datasetName) {
+    @CustomType.Constructor
+    private DatasetContentVersionValue(@CustomType.Parameter("datasetName") String datasetName) {
         this.datasetName = datasetName;
     }
 

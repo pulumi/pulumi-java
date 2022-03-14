@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     /**
      * The ARN of the issued certificate.
@@ -22,10 +22,10 @@ public final class GetCertificateResult {
      */
     private final @Nullable String certificate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("certificate") @Nullable String certificate) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("certificate") @Nullable String certificate) {
         this.arn = arn;
         this.certificate = certificate;
     }

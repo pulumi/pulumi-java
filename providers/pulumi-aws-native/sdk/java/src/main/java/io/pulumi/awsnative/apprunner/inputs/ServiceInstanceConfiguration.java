@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
      * CPU
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable String cpu;
 
     public Optional<String> getCpu() {
@@ -33,7 +33,7 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
      * Instance Role Arn
      * 
      */
-    @InputImport(name="instanceRoleArn")
+    @Import(name="instanceRoleArn")
       private final @Nullable String instanceRoleArn;
 
     public Optional<String> getInstanceRoleArn() {
@@ -44,7 +44,7 @@ public final class ServiceInstanceConfiguration extends io.pulumi.resources.Invo
      * Memory
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable String memory;
 
     public Optional<String> getMemory() {

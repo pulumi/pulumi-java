@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAccessPointPolicyArgs extends io.pulumi.resources.InvokeAr
      * The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
      * 
      */
-    @InputImport(name="objectLambdaAccessPoint", required=true)
+    @Import(name="objectLambdaAccessPoint", required=true)
       private final String objectLambdaAccessPoint;
 
     public String getObjectLambdaAccessPoint() {

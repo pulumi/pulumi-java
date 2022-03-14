@@ -5,14 +5,14 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobDatabaseTableOutputOptions;
 import io.pulumi.awsnative.databrew.outputs.JobS3TableOutputOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobDataCatalogOutput {
     private final @Nullable String catalogId;
     private final String databaseName;
@@ -21,14 +21,14 @@ public final class JobDataCatalogOutput {
     private final @Nullable JobS3TableOutputOptions s3Options;
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobDataCatalogOutput(
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("databaseOptions") @Nullable JobDatabaseTableOutputOptions databaseOptions,
-        @OutputCustomType.Parameter("overwrite") @Nullable Boolean overwrite,
-        @OutputCustomType.Parameter("s3Options") @Nullable JobS3TableOutputOptions s3Options,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("catalogId") @Nullable String catalogId,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("databaseOptions") @Nullable JobDatabaseTableOutputOptions databaseOptions,
+        @CustomType.Parameter("overwrite") @Nullable Boolean overwrite,
+        @CustomType.Parameter("s3Options") @Nullable JobS3TableOutputOptions s3Options,
+        @CustomType.Parameter("tableName") String tableName) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.databaseOptions = databaseOptions;

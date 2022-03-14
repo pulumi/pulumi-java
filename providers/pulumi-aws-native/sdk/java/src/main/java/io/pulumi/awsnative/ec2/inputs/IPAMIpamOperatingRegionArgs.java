@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IPAMIpamOperatingRegionArgs extends io.pulumi.resources.Resou
      * The name of the region.
      * 
      */
-    @InputImport(name="regionName", required=true)
+    @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
     public Output<String> getRegionName() {

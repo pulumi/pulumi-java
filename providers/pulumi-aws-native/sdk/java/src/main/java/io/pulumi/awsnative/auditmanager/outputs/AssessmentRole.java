@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.auditmanager.outputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentRole {
     private final @Nullable String roleArn;
     private final @Nullable AssessmentRoleType roleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssessmentRole(
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("roleType") @Nullable AssessmentRoleType roleType) {
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("roleType") @Nullable AssessmentRoleType roleType) {
         this.roleArn = roleArn;
         this.roleType = roleType;
     }

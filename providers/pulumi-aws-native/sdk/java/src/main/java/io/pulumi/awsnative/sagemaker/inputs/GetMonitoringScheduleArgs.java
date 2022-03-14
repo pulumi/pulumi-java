@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetMonitoringScheduleArgs extends io.pulumi.resources.InvokeA
      * The Amazon Resource Name (ARN) of the monitoring schedule.
      * 
      */
-    @InputImport(name="monitoringScheduleArn", required=true)
+    @Import(name="monitoringScheduleArn", required=true)
       private final String monitoringScheduleArn;
 
     public String getMonitoringScheduleArn() {

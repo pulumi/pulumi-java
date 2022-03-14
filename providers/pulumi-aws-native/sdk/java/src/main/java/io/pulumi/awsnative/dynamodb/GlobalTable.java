@@ -15,7 +15,7 @@ import io.pulumi.awsnative.dynamodb.outputs.GlobalTableStreamSpecification;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableTimeToLiveSpecification;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableWriteProvisionedThroughputSettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,85 +27,85 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:dynamodb:GlobalTable")
 public class GlobalTable extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="attributeDefinitions", type=List.class, parameters={GlobalTableAttributeDefinition.class})
+    @Export(name="attributeDefinitions", type=List.class, parameters={GlobalTableAttributeDefinition.class})
     private Output<List<GlobalTableAttributeDefinition>> attributeDefinitions;
 
     public Output<List<GlobalTableAttributeDefinition>> getAttributeDefinitions() {
         return this.attributeDefinitions;
     }
-    @OutputExport(name="billingMode", type=String.class, parameters={})
+    @Export(name="billingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingMode;
 
     public Output</* @Nullable */ String> getBillingMode() {
         return this.billingMode;
     }
-    @OutputExport(name="globalSecondaryIndexes", type=List.class, parameters={GlobalTableGlobalSecondaryIndex.class})
+    @Export(name="globalSecondaryIndexes", type=List.class, parameters={GlobalTableGlobalSecondaryIndex.class})
     private Output</* @Nullable */ List<GlobalTableGlobalSecondaryIndex>> globalSecondaryIndexes;
 
     public Output</* @Nullable */ List<GlobalTableGlobalSecondaryIndex>> getGlobalSecondaryIndexes() {
         return this.globalSecondaryIndexes;
     }
-    @OutputExport(name="keySchema", type=List.class, parameters={GlobalTableKeySchema.class})
+    @Export(name="keySchema", type=List.class, parameters={GlobalTableKeySchema.class})
     private Output<List<GlobalTableKeySchema>> keySchema;
 
     public Output<List<GlobalTableKeySchema>> getKeySchema() {
         return this.keySchema;
     }
-    @OutputExport(name="localSecondaryIndexes", type=List.class, parameters={GlobalTableLocalSecondaryIndex.class})
+    @Export(name="localSecondaryIndexes", type=List.class, parameters={GlobalTableLocalSecondaryIndex.class})
     private Output</* @Nullable */ List<GlobalTableLocalSecondaryIndex>> localSecondaryIndexes;
 
     public Output</* @Nullable */ List<GlobalTableLocalSecondaryIndex>> getLocalSecondaryIndexes() {
         return this.localSecondaryIndexes;
     }
-    @OutputExport(name="replicas", type=List.class, parameters={GlobalTableReplicaSpecification.class})
+    @Export(name="replicas", type=List.class, parameters={GlobalTableReplicaSpecification.class})
     private Output<List<GlobalTableReplicaSpecification>> replicas;
 
     public Output<List<GlobalTableReplicaSpecification>> getReplicas() {
         return this.replicas;
     }
-    @OutputExport(name="sSESpecification", type=GlobalTableSSESpecification.class, parameters={})
+    @Export(name="sSESpecification", type=GlobalTableSSESpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableSSESpecification> sSESpecification;
 
     public Output</* @Nullable */ GlobalTableSSESpecification> getSSESpecification() {
         return this.sSESpecification;
     }
-    @OutputExport(name="streamArn", type=String.class, parameters={})
+    @Export(name="streamArn", type=String.class, parameters={})
     private Output<String> streamArn;
 
     public Output<String> getStreamArn() {
         return this.streamArn;
     }
-    @OutputExport(name="streamSpecification", type=GlobalTableStreamSpecification.class, parameters={})
+    @Export(name="streamSpecification", type=GlobalTableStreamSpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableStreamSpecification> streamSpecification;
 
     public Output</* @Nullable */ GlobalTableStreamSpecification> getStreamSpecification() {
         return this.streamSpecification;
     }
-    @OutputExport(name="tableId", type=String.class, parameters={})
+    @Export(name="tableId", type=String.class, parameters={})
     private Output<String> tableId;
 
     public Output<String> getTableId() {
         return this.tableId;
     }
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     public Output</* @Nullable */ String> getTableName() {
         return this.tableName;
     }
-    @OutputExport(name="timeToLiveSpecification", type=GlobalTableTimeToLiveSpecification.class, parameters={})
+    @Export(name="timeToLiveSpecification", type=GlobalTableTimeToLiveSpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableTimeToLiveSpecification> timeToLiveSpecification;
 
     public Output</* @Nullable */ GlobalTableTimeToLiveSpecification> getTimeToLiveSpecification() {
         return this.timeToLiveSpecification;
     }
-    @OutputExport(name="writeProvisionedThroughputSettings", type=GlobalTableWriteProvisionedThroughputSettings.class, parameters={})
+    @Export(name="writeProvisionedThroughputSettings", type=GlobalTableWriteProvisionedThroughputSettings.class, parameters={})
     private Output</* @Nullable */ GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings;
 
     public Output</* @Nullable */ GlobalTableWriteProvisionedThroughputSettings> getWriteProvisionedThroughputSettings() {

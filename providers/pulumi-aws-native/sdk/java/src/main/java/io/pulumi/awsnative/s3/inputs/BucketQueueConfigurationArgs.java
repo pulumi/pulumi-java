@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
      * The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
      * 
      */
-    @InputImport(name="event", required=true)
+    @Import(name="event", required=true)
       private final Output<String> event;
 
     public Output<String> getEvent() {
@@ -34,7 +34,7 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
      * The filtering rules that determine which objects trigger notifications.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BucketNotificationFilterArgs> filter;
 
     public Output<BucketNotificationFilterArgs> getFilter() {
@@ -45,7 +45,7 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type.
      * 
      */
-    @InputImport(name="queue", required=true)
+    @Import(name="queue", required=true)
       private final Output<String> queue;
 
     public Output<String> getQueue() {

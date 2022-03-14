@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.TransitGatewayArgs;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,73 +20,73 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ec2:TransitGateway")
 public class TransitGateway extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="amazonSideAsn", type=Integer.class, parameters={})
+    @Export(name="amazonSideAsn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> amazonSideAsn;
 
     public Output</* @Nullable */ Integer> getAmazonSideAsn() {
         return this.amazonSideAsn;
     }
-    @OutputExport(name="associationDefaultRouteTableId", type=String.class, parameters={})
+    @Export(name="associationDefaultRouteTableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> associationDefaultRouteTableId;
 
     public Output</* @Nullable */ String> getAssociationDefaultRouteTableId() {
         return this.associationDefaultRouteTableId;
     }
-    @OutputExport(name="autoAcceptSharedAttachments", type=String.class, parameters={})
+    @Export(name="autoAcceptSharedAttachments", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoAcceptSharedAttachments;
 
     public Output</* @Nullable */ String> getAutoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments;
     }
-    @OutputExport(name="defaultRouteTableAssociation", type=String.class, parameters={})
+    @Export(name="defaultRouteTableAssociation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRouteTableAssociation;
 
     public Output</* @Nullable */ String> getDefaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation;
     }
-    @OutputExport(name="defaultRouteTablePropagation", type=String.class, parameters={})
+    @Export(name="defaultRouteTablePropagation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRouteTablePropagation;
 
     public Output</* @Nullable */ String> getDefaultRouteTablePropagation() {
         return this.defaultRouteTablePropagation;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="dnsSupport", type=String.class, parameters={})
+    @Export(name="dnsSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsSupport;
 
     public Output</* @Nullable */ String> getDnsSupport() {
         return this.dnsSupport;
     }
-    @OutputExport(name="multicastSupport", type=String.class, parameters={})
+    @Export(name="multicastSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> multicastSupport;
 
     public Output</* @Nullable */ String> getMulticastSupport() {
         return this.multicastSupport;
     }
-    @OutputExport(name="propagationDefaultRouteTableId", type=String.class, parameters={})
+    @Export(name="propagationDefaultRouteTableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> propagationDefaultRouteTableId;
 
     public Output</* @Nullable */ String> getPropagationDefaultRouteTableId() {
         return this.propagationDefaultRouteTableId;
     }
-    @OutputExport(name="tags", type=List.class, parameters={TransitGatewayTag.class})
+    @Export(name="tags", type=List.class, parameters={TransitGatewayTag.class})
     private Output</* @Nullable */ List<TransitGatewayTag>> tags;
 
     public Output</* @Nullable */ List<TransitGatewayTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="transitGatewayCidrBlocks", type=List.class, parameters={String.class})
+    @Export(name="transitGatewayCidrBlocks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> transitGatewayCidrBlocks;
 
     public Output</* @Nullable */ List<String>> getTransitGatewayCidrBlocks() {
         return this.transitGatewayCidrBlocks;
     }
-    @OutputExport(name="vpnEcmpSupport", type=String.class, parameters={})
+    @Export(name="vpnEcmpSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnEcmpSupport;
 
     public Output</* @Nullable */ String> getVpnEcmpSupport() {

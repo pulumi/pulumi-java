@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver.inputs;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleAction;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockOverrideDnsType;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * Rule Action
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final FirewallRuleGroupFirewallRuleAction action;
 
     public FirewallRuleGroupFirewallRuleAction getAction() {
@@ -37,7 +37,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * BlockOverrideDnsType
      * 
      */
-    @InputImport(name="blockOverrideDnsType")
+    @Import(name="blockOverrideDnsType")
       private final @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType;
 
     public Optional<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> getBlockOverrideDnsType() {
@@ -48,7 +48,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * BlockOverrideDomain
      * 
      */
-    @InputImport(name="blockOverrideDomain")
+    @Import(name="blockOverrideDomain")
       private final @Nullable String blockOverrideDomain;
 
     public Optional<String> getBlockOverrideDomain() {
@@ -59,7 +59,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * BlockOverrideTtl
      * 
      */
-    @InputImport(name="blockOverrideTtl")
+    @Import(name="blockOverrideTtl")
       private final @Nullable Integer blockOverrideTtl;
 
     public Optional<Integer> getBlockOverrideTtl() {
@@ -70,7 +70,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * BlockResponse
      * 
      */
-    @InputImport(name="blockResponse")
+    @Import(name="blockResponse")
       private final @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse;
 
     public Optional<FirewallRuleGroupFirewallRuleBlockResponse> getBlockResponse() {
@@ -81,7 +81,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * ResourceId
      * 
      */
-    @InputImport(name="firewallDomainListId", required=true)
+    @Import(name="firewallDomainListId", required=true)
       private final String firewallDomainListId;
 
     public String getFirewallDomainListId() {
@@ -92,7 +92,7 @@ public final class FirewallRuleGroupFirewallRule extends io.pulumi.resources.Inv
      * Rule Priority
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {

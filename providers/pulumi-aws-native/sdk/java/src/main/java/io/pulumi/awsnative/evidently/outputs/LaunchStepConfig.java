@@ -4,20 +4,20 @@
 package io.pulumi.awsnative.evidently.outputs;
 
 import io.pulumi.awsnative.evidently.outputs.LaunchGroupToWeight;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LaunchStepConfig {
     private final List<LaunchGroupToWeight> groupWeights;
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchStepConfig(
-        @OutputCustomType.Parameter("groupWeights") List<LaunchGroupToWeight> groupWeights,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("groupWeights") List<LaunchGroupToWeight> groupWeights,
+        @CustomType.Parameter("startTime") String startTime) {
         this.groupWeights = groupWeights;
         this.startTime = startTime;
     }

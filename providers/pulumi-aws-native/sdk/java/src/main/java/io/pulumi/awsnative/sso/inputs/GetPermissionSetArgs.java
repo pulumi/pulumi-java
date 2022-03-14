@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sso.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
      * The sso instance arn that the permission set is owned.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final String instanceArn;
 
     public String getInstanceArn() {
@@ -27,7 +27,7 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
      * The permission set that the policy will be attached to
      * 
      */
-    @InputImport(name="permissionSetArn", required=true)
+    @Import(name="permissionSetArn", required=true)
       private final String permissionSetArn;
 
     public String getPermissionSetArn() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync;
 
 import io.pulumi.awsnative.datasync.inputs.AgentTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * Activation key of the Agent.
      * 
      */
-    @InputImport(name="activationKey", required=true)
+    @Import(name="activationKey", required=true)
       private final Output<String> activationKey;
 
     public Output<String> getActivationKey() {
@@ -31,7 +31,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * The name configured for the agent. Text reference used to identify the agent in the console.
      * 
      */
-    @InputImport(name="agentName")
+    @Import(name="agentName")
       private final @Nullable Output<String> agentName;
 
     public Output<String> getAgentName() {
@@ -42,7 +42,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * The ARNs of the security group used to protect your data transfer task subnets.
      * 
      */
-    @InputImport(name="securityGroupArns")
+    @Import(name="securityGroupArns")
       private final @Nullable Output<List<String>> securityGroupArns;
 
     public Output<List<String>> getSecurityGroupArns() {
@@ -53,7 +53,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
      * 
      */
-    @InputImport(name="subnetArns")
+    @Import(name="subnetArns")
       private final @Nullable Output<List<String>> subnetArns;
 
     public Output<List<String>> getSubnetArns() {
@@ -64,7 +64,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AgentTagArgs>> tags;
 
     public Output<List<AgentTagArgs>> getTags() {
@@ -75,7 +75,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the VPC endpoint that the agent has access to.
      * 
      */
-    @InputImport(name="vpcEndpointId")
+    @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {

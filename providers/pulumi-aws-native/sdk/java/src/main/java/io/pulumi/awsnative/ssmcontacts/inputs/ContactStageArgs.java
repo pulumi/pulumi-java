@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactTargetsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
      * The time to wait until beginning the next stage.
      * 
      */
-    @InputImport(name="durationInMinutes", required=true)
+    @Import(name="durationInMinutes", required=true)
       private final Output<Integer> durationInMinutes;
 
     public Output<Integer> getDurationInMinutes() {
@@ -35,7 +35,7 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
      * The contacts or contact methods that the escalation plan or engagement plan is engaging.
      * 
      */
-    @InputImport(name="targets")
+    @Import(name="targets")
       private final @Nullable Output<List<ContactTargetsArgs>> targets;
 
     public Output<List<ContactTargetsArgs>> getTargets() {

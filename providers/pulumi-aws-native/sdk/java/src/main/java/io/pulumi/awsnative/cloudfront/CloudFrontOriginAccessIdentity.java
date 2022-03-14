@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.CloudFrontOriginAccessIdentityArgs;
 import io.pulumi.awsnative.cloudfront.outputs.CloudFrontOriginAccessIdentityConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -20,13 +20,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudfront:CloudFrontOriginAccessIdentity")
 public class CloudFrontOriginAccessIdentity extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="cloudFrontOriginAccessIdentityConfig", type=CloudFrontOriginAccessIdentityConfig.class, parameters={})
+    @Export(name="cloudFrontOriginAccessIdentityConfig", type=CloudFrontOriginAccessIdentityConfig.class, parameters={})
     private Output<CloudFrontOriginAccessIdentityConfig> cloudFrontOriginAccessIdentityConfig;
 
     public Output<CloudFrontOriginAccessIdentityConfig> getCloudFrontOriginAccessIdentityConfig() {
         return this.cloudFrontOriginAccessIdentityConfig;
     }
-    @OutputExport(name="s3CanonicalUserId", type=String.class, parameters={})
+    @Export(name="s3CanonicalUserId", type=String.class, parameters={})
     private Output<String> s3CanonicalUserId;
 
     public Output<String> getS3CanonicalUserId() {

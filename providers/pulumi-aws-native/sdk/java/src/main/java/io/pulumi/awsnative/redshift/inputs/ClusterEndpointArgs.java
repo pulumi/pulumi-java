@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ClusterEndpointArgs Empty = new ClusterEndpointArgs();
 
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
         return this.address == null ? Output.empty() : this.address;
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {

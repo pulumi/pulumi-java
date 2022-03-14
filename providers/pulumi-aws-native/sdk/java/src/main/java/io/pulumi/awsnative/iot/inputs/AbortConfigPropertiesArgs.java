@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.JobTemplateAbortCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AbortConfigPropertiesArgs extends io.pulumi.resources.Resourc
 
     public static final AbortConfigPropertiesArgs Empty = new AbortConfigPropertiesArgs();
 
-    @InputImport(name="criteriaList", required=true)
+    @Import(name="criteriaList", required=true)
       private final Output<List<JobTemplateAbortCriteriaArgs>> criteriaList;
 
     public Output<List<JobTemplateAbortCriteriaArgs>> getCriteriaList() {

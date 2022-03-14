@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointMssEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelection;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class OriginEndpointMssPackage extends io.pulumi.resources.InvokeAr
 
     public static final OriginEndpointMssPackage Empty = new OriginEndpointMssPackage();
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable OriginEndpointMssEncryption encryption;
 
     public Optional<OriginEndpointMssEncryption> getEncryption() {
@@ -31,7 +31,7 @@ public final class OriginEndpointMssPackage extends io.pulumi.resources.InvokeAr
      * The time window (in seconds) contained in each manifest.
      * 
      */
-    @InputImport(name="manifestWindowSeconds")
+    @Import(name="manifestWindowSeconds")
       private final @Nullable Integer manifestWindowSeconds;
 
     public Optional<Integer> getManifestWindowSeconds() {
@@ -42,14 +42,14 @@ public final class OriginEndpointMssPackage extends io.pulumi.resources.InvokeAr
      * The duration (in seconds) of each segment.
      * 
      */
-    @InputImport(name="segmentDurationSeconds")
+    @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 
-    @InputImport(name="streamSelection")
+    @Import(name="streamSelection")
       private final @Nullable OriginEndpointStreamSelection streamSelection;
 
     public Optional<OriginEndpointStreamSelection> getStreamSelection() {

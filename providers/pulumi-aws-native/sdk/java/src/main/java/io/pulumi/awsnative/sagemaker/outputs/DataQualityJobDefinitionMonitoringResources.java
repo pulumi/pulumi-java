@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionClusterConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataQualityJobDefinitionMonitoringResources {
     private final DataQualityJobDefinitionClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor
-    private DataQualityJobDefinitionMonitoringResources(@OutputCustomType.Parameter("clusterConfig") DataQualityJobDefinitionClusterConfig clusterConfig) {
+    @CustomType.Constructor
+    private DataQualityJobDefinitionMonitoringResources(@CustomType.Parameter("clusterConfig") DataQualityJobDefinitionClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 

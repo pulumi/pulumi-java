@@ -6,7 +6,7 @@ package io.pulumi.awsnative.logs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.logs.QueryDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * Optionally define specific log groups as part of your query definition
      * 
      */
-    @OutputExport(name="logGroupNames", type=List.class, parameters={String.class})
+    @Export(name="logGroupNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> logGroupNames;
 
     /**
@@ -36,7 +36,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * A name for the saved query definition
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * Unique identifier of a query definition
      * 
      */
-    @OutputExport(name="queryDefinitionId", type=String.class, parameters={})
+    @Export(name="queryDefinitionId", type=String.class, parameters={})
     private Output<String> queryDefinitionId;
 
     /**
@@ -64,7 +64,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * The query string to use for this definition
      * 
      */
-    @OutputExport(name="queryString", type=String.class, parameters={})
+    @Export(name="queryString", type=String.class, parameters={})
     private Output<String> queryString;
 
     /**

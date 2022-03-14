@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if the latest version needs to be updated.
      * 
      */
-    @InputImport(name="isLatest")
+    @Import(name="isLatest")
       private final @Nullable Output<Boolean> isLatest;
 
     public Output<Boolean> getIsLatest() {
@@ -34,7 +34,7 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the version number in the schema to update.
      * 
      */
-    @InputImport(name="versionNumber")
+    @Import(name="versionNumber")
       private final @Nullable Output<Integer> versionNumber;
 
     public Output<Integer> getVersionNumber() {

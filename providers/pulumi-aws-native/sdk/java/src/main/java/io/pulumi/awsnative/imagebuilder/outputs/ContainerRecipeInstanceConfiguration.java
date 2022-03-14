@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ContainerRecipeInstanceBlockDeviceMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerRecipeInstanceConfiguration {
     /**
      * Defines the block devices to attach for building an instance from this Image Builder AMI.
@@ -24,10 +24,10 @@ public final class ContainerRecipeInstanceConfiguration {
      */
     private final @Nullable String image;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerRecipeInstanceConfiguration(
-        @OutputCustomType.Parameter("blockDeviceMappings") @Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings,
-        @OutputCustomType.Parameter("image") @Nullable String image) {
+        @CustomType.Parameter("blockDeviceMappings") @Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings,
+        @CustomType.Parameter("image") @Nullable String image) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.image = image;
     }

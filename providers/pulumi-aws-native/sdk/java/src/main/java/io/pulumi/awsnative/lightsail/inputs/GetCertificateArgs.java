@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * The name for the certificate.
      * 
      */
-    @InputImport(name="certificateName", required=true)
+    @Import(name="certificateName", required=true)
       private final String certificateName;
 
     public String getCertificateName() {

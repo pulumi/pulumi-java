@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRecoveryGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the recovery group to create.
      * 
      */
-    @InputImport(name="recoveryGroupName", required=true)
+    @Import(name="recoveryGroupName", required=true)
       private final String recoveryGroupName;
 
     public String getRecoveryGroupName() {

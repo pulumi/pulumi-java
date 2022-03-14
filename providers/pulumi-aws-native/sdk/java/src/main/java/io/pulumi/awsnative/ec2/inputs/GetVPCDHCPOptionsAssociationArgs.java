@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
      * The ID of the DHCP options set, or default to associate no DHCP options with the VPC.
      * 
      */
-    @InputImport(name="dhcpOptionsId", required=true)
+    @Import(name="dhcpOptionsId", required=true)
       private final String dhcpOptionsId;
 
     public String getDhcpOptionsId() {
@@ -27,7 +27,7 @@ public final class GetVPCDHCPOptionsAssociationArgs extends io.pulumi.resources.
      * The ID of the VPC.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final String vpcId;
 
     public String getVpcId() {

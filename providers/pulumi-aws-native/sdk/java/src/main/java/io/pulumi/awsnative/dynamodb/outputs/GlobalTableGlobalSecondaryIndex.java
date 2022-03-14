@@ -6,26 +6,26 @@ package io.pulumi.awsnative.dynamodb.outputs;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableKeySchema;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableProjection;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableWriteProvisionedThroughputSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableGlobalSecondaryIndex {
     private final String indexName;
     private final List<GlobalTableKeySchema> keySchema;
     private final GlobalTableProjection projection;
     private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableGlobalSecondaryIndex(
-        @OutputCustomType.Parameter("indexName") String indexName,
-        @OutputCustomType.Parameter("keySchema") List<GlobalTableKeySchema> keySchema,
-        @OutputCustomType.Parameter("projection") GlobalTableProjection projection,
-        @OutputCustomType.Parameter("writeProvisionedThroughputSettings") @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
+        @CustomType.Parameter("indexName") String indexName,
+        @CustomType.Parameter("keySchema") List<GlobalTableKeySchema> keySchema,
+        @CustomType.Parameter("projection") GlobalTableProjection projection,
+        @CustomType.Parameter("writeProvisionedThroughputSettings") @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
         this.indexName = indexName;
         this.keySchema = keySchema;
         this.projection = projection;

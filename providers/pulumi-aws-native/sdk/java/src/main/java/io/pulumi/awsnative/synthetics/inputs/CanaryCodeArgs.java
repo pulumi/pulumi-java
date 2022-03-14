@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,35 +14,35 @@ public final class CanaryCodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CanaryCodeArgs Empty = new CanaryCodeArgs();
 
-    @InputImport(name="handler", required=true)
+    @Import(name="handler", required=true)
       private final Output<String> handler;
 
     public Output<String> getHandler() {
         return this.handler;
     }
 
-    @InputImport(name="s3Bucket")
+    @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
         return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
     }
 
-    @InputImport(name="s3Key")
+    @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
     public Output<String> getS3Key() {
         return this.s3Key == null ? Output.empty() : this.s3Key;
     }
 
-    @InputImport(name="s3ObjectVersion")
+    @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
     public Output<String> getS3ObjectVersion() {
         return this.s3ObjectVersion == null ? Output.empty() : this.s3ObjectVersion;
     }
 
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {

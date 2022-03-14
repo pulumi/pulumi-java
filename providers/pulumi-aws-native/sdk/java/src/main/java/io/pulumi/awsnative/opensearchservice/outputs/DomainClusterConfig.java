@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.outputs;
 
 import io.pulumi.awsnative.opensearchservice.outputs.DomainZoneAwarenessConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainClusterConfig {
     private final @Nullable Integer dedicatedMasterCount;
     private final @Nullable Boolean dedicatedMasterEnabled;
@@ -25,18 +25,18 @@ public final class DomainClusterConfig {
     private final @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig;
     private final @Nullable Boolean zoneAwarenessEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainClusterConfig(
-        @OutputCustomType.Parameter("dedicatedMasterCount") @Nullable Integer dedicatedMasterCount,
-        @OutputCustomType.Parameter("dedicatedMasterEnabled") @Nullable Boolean dedicatedMasterEnabled,
-        @OutputCustomType.Parameter("dedicatedMasterType") @Nullable String dedicatedMasterType,
-        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("warmCount") @Nullable Integer warmCount,
-        @OutputCustomType.Parameter("warmEnabled") @Nullable Boolean warmEnabled,
-        @OutputCustomType.Parameter("warmType") @Nullable String warmType,
-        @OutputCustomType.Parameter("zoneAwarenessConfig") @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig,
-        @OutputCustomType.Parameter("zoneAwarenessEnabled") @Nullable Boolean zoneAwarenessEnabled) {
+        @CustomType.Parameter("dedicatedMasterCount") @Nullable Integer dedicatedMasterCount,
+        @CustomType.Parameter("dedicatedMasterEnabled") @Nullable Boolean dedicatedMasterEnabled,
+        @CustomType.Parameter("dedicatedMasterType") @Nullable String dedicatedMasterType,
+        @CustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("warmCount") @Nullable Integer warmCount,
+        @CustomType.Parameter("warmEnabled") @Nullable Boolean warmEnabled,
+        @CustomType.Parameter("warmType") @Nullable String warmType,
+        @CustomType.Parameter("zoneAwarenessConfig") @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig,
+        @CustomType.Parameter("zoneAwarenessEnabled") @Nullable Boolean zoneAwarenessEnabled) {
         this.dedicatedMasterCount = dedicatedMasterCount;
         this.dedicatedMasterEnabled = dedicatedMasterEnabled;
         this.dedicatedMasterType = dedicatedMasterType;

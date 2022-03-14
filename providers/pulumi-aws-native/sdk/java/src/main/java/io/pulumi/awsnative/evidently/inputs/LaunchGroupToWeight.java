@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class LaunchGroupToWeight extends io.pulumi.resources.InvokeArgs {
 
     public static final LaunchGroupToWeight Empty = new LaunchGroupToWeight();
 
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final String groupName;
 
     public String getGroupName() {
         return this.groupName;
     }
 
-    @InputImport(name="splitWeight", required=true)
+    @Import(name="splitWeight", required=true)
       private final Integer splitWeight;
 
     public Integer getSplitWeight() {

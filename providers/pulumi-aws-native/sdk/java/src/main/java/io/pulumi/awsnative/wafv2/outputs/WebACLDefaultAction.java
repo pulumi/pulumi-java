@@ -5,20 +5,20 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLAllowAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLBlockAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLDefaultAction {
     private final @Nullable WebACLAllowAction allow;
     private final @Nullable WebACLBlockAction block;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLDefaultAction(
-        @OutputCustomType.Parameter("allow") @Nullable WebACLAllowAction allow,
-        @OutputCustomType.Parameter("block") @Nullable WebACLBlockAction block) {
+        @CustomType.Parameter("allow") @Nullable WebACLAllowAction allow,
+        @CustomType.Parameter("block") @Nullable WebACLBlockAction block) {
         this.allow = allow;
         this.block = block;
     }

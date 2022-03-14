@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageTestsConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
      */
-    @InputImport(name="containerRecipeArn")
+    @Import(name="containerRecipeArn")
       private final @Nullable Output<String> containerRecipeArn;
 
     public Output<String> getContainerRecipeArn() {
@@ -32,7 +32,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    @InputImport(name="distributionConfigurationArn")
+    @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
 
     public Output<String> getDistributionConfigurationArn() {
@@ -43,7 +43,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Collects additional information about the image being created, including the operating system (OS) version and package list.
      * 
      */
-    @InputImport(name="enhancedImageMetadataEnabled")
+    @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
     public Output<Boolean> getEnhancedImageMetadataEnabled() {
@@ -54,7 +54,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
      */
-    @InputImport(name="imageRecipeArn")
+    @Import(name="imageRecipeArn")
       private final @Nullable Output<String> imageRecipeArn;
 
     public Output<String> getImageRecipeArn() {
@@ -65,7 +65,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The image tests configuration used when creating this image.
      * 
      */
-    @InputImport(name="imageTestsConfiguration")
+    @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImageTestsConfigurationArgs> imageTestsConfiguration;
 
     public Output<ImageTestsConfigurationArgs> getImageTestsConfiguration() {
@@ -76,7 +76,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */
-    @InputImport(name="infrastructureConfigurationArn")
+    @Import(name="infrastructureConfigurationArn")
       private final @Nullable Output<String> infrastructureConfigurationArn;
 
     public Output<String> getInfrastructureConfigurationArn() {
@@ -87,7 +87,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The tags associated with the image.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {

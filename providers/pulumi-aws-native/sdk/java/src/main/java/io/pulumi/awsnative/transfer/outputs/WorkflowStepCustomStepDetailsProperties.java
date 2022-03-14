@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.transfer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowStepCustomStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
@@ -28,11 +28,11 @@ public final class WorkflowStepCustomStepDetailsProperties {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowStepCustomStepDetailsProperties(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.name = name;
         this.target = target;
         this.timeoutSeconds = timeoutSeconds;

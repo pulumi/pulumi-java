@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionVpcConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelQualityJobDefinitionNetworkConfig {
     /**
      * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
@@ -24,11 +24,11 @@ public final class ModelQualityJobDefinitionNetworkConfig {
     private final @Nullable Boolean enableNetworkIsolation;
     private final @Nullable ModelQualityJobDefinitionVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelQualityJobDefinitionNetworkConfig(
-        @OutputCustomType.Parameter("enableInterContainerTrafficEncryption") @Nullable Boolean enableInterContainerTrafficEncryption,
-        @OutputCustomType.Parameter("enableNetworkIsolation") @Nullable Boolean enableNetworkIsolation,
-        @OutputCustomType.Parameter("vpcConfig") @Nullable ModelQualityJobDefinitionVpcConfig vpcConfig) {
+        @CustomType.Parameter("enableInterContainerTrafficEncryption") @Nullable Boolean enableInterContainerTrafficEncryption,
+        @CustomType.Parameter("enableNetworkIsolation") @Nullable Boolean enableNetworkIsolation,
+        @CustomType.Parameter("vpcConfig") @Nullable ModelQualityJobDefinitionVpcConfig vpcConfig) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         this.enableNetworkIsolation = enableNetworkIsolation;
         this.vpcConfig = vpcConfig;

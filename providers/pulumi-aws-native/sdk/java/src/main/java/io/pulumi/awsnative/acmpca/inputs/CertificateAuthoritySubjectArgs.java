@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,98 +18,98 @@ public final class CertificateAuthoritySubjectArgs extends io.pulumi.resources.R
 
     public static final CertificateAuthoritySubjectArgs Empty = new CertificateAuthoritySubjectArgs();
 
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
         return this.commonName == null ? Output.empty() : this.commonName;
     }
 
-    @InputImport(name="country")
+    @Import(name="country")
       private final @Nullable Output<String> country;
 
     public Output<String> getCountry() {
         return this.country == null ? Output.empty() : this.country;
     }
 
-    @InputImport(name="distinguishedNameQualifier")
+    @Import(name="distinguishedNameQualifier")
       private final @Nullable Output<String> distinguishedNameQualifier;
 
     public Output<String> getDistinguishedNameQualifier() {
         return this.distinguishedNameQualifier == null ? Output.empty() : this.distinguishedNameQualifier;
     }
 
-    @InputImport(name="generationQualifier")
+    @Import(name="generationQualifier")
       private final @Nullable Output<String> generationQualifier;
 
     public Output<String> getGenerationQualifier() {
         return this.generationQualifier == null ? Output.empty() : this.generationQualifier;
     }
 
-    @InputImport(name="givenName")
+    @Import(name="givenName")
       private final @Nullable Output<String> givenName;
 
     public Output<String> getGivenName() {
         return this.givenName == null ? Output.empty() : this.givenName;
     }
 
-    @InputImport(name="initials")
+    @Import(name="initials")
       private final @Nullable Output<String> initials;
 
     public Output<String> getInitials() {
         return this.initials == null ? Output.empty() : this.initials;
     }
 
-    @InputImport(name="locality")
+    @Import(name="locality")
       private final @Nullable Output<String> locality;
 
     public Output<String> getLocality() {
         return this.locality == null ? Output.empty() : this.locality;
     }
 
-    @InputImport(name="organization")
+    @Import(name="organization")
       private final @Nullable Output<String> organization;
 
     public Output<String> getOrganization() {
         return this.organization == null ? Output.empty() : this.organization;
     }
 
-    @InputImport(name="organizationalUnit")
+    @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
     public Output<String> getOrganizationalUnit() {
         return this.organizationalUnit == null ? Output.empty() : this.organizationalUnit;
     }
 
-    @InputImport(name="pseudonym")
+    @Import(name="pseudonym")
       private final @Nullable Output<String> pseudonym;
 
     public Output<String> getPseudonym() {
         return this.pseudonym == null ? Output.empty() : this.pseudonym;
     }
 
-    @InputImport(name="serialNumber")
+    @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
 
     public Output<String> getSerialNumber() {
         return this.serialNumber == null ? Output.empty() : this.serialNumber;
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
         return this.state == null ? Output.empty() : this.state;
     }
 
-    @InputImport(name="surname")
+    @Import(name="surname")
       private final @Nullable Output<String> surname;
 
     public Output<String> getSurname() {
         return this.surname == null ? Output.empty() : this.surname;
     }
 
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

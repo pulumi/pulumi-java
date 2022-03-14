@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationDestination;
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationRepositoryFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ReplicationConfigurationReplicationRule extends io.pulumi.res
      * An array of objects representing the details of a replication destination.
      * 
      */
-    @InputImport(name="destinations", required=true)
+    @Import(name="destinations", required=true)
       private final List<ReplicationConfigurationReplicationDestination> destinations;
 
     public List<ReplicationConfigurationReplicationDestination> getDestinations() {
@@ -35,7 +35,7 @@ public final class ReplicationConfigurationReplicationRule extends io.pulumi.res
      * An array of objects representing the details of a repository filter.
      * 
      */
-    @InputImport(name="repositoryFilters")
+    @Import(name="repositoryFilters")
       private final @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
 
     public List<ReplicationConfigurationRepositoryFilter> getRepositoryFilters() {

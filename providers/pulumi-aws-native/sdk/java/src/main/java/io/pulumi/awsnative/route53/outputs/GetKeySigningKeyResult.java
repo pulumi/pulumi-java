@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.route53.outputs;
 
 import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeySigningKeyResult {
     /**
      * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
@@ -17,8 +17,8 @@ public final class GetKeySigningKeyResult {
      */
     private final @Nullable KeySigningKeyStatus status;
 
-    @OutputCustomType.Constructor
-    private GetKeySigningKeyResult(@OutputCustomType.Parameter("status") @Nullable KeySigningKeyStatus status) {
+    @CustomType.Constructor
+    private GetKeySigningKeyResult(@CustomType.Parameter("status") @Nullable KeySigningKeyStatus status) {
         this.status = status;
     }
 

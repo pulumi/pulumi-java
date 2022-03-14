@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class PolicyStatusPropertiesArgs extends io.pulumi.resources.Resour
      * Specifies whether the policy is public or not.
      * 
      */
-    @InputImport(name="isPublic", required=true)
+    @Import(name="isPublic", required=true)
       private final Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> isPublic;
 
     public Output<MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic> getIsPublic() {

@@ -6,14 +6,14 @@ package io.pulumi.awsnative.iot.outputs;
 import io.pulumi.awsnative.iot.enums.ScheduledAuditDayOfWeek;
 import io.pulumi.awsnative.iot.enums.ScheduledAuditFrequency;
 import io.pulumi.awsnative.iot.outputs.ScheduledAuditTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduledAuditResult {
     /**
      * The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
@@ -46,14 +46,14 @@ public final class GetScheduledAuditResult {
      */
     private final @Nullable List<String> targetCheckNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduledAuditResult(
-        @OutputCustomType.Parameter("dayOfMonth") @Nullable String dayOfMonth,
-        @OutputCustomType.Parameter("dayOfWeek") @Nullable ScheduledAuditDayOfWeek dayOfWeek,
-        @OutputCustomType.Parameter("frequency") @Nullable ScheduledAuditFrequency frequency,
-        @OutputCustomType.Parameter("scheduledAuditArn") @Nullable String scheduledAuditArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<ScheduledAuditTag> tags,
-        @OutputCustomType.Parameter("targetCheckNames") @Nullable List<String> targetCheckNames) {
+        @CustomType.Parameter("dayOfMonth") @Nullable String dayOfMonth,
+        @CustomType.Parameter("dayOfWeek") @Nullable ScheduledAuditDayOfWeek dayOfWeek,
+        @CustomType.Parameter("frequency") @Nullable ScheduledAuditFrequency frequency,
+        @CustomType.Parameter("scheduledAuditArn") @Nullable String scheduledAuditArn,
+        @CustomType.Parameter("tags") @Nullable List<ScheduledAuditTag> tags,
+        @CustomType.Parameter("targetCheckNames") @Nullable List<String> targetCheckNames) {
         this.dayOfMonth = dayOfMonth;
         this.dayOfWeek = dayOfWeek;
         this.frequency = frequency;

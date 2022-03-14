@@ -20,7 +20,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionSystemControlArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionUlimitArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionVolumeFromArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -38,63 +38,63 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
 
     public static final TaskDefinitionContainerDefinitionArgs Empty = new TaskDefinitionContainerDefinitionArgs();
 
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
         return this.command == null ? Output.empty() : this.command;
     }
 
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
 
     public Output<Integer> getCpu() {
         return this.cpu == null ? Output.empty() : this.cpu;
     }
 
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn;
 
     public Output<List<TaskDefinitionContainerDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Output.empty() : this.dependsOn;
     }
 
-    @InputImport(name="disableNetworking")
+    @Import(name="disableNetworking")
       private final @Nullable Output<Boolean> disableNetworking;
 
     public Output<Boolean> getDisableNetworking() {
         return this.disableNetworking == null ? Output.empty() : this.disableNetworking;
     }
 
-    @InputImport(name="dnsSearchDomains")
+    @Import(name="dnsSearchDomains")
       private final @Nullable Output<List<String>> dnsSearchDomains;
 
     public Output<List<String>> getDnsSearchDomains() {
         return this.dnsSearchDomains == null ? Output.empty() : this.dnsSearchDomains;
     }
 
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
         return this.dnsServers == null ? Output.empty() : this.dnsServers;
     }
 
-    @InputImport(name="dockerLabels")
+    @Import(name="dockerLabels")
       private final @Nullable Output<Object> dockerLabels;
 
     public Output<Object> getDockerLabels() {
         return this.dockerLabels == null ? Output.empty() : this.dockerLabels;
     }
 
-    @InputImport(name="dockerSecurityOptions")
+    @Import(name="dockerSecurityOptions")
       private final @Nullable Output<List<String>> dockerSecurityOptions;
 
     public Output<List<String>> getDockerSecurityOptions() {
         return this.dockerSecurityOptions == null ? Output.empty() : this.dockerSecurityOptions;
     }
 
-    @InputImport(name="entryPoint")
+    @Import(name="entryPoint")
       private final @Nullable Output<List<String>> entryPoint;
 
     public Output<List<String>> getEntryPoint() {
@@ -105,7 +105,7 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * The environment variables to pass to a container
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment;
 
     public Output<List<TaskDefinitionKeyValuePairArgs>> getEnvironment() {
@@ -116,42 +116,42 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * The list of one or more files that contain the environment variables to pass to a container
      * 
      */
-    @InputImport(name="environmentFiles")
+    @Import(name="environmentFiles")
       private final @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
 
     public Output<List<TaskDefinitionEnvironmentFileArgs>> getEnvironmentFiles() {
         return this.environmentFiles == null ? Output.empty() : this.environmentFiles;
     }
 
-    @InputImport(name="essential")
+    @Import(name="essential")
       private final @Nullable Output<Boolean> essential;
 
     public Output<Boolean> getEssential() {
         return this.essential == null ? Output.empty() : this.essential;
     }
 
-    @InputImport(name="extraHosts")
+    @Import(name="extraHosts")
       private final @Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts;
 
     public Output<List<TaskDefinitionHostEntryArgs>> getExtraHosts() {
         return this.extraHosts == null ? Output.empty() : this.extraHosts;
     }
 
-    @InputImport(name="firelensConfiguration")
+    @Import(name="firelensConfiguration")
       private final @Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration;
 
     public Output<TaskDefinitionFirelensConfigurationArgs> getFirelensConfiguration() {
         return this.firelensConfiguration == null ? Output.empty() : this.firelensConfiguration;
     }
 
-    @InputImport(name="healthCheck")
+    @Import(name="healthCheck")
       private final @Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck;
 
     public Output<TaskDefinitionHealthCheckArgs> getHealthCheck() {
         return this.healthCheck == null ? Output.empty() : this.healthCheck;
     }
 
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -162,35 +162,35 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * The image used to start a container. This string is passed directly to the Docker daemon.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
         return this.image == null ? Output.empty() : this.image;
     }
 
-    @InputImport(name="interactive")
+    @Import(name="interactive")
       private final @Nullable Output<Boolean> interactive;
 
     public Output<Boolean> getInteractive() {
         return this.interactive == null ? Output.empty() : this.interactive;
     }
 
-    @InputImport(name="links")
+    @Import(name="links")
       private final @Nullable Output<List<String>> links;
 
     public Output<List<String>> getLinks() {
         return this.links == null ? Output.empty() : this.links;
     }
 
-    @InputImport(name="linuxParameters")
+    @Import(name="linuxParameters")
       private final @Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters;
 
     public Output<TaskDefinitionLinuxParametersArgs> getLinuxParameters() {
         return this.linuxParameters == null ? Output.empty() : this.linuxParameters;
     }
 
-    @InputImport(name="logConfiguration")
+    @Import(name="logConfiguration")
       private final @Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration;
 
     public Output<TaskDefinitionLogConfigurationArgs> getLogConfiguration() {
@@ -201,21 +201,21 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * The amount (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed.
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<Integer> memory;
 
     public Output<Integer> getMemory() {
         return this.memory == null ? Output.empty() : this.memory;
     }
 
-    @InputImport(name="memoryReservation")
+    @Import(name="memoryReservation")
       private final @Nullable Output<Integer> memoryReservation;
 
     public Output<Integer> getMemoryReservation() {
         return this.memoryReservation == null ? Output.empty() : this.memoryReservation;
     }
 
-    @InputImport(name="mountPoints")
+    @Import(name="mountPoints")
       private final @Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints;
 
     public Output<List<TaskDefinitionMountPointArgs>> getMountPoints() {
@@ -226,7 +226,7 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * The name of a container. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -237,98 +237,98 @@ public final class TaskDefinitionContainerDefinitionArgs extends io.pulumi.resou
      * Port mappings allow containers to access ports on the host container instance to send or receive traffic.
      * 
      */
-    @InputImport(name="portMappings")
+    @Import(name="portMappings")
       private final @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings;
 
     public Output<List<TaskDefinitionPortMappingArgs>> getPortMappings() {
         return this.portMappings == null ? Output.empty() : this.portMappings;
     }
 
-    @InputImport(name="privileged")
+    @Import(name="privileged")
       private final @Nullable Output<Boolean> privileged;
 
     public Output<Boolean> getPrivileged() {
         return this.privileged == null ? Output.empty() : this.privileged;
     }
 
-    @InputImport(name="pseudoTerminal")
+    @Import(name="pseudoTerminal")
       private final @Nullable Output<Boolean> pseudoTerminal;
 
     public Output<Boolean> getPseudoTerminal() {
         return this.pseudoTerminal == null ? Output.empty() : this.pseudoTerminal;
     }
 
-    @InputImport(name="readonlyRootFilesystem")
+    @Import(name="readonlyRootFilesystem")
       private final @Nullable Output<Boolean> readonlyRootFilesystem;
 
     public Output<Boolean> getReadonlyRootFilesystem() {
         return this.readonlyRootFilesystem == null ? Output.empty() : this.readonlyRootFilesystem;
     }
 
-    @InputImport(name="repositoryCredentials")
+    @Import(name="repositoryCredentials")
       private final @Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials;
 
     public Output<TaskDefinitionRepositoryCredentialsArgs> getRepositoryCredentials() {
         return this.repositoryCredentials == null ? Output.empty() : this.repositoryCredentials;
     }
 
-    @InputImport(name="resourceRequirements")
+    @Import(name="resourceRequirements")
       private final @Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements;
 
     public Output<List<TaskDefinitionResourceRequirementArgs>> getResourceRequirements() {
         return this.resourceRequirements == null ? Output.empty() : this.resourceRequirements;
     }
 
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Output<List<TaskDefinitionSecretArgs>> secrets;
 
     public Output<List<TaskDefinitionSecretArgs>> getSecrets() {
         return this.secrets == null ? Output.empty() : this.secrets;
     }
 
-    @InputImport(name="startTimeout")
+    @Import(name="startTimeout")
       private final @Nullable Output<Integer> startTimeout;
 
     public Output<Integer> getStartTimeout() {
         return this.startTimeout == null ? Output.empty() : this.startTimeout;
     }
 
-    @InputImport(name="stopTimeout")
+    @Import(name="stopTimeout")
       private final @Nullable Output<Integer> stopTimeout;
 
     public Output<Integer> getStopTimeout() {
         return this.stopTimeout == null ? Output.empty() : this.stopTimeout;
     }
 
-    @InputImport(name="systemControls")
+    @Import(name="systemControls")
       private final @Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls;
 
     public Output<List<TaskDefinitionSystemControlArgs>> getSystemControls() {
         return this.systemControls == null ? Output.empty() : this.systemControls;
     }
 
-    @InputImport(name="ulimits")
+    @Import(name="ulimits")
       private final @Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits;
 
     public Output<List<TaskDefinitionUlimitArgs>> getUlimits() {
         return this.ulimits == null ? Output.empty() : this.ulimits;
     }
 
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {
         return this.user == null ? Output.empty() : this.user;
     }
 
-    @InputImport(name="volumesFrom")
+    @Import(name="volumesFrom")
       private final @Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom;
 
     public Output<List<TaskDefinitionVolumeFromArgs>> getVolumesFrom() {
         return this.volumesFrom == null ? Output.empty() : this.volumesFrom;
     }
 
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {

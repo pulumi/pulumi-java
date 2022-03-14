@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.inspectorv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FilterDateFilter {
     private final @Nullable Integer endInclusive;
     private final @Nullable Integer startInclusive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterDateFilter(
-        @OutputCustomType.Parameter("endInclusive") @Nullable Integer endInclusive,
-        @OutputCustomType.Parameter("startInclusive") @Nullable Integer startInclusive) {
+        @CustomType.Parameter("endInclusive") @Nullable Integer endInclusive,
+        @CustomType.Parameter("startInclusive") @Nullable Integer startInclusive) {
         this.endInclusive = endInclusive;
         this.startInclusive = startInclusive;
     }

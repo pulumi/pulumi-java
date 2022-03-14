@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.DatasetS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetDatabaseInputDefinition {
     /**
      * Database table name
@@ -29,12 +29,12 @@ public final class DatasetDatabaseInputDefinition {
     private final @Nullable String queryString;
     private final @Nullable DatasetS3Location tempDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetDatabaseInputDefinition(
-        @OutputCustomType.Parameter("databaseTableName") @Nullable String databaseTableName,
-        @OutputCustomType.Parameter("glueConnectionName") String glueConnectionName,
-        @OutputCustomType.Parameter("queryString") @Nullable String queryString,
-        @OutputCustomType.Parameter("tempDirectory") @Nullable DatasetS3Location tempDirectory) {
+        @CustomType.Parameter("databaseTableName") @Nullable String databaseTableName,
+        @CustomType.Parameter("glueConnectionName") String glueConnectionName,
+        @CustomType.Parameter("queryString") @Nullable String queryString,
+        @CustomType.Parameter("tempDirectory") @Nullable DatasetS3Location tempDirectory) {
         this.databaseTableName = databaseTableName;
         this.glueConnectionName = glueConnectionName;
         this.queryString = queryString;

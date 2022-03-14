@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.events.inputs;
 
 import io.pulumi.awsnative.events.inputs.ConnectionParameter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class ConnectionHttpParameters extends io.pulumi.resources.InvokeAr
 
     public static final ConnectionHttpParameters Empty = new ConnectionHttpParameters();
 
-    @InputImport(name="bodyParameters")
+    @Import(name="bodyParameters")
       private final @Nullable List<ConnectionParameter> bodyParameters;
 
     public List<ConnectionParameter> getBodyParameters() {
         return this.bodyParameters == null ? List.of() : this.bodyParameters;
     }
 
-    @InputImport(name="headerParameters")
+    @Import(name="headerParameters")
       private final @Nullable List<ConnectionParameter> headerParameters;
 
     public List<ConnectionParameter> getHeaderParameters() {
         return this.headerParameters == null ? List.of() : this.headerParameters;
     }
 
-    @InputImport(name="queryStringParameters")
+    @Import(name="queryStringParameters")
       private final @Nullable List<ConnectionParameter> queryStringParameters;
 
     public List<ConnectionParameter> getQueryStringParameters() {

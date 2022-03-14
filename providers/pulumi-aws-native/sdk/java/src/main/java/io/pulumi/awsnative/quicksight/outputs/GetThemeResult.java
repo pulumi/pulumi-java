@@ -7,14 +7,14 @@ import io.pulumi.awsnative.quicksight.enums.ThemeType;
 import io.pulumi.awsnative.quicksight.outputs.ThemeResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.ThemeTag;
 import io.pulumi.awsnative.quicksight.outputs.ThemeVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetThemeResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the theme.</p>
@@ -51,16 +51,16 @@ public final class GetThemeResult {
     private final @Nullable ThemeType type;
     private final @Nullable ThemeVersion version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetThemeResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("permissions") @Nullable List<ThemeResourcePermission> permissions,
-        @OutputCustomType.Parameter("tags") @Nullable List<ThemeTag> tags,
-        @OutputCustomType.Parameter("type") @Nullable ThemeType type,
-        @OutputCustomType.Parameter("version") @Nullable ThemeVersion version) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("permissions") @Nullable List<ThemeResourcePermission> permissions,
+        @CustomType.Parameter("tags") @Nullable List<ThemeTag> tags,
+        @CustomType.Parameter("type") @Nullable ThemeType type,
+        @CustomType.Parameter("version") @Nullable ThemeVersion version) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.lastUpdatedTime = lastUpdatedTime;

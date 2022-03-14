@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * True if notifications to the target are enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -30,7 +30,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * The ARN of the role that grants permission to send notifications to the target.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -41,7 +41,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * The ARN of the target (SNS topic) to which audit notifications are sent.
      * 
      */
-    @InputImport(name="targetArn")
+    @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
     public Output<String> getTargetArn() {

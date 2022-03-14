@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.FlowErrorHandlingConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowEventBridgeDestinationProperties {
     private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowEventBridgeDestinationProperties(
-        @OutputCustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
+        @CustomType.Parameter("object") String object) {
         this.errorHandlingConfig = errorHandlingConfig;
         this.object = object;
     }

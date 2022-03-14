@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceAclConfiguration {
     private final String allowedGroupsColumnName;
 
-    @OutputCustomType.Constructor
-    private DataSourceAclConfiguration(@OutputCustomType.Parameter("allowedGroupsColumnName") String allowedGroupsColumnName) {
+    @CustomType.Constructor
+    private DataSourceAclConfiguration(@CustomType.Parameter("allowedGroupsColumnName") String allowedGroupsColumnName) {
         this.allowedGroupsColumnName = allowedGroupsColumnName;
     }
 

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.ConfigSpectrumConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigAntennaDownlinkConfig {
     private final @Nullable ConfigSpectrumConfig spectrumConfig;
 
-    @OutputCustomType.Constructor
-    private ConfigAntennaDownlinkConfig(@OutputCustomType.Parameter("spectrumConfig") @Nullable ConfigSpectrumConfig spectrumConfig) {
+    @CustomType.Constructor
+    private ConfigAntennaDownlinkConfig(@CustomType.Parameter("spectrumConfig") @Nullable ConfigSpectrumConfig spectrumConfig) {
         this.spectrumConfig = spectrumConfig;
     }
 

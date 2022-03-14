@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UsagePlanQuotaSettings {
     /**
      * The maximum number of requests that users can make within the specified time period.
@@ -28,11 +28,11 @@ public final class UsagePlanQuotaSettings {
      */
     private final @Nullable String period;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UsagePlanQuotaSettings(
-        @OutputCustomType.Parameter("limit") @Nullable Integer limit,
-        @OutputCustomType.Parameter("offset") @Nullable Integer offset,
-        @OutputCustomType.Parameter("period") @Nullable String period) {
+        @CustomType.Parameter("limit") @Nullable Integer limit,
+        @CustomType.Parameter("offset") @Nullable Integer offset,
+        @CustomType.Parameter("period") @Nullable String period) {
         this.limit = limit;
         this.offset = offset;
         this.period = period;

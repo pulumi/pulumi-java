@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.enums.BucketIntelligentTieringConfigurationStatus;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTieringArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * The ID used to identify the S3 Intelligent-Tiering configuration.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * An object key name prefix that identifies the subset of objects to which the rule applies.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -44,7 +44,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * Specifies the status of the configuration.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<BucketIntelligentTieringConfigurationStatus> status;
 
     public Output<BucketIntelligentTieringConfigurationStatus> getStatus() {
@@ -55,7 +55,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * A container for a key-value pair.
      * 
      */
-    @InputImport(name="tagFilters")
+    @Import(name="tagFilters")
       private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
     public Output<List<BucketTagFilterArgs>> getTagFilters() {
@@ -66,7 +66,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
      * 
      */
-    @InputImport(name="tierings", required=true)
+    @Import(name="tierings", required=true)
       private final Output<List<BucketTieringArgs>> tierings;
 
     public Output<List<BucketTieringArgs>> getTierings() {

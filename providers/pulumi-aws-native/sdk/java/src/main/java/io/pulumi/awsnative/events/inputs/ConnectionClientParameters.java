@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class ConnectionClientParameters extends io.pulumi.resources.Invoke
 
     public static final ConnectionClientParameters Empty = new ConnectionClientParameters();
 
-    @InputImport(name="clientID", required=true)
+    @Import(name="clientID", required=true)
       private final String clientID;
 
     public String getClientID() {
         return this.clientID;
     }
 
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final String clientSecret;
 
     public String getClientSecret() {

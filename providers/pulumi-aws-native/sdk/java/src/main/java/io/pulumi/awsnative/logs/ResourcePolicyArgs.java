@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.logs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The policy document
      * 
      */
-    @InputImport(name="policyDocument", required=true)
+    @Import(name="policyDocument", required=true)
       private final Output<String> policyDocument;
 
     public Output<String> getPolicyDocument() {
@@ -28,7 +28,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A name for resource policy
      * 
      */
-    @InputImport(name="policyName", required=true)
+    @Import(name="policyName", required=true)
       private final Output<String> policyName;
 
     public Output<String> getPolicyName() {

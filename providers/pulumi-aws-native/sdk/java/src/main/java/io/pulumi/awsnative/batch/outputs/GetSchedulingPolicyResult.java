@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.batch.outputs;
 
 import io.pulumi.awsnative.batch.outputs.SchedulingPolicyFairsharePolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSchedulingPolicyResult {
     private final @Nullable String arn;
     private final @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSchedulingPolicyResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("fairsharePolicy") @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("fairsharePolicy") @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
         this.arn = arn;
         this.fairsharePolicy = fairsharePolicy;
     }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.inputs.FleetMetricAggregationTypeArgs;
 import io.pulumi.awsnative.iot.inputs.FleetMetricTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,14 +22,14 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The aggregation field to perform aggregation and metric emission
      * 
      */
-    @InputImport(name="aggregationField")
+    @Import(name="aggregationField")
       private final @Nullable Output<String> aggregationField;
 
     public Output<String> getAggregationField() {
         return this.aggregationField == null ? Output.empty() : this.aggregationField;
     }
 
-    @InputImport(name="aggregationType")
+    @Import(name="aggregationType")
       private final @Nullable Output<FleetMetricAggregationTypeArgs> aggregationType;
 
     public Output<FleetMetricAggregationTypeArgs> getAggregationType() {
@@ -40,7 +40,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The description of a fleet metric
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The index name of a fleet metric
      * 
      */
-    @InputImport(name="indexName")
+    @Import(name="indexName")
       private final @Nullable Output<String> indexName;
 
     public Output<String> getIndexName() {
@@ -62,7 +62,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the fleet metric
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -73,7 +73,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The period of metric emission in seconds
      * 
      */
-    @InputImport(name="period")
+    @Import(name="period")
       private final @Nullable Output<Integer> period;
 
     public Output<Integer> getPeriod() {
@@ -84,7 +84,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The Fleet Indexing query used by a fleet metric
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<String> queryString;
 
     public Output<String> getQueryString() {
@@ -95,7 +95,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The version of a Fleet Indexing query used by a fleet metric
      * 
      */
-    @InputImport(name="queryVersion")
+    @Import(name="queryVersion")
       private final @Nullable Output<String> queryVersion;
 
     public Output<String> getQueryVersion() {
@@ -106,7 +106,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FleetMetricTagArgs>> tags;
 
     public Output<List<FleetMetricTagArgs>> getTags() {
@@ -117,7 +117,7 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The unit of data points emitted by a fleet metric
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {

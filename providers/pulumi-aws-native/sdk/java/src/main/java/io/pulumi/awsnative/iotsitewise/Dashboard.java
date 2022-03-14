@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotsitewise.DashboardArgs;
 import io.pulumi.awsnative.iotsitewise.outputs.DashboardTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The ARN of the dashboard.
      * 
      */
-    @OutputExport(name="dashboardArn", type=String.class, parameters={})
+    @Export(name="dashboardArn", type=String.class, parameters={})
     private Output<String> dashboardArn;
 
     /**
@@ -37,7 +37,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The dashboard definition specified in a JSON literal.
      * 
      */
-    @OutputExport(name="dashboardDefinition", type=String.class, parameters={})
+    @Export(name="dashboardDefinition", type=String.class, parameters={})
     private Output<String> dashboardDefinition;
 
     /**
@@ -51,7 +51,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * A description for the dashboard.
      * 
      */
-    @OutputExport(name="dashboardDescription", type=String.class, parameters={})
+    @Export(name="dashboardDescription", type=String.class, parameters={})
     private Output<String> dashboardDescription;
 
     /**
@@ -65,7 +65,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The ID of the dashboard.
      * 
      */
-    @OutputExport(name="dashboardId", type=String.class, parameters={})
+    @Export(name="dashboardId", type=String.class, parameters={})
     private Output<String> dashboardId;
 
     /**
@@ -79,7 +79,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * A friendly name for the dashboard.
      * 
      */
-    @OutputExport(name="dashboardName", type=String.class, parameters={})
+    @Export(name="dashboardName", type=String.class, parameters={})
     private Output<String> dashboardName;
 
     /**
@@ -93,7 +93,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The ID of the project in which to create the dashboard.
      * 
      */
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectId;
 
     /**
@@ -107,7 +107,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the dashboard.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DashboardTag.class})
+    @Export(name="tags", type=List.class, parameters={DashboardTag.class})
     private Output</* @Nullable */ List<DashboardTag>> tags;
 
     /**

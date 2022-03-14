@@ -5,23 +5,23 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRuleAssetPropertyTimestamp;
 import io.pulumi.awsnative.iot.outputs.TopicRuleAssetPropertyVariant;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleAssetPropertyValue {
     private final @Nullable String quality;
     private final TopicRuleAssetPropertyTimestamp timestamp;
     private final TopicRuleAssetPropertyVariant value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleAssetPropertyValue(
-        @OutputCustomType.Parameter("quality") @Nullable String quality,
-        @OutputCustomType.Parameter("timestamp") TopicRuleAssetPropertyTimestamp timestamp,
-        @OutputCustomType.Parameter("value") TopicRuleAssetPropertyVariant value) {
+        @CustomType.Parameter("quality") @Nullable String quality,
+        @CustomType.Parameter("timestamp") TopicRuleAssetPropertyTimestamp timestamp,
+        @CustomType.Parameter("value") TopicRuleAssetPropertyVariant value) {
         this.quality = quality;
         this.timestamp = timestamp;
         this.value = value;

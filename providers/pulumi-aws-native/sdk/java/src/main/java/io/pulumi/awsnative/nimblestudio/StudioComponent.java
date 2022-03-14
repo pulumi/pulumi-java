@@ -12,7 +12,7 @@ import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentInitializationScr
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentScriptParameterKeyValue;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:nimblestudio:StudioComponent")
 public class StudioComponent extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="configuration", type=StudioComponentConfiguration.class, parameters={})
+    @Export(name="configuration", type=StudioComponentConfiguration.class, parameters={})
     private Output</* @Nullable */ StudioComponentConfiguration> configuration;
 
     public Output</* @Nullable */ StudioComponentConfiguration> getConfiguration() {
@@ -34,7 +34,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * <p>The description.</p>
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -48,7 +48,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * <p>The EC2 security groups that control access to the studio component.</p>
      * 
      */
-    @OutputExport(name="ec2SecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="ec2SecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ec2SecurityGroupIds;
 
     /**
@@ -62,7 +62,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * <p>Initialization scripts for studio components.</p>
      * 
      */
-    @OutputExport(name="initializationScripts", type=List.class, parameters={StudioComponentInitializationScript.class})
+    @Export(name="initializationScripts", type=List.class, parameters={StudioComponentInitializationScript.class})
     private Output</* @Nullable */ List<StudioComponentInitializationScript>> initializationScripts;
 
     /**
@@ -76,7 +76,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * <p>The name for the studio component.</p>
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * <p>Parameters for the studio component scripts.</p>
      * 
      */
-    @OutputExport(name="scriptParameters", type=List.class, parameters={StudioComponentScriptParameterKeyValue.class})
+    @Export(name="scriptParameters", type=List.class, parameters={StudioComponentScriptParameterKeyValue.class})
     private Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> scriptParameters;
 
     /**
@@ -100,7 +100,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> getScriptParameters() {
         return this.scriptParameters;
     }
-    @OutputExport(name="studioComponentId", type=String.class, parameters={})
+    @Export(name="studioComponentId", type=String.class, parameters={})
     private Output<String> studioComponentId;
 
     public Output<String> getStudioComponentId() {
@@ -110,7 +110,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * <p>The studioId. </p>
      * 
      */
-    @OutputExport(name="studioId", type=String.class, parameters={})
+    @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
@@ -120,19 +120,19 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
     public Output<String> getStudioId() {
         return this.studioId;
     }
-    @OutputExport(name="subtype", type=StudioComponentSubtype.class, parameters={})
+    @Export(name="subtype", type=StudioComponentSubtype.class, parameters={})
     private Output</* @Nullable */ StudioComponentSubtype> subtype;
 
     public Output</* @Nullable */ StudioComponentSubtype> getSubtype() {
         return this.subtype;
     }
-    @OutputExport(name="tags", type=StudioComponentTags.class, parameters={})
+    @Export(name="tags", type=StudioComponentTags.class, parameters={})
     private Output</* @Nullable */ StudioComponentTags> tags;
 
     public Output</* @Nullable */ StudioComponentTags> getTags() {
         return this.tags;
     }
-    @OutputExport(name="type", type=StudioComponentType.class, parameters={})
+    @Export(name="type", type=StudioComponentType.class, parameters={})
     private Output<StudioComponentType> type;
 
     public Output<StudioComponentType> getType() {

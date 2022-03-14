@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration
 
     public static final DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs Empty = new DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs();
 
-    @InputImport(name="documentDataFieldName", required=true)
+    @Import(name="documentDataFieldName", required=true)
       private final Output<String> documentDataFieldName;
 
     public Output<String> getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
-    @InputImport(name="documentTitleFieldName")
+    @Import(name="documentTitleFieldName")
       private final @Nullable Output<String> documentTitleFieldName;
 
     public Output<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Output.empty() : this.documentTitleFieldName;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleEndpointInput;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class MonitoringScheduleMonitoringInput extends io.pulumi.resources
 
     public static final MonitoringScheduleMonitoringInput Empty = new MonitoringScheduleMonitoringInput();
 
-    @InputImport(name="endpointInput", required=true)
+    @Import(name="endpointInput", required=true)
       private final MonitoringScheduleEndpointInput endpointInput;
 
     public MonitoringScheduleEndpointInput getEndpointInput() {

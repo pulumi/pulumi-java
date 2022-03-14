@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.CapacityProviderAutoScalingGroupProviderManagedTerminationProtection;
 import io.pulumi.awsnative.ecs.inputs.CapacityProviderManagedScaling;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,21 +16,21 @@ public final class CapacityProviderAutoScalingGroupProvider extends io.pulumi.re
 
     public static final CapacityProviderAutoScalingGroupProvider Empty = new CapacityProviderAutoScalingGroupProvider();
 
-    @InputImport(name="autoScalingGroupArn", required=true)
+    @Import(name="autoScalingGroupArn", required=true)
       private final String autoScalingGroupArn;
 
     public String getAutoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
 
-    @InputImport(name="managedScaling")
+    @Import(name="managedScaling")
       private final @Nullable CapacityProviderManagedScaling managedScaling;
 
     public Optional<CapacityProviderManagedScaling> getManagedScaling() {
         return this.managedScaling == null ? Optional.empty() : Optional.ofNullable(this.managedScaling);
     }
 
-    @InputImport(name="managedTerminationProtection")
+    @Import(name="managedTerminationProtection")
       private final @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection;
 
     public Optional<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> getManagedTerminationProtection() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.JobColumnSelectorArgs;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticsConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class JobColumnStatisticsConfigurationArgs extends io.pulumi.resour
 
     public static final JobColumnStatisticsConfigurationArgs Empty = new JobColumnStatisticsConfigurationArgs();
 
-    @InputImport(name="selectors")
+    @Import(name="selectors")
       private final @Nullable Output<List<JobColumnSelectorArgs>> selectors;
 
     public Output<List<JobColumnSelectorArgs>> getSelectors() {
         return this.selectors == null ? Output.empty() : this.selectors;
     }
 
-    @InputImport(name="statistics", required=true)
+    @Import(name="statistics", required=true)
       private final Output<JobStatisticsConfigurationArgs> statistics;
 
     public Output<JobStatisticsConfigurationArgs> getStatistics() {

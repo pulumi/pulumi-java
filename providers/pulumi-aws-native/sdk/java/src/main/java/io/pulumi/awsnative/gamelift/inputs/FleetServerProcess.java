@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FleetServerProcess extends io.pulumi.resources.InvokeArgs {
      * The number of server processes that use this configuration to run concurrently on an instance.
      * 
      */
-    @InputImport(name="concurrentExecutions", required=true)
+    @Import(name="concurrentExecutions", required=true)
       private final Integer concurrentExecutions;
 
     public Integer getConcurrentExecutions() {
@@ -38,7 +38,7 @@ public final class FleetServerProcess extends io.pulumi.resources.InvokeArgs {
      * Linux: /local/game. Examples: "/local/game/MyGame/server.exe" or "/local/game/MyRealtimeScript.js"
      * 
      */
-    @InputImport(name="launchPath", required=true)
+    @Import(name="launchPath", required=true)
       private final String launchPath;
 
     public String getLaunchPath() {
@@ -49,7 +49,7 @@ public final class FleetServerProcess extends io.pulumi.resources.InvokeArgs {
      * An optional list of parameters to pass to the server executable or Realtime script on launch.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable String parameters;
 
     public Optional<String> getParameters() {

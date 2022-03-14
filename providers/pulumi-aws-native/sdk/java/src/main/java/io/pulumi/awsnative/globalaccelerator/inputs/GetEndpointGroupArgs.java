@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEndpointGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the endpoint group
      * 
      */
-    @InputImport(name="endpointGroupArn", required=true)
+    @Import(name="endpointGroupArn", required=true)
       private final String endpointGroupArn;
 
     public String getEndpointGroupArn() {

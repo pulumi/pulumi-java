@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RulesetColumnSelector;
 import io.pulumi.awsnative.databrew.inputs.RulesetSubstitutionValue;
 import io.pulumi.awsnative.databrew.inputs.RulesetThreshold;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,21 +23,21 @@ public final class RulesetRule extends io.pulumi.resources.InvokeArgs {
 
     public static final RulesetRule Empty = new RulesetRule();
 
-    @InputImport(name="checkExpression", required=true)
+    @Import(name="checkExpression", required=true)
       private final String checkExpression;
 
     public String getCheckExpression() {
         return this.checkExpression;
     }
 
-    @InputImport(name="columnSelectors")
+    @Import(name="columnSelectors")
       private final @Nullable List<RulesetColumnSelector> columnSelectors;
 
     public List<RulesetColumnSelector> getColumnSelectors() {
         return this.columnSelectors == null ? List.of() : this.columnSelectors;
     }
 
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Boolean disabled;
 
     public Optional<Boolean> getDisabled() {
@@ -48,21 +48,21 @@ public final class RulesetRule extends io.pulumi.resources.InvokeArgs {
      * Name of the rule
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="substitutionMap")
+    @Import(name="substitutionMap")
       private final @Nullable List<RulesetSubstitutionValue> substitutionMap;
 
     public List<RulesetSubstitutionValue> getSubstitutionMap() {
         return this.substitutionMap == null ? List.of() : this.substitutionMap;
     }
 
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable RulesetThreshold threshold;
 
     public Optional<RulesetThreshold> getThreshold() {

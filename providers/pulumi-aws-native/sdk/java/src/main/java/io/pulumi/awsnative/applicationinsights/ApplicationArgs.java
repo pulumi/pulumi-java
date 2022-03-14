@@ -8,7 +8,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationCustomComponent
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogPatternSetArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * If set to true, application will be configured with recommended monitoring configuration.
      * 
      */
-    @InputImport(name="autoConfigurationEnabled")
+    @Import(name="autoConfigurationEnabled")
       private final @Nullable Output<Boolean> autoConfigurationEnabled;
 
     public Output<Boolean> getAutoConfigurationEnabled() {
@@ -35,7 +35,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
      * 
      */
-    @InputImport(name="cWEMonitorEnabled")
+    @Import(name="cWEMonitorEnabled")
       private final @Nullable Output<Boolean> cWEMonitorEnabled;
 
     public Output<Boolean> getCWEMonitorEnabled() {
@@ -46,7 +46,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The monitoring settings of the components.
      * 
      */
-    @InputImport(name="componentMonitoringSettings")
+    @Import(name="componentMonitoringSettings")
       private final @Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
 
     public Output<List<ApplicationComponentMonitoringSettingArgs>> getComponentMonitoringSettings() {
@@ -57,7 +57,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The custom grouped components.
      * 
      */
-    @InputImport(name="customComponents")
+    @Import(name="customComponents")
       private final @Nullable Output<List<ApplicationCustomComponentArgs>> customComponents;
 
     public Output<List<ApplicationCustomComponentArgs>> getCustomComponents() {
@@ -68,7 +68,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The log pattern sets.
      * 
      */
-    @InputImport(name="logPatternSets")
+    @Import(name="logPatternSets")
       private final @Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets;
 
     public Output<List<ApplicationLogPatternSetArgs>> getLogPatternSets() {
@@ -79,7 +79,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * When set to true, creates opsItems for any problems detected on an application.
      * 
      */
-    @InputImport(name="opsCenterEnabled")
+    @Import(name="opsCenterEnabled")
       private final @Nullable Output<Boolean> opsCenterEnabled;
 
     public Output<Boolean> getOpsCenterEnabled() {
@@ -90,7 +90,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The SNS topic provided to Application Insights that is associated to the created opsItem.
      * 
      */
-    @InputImport(name="opsItemSNSTopicArn")
+    @Import(name="opsItemSNSTopicArn")
       private final @Nullable Output<String> opsItemSNSTopicArn;
 
     public Output<String> getOpsItemSNSTopicArn() {
@@ -101,7 +101,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -112,7 +112,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of Application Insights application.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
     public Output<List<ApplicationTagArgs>> getTags() {

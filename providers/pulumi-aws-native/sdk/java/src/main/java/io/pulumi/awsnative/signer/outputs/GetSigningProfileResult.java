@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.signer.outputs;
 
 import io.pulumi.awsnative.signer.outputs.SigningProfileTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSigningProfileResult {
     /**
      * The Amazon Resource Name (ARN) of the specified signing profile.
@@ -39,13 +39,13 @@ public final class GetSigningProfileResult {
      */
     private final @Nullable List<SigningProfileTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSigningProfileResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("profileName") @Nullable String profileName,
-        @OutputCustomType.Parameter("profileVersion") @Nullable String profileVersion,
-        @OutputCustomType.Parameter("profileVersionArn") @Nullable String profileVersionArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<SigningProfileTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("profileName") @Nullable String profileName,
+        @CustomType.Parameter("profileVersion") @Nullable String profileVersion,
+        @CustomType.Parameter("profileVersionArn") @Nullable String profileVersionArn,
+        @CustomType.Parameter("tags") @Nullable List<SigningProfileTag> tags) {
         this.arn = arn;
         this.profileName = profileName;
         this.profileVersion = profileVersion;

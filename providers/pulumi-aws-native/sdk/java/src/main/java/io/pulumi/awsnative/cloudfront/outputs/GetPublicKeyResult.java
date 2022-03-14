@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.PublicKeyConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPublicKeyResult {
     private final @Nullable String createdTime;
     private final @Nullable String id;
     private final @Nullable PublicKeyConfig publicKeyConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPublicKeyResult(
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("publicKeyConfig") @Nullable PublicKeyConfig publicKeyConfig) {
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("publicKeyConfig") @Nullable PublicKeyConfig publicKeyConfig) {
         this.createdTime = createdTime;
         this.id = id;
         this.publicKeyConfig = publicKeyConfig;

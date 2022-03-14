@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationLogPattern {
     /**
      * The log pattern.
@@ -26,11 +26,11 @@ public final class ApplicationLogPattern {
      */
     private final Integer rank;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationLogPattern(
-        @OutputCustomType.Parameter("pattern") String pattern,
-        @OutputCustomType.Parameter("patternName") String patternName,
-        @OutputCustomType.Parameter("rank") Integer rank) {
+        @CustomType.Parameter("pattern") String pattern,
+        @CustomType.Parameter("patternName") String patternName,
+        @CustomType.Parameter("rank") Integer rank) {
         this.pattern = pattern;
         this.patternName = patternName;
         this.rank = rank;

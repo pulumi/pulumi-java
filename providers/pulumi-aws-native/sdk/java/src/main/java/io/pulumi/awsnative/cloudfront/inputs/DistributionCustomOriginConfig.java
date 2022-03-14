@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,42 +16,42 @@ public final class DistributionCustomOriginConfig extends io.pulumi.resources.In
 
     public static final DistributionCustomOriginConfig Empty = new DistributionCustomOriginConfig();
 
-    @InputImport(name="hTTPPort")
+    @Import(name="hTTPPort")
       private final @Nullable Integer hTTPPort;
 
     public Optional<Integer> getHTTPPort() {
         return this.hTTPPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPPort);
     }
 
-    @InputImport(name="hTTPSPort")
+    @Import(name="hTTPSPort")
       private final @Nullable Integer hTTPSPort;
 
     public Optional<Integer> getHTTPSPort() {
         return this.hTTPSPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPSPort);
     }
 
-    @InputImport(name="originKeepaliveTimeout")
+    @Import(name="originKeepaliveTimeout")
       private final @Nullable Integer originKeepaliveTimeout;
 
     public Optional<Integer> getOriginKeepaliveTimeout() {
         return this.originKeepaliveTimeout == null ? Optional.empty() : Optional.ofNullable(this.originKeepaliveTimeout);
     }
 
-    @InputImport(name="originProtocolPolicy", required=true)
+    @Import(name="originProtocolPolicy", required=true)
       private final String originProtocolPolicy;
 
     public String getOriginProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
-    @InputImport(name="originReadTimeout")
+    @Import(name="originReadTimeout")
       private final @Nullable Integer originReadTimeout;
 
     public Optional<Integer> getOriginReadTimeout() {
         return this.originReadTimeout == null ? Optional.empty() : Optional.ofNullable(this.originReadTimeout);
     }
 
-    @InputImport(name="originSSLProtocols")
+    @Import(name="originSSLProtocols")
       private final @Nullable List<String> originSSLProtocols;
 
     public List<String> getOriginSSLProtocols() {

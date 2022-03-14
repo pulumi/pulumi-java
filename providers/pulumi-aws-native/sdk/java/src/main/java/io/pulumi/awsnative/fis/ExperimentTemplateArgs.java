@@ -7,7 +7,7 @@ import io.pulumi.awsnative.fis.inputs.ExperimentTemplateActionMapArgs;
 import io.pulumi.awsnative.fis.inputs.ExperimentTemplateStopConditionArgs;
 import io.pulumi.awsnative.fis.inputs.ExperimentTemplateTargetMapArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,42 +19,42 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
 
     public static final ExperimentTemplateArgs Empty = new ExperimentTemplateArgs();
 
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<ExperimentTemplateActionMapArgs> actions;
 
     public Output<ExperimentTemplateActionMapArgs> getActions() {
         return this.actions == null ? Output.empty() : this.actions;
     }
 
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
         return this.description;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stopConditions", required=true)
+    @Import(name="stopConditions", required=true)
       private final Output<List<ExperimentTemplateStopConditionArgs>> stopConditions;
 
     public Output<List<ExperimentTemplateStopConditionArgs>> getStopConditions() {
         return this.stopConditions;
     }
 
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final Output<Object> tags;
 
     public Output<Object> getTags() {
         return this.tags;
     }
 
-    @InputImport(name="targets", required=true)
+    @Import(name="targets", required=true)
       private final Output<ExperimentTemplateTargetMapArgs> targets;
 
     public Output<ExperimentTemplateTargetMapArgs> getTargets() {

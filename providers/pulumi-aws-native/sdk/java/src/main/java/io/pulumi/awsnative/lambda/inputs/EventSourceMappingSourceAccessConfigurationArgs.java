@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.enums.EventSourceMappingSourceAccessConfigurationType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
      * The type of source access configuration.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<EventSourceMappingSourceAccessConfigurationType> type;
 
     public Output<EventSourceMappingSourceAccessConfigurationType> getType() {
@@ -34,7 +34,7 @@ public final class EventSourceMappingSourceAccessConfigurationArgs extends io.pu
      * The URI for the source access configuration resource.
      * 
      */
-    @InputImport(name="uRI")
+    @Import(name="uRI")
       private final @Nullable Output<String> uRI;
 
     public Output<String> getURI() {

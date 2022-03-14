@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelSetTimer {
     /**
      * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.<variable-name>`), and input values (`$input.<input-name>.<path-to-datum>`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
@@ -28,11 +28,11 @@ public final class DetectorModelSetTimer {
      */
     private final String timerName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelSetTimer(
-        @OutputCustomType.Parameter("durationExpression") @Nullable String durationExpression,
-        @OutputCustomType.Parameter("seconds") @Nullable Integer seconds,
-        @OutputCustomType.Parameter("timerName") String timerName) {
+        @CustomType.Parameter("durationExpression") @Nullable String durationExpression,
+        @CustomType.Parameter("seconds") @Nullable Integer seconds,
+        @CustomType.Parameter("timerName") String timerName) {
         this.durationExpression = durationExpression;
         this.seconds = seconds;
         this.timerName = timerName;

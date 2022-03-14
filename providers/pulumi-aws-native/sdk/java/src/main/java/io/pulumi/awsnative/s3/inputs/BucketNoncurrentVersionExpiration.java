@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BucketNoncurrentVersionExpiration extends io.pulumi.resources
      * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
      * 
      */
-    @InputImport(name="newerNoncurrentVersions")
+    @Import(name="newerNoncurrentVersions")
       private final @Nullable Integer newerNoncurrentVersions;
 
     public Optional<Integer> getNewerNoncurrentVersions() {
@@ -33,7 +33,7 @@ public final class BucketNoncurrentVersionExpiration extends io.pulumi.resources
      * Specified the number of days an object is noncurrent before Amazon S3 can perform the associated action
      * 
      */
-    @InputImport(name="noncurrentDays", required=true)
+    @Import(name="noncurrentDays", required=true)
       private final Integer noncurrentDays;
 
     public Integer getNoncurrentDays() {

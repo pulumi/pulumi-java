@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ssmcontacts.ContactArgs;
 import io.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import io.pulumi.awsnative.ssmcontacts.outputs.ContactStage;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
      * 
      */
-    @OutputExport(name="alias", type=String.class, parameters={})
+    @Export(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
     /**
@@ -38,7 +38,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the contact.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -52,7 +52,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -66,7 +66,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * The stages that an escalation plan or engagement plan engages contacts and contact methods in.
      * 
      */
-    @OutputExport(name="plan", type=List.class, parameters={ContactStage.class})
+    @Export(name="plan", type=List.class, parameters={ContactStage.class})
     private Output<List<ContactStage>> plan;
 
     /**
@@ -80,7 +80,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
      * 
      */
-    @OutputExport(name="type", type=ContactType.class, parameters={})
+    @Export(name="type", type=ContactType.class, parameters={})
     private Output<ContactType> type;
 
     /**

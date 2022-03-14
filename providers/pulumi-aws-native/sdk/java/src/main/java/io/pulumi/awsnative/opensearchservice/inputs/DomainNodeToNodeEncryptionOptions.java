@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class DomainNodeToNodeEncryptionOptions extends io.pulumi.resources
 
     public static final DomainNodeToNodeEncryptionOptions Empty = new DomainNodeToNodeEncryptionOptions();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {

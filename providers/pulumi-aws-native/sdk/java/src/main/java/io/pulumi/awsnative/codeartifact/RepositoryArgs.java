@@ -5,7 +5,7 @@ package io.pulumi.awsnative.codeartifact;
 
 import io.pulumi.awsnative.codeartifact.inputs.RepositoryTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * A text description of the repository.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * A list of external connections associated with the repository.
      * 
      */
-    @InputImport(name="externalConnections")
+    @Import(name="externalConnections")
       private final @Nullable Output<List<String>> externalConnections;
 
     public Output<List<String>> getExternalConnections() {
@@ -43,7 +43,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The access control resource policy on the provided repository.
      * 
      */
-    @InputImport(name="permissionsPolicyDocument")
+    @Import(name="permissionsPolicyDocument")
       private final @Nullable Output<Object> permissionsPolicyDocument;
 
     public Output<Object> getPermissionsPolicyDocument() {
@@ -54,7 +54,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the repository.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
@@ -65,7 +65,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RepositoryTagArgs>> tags;
 
     public Output<List<RepositoryTagArgs>> getTags() {
@@ -76,7 +76,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * A list of upstream repositories associated with the repository.
      * 
      */
-    @InputImport(name="upstreams")
+    @Import(name="upstreams")
       private final @Nullable Output<List<String>> upstreams;
 
     public Output<List<String>> getUpstreams() {

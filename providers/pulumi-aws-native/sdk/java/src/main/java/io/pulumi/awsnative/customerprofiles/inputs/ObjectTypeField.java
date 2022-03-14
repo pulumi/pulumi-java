@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeFieldContentType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ObjectTypeField extends io.pulumi.resources.InvokeArgs {
      * The content type of the field. Used for determining equality when searching.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable ObjectTypeFieldContentType contentType;
 
     public Optional<ObjectTypeFieldContentType> getContentType() {
@@ -34,7 +34,7 @@ public final class ObjectTypeField extends io.pulumi.resources.InvokeArgs {
      * A field of a ProfileObject. For example: _source.FirstName, where "_source" is a ProfileObjectType of a Zendesk user and "FirstName" is a field in that ObjectType.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable String source;
 
     public Optional<String> getSource() {
@@ -45,7 +45,7 @@ public final class ObjectTypeField extends io.pulumi.resources.InvokeArgs {
      * The location of the data in the standard ProfileObject model. For example: _profile.Address.PostalCode.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

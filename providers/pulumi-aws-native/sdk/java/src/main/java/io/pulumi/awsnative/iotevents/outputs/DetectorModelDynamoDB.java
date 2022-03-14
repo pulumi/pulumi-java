@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelDynamoDB {
     /**
      * The name of the hash key (also called the partition key).
@@ -81,18 +81,18 @@ public final class DetectorModelDynamoDB {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelDynamoDB(
-        @OutputCustomType.Parameter("hashKeyField") String hashKeyField,
-        @OutputCustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
-        @OutputCustomType.Parameter("hashKeyValue") String hashKeyValue,
-        @OutputCustomType.Parameter("operation") @Nullable String operation,
-        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
-        @OutputCustomType.Parameter("payloadField") @Nullable String payloadField,
-        @OutputCustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
-        @OutputCustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
-        @OutputCustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("hashKeyField") String hashKeyField,
+        @CustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
+        @CustomType.Parameter("hashKeyValue") String hashKeyValue,
+        @CustomType.Parameter("operation") @Nullable String operation,
+        @CustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @CustomType.Parameter("payloadField") @Nullable String payloadField,
+        @CustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
+        @CustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
+        @CustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
+        @CustomType.Parameter("tableName") String tableName) {
         this.hashKeyField = hashKeyField;
         this.hashKeyType = hashKeyType;
         this.hashKeyValue = hashKeyValue;

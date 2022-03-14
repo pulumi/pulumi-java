@@ -5,14 +5,14 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupSelectionConditionResourceType;
 import io.pulumi.awsnative.backup.outputs.BackupSelectionResourceTypeConditionsProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupSelectionResourceType {
     private final @Nullable BackupSelectionResourceTypeConditionsProperties conditions;
     private final String iamRoleArn;
@@ -21,14 +21,14 @@ public final class BackupSelectionResourceType {
     private final @Nullable List<String> resources;
     private final String selectionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupSelectionResourceType(
-        @OutputCustomType.Parameter("conditions") @Nullable BackupSelectionResourceTypeConditionsProperties conditions,
-        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
-        @OutputCustomType.Parameter("listOfTags") @Nullable List<BackupSelectionConditionResourceType> listOfTags,
-        @OutputCustomType.Parameter("notResources") @Nullable List<String> notResources,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
-        @OutputCustomType.Parameter("selectionName") String selectionName) {
+        @CustomType.Parameter("conditions") @Nullable BackupSelectionResourceTypeConditionsProperties conditions,
+        @CustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @CustomType.Parameter("listOfTags") @Nullable List<BackupSelectionConditionResourceType> listOfTags,
+        @CustomType.Parameter("notResources") @Nullable List<String> notResources,
+        @CustomType.Parameter("resources") @Nullable List<String> resources,
+        @CustomType.Parameter("selectionName") String selectionName) {
         this.conditions = conditions;
         this.iamRoleArn = iamRoleArn;
         this.listOfTags = listOfTags;

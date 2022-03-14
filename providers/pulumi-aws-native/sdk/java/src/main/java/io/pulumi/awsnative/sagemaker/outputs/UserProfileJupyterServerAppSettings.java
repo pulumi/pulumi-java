@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.UserProfileResourceSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserProfileJupyterServerAppSettings {
     private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor
-    private UserProfileJupyterServerAppSettings(@OutputCustomType.Parameter("defaultResourceSpec") @Nullable UserProfileResourceSpec defaultResourceSpec) {
+    @CustomType.Constructor
+    private UserProfileJupyterServerAppSettings(@CustomType.Parameter("defaultResourceSpec") @Nullable UserProfileResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 

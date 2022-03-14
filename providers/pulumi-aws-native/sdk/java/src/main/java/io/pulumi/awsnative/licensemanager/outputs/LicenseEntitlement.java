@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LicenseEntitlement {
     private final @Nullable Boolean allowCheckIn;
     private final @Nullable Integer maxCount;
@@ -20,14 +20,14 @@ public final class LicenseEntitlement {
     private final String unit;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LicenseEntitlement(
-        @OutputCustomType.Parameter("allowCheckIn") @Nullable Boolean allowCheckIn,
-        @OutputCustomType.Parameter("maxCount") @Nullable Integer maxCount,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("overage") @Nullable Boolean overage,
-        @OutputCustomType.Parameter("unit") String unit,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("allowCheckIn") @Nullable Boolean allowCheckIn,
+        @CustomType.Parameter("maxCount") @Nullable Integer maxCount,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("overage") @Nullable Boolean overage,
+        @CustomType.Parameter("unit") String unit,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.allowCheckIn = allowCheckIn;
         this.maxCount = maxCount;
         this.name = name;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.greengrassv2.outputs;
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaExecutionParametersInputPayloadEncodingType;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaEventSource;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaLinuxProcessParams;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentVersionLambdaExecutionParameters {
     private final @Nullable Object environmentVariables;
     private final @Nullable List<ComponentVersionLambdaEventSource> eventSources;
@@ -30,19 +30,19 @@ public final class ComponentVersionLambdaExecutionParameters {
     private final @Nullable Integer statusTimeoutInSeconds;
     private final @Nullable Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentVersionLambdaExecutionParameters(
-        @OutputCustomType.Parameter("environmentVariables") @Nullable Object environmentVariables,
-        @OutputCustomType.Parameter("eventSources") @Nullable List<ComponentVersionLambdaEventSource> eventSources,
-        @OutputCustomType.Parameter("execArgs") @Nullable List<String> execArgs,
-        @OutputCustomType.Parameter("inputPayloadEncodingType") @Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType,
-        @OutputCustomType.Parameter("linuxProcessParams") @Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams,
-        @OutputCustomType.Parameter("maxIdleTimeInSeconds") @Nullable Integer maxIdleTimeInSeconds,
-        @OutputCustomType.Parameter("maxInstancesCount") @Nullable Integer maxInstancesCount,
-        @OutputCustomType.Parameter("maxQueueSize") @Nullable Integer maxQueueSize,
-        @OutputCustomType.Parameter("pinned") @Nullable Boolean pinned,
-        @OutputCustomType.Parameter("statusTimeoutInSeconds") @Nullable Integer statusTimeoutInSeconds,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
+        @CustomType.Parameter("environmentVariables") @Nullable Object environmentVariables,
+        @CustomType.Parameter("eventSources") @Nullable List<ComponentVersionLambdaEventSource> eventSources,
+        @CustomType.Parameter("execArgs") @Nullable List<String> execArgs,
+        @CustomType.Parameter("inputPayloadEncodingType") @Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType,
+        @CustomType.Parameter("linuxProcessParams") @Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams,
+        @CustomType.Parameter("maxIdleTimeInSeconds") @Nullable Integer maxIdleTimeInSeconds,
+        @CustomType.Parameter("maxInstancesCount") @Nullable Integer maxInstancesCount,
+        @CustomType.Parameter("maxQueueSize") @Nullable Integer maxQueueSize,
+        @CustomType.Parameter("pinned") @Nullable Boolean pinned,
+        @CustomType.Parameter("statusTimeoutInSeconds") @Nullable Integer statusTimeoutInSeconds,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
         this.environmentVariables = environmentVariables;
         this.eventSources = eventSources;
         this.execArgs = execArgs;

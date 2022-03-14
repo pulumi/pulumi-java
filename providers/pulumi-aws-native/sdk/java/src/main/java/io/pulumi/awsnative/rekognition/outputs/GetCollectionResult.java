@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.rekognition.outputs;
 
 import io.pulumi.awsnative.rekognition.outputs.CollectionTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCollectionResult {
     private final @Nullable String arn;
     /**
@@ -20,10 +20,10 @@ public final class GetCollectionResult {
      */
     private final @Nullable List<CollectionTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCollectionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<CollectionTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<CollectionTag> tags) {
         this.arn = arn;
         this.tags = tags;
     }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessGatewayLoRaWANGatewayArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessGatewayTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * Description of Wireless Gateway.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * The date and time when the most recent uplink was received.
      * 
      */
-    @InputImport(name="lastUplinkReceivedAt")
+    @Import(name="lastUplinkReceivedAt")
       private final @Nullable Output<String> lastUplinkReceivedAt;
 
     public Output<String> getLastUplinkReceivedAt() {
@@ -43,7 +43,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
      * 
      */
-    @InputImport(name="loRaWAN", required=true)
+    @Import(name="loRaWAN", required=true)
       private final Output<WirelessGatewayLoRaWANGatewayArgs> loRaWAN;
 
     public Output<WirelessGatewayLoRaWANGatewayArgs> getLoRaWAN() {
@@ -54,7 +54,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * Name of Wireless Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * A list of key-value pairs that contain metadata for the gateway.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<WirelessGatewayTagArgs>> tags;
 
     public Output<List<WirelessGatewayTagArgs>> getTags() {
@@ -76,7 +76,7 @@ public final class WirelessGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
      * 
      */
-    @InputImport(name="thingArn")
+    @Import(name="thingArn")
       private final @Nullable Output<String> thingArn;
 
     public Output<String> getThingArn() {

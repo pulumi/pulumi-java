@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53resolver.ResolverQueryLoggingConfigArgs;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigShareStatus;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * Arn
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * Count
      * 
      */
-    @OutputExport(name="associationCount", type=Integer.class, parameters={})
+    @Export(name="associationCount", type=Integer.class, parameters={})
     private Output<Integer> associationCount;
 
     /**
@@ -52,7 +52,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * Rfc3339TimeString
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -66,7 +66,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * The id of the creator request.
      * 
      */
-    @OutputExport(name="creatorRequestId", type=String.class, parameters={})
+    @Export(name="creatorRequestId", type=String.class, parameters={})
     private Output<String> creatorRequestId;
 
     /**
@@ -80,7 +80,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * destination arn
      * 
      */
-    @OutputExport(name="destinationArn", type=String.class, parameters={})
+    @Export(name="destinationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationArn;
 
     /**
@@ -94,7 +94,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * ResolverQueryLogConfigName
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -108,7 +108,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * AccountId
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -122,7 +122,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
      * 
      */
-    @OutputExport(name="shareStatus", type=ResolverQueryLoggingConfigShareStatus.class, parameters={})
+    @Export(name="shareStatus", type=ResolverQueryLoggingConfigShareStatus.class, parameters={})
     private Output<ResolverQueryLoggingConfigShareStatus> shareStatus;
 
     /**
@@ -136,7 +136,7 @@ public class ResolverQueryLoggingConfig extends io.pulumi.resources.CustomResour
      * ResolverQueryLogConfigStatus, possible values are CREATING, CREATED, DELETED AND FAILED.
      * 
      */
-    @OutputExport(name="status", type=ResolverQueryLoggingConfigStatus.class, parameters={})
+    @Export(name="status", type=ResolverQueryLoggingConfigStatus.class, parameters={})
     private Output<ResolverQueryLoggingConfigStatus> status;
 
     /**

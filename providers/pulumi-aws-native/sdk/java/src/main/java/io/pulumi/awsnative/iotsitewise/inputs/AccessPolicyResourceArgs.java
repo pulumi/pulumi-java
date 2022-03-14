@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyPortalArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyProjectArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
 
     public static final AccessPolicyResourceArgs Empty = new AccessPolicyResourceArgs();
 
-    @InputImport(name="portal")
+    @Import(name="portal")
       private final @Nullable Output<AccessPolicyPortalArgs> portal;
 
     public Output<AccessPolicyPortalArgs> getPortal() {
         return this.portal == null ? Output.empty() : this.portal;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<AccessPolicyProjectArgs> project;
 
     public Output<AccessPolicyProjectArgs> getProject() {

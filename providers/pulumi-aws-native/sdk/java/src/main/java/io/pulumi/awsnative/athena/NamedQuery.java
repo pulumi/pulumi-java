@@ -6,7 +6,7 @@ package io.pulumi.awsnative.athena;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.athena.NamedQueryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The database to which the query belongs.
      * 
      */
-    @OutputExport(name="database", type=String.class, parameters={})
+    @Export(name="database", type=String.class, parameters={})
     private Output<String> database;
 
     /**
@@ -37,7 +37,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The query description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The query name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -65,7 +65,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The unique ID of the query.
      * 
      */
-    @OutputExport(name="namedQueryId", type=String.class, parameters={})
+    @Export(name="namedQueryId", type=String.class, parameters={})
     private Output<String> namedQueryId;
 
     /**
@@ -79,7 +79,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The contents of the query with all query statements.
      * 
      */
-    @OutputExport(name="queryString", type=String.class, parameters={})
+    @Export(name="queryString", type=String.class, parameters={})
     private Output<String> queryString;
 
     /**
@@ -93,7 +93,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The name of the workgroup that contains the named query.
      * 
      */
-    @OutputExport(name="workGroup", type=String.class, parameters={})
+    @Export(name="workGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> workGroup;
 
     /**

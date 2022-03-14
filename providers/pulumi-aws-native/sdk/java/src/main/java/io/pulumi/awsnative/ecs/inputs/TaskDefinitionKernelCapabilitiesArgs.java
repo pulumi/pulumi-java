@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class TaskDefinitionKernelCapabilitiesArgs extends io.pulumi.resour
 
     public static final TaskDefinitionKernelCapabilitiesArgs Empty = new TaskDefinitionKernelCapabilitiesArgs();
 
-    @InputImport(name="add")
+    @Import(name="add")
       private final @Nullable Output<List<String>> add;
 
     public Output<List<String>> getAdd() {
         return this.add == null ? Output.empty() : this.add;
     }
 
-    @InputImport(name="drop")
+    @Import(name="drop")
       private final @Nullable Output<List<String>> drop;
 
     public Output<List<String>> getDrop() {

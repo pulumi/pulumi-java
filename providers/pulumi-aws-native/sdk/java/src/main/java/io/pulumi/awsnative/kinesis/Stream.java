@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kinesis.outputs.StreamEncryption;
 import io.pulumi.awsnative.kinesis.outputs.StreamModeDetails;
 import io.pulumi.awsnative.kinesis.outputs.StreamTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The Amazon resource name (ARN) of the Kinesis stream
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The name of the Kinesis stream.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -54,7 +54,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The number of hours for the data records that are stored in shards to remain accessible.
      * 
      */
-    @OutputExport(name="retentionPeriodHours", type=Integer.class, parameters={})
+    @Export(name="retentionPeriodHours", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionPeriodHours;
 
     /**
@@ -68,7 +68,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The number of shards that the stream uses. Required when StreamMode = PROVISIONED is passed.
      * 
      */
-    @OutputExport(name="shardCount", type=Integer.class, parameters={})
+    @Export(name="shardCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> shardCount;
 
     /**
@@ -82,7 +82,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * When specified, enables or updates server-side encryption using an AWS KMS key for a specified stream.
      * 
      */
-    @OutputExport(name="streamEncryption", type=StreamEncryption.class, parameters={})
+    @Export(name="streamEncryption", type=StreamEncryption.class, parameters={})
     private Output</* @Nullable */ StreamEncryption> streamEncryption;
 
     /**
@@ -96,7 +96,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * The mode in which the stream is running.
      * 
      */
-    @OutputExport(name="streamModeDetails", type=StreamModeDetails.class, parameters={})
+    @Export(name="streamModeDetails", type=StreamModeDetails.class, parameters={})
     private Output</* @Nullable */ StreamModeDetails> streamModeDetails;
 
     /**
@@ -110,7 +110,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={StreamTag.class})
+    @Export(name="tags", type=List.class, parameters={StreamTag.class})
     private Output</* @Nullable */ List<StreamTag>> tags;
 
     /**

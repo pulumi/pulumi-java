@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.efs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFileSystemArgs Empty = new GetFileSystemArgs();
 
-    @InputImport(name="fileSystemId", required=true)
+    @Import(name="fileSystemId", required=true)
       private final String fileSystemId;
 
     public String getFileSystemId() {

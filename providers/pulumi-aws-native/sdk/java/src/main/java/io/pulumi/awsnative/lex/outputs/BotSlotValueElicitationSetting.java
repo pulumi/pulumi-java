@@ -8,13 +8,13 @@ import io.pulumi.awsnative.lex.outputs.BotPromptSpecification;
 import io.pulumi.awsnative.lex.outputs.BotSampleUtterance;
 import io.pulumi.awsnative.lex.outputs.BotSlotDefaultValueSpecification;
 import io.pulumi.awsnative.lex.outputs.BotWaitAndContinueSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotSlotValueElicitationSetting {
     /**
      * A list of default values for a slot.
@@ -42,13 +42,13 @@ public final class BotSlotValueElicitationSetting {
      */
     private final @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotSlotValueElicitationSetting(
-        @OutputCustomType.Parameter("defaultValueSpecification") @Nullable BotSlotDefaultValueSpecification defaultValueSpecification,
-        @OutputCustomType.Parameter("promptSpecification") @Nullable BotPromptSpecification promptSpecification,
-        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<BotSampleUtterance> sampleUtterances,
-        @OutputCustomType.Parameter("slotConstraint") BotSlotConstraint slotConstraint,
-        @OutputCustomType.Parameter("waitAndContinueSpecification") @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
+        @CustomType.Parameter("defaultValueSpecification") @Nullable BotSlotDefaultValueSpecification defaultValueSpecification,
+        @CustomType.Parameter("promptSpecification") @Nullable BotPromptSpecification promptSpecification,
+        @CustomType.Parameter("sampleUtterances") @Nullable List<BotSampleUtterance> sampleUtterances,
+        @CustomType.Parameter("slotConstraint") BotSlotConstraint slotConstraint,
+        @CustomType.Parameter("waitAndContinueSpecification") @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
         this.defaultValueSpecification = defaultValueSpecification;
         this.promptSpecification = promptSpecification;
         this.sampleUtterances = sampleUtterances;

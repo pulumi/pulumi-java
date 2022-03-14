@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowTriggerType;
 import io.pulumi.awsnative.appflow.inputs.FlowScheduledTriggerProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FlowTriggerConfig extends io.pulumi.resources.InvokeArgs {
      * Details required based on the type of trigger
      * 
      */
-    @InputImport(name="triggerProperties")
+    @Import(name="triggerProperties")
       private final @Nullable FlowScheduledTriggerProperties triggerProperties;
 
     public Optional<FlowScheduledTriggerProperties> getTriggerProperties() {
@@ -34,7 +34,7 @@ public final class FlowTriggerConfig extends io.pulumi.resources.InvokeArgs {
      * Trigger type of the flow
      * 
      */
-    @InputImport(name="triggerType", required=true)
+    @Import(name="triggerType", required=true)
       private final FlowTriggerType triggerType;
 
     public FlowTriggerType getTriggerType() {

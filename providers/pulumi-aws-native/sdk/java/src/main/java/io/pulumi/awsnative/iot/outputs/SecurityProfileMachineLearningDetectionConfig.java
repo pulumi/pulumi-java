@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileMachineLearningDetectionConfigConfidenceLevel;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityProfileMachineLearningDetectionConfig {
     /**
      * The sensitivity of anomalous behavior evaluation. Can be Low, Medium, or High.
@@ -17,8 +17,8 @@ public final class SecurityProfileMachineLearningDetectionConfig {
      */
     private final @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel;
 
-    @OutputCustomType.Constructor
-    private SecurityProfileMachineLearningDetectionConfig(@OutputCustomType.Parameter("confidenceLevel") @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
+    @CustomType.Constructor
+    private SecurityProfileMachineLearningDetectionConfig(@CustomType.Parameter("confidenceLevel") @Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
     }
 

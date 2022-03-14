@@ -7,7 +7,7 @@ import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleDetailTyp
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleStatus;
 import io.pulumi.awsnative.codestarnotifications.inputs.NotificationRuleTargetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,70 +19,70 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
 
     public static final NotificationRuleArgs Empty = new NotificationRuleArgs();
 
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
     public Output<String> getCreatedBy() {
         return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
-    @InputImport(name="detailType", required=true)
+    @Import(name="detailType", required=true)
       private final Output<NotificationRuleDetailType> detailType;
 
     public Output<NotificationRuleDetailType> getDetailType() {
         return this.detailType;
     }
 
-    @InputImport(name="eventTypeId")
+    @Import(name="eventTypeId")
       private final @Nullable Output<String> eventTypeId;
 
     public Output<String> getEventTypeId() {
         return this.eventTypeId == null ? Output.empty() : this.eventTypeId;
     }
 
-    @InputImport(name="eventTypeIds", required=true)
+    @Import(name="eventTypeIds", required=true)
       private final Output<List<String>> eventTypeIds;
 
     public Output<List<String>> getEventTypeIds() {
         return this.eventTypeIds;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final Output<String> resource;
 
     public Output<String> getResource() {
         return this.resource;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<NotificationRuleStatus> status;
 
     public Output<NotificationRuleStatus> getStatus() {
         return this.status == null ? Output.empty() : this.status;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="targetAddress")
+    @Import(name="targetAddress")
       private final @Nullable Output<String> targetAddress;
 
     public Output<String> getTargetAddress() {
         return this.targetAddress == null ? Output.empty() : this.targetAddress;
     }
 
-    @InputImport(name="targets", required=true)
+    @Import(name="targets", required=true)
       private final Output<List<NotificationRuleTargetArgs>> targets;
 
     public Output<List<NotificationRuleTargetArgs>> getTargets() {

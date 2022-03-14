@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.outputs;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionForwardedValues;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionFunctionAssociation;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionLambdaFunctionAssociation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionCacheBehavior {
     private final @Nullable List<String> allowedMethods;
     private final @Nullable String cachePolicyId;
@@ -38,28 +38,28 @@ public final class DistributionCacheBehavior {
     private final @Nullable List<String> trustedSigners;
     private final String viewerProtocolPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionCacheBehavior(
-        @OutputCustomType.Parameter("allowedMethods") @Nullable List<String> allowedMethods,
-        @OutputCustomType.Parameter("cachePolicyId") @Nullable String cachePolicyId,
-        @OutputCustomType.Parameter("cachedMethods") @Nullable List<String> cachedMethods,
-        @OutputCustomType.Parameter("compress") @Nullable Boolean compress,
-        @OutputCustomType.Parameter("defaultTTL") @Nullable Double defaultTTL,
-        @OutputCustomType.Parameter("fieldLevelEncryptionId") @Nullable String fieldLevelEncryptionId,
-        @OutputCustomType.Parameter("forwardedValues") @Nullable DistributionForwardedValues forwardedValues,
-        @OutputCustomType.Parameter("functionAssociations") @Nullable List<DistributionFunctionAssociation> functionAssociations,
-        @OutputCustomType.Parameter("lambdaFunctionAssociations") @Nullable List<DistributionLambdaFunctionAssociation> lambdaFunctionAssociations,
-        @OutputCustomType.Parameter("maxTTL") @Nullable Double maxTTL,
-        @OutputCustomType.Parameter("minTTL") @Nullable Double minTTL,
-        @OutputCustomType.Parameter("originRequestPolicyId") @Nullable String originRequestPolicyId,
-        @OutputCustomType.Parameter("pathPattern") String pathPattern,
-        @OutputCustomType.Parameter("realtimeLogConfigArn") @Nullable String realtimeLogConfigArn,
-        @OutputCustomType.Parameter("responseHeadersPolicyId") @Nullable String responseHeadersPolicyId,
-        @OutputCustomType.Parameter("smoothStreaming") @Nullable Boolean smoothStreaming,
-        @OutputCustomType.Parameter("targetOriginId") String targetOriginId,
-        @OutputCustomType.Parameter("trustedKeyGroups") @Nullable List<String> trustedKeyGroups,
-        @OutputCustomType.Parameter("trustedSigners") @Nullable List<String> trustedSigners,
-        @OutputCustomType.Parameter("viewerProtocolPolicy") String viewerProtocolPolicy) {
+        @CustomType.Parameter("allowedMethods") @Nullable List<String> allowedMethods,
+        @CustomType.Parameter("cachePolicyId") @Nullable String cachePolicyId,
+        @CustomType.Parameter("cachedMethods") @Nullable List<String> cachedMethods,
+        @CustomType.Parameter("compress") @Nullable Boolean compress,
+        @CustomType.Parameter("defaultTTL") @Nullable Double defaultTTL,
+        @CustomType.Parameter("fieldLevelEncryptionId") @Nullable String fieldLevelEncryptionId,
+        @CustomType.Parameter("forwardedValues") @Nullable DistributionForwardedValues forwardedValues,
+        @CustomType.Parameter("functionAssociations") @Nullable List<DistributionFunctionAssociation> functionAssociations,
+        @CustomType.Parameter("lambdaFunctionAssociations") @Nullable List<DistributionLambdaFunctionAssociation> lambdaFunctionAssociations,
+        @CustomType.Parameter("maxTTL") @Nullable Double maxTTL,
+        @CustomType.Parameter("minTTL") @Nullable Double minTTL,
+        @CustomType.Parameter("originRequestPolicyId") @Nullable String originRequestPolicyId,
+        @CustomType.Parameter("pathPattern") String pathPattern,
+        @CustomType.Parameter("realtimeLogConfigArn") @Nullable String realtimeLogConfigArn,
+        @CustomType.Parameter("responseHeadersPolicyId") @Nullable String responseHeadersPolicyId,
+        @CustomType.Parameter("smoothStreaming") @Nullable Boolean smoothStreaming,
+        @CustomType.Parameter("targetOriginId") String targetOriginId,
+        @CustomType.Parameter("trustedKeyGroups") @Nullable List<String> trustedKeyGroups,
+        @CustomType.Parameter("trustedSigners") @Nullable List<String> trustedSigners,
+        @CustomType.Parameter("viewerProtocolPolicy") String viewerProtocolPolicy) {
         this.allowedMethods = allowedMethods;
         this.cachePolicyId = cachePolicyId;
         this.cachedMethods = cachedMethods;

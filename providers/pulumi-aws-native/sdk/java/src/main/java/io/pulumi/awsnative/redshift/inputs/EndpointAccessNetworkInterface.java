@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
      * The Availability Zone.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
@@ -33,7 +33,7 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
      * The network interface identifier.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
 
     public Optional<String> getNetworkInterfaceId() {
@@ -44,7 +44,7 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
      * The IPv4 address of the network interface within the subnet.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
@@ -55,7 +55,7 @@ public final class EndpointAccessNetworkInterface extends io.pulumi.resources.In
      * The subnet identifier.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {

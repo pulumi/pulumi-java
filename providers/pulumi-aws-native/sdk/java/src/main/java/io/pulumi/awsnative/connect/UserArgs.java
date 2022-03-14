@@ -7,7 +7,7 @@ import io.pulumi.awsnative.connect.inputs.UserIdentityInfoArgs;
 import io.pulumi.awsnative.connect.inputs.UserPhoneConfigArgs;
 import io.pulumi.awsnative.connect.inputs.UserTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the user account in the directory used for identity management.
      * 
      */
-    @InputImport(name="directoryUserId")
+    @Import(name="directoryUserId")
       private final @Nullable Output<String> directoryUserId;
 
     public Output<String> getDirectoryUserId() {
@@ -33,7 +33,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the hierarchy group for the user.
      * 
      */
-    @InputImport(name="hierarchyGroupArn")
+    @Import(name="hierarchyGroupArn")
       private final @Nullable Output<String> hierarchyGroupArn;
 
     public Output<String> getHierarchyGroupArn() {
@@ -44,7 +44,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The information about the identity of the user.
      * 
      */
-    @InputImport(name="identityInfo")
+    @Import(name="identityInfo")
       private final @Nullable Output<UserIdentityInfoArgs> identityInfo;
 
     public Output<UserIdentityInfoArgs> getIdentityInfo() {
@@ -55,7 +55,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the Amazon Connect instance.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -66,7 +66,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -77,7 +77,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The phone settings for the user.
      * 
      */
-    @InputImport(name="phoneConfig", required=true)
+    @Import(name="phoneConfig", required=true)
       private final Output<UserPhoneConfigArgs> phoneConfig;
 
     public Output<UserPhoneConfigArgs> getPhoneConfig() {
@@ -88,7 +88,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the routing profile for the user.
      * 
      */
-    @InputImport(name="routingProfileArn", required=true)
+    @Import(name="routingProfileArn", required=true)
       private final Output<String> routingProfileArn;
 
     public Output<String> getRoutingProfileArn() {
@@ -99,7 +99,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * One or more security profile arns for the user
      * 
      */
-    @InputImport(name="securityProfileArns", required=true)
+    @Import(name="securityProfileArns", required=true)
       private final Output<List<String>> securityProfileArns;
 
     public Output<List<String>> getSecurityProfileArns() {
@@ -110,7 +110,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * One or more tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<UserTagArgs>> tags;
 
     public Output<List<UserTagArgs>> getTags() {
@@ -121,7 +121,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The user name for the account.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

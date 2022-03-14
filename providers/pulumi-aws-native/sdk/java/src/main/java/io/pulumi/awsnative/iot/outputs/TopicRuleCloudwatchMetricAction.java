@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleCloudwatchMetricAction {
     private final String metricName;
     private final String metricNamespace;
@@ -18,14 +18,14 @@ public final class TopicRuleCloudwatchMetricAction {
     private final String metricValue;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleCloudwatchMetricAction(
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("metricNamespace") String metricNamespace,
-        @OutputCustomType.Parameter("metricTimestamp") @Nullable String metricTimestamp,
-        @OutputCustomType.Parameter("metricUnit") String metricUnit,
-        @OutputCustomType.Parameter("metricValue") String metricValue,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("metricNamespace") String metricNamespace,
+        @CustomType.Parameter("metricTimestamp") @Nullable String metricTimestamp,
+        @CustomType.Parameter("metricUnit") String metricUnit,
+        @CustomType.Parameter("metricValue") String metricValue,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;
         this.metricTimestamp = metricTimestamp;

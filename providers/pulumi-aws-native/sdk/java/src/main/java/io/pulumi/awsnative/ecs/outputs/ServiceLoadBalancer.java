@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceLoadBalancer {
     private final @Nullable String containerName;
     private final @Nullable Integer containerPort;
     private final @Nullable String loadBalancerName;
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceLoadBalancer(
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
-        @OutputCustomType.Parameter("loadBalancerName") @Nullable String loadBalancerName,
-        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @CustomType.Parameter("loadBalancerName") @Nullable String loadBalancerName,
+        @CustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.loadBalancerName = loadBalancerName;

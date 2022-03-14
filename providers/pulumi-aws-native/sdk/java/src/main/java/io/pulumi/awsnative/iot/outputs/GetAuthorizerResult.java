@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.AuthorizerStatus;
 import io.pulumi.awsnative.iot.outputs.AuthorizerTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAuthorizerResult {
     private final @Nullable String arn;
     private final @Nullable String authorizerFunctionArn;
@@ -22,14 +22,14 @@ public final class GetAuthorizerResult {
     private final @Nullable String tokenKeyName;
     private final @Nullable Object tokenSigningPublicKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAuthorizerResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("authorizerFunctionArn") @Nullable String authorizerFunctionArn,
-        @OutputCustomType.Parameter("status") @Nullable AuthorizerStatus status,
-        @OutputCustomType.Parameter("tags") @Nullable List<AuthorizerTag> tags,
-        @OutputCustomType.Parameter("tokenKeyName") @Nullable String tokenKeyName,
-        @OutputCustomType.Parameter("tokenSigningPublicKeys") @Nullable Object tokenSigningPublicKeys) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("authorizerFunctionArn") @Nullable String authorizerFunctionArn,
+        @CustomType.Parameter("status") @Nullable AuthorizerStatus status,
+        @CustomType.Parameter("tags") @Nullable List<AuthorizerTag> tags,
+        @CustomType.Parameter("tokenKeyName") @Nullable String tokenKeyName,
+        @CustomType.Parameter("tokenSigningPublicKeys") @Nullable Object tokenSigningPublicKeys) {
         this.arn = arn;
         this.authorizerFunctionArn = authorizerFunctionArn;
         this.status = status;

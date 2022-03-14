@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The Name of the AppImageConfig.
      * 
      */
-    @InputImport(name="appImageConfigName")
+    @Import(name="appImageConfigName")
       private final @Nullable Output<String> appImageConfigName;
 
     public Output<String> getAppImageConfigName() {
@@ -32,7 +32,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The KernelGatewayImageConfig.
      * 
      */
-    @InputImport(name="kernelGatewayImageConfig")
+    @Import(name="kernelGatewayImageConfig")
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
     public Output<AppImageConfigKernelGatewayImageConfigArgs> getKernelGatewayImageConfig() {
@@ -43,7 +43,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A list of tags to apply to the AppImageConfig.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AppImageConfigTagArgs>> tags;
 
     public Output<List<AppImageConfigTagArgs>> getTags() {

@@ -18,12 +18,12 @@ import io.pulumi.awsnative.appflow.outputs.FlowSlackSourceProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowTrendmicroSourceProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowVeevaSourceProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowZendeskSourceProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowSourceConnectorProperties {
     private final @Nullable FlowAmplitudeSourceProperties amplitude;
     private final @Nullable FlowDatadogSourceProperties datadog;
@@ -41,23 +41,23 @@ public final class FlowSourceConnectorProperties {
     private final @Nullable FlowVeevaSourceProperties veeva;
     private final @Nullable FlowZendeskSourceProperties zendesk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowSourceConnectorProperties(
-        @OutputCustomType.Parameter("amplitude") @Nullable FlowAmplitudeSourceProperties amplitude,
-        @OutputCustomType.Parameter("datadog") @Nullable FlowDatadogSourceProperties datadog,
-        @OutputCustomType.Parameter("dynatrace") @Nullable FlowDynatraceSourceProperties dynatrace,
-        @OutputCustomType.Parameter("googleAnalytics") @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics,
-        @OutputCustomType.Parameter("inforNexus") @Nullable FlowInforNexusSourceProperties inforNexus,
-        @OutputCustomType.Parameter("marketo") @Nullable FlowMarketoSourceProperties marketo,
-        @OutputCustomType.Parameter("s3") @Nullable FlowS3SourceProperties s3,
-        @OutputCustomType.Parameter("sAPOData") @Nullable FlowSAPODataSourceProperties sAPOData,
-        @OutputCustomType.Parameter("salesforce") @Nullable FlowSalesforceSourceProperties salesforce,
-        @OutputCustomType.Parameter("serviceNow") @Nullable FlowServiceNowSourceProperties serviceNow,
-        @OutputCustomType.Parameter("singular") @Nullable FlowSingularSourceProperties singular,
-        @OutputCustomType.Parameter("slack") @Nullable FlowSlackSourceProperties slack,
-        @OutputCustomType.Parameter("trendmicro") @Nullable FlowTrendmicroSourceProperties trendmicro,
-        @OutputCustomType.Parameter("veeva") @Nullable FlowVeevaSourceProperties veeva,
-        @OutputCustomType.Parameter("zendesk") @Nullable FlowZendeskSourceProperties zendesk) {
+        @CustomType.Parameter("amplitude") @Nullable FlowAmplitudeSourceProperties amplitude,
+        @CustomType.Parameter("datadog") @Nullable FlowDatadogSourceProperties datadog,
+        @CustomType.Parameter("dynatrace") @Nullable FlowDynatraceSourceProperties dynatrace,
+        @CustomType.Parameter("googleAnalytics") @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics,
+        @CustomType.Parameter("inforNexus") @Nullable FlowInforNexusSourceProperties inforNexus,
+        @CustomType.Parameter("marketo") @Nullable FlowMarketoSourceProperties marketo,
+        @CustomType.Parameter("s3") @Nullable FlowS3SourceProperties s3,
+        @CustomType.Parameter("sAPOData") @Nullable FlowSAPODataSourceProperties sAPOData,
+        @CustomType.Parameter("salesforce") @Nullable FlowSalesforceSourceProperties salesforce,
+        @CustomType.Parameter("serviceNow") @Nullable FlowServiceNowSourceProperties serviceNow,
+        @CustomType.Parameter("singular") @Nullable FlowSingularSourceProperties singular,
+        @CustomType.Parameter("slack") @Nullable FlowSlackSourceProperties slack,
+        @CustomType.Parameter("trendmicro") @Nullable FlowTrendmicroSourceProperties trendmicro,
+        @CustomType.Parameter("veeva") @Nullable FlowVeevaSourceProperties veeva,
+        @CustomType.Parameter("zendesk") @Nullable FlowZendeskSourceProperties zendesk) {
         this.amplitude = amplitude;
         this.datadog = datadog;
         this.dynatrace = dynatrace;

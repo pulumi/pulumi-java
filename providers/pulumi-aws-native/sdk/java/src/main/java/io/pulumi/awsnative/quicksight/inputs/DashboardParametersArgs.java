@@ -8,7 +8,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardDecimalParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardIntegerParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardStringParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * <p>Date-time parameters.</p>
      * 
      */
-    @InputImport(name="dateTimeParameters")
+    @Import(name="dateTimeParameters")
       private final @Nullable Output<List<DashboardDateTimeParameterArgs>> dateTimeParameters;
 
     public Output<List<DashboardDateTimeParameterArgs>> getDateTimeParameters() {
@@ -37,7 +37,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * <p>Decimal parameters.</p>
      * 
      */
-    @InputImport(name="decimalParameters")
+    @Import(name="decimalParameters")
       private final @Nullable Output<List<DashboardDecimalParameterArgs>> decimalParameters;
 
     public Output<List<DashboardDecimalParameterArgs>> getDecimalParameters() {
@@ -48,7 +48,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * <p>Integer parameters.</p>
      * 
      */
-    @InputImport(name="integerParameters")
+    @Import(name="integerParameters")
       private final @Nullable Output<List<DashboardIntegerParameterArgs>> integerParameters;
 
     public Output<List<DashboardIntegerParameterArgs>> getIntegerParameters() {
@@ -59,7 +59,7 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
      * <p>String parameters.</p>
      * 
      */
-    @InputImport(name="stringParameters")
+    @Import(name="stringParameters")
       private final @Nullable Output<List<DashboardStringParameterArgs>> stringParameters;
 
     public Output<List<DashboardStringParameterArgs>> getStringParameters() {

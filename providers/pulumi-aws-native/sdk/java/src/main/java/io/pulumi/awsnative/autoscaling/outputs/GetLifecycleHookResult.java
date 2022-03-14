@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLifecycleHookResult {
     /**
      * The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are CONTINUE and ABANDON (default).
@@ -43,14 +43,14 @@ public final class GetLifecycleHookResult {
      */
     private final @Nullable String roleARN;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLifecycleHookResult(
-        @OutputCustomType.Parameter("defaultResult") @Nullable String defaultResult,
-        @OutputCustomType.Parameter("heartbeatTimeout") @Nullable Integer heartbeatTimeout,
-        @OutputCustomType.Parameter("lifecycleTransition") @Nullable String lifecycleTransition,
-        @OutputCustomType.Parameter("notificationMetadata") @Nullable String notificationMetadata,
-        @OutputCustomType.Parameter("notificationTargetARN") @Nullable String notificationTargetARN,
-        @OutputCustomType.Parameter("roleARN") @Nullable String roleARN) {
+        @CustomType.Parameter("defaultResult") @Nullable String defaultResult,
+        @CustomType.Parameter("heartbeatTimeout") @Nullable Integer heartbeatTimeout,
+        @CustomType.Parameter("lifecycleTransition") @Nullable String lifecycleTransition,
+        @CustomType.Parameter("notificationMetadata") @Nullable String notificationMetadata,
+        @CustomType.Parameter("notificationTargetARN") @Nullable String notificationTargetARN,
+        @CustomType.Parameter("roleARN") @Nullable String roleARN) {
         this.defaultResult = defaultResult;
         this.heartbeatTimeout = heartbeatTimeout;
         this.lifecycleTransition = lifecycleTransition;

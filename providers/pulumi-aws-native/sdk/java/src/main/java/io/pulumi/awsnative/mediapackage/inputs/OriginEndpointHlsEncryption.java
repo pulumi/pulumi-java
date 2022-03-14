@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
      * A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
      * 
      */
-    @InputImport(name="constantInitializationVector")
+    @Import(name="constantInitializationVector")
       private final @Nullable String constantInitializationVector;
 
     public Optional<String> getConstantInitializationVector() {
@@ -37,7 +37,7 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
      * The encryption method to use.
      * 
      */
-    @InputImport(name="encryptionMethod")
+    @Import(name="encryptionMethod")
       private final @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod;
 
     public Optional<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
@@ -48,7 +48,7 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
      * Interval (in seconds) between each encryption key rotation.
      * 
      */
-    @InputImport(name="keyRotationIntervalSeconds")
+    @Import(name="keyRotationIntervalSeconds")
       private final @Nullable Integer keyRotationIntervalSeconds;
 
     public Optional<Integer> getKeyRotationIntervalSeconds() {
@@ -59,14 +59,14 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
      * When enabled, the EXT-X-KEY tag will be repeated in output manifests.
      * 
      */
-    @InputImport(name="repeatExtXKey")
+    @Import(name="repeatExtXKey")
       private final @Nullable Boolean repeatExtXKey;
 
     public Optional<Boolean> getRepeatExtXKey() {
         return this.repeatExtXKey == null ? Optional.empty() : Optional.ofNullable(this.repeatExtXKey);
     }
 
-    @InputImport(name="spekeKeyProvider", required=true)
+    @Import(name="spekeKeyProvider", required=true)
       private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {

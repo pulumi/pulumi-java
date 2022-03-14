@@ -13,7 +13,7 @@ import io.pulumi.awsnative.auditmanager.outputs.AssessmentRole;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentScope;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -26,31 +26,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:auditmanager:Assessment")
 public class Assessment extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="assessmentId", type=String.class, parameters={})
+    @Export(name="assessmentId", type=String.class, parameters={})
     private Output<String> assessmentId;
 
     public Output<String> getAssessmentId() {
         return this.assessmentId;
     }
-    @OutputExport(name="assessmentReportsDestination", type=AssessmentReportsDestination.class, parameters={})
+    @Export(name="assessmentReportsDestination", type=AssessmentReportsDestination.class, parameters={})
     private Output</* @Nullable */ AssessmentReportsDestination> assessmentReportsDestination;
 
     public Output</* @Nullable */ AssessmentReportsDestination> getAssessmentReportsDestination() {
         return this.assessmentReportsDestination;
     }
-    @OutputExport(name="awsAccount", type=AssessmentAWSAccount.class, parameters={})
+    @Export(name="awsAccount", type=AssessmentAWSAccount.class, parameters={})
     private Output</* @Nullable */ AssessmentAWSAccount> awsAccount;
 
     public Output</* @Nullable */ AssessmentAWSAccount> getAwsAccount() {
         return this.awsAccount;
     }
-    @OutputExport(name="creationTime", type=Double.class, parameters={})
+    @Export(name="creationTime", type=Double.class, parameters={})
     private Output<Double> creationTime;
 
     public Output<Double> getCreationTime() {
@@ -60,7 +60,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * The list of delegations.
      * 
      */
-    @OutputExport(name="delegations", type=List.class, parameters={AssessmentDelegation.class})
+    @Export(name="delegations", type=List.class, parameters={AssessmentDelegation.class})
     private Output<List<AssessmentDelegation>> delegations;
 
     /**
@@ -70,19 +70,19 @@ public class Assessment extends io.pulumi.resources.CustomResource {
     public Output<List<AssessmentDelegation>> getDelegations() {
         return this.delegations;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="frameworkId", type=String.class, parameters={})
+    @Export(name="frameworkId", type=String.class, parameters={})
     private Output</* @Nullable */ String> frameworkId;
 
     public Output</* @Nullable */ String> getFrameworkId() {
         return this.frameworkId;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
@@ -92,7 +92,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * The list of roles for the specified assessment.
      * 
      */
-    @OutputExport(name="roles", type=List.class, parameters={AssessmentRole.class})
+    @Export(name="roles", type=List.class, parameters={AssessmentRole.class})
     private Output</* @Nullable */ List<AssessmentRole>> roles;
 
     /**
@@ -102,13 +102,13 @@ public class Assessment extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<AssessmentRole>> getRoles() {
         return this.roles;
     }
-    @OutputExport(name="scope", type=AssessmentScope.class, parameters={})
+    @Export(name="scope", type=AssessmentScope.class, parameters={})
     private Output</* @Nullable */ AssessmentScope> scope;
 
     public Output</* @Nullable */ AssessmentScope> getScope() {
         return this.scope;
     }
-    @OutputExport(name="status", type=AssessmentStatus.class, parameters={})
+    @Export(name="status", type=AssessmentStatus.class, parameters={})
     private Output</* @Nullable */ AssessmentStatus> status;
 
     public Output</* @Nullable */ AssessmentStatus> getStatus() {
@@ -118,7 +118,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * The tags associated with the assessment.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AssessmentTag.class})
+    @Export(name="tags", type=List.class, parameters={AssessmentTag.class})
     private Output</* @Nullable */ List<AssessmentTag>> tags;
 
     /**

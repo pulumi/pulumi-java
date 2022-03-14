@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.emrcontainers.outputs;
 
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualClusterResult {
     private final @Nullable String arn;
     /**
@@ -25,11 +25,11 @@ public final class GetVirtualClusterResult {
      */
     private final @Nullable List<VirtualClusterTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualClusterResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("tags") @Nullable List<VirtualClusterTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("tags") @Nullable List<VirtualClusterTag> tags) {
         this.arn = arn;
         this.id = id;
         this.tags = tags;

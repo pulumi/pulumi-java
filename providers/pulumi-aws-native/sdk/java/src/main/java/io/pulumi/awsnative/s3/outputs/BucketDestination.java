@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDestinationFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketDestination {
     /**
      * The account ID that owns the destination S3 bucket.
@@ -33,12 +33,12 @@ public final class BucketDestination {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketDestination(
-        @OutputCustomType.Parameter("bucketAccountId") @Nullable String bucketAccountId,
-        @OutputCustomType.Parameter("bucketArn") String bucketArn,
-        @OutputCustomType.Parameter("format") BucketDestinationFormat format,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+        @CustomType.Parameter("bucketAccountId") @Nullable String bucketAccountId,
+        @CustomType.Parameter("bucketArn") String bucketArn,
+        @CustomType.Parameter("format") BucketDestinationFormat format,
+        @CustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucketAccountId = bucketAccountId;
         this.bucketArn = bucketArn;
         this.format = format;

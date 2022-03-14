@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm;
 
 import io.pulumi.awsnative.devicefarm.inputs.NetworkProfileTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,84 +17,84 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkProfileArgs Empty = new NetworkProfileArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="downlinkBandwidthBits")
+    @Import(name="downlinkBandwidthBits")
       private final @Nullable Output<Integer> downlinkBandwidthBits;
 
     public Output<Integer> getDownlinkBandwidthBits() {
         return this.downlinkBandwidthBits == null ? Output.empty() : this.downlinkBandwidthBits;
     }
 
-    @InputImport(name="downlinkDelayMs")
+    @Import(name="downlinkDelayMs")
       private final @Nullable Output<Integer> downlinkDelayMs;
 
     public Output<Integer> getDownlinkDelayMs() {
         return this.downlinkDelayMs == null ? Output.empty() : this.downlinkDelayMs;
     }
 
-    @InputImport(name="downlinkJitterMs")
+    @Import(name="downlinkJitterMs")
       private final @Nullable Output<Integer> downlinkJitterMs;
 
     public Output<Integer> getDownlinkJitterMs() {
         return this.downlinkJitterMs == null ? Output.empty() : this.downlinkJitterMs;
     }
 
-    @InputImport(name="downlinkLossPercent")
+    @Import(name="downlinkLossPercent")
       private final @Nullable Output<Integer> downlinkLossPercent;
 
     public Output<Integer> getDownlinkLossPercent() {
         return this.downlinkLossPercent == null ? Output.empty() : this.downlinkLossPercent;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="projectArn", required=true)
+    @Import(name="projectArn", required=true)
       private final Output<String> projectArn;
 
     public Output<String> getProjectArn() {
         return this.projectArn;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<NetworkProfileTagArgs>> tags;
 
     public Output<List<NetworkProfileTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="uplinkBandwidthBits")
+    @Import(name="uplinkBandwidthBits")
       private final @Nullable Output<Integer> uplinkBandwidthBits;
 
     public Output<Integer> getUplinkBandwidthBits() {
         return this.uplinkBandwidthBits == null ? Output.empty() : this.uplinkBandwidthBits;
     }
 
-    @InputImport(name="uplinkDelayMs")
+    @Import(name="uplinkDelayMs")
       private final @Nullable Output<Integer> uplinkDelayMs;
 
     public Output<Integer> getUplinkDelayMs() {
         return this.uplinkDelayMs == null ? Output.empty() : this.uplinkDelayMs;
     }
 
-    @InputImport(name="uplinkJitterMs")
+    @Import(name="uplinkJitterMs")
       private final @Nullable Output<Integer> uplinkJitterMs;
 
     public Output<Integer> getUplinkJitterMs() {
         return this.uplinkJitterMs == null ? Output.empty() : this.uplinkJitterMs;
     }
 
-    @InputImport(name="uplinkLossPercent")
+    @Import(name="uplinkLossPercent")
       private final @Nullable Output<Integer> uplinkLossPercent;
 
     public Output<Integer> getUplinkLossPercent() {

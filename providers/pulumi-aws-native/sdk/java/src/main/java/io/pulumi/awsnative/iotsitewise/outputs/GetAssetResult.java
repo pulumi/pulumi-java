@@ -6,14 +6,14 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetHierarchy;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetProperty;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssetResult {
     /**
      * The ARN of the asset
@@ -43,15 +43,15 @@ public final class GetAssetResult {
      */
     private final @Nullable List<AssetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssetResult(
-        @OutputCustomType.Parameter("assetArn") @Nullable String assetArn,
-        @OutputCustomType.Parameter("assetHierarchies") @Nullable List<AssetHierarchy> assetHierarchies,
-        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
-        @OutputCustomType.Parameter("assetModelId") @Nullable String assetModelId,
-        @OutputCustomType.Parameter("assetName") @Nullable String assetName,
-        @OutputCustomType.Parameter("assetProperties") @Nullable List<AssetProperty> assetProperties,
-        @OutputCustomType.Parameter("tags") @Nullable List<AssetTag> tags) {
+        @CustomType.Parameter("assetArn") @Nullable String assetArn,
+        @CustomType.Parameter("assetHierarchies") @Nullable List<AssetHierarchy> assetHierarchies,
+        @CustomType.Parameter("assetId") @Nullable String assetId,
+        @CustomType.Parameter("assetModelId") @Nullable String assetModelId,
+        @CustomType.Parameter("assetName") @Nullable String assetName,
+        @CustomType.Parameter("assetProperties") @Nullable List<AssetProperty> assetProperties,
+        @CustomType.Parameter("tags") @Nullable List<AssetTag> tags) {
         this.assetArn = assetArn;
         this.assetHierarchies = assetHierarchies;
         this.assetId = assetId;

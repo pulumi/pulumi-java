@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.PolicyStatusProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMultiRegionAccessPointPolicyResult {
     /**
      * Policy document to apply to a Multi Region Access Point
@@ -23,10 +23,10 @@ public final class GetMultiRegionAccessPointPolicyResult {
      */
     private final @Nullable PolicyStatusProperties policyStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMultiRegionAccessPointPolicyResult(
-        @OutputCustomType.Parameter("policy") @Nullable Object policy,
-        @OutputCustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus) {
+        @CustomType.Parameter("policy") @Nullable Object policy,
+        @CustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus) {
         this.policy = policy;
         this.policyStatus = policyStatus;
     }

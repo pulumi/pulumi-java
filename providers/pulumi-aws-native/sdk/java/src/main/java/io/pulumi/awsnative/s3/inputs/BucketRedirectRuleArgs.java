@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketRedirectRuleProtocol;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * The host name to use in the redirect request.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -34,7 +34,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * The HTTP redirect code to use on the response. Not required if one of the siblings is present.
      * 
      */
-    @InputImport(name="httpRedirectCode")
+    @Import(name="httpRedirectCode")
       private final @Nullable Output<String> httpRedirectCode;
 
     public Output<String> getHttpRedirectCode() {
@@ -45,7 +45,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<BucketRedirectRuleProtocol> protocol;
 
     public Output<BucketRedirectRuleProtocol> getProtocol() {
@@ -56,7 +56,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * The object key prefix to use in the redirect request.
      * 
      */
-    @InputImport(name="replaceKeyPrefixWith")
+    @Import(name="replaceKeyPrefixWith")
       private final @Nullable Output<String> replaceKeyPrefixWith;
 
     public Output<String> getReplaceKeyPrefixWith() {
@@ -67,7 +67,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * The specific object key to use in the redirect request.d
      * 
      */
-    @InputImport(name="replaceKeyWith")
+    @Import(name="replaceKeyWith")
       private final @Nullable Output<String> replaceKeyWith;
 
     public Output<String> getReplaceKeyWith() {

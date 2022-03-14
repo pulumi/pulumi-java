@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.awsnative.lightsail.inputs.CertificateTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the certificate.
      * 
      */
-    @InputImport(name="certificateName")
+    @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
@@ -31,7 +31,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name (e.g., example.com ) for the certificate.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -42,7 +42,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
      * 
      */
-    @InputImport(name="subjectAlternativeNames")
+    @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<String>> subjectAlternativeNames;
 
     public Output<List<String>> getSubjectAlternativeNames() {
@@ -53,7 +53,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<CertificateTagArgs>> tags;
 
     public Output<List<CertificateTagArgs>> getTags() {

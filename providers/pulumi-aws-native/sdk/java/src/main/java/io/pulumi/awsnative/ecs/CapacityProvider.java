@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ecs.CapacityProviderArgs;
 import io.pulumi.awsnative.ecs.outputs.CapacityProviderAutoScalingGroupProvider;
 import io.pulumi.awsnative.ecs.outputs.CapacityProviderTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,19 +22,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ecs:CapacityProvider")
 public class CapacityProvider extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="autoScalingGroupProvider", type=CapacityProviderAutoScalingGroupProvider.class, parameters={})
+    @Export(name="autoScalingGroupProvider", type=CapacityProviderAutoScalingGroupProvider.class, parameters={})
     private Output<CapacityProviderAutoScalingGroupProvider> autoScalingGroupProvider;
 
     public Output<CapacityProviderAutoScalingGroupProvider> getAutoScalingGroupProvider() {
         return this.autoScalingGroupProvider;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=List.class, parameters={CapacityProviderTag.class})
+    @Export(name="tags", type=List.class, parameters={CapacityProviderTag.class})
     private Output</* @Nullable */ List<CapacityProviderTag>> tags;
 
     public Output</* @Nullable */ List<CapacityProviderTag>> getTags() {

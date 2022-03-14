@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorFileFormatDescriptorArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class AnomalyDetectorS3SourceConfigArgs extends io.pulumi.resources
 
     public static final AnomalyDetectorS3SourceConfigArgs Empty = new AnomalyDetectorS3SourceConfigArgs();
 
-    @InputImport(name="fileFormatDescriptor", required=true)
+    @Import(name="fileFormatDescriptor", required=true)
       private final Output<AnomalyDetectorFileFormatDescriptorArgs> fileFormatDescriptor;
 
     public Output<AnomalyDetectorFileFormatDescriptorArgs> getFileFormatDescriptor() {
         return this.fileFormatDescriptor;
     }
 
-    @InputImport(name="historicalDataPathList")
+    @Import(name="historicalDataPathList")
       private final @Nullable Output<List<String>> historicalDataPathList;
 
     public Output<List<String>> getHistoricalDataPathList() {
         return this.historicalDataPathList == null ? Output.empty() : this.historicalDataPathList;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="templatedPathList")
+    @Import(name="templatedPathList")
       private final @Nullable Output<List<String>> templatedPathList;
 
     public Output<List<String>> getTemplatedPathList() {

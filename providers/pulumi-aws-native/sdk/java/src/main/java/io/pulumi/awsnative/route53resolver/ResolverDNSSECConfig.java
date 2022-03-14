@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53resolver.ResolverDNSSECConfigArgs;
 import io.pulumi.awsnative.route53resolver.enums.ResolverDNSSECConfigValidationStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public class ResolverDNSSECConfig extends io.pulumi.resources.CustomResource {
      * AccountId
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -36,7 +36,7 @@ public class ResolverDNSSECConfig extends io.pulumi.resources.CustomResource {
      * ResourceId
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
@@ -50,7 +50,7 @@ public class ResolverDNSSECConfig extends io.pulumi.resources.CustomResource {
      * ResolverDNSSECValidationStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
      * 
      */
-    @OutputExport(name="validationStatus", type=ResolverDNSSECConfigValidationStatus.class, parameters={})
+    @Export(name="validationStatus", type=ResolverDNSSECConfigValidationStatus.class, parameters={})
     private Output<ResolverDNSSECConfigValidationStatus> validationStatus;
 
     /**

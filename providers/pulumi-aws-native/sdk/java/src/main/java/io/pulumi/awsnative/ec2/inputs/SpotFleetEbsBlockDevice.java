@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetEbsBlockDeviceVolumeType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,42 +17,42 @@ public final class SpotFleetEbsBlockDevice extends io.pulumi.resources.InvokeArg
 
     public static final SpotFleetEbsBlockDevice Empty = new SpotFleetEbsBlockDevice();
 
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Boolean deleteOnTermination;
 
     public Optional<Boolean> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Optional.empty() : Optional.ofNullable(this.deleteOnTermination);
     }
 
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Boolean encrypted;
 
     public Optional<Boolean> getEncrypted() {
         return this.encrypted == null ? Optional.empty() : Optional.ofNullable(this.encrypted);
     }
 
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Integer iops;
 
     public Optional<Integer> getIops() {
         return this.iops == null ? Optional.empty() : Optional.ofNullable(this.iops);
     }
 
-    @InputImport(name="snapshotId")
+    @Import(name="snapshotId")
       private final @Nullable String snapshotId;
 
     public Optional<String> getSnapshotId() {
         return this.snapshotId == null ? Optional.empty() : Optional.ofNullable(this.snapshotId);
     }
 
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Integer volumeSize;
 
     public Optional<Integer> getVolumeSize() {
         return this.volumeSize == null ? Optional.empty() : Optional.ofNullable(this.volumeSize);
     }
 
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable SpotFleetEbsBlockDeviceVolumeType volumeType;
 
     public Optional<SpotFleetEbsBlockDeviceVolumeType> getVolumeType() {

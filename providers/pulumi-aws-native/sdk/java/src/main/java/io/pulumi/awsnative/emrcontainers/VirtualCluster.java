@@ -8,7 +8,7 @@ import io.pulumi.awsnative.emrcontainers.VirtualClusterArgs;
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterContainerProvider;
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:emrcontainers:VirtualCluster")
 public class VirtualCluster extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public class VirtualCluster extends io.pulumi.resources.CustomResource {
      * Container provider of the virtual cluster.
      * 
      */
-    @OutputExport(name="containerProvider", type=VirtualClusterContainerProvider.class, parameters={})
+    @Export(name="containerProvider", type=VirtualClusterContainerProvider.class, parameters={})
     private Output<VirtualClusterContainerProvider> containerProvider;
 
     /**
@@ -46,7 +46,7 @@ public class VirtualCluster extends io.pulumi.resources.CustomResource {
      * Name of the virtual cluster.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -60,7 +60,7 @@ public class VirtualCluster extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this virtual cluster.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={VirtualClusterTag.class})
+    @Export(name="tags", type=List.class, parameters={VirtualClusterTag.class})
     private Output</* @Nullable */ List<VirtualClusterTag>> tags;
 
     /**

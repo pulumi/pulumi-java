@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wisdom.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class AssistantAssociationAssociationDataArgs extends io.pulumi.res
 
     public static final AssistantAssociationAssociationDataArgs Empty = new AssistantAssociationAssociationDataArgs();
 
-    @InputImport(name="knowledgeBaseId", required=true)
+    @Import(name="knowledgeBaseId", required=true)
       private final Output<String> knowledgeBaseId;
 
     public Output<String> getKnowledgeBaseId() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupAuthorizationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupLogConfigurationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * CDN Authorization
      * 
      */
-    @InputImport(name="authorization")
+    @Import(name="authorization")
       private final @Nullable Output<PackagingGroupAuthorizationArgs> authorization;
 
     public Output<PackagingGroupAuthorizationArgs> getAuthorization() {
@@ -32,7 +32,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration parameters for egress access logging.
      * 
      */
-    @InputImport(name="egressAccessLogs")
+    @Import(name="egressAccessLogs")
       private final @Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs;
 
     public Output<PackagingGroupLogConfigurationArgs> getEgressAccessLogs() {
@@ -43,7 +43,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<PackagingGroupTagArgs>> tags;
 
     public Output<List<PackagingGroupTagArgs>> getTags() {

@@ -21,7 +21,7 @@ import io.pulumi.awsnative.ec2.inputs.EC2FleetNetworkInterfaceCountRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTotalLocalStorageGBRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetVCpuCountRangeRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,147 +34,147 @@ public final class EC2FleetInstanceRequirementsRequestArgs extends io.pulumi.res
 
     public static final EC2FleetInstanceRequirementsRequestArgs Empty = new EC2FleetInstanceRequirementsRequestArgs();
 
-    @InputImport(name="acceleratorCount")
+    @Import(name="acceleratorCount")
       private final @Nullable Output<EC2FleetAcceleratorCountRequestArgs> acceleratorCount;
 
     public Output<EC2FleetAcceleratorCountRequestArgs> getAcceleratorCount() {
         return this.acceleratorCount == null ? Output.empty() : this.acceleratorCount;
     }
 
-    @InputImport(name="acceleratorManufacturers")
+    @Import(name="acceleratorManufacturers")
       private final @Nullable Output<List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers;
 
     public Output<List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem>> getAcceleratorManufacturers() {
         return this.acceleratorManufacturers == null ? Output.empty() : this.acceleratorManufacturers;
     }
 
-    @InputImport(name="acceleratorNames")
+    @Import(name="acceleratorNames")
       private final @Nullable Output<List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames;
 
     public Output<List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem>> getAcceleratorNames() {
         return this.acceleratorNames == null ? Output.empty() : this.acceleratorNames;
     }
 
-    @InputImport(name="acceleratorTotalMemoryMiB")
+    @Import(name="acceleratorTotalMemoryMiB")
       private final @Nullable Output<EC2FleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB;
 
     public Output<EC2FleetAcceleratorTotalMemoryMiBRequestArgs> getAcceleratorTotalMemoryMiB() {
         return this.acceleratorTotalMemoryMiB == null ? Output.empty() : this.acceleratorTotalMemoryMiB;
     }
 
-    @InputImport(name="acceleratorTypes")
+    @Import(name="acceleratorTypes")
       private final @Nullable Output<List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes;
 
     public Output<List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem>> getAcceleratorTypes() {
         return this.acceleratorTypes == null ? Output.empty() : this.acceleratorTypes;
     }
 
-    @InputImport(name="bareMetal")
+    @Import(name="bareMetal")
       private final @Nullable Output<EC2FleetInstanceRequirementsRequestBareMetal> bareMetal;
 
     public Output<EC2FleetInstanceRequirementsRequestBareMetal> getBareMetal() {
         return this.bareMetal == null ? Output.empty() : this.bareMetal;
     }
 
-    @InputImport(name="baselineEbsBandwidthMbps")
+    @Import(name="baselineEbsBandwidthMbps")
       private final @Nullable Output<EC2FleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps;
 
     public Output<EC2FleetBaselineEbsBandwidthMbpsRequestArgs> getBaselineEbsBandwidthMbps() {
         return this.baselineEbsBandwidthMbps == null ? Output.empty() : this.baselineEbsBandwidthMbps;
     }
 
-    @InputImport(name="burstablePerformance")
+    @Import(name="burstablePerformance")
       private final @Nullable Output<EC2FleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance;
 
     public Output<EC2FleetInstanceRequirementsRequestBurstablePerformance> getBurstablePerformance() {
         return this.burstablePerformance == null ? Output.empty() : this.burstablePerformance;
     }
 
-    @InputImport(name="cpuManufacturers")
+    @Import(name="cpuManufacturers")
       private final @Nullable Output<List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers;
 
     public Output<List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem>> getCpuManufacturers() {
         return this.cpuManufacturers == null ? Output.empty() : this.cpuManufacturers;
     }
 
-    @InputImport(name="excludedInstanceTypes")
+    @Import(name="excludedInstanceTypes")
       private final @Nullable Output<List<String>> excludedInstanceTypes;
 
     public Output<List<String>> getExcludedInstanceTypes() {
         return this.excludedInstanceTypes == null ? Output.empty() : this.excludedInstanceTypes;
     }
 
-    @InputImport(name="instanceGenerations")
+    @Import(name="instanceGenerations")
       private final @Nullable Output<List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations;
 
     public Output<List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem>> getInstanceGenerations() {
         return this.instanceGenerations == null ? Output.empty() : this.instanceGenerations;
     }
 
-    @InputImport(name="localStorage")
+    @Import(name="localStorage")
       private final @Nullable Output<EC2FleetInstanceRequirementsRequestLocalStorage> localStorage;
 
     public Output<EC2FleetInstanceRequirementsRequestLocalStorage> getLocalStorage() {
         return this.localStorage == null ? Output.empty() : this.localStorage;
     }
 
-    @InputImport(name="localStorageTypes")
+    @Import(name="localStorageTypes")
       private final @Nullable Output<List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes;
 
     public Output<List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem>> getLocalStorageTypes() {
         return this.localStorageTypes == null ? Output.empty() : this.localStorageTypes;
     }
 
-    @InputImport(name="memoryGiBPerVCpu")
+    @Import(name="memoryGiBPerVCpu")
       private final @Nullable Output<EC2FleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu;
 
     public Output<EC2FleetMemoryGiBPerVCpuRequestArgs> getMemoryGiBPerVCpu() {
         return this.memoryGiBPerVCpu == null ? Output.empty() : this.memoryGiBPerVCpu;
     }
 
-    @InputImport(name="memoryMiB")
+    @Import(name="memoryMiB")
       private final @Nullable Output<EC2FleetMemoryMiBRequestArgs> memoryMiB;
 
     public Output<EC2FleetMemoryMiBRequestArgs> getMemoryMiB() {
         return this.memoryMiB == null ? Output.empty() : this.memoryMiB;
     }
 
-    @InputImport(name="networkInterfaceCount")
+    @Import(name="networkInterfaceCount")
       private final @Nullable Output<EC2FleetNetworkInterfaceCountRequestArgs> networkInterfaceCount;
 
     public Output<EC2FleetNetworkInterfaceCountRequestArgs> getNetworkInterfaceCount() {
         return this.networkInterfaceCount == null ? Output.empty() : this.networkInterfaceCount;
     }
 
-    @InputImport(name="onDemandMaxPricePercentageOverLowestPrice")
+    @Import(name="onDemandMaxPricePercentageOverLowestPrice")
       private final @Nullable Output<Integer> onDemandMaxPricePercentageOverLowestPrice;
 
     public Output<Integer> getOnDemandMaxPricePercentageOverLowestPrice() {
         return this.onDemandMaxPricePercentageOverLowestPrice == null ? Output.empty() : this.onDemandMaxPricePercentageOverLowestPrice;
     }
 
-    @InputImport(name="requireHibernateSupport")
+    @Import(name="requireHibernateSupport")
       private final @Nullable Output<Boolean> requireHibernateSupport;
 
     public Output<Boolean> getRequireHibernateSupport() {
         return this.requireHibernateSupport == null ? Output.empty() : this.requireHibernateSupport;
     }
 
-    @InputImport(name="spotMaxPricePercentageOverLowestPrice")
+    @Import(name="spotMaxPricePercentageOverLowestPrice")
       private final @Nullable Output<Integer> spotMaxPricePercentageOverLowestPrice;
 
     public Output<Integer> getSpotMaxPricePercentageOverLowestPrice() {
         return this.spotMaxPricePercentageOverLowestPrice == null ? Output.empty() : this.spotMaxPricePercentageOverLowestPrice;
     }
 
-    @InputImport(name="totalLocalStorageGB")
+    @Import(name="totalLocalStorageGB")
       private final @Nullable Output<EC2FleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB;
 
     public Output<EC2FleetTotalLocalStorageGBRequestArgs> getTotalLocalStorageGB() {
         return this.totalLocalStorageGB == null ? Output.empty() : this.totalLocalStorageGB;
     }
 
-    @InputImport(name="vCpuCount")
+    @Import(name="vCpuCount")
       private final @Nullable Output<EC2FleetVCpuCountRangeRequestArgs> vCpuCount;
 
     public Output<EC2FleetVCpuCountRangeRequestArgs> getVCpuCount() {

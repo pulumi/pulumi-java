@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceRegistry {
     private final @Nullable String containerName;
     private final @Nullable Integer containerPort;
     private final @Nullable Integer port;
     private final @Nullable String registryArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceRegistry(
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("registryArn") @Nullable String registryArn) {
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("registryArn") @Nullable String registryArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.port = port;

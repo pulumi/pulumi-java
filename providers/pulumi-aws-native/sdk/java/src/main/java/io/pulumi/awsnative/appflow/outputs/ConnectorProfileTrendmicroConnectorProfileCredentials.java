@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
     /**
      * The Secret Access Key portion of the credentials.
@@ -15,8 +15,8 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentials {
      */
     private final String apiSecretKey;
 
-    @OutputCustomType.Constructor
-    private ConnectorProfileTrendmicroConnectorProfileCredentials(@OutputCustomType.Parameter("apiSecretKey") String apiSecretKey) {
+    @CustomType.Constructor
+    private ConnectorProfileTrendmicroConnectorProfileCredentials(@CustomType.Parameter("apiSecretKey") String apiSecretKey) {
         this.apiSecretKey = apiSecretKey;
     }
 

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.acmpca.CertificateArgs;
 import io.pulumi.awsnative.acmpca.outputs.CertificateApiPassthrough;
 import io.pulumi.awsnative.acmpca.outputs.CertificateValidity;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
      * 
      */
-    @OutputExport(name="apiPassthrough", type=CertificateApiPassthrough.class, parameters={})
+    @Export(name="apiPassthrough", type=CertificateApiPassthrough.class, parameters={})
     private Output</* @Nullable */ CertificateApiPassthrough> apiPassthrough;
 
     /**
@@ -37,7 +37,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The ARN of the issued certificate.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The issued certificate in base 64 PEM-encoded format.
      * 
      */
-    @OutputExport(name="certificate", type=String.class, parameters={})
+    @Export(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
     /**
@@ -65,7 +65,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the private CA to issue the certificate.
      * 
      */
-    @OutputExport(name="certificateAuthorityArn", type=String.class, parameters={})
+    @Export(name="certificateAuthorityArn", type=String.class, parameters={})
     private Output<String> certificateAuthorityArn;
 
     /**
@@ -79,7 +79,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The certificate signing request (CSR) for the Certificate.
      * 
      */
-    @OutputExport(name="certificateSigningRequest", type=String.class, parameters={})
+    @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output<String> certificateSigningRequest;
 
     /**
@@ -93,7 +93,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The name of the algorithm that will be used to sign the Certificate.
      * 
      */
-    @OutputExport(name="signingAlgorithm", type=String.class, parameters={})
+    @Export(name="signingAlgorithm", type=String.class, parameters={})
     private Output<String> signingAlgorithm;
 
     /**
@@ -107,7 +107,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
      * 
      */
-    @OutputExport(name="templateArn", type=String.class, parameters={})
+    @Export(name="templateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateArn;
 
     /**
@@ -121,7 +121,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The time before which the Certificate will be valid.
      * 
      */
-    @OutputExport(name="validity", type=CertificateValidity.class, parameters={})
+    @Export(name="validity", type=CertificateValidity.class, parameters={})
     private Output<CertificateValidity> validity;
 
     /**
@@ -135,7 +135,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The time after which the Certificate will be valid.
      * 
      */
-    @OutputExport(name="validityNotBefore", type=CertificateValidity.class, parameters={})
+    @Export(name="validityNotBefore", type=CertificateValidity.class, parameters={})
     private Output</* @Nullable */ CertificateValidity> validityNotBefore;
 
     /**

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringScheduleMonitoringExecutionSummary {
     /**
      * The time at which the monitoring job was created.
@@ -45,16 +45,16 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
      */
     private final String scheduledTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoringScheduleMonitoringExecutionSummary(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("endpointName") @Nullable String endpointName,
-        @OutputCustomType.Parameter("failureReason") @Nullable String failureReason,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("monitoringExecutionStatus") MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus,
-        @OutputCustomType.Parameter("monitoringScheduleName") String monitoringScheduleName,
-        @OutputCustomType.Parameter("processingJobArn") @Nullable String processingJobArn,
-        @OutputCustomType.Parameter("scheduledTime") String scheduledTime) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("endpointName") @Nullable String endpointName,
+        @CustomType.Parameter("failureReason") @Nullable String failureReason,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("monitoringExecutionStatus") MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus,
+        @CustomType.Parameter("monitoringScheduleName") String monitoringScheduleName,
+        @CustomType.Parameter("processingJobArn") @Nullable String processingJobArn,
+        @CustomType.Parameter("scheduledTime") String scheduledTime) {
         this.creationTime = creationTime;
         this.endpointName = endpointName;
         this.failureReason = failureReason;

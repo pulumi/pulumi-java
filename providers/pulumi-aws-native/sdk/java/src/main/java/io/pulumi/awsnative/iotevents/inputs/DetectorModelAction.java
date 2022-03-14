@@ -16,7 +16,7 @@ import io.pulumi.awsnative.iotevents.inputs.DetectorModelSetTimer;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelSetVariable;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelSns;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelSqs;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -30,91 +30,91 @@ public final class DetectorModelAction extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModelAction Empty = new DetectorModelAction();
 
-    @InputImport(name="clearTimer")
+    @Import(name="clearTimer")
       private final @Nullable DetectorModelClearTimer clearTimer;
 
     public Optional<DetectorModelClearTimer> getClearTimer() {
         return this.clearTimer == null ? Optional.empty() : Optional.ofNullable(this.clearTimer);
     }
 
-    @InputImport(name="dynamoDB")
+    @Import(name="dynamoDB")
       private final @Nullable DetectorModelDynamoDB dynamoDB;
 
     public Optional<DetectorModelDynamoDB> getDynamoDB() {
         return this.dynamoDB == null ? Optional.empty() : Optional.ofNullable(this.dynamoDB);
     }
 
-    @InputImport(name="dynamoDBv2")
+    @Import(name="dynamoDBv2")
       private final @Nullable DetectorModelDynamoDBv2 dynamoDBv2;
 
     public Optional<DetectorModelDynamoDBv2> getDynamoDBv2() {
         return this.dynamoDBv2 == null ? Optional.empty() : Optional.ofNullable(this.dynamoDBv2);
     }
 
-    @InputImport(name="firehose")
+    @Import(name="firehose")
       private final @Nullable DetectorModelFirehose firehose;
 
     public Optional<DetectorModelFirehose> getFirehose() {
         return this.firehose == null ? Optional.empty() : Optional.ofNullable(this.firehose);
     }
 
-    @InputImport(name="iotEvents")
+    @Import(name="iotEvents")
       private final @Nullable DetectorModelIotEvents iotEvents;
 
     public Optional<DetectorModelIotEvents> getIotEvents() {
         return this.iotEvents == null ? Optional.empty() : Optional.ofNullable(this.iotEvents);
     }
 
-    @InputImport(name="iotSiteWise")
+    @Import(name="iotSiteWise")
       private final @Nullable DetectorModelIotSiteWise iotSiteWise;
 
     public Optional<DetectorModelIotSiteWise> getIotSiteWise() {
         return this.iotSiteWise == null ? Optional.empty() : Optional.ofNullable(this.iotSiteWise);
     }
 
-    @InputImport(name="iotTopicPublish")
+    @Import(name="iotTopicPublish")
       private final @Nullable DetectorModelIotTopicPublish iotTopicPublish;
 
     public Optional<DetectorModelIotTopicPublish> getIotTopicPublish() {
         return this.iotTopicPublish == null ? Optional.empty() : Optional.ofNullable(this.iotTopicPublish);
     }
 
-    @InputImport(name="lambda")
+    @Import(name="lambda")
       private final @Nullable DetectorModelLambda lambda;
 
     public Optional<DetectorModelLambda> getLambda() {
         return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
     }
 
-    @InputImport(name="resetTimer")
+    @Import(name="resetTimer")
       private final @Nullable DetectorModelResetTimer resetTimer;
 
     public Optional<DetectorModelResetTimer> getResetTimer() {
         return this.resetTimer == null ? Optional.empty() : Optional.ofNullable(this.resetTimer);
     }
 
-    @InputImport(name="setTimer")
+    @Import(name="setTimer")
       private final @Nullable DetectorModelSetTimer setTimer;
 
     public Optional<DetectorModelSetTimer> getSetTimer() {
         return this.setTimer == null ? Optional.empty() : Optional.ofNullable(this.setTimer);
     }
 
-    @InputImport(name="setVariable")
+    @Import(name="setVariable")
       private final @Nullable DetectorModelSetVariable setVariable;
 
     public Optional<DetectorModelSetVariable> getSetVariable() {
         return this.setVariable == null ? Optional.empty() : Optional.ofNullable(this.setVariable);
     }
 
-    @InputImport(name="sns")
+    @Import(name="sns")
       private final @Nullable DetectorModelSns sns;
 
     public Optional<DetectorModelSns> getSns() {
         return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
     }
 
-    @InputImport(name="sqs")
+    @Import(name="sqs")
       private final @Nullable DetectorModelSqs sqs;
 
     public Optional<DetectorModelSqs> getSqs() {

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatastorePartition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastorePartitions {
     private final @Nullable List<DatastorePartition> partitions;
 
-    @OutputCustomType.Constructor
-    private DatastorePartitions(@OutputCustomType.Parameter("partitions") @Nullable List<DatastorePartition> partitions) {
+    @CustomType.Constructor
+    private DatastorePartitions(@CustomType.Parameter("partitions") @Nullable List<DatastorePartition> partitions) {
         this.partitions = partitions;
     }
 

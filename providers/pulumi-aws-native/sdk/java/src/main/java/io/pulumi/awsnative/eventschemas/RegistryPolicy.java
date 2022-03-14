@@ -6,7 +6,7 @@ package io.pulumi.awsnative.eventschemas;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.eventschemas.RegistryPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -20,19 +20,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:eventschemas:RegistryPolicy")
 public class RegistryPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="policy", type=Object.class, parameters={})
+    @Export(name="policy", type=Object.class, parameters={})
     private Output<Object> policy;
 
     public Output<Object> getPolicy() {
         return this.policy;
     }
-    @OutputExport(name="registryName", type=String.class, parameters={})
+    @Export(name="registryName", type=String.class, parameters={})
     private Output<String> registryName;
 
     public Output<String> getRegistryName() {
         return this.registryName;
     }
-    @OutputExport(name="revisionId", type=String.class, parameters={})
+    @Export(name="revisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> revisionId;
 
     public Output</* @Nullable */ String> getRevisionId() {

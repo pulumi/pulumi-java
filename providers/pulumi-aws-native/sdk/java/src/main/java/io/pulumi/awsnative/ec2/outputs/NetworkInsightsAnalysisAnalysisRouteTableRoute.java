@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisAnalysisRouteTableRoute {
     private final @Nullable String destinationCidr;
     private final @Nullable String destinationPrefixListId;
@@ -22,18 +22,18 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute {
     private final @Nullable String transitGatewayId;
     private final @Nullable String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisAnalysisRouteTableRoute(
-        @OutputCustomType.Parameter("destinationCidr") @Nullable String destinationCidr,
-        @OutputCustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
-        @OutputCustomType.Parameter("egressOnlyInternetGatewayId") @Nullable String egressOnlyInternetGatewayId,
-        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
-        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
-        @OutputCustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
-        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
-        @OutputCustomType.Parameter("origin") @Nullable String origin,
-        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
-        @OutputCustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
+        @CustomType.Parameter("destinationCidr") @Nullable String destinationCidr,
+        @CustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
+        @CustomType.Parameter("egressOnlyInternetGatewayId") @Nullable String egressOnlyInternetGatewayId,
+        @CustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @CustomType.Parameter("instanceId") @Nullable String instanceId,
+        @CustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
+        @CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @CustomType.Parameter("origin") @Nullable String origin,
+        @CustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
+        @CustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
         this.destinationCidr = destinationCidr;
         this.destinationPrefixListId = destinationPrefixListId;
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;

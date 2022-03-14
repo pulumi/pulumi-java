@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupVaultNotificationObjectType {
     private final List<String> backupVaultEvents;
     private final String sNSTopicArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupVaultNotificationObjectType(
-        @OutputCustomType.Parameter("backupVaultEvents") List<String> backupVaultEvents,
-        @OutputCustomType.Parameter("sNSTopicArn") String sNSTopicArn) {
+        @CustomType.Parameter("backupVaultEvents") List<String> backupVaultEvents,
+        @CustomType.Parameter("sNSTopicArn") String sNSTopicArn) {
         this.backupVaultEvents = backupVaultEvents;
         this.sNSTopicArn = sNSTopicArn;
     }

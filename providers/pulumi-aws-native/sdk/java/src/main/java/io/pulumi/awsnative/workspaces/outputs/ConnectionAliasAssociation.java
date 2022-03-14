@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.workspaces.outputs;
 
 import io.pulumi.awsnative.workspaces.enums.ConnectionAliasAssociationAssociationStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionAliasAssociation {
     private final @Nullable String associatedAccountId;
     private final @Nullable ConnectionAliasAssociationAssociationStatus associationStatus;
     private final @Nullable String connectionIdentifier;
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionAliasAssociation(
-        @OutputCustomType.Parameter("associatedAccountId") @Nullable String associatedAccountId,
-        @OutputCustomType.Parameter("associationStatus") @Nullable ConnectionAliasAssociationAssociationStatus associationStatus,
-        @OutputCustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("associatedAccountId") @Nullable String associatedAccountId,
+        @CustomType.Parameter("associationStatus") @Nullable ConnectionAliasAssociationAssociationStatus associationStatus,
+        @CustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.associatedAccountId = associatedAccountId;
         this.associationStatus = associationStatus;
         this.connectionIdentifier = connectionIdentifier;

@@ -5,14 +5,14 @@ package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.outputs.LocationSMBMountOptions;
 import io.pulumi.awsnative.datasync.outputs.LocationSMBTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationSMBResult {
     /**
      * The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
@@ -46,15 +46,15 @@ public final class GetLocationSMBResult {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationSMBResult(
-        @OutputCustomType.Parameter("agentArns") @Nullable List<String> agentArns,
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
-        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
-        @OutputCustomType.Parameter("mountOptions") @Nullable LocationSMBMountOptions mountOptions,
-        @OutputCustomType.Parameter("tags") @Nullable List<LocationSMBTag> tags,
-        @OutputCustomType.Parameter("user") @Nullable String user) {
+        @CustomType.Parameter("agentArns") @Nullable List<String> agentArns,
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("locationArn") @Nullable String locationArn,
+        @CustomType.Parameter("locationUri") @Nullable String locationUri,
+        @CustomType.Parameter("mountOptions") @Nullable LocationSMBMountOptions mountOptions,
+        @CustomType.Parameter("tags") @Nullable List<LocationSMBTag> tags,
+        @CustomType.Parameter("user") @Nullable String user) {
         this.agentArns = agentArns;
         this.domain = domain;
         this.locationArn = locationArn;

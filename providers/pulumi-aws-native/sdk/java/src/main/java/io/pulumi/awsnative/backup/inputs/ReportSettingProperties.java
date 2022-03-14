@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReportSettingProperties extends io.pulumi.resources.InvokeArg
      * The Amazon Resource Names (ARNs) of the frameworks a report covers.
      * 
      */
-    @InputImport(name="frameworkArns")
+    @Import(name="frameworkArns")
       private final @Nullable List<String> frameworkArns;
 
     public List<String> getFrameworkArns() {
@@ -34,7 +34,7 @@ public final class ReportSettingProperties extends io.pulumi.resources.InvokeArg
      * Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
      * 
      */
-    @InputImport(name="reportTemplate", required=true)
+    @Import(name="reportTemplate", required=true)
       private final String reportTemplate;
 
     public String getReportTemplate() {

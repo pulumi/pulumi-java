@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanarySchedule {
     private final @Nullable String durationInSeconds;
     private final String expression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanarySchedule(
-        @OutputCustomType.Parameter("durationInSeconds") @Nullable String durationInSeconds,
-        @OutputCustomType.Parameter("expression") String expression) {
+        @CustomType.Parameter("durationInSeconds") @Nullable String durationInSeconds,
+        @CustomType.Parameter("expression") String expression) {
         this.durationInSeconds = durationInSeconds;
         this.expression = expression;
     }

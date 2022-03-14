@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.outputs.StreamingImageEncryptionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamingImageResult {
     /**
      * <p>A human-readable description of the streaming image.</p>
@@ -41,15 +41,15 @@ public final class GetStreamingImageResult {
     private final @Nullable String platform;
     private final @Nullable String streamingImageId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamingImageResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable StreamingImageEncryptionConfiguration encryptionConfiguration,
-        @OutputCustomType.Parameter("eulaIds") @Nullable List<String> eulaIds,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("owner") @Nullable String owner,
-        @OutputCustomType.Parameter("platform") @Nullable String platform,
-        @OutputCustomType.Parameter("streamingImageId") @Nullable String streamingImageId) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptionConfiguration") @Nullable StreamingImageEncryptionConfiguration encryptionConfiguration,
+        @CustomType.Parameter("eulaIds") @Nullable List<String> eulaIds,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("owner") @Nullable String owner,
+        @CustomType.Parameter("platform") @Nullable String platform,
+        @CustomType.Parameter("streamingImageId") @Nullable String streamingImageId) {
         this.description = description;
         this.encryptionConfiguration = encryptionConfiguration;
         this.eulaIds = eulaIds;

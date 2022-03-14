@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.transfer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowStepDeleteStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
@@ -17,8 +17,8 @@ public final class WorkflowStepDeleteStepDetailsProperties {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private WorkflowStepDeleteStepDetailsProperties(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private WorkflowStepDeleteStepDetailsProperties(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

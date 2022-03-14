@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class WirelessDeviceOtaaV11 extends io.pulumi.resources.InvokeArgs 
 
     public static final WirelessDeviceOtaaV11 Empty = new WirelessDeviceOtaaV11();
 
-    @InputImport(name="appKey", required=true)
+    @Import(name="appKey", required=true)
       private final String appKey;
 
     public String getAppKey() {
         return this.appKey;
     }
 
-    @InputImport(name="joinEui", required=true)
+    @Import(name="joinEui", required=true)
       private final String joinEui;
 
     public String getJoinEui() {
         return this.joinEui;
     }
 
-    @InputImport(name="nwkKey", required=true)
+    @Import(name="nwkKey", required=true)
       private final String nwkKey;
 
     public String getNwkKey() {

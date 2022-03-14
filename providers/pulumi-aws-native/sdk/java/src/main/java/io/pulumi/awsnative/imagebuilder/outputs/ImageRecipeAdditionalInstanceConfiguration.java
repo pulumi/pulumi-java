@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeSystemsManagerAgent;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageRecipeAdditionalInstanceConfiguration {
     /**
      * Contains settings for the SSM agent on your build instance.
@@ -23,10 +23,10 @@ public final class ImageRecipeAdditionalInstanceConfiguration {
      */
     private final @Nullable String userDataOverride;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageRecipeAdditionalInstanceConfiguration(
-        @OutputCustomType.Parameter("systemsManagerAgent") @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent,
-        @OutputCustomType.Parameter("userDataOverride") @Nullable String userDataOverride) {
+        @CustomType.Parameter("systemsManagerAgent") @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent,
+        @CustomType.Parameter("userDataOverride") @Nullable String userDataOverride) {
         this.systemsManagerAgent = systemsManagerAgent;
         this.userDataOverride = userDataOverride;
     }

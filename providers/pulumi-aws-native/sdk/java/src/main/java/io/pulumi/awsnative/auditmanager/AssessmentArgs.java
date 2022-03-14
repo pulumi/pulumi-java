@@ -10,7 +10,7 @@ import io.pulumi.awsnative.auditmanager.inputs.AssessmentRoleArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentScopeArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,35 +21,35 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssessmentArgs Empty = new AssessmentArgs();
 
-    @InputImport(name="assessmentReportsDestination")
+    @Import(name="assessmentReportsDestination")
       private final @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination;
 
     public Output<AssessmentReportsDestinationArgs> getAssessmentReportsDestination() {
         return this.assessmentReportsDestination == null ? Output.empty() : this.assessmentReportsDestination;
     }
 
-    @InputImport(name="awsAccount")
+    @Import(name="awsAccount")
       private final @Nullable Output<AssessmentAWSAccountArgs> awsAccount;
 
     public Output<AssessmentAWSAccountArgs> getAwsAccount() {
         return this.awsAccount == null ? Output.empty() : this.awsAccount;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="frameworkId")
+    @Import(name="frameworkId")
       private final @Nullable Output<String> frameworkId;
 
     public Output<String> getFrameworkId() {
         return this.frameworkId == null ? Output.empty() : this.frameworkId;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -60,21 +60,21 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * The list of roles for the specified assessment.
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<AssessmentRoleArgs>> roles;
 
     public Output<List<AssessmentRoleArgs>> getRoles() {
         return this.roles == null ? Output.empty() : this.roles;
     }
 
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<AssessmentScopeArgs> scope;
 
     public Output<AssessmentScopeArgs> getScope() {
         return this.scope == null ? Output.empty() : this.scope;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<AssessmentStatus> status;
 
     public Output<AssessmentStatus> getStatus() {
@@ -85,7 +85,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * The tags associated with the assessment.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AssessmentTagArgs>> tags;
 
     public Output<List<AssessmentTagArgs>> getTags() {

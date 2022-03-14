@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.TemplateErrorType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TemplateError {
     /**
      * <p>Description of the error type.</p>
@@ -19,10 +19,10 @@ public final class TemplateError {
     private final @Nullable String message;
     private final @Nullable TemplateErrorType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateError(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("type") @Nullable TemplateErrorType type) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("type") @Nullable TemplateErrorType type) {
         this.message = message;
         this.type = type;
     }

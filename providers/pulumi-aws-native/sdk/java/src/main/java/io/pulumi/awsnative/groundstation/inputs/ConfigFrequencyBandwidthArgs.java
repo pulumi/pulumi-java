@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigBandwidthUnits;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ConfigFrequencyBandwidthArgs extends io.pulumi.resources.Reso
 
     public static final ConfigFrequencyBandwidthArgs Empty = new ConfigFrequencyBandwidthArgs();
 
-    @InputImport(name="units")
+    @Import(name="units")
       private final @Nullable Output<ConfigBandwidthUnits> units;
 
     public Output<ConfigBandwidthUnits> getUnits() {
         return this.units == null ? Output.empty() : this.units;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {

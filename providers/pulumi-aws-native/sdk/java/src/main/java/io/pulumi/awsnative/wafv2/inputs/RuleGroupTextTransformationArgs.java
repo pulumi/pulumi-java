@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupTextTransformationType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,14 +18,14 @@ public final class RuleGroupTextTransformationArgs extends io.pulumi.resources.R
 
     public static final RuleGroupTextTransformationArgs Empty = new RuleGroupTextTransformationArgs();
 
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
         return this.priority;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<RuleGroupTextTransformationType> type;
 
     public Output<RuleGroupTextTransformationType> getType() {

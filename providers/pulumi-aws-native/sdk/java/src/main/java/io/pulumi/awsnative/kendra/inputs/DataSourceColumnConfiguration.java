@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class DataSourceColumnConfiguration extends io.pulumi.resources.Inv
 
     public static final DataSourceColumnConfiguration Empty = new DataSourceColumnConfiguration();
 
-    @InputImport(name="changeDetectingColumns", required=true)
+    @Import(name="changeDetectingColumns", required=true)
       private final List<String> changeDetectingColumns;
 
     public List<String> getChangeDetectingColumns() {
         return this.changeDetectingColumns;
     }
 
-    @InputImport(name="documentDataColumnName", required=true)
+    @Import(name="documentDataColumnName", required=true)
       private final String documentDataColumnName;
 
     public String getDocumentDataColumnName() {
         return this.documentDataColumnName;
     }
 
-    @InputImport(name="documentIdColumnName", required=true)
+    @Import(name="documentIdColumnName", required=true)
       private final String documentIdColumnName;
 
     public String getDocumentIdColumnName() {
         return this.documentIdColumnName;
     }
 
-    @InputImport(name="documentTitleColumnName")
+    @Import(name="documentTitleColumnName")
       private final @Nullable String documentTitleColumnName;
 
     public Optional<String> getDocumentTitleColumnName() {
         return this.documentTitleColumnName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleColumnName);
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {

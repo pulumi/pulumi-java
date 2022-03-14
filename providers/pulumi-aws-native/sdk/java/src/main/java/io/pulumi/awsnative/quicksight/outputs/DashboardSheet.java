@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardSheet {
     /**
      * <p>The name of a sheet. This name is displayed on the sheet's tab in the QuickSight
@@ -23,10 +23,10 @@ public final class DashboardSheet {
      */
     private final @Nullable String sheetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardSheet(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sheetId") @Nullable String sheetId) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sheetId") @Nullable String sheetId) {
         this.name = name;
         this.sheetId = sheetId;
     }

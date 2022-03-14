@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainEndpointOptions {
     private final @Nullable String customEndpoint;
     private final @Nullable String customEndpointCertificateArn;
@@ -18,13 +18,13 @@ public final class DomainEndpointOptions {
     private final @Nullable Boolean enforceHTTPS;
     private final @Nullable String tLSSecurityPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainEndpointOptions(
-        @OutputCustomType.Parameter("customEndpoint") @Nullable String customEndpoint,
-        @OutputCustomType.Parameter("customEndpointCertificateArn") @Nullable String customEndpointCertificateArn,
-        @OutputCustomType.Parameter("customEndpointEnabled") @Nullable Boolean customEndpointEnabled,
-        @OutputCustomType.Parameter("enforceHTTPS") @Nullable Boolean enforceHTTPS,
-        @OutputCustomType.Parameter("tLSSecurityPolicy") @Nullable String tLSSecurityPolicy) {
+        @CustomType.Parameter("customEndpoint") @Nullable String customEndpoint,
+        @CustomType.Parameter("customEndpointCertificateArn") @Nullable String customEndpointCertificateArn,
+        @CustomType.Parameter("customEndpointEnabled") @Nullable Boolean customEndpointEnabled,
+        @CustomType.Parameter("enforceHTTPS") @Nullable Boolean enforceHTTPS,
+        @CustomType.Parameter("tLSSecurityPolicy") @Nullable String tLSSecurityPolicy) {
         this.customEndpoint = customEndpoint;
         this.customEndpointCertificateArn = customEndpointCertificateArn;
         this.customEndpointEnabled = customEndpointEnabled;

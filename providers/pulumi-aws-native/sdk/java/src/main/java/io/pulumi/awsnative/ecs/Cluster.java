@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ecs.outputs.ClusterConfiguration;
 import io.pulumi.awsnative.ecs.outputs.ClusterSettings;
 import io.pulumi.awsnative.ecs.outputs.ClusterTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Amazon ECS cluster, such as arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -36,7 +36,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="capacityProviders", type=List.class, parameters={String.class})
+    @Export(name="capacityProviders", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> capacityProviders;
 
     public Output</* @Nullable */ List<String>> getCapacityProviders() {
@@ -46,7 +46,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
      * 
      */
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterName;
 
     /**
@@ -56,25 +56,25 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getClusterName() {
         return this.clusterName;
     }
-    @OutputExport(name="clusterSettings", type=List.class, parameters={ClusterSettings.class})
+    @Export(name="clusterSettings", type=List.class, parameters={ClusterSettings.class})
     private Output</* @Nullable */ List<ClusterSettings>> clusterSettings;
 
     public Output</* @Nullable */ List<ClusterSettings>> getClusterSettings() {
         return this.clusterSettings;
     }
-    @OutputExport(name="configuration", type=ClusterConfiguration.class, parameters={})
+    @Export(name="configuration", type=ClusterConfiguration.class, parameters={})
     private Output</* @Nullable */ ClusterConfiguration> configuration;
 
     public Output</* @Nullable */ ClusterConfiguration> getConfiguration() {
         return this.configuration;
     }
-    @OutputExport(name="defaultCapacityProviderStrategy", type=List.class, parameters={ClusterCapacityProviderStrategyItem.class})
+    @Export(name="defaultCapacityProviderStrategy", type=List.class, parameters={ClusterCapacityProviderStrategyItem.class})
     private Output</* @Nullable */ List<ClusterCapacityProviderStrategyItem>> defaultCapacityProviderStrategy;
 
     public Output</* @Nullable */ List<ClusterCapacityProviderStrategyItem>> getDefaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ClusterTag.class})
+    @Export(name="tags", type=List.class, parameters={ClusterTag.class})
     private Output</* @Nullable */ List<ClusterTag>> tags;
 
     public Output</* @Nullable */ List<ClusterTag>> getTags() {

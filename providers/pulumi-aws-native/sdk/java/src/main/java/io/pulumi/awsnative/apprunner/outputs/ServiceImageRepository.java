@@ -5,13 +5,13 @@ package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceImageRepositoryImageRepositoryType;
 import io.pulumi.awsnative.apprunner.outputs.ServiceImageConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceImageRepository {
     private final @Nullable ServiceImageConfiguration imageConfiguration;
     /**
@@ -25,11 +25,11 @@ public final class ServiceImageRepository {
      */
     private final ServiceImageRepositoryImageRepositoryType imageRepositoryType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceImageRepository(
-        @OutputCustomType.Parameter("imageConfiguration") @Nullable ServiceImageConfiguration imageConfiguration,
-        @OutputCustomType.Parameter("imageIdentifier") String imageIdentifier,
-        @OutputCustomType.Parameter("imageRepositoryType") ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
+        @CustomType.Parameter("imageConfiguration") @Nullable ServiceImageConfiguration imageConfiguration,
+        @CustomType.Parameter("imageIdentifier") String imageIdentifier,
+        @CustomType.Parameter("imageRepositoryType") ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
         this.imageConfiguration = imageConfiguration;
         this.imageIdentifier = imageIdentifier;
         this.imageRepositoryType = imageRepositoryType;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetScheduleArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetTriggeringDatasetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class DatasetTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetTriggerArgs Empty = new DatasetTriggerArgs();
 
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<DatasetScheduleArgs> schedule;
 
     public Output<DatasetScheduleArgs> getSchedule() {
         return this.schedule == null ? Output.empty() : this.schedule;
     }
 
-    @InputImport(name="triggeringDataset")
+    @Import(name="triggeringDataset")
       private final @Nullable Output<DatasetTriggeringDatasetArgs> triggeringDataset;
 
     public Output<DatasetTriggeringDatasetArgs> getTriggeringDataset() {

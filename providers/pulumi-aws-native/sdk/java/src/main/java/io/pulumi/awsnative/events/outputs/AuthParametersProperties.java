@@ -7,24 +7,24 @@ import io.pulumi.awsnative.events.outputs.ConnectionApiKeyAuthParameters;
 import io.pulumi.awsnative.events.outputs.ConnectionBasicAuthParameters;
 import io.pulumi.awsnative.events.outputs.ConnectionHttpParameters;
 import io.pulumi.awsnative.events.outputs.ConnectionOAuthParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthParametersProperties {
     private final @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters;
     private final @Nullable ConnectionBasicAuthParameters basicAuthParameters;
     private final @Nullable ConnectionHttpParameters invocationHttpParameters;
     private final @Nullable ConnectionOAuthParameters oAuthParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthParametersProperties(
-        @OutputCustomType.Parameter("apiKeyAuthParameters") @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters,
-        @OutputCustomType.Parameter("basicAuthParameters") @Nullable ConnectionBasicAuthParameters basicAuthParameters,
-        @OutputCustomType.Parameter("invocationHttpParameters") @Nullable ConnectionHttpParameters invocationHttpParameters,
-        @OutputCustomType.Parameter("oAuthParameters") @Nullable ConnectionOAuthParameters oAuthParameters) {
+        @CustomType.Parameter("apiKeyAuthParameters") @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters,
+        @CustomType.Parameter("basicAuthParameters") @Nullable ConnectionBasicAuthParameters basicAuthParameters,
+        @CustomType.Parameter("invocationHttpParameters") @Nullable ConnectionHttpParameters invocationHttpParameters,
+        @CustomType.Parameter("oAuthParameters") @Nullable ConnectionOAuthParameters oAuthParameters) {
         this.apiKeyAuthParameters = apiKeyAuthParameters;
         this.basicAuthParameters = basicAuthParameters;
         this.invocationHttpParameters = invocationHttpParameters;

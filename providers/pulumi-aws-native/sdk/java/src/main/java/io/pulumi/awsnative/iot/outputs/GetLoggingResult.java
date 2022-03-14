@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLoggingResult {
     /**
      * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
@@ -23,10 +23,10 @@ public final class GetLoggingResult {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoggingResult(
-        @OutputCustomType.Parameter("defaultLogLevel") @Nullable LoggingDefaultLogLevel defaultLogLevel,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("defaultLogLevel") @Nullable LoggingDefaultLogLevel defaultLogLevel,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.defaultLogLevel = defaultLogLevel;
         this.roleArn = roleArn;
     }

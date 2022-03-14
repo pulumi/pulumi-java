@@ -5,14 +5,14 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotFulfillmentStartResponseSpecification;
 import io.pulumi.awsnative.lex.outputs.BotFulfillmentUpdateResponseSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotFulfillmentUpdatesSpecification {
     /**
      * Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
@@ -27,12 +27,12 @@ public final class BotFulfillmentUpdatesSpecification {
     private final @Nullable Integer timeoutInSeconds;
     private final @Nullable BotFulfillmentUpdateResponseSpecification updateResponse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotFulfillmentUpdatesSpecification(
-        @OutputCustomType.Parameter("active") Boolean active,
-        @OutputCustomType.Parameter("startResponse") @Nullable BotFulfillmentStartResponseSpecification startResponse,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
-        @OutputCustomType.Parameter("updateResponse") @Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
+        @CustomType.Parameter("active") Boolean active,
+        @CustomType.Parameter("startResponse") @Nullable BotFulfillmentStartResponseSpecification startResponse,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
+        @CustomType.Parameter("updateResponse") @Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
         this.active = active;
         this.startResponse = startResponse;
         this.timeoutInSeconds = timeoutInSeconds;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.eks;
 import io.pulumi.awsnative.eks.inputs.FargateProfileSelectorArgs;
 import io.pulumi.awsnative.eks.inputs.FargateProfileTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Cluster
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -32,7 +32,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Name of FargateProfile
      * 
      */
-    @InputImport(name="fargateProfileName")
+    @Import(name="fargateProfileName")
       private final @Nullable Output<String> fargateProfileName;
 
     public Output<String> getFargateProfileName() {
@@ -43,21 +43,21 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The IAM policy arn for pods
      * 
      */
-    @InputImport(name="podExecutionRoleArn", required=true)
+    @Import(name="podExecutionRoleArn", required=true)
       private final Output<String> podExecutionRoleArn;
 
     public Output<String> getPodExecutionRoleArn() {
         return this.podExecutionRoleArn;
     }
 
-    @InputImport(name="selectors", required=true)
+    @Import(name="selectors", required=true)
       private final Output<List<FargateProfileSelectorArgs>> selectors;
 
     public Output<List<FargateProfileSelectorArgs>> getSelectors() {
         return this.selectors;
     }
 
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable Output<List<String>> subnets;
 
     public Output<List<String>> getSubnets() {
@@ -68,7 +68,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FargateProfileTagArgs>> tags;
 
     public Output<List<FargateProfileTagArgs>> getTags() {

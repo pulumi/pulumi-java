@@ -13,14 +13,14 @@ import io.pulumi.awsnative.lex.outputs.BotOutputContext;
 import io.pulumi.awsnative.lex.outputs.BotSampleUtterance;
 import io.pulumi.awsnative.lex.outputs.BotSlot;
 import io.pulumi.awsnative.lex.outputs.BotSlotPriority;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotIntent {
     private final @Nullable String description;
     private final @Nullable BotDialogCodeHookSetting dialogCodeHook;
@@ -40,21 +40,21 @@ public final class BotIntent {
      */
     private final @Nullable List<BotSlot> slots;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotIntent(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("dialogCodeHook") @Nullable BotDialogCodeHookSetting dialogCodeHook,
-        @OutputCustomType.Parameter("fulfillmentCodeHook") @Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook,
-        @OutputCustomType.Parameter("inputContexts") @Nullable List<BotInputContext> inputContexts,
-        @OutputCustomType.Parameter("intentClosingSetting") @Nullable BotIntentClosingSetting intentClosingSetting,
-        @OutputCustomType.Parameter("intentConfirmationSetting") @Nullable BotIntentConfirmationSetting intentConfirmationSetting,
-        @OutputCustomType.Parameter("kendraConfiguration") @Nullable BotKendraConfiguration kendraConfiguration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputContexts") @Nullable List<BotOutputContext> outputContexts,
-        @OutputCustomType.Parameter("parentIntentSignature") @Nullable String parentIntentSignature,
-        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<BotSampleUtterance> sampleUtterances,
-        @OutputCustomType.Parameter("slotPriorities") @Nullable List<BotSlotPriority> slotPriorities,
-        @OutputCustomType.Parameter("slots") @Nullable List<BotSlot> slots) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("dialogCodeHook") @Nullable BotDialogCodeHookSetting dialogCodeHook,
+        @CustomType.Parameter("fulfillmentCodeHook") @Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook,
+        @CustomType.Parameter("inputContexts") @Nullable List<BotInputContext> inputContexts,
+        @CustomType.Parameter("intentClosingSetting") @Nullable BotIntentClosingSetting intentClosingSetting,
+        @CustomType.Parameter("intentConfirmationSetting") @Nullable BotIntentConfirmationSetting intentConfirmationSetting,
+        @CustomType.Parameter("kendraConfiguration") @Nullable BotKendraConfiguration kendraConfiguration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputContexts") @Nullable List<BotOutputContext> outputContexts,
+        @CustomType.Parameter("parentIntentSignature") @Nullable String parentIntentSignature,
+        @CustomType.Parameter("sampleUtterances") @Nullable List<BotSampleUtterance> sampleUtterances,
+        @CustomType.Parameter("slotPriorities") @Nullable List<BotSlotPriority> slotPriorities,
+        @CustomType.Parameter("slots") @Nullable List<BotSlot> slots) {
         this.description = description;
         this.dialogCodeHook = dialogCodeHook;
         this.fulfillmentCodeHook = fulfillmentCodeHook;

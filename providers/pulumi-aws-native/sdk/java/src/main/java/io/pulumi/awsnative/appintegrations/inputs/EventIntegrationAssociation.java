@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appintegrations.inputs;
 
 import io.pulumi.awsnative.appintegrations.inputs.EventIntegrationMetadata;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * The metadata associated with the client.
      * 
      */
-    @InputImport(name="clientAssociationMetadata")
+    @Import(name="clientAssociationMetadata")
       private final @Nullable List<EventIntegrationMetadata> clientAssociationMetadata;
 
     public List<EventIntegrationMetadata> getClientAssociationMetadata() {
@@ -31,7 +31,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * The identifier for the client that is associated with the event integration.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -42,7 +42,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * The name of the Eventbridge rule.
      * 
      */
-    @InputImport(name="eventBridgeRuleName")
+    @Import(name="eventBridgeRuleName")
       private final @Nullable String eventBridgeRuleName;
 
     public Optional<String> getEventBridgeRuleName() {
@@ -53,7 +53,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * The Amazon Resource Name (ARN) for the event integration association.
      * 
      */
-    @InputImport(name="eventIntegrationAssociationArn")
+    @Import(name="eventIntegrationAssociationArn")
       private final @Nullable String eventIntegrationAssociationArn;
 
     public Optional<String> getEventIntegrationAssociationArn() {
@@ -64,7 +64,7 @@ public final class EventIntegrationAssociation extends io.pulumi.resources.Invok
      * The identifier for the event integration association.
      * 
      */
-    @InputImport(name="eventIntegrationAssociationId")
+    @Import(name="eventIntegrationAssociationId")
       private final @Nullable String eventIntegrationAssociationId;
 
     public Optional<String> getEventIntegrationAssociationId() {

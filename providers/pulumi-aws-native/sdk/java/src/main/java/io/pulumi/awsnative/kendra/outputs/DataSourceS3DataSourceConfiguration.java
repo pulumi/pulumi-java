@@ -5,14 +5,14 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceAccessControlListConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceDocumentsMetadataConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceS3DataSourceConfiguration {
     private final @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration;
     private final String bucketName;
@@ -21,14 +21,14 @@ public final class DataSourceS3DataSourceConfiguration {
     private final @Nullable List<String> inclusionPatterns;
     private final @Nullable List<String> inclusionPrefixes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceS3DataSourceConfiguration(
-        @OutputCustomType.Parameter("accessControlListConfiguration") @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration,
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("documentsMetadataConfiguration") @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration,
-        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
-        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
-        @OutputCustomType.Parameter("inclusionPrefixes") @Nullable List<String> inclusionPrefixes) {
+        @CustomType.Parameter("accessControlListConfiguration") @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration,
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("documentsMetadataConfiguration") @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration,
+        @CustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @CustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @CustomType.Parameter("inclusionPrefixes") @Nullable List<String> inclusionPrefixes) {
         this.accessControlListConfiguration = accessControlListConfiguration;
         this.bucketName = bucketName;
         this.documentsMetadataConfiguration = documentsMetadataConfiguration;

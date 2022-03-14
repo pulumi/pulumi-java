@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeResourceStatementRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
 
     public static final NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs Empty = new NetworkInsightsAccessScopeThroughResourcesStatementRequestArgs();
 
-    @InputImport(name="resourceStatement")
+    @Import(name="resourceStatement")
       private final @Nullable Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement;
 
     public Output<NetworkInsightsAccessScopeResourceStatementRequestArgs> getResourceStatement() {

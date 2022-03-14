@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
      * A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
      * 
      */
-    @InputImport(name="formats")
+    @Import(name="formats")
       private final @Nullable Output<List<String>> formats;
 
     public Output<List<String>> getFormats() {
@@ -34,7 +34,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
      * The unique name of the S3 bucket that receives your reports.
      * 
      */
-    @InputImport(name="s3BucketName", required=true)
+    @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
@@ -45,7 +45,7 @@ public final class ReportDeliveryChannelPropertiesArgs extends io.pulumi.resourc
      * The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3. The prefix is this part of the following path: s3://your-bucket-name/prefix/Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
      * 
      */
-    @InputImport(name="s3KeyPrefix")
+    @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {

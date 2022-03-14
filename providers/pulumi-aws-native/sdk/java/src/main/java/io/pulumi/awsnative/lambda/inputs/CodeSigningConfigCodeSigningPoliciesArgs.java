@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.enums.CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class CodeSigningConfigCodeSigningPoliciesArgs extends io.pulumi.re
      * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
      * 
      */
-    @InputImport(name="untrustedArtifactOnDeployment", required=true)
+    @Import(name="untrustedArtifactOnDeployment", required=true)
       private final Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> untrustedArtifactOnDeployment;
 
     public Output<CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment> getUntrustedArtifactOnDeployment() {

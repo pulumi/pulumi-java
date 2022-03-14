@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.location.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetTrackerConsumerArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetTrackerConsumerArgs Empty = new GetTrackerConsumerArgs();
 
-    @InputImport(name="consumerArn", required=true)
+    @Import(name="consumerArn", required=true)
       private final String consumerArn;
 
     public String getConsumerArn() {
         return this.consumerArn;
     }
 
-    @InputImport(name="trackerName", required=true)
+    @Import(name="trackerName", required=true)
       private final String trackerName;
 
     public String getTrackerName() {

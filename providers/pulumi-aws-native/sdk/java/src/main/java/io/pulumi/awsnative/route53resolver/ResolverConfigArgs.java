@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverseFlag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
      * 
      */
-    @InputImport(name="autodefinedReverseFlag", required=true)
+    @Import(name="autodefinedReverseFlag", required=true)
       private final Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
     public Output<ResolverConfigAutodefinedReverseFlag> getAutodefinedReverseFlag() {
@@ -29,7 +29,7 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
      * ResourceId
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationHANAPrometheusE
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationJMXPrometheusExporter;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLog;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEvent;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +29,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
      * A list of metrics to monitor for the component.
      * 
      */
-    @InputImport(name="alarmMetrics")
+    @Import(name="alarmMetrics")
       private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
 
     public List<ApplicationAlarmMetric> getAlarmMetrics() {
@@ -40,7 +40,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
      * A list of alarms to monitor for the component.
      * 
      */
-    @InputImport(name="alarms")
+    @Import(name="alarms")
       private final @Nullable List<ApplicationAlarm> alarms;
 
     public List<ApplicationAlarm> getAlarms() {
@@ -51,7 +51,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
      * The HA cluster Prometheus Exporter settings.
      * 
      */
-    @InputImport(name="hAClusterPrometheusExporter")
+    @Import(name="hAClusterPrometheusExporter")
       private final @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter;
 
     public Optional<ApplicationHAClusterPrometheusExporter> getHAClusterPrometheusExporter() {
@@ -62,7 +62,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
      * The HANA DB Prometheus Exporter settings.
      * 
      */
-    @InputImport(name="hANAPrometheusExporter")
+    @Import(name="hANAPrometheusExporter")
       private final @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter;
 
     public Optional<ApplicationHANAPrometheusExporter> getHANAPrometheusExporter() {
@@ -73,7 +73,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
      * The JMX Prometheus Exporter settings.
      * 
      */
-    @InputImport(name="jMXPrometheusExporter")
+    @Import(name="jMXPrometheusExporter")
       private final @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter;
 
     public Optional<ApplicationJMXPrometheusExporter> getJMXPrometheusExporter() {
@@ -84,7 +84,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
      * A list of logs to monitor for the component.
      * 
      */
-    @InputImport(name="logs")
+    @Import(name="logs")
       private final @Nullable List<ApplicationLog> logs;
 
     public List<ApplicationLog> getLogs() {
@@ -95,7 +95,7 @@ public final class ApplicationConfigurationDetails extends io.pulumi.resources.I
      * A list of Windows Events to log.
      * 
      */
-    @InputImport(name="windowsEvents")
+    @Import(name="windowsEvents")
       private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
     public List<ApplicationWindowsEvent> getWindowsEvents() {

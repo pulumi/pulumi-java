@@ -12,7 +12,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupRule;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupTag;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupVisibilityConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:wafv2:RuleGroup")
 public class RuleGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * Collection of Available Labels.
      * 
      */
-    @OutputExport(name="availableLabels", type=List.class, parameters={RuleGroupLabelSummary.class})
+    @Export(name="availableLabels", type=List.class, parameters={RuleGroupLabelSummary.class})
     private Output<List<RuleGroupLabelSummary>> availableLabels;
 
     /**
@@ -45,7 +45,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
     public Output<List<RuleGroupLabelSummary>> getAvailableLabels() {
         return this.availableLabels;
     }
-    @OutputExport(name="capacity", type=Integer.class, parameters={})
+    @Export(name="capacity", type=Integer.class, parameters={})
     private Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -55,7 +55,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * Collection of Consumed Labels.
      * 
      */
-    @OutputExport(name="consumedLabels", type=List.class, parameters={RuleGroupLabelSummary.class})
+    @Export(name="consumedLabels", type=List.class, parameters={RuleGroupLabelSummary.class})
     private Output<List<RuleGroupLabelSummary>> consumedLabels;
 
     /**
@@ -65,25 +65,25 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
     public Output<List<RuleGroupLabelSummary>> getConsumedLabels() {
         return this.consumedLabels;
     }
-    @OutputExport(name="customResponseBodies", type=RuleGroupCustomResponseBodies.class, parameters={})
+    @Export(name="customResponseBodies", type=RuleGroupCustomResponseBodies.class, parameters={})
     private Output</* @Nullable */ RuleGroupCustomResponseBodies> customResponseBodies;
 
     public Output</* @Nullable */ RuleGroupCustomResponseBodies> getCustomResponseBodies() {
         return this.customResponseBodies;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="labelNamespace", type=String.class, parameters={})
+    @Export(name="labelNamespace", type=String.class, parameters={})
     private Output<String> labelNamespace;
 
     public Output<String> getLabelNamespace() {
         return this.labelNamespace;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
@@ -93,7 +93,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * Collection of Rules.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={RuleGroupRule.class})
+    @Export(name="rules", type=List.class, parameters={RuleGroupRule.class})
     private Output</* @Nullable */ List<RuleGroupRule>> rules;
 
     /**
@@ -103,19 +103,19 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<RuleGroupRule>> getRules() {
         return this.rules;
     }
-    @OutputExport(name="scope", type=RuleGroupScope.class, parameters={})
+    @Export(name="scope", type=RuleGroupScope.class, parameters={})
     private Output<RuleGroupScope> scope;
 
     public Output<RuleGroupScope> getScope() {
         return this.scope;
     }
-    @OutputExport(name="tags", type=List.class, parameters={RuleGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={RuleGroupTag.class})
     private Output</* @Nullable */ List<RuleGroupTag>> tags;
 
     public Output</* @Nullable */ List<RuleGroupTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="visibilityConfig", type=RuleGroupVisibilityConfig.class, parameters={})
+    @Export(name="visibilityConfig", type=RuleGroupVisibilityConfig.class, parameters={})
     private Output<RuleGroupVisibilityConfig> visibilityConfig;
 
     public Output<RuleGroupVisibilityConfig> getVisibilityConfig() {

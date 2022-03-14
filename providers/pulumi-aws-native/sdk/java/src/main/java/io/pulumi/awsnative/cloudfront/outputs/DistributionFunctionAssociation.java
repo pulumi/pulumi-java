@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionFunctionAssociation {
     private final @Nullable String eventType;
     private final @Nullable String functionARN;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionFunctionAssociation(
-        @OutputCustomType.Parameter("eventType") @Nullable String eventType,
-        @OutputCustomType.Parameter("functionARN") @Nullable String functionARN) {
+        @CustomType.Parameter("eventType") @Nullable String eventType,
+        @CustomType.Parameter("functionARN") @Nullable String functionARN) {
         this.eventType = eventType;
         this.functionARN = functionARN;
     }

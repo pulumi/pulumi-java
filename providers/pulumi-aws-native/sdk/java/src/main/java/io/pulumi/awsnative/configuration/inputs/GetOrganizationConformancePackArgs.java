@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetOrganizationConformancePackArgs extends io.pulumi.resource
      * The name of the organization conformance pack.
      * 
      */
-    @InputImport(name="organizationConformancePackName", required=true)
+    @Import(name="organizationConformancePackName", required=true)
       private final String organizationConformancePackName;
 
     public String getOrganizationConformancePackName() {

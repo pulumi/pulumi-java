@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLImmunityTimeProperty {
     private final Integer immunityTime;
 
-    @OutputCustomType.Constructor
-    private WebACLImmunityTimeProperty(@OutputCustomType.Parameter("immunityTime") Integer immunityTime) {
+    @CustomType.Constructor
+    private WebACLImmunityTimeProperty(@CustomType.Parameter("immunityTime") Integer immunityTime) {
         this.immunityTime = immunityTime;
     }
 

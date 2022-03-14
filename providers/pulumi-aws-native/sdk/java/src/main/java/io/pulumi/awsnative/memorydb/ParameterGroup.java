@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.memorydb.ParameterGroupArgs;
 import io.pulumi.awsnative.memorydb.outputs.ParameterGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the parameter group.
      * 
      */
-    @OutputExport(name="aRN", type=String.class, parameters={})
+    @Export(name="aRN", type=String.class, parameters={})
     private Output<String> aRN;
 
     /**
@@ -38,7 +38,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * A description of the parameter group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The name of the parameter group family that this parameter group is compatible with.
      * 
      */
-    @OutputExport(name="family", type=String.class, parameters={})
+    @Export(name="family", type=String.class, parameters={})
     private Output<String> family;
 
     /**
@@ -66,7 +66,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The name of the parameter group.
      * 
      */
-    @OutputExport(name="parameterGroupName", type=String.class, parameters={})
+    @Export(name="parameterGroupName", type=String.class, parameters={})
     private Output<String> parameterGroupName;
 
     /**
@@ -80,7 +80,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
      * 
      */
-    @OutputExport(name="parameters", type=Object.class, parameters={})
+    @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
@@ -94,7 +94,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this parameter group.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ParameterGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={ParameterGroupTag.class})
     private Output</* @Nullable */ List<ParameterGroupTag>> tags;
 
     /**

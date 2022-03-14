@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew;
 import io.pulumi.awsnative.databrew.inputs.RulesetRuleArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the Ruleset
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Ruleset
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,14 +43,14 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * List of the data quality rules in the ruleset
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final Output<List<RulesetRuleArgs>> rules;
 
     public Output<List<RulesetRuleArgs>> getRules() {
         return this.rules;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RulesetTagArgs>> tags;
 
     public Output<List<RulesetTagArgs>> getTags() {
@@ -61,7 +61,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * Arn of the target resource (dataset) to apply the ruleset to
      * 
      */
-    @InputImport(name="targetArn", required=true)
+    @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
     public Output<String> getTargetArn() {

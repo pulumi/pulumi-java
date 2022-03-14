@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.outputs;
 import io.pulumi.awsnative.ec2.enums.PrefixListAddressFamily;
 import io.pulumi.awsnative.ec2.outputs.PrefixListEntry;
 import io.pulumi.awsnative.ec2.outputs.PrefixListTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrefixListResult {
     /**
      * Ip Version of Prefix List.
@@ -62,17 +62,17 @@ public final class GetPrefixListResult {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrefixListResult(
-        @OutputCustomType.Parameter("addressFamily") @Nullable PrefixListAddressFamily addressFamily,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("entries") @Nullable List<PrefixListEntry> entries,
-        @OutputCustomType.Parameter("maxEntries") @Nullable Integer maxEntries,
-        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
-        @OutputCustomType.Parameter("prefixListId") @Nullable String prefixListId,
-        @OutputCustomType.Parameter("prefixListName") @Nullable String prefixListName,
-        @OutputCustomType.Parameter("tags") @Nullable List<PrefixListTag> tags,
-        @OutputCustomType.Parameter("version") @Nullable Integer version) {
+        @CustomType.Parameter("addressFamily") @Nullable PrefixListAddressFamily addressFamily,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("entries") @Nullable List<PrefixListEntry> entries,
+        @CustomType.Parameter("maxEntries") @Nullable Integer maxEntries,
+        @CustomType.Parameter("ownerId") @Nullable String ownerId,
+        @CustomType.Parameter("prefixListId") @Nullable String prefixListId,
+        @CustomType.Parameter("prefixListName") @Nullable String prefixListName,
+        @CustomType.Parameter("tags") @Nullable List<PrefixListTag> tags,
+        @CustomType.Parameter("version") @Nullable Integer version) {
         this.addressFamily = addressFamily;
         this.arn = arn;
         this.entries = entries;

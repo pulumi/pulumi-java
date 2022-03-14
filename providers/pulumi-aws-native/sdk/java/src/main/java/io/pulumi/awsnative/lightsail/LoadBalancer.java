@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lightsail.LoadBalancerArgs;
 import io.pulumi.awsnative.lightsail.outputs.LoadBalancerTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The names of the instances attached to the load balancer.
      * 
      */
-    @OutputExport(name="attachedInstances", type=List.class, parameters={String.class})
+    @Export(name="attachedInstances", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> attachedInstances;
 
     /**
@@ -39,7 +39,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The path you provided to perform the load balancer health check. If you didn't specify a health check path, Lightsail uses the root path of your website (e.g., "/").
      * 
      */
-    @OutputExport(name="healthCheckPath", type=String.class, parameters={})
+    @Export(name="healthCheckPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthCheckPath;
 
     /**
@@ -53,7 +53,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The instance port where you're creating your load balancer.
      * 
      */
-    @OutputExport(name="instancePort", type=Integer.class, parameters={})
+    @Export(name="instancePort", type=Integer.class, parameters={})
     private Output<Integer> instancePort;
 
     /**
@@ -67,7 +67,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The IP address type for the load balancer. The possible values are ipv4 for IPv4 only, and dualstack for IPv4 and IPv6. The default value is dualstack.
      * 
      */
-    @OutputExport(name="ipAddressType", type=String.class, parameters={})
+    @Export(name="ipAddressType", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddressType;
 
     /**
@@ -77,7 +77,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getIpAddressType() {
         return this.ipAddressType;
     }
-    @OutputExport(name="loadBalancerArn", type=String.class, parameters={})
+    @Export(name="loadBalancerArn", type=String.class, parameters={})
     private Output<String> loadBalancerArn;
 
     public Output<String> getLoadBalancerArn() {
@@ -87,7 +87,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The name of your load balancer.
      * 
      */
-    @OutputExport(name="loadBalancerName", type=String.class, parameters={})
+    @Export(name="loadBalancerName", type=String.class, parameters={})
     private Output<String> loadBalancerName;
 
     /**
@@ -101,7 +101,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Configuration option to enable session stickiness.
      * 
      */
-    @OutputExport(name="sessionStickinessEnabled", type=Boolean.class, parameters={})
+    @Export(name="sessionStickinessEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sessionStickinessEnabled;
 
     /**
@@ -115,7 +115,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Configuration option to adjust session stickiness cookie duration parameter.
      * 
      */
-    @OutputExport(name="sessionStickinessLBCookieDurationSeconds", type=String.class, parameters={})
+    @Export(name="sessionStickinessLBCookieDurationSeconds", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionStickinessLBCookieDurationSeconds;
 
     /**
@@ -129,7 +129,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LoadBalancerTag.class})
+    @Export(name="tags", type=List.class, parameters={LoadBalancerTag.class})
     private Output</* @Nullable */ List<LoadBalancerTag>> tags;
 
     /**

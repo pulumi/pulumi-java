@@ -5,20 +5,20 @@ package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetNLBResource;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetR53ResourceRecord;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSetTargetResource {
     private final @Nullable ResourceSetNLBResource nLBResource;
     private final @Nullable ResourceSetR53ResourceRecord r53Resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceSetTargetResource(
-        @OutputCustomType.Parameter("nLBResource") @Nullable ResourceSetNLBResource nLBResource,
-        @OutputCustomType.Parameter("r53Resource") @Nullable ResourceSetR53ResourceRecord r53Resource) {
+        @CustomType.Parameter("nLBResource") @Nullable ResourceSetNLBResource nLBResource,
+        @CustomType.Parameter("r53Resource") @Nullable ResourceSetR53ResourceRecord r53Resource) {
         this.nLBResource = nLBResource;
         this.r53Resource = r53Resource;
     }

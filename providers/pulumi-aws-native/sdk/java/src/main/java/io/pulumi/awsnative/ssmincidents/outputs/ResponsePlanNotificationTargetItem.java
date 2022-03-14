@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.ssmincidents.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponsePlanNotificationTargetItem {
     private final @Nullable String snsTopicArn;
 
-    @OutputCustomType.Constructor
-    private ResponsePlanNotificationTargetItem(@OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn) {
+    @CustomType.Constructor
+    private ResponsePlanNotificationTargetItem(@CustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
     }
 

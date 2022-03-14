@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class PackagingConfigurationCmafEncryptionArgs extends io.pulumi.re
 
     public static final PackagingConfigurationCmafEncryptionArgs Empty = new PackagingConfigurationCmafEncryptionArgs();
 
-    @InputImport(name="spekeKeyProvider", required=true)
+    @Import(name="spekeKeyProvider", required=true)
       private final Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceKnowledgeArticleCon
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardObjectAttachmentConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardObjectConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,63 +20,63 @@ public final class DataSourceSalesforceConfigurationArgs extends io.pulumi.resou
 
     public static final DataSourceSalesforceConfigurationArgs Empty = new DataSourceSalesforceConfigurationArgs();
 
-    @InputImport(name="chatterFeedConfiguration")
+    @Import(name="chatterFeedConfiguration")
       private final @Nullable Output<DataSourceSalesforceChatterFeedConfigurationArgs> chatterFeedConfiguration;
 
     public Output<DataSourceSalesforceChatterFeedConfigurationArgs> getChatterFeedConfiguration() {
         return this.chatterFeedConfiguration == null ? Output.empty() : this.chatterFeedConfiguration;
     }
 
-    @InputImport(name="crawlAttachments")
+    @Import(name="crawlAttachments")
       private final @Nullable Output<Boolean> crawlAttachments;
 
     public Output<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Output.empty() : this.crawlAttachments;
     }
 
-    @InputImport(name="excludeAttachmentFilePatterns")
+    @Import(name="excludeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> excludeAttachmentFilePatterns;
 
     public Output<List<String>> getExcludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? Output.empty() : this.excludeAttachmentFilePatterns;
     }
 
-    @InputImport(name="includeAttachmentFilePatterns")
+    @Import(name="includeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> includeAttachmentFilePatterns;
 
     public Output<List<String>> getIncludeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? Output.empty() : this.includeAttachmentFilePatterns;
     }
 
-    @InputImport(name="knowledgeArticleConfiguration")
+    @Import(name="knowledgeArticleConfiguration")
       private final @Nullable Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
 
     public Output<DataSourceSalesforceKnowledgeArticleConfigurationArgs> getKnowledgeArticleConfiguration() {
         return this.knowledgeArticleConfiguration == null ? Output.empty() : this.knowledgeArticleConfiguration;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
-    @InputImport(name="serverUrl", required=true)
+    @Import(name="serverUrl", required=true)
       private final Output<String> serverUrl;
 
     public Output<String> getServerUrl() {
         return this.serverUrl;
     }
 
-    @InputImport(name="standardObjectAttachmentConfiguration")
+    @Import(name="standardObjectAttachmentConfiguration")
       private final @Nullable Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> standardObjectAttachmentConfiguration;
 
     public Output<DataSourceSalesforceStandardObjectAttachmentConfigurationArgs> getStandardObjectAttachmentConfiguration() {
         return this.standardObjectAttachmentConfiguration == null ? Output.empty() : this.standardObjectAttachmentConfiguration;
     }
 
-    @InputImport(name="standardObjectConfigurations")
+    @Import(name="standardObjectConfigurations")
       private final @Nullable Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> standardObjectConfigurations;
 
     public Output<List<DataSourceSalesforceStandardObjectConfigurationArgs>> getStandardObjectConfigurations() {

@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationNFSMountOptionsVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocationNFSMountOptions {
     /**
      * The specific NFS version that you want DataSync to use to mount your NFS share.
@@ -17,8 +17,8 @@ public final class LocationNFSMountOptions {
      */
     private final @Nullable LocationNFSMountOptionsVersion version;
 
-    @OutputCustomType.Constructor
-    private LocationNFSMountOptions(@OutputCustomType.Parameter("version") @Nullable LocationNFSMountOptionsVersion version) {
+    @CustomType.Constructor
+    private LocationNFSMountOptions(@CustomType.Parameter("version") @Nullable LocationNFSMountOptionsVersion version) {
         this.version = version;
     }
 

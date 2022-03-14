@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConnectorOAuthRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties {
     private final @Nullable String accessToken;
     private final @Nullable String clientId;
@@ -18,13 +18,13 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCrede
     private final @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest;
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties(
-        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
-        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
+        @CustomType.Parameter("accessToken") @Nullable String accessToken,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
+        @CustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

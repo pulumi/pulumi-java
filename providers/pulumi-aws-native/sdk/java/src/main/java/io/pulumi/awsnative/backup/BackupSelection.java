@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.backup.BackupSelectionArgs;
 import io.pulumi.awsnative.backup.outputs.BackupSelectionResourceType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,19 +18,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:backup:BackupSelection")
 public class BackupSelection extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="backupPlanId", type=String.class, parameters={})
+    @Export(name="backupPlanId", type=String.class, parameters={})
     private Output<String> backupPlanId;
 
     public Output<String> getBackupPlanId() {
         return this.backupPlanId;
     }
-    @OutputExport(name="backupSelection", type=BackupSelectionResourceType.class, parameters={})
+    @Export(name="backupSelection", type=BackupSelectionResourceType.class, parameters={})
     private Output<BackupSelectionResourceType> backupSelection;
 
     public Output<BackupSelectionResourceType> getBackupSelection() {
         return this.backupSelection;
     }
-    @OutputExport(name="selectionId", type=String.class, parameters={})
+    @Export(name="selectionId", type=String.class, parameters={})
     private Output<String> selectionId;
 
     public Output<String> getSelectionId() {

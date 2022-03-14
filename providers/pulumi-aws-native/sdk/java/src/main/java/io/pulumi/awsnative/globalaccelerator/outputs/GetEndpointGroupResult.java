@@ -6,7 +6,7 @@ package io.pulumi.awsnative.globalaccelerator.outputs;
 import io.pulumi.awsnative.globalaccelerator.enums.EndpointGroupHealthCheckProtocol;
 import io.pulumi.awsnative.globalaccelerator.outputs.EndpointGroupEndpointConfiguration;
 import io.pulumi.awsnative.globalaccelerator.outputs.EndpointGroupPortOverride;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointGroupResult {
     /**
      * The list of endpoint objects.
@@ -55,17 +55,17 @@ public final class GetEndpointGroupResult {
      */
     private final @Nullable Double trafficDialPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointGroupResult(
-        @OutputCustomType.Parameter("endpointConfigurations") @Nullable List<EndpointGroupEndpointConfiguration> endpointConfigurations,
-        @OutputCustomType.Parameter("endpointGroupArn") @Nullable String endpointGroupArn,
-        @OutputCustomType.Parameter("healthCheckIntervalSeconds") @Nullable Integer healthCheckIntervalSeconds,
-        @OutputCustomType.Parameter("healthCheckPath") @Nullable String healthCheckPath,
-        @OutputCustomType.Parameter("healthCheckPort") @Nullable Integer healthCheckPort,
-        @OutputCustomType.Parameter("healthCheckProtocol") @Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol,
-        @OutputCustomType.Parameter("portOverrides") @Nullable List<EndpointGroupPortOverride> portOverrides,
-        @OutputCustomType.Parameter("thresholdCount") @Nullable Integer thresholdCount,
-        @OutputCustomType.Parameter("trafficDialPercentage") @Nullable Double trafficDialPercentage) {
+        @CustomType.Parameter("endpointConfigurations") @Nullable List<EndpointGroupEndpointConfiguration> endpointConfigurations,
+        @CustomType.Parameter("endpointGroupArn") @Nullable String endpointGroupArn,
+        @CustomType.Parameter("healthCheckIntervalSeconds") @Nullable Integer healthCheckIntervalSeconds,
+        @CustomType.Parameter("healthCheckPath") @Nullable String healthCheckPath,
+        @CustomType.Parameter("healthCheckPort") @Nullable Integer healthCheckPort,
+        @CustomType.Parameter("healthCheckProtocol") @Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol,
+        @CustomType.Parameter("portOverrides") @Nullable List<EndpointGroupPortOverride> portOverrides,
+        @CustomType.Parameter("thresholdCount") @Nullable Integer thresholdCount,
+        @CustomType.Parameter("trafficDialPercentage") @Nullable Double trafficDialPercentage) {
         this.endpointConfigurations = endpointConfigurations;
         this.endpointGroupArn = endpointGroupArn;
         this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.frauddetector.enums.VariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.VariableType;
 import io.pulumi.awsnative.frauddetector.outputs.VariableTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The ARN of the variable.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The time when the variable was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -54,7 +54,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The source of the data.
      * 
      */
-    @OutputExport(name="dataSource", type=VariableDataSource.class, parameters={})
+    @Export(name="dataSource", type=VariableDataSource.class, parameters={})
     private Output<VariableDataSource> dataSource;
 
     /**
@@ -68,7 +68,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The data type.
      * 
      */
-    @OutputExport(name="dataType", type=VariableDataType.class, parameters={})
+    @Export(name="dataType", type=VariableDataType.class, parameters={})
     private Output<VariableDataType> dataType;
 
     /**
@@ -82,7 +82,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The default value for the variable when no value is received.
      * 
      */
-    @OutputExport(name="defaultValue", type=String.class, parameters={})
+    @Export(name="defaultValue", type=String.class, parameters={})
     private Output<String> defaultValue;
 
     /**
@@ -96,7 +96,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -110,7 +110,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The time when the variable was last updated.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -124,7 +124,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The name of the variable.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * Tags associated with this variable.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={VariableTag.class})
+    @Export(name="tags", type=List.class, parameters={VariableTag.class})
     private Output</* @Nullable */ List<VariableTag>> tags;
 
     /**
@@ -152,7 +152,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
      * 
      */
-    @OutputExport(name="variableType", type=VariableType.class, parameters={})
+    @Export(name="variableType", type=VariableType.class, parameters={})
     private Output</* @Nullable */ VariableType> variableType;
 
     /**

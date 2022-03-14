@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.refactorspaces.outputs;
 
 import io.pulumi.awsnative.refactorspaces.outputs.ApplicationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     private final @Nullable String apiGatewayId;
     private final @Nullable String applicationIdentifier;
@@ -27,17 +27,17 @@ public final class GetApplicationResult {
     private final @Nullable List<ApplicationTag> tags;
     private final @Nullable String vpcLinkId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("apiGatewayId") @Nullable String apiGatewayId,
-        @OutputCustomType.Parameter("applicationIdentifier") @Nullable String applicationIdentifier,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("nlbArn") @Nullable String nlbArn,
-        @OutputCustomType.Parameter("nlbName") @Nullable String nlbName,
-        @OutputCustomType.Parameter("proxyUrl") @Nullable String proxyUrl,
-        @OutputCustomType.Parameter("stageName") @Nullable String stageName,
-        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationTag> tags,
-        @OutputCustomType.Parameter("vpcLinkId") @Nullable String vpcLinkId) {
+        @CustomType.Parameter("apiGatewayId") @Nullable String apiGatewayId,
+        @CustomType.Parameter("applicationIdentifier") @Nullable String applicationIdentifier,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("nlbArn") @Nullable String nlbArn,
+        @CustomType.Parameter("nlbName") @Nullable String nlbName,
+        @CustomType.Parameter("proxyUrl") @Nullable String proxyUrl,
+        @CustomType.Parameter("stageName") @Nullable String stageName,
+        @CustomType.Parameter("tags") @Nullable List<ApplicationTag> tags,
+        @CustomType.Parameter("vpcLinkId") @Nullable String vpcLinkId) {
         this.apiGatewayId = apiGatewayId;
         this.applicationIdentifier = applicationIdentifier;
         this.arn = arn;

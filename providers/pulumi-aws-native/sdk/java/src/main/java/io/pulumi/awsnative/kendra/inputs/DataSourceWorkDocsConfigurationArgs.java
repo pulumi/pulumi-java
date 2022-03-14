@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,42 +17,42 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
 
     public static final DataSourceWorkDocsConfigurationArgs Empty = new DataSourceWorkDocsConfigurationArgs();
 
-    @InputImport(name="crawlComments")
+    @Import(name="crawlComments")
       private final @Nullable Output<Boolean> crawlComments;
 
     public Output<Boolean> getCrawlComments() {
         return this.crawlComments == null ? Output.empty() : this.crawlComments;
     }
 
-    @InputImport(name="exclusionPatterns")
+    @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
     public Output<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
     }
 
-    @InputImport(name="inclusionPatterns")
+    @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
     public Output<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="useChangeLog")
+    @Import(name="useChangeLog")
       private final @Nullable Output<Boolean> useChangeLog;
 
     public Output<Boolean> getUseChangeLog() {

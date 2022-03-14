@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterEncryptionConfigProviderProperties {
     /**
      * Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
@@ -17,8 +17,8 @@ public final class ClusterEncryptionConfigProviderProperties {
      */
     private final @Nullable String keyArn;
 
-    @OutputCustomType.Constructor
-    private ClusterEncryptionConfigProviderProperties(@OutputCustomType.Parameter("keyArn") @Nullable String keyArn) {
+    @CustomType.Constructor
+    private ClusterEncryptionConfigProviderProperties(@CustomType.Parameter("keyArn") @Nullable String keyArn) {
         this.keyArn = keyArn;
     }
 

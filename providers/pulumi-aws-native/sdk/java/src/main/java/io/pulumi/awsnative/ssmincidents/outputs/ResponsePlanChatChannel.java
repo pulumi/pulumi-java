@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.ssmincidents.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponsePlanChatChannel {
     private final @Nullable List<String> chatbotSns;
 
-    @OutputCustomType.Constructor
-    private ResponsePlanChatChannel(@OutputCustomType.Parameter("chatbotSns") @Nullable List<String> chatbotSns) {
+    @CustomType.Constructor
+    private ResponsePlanChatChannel(@CustomType.Parameter("chatbotSns") @Nullable List<String> chatbotSns) {
         this.chatbotSns = chatbotSns;
     }
 

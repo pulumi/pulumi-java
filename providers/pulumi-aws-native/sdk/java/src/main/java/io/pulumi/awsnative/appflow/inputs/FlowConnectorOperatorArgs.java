@@ -19,7 +19,7 @@ import io.pulumi.awsnative.appflow.enums.FlowTrendmicroConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowVeevaConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowZendeskConnectorOperator;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -32,105 +32,105 @@ public final class FlowConnectorOperatorArgs extends io.pulumi.resources.Resourc
 
     public static final FlowConnectorOperatorArgs Empty = new FlowConnectorOperatorArgs();
 
-    @InputImport(name="amplitude")
+    @Import(name="amplitude")
       private final @Nullable Output<FlowAmplitudeConnectorOperator> amplitude;
 
     public Output<FlowAmplitudeConnectorOperator> getAmplitude() {
         return this.amplitude == null ? Output.empty() : this.amplitude;
     }
 
-    @InputImport(name="datadog")
+    @Import(name="datadog")
       private final @Nullable Output<FlowDatadogConnectorOperator> datadog;
 
     public Output<FlowDatadogConnectorOperator> getDatadog() {
         return this.datadog == null ? Output.empty() : this.datadog;
     }
 
-    @InputImport(name="dynatrace")
+    @Import(name="dynatrace")
       private final @Nullable Output<FlowDynatraceConnectorOperator> dynatrace;
 
     public Output<FlowDynatraceConnectorOperator> getDynatrace() {
         return this.dynatrace == null ? Output.empty() : this.dynatrace;
     }
 
-    @InputImport(name="googleAnalytics")
+    @Import(name="googleAnalytics")
       private final @Nullable Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics;
 
     public Output<FlowGoogleAnalyticsConnectorOperator> getGoogleAnalytics() {
         return this.googleAnalytics == null ? Output.empty() : this.googleAnalytics;
     }
 
-    @InputImport(name="inforNexus")
+    @Import(name="inforNexus")
       private final @Nullable Output<FlowInforNexusConnectorOperator> inforNexus;
 
     public Output<FlowInforNexusConnectorOperator> getInforNexus() {
         return this.inforNexus == null ? Output.empty() : this.inforNexus;
     }
 
-    @InputImport(name="marketo")
+    @Import(name="marketo")
       private final @Nullable Output<FlowMarketoConnectorOperator> marketo;
 
     public Output<FlowMarketoConnectorOperator> getMarketo() {
         return this.marketo == null ? Output.empty() : this.marketo;
     }
 
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<FlowS3ConnectorOperator> s3;
 
     public Output<FlowS3ConnectorOperator> getS3() {
         return this.s3 == null ? Output.empty() : this.s3;
     }
 
-    @InputImport(name="sAPOData")
+    @Import(name="sAPOData")
       private final @Nullable Output<FlowSAPODataConnectorOperator> sAPOData;
 
     public Output<FlowSAPODataConnectorOperator> getSAPOData() {
         return this.sAPOData == null ? Output.empty() : this.sAPOData;
     }
 
-    @InputImport(name="salesforce")
+    @Import(name="salesforce")
       private final @Nullable Output<FlowSalesforceConnectorOperator> salesforce;
 
     public Output<FlowSalesforceConnectorOperator> getSalesforce() {
         return this.salesforce == null ? Output.empty() : this.salesforce;
     }
 
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable Output<FlowServiceNowConnectorOperator> serviceNow;
 
     public Output<FlowServiceNowConnectorOperator> getServiceNow() {
         return this.serviceNow == null ? Output.empty() : this.serviceNow;
     }
 
-    @InputImport(name="singular")
+    @Import(name="singular")
       private final @Nullable Output<FlowSingularConnectorOperator> singular;
 
     public Output<FlowSingularConnectorOperator> getSingular() {
         return this.singular == null ? Output.empty() : this.singular;
     }
 
-    @InputImport(name="slack")
+    @Import(name="slack")
       private final @Nullable Output<FlowSlackConnectorOperator> slack;
 
     public Output<FlowSlackConnectorOperator> getSlack() {
         return this.slack == null ? Output.empty() : this.slack;
     }
 
-    @InputImport(name="trendmicro")
+    @Import(name="trendmicro")
       private final @Nullable Output<FlowTrendmicroConnectorOperator> trendmicro;
 
     public Output<FlowTrendmicroConnectorOperator> getTrendmicro() {
         return this.trendmicro == null ? Output.empty() : this.trendmicro;
     }
 
-    @InputImport(name="veeva")
+    @Import(name="veeva")
       private final @Nullable Output<FlowVeevaConnectorOperator> veeva;
 
     public Output<FlowVeevaConnectorOperator> getVeeva() {
         return this.veeva == null ? Output.empty() : this.veeva;
     }
 
-    @InputImport(name="zendesk")
+    @Import(name="zendesk")
       private final @Nullable Output<FlowZendeskConnectorOperator> zendesk;
 
     public Output<FlowZendeskConnectorOperator> getZendesk() {

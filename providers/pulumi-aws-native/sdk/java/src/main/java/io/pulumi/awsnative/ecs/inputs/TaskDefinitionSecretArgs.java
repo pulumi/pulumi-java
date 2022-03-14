@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
 
     public static final TaskDefinitionSecretArgs Empty = new TaskDefinitionSecretArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="valueFrom", required=true)
+    @Import(name="valueFrom", required=true)
       private final Output<String> valueFrom;
 
     public Output<String> getValueFrom() {

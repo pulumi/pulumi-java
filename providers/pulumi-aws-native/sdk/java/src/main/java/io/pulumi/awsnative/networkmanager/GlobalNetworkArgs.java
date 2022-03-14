@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.awsnative.networkmanager.inputs.GlobalNetworkTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the global network.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class GlobalNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The tags for the global network.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<GlobalNetworkTagArgs>> tags;
 
     public Output<List<GlobalNetworkTagArgs>> getTags() {

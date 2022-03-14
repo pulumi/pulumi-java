@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLForwardedIPConfigurationFallbackBehavior;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class WebACLForwardedIPConfiguration extends io.pulumi.resources.In
 
     public static final WebACLForwardedIPConfiguration Empty = new WebACLForwardedIPConfiguration();
 
-    @InputImport(name="fallbackBehavior", required=true)
+    @Import(name="fallbackBehavior", required=true)
       private final WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
     public WebACLForwardedIPConfigurationFallbackBehavior getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final String headerName;
 
     public String getHeaderName() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.redshift.outputs;
 
 import io.pulumi.awsnative.redshift.outputs.EndpointAccessVpcSecurityGroup;
 import io.pulumi.awsnative.redshift.outputs.VpcEndpointProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointAccessResult {
     /**
      * The DNS address of the endpoint.
@@ -51,15 +51,15 @@ public final class GetEndpointAccessResult {
      */
     private final @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointAccessResult(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("endpointCreateTime") @Nullable String endpointCreateTime,
-        @OutputCustomType.Parameter("endpointStatus") @Nullable String endpointStatus,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("vpcEndpoint") @Nullable VpcEndpointProperties vpcEndpoint,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds,
-        @OutputCustomType.Parameter("vpcSecurityGroups") @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("endpointCreateTime") @Nullable String endpointCreateTime,
+        @CustomType.Parameter("endpointStatus") @Nullable String endpointStatus,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("vpcEndpoint") @Nullable VpcEndpointProperties vpcEndpoint,
+        @CustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds,
+        @CustomType.Parameter("vpcSecurityGroups") @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
         this.address = address;
         this.endpointCreateTime = endpointCreateTime;
         this.endpointStatus = endpointStatus;

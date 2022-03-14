@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.finspace.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
      * Email address
      * 
      */
-    @InputImport(name="emailAddress")
+    @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
@@ -33,7 +33,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
      * First name
      * 
      */
-    @InputImport(name="firstName")
+    @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
     public Output<String> getFirstName() {
@@ -44,7 +44,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
      * Last name
      * 
      */
-    @InputImport(name="lastName")
+    @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
     public Output<String> getLastName() {

@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.enums.DestinationExpressionType;
 import io.pulumi.awsnative.iotwireless.outputs.DestinationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDestinationResult {
     /**
      * Destination arn. Returned after successful create.
@@ -45,14 +45,14 @@ public final class GetDestinationResult {
      */
     private final @Nullable List<DestinationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDestinationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("expression") @Nullable String expression,
-        @OutputCustomType.Parameter("expressionType") @Nullable DestinationExpressionType expressionType,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<DestinationTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("expression") @Nullable String expression,
+        @CustomType.Parameter("expressionType") @Nullable DestinationExpressionType expressionType,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("tags") @Nullable List<DestinationTag> tags) {
         this.arn = arn;
         this.description = description;
         this.expression = expression;

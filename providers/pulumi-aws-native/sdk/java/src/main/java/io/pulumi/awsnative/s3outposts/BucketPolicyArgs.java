@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3outposts;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the specified bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -29,7 +29,7 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A policy document containing permissions to add to the specified bucket.
      * 
      */
-    @InputImport(name="policyDocument", required=true)
+    @Import(name="policyDocument", required=true)
       private final Output<Object> policyDocument;
 
     public Output<Object> getPolicyDocument() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ScheduledQuerySnsConfigurationArgs extends io.pulumi.resource
 
     public static final ScheduledQuerySnsConfigurationArgs Empty = new ScheduledQuerySnsConfigurationArgs();
 
-    @InputImport(name="topicArn", required=true)
+    @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
     public Output<String> getTopicArn() {

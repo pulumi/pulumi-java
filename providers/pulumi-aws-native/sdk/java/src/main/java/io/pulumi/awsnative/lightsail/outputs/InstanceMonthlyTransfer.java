@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceMonthlyTransfer {
     /**
      * GbPerMonthAllocated of the Instance.
@@ -17,8 +17,8 @@ public final class InstanceMonthlyTransfer {
      */
     private final @Nullable String gbPerMonthAllocated;
 
-    @OutputCustomType.Constructor
-    private InstanceMonthlyTransfer(@OutputCustomType.Parameter("gbPerMonthAllocated") @Nullable String gbPerMonthAllocated) {
+    @CustomType.Constructor
+    private InstanceMonthlyTransfer(@CustomType.Parameter("gbPerMonthAllocated") @Nullable String gbPerMonthAllocated) {
         this.gbPerMonthAllocated = gbPerMonthAllocated;
     }
 

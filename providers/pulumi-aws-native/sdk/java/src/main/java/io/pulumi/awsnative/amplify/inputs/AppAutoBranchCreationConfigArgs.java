@@ -7,7 +7,7 @@ import io.pulumi.awsnative.amplify.enums.AppAutoBranchCreationConfigStage;
 import io.pulumi.awsnative.amplify.inputs.AppBasicAuthConfigArgs;
 import io.pulumi.awsnative.amplify.inputs.AppEnvironmentVariableArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,70 +19,70 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
 
     public static final AppAutoBranchCreationConfigArgs Empty = new AppAutoBranchCreationConfigArgs();
 
-    @InputImport(name="autoBranchCreationPatterns")
+    @Import(name="autoBranchCreationPatterns")
       private final @Nullable Output<List<String>> autoBranchCreationPatterns;
 
     public Output<List<String>> getAutoBranchCreationPatterns() {
         return this.autoBranchCreationPatterns == null ? Output.empty() : this.autoBranchCreationPatterns;
     }
 
-    @InputImport(name="basicAuthConfig")
+    @Import(name="basicAuthConfig")
       private final @Nullable Output<AppBasicAuthConfigArgs> basicAuthConfig;
 
     public Output<AppBasicAuthConfigArgs> getBasicAuthConfig() {
         return this.basicAuthConfig == null ? Output.empty() : this.basicAuthConfig;
     }
 
-    @InputImport(name="buildSpec")
+    @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
     public Output<String> getBuildSpec() {
         return this.buildSpec == null ? Output.empty() : this.buildSpec;
     }
 
-    @InputImport(name="enableAutoBranchCreation")
+    @Import(name="enableAutoBranchCreation")
       private final @Nullable Output<Boolean> enableAutoBranchCreation;
 
     public Output<Boolean> getEnableAutoBranchCreation() {
         return this.enableAutoBranchCreation == null ? Output.empty() : this.enableAutoBranchCreation;
     }
 
-    @InputImport(name="enableAutoBuild")
+    @Import(name="enableAutoBuild")
       private final @Nullable Output<Boolean> enableAutoBuild;
 
     public Output<Boolean> getEnableAutoBuild() {
         return this.enableAutoBuild == null ? Output.empty() : this.enableAutoBuild;
     }
 
-    @InputImport(name="enablePerformanceMode")
+    @Import(name="enablePerformanceMode")
       private final @Nullable Output<Boolean> enablePerformanceMode;
 
     public Output<Boolean> getEnablePerformanceMode() {
         return this.enablePerformanceMode == null ? Output.empty() : this.enablePerformanceMode;
     }
 
-    @InputImport(name="enablePullRequestPreview")
+    @Import(name="enablePullRequestPreview")
       private final @Nullable Output<Boolean> enablePullRequestPreview;
 
     public Output<Boolean> getEnablePullRequestPreview() {
         return this.enablePullRequestPreview == null ? Output.empty() : this.enablePullRequestPreview;
     }
 
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<List<AppEnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<AppEnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
-    @InputImport(name="pullRequestEnvironmentName")
+    @Import(name="pullRequestEnvironmentName")
       private final @Nullable Output<String> pullRequestEnvironmentName;
 
     public Output<String> getPullRequestEnvironmentName() {
         return this.pullRequestEnvironmentName == null ? Output.empty() : this.pullRequestEnvironmentName;
     }
 
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable Output<AppAutoBranchCreationConfigStage> stage;
 
     public Output<AppAutoBranchCreationConfigStage> getStage() {

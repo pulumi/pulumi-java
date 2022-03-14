@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.TaskSetAwsVpcConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskSetNetworkConfiguration {
     private final @Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration;
 
-    @OutputCustomType.Constructor
-    private TaskSetNetworkConfiguration(@OutputCustomType.Parameter("awsVpcConfiguration") @Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration) {
+    @CustomType.Constructor
+    private TaskSetNetworkConfiguration(@CustomType.Parameter("awsVpcConfiguration") @Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration) {
         this.awsVpcConfiguration = awsVpcConfiguration;
     }
 

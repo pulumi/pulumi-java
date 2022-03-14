@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamInputFormatConfi
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOutputFormatConfigurationArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSchemaConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,28 +17,28 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
 
     public static final DeliveryStreamDataFormatConversionConfigurationArgs Empty = new DeliveryStreamDataFormatConversionConfigurationArgs();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="inputFormatConfiguration")
+    @Import(name="inputFormatConfiguration")
       private final @Nullable Output<DeliveryStreamInputFormatConfigurationArgs> inputFormatConfiguration;
 
     public Output<DeliveryStreamInputFormatConfigurationArgs> getInputFormatConfiguration() {
         return this.inputFormatConfiguration == null ? Output.empty() : this.inputFormatConfiguration;
     }
 
-    @InputImport(name="outputFormatConfiguration")
+    @Import(name="outputFormatConfiguration")
       private final @Nullable Output<DeliveryStreamOutputFormatConfigurationArgs> outputFormatConfiguration;
 
     public Output<DeliveryStreamOutputFormatConfigurationArgs> getOutputFormatConfiguration() {
         return this.outputFormatConfiguration == null ? Output.empty() : this.outputFormatConfiguration;
     }
 
-    @InputImport(name="schemaConfiguration")
+    @Import(name="schemaConfiguration")
       private final @Nullable Output<DeliveryStreamSchemaConfigurationArgs> schemaConfiguration;
 
     public Output<DeliveryStreamSchemaConfigurationArgs> getSchemaConfiguration() {

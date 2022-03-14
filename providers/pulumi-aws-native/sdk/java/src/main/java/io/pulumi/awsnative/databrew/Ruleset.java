@@ -8,7 +8,7 @@ import io.pulumi.awsnative.databrew.RulesetArgs;
 import io.pulumi.awsnative.databrew.outputs.RulesetRule;
 import io.pulumi.awsnative.databrew.outputs.RulesetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * Description of the Ruleset
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -38,7 +38,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * Name of the Ruleset
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -52,7 +52,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * List of the data quality rules in the ruleset
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={RulesetRule.class})
+    @Export(name="rules", type=List.class, parameters={RulesetRule.class})
     private Output<List<RulesetRule>> rules;
 
     /**
@@ -62,7 +62,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
     public Output<List<RulesetRule>> getRules() {
         return this.rules;
     }
-    @OutputExport(name="tags", type=List.class, parameters={RulesetTag.class})
+    @Export(name="tags", type=List.class, parameters={RulesetTag.class})
     private Output</* @Nullable */ List<RulesetTag>> tags;
 
     public Output</* @Nullable */ List<RulesetTag>> getTags() {
@@ -72,7 +72,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * Arn of the target resource (dataset) to apply the ruleset to
      * 
      */
-    @OutputExport(name="targetArn", type=String.class, parameters={})
+    @Export(name="targetArn", type=String.class, parameters={})
     private Output<String> targetArn;
 
     /**

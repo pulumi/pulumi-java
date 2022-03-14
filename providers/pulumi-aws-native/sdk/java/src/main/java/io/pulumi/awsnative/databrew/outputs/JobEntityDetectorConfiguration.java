@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobAllowedStatistics;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobEntityDetectorConfiguration {
     private final @Nullable JobAllowedStatistics allowedStatistics;
     private final List<String> entityTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobEntityDetectorConfiguration(
-        @OutputCustomType.Parameter("allowedStatistics") @Nullable JobAllowedStatistics allowedStatistics,
-        @OutputCustomType.Parameter("entityTypes") List<String> entityTypes) {
+        @CustomType.Parameter("allowedStatistics") @Nullable JobAllowedStatistics allowedStatistics,
+        @CustomType.Parameter("entityTypes") List<String> entityTypes) {
         this.allowedStatistics = allowedStatistics;
         this.entityTypes = entityTypes;
     }

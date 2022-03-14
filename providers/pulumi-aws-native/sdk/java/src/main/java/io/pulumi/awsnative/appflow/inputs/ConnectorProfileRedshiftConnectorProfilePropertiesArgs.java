@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * The name of the Amazon S3 bucket associated with Redshift.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -29,7 +29,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * The object key for the destination bucket in which Amazon AppFlow will place the ﬁles.
      * 
      */
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
@@ -40,7 +40,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * The JDBC URL of the Amazon Redshift cluster.
      * 
      */
-    @InputImport(name="databaseUrl", required=true)
+    @Import(name="databaseUrl", required=true)
       private final Output<String> databaseUrl;
 
     public Output<String> getDatabaseUrl() {
@@ -51,7 +51,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * The Amazon Resource Name (ARN) of the IAM role.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

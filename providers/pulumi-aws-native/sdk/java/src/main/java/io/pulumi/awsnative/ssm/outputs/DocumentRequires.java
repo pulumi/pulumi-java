@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DocumentRequires {
     /**
      * The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
@@ -22,10 +22,10 @@ public final class DocumentRequires {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentRequires(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.name = name;
         this.version = version;
     }

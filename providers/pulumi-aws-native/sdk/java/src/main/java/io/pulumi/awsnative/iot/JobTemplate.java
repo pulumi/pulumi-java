@@ -12,7 +12,7 @@ import io.pulumi.awsnative.iot.outputs.JobTemplateTag;
 import io.pulumi.awsnative.iot.outputs.PresignedUrlConfigProperties;
 import io.pulumi.awsnative.iot.outputs.TimeoutConfigProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * The criteria that determine when and how a job abort takes place.
      * 
      */
-    @OutputExport(name="abortConfig", type=AbortConfigProperties.class, parameters={})
+    @Export(name="abortConfig", type=AbortConfigProperties.class, parameters={})
     private Output</* @Nullable */ AbortConfigProperties> abortConfig;
 
     /**
@@ -38,7 +38,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ AbortConfigProperties> getAbortConfig() {
         return this.abortConfig;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -48,7 +48,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * A description of the Job Template.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -62,7 +62,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * The job document. Required if you don't specify a value for documentSource.
      * 
      */
-    @OutputExport(name="document", type=String.class, parameters={})
+    @Export(name="document", type=String.class, parameters={})
     private Output</* @Nullable */ String> document;
 
     /**
@@ -76,7 +76,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * An S3 link to the job document to use in the template. Required if you don't specify a value for document.
      * 
      */
-    @OutputExport(name="documentSource", type=String.class, parameters={})
+    @Export(name="documentSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentSource;
 
     /**
@@ -90,7 +90,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * Optional for copying a JobTemplate from a pre-existing Job configuration.
      * 
      */
-    @OutputExport(name="jobArn", type=String.class, parameters={})
+    @Export(name="jobArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobArn;
 
     /**
@@ -100,7 +100,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getJobArn() {
         return this.jobArn;
     }
-    @OutputExport(name="jobExecutionsRetryConfig", type=JobExecutionsRetryConfigProperties.class, parameters={})
+    @Export(name="jobExecutionsRetryConfig", type=JobExecutionsRetryConfigProperties.class, parameters={})
     private Output</* @Nullable */ JobExecutionsRetryConfigProperties> jobExecutionsRetryConfig;
 
     public Output</* @Nullable */ JobExecutionsRetryConfigProperties> getJobExecutionsRetryConfig() {
@@ -110,7 +110,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * Allows you to create a staged rollout of a job.
      * 
      */
-    @OutputExport(name="jobExecutionsRolloutConfig", type=JobExecutionsRolloutConfigProperties.class, parameters={})
+    @Export(name="jobExecutionsRolloutConfig", type=JobExecutionsRolloutConfigProperties.class, parameters={})
     private Output</* @Nullable */ JobExecutionsRolloutConfigProperties> jobExecutionsRolloutConfig;
 
     /**
@@ -120,7 +120,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ JobExecutionsRolloutConfigProperties> getJobExecutionsRolloutConfig() {
         return this.jobExecutionsRolloutConfig;
     }
-    @OutputExport(name="jobTemplateId", type=String.class, parameters={})
+    @Export(name="jobTemplateId", type=String.class, parameters={})
     private Output<String> jobTemplateId;
 
     public Output<String> getJobTemplateId() {
@@ -130,7 +130,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * Configuration for pre-signed S3 URLs.
      * 
      */
-    @OutputExport(name="presignedUrlConfig", type=PresignedUrlConfigProperties.class, parameters={})
+    @Export(name="presignedUrlConfig", type=PresignedUrlConfigProperties.class, parameters={})
     private Output</* @Nullable */ PresignedUrlConfigProperties> presignedUrlConfig;
 
     /**
@@ -144,7 +144,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * Metadata that can be used to manage the JobTemplate.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={JobTemplateTag.class})
+    @Export(name="tags", type=List.class, parameters={JobTemplateTag.class})
     private Output</* @Nullable */ List<JobTemplateTag>> tags;
 
     /**
@@ -158,7 +158,7 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
      * Specifies the amount of time each device has to finish its execution of the job.
      * 
      */
-    @OutputExport(name="timeoutConfig", type=TimeoutConfigProperties.class, parameters={})
+    @Export(name="timeoutConfig", type=TimeoutConfigProperties.class, parameters={})
     private Output</* @Nullable */ TimeoutConfigProperties> timeoutConfig;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetDataCatalogInputDefinition;
 import io.pulumi.awsnative.databrew.inputs.DatasetDatabaseInputDefinition;
 import io.pulumi.awsnative.databrew.inputs.DatasetMetadata;
 import io.pulumi.awsnative.databrew.inputs.DatasetS3Location;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,28 +21,28 @@ public final class DatasetInput extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetInput Empty = new DatasetInput();
 
-    @InputImport(name="dataCatalogInputDefinition")
+    @Import(name="dataCatalogInputDefinition")
       private final @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition;
 
     public Optional<DatasetDataCatalogInputDefinition> getDataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.dataCatalogInputDefinition);
     }
 
-    @InputImport(name="databaseInputDefinition")
+    @Import(name="databaseInputDefinition")
       private final @Nullable DatasetDatabaseInputDefinition databaseInputDefinition;
 
     public Optional<DatasetDatabaseInputDefinition> getDatabaseInputDefinition() {
         return this.databaseInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.databaseInputDefinition);
     }
 
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable DatasetMetadata metadata;
 
     public Optional<DatasetMetadata> getMetadata() {
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
-    @InputImport(name="s3InputDefinition")
+    @Import(name="s3InputDefinition")
       private final @Nullable DatasetS3Location s3InputDefinition;
 
     public Optional<DatasetS3Location> getS3InputDefinition() {

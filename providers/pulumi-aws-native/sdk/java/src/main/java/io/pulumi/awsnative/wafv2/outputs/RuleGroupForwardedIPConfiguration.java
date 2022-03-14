@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupForwardedIPConfigurationFallbackBehavior;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupForwardedIPConfiguration {
     private final RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior;
     private final String headerName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupForwardedIPConfiguration(
-        @OutputCustomType.Parameter("fallbackBehavior") RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        @OutputCustomType.Parameter("headerName") String headerName) {
+        @CustomType.Parameter("fallbackBehavior") RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @CustomType.Parameter("headerName") String headerName) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
     }

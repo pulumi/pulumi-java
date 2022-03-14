@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLLabelMatchScope;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLLabelMatchStatement {
     private final String key;
     private final WebACLLabelMatchScope scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLLabelMatchStatement(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("scope") WebACLLabelMatchScope scope) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("scope") WebACLLabelMatchScope scope) {
         this.key = key;
         this.scope = scope;
     }

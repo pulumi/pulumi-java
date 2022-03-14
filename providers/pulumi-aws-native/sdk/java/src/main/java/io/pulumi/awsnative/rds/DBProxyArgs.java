@@ -7,7 +7,7 @@ import io.pulumi.awsnative.rds.enums.DBProxyEngineFamily;
 import io.pulumi.awsnative.rds.inputs.DBProxyAuthFormatArgs;
 import io.pulumi.awsnative.rds.inputs.DBProxyTagFormatArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The authorization mechanism that the proxy uses.
      * 
      */
-    @InputImport(name="auth", required=true)
+    @Import(name="auth", required=true)
       private final Output<List<DBProxyAuthFormatArgs>> auth;
 
     public Output<List<DBProxyAuthFormatArgs>> getAuth() {
@@ -35,7 +35,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
      * 
      */
-    @InputImport(name="dBProxyName")
+    @Import(name="dBProxyName")
       private final @Nullable Output<String> dBProxyName;
 
     public Output<String> getDBProxyName() {
@@ -46,7 +46,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the proxy includes detailed information about SQL statements in its logs.
      * 
      */
-    @InputImport(name="debugLogging")
+    @Import(name="debugLogging")
       private final @Nullable Output<Boolean> debugLogging;
 
     public Output<Boolean> getDebugLogging() {
@@ -57,7 +57,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The kinds of databases that the proxy can connect to.
      * 
      */
-    @InputImport(name="engineFamily", required=true)
+    @Import(name="engineFamily", required=true)
       private final Output<DBProxyEngineFamily> engineFamily;
 
     public Output<DBProxyEngineFamily> getEngineFamily() {
@@ -68,7 +68,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
      * 
      */
-    @InputImport(name="idleClientTimeout")
+    @Import(name="idleClientTimeout")
       private final @Nullable Output<Integer> idleClientTimeout;
 
     public Output<Integer> getIdleClientTimeout() {
@@ -79,7 +79,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
      * 
      */
-    @InputImport(name="requireTLS")
+    @Import(name="requireTLS")
       private final @Nullable Output<Boolean> requireTLS;
 
     public Output<Boolean> getRequireTLS() {
@@ -90,7 +90,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -101,7 +101,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DBProxyTagFormatArgs>> tags;
 
     public Output<List<DBProxyTagFormatArgs>> getTags() {
@@ -112,7 +112,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * VPC security group IDs to associate with the new proxy.
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
@@ -123,7 +123,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
      * VPC subnet IDs to associate with the new proxy.
      * 
      */
-    @InputImport(name="vpcSubnetIds", required=true)
+    @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
 
     public Output<List<String>> getVpcSubnetIds() {

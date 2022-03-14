@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.SpotFleetArgs;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetRequestConfigData;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ec2:SpotFleet")
 public class SpotFleet extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="spotFleetRequestConfigData", type=SpotFleetRequestConfigData.class, parameters={})
+    @Export(name="spotFleetRequestConfigData", type=SpotFleetRequestConfigData.class, parameters={})
     private Output<SpotFleetRequestConfigData> spotFleetRequestConfigData;
 
     public Output<SpotFleetRequestConfigData> getSpotFleetRequestConfigData() {

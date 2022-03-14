@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.stepfunctions.outputs;
 
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineCloudWatchLogsLogGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StateMachineLogDestination {
     private final @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup;
 
-    @OutputCustomType.Constructor
-    private StateMachineLogDestination(@OutputCustomType.Parameter("cloudWatchLogsLogGroup") @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
+    @CustomType.Constructor
+    private StateMachineLogDestination(@CustomType.Parameter("cloudWatchLogsLogGroup") @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
         this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
     }
 

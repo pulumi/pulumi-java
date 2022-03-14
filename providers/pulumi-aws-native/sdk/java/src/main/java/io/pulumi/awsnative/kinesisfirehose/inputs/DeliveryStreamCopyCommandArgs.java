@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
 
     public static final DeliveryStreamCopyCommandArgs Empty = new DeliveryStreamCopyCommandArgs();
 
-    @InputImport(name="copyOptions")
+    @Import(name="copyOptions")
       private final @Nullable Output<String> copyOptions;
 
     public Output<String> getCopyOptions() {
         return this.copyOptions == null ? Output.empty() : this.copyOptions;
     }
 
-    @InputImport(name="dataTableColumns")
+    @Import(name="dataTableColumns")
       private final @Nullable Output<String> dataTableColumns;
 
     public Output<String> getDataTableColumns() {
         return this.dataTableColumns == null ? Output.empty() : this.dataTableColumns;
     }
 
-    @InputImport(name="dataTableName", required=true)
+    @Import(name="dataTableName", required=true)
       private final Output<String> dataTableName;
 
     public Output<String> getDataTableName() {

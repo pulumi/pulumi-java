@@ -5,14 +5,14 @@ package io.pulumi.awsnative.connect.outputs;
 
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationConfig;
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHoursOfOperationResult {
     /**
      * Configuration information for the hours of operation: day, start time, and end time.
@@ -50,15 +50,15 @@ public final class GetHoursOfOperationResult {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHoursOfOperationResult(
-        @OutputCustomType.Parameter("config") @Nullable List<HoursOfOperationConfig> config,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("hoursOfOperationArn") @Nullable String hoursOfOperationArn,
-        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<HoursOfOperationTag> tags,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("config") @Nullable List<HoursOfOperationConfig> config,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("hoursOfOperationArn") @Nullable String hoursOfOperationArn,
+        @CustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<HoursOfOperationTag> tags,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.config = config;
         this.description = description;
         this.hoursOfOperationArn = hoursOfOperationArn;

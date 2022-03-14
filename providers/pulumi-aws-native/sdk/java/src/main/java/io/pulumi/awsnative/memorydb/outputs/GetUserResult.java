@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.UserTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserResult {
     /**
      * The Amazon Resource Name (ARN) of the user account.
@@ -29,11 +29,11 @@ public final class GetUserResult {
      */
     private final @Nullable List<UserTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable List<UserTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable List<UserTag> tags) {
         this.arn = arn;
         this.status = status;
         this.tags = tags;

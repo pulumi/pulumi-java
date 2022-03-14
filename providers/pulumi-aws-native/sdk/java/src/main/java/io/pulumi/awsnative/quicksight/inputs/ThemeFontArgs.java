@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeFontArgs Empty = new ThemeFontArgs();
 
-    @InputImport(name="fontFamily")
+    @Import(name="fontFamily")
       private final @Nullable Output<String> fontFamily;
 
     public Output<String> getFontFamily() {

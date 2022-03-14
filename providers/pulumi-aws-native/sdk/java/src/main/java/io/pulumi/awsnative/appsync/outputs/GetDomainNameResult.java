@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainNameResult {
     private final @Nullable String appSyncDomainName;
     private final @Nullable String description;
     private final @Nullable String hostedZoneId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainNameResult(
-        @OutputCustomType.Parameter("appSyncDomainName") @Nullable String appSyncDomainName,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId) {
+        @CustomType.Parameter("appSyncDomainName") @Nullable String appSyncDomainName,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId) {
         this.appSyncDomainName = appSyncDomainName;
         this.description = description;
         this.hostedZoneId = hostedZoneId;

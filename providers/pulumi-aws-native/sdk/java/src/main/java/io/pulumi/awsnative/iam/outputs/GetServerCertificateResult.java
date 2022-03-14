@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.ServerCertificateTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerCertificateResult {
     /**
      * Amazon Resource Name (ARN) of the server certificate
@@ -21,11 +21,11 @@ public final class GetServerCertificateResult {
     private final @Nullable String path;
     private final @Nullable List<ServerCertificateTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerCertificateResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("tags") @Nullable List<ServerCertificateTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("tags") @Nullable List<ServerCertificateTag> tags) {
         this.arn = arn;
         this.path = path;
         this.tags = tags;

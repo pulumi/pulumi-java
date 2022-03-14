@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MultiRegionAccessPointPublicAccessBlockConfiguration {
     /**
      * Specifies whether Amazon S3 should block public access control lists (ACLs) for buckets in this account. Setting this element to TRUE causes the following behavior:
@@ -37,12 +37,12 @@ public final class MultiRegionAccessPointPublicAccessBlockConfiguration {
      */
     private final @Nullable Boolean restrictPublicBuckets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MultiRegionAccessPointPublicAccessBlockConfiguration(
-        @OutputCustomType.Parameter("blockPublicAcls") @Nullable Boolean blockPublicAcls,
-        @OutputCustomType.Parameter("blockPublicPolicy") @Nullable Boolean blockPublicPolicy,
-        @OutputCustomType.Parameter("ignorePublicAcls") @Nullable Boolean ignorePublicAcls,
-        @OutputCustomType.Parameter("restrictPublicBuckets") @Nullable Boolean restrictPublicBuckets) {
+        @CustomType.Parameter("blockPublicAcls") @Nullable Boolean blockPublicAcls,
+        @CustomType.Parameter("blockPublicPolicy") @Nullable Boolean blockPublicPolicy,
+        @CustomType.Parameter("ignorePublicAcls") @Nullable Boolean ignorePublicAcls,
+        @CustomType.Parameter("restrictPublicBuckets") @Nullable Boolean restrictPublicBuckets) {
         this.blockPublicAcls = blockPublicAcls;
         this.blockPublicPolicy = blockPublicPolicy;
         this.ignorePublicAcls = ignorePublicAcls;

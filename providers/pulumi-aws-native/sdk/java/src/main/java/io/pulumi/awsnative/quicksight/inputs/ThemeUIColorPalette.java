@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      * <p>This color is that applies to selected states and buttons.</p>
      * 
      */
-    @InputImport(name="accent")
+    @Import(name="accent")
       private final @Nullable String accent;
 
     public Optional<String> getAccent() {
@@ -38,7 +38,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             accent color.</p>
      * 
      */
-    @InputImport(name="accentForeground")
+    @Import(name="accentForeground")
       private final @Nullable String accentForeground;
 
     public Optional<String> getAccentForeground() {
@@ -49,7 +49,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      * <p>The color that applies to error messages.</p>
      * 
      */
-    @InputImport(name="danger")
+    @Import(name="danger")
       private final @Nullable String danger;
 
     public Optional<String> getDanger() {
@@ -61,7 +61,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             error color.</p>
      * 
      */
-    @InputImport(name="dangerForeground")
+    @Import(name="dangerForeground")
       private final @Nullable String dangerForeground;
 
     public Optional<String> getDangerForeground() {
@@ -73,7 +73,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             dimensions.</p>
      * 
      */
-    @InputImport(name="dimension")
+    @Import(name="dimension")
       private final @Nullable String dimension;
 
     public Optional<String> getDimension() {
@@ -85,7 +85,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             dimension color.</p>
      * 
      */
-    @InputImport(name="dimensionForeground")
+    @Import(name="dimensionForeground")
       private final @Nullable String dimensionForeground;
 
     public Optional<String> getDimensionForeground() {
@@ -96,7 +96,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      * <p>The color that applies to the names of fields that are identified as measures.</p>
      * 
      */
-    @InputImport(name="measure")
+    @Import(name="measure")
       private final @Nullable String measure;
 
     public Optional<String> getMeasure() {
@@ -108,7 +108,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             measure color.</p>
      * 
      */
-    @InputImport(name="measureForeground")
+    @Import(name="measureForeground")
       private final @Nullable String measureForeground;
 
     public Optional<String> getMeasureForeground() {
@@ -119,7 +119,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      * <p>The background color that applies to visuals and other high emphasis UI.</p>
      * 
      */
-    @InputImport(name="primaryBackground")
+    @Import(name="primaryBackground")
       private final @Nullable String primaryBackground;
 
     public Optional<String> getPrimaryBackground() {
@@ -131,7 +131,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             background regions, such as grid lines, borders, table banding, icons, and so on.</p>
      * 
      */
-    @InputImport(name="primaryForeground")
+    @Import(name="primaryForeground")
       private final @Nullable String primaryForeground;
 
     public Optional<String> getPrimaryForeground() {
@@ -142,7 +142,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      * <p>The background color that applies to the sheet background and sheet controls.</p>
      * 
      */
-    @InputImport(name="secondaryBackground")
+    @Import(name="secondaryBackground")
       private final @Nullable String secondaryBackground;
 
     public Optional<String> getSecondaryBackground() {
@@ -154,7 +154,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             appears over the secondary background.</p>
      * 
      */
-    @InputImport(name="secondaryForeground")
+    @Import(name="secondaryForeground")
       private final @Nullable String secondaryForeground;
 
     public Optional<String> getSecondaryForeground() {
@@ -166,7 +166,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             successful download.</p>
      * 
      */
-    @InputImport(name="success")
+    @Import(name="success")
       private final @Nullable String success;
 
     public Optional<String> getSuccess() {
@@ -178,7 +178,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             success color.</p>
      * 
      */
-    @InputImport(name="successForeground")
+    @Import(name="successForeground")
       private final @Nullable String successForeground;
 
     public Optional<String> getSuccessForeground() {
@@ -189,7 +189,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      * <p>This color that applies to warning and informational messages.</p>
      * 
      */
-    @InputImport(name="warning")
+    @Import(name="warning")
       private final @Nullable String warning;
 
     public Optional<String> getWarning() {
@@ -201,7 +201,7 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
      *             warning color.</p>
      * 
      */
-    @InputImport(name="warningForeground")
+    @Import(name="warningForeground")
       private final @Nullable String warningForeground;
 
     public Optional<String> getWarningForeground() {

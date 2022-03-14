@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateDataSetReference;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TemplateSourceAnalysis {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
@@ -23,10 +23,10 @@ public final class TemplateSourceAnalysis {
      */
     private final List<TemplateDataSetReference> dataSetReferences;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateSourceAnalysis(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("dataSetReferences") List<TemplateDataSetReference> dataSetReferences) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("dataSetReferences") List<TemplateDataSetReference> dataSetReferences) {
         this.arn = arn;
         this.dataSetReferences = dataSetReferences;
     }

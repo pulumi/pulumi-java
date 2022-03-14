@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.networkmanager.inputs.LinkBandwidthArgs;
 import io.pulumi.awsnative.networkmanager.inputs.LinkTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The Bandwidth for the link.
      * 
      */
-    @InputImport(name="bandwidth", required=true)
+    @Import(name="bandwidth", required=true)
       private final Output<LinkBandwidthArgs> bandwidth;
 
     public Output<LinkBandwidthArgs> getBandwidth() {
@@ -32,7 +32,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the link.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the global network.
      * 
      */
-    @InputImport(name="globalNetworkId", required=true)
+    @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
     public Output<String> getGlobalNetworkId() {
@@ -54,7 +54,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The provider of the link.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable Output<String> provider;
 
     public Output<String> getProvider() {
@@ -65,7 +65,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the site
      * 
      */
-    @InputImport(name="siteId", required=true)
+    @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
     public Output<String> getSiteId() {
@@ -76,7 +76,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The tags for the link.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LinkTagArgs>> tags;
 
     public Output<List<LinkTagArgs>> getTags() {
@@ -87,7 +87,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the link.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

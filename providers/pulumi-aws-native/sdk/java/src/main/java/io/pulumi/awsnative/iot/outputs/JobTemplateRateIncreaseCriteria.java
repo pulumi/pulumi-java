@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobTemplateRateIncreaseCriteria {
     private final @Nullable Integer numberOfNotifiedThings;
     private final @Nullable Integer numberOfSucceededThings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobTemplateRateIncreaseCriteria(
-        @OutputCustomType.Parameter("numberOfNotifiedThings") @Nullable Integer numberOfNotifiedThings,
-        @OutputCustomType.Parameter("numberOfSucceededThings") @Nullable Integer numberOfSucceededThings) {
+        @CustomType.Parameter("numberOfNotifiedThings") @Nullable Integer numberOfNotifiedThings,
+        @CustomType.Parameter("numberOfSucceededThings") @Nullable Integer numberOfSucceededThings) {
         this.numberOfNotifiedThings = numberOfNotifiedThings;
         this.numberOfSucceededThings = numberOfSucceededThings;
     }

@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LicenseBorrowConfiguration {
     private final Boolean allowEarlyCheckIn;
     private final Integer maxTimeToLiveInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LicenseBorrowConfiguration(
-        @OutputCustomType.Parameter("allowEarlyCheckIn") Boolean allowEarlyCheckIn,
-        @OutputCustomType.Parameter("maxTimeToLiveInMinutes") Integer maxTimeToLiveInMinutes) {
+        @CustomType.Parameter("allowEarlyCheckIn") Boolean allowEarlyCheckIn,
+        @CustomType.Parameter("maxTimeToLiveInMinutes") Integer maxTimeToLiveInMinutes) {
         this.allowEarlyCheckIn = allowEarlyCheckIn;
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }

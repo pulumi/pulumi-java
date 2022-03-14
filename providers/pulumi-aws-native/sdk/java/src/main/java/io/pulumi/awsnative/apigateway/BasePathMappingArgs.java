@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
      * The base path name that callers of the API must provide in the URL after the domain name.
      * 
      */
-    @InputImport(name="basePath")
+    @Import(name="basePath")
       private final @Nullable Output<String> basePath;
 
     public Output<String> getBasePath() {
@@ -29,7 +29,7 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
      * The DomainName of an AWS::ApiGateway::DomainName resource.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -40,7 +40,7 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
      * The ID of the API.
      * 
      */
-    @InputImport(name="restApiId")
+    @Import(name="restApiId")
       private final @Nullable Output<String> restApiId;
 
     public Output<String> getRestApiId() {
@@ -51,7 +51,7 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the API's stage.
      * 
      */
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable Output<String> stage;
 
     public Output<String> getStage() {

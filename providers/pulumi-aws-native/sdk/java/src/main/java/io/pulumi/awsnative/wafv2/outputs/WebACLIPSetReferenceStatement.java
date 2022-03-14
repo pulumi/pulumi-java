@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLIPSetForwardedIPConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLIPSetReferenceStatement {
     private final String arn;
     private final @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLIPSetReferenceStatement(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("iPSetForwardedIPConfig") @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("iPSetForwardedIPConfig") @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
         this.arn = arn;
         this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
     }

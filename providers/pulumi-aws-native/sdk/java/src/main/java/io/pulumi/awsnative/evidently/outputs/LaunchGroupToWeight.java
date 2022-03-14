@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LaunchGroupToWeight {
     private final String groupName;
     private final Integer splitWeight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchGroupToWeight(
-        @OutputCustomType.Parameter("groupName") String groupName,
-        @OutputCustomType.Parameter("splitWeight") Integer splitWeight) {
+        @CustomType.Parameter("groupName") String groupName,
+        @CustomType.Parameter("splitWeight") Integer splitWeight) {
         this.groupName = groupName;
         this.splitWeight = splitWeight;
     }

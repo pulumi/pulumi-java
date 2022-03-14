@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.iotsitewise.inputs.AlarmsPropertiesArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.PortalTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
      * 
      */
-    @InputImport(name="alarms")
+    @Import(name="alarms")
       private final @Nullable Output<AlarmsPropertiesArgs> alarms;
 
     public Output<AlarmsPropertiesArgs> getAlarms() {
@@ -32,7 +32,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * The email address that sends alarm notifications.
      * 
      */
-    @InputImport(name="notificationSenderEmail")
+    @Import(name="notificationSenderEmail")
       private final @Nullable Output<String> notificationSenderEmail;
 
     public Output<String> getNotificationSenderEmail() {
@@ -43,7 +43,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * The service to use to authenticate users to the portal. Choose from SSO or IAM. You can't change this value after you create a portal.
      * 
      */
-    @InputImport(name="portalAuthMode")
+    @Import(name="portalAuthMode")
       private final @Nullable Output<String> portalAuthMode;
 
     public Output<String> getPortalAuthMode() {
@@ -54,7 +54,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS administrator's contact email address.
      * 
      */
-    @InputImport(name="portalContactEmail", required=true)
+    @Import(name="portalContactEmail", required=true)
       private final Output<String> portalContactEmail;
 
     public Output<String> getPortalContactEmail() {
@@ -65,7 +65,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the portal.
      * 
      */
-    @InputImport(name="portalDescription")
+    @Import(name="portalDescription")
       private final @Nullable Output<String> portalDescription;
 
     public Output<String> getPortalDescription() {
@@ -76,7 +76,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name for the portal.
      * 
      */
-    @InputImport(name="portalName")
+    @Import(name="portalName")
       private final @Nullable Output<String> portalName;
 
     public Output<String> getPortalName() {
@@ -87,7 +87,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of a service role that allows the portal's users to access your AWS IoT SiteWise resources on your behalf.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -98,7 +98,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the portal.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<PortalTagArgs>> tags;
 
     public Output<List<PortalTagArgs>> getTags() {

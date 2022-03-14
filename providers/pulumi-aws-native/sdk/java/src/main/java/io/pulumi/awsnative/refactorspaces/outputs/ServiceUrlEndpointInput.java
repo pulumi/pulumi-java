@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.refactorspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceUrlEndpointInput {
     private final @Nullable String healthUrl;
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceUrlEndpointInput(
-        @OutputCustomType.Parameter("healthUrl") @Nullable String healthUrl,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("healthUrl") @Nullable String healthUrl,
+        @CustomType.Parameter("url") String url) {
         this.healthUrl = healthUrl;
         this.url = url;
     }

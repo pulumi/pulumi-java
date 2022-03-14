@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.outputs.ChannelTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +28,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Channel ARN is automatically generated on creation and assigned as the unique identifier.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -42,7 +42,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Whether the channel is authorized.
      * 
      */
-    @OutputExport(name="authorized", type=Boolean.class, parameters={})
+    @Export(name="authorized", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> authorized;
 
     /**
@@ -56,7 +56,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
      * 
      */
-    @OutputExport(name="ingestEndpoint", type=String.class, parameters={})
+    @Export(name="ingestEndpoint", type=String.class, parameters={})
     private Output<String> ingestEndpoint;
 
     /**
@@ -70,7 +70,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Channel latency mode.
      * 
      */
-    @OutputExport(name="latencyMode", type=ChannelLatencyMode.class, parameters={})
+    @Export(name="latencyMode", type=ChannelLatencyMode.class, parameters={})
     private Output</* @Nullable */ ChannelLatencyMode> latencyMode;
 
     /**
@@ -84,7 +84,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Channel
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -98,7 +98,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Channel Playback URL.
      * 
      */
-    @OutputExport(name="playbackUrl", type=String.class, parameters={})
+    @Export(name="playbackUrl", type=String.class, parameters={})
     private Output<String> playbackUrl;
 
     /**
@@ -112,7 +112,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
      * 
      */
-    @OutputExport(name="recordingConfigurationArn", type=String.class, parameters={})
+    @Export(name="recordingConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> recordingConfigurationArn;
 
     /**
@@ -126,7 +126,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ChannelTag.class})
+    @Export(name="tags", type=List.class, parameters={ChannelTag.class})
     private Output</* @Nullable */ List<ChannelTag>> tags;
 
     /**
@@ -140,7 +140,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
      * 
      */
-    @OutputExport(name="type", type=ChannelType.class, parameters={})
+    @Export(name="type", type=ChannelType.class, parameters={})
     private Output</* @Nullable */ ChannelType> type;
 
     /**

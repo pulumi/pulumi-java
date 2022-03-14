@@ -4,10 +4,10 @@
 package io.pulumi.awsnative.lambda.outputs;
 
 import io.pulumi.awsnative.lambda.enums.CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CodeSigningConfigCodeSigningPolicies {
     /**
      * Indicates how Lambda operations involve updating the code artifact will operate. Default to Warn if not provided
@@ -15,8 +15,8 @@ public final class CodeSigningConfigCodeSigningPolicies {
      */
     private final CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
 
-    @OutputCustomType.Constructor
-    private CodeSigningConfigCodeSigningPolicies(@OutputCustomType.Parameter("untrustedArtifactOnDeployment") CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment) {
+    @CustomType.Constructor
+    private CodeSigningConfigCodeSigningPolicies(@CustomType.Parameter("untrustedArtifactOnDeployment") CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment) {
         this.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
     }
 

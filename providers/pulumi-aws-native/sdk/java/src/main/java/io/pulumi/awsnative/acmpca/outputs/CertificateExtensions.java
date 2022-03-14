@@ -7,25 +7,25 @@ import io.pulumi.awsnative.acmpca.outputs.CertificateExtendedKeyUsage;
 import io.pulumi.awsnative.acmpca.outputs.CertificateGeneralName;
 import io.pulumi.awsnative.acmpca.outputs.CertificateKeyUsage;
 import io.pulumi.awsnative.acmpca.outputs.CertificatePolicyInformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateExtensions {
     private final @Nullable List<CertificatePolicyInformation> certificatePolicies;
     private final @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage;
     private final @Nullable CertificateKeyUsage keyUsage;
     private final @Nullable List<CertificateGeneralName> subjectAlternativeNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateExtensions(
-        @OutputCustomType.Parameter("certificatePolicies") @Nullable List<CertificatePolicyInformation> certificatePolicies,
-        @OutputCustomType.Parameter("extendedKeyUsage") @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage,
-        @OutputCustomType.Parameter("keyUsage") @Nullable CertificateKeyUsage keyUsage,
-        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable List<CertificateGeneralName> subjectAlternativeNames) {
+        @CustomType.Parameter("certificatePolicies") @Nullable List<CertificatePolicyInformation> certificatePolicies,
+        @CustomType.Parameter("extendedKeyUsage") @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage,
+        @CustomType.Parameter("keyUsage") @Nullable CertificateKeyUsage keyUsage,
+        @CustomType.Parameter("subjectAlternativeNames") @Nullable List<CertificateGeneralName> subjectAlternativeNames) {
         this.certificatePolicies = certificatePolicies;
         this.extendedKeyUsage = extendedKeyUsage;
         this.keyUsage = keyUsage;

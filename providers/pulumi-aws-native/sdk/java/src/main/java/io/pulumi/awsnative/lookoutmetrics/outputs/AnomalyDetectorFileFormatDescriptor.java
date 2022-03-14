@@ -5,20 +5,20 @@ package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorCsvFormatDescriptor;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorJsonFormatDescriptor;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorFileFormatDescriptor {
     private final @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor;
     private final @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorFileFormatDescriptor(
-        @OutputCustomType.Parameter("csvFormatDescriptor") @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor,
-        @OutputCustomType.Parameter("jsonFormatDescriptor") @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor) {
+        @CustomType.Parameter("csvFormatDescriptor") @Nullable AnomalyDetectorCsvFormatDescriptor csvFormatDescriptor,
+        @CustomType.Parameter("jsonFormatDescriptor") @Nullable AnomalyDetectorJsonFormatDescriptor jsonFormatDescriptor) {
         this.csvFormatDescriptor = csvFormatDescriptor;
         this.jsonFormatDescriptor = jsonFormatDescriptor;
     }

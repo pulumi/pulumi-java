@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.location.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetPlaceIndexArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPlaceIndexArgs Empty = new GetPlaceIndexArgs();
 
-    @InputImport(name="indexName", required=true)
+    @Import(name="indexName", required=true)
       private final String indexName;
 
     public String getIndexName() {

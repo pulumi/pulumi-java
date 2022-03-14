@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRulePutItemInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
 
     public static final TopicRuleDynamoDBv2ActionArgs Empty = new TopicRuleDynamoDBv2ActionArgs();
 
-    @InputImport(name="putItem")
+    @Import(name="putItem")
       private final @Nullable Output<TopicRulePutItemInputArgs> putItem;
 
     public Output<TopicRulePutItemInputArgs> getPutItem() {
         return this.putItem == null ? Output.empty() : this.putItem;
     }
 
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

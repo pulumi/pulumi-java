@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.ModelPackageGroupArgs;
 import io.pulumi.awsnative.sagemaker.enums.ModelPackageGroupStatus;
 import io.pulumi.awsnative.sagemaker.outputs.ModelPackageGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * The time at which the model package group was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -35,25 +35,25 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    @OutputExport(name="modelPackageGroupArn", type=String.class, parameters={})
+    @Export(name="modelPackageGroupArn", type=String.class, parameters={})
     private Output<String> modelPackageGroupArn;
 
     public Output<String> getModelPackageGroupArn() {
         return this.modelPackageGroupArn;
     }
-    @OutputExport(name="modelPackageGroupDescription", type=String.class, parameters={})
+    @Export(name="modelPackageGroupDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> modelPackageGroupDescription;
 
     public Output</* @Nullable */ String> getModelPackageGroupDescription() {
         return this.modelPackageGroupDescription;
     }
-    @OutputExport(name="modelPackageGroupName", type=String.class, parameters={})
+    @Export(name="modelPackageGroupName", type=String.class, parameters={})
     private Output<String> modelPackageGroupName;
 
     public Output<String> getModelPackageGroupName() {
         return this.modelPackageGroupName;
     }
-    @OutputExport(name="modelPackageGroupPolicy", type=Object.class, parameters={})
+    @Export(name="modelPackageGroupPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> modelPackageGroupPolicy;
 
     public Output</* @Nullable */ Object> getModelPackageGroupPolicy() {
@@ -63,7 +63,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * The status of a modelpackage group job.
      * 
      */
-    @OutputExport(name="modelPackageGroupStatus", type=ModelPackageGroupStatus.class, parameters={})
+    @Export(name="modelPackageGroupStatus", type=ModelPackageGroupStatus.class, parameters={})
     private Output<ModelPackageGroupStatus> modelPackageGroupStatus;
 
     /**
@@ -77,7 +77,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ModelPackageGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={ModelPackageGroupTag.class})
     private Output</* @Nullable */ List<ModelPackageGroupTag>> tags;
 
     /**

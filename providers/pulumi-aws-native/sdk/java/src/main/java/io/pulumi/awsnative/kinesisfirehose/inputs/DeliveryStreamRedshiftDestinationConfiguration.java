@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamCopyCommand;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRedshiftRetryOptions;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,77 +20,77 @@ public final class DeliveryStreamRedshiftDestinationConfiguration extends io.pul
 
     public static final DeliveryStreamRedshiftDestinationConfiguration Empty = new DeliveryStreamRedshiftDestinationConfiguration();
 
-    @InputImport(name="cloudWatchLoggingOptions")
+    @Import(name="cloudWatchLoggingOptions")
       private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
 
     public Optional<DeliveryStreamCloudWatchLoggingOptions> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLoggingOptions);
     }
 
-    @InputImport(name="clusterJDBCURL", required=true)
+    @Import(name="clusterJDBCURL", required=true)
       private final String clusterJDBCURL;
 
     public String getClusterJDBCURL() {
         return this.clusterJDBCURL;
     }
 
-    @InputImport(name="copyCommand", required=true)
+    @Import(name="copyCommand", required=true)
       private final DeliveryStreamCopyCommand copyCommand;
 
     public DeliveryStreamCopyCommand getCopyCommand() {
         return this.copyCommand;
     }
 
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
         return this.password;
     }
 
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable DeliveryStreamProcessingConfiguration processingConfiguration;
 
     public Optional<DeliveryStreamProcessingConfiguration> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.processingConfiguration);
     }
 
-    @InputImport(name="retryOptions")
+    @Import(name="retryOptions")
       private final @Nullable DeliveryStreamRedshiftRetryOptions retryOptions;
 
     public Optional<DeliveryStreamRedshiftRetryOptions> getRetryOptions() {
         return this.retryOptions == null ? Optional.empty() : Optional.ofNullable(this.retryOptions);
     }
 
-    @InputImport(name="roleARN", required=true)
+    @Import(name="roleARN", required=true)
       private final String roleARN;
 
     public String getRoleARN() {
         return this.roleARN;
     }
 
-    @InputImport(name="s3BackupConfiguration")
+    @Import(name="s3BackupConfiguration")
       private final @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration;
 
     public Optional<DeliveryStreamS3DestinationConfiguration> getS3BackupConfiguration() {
         return this.s3BackupConfiguration == null ? Optional.empty() : Optional.ofNullable(this.s3BackupConfiguration);
     }
 
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode;
 
     public Optional<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> getS3BackupMode() {
         return this.s3BackupMode == null ? Optional.empty() : Optional.ofNullable(this.s3BackupMode);
     }
 
-    @InputImport(name="s3Configuration", required=true)
+    @Import(name="s3Configuration", required=true)
       private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
     public DeliveryStreamS3DestinationConfiguration getS3Configuration() {
         return this.s3Configuration;
     }
 
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

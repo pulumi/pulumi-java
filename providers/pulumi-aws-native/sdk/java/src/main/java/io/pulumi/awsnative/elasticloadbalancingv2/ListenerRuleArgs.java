@@ -6,7 +6,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleActionArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleRuleConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,28 +17,28 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ListenerRuleArgs Empty = new ListenerRuleArgs();
 
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<ListenerRuleActionArgs>> actions;
 
     public Output<List<ListenerRuleActionArgs>> getActions() {
         return this.actions;
     }
 
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final Output<List<ListenerRuleRuleConditionArgs>> conditions;
 
     public Output<List<ListenerRuleRuleConditionArgs>> getConditions() {
         return this.conditions;
     }
 
-    @InputImport(name="listenerArn", required=true)
+    @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
     public Output<String> getListenerArn() {
         return this.listenerArn;
     }
 
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {

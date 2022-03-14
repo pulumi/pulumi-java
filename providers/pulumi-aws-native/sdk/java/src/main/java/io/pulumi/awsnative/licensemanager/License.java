@@ -11,7 +11,7 @@ import io.pulumi.awsnative.licensemanager.outputs.LicenseIssuerData;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseMetadata;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseValidityDateFormat;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Beneficiary of the license.
      * 
      */
-    @OutputExport(name="beneficiary", type=String.class, parameters={})
+    @Export(name="beneficiary", type=String.class, parameters={})
     private Output</* @Nullable */ String> beneficiary;
 
     /**
@@ -37,13 +37,13 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getBeneficiary() {
         return this.beneficiary;
     }
-    @OutputExport(name="consumptionConfiguration", type=LicenseConsumptionConfiguration.class, parameters={})
+    @Export(name="consumptionConfiguration", type=LicenseConsumptionConfiguration.class, parameters={})
     private Output<LicenseConsumptionConfiguration> consumptionConfiguration;
 
     public Output<LicenseConsumptionConfiguration> getConsumptionConfiguration() {
         return this.consumptionConfiguration;
     }
-    @OutputExport(name="entitlements", type=List.class, parameters={LicenseEntitlement.class})
+    @Export(name="entitlements", type=List.class, parameters={LicenseEntitlement.class})
     private Output<List<LicenseEntitlement>> entitlements;
 
     public Output<List<LicenseEntitlement>> getEntitlements() {
@@ -53,7 +53,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Home region for the created license.
      * 
      */
-    @OutputExport(name="homeRegion", type=String.class, parameters={})
+    @Export(name="homeRegion", type=String.class, parameters={})
     private Output<String> homeRegion;
 
     /**
@@ -63,7 +63,7 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output<String> getHomeRegion() {
         return this.homeRegion;
     }
-    @OutputExport(name="issuer", type=LicenseIssuerData.class, parameters={})
+    @Export(name="issuer", type=LicenseIssuerData.class, parameters={})
     private Output<LicenseIssuerData> issuer;
 
     public Output<LicenseIssuerData> getIssuer() {
@@ -73,7 +73,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name is a unique name for each resource.
      * 
      */
-    @OutputExport(name="licenseArn", type=String.class, parameters={})
+    @Export(name="licenseArn", type=String.class, parameters={})
     private Output<String> licenseArn;
 
     /**
@@ -83,7 +83,7 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output<String> getLicenseArn() {
         return this.licenseArn;
     }
-    @OutputExport(name="licenseMetadata", type=List.class, parameters={LicenseMetadata.class})
+    @Export(name="licenseMetadata", type=List.class, parameters={LicenseMetadata.class})
     private Output</* @Nullable */ List<LicenseMetadata>> licenseMetadata;
 
     public Output</* @Nullable */ List<LicenseMetadata>> getLicenseMetadata() {
@@ -93,7 +93,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Name for the created license.
      * 
      */
-    @OutputExport(name="licenseName", type=String.class, parameters={})
+    @Export(name="licenseName", type=String.class, parameters={})
     private Output<String> licenseName;
 
     /**
@@ -107,7 +107,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Product name for the created license.
      * 
      */
-    @OutputExport(name="productName", type=String.class, parameters={})
+    @Export(name="productName", type=String.class, parameters={})
     private Output<String> productName;
 
     /**
@@ -121,7 +121,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * ProductSKU of the license.
      * 
      */
-    @OutputExport(name="productSKU", type=String.class, parameters={})
+    @Export(name="productSKU", type=String.class, parameters={})
     private Output</* @Nullable */ String> productSKU;
 
     /**
@@ -131,13 +131,13 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getProductSKU() {
         return this.productSKU;
     }
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     public Output</* @Nullable */ String> getStatus() {
         return this.status;
     }
-    @OutputExport(name="validity", type=LicenseValidityDateFormat.class, parameters={})
+    @Export(name="validity", type=LicenseValidityDateFormat.class, parameters={})
     private Output<LicenseValidityDateFormat> validity;
 
     public Output<LicenseValidityDateFormat> getValidity() {
@@ -147,7 +147,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * The version of the license.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

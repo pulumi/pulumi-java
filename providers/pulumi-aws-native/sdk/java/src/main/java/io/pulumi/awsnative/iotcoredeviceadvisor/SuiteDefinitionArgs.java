@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotcoredeviceadvisor;
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionConfigurationPropertiesArgs;
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final SuiteDefinitionArgs Empty = new SuiteDefinitionArgs();
 
-    @InputImport(name="suiteDefinitionConfiguration", required=true)
+    @Import(name="suiteDefinitionConfiguration", required=true)
       private final Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
 
     public Output<SuiteDefinitionConfigurationPropertiesArgs> getSuiteDefinitionConfiguration() {
@@ -27,7 +27,7 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SuiteDefinitionTagArgs>> tags;
 
     public Output<List<SuiteDefinitionTagArgs>> getTags() {

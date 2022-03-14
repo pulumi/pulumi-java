@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLTextTransformationType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLTextTransformation {
     private final Integer priority;
     private final WebACLTextTransformationType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLTextTransformation(
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("type") WebACLTextTransformationType type) {
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("type") WebACLTextTransformationType type) {
         this.priority = priority;
         this.type = type;
     }

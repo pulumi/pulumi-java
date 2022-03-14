@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupTextTransformationType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupTextTransformation {
     private final Integer priority;
     private final RuleGroupTextTransformationType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupTextTransformation(
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("type") RuleGroupTextTransformationType type) {
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("type") RuleGroupTextTransformationType type) {
         this.priority = priority;
         this.type = type;
     }

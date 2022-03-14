@@ -9,7 +9,7 @@ import io.pulumi.awsnative.globalaccelerator.enums.EndpointGroupHealthCheckProto
 import io.pulumi.awsnative.globalaccelerator.outputs.EndpointGroupEndpointConfiguration;
 import io.pulumi.awsnative.globalaccelerator.outputs.EndpointGroupPortOverride;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The list of endpoint objects.
      * 
      */
-    @OutputExport(name="endpointConfigurations", type=List.class, parameters={EndpointGroupEndpointConfiguration.class})
+    @Export(name="endpointConfigurations", type=List.class, parameters={EndpointGroupEndpointConfiguration.class})
     private Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> endpointConfigurations;
 
     /**
@@ -41,7 +41,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the endpoint group
      * 
      */
-    @OutputExport(name="endpointGroupArn", type=String.class, parameters={})
+    @Export(name="endpointGroupArn", type=String.class, parameters={})
     private Output<String> endpointGroupArn;
 
     /**
@@ -55,7 +55,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The name of the AWS Region where the endpoint group is located
      * 
      */
-    @OutputExport(name="endpointGroupRegion", type=String.class, parameters={})
+    @Export(name="endpointGroupRegion", type=String.class, parameters={})
     private Output<String> endpointGroupRegion;
 
     /**
@@ -69,7 +69,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
      * 
      */
-    @OutputExport(name="healthCheckIntervalSeconds", type=Integer.class, parameters={})
+    @Export(name="healthCheckIntervalSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthCheckIntervalSeconds;
 
     /**
@@ -79,7 +79,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Integer> getHealthCheckIntervalSeconds() {
         return this.healthCheckIntervalSeconds;
     }
-    @OutputExport(name="healthCheckPath", type=String.class, parameters={})
+    @Export(name="healthCheckPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthCheckPath;
 
     public Output</* @Nullable */ String> getHealthCheckPath() {
@@ -89,7 +89,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
      */
-    @OutputExport(name="healthCheckPort", type=Integer.class, parameters={})
+    @Export(name="healthCheckPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthCheckPort;
 
     /**
@@ -103,7 +103,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
      */
-    @OutputExport(name="healthCheckProtocol", type=EndpointGroupHealthCheckProtocol.class, parameters={})
+    @Export(name="healthCheckProtocol", type=EndpointGroupHealthCheckProtocol.class, parameters={})
     private Output</* @Nullable */ EndpointGroupHealthCheckProtocol> healthCheckProtocol;
 
     /**
@@ -117,7 +117,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the listener
      * 
      */
-    @OutputExport(name="listenerArn", type=String.class, parameters={})
+    @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     /**
@@ -127,7 +127,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getListenerArn() {
         return this.listenerArn;
     }
-    @OutputExport(name="portOverrides", type=List.class, parameters={EndpointGroupPortOverride.class})
+    @Export(name="portOverrides", type=List.class, parameters={EndpointGroupPortOverride.class})
     private Output</* @Nullable */ List<EndpointGroupPortOverride>> portOverrides;
 
     public Output</* @Nullable */ List<EndpointGroupPortOverride>> getPortOverrides() {
@@ -137,7 +137,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The number of consecutive health checks required to set the state of the endpoint to unhealthy.
      * 
      */
-    @OutputExport(name="thresholdCount", type=Integer.class, parameters={})
+    @Export(name="thresholdCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> thresholdCount;
 
     /**
@@ -151,7 +151,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The percentage of traffic to sent to an AWS Region
      * 
      */
-    @OutputExport(name="trafficDialPercentage", type=Double.class, parameters={})
+    @Export(name="trafficDialPercentage", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> trafficDialPercentage;
 
     /**

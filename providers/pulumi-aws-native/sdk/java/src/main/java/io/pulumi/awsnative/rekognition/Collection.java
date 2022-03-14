@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.rekognition.CollectionArgs;
 import io.pulumi.awsnative.rekognition.outputs.CollectionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,13 +19,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:rekognition:Collection")
 public class Collection extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="collectionId", type=String.class, parameters={})
+    @Export(name="collectionId", type=String.class, parameters={})
     private Output<String> collectionId;
 
     public Output<String> getCollectionId() {
@@ -35,7 +35,7 @@ public class Collection extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={CollectionTag.class})
+    @Export(name="tags", type=List.class, parameters={CollectionTag.class})
     private Output</* @Nullable */ List<CollectionTag>> tags;
 
     /**

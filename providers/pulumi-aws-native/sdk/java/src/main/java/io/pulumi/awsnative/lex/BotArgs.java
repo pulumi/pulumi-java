@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotS3LocationArgs;
 import io.pulumi.awsnative.lex.inputs.BotTagArgs;
 import io.pulumi.awsnative.lex.inputs.DataPrivacyPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,14 +25,14 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to build the bot locales after bot creation completes.
      * 
      */
-    @InputImport(name="autoBuildBotLocales")
+    @Import(name="autoBuildBotLocales")
       private final @Nullable Output<Boolean> autoBuildBotLocales;
 
     public Output<Boolean> getAutoBuildBotLocales() {
         return this.autoBuildBotLocales == null ? Output.empty() : this.autoBuildBotLocales;
     }
 
-    @InputImport(name="botFileS3Location")
+    @Import(name="botFileS3Location")
       private final @Nullable Output<BotS3LocationArgs> botFileS3Location;
 
     public Output<BotS3LocationArgs> getBotFileS3Location() {
@@ -43,7 +43,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * List of bot locales
      * 
      */
-    @InputImport(name="botLocales")
+    @Import(name="botLocales")
       private final @Nullable Output<List<BotLocaleArgs>> botLocales;
 
     public Output<List<BotLocaleArgs>> getBotLocales() {
@@ -54,7 +54,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * A list of tags to add to the bot, which can only be added at bot creation.
      * 
      */
-    @InputImport(name="botTags")
+    @Import(name="botTags")
       private final @Nullable Output<List<BotTagArgs>> botTags;
 
     public Output<List<BotTagArgs>> getBotTags() {
@@ -65,14 +65,14 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * Data privacy setting of the Bot.
      * 
      */
-    @InputImport(name="dataPrivacy", required=true)
+    @Import(name="dataPrivacy", required=true)
       private final Output<DataPrivacyPropertiesArgs> dataPrivacy;
 
     public Output<DataPrivacyPropertiesArgs> getDataPrivacy() {
         return this.dataPrivacy;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -83,21 +83,21 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * IdleSessionTTLInSeconds of the resource
      * 
      */
-    @InputImport(name="idleSessionTTLInSeconds", required=true)
+    @Import(name="idleSessionTTLInSeconds", required=true)
       private final Output<Integer> idleSessionTTLInSeconds;
 
     public Output<Integer> getIdleSessionTTLInSeconds() {
         return this.idleSessionTTLInSeconds;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -108,7 +108,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.
      * 
      */
-    @InputImport(name="testBotAliasTags")
+    @Import(name="testBotAliasTags")
       private final @Nullable Output<List<BotTagArgs>> testBotAliasTags;
 
     public Output<List<BotTagArgs>> getTestBotAliasTags() {

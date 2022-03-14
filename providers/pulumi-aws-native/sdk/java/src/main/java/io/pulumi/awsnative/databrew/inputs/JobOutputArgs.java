@@ -8,7 +8,7 @@ import io.pulumi.awsnative.databrew.enums.JobOutputFormat;
 import io.pulumi.awsnative.databrew.inputs.JobOutputFormatOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,42 +20,42 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobOutputArgs Empty = new JobOutputArgs();
 
-    @InputImport(name="compressionFormat")
+    @Import(name="compressionFormat")
       private final @Nullable Output<JobOutputCompressionFormat> compressionFormat;
 
     public Output<JobOutputCompressionFormat> getCompressionFormat() {
         return this.compressionFormat == null ? Output.empty() : this.compressionFormat;
     }
 
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<JobOutputFormat> format;
 
     public Output<JobOutputFormat> getFormat() {
         return this.format == null ? Output.empty() : this.format;
     }
 
-    @InputImport(name="formatOptions")
+    @Import(name="formatOptions")
       private final @Nullable Output<JobOutputFormatOptionsArgs> formatOptions;
 
     public Output<JobOutputFormatOptionsArgs> getFormatOptions() {
         return this.formatOptions == null ? Output.empty() : this.formatOptions;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<JobS3LocationArgs> location;
 
     public Output<JobS3LocationArgs> getLocation() {
         return this.location;
     }
 
-    @InputImport(name="overwrite")
+    @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
     public Output<Boolean> getOverwrite() {
         return this.overwrite == null ? Output.empty() : this.overwrite;
     }
 
-    @InputImport(name="partitionColumns")
+    @Import(name="partitionColumns")
       private final @Nullable Output<List<String>> partitionColumns;
 
     public Output<List<String>> getPartitionColumns() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.aps.RuleGroupsNamespaceArgs;
 import io.pulumi.awsnative.aps.outputs.RuleGroupsNamespaceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * The RuleGroupsNamespace ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * The RuleGroupsNamespace data.
      * 
      */
-    @OutputExport(name="data", type=String.class, parameters={})
+    @Export(name="data", type=String.class, parameters={})
     private Output<String> data;
 
     /**
@@ -51,7 +51,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * The RuleGroupsNamespace name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RuleGroupsNamespaceTag.class})
+    @Export(name="tags", type=List.class, parameters={RuleGroupsNamespaceTag.class})
     private Output</* @Nullable */ List<RuleGroupsNamespaceTag>> tags;
 
     /**
@@ -79,7 +79,7 @@ public class RuleGroupsNamespace extends io.pulumi.resources.CustomResource {
      * Required to identify a specific APS Workspace associated with this RuleGroupsNamespace.
      * 
      */
-    @OutputExport(name="workspace", type=String.class, parameters={})
+    @Export(name="workspace", type=String.class, parameters={})
     private Output<String> workspace;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
 
     public static final TopicRuleDestinationHttpUrlDestinationSummaryArgs Empty = new TopicRuleDestinationHttpUrlDestinationSummaryArgs();
 
-    @InputImport(name="confirmationUrl")
+    @Import(name="confirmationUrl")
       private final @Nullable Output<String> confirmationUrl;
 
     public Output<String> getConfirmationUrl() {

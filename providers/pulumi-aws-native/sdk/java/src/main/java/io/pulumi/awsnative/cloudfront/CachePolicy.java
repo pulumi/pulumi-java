@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.CachePolicyArgs;
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,13 +18,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudfront:CachePolicy")
 public class CachePolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="cachePolicyConfig", type=CachePolicyConfig.class, parameters={})
+    @Export(name="cachePolicyConfig", type=CachePolicyConfig.class, parameters={})
     private Output<CachePolicyConfig> cachePolicyConfig;
 
     public Output<CachePolicyConfig> getCachePolicyConfig() {
         return this.cachePolicyConfig;
     }
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {

@@ -11,7 +11,7 @@ import io.pulumi.awsnative.synthetics.inputs.CanaryTagArgs;
 import io.pulumi.awsnative.synthetics.inputs.CanaryVPCConfigArgs;
 import io.pulumi.awsnative.synthetics.inputs.CanaryVisualReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Provide artifact configuration
      * 
      */
-    @InputImport(name="artifactConfig")
+    @Import(name="artifactConfig")
       private final @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
 
     public Output<CanaryArtifactConfigArgs> getArtifactConfig() {
@@ -39,7 +39,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Provide the s3 bucket output location for test results
      * 
      */
-    @InputImport(name="artifactS3Location", required=true)
+    @Import(name="artifactS3Location", required=true)
       private final Output<String> artifactS3Location;
 
     public Output<String> getArtifactS3Location() {
@@ -50,7 +50,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Provide the canary script source
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final Output<CanaryCodeArgs> code;
 
     public Output<CanaryCodeArgs> getCode() {
@@ -61,7 +61,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Lambda Execution role used to run your canaries
      * 
      */
-    @InputImport(name="executionRoleArn", required=true)
+    @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -72,7 +72,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Retention period of failed canary runs represented in number of days
      * 
      */
-    @InputImport(name="failureRetentionPeriod")
+    @Import(name="failureRetentionPeriod")
       private final @Nullable Output<Integer> failureRetentionPeriod;
 
     public Output<Integer> getFailureRetentionPeriod() {
@@ -83,7 +83,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the canary.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -94,7 +94,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Provide canary run configuration
      * 
      */
-    @InputImport(name="runConfig")
+    @Import(name="runConfig")
       private final @Nullable Output<CanaryRunConfigArgs> runConfig;
 
     public Output<CanaryRunConfigArgs> getRunConfig() {
@@ -105,7 +105,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Runtime version of Synthetics Library
      * 
      */
-    @InputImport(name="runtimeVersion", required=true)
+    @Import(name="runtimeVersion", required=true)
       private final Output<String> runtimeVersion;
 
     public Output<String> getRuntimeVersion() {
@@ -116,7 +116,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Frequency to run your canaries
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<CanaryScheduleArgs> schedule;
 
     public Output<CanaryScheduleArgs> getSchedule() {
@@ -127,7 +127,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Runs canary if set to True. Default is False
      * 
      */
-    @InputImport(name="startCanaryAfterCreation", required=true)
+    @Import(name="startCanaryAfterCreation", required=true)
       private final Output<Boolean> startCanaryAfterCreation;
 
     public Output<Boolean> getStartCanaryAfterCreation() {
@@ -138,14 +138,14 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Retention period of successful canary runs represented in number of days
      * 
      */
-    @InputImport(name="successRetentionPeriod")
+    @Import(name="successRetentionPeriod")
       private final @Nullable Output<Integer> successRetentionPeriod;
 
     public Output<Integer> getSuccessRetentionPeriod() {
         return this.successRetentionPeriod == null ? Output.empty() : this.successRetentionPeriod;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<CanaryTagArgs>> tags;
 
     public Output<List<CanaryTagArgs>> getTags() {
@@ -156,7 +156,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Provide VPC Configuration if enabled.
      * 
      */
-    @InputImport(name="vPCConfig")
+    @Import(name="vPCConfig")
       private final @Nullable Output<CanaryVPCConfigArgs> vPCConfig;
 
     public Output<CanaryVPCConfigArgs> getVPCConfig() {
@@ -167,7 +167,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Visual reference configuration for visual testing
      * 
      */
-    @InputImport(name="visualReference")
+    @Import(name="visualReference")
       private final @Nullable Output<CanaryVisualReferenceArgs> visualReference;
 
     public Output<CanaryVisualReferenceArgs> getVisualReference() {

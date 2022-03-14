@@ -11,7 +11,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.DatastoreRetentionPeriod;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreStorage;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,37 +25,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iotanalytics:Datastore")
 public class Datastore extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="datastoreName", type=String.class, parameters={})
+    @Export(name="datastoreName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datastoreName;
 
     public Output</* @Nullable */ String> getDatastoreName() {
         return this.datastoreName;
     }
-    @OutputExport(name="datastorePartitions", type=DatastorePartitions.class, parameters={})
+    @Export(name="datastorePartitions", type=DatastorePartitions.class, parameters={})
     private Output</* @Nullable */ DatastorePartitions> datastorePartitions;
 
     public Output</* @Nullable */ DatastorePartitions> getDatastorePartitions() {
         return this.datastorePartitions;
     }
-    @OutputExport(name="datastoreStorage", type=DatastoreStorage.class, parameters={})
+    @Export(name="datastoreStorage", type=DatastoreStorage.class, parameters={})
     private Output</* @Nullable */ DatastoreStorage> datastoreStorage;
 
     public Output</* @Nullable */ DatastoreStorage> getDatastoreStorage() {
         return this.datastoreStorage;
     }
-    @OutputExport(name="fileFormatConfiguration", type=DatastoreFileFormatConfiguration.class, parameters={})
+    @Export(name="fileFormatConfiguration", type=DatastoreFileFormatConfiguration.class, parameters={})
     private Output</* @Nullable */ DatastoreFileFormatConfiguration> fileFormatConfiguration;
 
     public Output</* @Nullable */ DatastoreFileFormatConfiguration> getFileFormatConfiguration() {
         return this.fileFormatConfiguration;
     }
-    @OutputExport(name="retentionPeriod", type=DatastoreRetentionPeriod.class, parameters={})
+    @Export(name="retentionPeriod", type=DatastoreRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ DatastoreRetentionPeriod> retentionPeriod;
 
     public Output</* @Nullable */ DatastoreRetentionPeriod> getRetentionPeriod() {
         return this.retentionPeriod;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DatastoreTag.class})
+    @Export(name="tags", type=List.class, parameters={DatastoreTag.class})
     private Output</* @Nullable */ List<DatastoreTag>> tags;
 
     public Output</* @Nullable */ List<DatastoreTag>> getTags() {

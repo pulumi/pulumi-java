@@ -7,7 +7,7 @@ import io.pulumi.awsnative.timestream.inputs.ScheduledQueryDimensionMappingArgs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryMixedMeasureMappingArgs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureMappingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,49 +22,49 @@ public final class ScheduledQueryTimestreamConfigurationArgs extends io.pulumi.r
 
     public static final ScheduledQueryTimestreamConfigurationArgs Empty = new ScheduledQueryTimestreamConfigurationArgs();
 
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
-    @InputImport(name="dimensionMappings", required=true)
+    @Import(name="dimensionMappings", required=true)
       private final Output<List<ScheduledQueryDimensionMappingArgs>> dimensionMappings;
 
     public Output<List<ScheduledQueryDimensionMappingArgs>> getDimensionMappings() {
         return this.dimensionMappings;
     }
 
-    @InputImport(name="measureNameColumn")
+    @Import(name="measureNameColumn")
       private final @Nullable Output<String> measureNameColumn;
 
     public Output<String> getMeasureNameColumn() {
         return this.measureNameColumn == null ? Output.empty() : this.measureNameColumn;
     }
 
-    @InputImport(name="mixedMeasureMappings")
+    @Import(name="mixedMeasureMappings")
       private final @Nullable Output<List<ScheduledQueryMixedMeasureMappingArgs>> mixedMeasureMappings;
 
     public Output<List<ScheduledQueryMixedMeasureMappingArgs>> getMixedMeasureMappings() {
         return this.mixedMeasureMappings == null ? Output.empty() : this.mixedMeasureMappings;
     }
 
-    @InputImport(name="multiMeasureMappings")
+    @Import(name="multiMeasureMappings")
       private final @Nullable Output<ScheduledQueryMultiMeasureMappingsArgs> multiMeasureMappings;
 
     public Output<ScheduledQueryMultiMeasureMappingsArgs> getMultiMeasureMappings() {
         return this.multiMeasureMappings == null ? Output.empty() : this.multiMeasureMappings;
     }
 
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {
         return this.tableName;
     }
 
-    @InputImport(name="timeColumn", required=true)
+    @Import(name="timeColumn", required=true)
       private final Output<String> timeColumn;
 
     public Output<String> getTimeColumn() {

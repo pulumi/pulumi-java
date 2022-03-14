@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
 import io.pulumi.awsnative.route53recoverycontrol.enums.RoutingControlStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRoutingControlResult {
     /**
      * The name of the routing control. You can use any non-white space character in the name.
@@ -28,11 +28,11 @@ public final class GetRoutingControlResult {
      */
     private final @Nullable RoutingControlStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoutingControlResult(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("routingControlArn") @Nullable String routingControlArn,
-        @OutputCustomType.Parameter("status") @Nullable RoutingControlStatus status) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("routingControlArn") @Nullable String routingControlArn,
+        @CustomType.Parameter("status") @Nullable RoutingControlStatus status) {
         this.name = name;
         this.routingControlArn = routingControlArn;
         this.status = status;

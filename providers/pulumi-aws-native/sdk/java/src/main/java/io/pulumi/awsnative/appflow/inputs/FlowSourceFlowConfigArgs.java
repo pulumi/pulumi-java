@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowIncrementalPullConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowSourceConnectorPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * Name of source connector profile
      * 
      */
-    @InputImport(name="connectorProfileName")
+    @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
 
     public Output<String> getConnectorProfileName() {
@@ -36,7 +36,7 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * Type of source connector
      * 
      */
-    @InputImport(name="connectorType", required=true)
+    @Import(name="connectorType", required=true)
       private final Output<FlowConnectorType> connectorType;
 
     public Output<FlowConnectorType> getConnectorType() {
@@ -47,7 +47,7 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * Configuration for scheduled incremental data pull
      * 
      */
-    @InputImport(name="incrementalPullConfig")
+    @Import(name="incrementalPullConfig")
       private final @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig;
 
     public Output<FlowIncrementalPullConfigArgs> getIncrementalPullConfig() {
@@ -58,7 +58,7 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * Source connector details required to query a connector
      * 
      */
-    @InputImport(name="sourceConnectorProperties", required=true)
+    @Import(name="sourceConnectorProperties", required=true)
       private final Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
 
     public Output<FlowSourceConnectorPropertiesArgs> getSourceConnectorProperties() {

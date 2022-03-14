@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
      * <p>The name of an Active Directory user that is used on ComputeFarm worker instances.</p>
      * 
      */
-    @InputImport(name="activeDirectoryUser")
+    @Import(name="activeDirectoryUser")
       private final @Nullable String activeDirectoryUser;
 
     public Optional<String> getActiveDirectoryUser() {
@@ -33,7 +33,7 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
      * <p>The endpoint of the ComputeFarm that is accessed by the studio component resource.</p>
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {

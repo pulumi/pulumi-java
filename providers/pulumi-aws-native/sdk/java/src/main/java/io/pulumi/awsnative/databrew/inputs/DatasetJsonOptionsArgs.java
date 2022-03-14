@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatasetJsonOptionsArgs extends io.pulumi.resources.ResourceAr
 
     public static final DatasetJsonOptionsArgs Empty = new DatasetJsonOptionsArgs();
 
-    @InputImport(name="multiLine")
+    @Import(name="multiLine")
       private final @Nullable Output<Boolean> multiLine;
 
     public Output<Boolean> getMultiLine() {

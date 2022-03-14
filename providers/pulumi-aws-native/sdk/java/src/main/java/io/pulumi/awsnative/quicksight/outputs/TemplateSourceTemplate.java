@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TemplateSourceTemplate {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
@@ -15,8 +15,8 @@ public final class TemplateSourceTemplate {
      */
     private final String arn;
 
-    @OutputCustomType.Constructor
-    private TemplateSourceTemplate(@OutputCustomType.Parameter("arn") String arn) {
+    @CustomType.Constructor
+    private TemplateSourceTemplate(@CustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 

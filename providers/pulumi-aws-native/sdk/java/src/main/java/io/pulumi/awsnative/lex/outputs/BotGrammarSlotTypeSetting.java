@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotGrammarSlotTypeSource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotGrammarSlotTypeSetting {
     private final @Nullable BotGrammarSlotTypeSource source;
 
-    @OutputCustomType.Constructor
-    private BotGrammarSlotTypeSetting(@OutputCustomType.Parameter("source") @Nullable BotGrammarSlotTypeSource source) {
+    @CustomType.Constructor
+    private BotGrammarSlotTypeSetting(@CustomType.Parameter("source") @Nullable BotGrammarSlotTypeSource source) {
         this.source = source;
     }
 
