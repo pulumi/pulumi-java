@@ -5,10 +5,12 @@ package io.pulumi.random;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
-
-import javax.annotation.Nullable;
+import java.lang.Integer;
+import java.lang.Object;
+import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import javax.annotation.Nullable;
 
 
 public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {

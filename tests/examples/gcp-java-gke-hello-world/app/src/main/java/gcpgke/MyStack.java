@@ -6,7 +6,6 @@ import java.util.Map;
 
 import io.pulumi.Config;
 import io.pulumi.Stack;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.deployment.InvokeOptions;
@@ -70,7 +69,7 @@ public final class MyStack extends Stack {
                 GetEngineVersionsArgs.Empty,
                 InvokeOptions.Empty
             ).thenApply(thing -> thing.getLatestMasterVersion()).get());
-        
+
         this.masterVersion = Output.of(masterVersion);
 
         // Create a GKE cluster
@@ -85,8 +84,8 @@ public final class MyStack extends Stack {
 
         final var nodePool = new NodePool("primary-node-pool",
             NodePoolArgs.builder()
-            .cluster(cluster.getName().toInput())
-            .location(cluster.getLocation().toInput())
+            .cluster(cluster.getName())
+            .location(cluster.getLocation())
             .version(masterVersion)
             .initialNodeCount(2)
             .nodeConfig(NodePoolNodeConfigArgs.builder()
@@ -109,7 +108,7 @@ public final class MyStack extends Stack {
             .setDependsOn(List.of(cluster))
             .build());
         this.clusterName = cluster.getName();
-    
+
         // Manufacture a GKE-style kubeconfig. Note that this is slightly "different"
         // because of the way GKE requires gcloud to be in the picture for cluster
         // authentication (rather than using the client cert/key directly).
@@ -153,7 +152,7 @@ public final class MyStack extends Stack {
         // Create a Kubernetes provider instance that uses our cluster from above.
         final var clusterProvider = new Provider(name,
             ProviderArgs.builder()
-                .kubeconfig(this.kubeconfig.toInput())
+                .kubeconfig(this.kubeconfig)
                 .build(),
             CustomResourceOptions.builder()
                 .setDependsOn(List.of(nodePool, cluster))
@@ -172,9 +171,9 @@ public final class MyStack extends Stack {
         this.namespaceName = ns.getMetadata().applyOptional(arg0 -> arg0.getName());
 
         final var appLabels = Map.of("appClass", name);
-        
+
         final var metadata = ObjectMetaArgs.builder()
-                .namespace(namespaceName.toInput())
+                .namespace(namespaceName)
                 .labels(appLabels)
                 .build();
 
@@ -209,10 +208,10 @@ public final class MyStack extends Stack {
         final var service = new Service(name, ServiceArgs.builder()
             .metadata(metadata)
             .spec(ServiceSpecArgs.builder()
-                .type(Input.ofRight(ServiceSpecType.LoadBalancer))
+                .type(Output.ofRight(ServiceSpecType.LoadBalancer))
                 .ports(List.of(ServicePortArgs.builder()
                     .port(80)
-                    .targetPort(Input.ofRight("http"))
+                    .targetPort(Output.ofRight("http"))
                     .build()))
                 .selector(appLabels)
                 .build())
