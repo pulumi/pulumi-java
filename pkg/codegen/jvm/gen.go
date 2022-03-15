@@ -1723,7 +1723,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		fprintf(w, "            ))\n")
 	}
 	if len(secretProps) > 0 {
-		fprintf(w, "            .setAdditionalSecretOutputs(%s.of(\n", ctx.ref(names.List))
+		fprintf(w, "            .additionalSecretOutputs(%s.of(\n", ctx.ref(names.List))
 		for i, sp := range secretProps {
 			fprintf(w, "                ")
 			fprintf(w, "%q", sp)
