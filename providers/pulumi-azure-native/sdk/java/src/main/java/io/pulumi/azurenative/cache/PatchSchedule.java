@@ -121,14 +121,14 @@ public class PatchSchedule extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:cache/v20171001:PatchSchedule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20180301:PatchSchedule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20190701:PatchSchedule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20200601:PatchSchedule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20201201:PatchSchedule").build()),
-                Output.of(Alias.builder().setType("azure-native:cache/v20210601:PatchSchedule").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:cache/v20171001:PatchSchedule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20180301:PatchSchedule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20190701:PatchSchedule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20200601:PatchSchedule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20201201:PatchSchedule").build()),
+                Output.of(Alias.builder().type("azure-native:cache/v20210601:PatchSchedule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

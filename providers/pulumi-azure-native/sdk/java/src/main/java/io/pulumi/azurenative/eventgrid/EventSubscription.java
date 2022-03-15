@@ -258,22 +258,22 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20170615preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20170915preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20180101:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20180501preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20180915preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20190101:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20190201preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20190601:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20200101preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20200401preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20200601:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20201015preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20210601preview:EventSubscription").build()),
-                Output.of(Alias.builder().setType("azure-native:eventgrid/v20211201:EventSubscription").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20170615preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20170915preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20180101:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20180501preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20180915preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20190101:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20190201preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20190601:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20200101preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20200401preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20200601:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211201:EventSubscription").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

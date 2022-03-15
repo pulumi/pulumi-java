@@ -193,13 +193,13 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20191201preview:ExportPipeline").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20201101preview:ExportPipeline").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210601preview:ExportPipeline").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210801preview:ExportPipeline").build()),
-                Output.of(Alias.builder().setType("azure-native:containerregistry/v20211201preview:ExportPipeline").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20191201preview:ExportPipeline").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20201101preview:ExportPipeline").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210601preview:ExportPipeline").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20210801preview:ExportPipeline").build()),
+                Output.of(Alias.builder().type("azure-native:containerregistry/v20211201preview:ExportPipeline").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

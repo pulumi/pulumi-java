@@ -227,14 +227,14 @@ public class Key extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:keyvault/v20190901:Key").build()),
-                Output.of(Alias.builder().setType("azure-native:keyvault/v20200401preview:Key").build()),
-                Output.of(Alias.builder().setType("azure-native:keyvault/v20210401preview:Key").build()),
-                Output.of(Alias.builder().setType("azure-native:keyvault/v20210601preview:Key").build()),
-                Output.of(Alias.builder().setType("azure-native:keyvault/v20211001:Key").build()),
-                Output.of(Alias.builder().setType("azure-native:keyvault/v20211101preview:Key").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:keyvault/v20190901:Key").build()),
+                Output.of(Alias.builder().type("azure-native:keyvault/v20200401preview:Key").build()),
+                Output.of(Alias.builder().type("azure-native:keyvault/v20210401preview:Key").build()),
+                Output.of(Alias.builder().type("azure-native:keyvault/v20210601preview:Key").build()),
+                Output.of(Alias.builder().type("azure-native:keyvault/v20211001:Key").build()),
+                Output.of(Alias.builder().type("azure-native:keyvault/v20211101preview:Key").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

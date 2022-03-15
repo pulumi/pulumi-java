@@ -336,14 +336,14 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20180601:GalleryImage").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190301:GalleryImage").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190701:GalleryImage").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20191201:GalleryImage").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200930:GalleryImage").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:GalleryImage").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20180601:GalleryImage").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190301:GalleryImage").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190701:GalleryImage").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20191201:GalleryImage").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200930:GalleryImage").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:GalleryImage").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -242,19 +242,19 @@ public class ReadOnlyFollowingDatabase extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:kusto/v20170907privatepreview:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20180907preview:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190121:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190515:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190907:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20191109:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200215:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200614:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200918:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20210101:ReadOnlyFollowingDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20210827:ReadOnlyFollowingDatabase").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:kusto/v20170907privatepreview:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20180907preview:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190121:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190515:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190907:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20191109:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200215:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200614:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200918:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20210101:ReadOnlyFollowingDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:ReadOnlyFollowingDatabase").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -142,24 +142,24 @@ public class SqlResourceSqlUserDefinedFunction extends io.pulumi.resources.Custo
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlUserDefinedFunction").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlUserDefinedFunction").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20190801:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20191212:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200301:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200401:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200901:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlUserDefinedFunction").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlUserDefinedFunction").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

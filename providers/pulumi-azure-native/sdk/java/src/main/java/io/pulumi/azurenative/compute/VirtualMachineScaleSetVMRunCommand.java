@@ -294,14 +294,14 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineScaleSetVMRunCommand").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineScaleSetVMRunCommand").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineScaleSetVMRunCommand").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineScaleSetVMRunCommand").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineScaleSetVMRunCommand").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineScaleSetVMRunCommand").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20200601:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210301:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:VirtualMachineScaleSetVMRunCommand").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211101:VirtualMachineScaleSetVMRunCommand").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -400,15 +400,15 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:sql/v20170301preview:ExtendedServerBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ExtendedServerBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ExtendedServerBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ExtendedServerBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ExtendedServerBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ExtendedServerBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ExtendedServerBlobAuditingPolicy").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:sql/v20170301preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200202preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20200801preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ExtendedServerBlobAuditingPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

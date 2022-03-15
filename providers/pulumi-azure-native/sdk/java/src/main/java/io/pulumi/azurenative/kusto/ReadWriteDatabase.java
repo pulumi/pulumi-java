@@ -215,19 +215,19 @@ public class ReadWriteDatabase extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:kusto/v20170907privatepreview:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20180907preview:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190121:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190515:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20190907:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20191109:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200215:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200614:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20200918:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20210101:ReadWriteDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:kusto/v20210827:ReadWriteDatabase").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:kusto/v20170907privatepreview:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20180907preview:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190121:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190515:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20190907:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20191109:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200215:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200614:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20200918:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20210101:ReadWriteDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:kusto/v20210827:ReadWriteDatabase").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

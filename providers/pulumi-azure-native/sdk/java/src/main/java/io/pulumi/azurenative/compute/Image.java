@@ -208,23 +208,23 @@ public class Image extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20160430preview:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20170330:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20171201:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180401:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20180601:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20181001:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190301:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20190701:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20191201:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20200601:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210301:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:Image").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20211101:Image").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20160430preview:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20170330:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20171201:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180401:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20180601:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20181001:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190301:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20190701:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20191201:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20200601:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210301:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:Image").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211101:Image").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

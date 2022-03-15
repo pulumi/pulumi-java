@@ -274,16 +274,16 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:authorization/v20150701:RoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20171001preview:RoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20180101preview:RoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20180901preview:RoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20200301preview:RoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20200401preview:RoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20200801preview:RoleAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:authorization/v20201001preview:RoleAssignment").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:authorization/v20150701:RoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20171001preview:RoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20180101preview:RoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20180901preview:RoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20200301preview:RoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20200401preview:RoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20200801preview:RoleAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:authorization/v20201001preview:RoleAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

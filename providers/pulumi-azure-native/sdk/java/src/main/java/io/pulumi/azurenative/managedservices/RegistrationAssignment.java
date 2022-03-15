@@ -121,13 +121,13 @@ public class RegistrationAssignment extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:managedservices/v20180601preview:RegistrationAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:managedservices/v20190401preview:RegistrationAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:managedservices/v20190601:RegistrationAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:managedservices/v20190901:RegistrationAssignment").build()),
-                Output.of(Alias.builder().setType("azure-native:managedservices/v20200201preview:RegistrationAssignment").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:managedservices/v20180601preview:RegistrationAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:managedservices/v20190401preview:RegistrationAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:managedservices/v20190601:RegistrationAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:managedservices/v20190901:RegistrationAssignment").build()),
+                Output.of(Alias.builder().type("azure-native:managedservices/v20200201preview:RegistrationAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

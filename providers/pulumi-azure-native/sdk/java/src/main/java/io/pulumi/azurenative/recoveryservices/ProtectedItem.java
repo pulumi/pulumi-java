@@ -176,24 +176,24 @@ public class ProtectedItem extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20160601:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20190513:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20190615:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20201001:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20201201:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210101:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210201:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210201preview:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ProtectedItem").build()),
-                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ProtectedItem").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20160601:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20190513:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20190615:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20201001:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20201201:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210101:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210201:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210201preview:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210210:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210301:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210401:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210601:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210701:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ProtectedItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ProtectedItem").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

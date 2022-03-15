@@ -149,29 +149,29 @@ public class MongoDBResourceMongoDBDatabase extends io.pulumi.resources.CustomRe
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:MongoDBResourceMongoDBDatabase").build()),
-                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:MongoDBResourceMongoDBDatabase").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:documentdb/v20150401:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20150408:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20151106:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20160319:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20160331:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20190801:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20191212:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200301:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200401:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200601preview:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20200901:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210115:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210301preview:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210315:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210401preview:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210415:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210515:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210615:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015:MongoDBResourceMongoDBDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:MongoDBResourceMongoDBDatabase").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

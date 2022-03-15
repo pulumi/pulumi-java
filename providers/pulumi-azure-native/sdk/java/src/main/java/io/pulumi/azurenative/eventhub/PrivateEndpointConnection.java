@@ -150,12 +150,12 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:eventhub/v20180101preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:eventhub/v20210101preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:eventhub/v20210601preview:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:eventhub/v20211101:PrivateEndpointConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:eventhub/v20180101preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:eventhub/v20210101preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:eventhub/v20210601preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:eventhub/v20211101:PrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

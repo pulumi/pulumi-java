@@ -165,12 +165,12 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210401preview:WebPubSubPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210601preview:WebPubSubPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:webpubsub/v20210901preview:WebPubSubPrivateEndpointConnection").build()),
-                Output.of(Alias.builder().setType("azure-native:webpubsub/v20211001:WebPubSubPrivateEndpointConnection").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:webpubsub/v20210401preview:WebPubSubPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:webpubsub/v20210601preview:WebPubSubPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:webpubsub/v20210901preview:WebPubSubPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:webpubsub/v20211001:WebPubSubPrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

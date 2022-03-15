@@ -294,14 +294,14 @@ public class VirtualMachineRunCommandByVirtualMachine extends io.pulumi.resource
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:compute/v20200601:VirtualMachineRunCommandByVirtualMachine").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20201201:VirtualMachineRunCommandByVirtualMachine").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210301:VirtualMachineRunCommandByVirtualMachine").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210401:VirtualMachineRunCommandByVirtualMachine").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20210701:VirtualMachineRunCommandByVirtualMachine").build()),
-                Output.of(Alias.builder().setType("azure-native:compute/v20211101:VirtualMachineRunCommandByVirtualMachine").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:compute/v20200601:VirtualMachineRunCommandByVirtualMachine").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20201201:VirtualMachineRunCommandByVirtualMachine").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210301:VirtualMachineRunCommandByVirtualMachine").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210401:VirtualMachineRunCommandByVirtualMachine").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20210701:VirtualMachineRunCommandByVirtualMachine").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211101:VirtualMachineRunCommandByVirtualMachine").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

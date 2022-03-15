@@ -220,26 +220,26 @@ public class Resource extends io.pulumi.resources.CustomResource {
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
-            .setVersion(Utilities.getVersion())
-            .setAliases(List.of(
-                Output.of(Alias.builder().setType("azure-native:resources/v20151101:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20160201:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20160701:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20160901:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20170510:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20180201:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20180501:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190301:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190501:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190510:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190701:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20190801:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20191001:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20200601:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20200801:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20201001:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20210101:Resource").build()),
-                Output.of(Alias.builder().setType("azure-native:resources/v20210401:Resource").build())
+            .version(Utilities.getVersion())
+            .aliases(List.of(
+                Output.of(Alias.builder().type("azure-native:resources/v20151101:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20160201:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20160701:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20160901:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20170510:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20180201:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20180501:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190301:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190501:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190510:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190701:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20190801:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20191001:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20200601:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20200801:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20201001:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20210101:Resource").build()),
+                Output.of(Alias.builder().type("azure-native:resources/v20210401:Resource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
